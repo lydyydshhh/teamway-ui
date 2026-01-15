@@ -1,11 +1,11 @@
-<template>
+﻿<template>
   <div class="slider-demo-block">
     <span class="demonstration">Breakpoints not displayed</span>
-    <el-slider v-model="value1" :step="10" />
+    <ty-slider v-model="value1" :step="10" />
   </div>
   <div class="slider-demo-block">
     <span class="demonstration">Breakpoints displayed</span>
-    <el-slider v-model="value2" :step="10" show-stops />
+    <ty-slider v-model="value2" :step="10" show-stops />
   </div>
 </template>
 

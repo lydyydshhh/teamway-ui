@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="cascader-custom-header-footer">
     <div>
       <p>Custom header content</p>
-      <el-cascader
+      <ty-cascader
         v-model="value"
         popper-class="cascader-custom-header"
         :options="options"
@@ -10,23 +10,23 @@
         clearable
       >
         <template #header>
-          <el-checkbox
+          <ty-checkbox
             v-model="checkAll"
             :indeterminate="indeterminate"
             @change="handleCheckAll"
           >
             All
-          </el-checkbox>
+          </ty-checkbox>
         </template>
-      </el-cascader>
+      </ty-cascader>
     </div>
     <div>
       <p>Custom footer content</p>
-      <el-cascader v-model="value" :options="options" :props="props" clearable>
+      <ty-cascader v-model="value" :options="options" :props="props" clearable>
         <template #footer>
-          <el-button link size="small" @click="handleClear"> Clear </el-button>
+          <ty-button link size="small" @click="handleClear"> Clear </ty-button>
         </template>
-      </el-cascader>
+      </ty-cascader>
     </div>
   </div>
 </template>

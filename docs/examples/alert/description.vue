@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div style="max-width: 600px">
-    <el-alert
+    <ty-alert
       title="With description"
       type="success"
       description="This is a description."

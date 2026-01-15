@@ -1,8 +1,8 @@
-<template>
-  <el-tabs type="border-card">
-    <el-tab-pane label="User">User</el-tab-pane>
-    <el-tab-pane label="Config">Config</el-tab-pane>
-    <el-tab-pane label="Role">Role</el-tab-pane>
-    <el-tab-pane label="Task">Task</el-tab-pane>
-  </el-tabs>
+﻿<template>
+  <ty-tabs type="border-card">
+    <ty-tab-pane label="User">User</ty-tab-pane>
+    <ty-tab-pane label="Config">Config</ty-tab-pane>
+    <ty-tab-pane label="Role">Role</ty-tab-pane>
+    <ty-tab-pane label="Task">Task</ty-tab-pane>
+  </ty-tabs>
 </template>

@@ -1,24 +1,24 @@
-<template>
-  <el-space direction="vertical">
-    <el-text>
-      <el-icon>
+﻿<template>
+  <ty-space direction="vertical">
+    <ty-text>
+      <ty-icon>
         <ElementPlus />
-      </el-icon>
+      </ty-icon>
       Element-Plus
-    </el-text>
-    <el-row>
-      <el-text>Rate</el-text>
-      <el-rate class="ml-1" />
-    </el-row>
-    <el-text>
+    </ty-text>
+    <ty-row>
+      <ty-text>Rate</ty-text>
+      <ty-rate class="ml-1" />
+    </ty-row>
+    <ty-text>
       This is text mixed icon
-      <el-icon>
+      <ty-icon>
         <Bell />
-      </el-icon>
+      </ty-icon>
       and component
-      <el-button>Button</el-button>
-    </el-text>
-  </el-space>
+      <ty-button>Button</ty-button>
+    </ty-text>
+  </ty-space>
 </template>
 
 <script lang="ts" setup>

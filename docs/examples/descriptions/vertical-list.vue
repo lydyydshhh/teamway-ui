@@ -1,45 +1,45 @@
-<template>
-  <el-radio-group v-model="size">
-    <el-radio value="large">Large</el-radio>
-    <el-radio value="default">Default</el-radio>
-    <el-radio value="small">Small</el-radio>
-  </el-radio-group>
+﻿<template>
+  <ty-radio-group v-model="size">
+    <ty-radio value="large">Large</ty-radio>
+    <ty-radio value="default">Default</ty-radio>
+    <ty-radio value="small">Small</ty-radio>
+  </ty-radio-group>
 
-  <el-descriptions
+  <ty-descriptions
     title="Vertical list with border"
     direction="vertical"
     :column="4"
     :size="size"
     border
   >
-    <el-descriptions-item label="Username">kooriookami</el-descriptions-item>
-    <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
-    <el-descriptions-item label="Place" :span="2">Suzhou</el-descriptions-item>
-    <el-descriptions-item label="Remarks">
-      <el-tag size="small">School</el-tag>
-    </el-descriptions-item>
-    <el-descriptions-item label="Address">
+    <ty-descriptions-item label="Username">kooriookami</ty-descriptions-item>
+    <ty-descriptions-item label="Telephone">18100000000</ty-descriptions-item>
+    <ty-descriptions-item label="Place" :span="2">Suzhou</ty-descriptions-item>
+    <ty-descriptions-item label="Remarks">
+      <ty-tag size="small">School</ty-tag>
+    </ty-descriptions-item>
+    <ty-descriptions-item label="Address">
       No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province
-    </el-descriptions-item>
-  </el-descriptions>
+    </ty-descriptions-item>
+  </ty-descriptions>
 
-  <el-descriptions
+  <ty-descriptions
     title="Vertical list without border"
     :column="4"
     :size="size"
     direction="vertical"
     :style="blockMargin"
   >
-    <el-descriptions-item label="Username">kooriookami</el-descriptions-item>
-    <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
-    <el-descriptions-item label="Place" :span="2">Suzhou</el-descriptions-item>
-    <el-descriptions-item label="Remarks">
-      <el-tag size="small">School</el-tag>
-    </el-descriptions-item>
-    <el-descriptions-item label="Address">
+    <ty-descriptions-item label="Username">kooriookami</ty-descriptions-item>
+    <ty-descriptions-item label="Telephone">18100000000</ty-descriptions-item>
+    <ty-descriptions-item label="Place" :span="2">Suzhou</ty-descriptions-item>
+    <ty-descriptions-item label="Remarks">
+      <ty-tag size="small">School</ty-tag>
+    </ty-descriptions-item>
+    <ty-descriptions-item label="Address">
       No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province
-    </el-descriptions-item>
-  </el-descriptions>
+    </ty-descriptions-item>
+  </ty-descriptions>
 </template>
 
 <script setup lang="ts">

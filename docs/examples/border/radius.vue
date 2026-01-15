@@ -1,6 +1,6 @@
-<template>
-  <el-row :gutter="12" class="demo-radius">
-    <el-col
+﻿<template>
+  <ty-row :gutter="12" class="demo-radius">
+    <ty-col
       v-for="(radius, i) in radiusGroup"
       :key="i"
       :span="6"
@@ -25,8 +25,8 @@
             : '',
         }"
       />
-    </el-col>
-  </el-row>
+    </ty-col>
+  </ty-row>
 </template>
 
 <script lang="ts" setup>

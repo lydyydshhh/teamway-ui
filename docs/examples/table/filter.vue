@@ -1,8 +1,8 @@
-<template>
-  <el-button @click="resetDateFilter">reset date filter</el-button>
-  <el-button @click="clearFilter">reset all filters</el-button>
-  <el-table ref="tableRef" row-key="date" :data="tableData" style="width: 100%">
-    <el-table-column
+﻿<template>
+  <ty-button @click="resetDateFilter">reset date filter</ty-button>
+  <ty-button @click="clearFilter">reset all filters</ty-button>
+  <ty-table ref="tableRef" row-key="date" :data="tableData" style="width: 100%">
+    <ty-table-column
       prop="date"
       label="Date"
       sortable
@@ -16,10 +16,10 @@
       ]"
       :filter-method="filterHandler"
     />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" :formatter="formatter" />
+    <ty-table-column prop="name" label="Name" width="180" />
+    <ty-table-column prop="address" label="Address" :formatter="formatter" />
 
-    <el-table-column
+    <ty-table-column
       prop="tag"
       label="Tag"
       width="100"
@@ -31,14 +31,14 @@
       filter-placement="bottom-end"
     >
       <template #default="scope">
-        <el-tag
+        <ty-tag
           :type="scope.row.tag === 'Home' ? 'primary' : 'success'"
           disable-transitions
-          >{{ scope.row.tag }}</el-tag
+          >{{ scope.row.tag }}</ty-tag
         >
       </template>
-    </el-table-column>
-  </el-table>
+    </ty-table-column>
+  </ty-table>
 </template>
 
 <script lang="ts" setup>

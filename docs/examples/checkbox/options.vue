@@ -1,5 +1,5 @@
-<template>
-  <el-checkbox-group v-model="checkList" :options="options" :props="props" />
+﻿<template>
+  <ty-checkbox-group v-model="checkList" :options="options" :props="props" />
 </template>
 
 <script lang="ts" setup>

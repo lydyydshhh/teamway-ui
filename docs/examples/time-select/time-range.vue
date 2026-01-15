@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="demo-time-range flex flex-wrap gap-4">
-    <el-time-select
+    <ty-time-select
       v-model="startTime"
       style="width: 240px"
       :max-time="endTime"
@@ -9,7 +9,7 @@
       step="00:15"
       end="18:30"
     />
-    <el-time-select
+    <ty-time-select
       v-model="endTime"
       style="width: 240px"
       :min-time="startTime"

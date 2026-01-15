@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="demo-date-picker">
     <div class="block">
       <span class="demonstration">Default</span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value1"
         type="monthrange"
         range-separator="To"
@@ -12,7 +12,7 @@
     </div>
     <div class="block">
       <span class="demonstration">With quick options</span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value2"
         type="monthrange"
         unlink-panels

@@ -1,5 +1,5 @@
-<template>
-  <el-radio-group v-model="radio" :options="options" :props="props" />
+﻿<template>
+  <ty-radio-group v-model="radio" :options="options" :props="props" />
 </template>
 
 <script lang="ts" setup>

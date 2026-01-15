@@ -1,15 +1,15 @@
-<template>
+﻿<template>
   <div class="slider-demo-block">
-    <el-slider v-model="value1" />
+    <ty-slider v-model="value1" />
   </div>
   <div class="slider-demo-block">
-    <el-slider v-model="value2" placement="bottom" />
+    <ty-slider v-model="value2" placement="bottom" />
   </div>
   <div class="slider-demo-block">
-    <el-slider v-model="value3" placement="right" />
+    <ty-slider v-model="value3" placement="right" />
   </div>
   <div class="slider-demo-block">
-    <el-slider v-model="value4" placement="left" />
+    <ty-slider v-model="value4" placement="left" />
   </div>
 </template>
 

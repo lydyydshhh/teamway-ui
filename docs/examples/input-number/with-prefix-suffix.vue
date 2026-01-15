@@ -1,16 +1,16 @@
-<template>
-  <el-space>
-    <el-input-number v-model="num" :min="1" :max="10">
+﻿<template>
+  <ty-space>
+    <ty-input-number v-model="num" :min="1" :max="10">
       <template #prefix>
         <span>￥</span>
       </template>
-    </el-input-number>
-    <el-input-number v-model="num" :min="1" :max="10">
+    </ty-input-number>
+    <ty-input-number v-model="num" :min="1" :max="10">
       <template #suffix>
         <span>RMB</span>
       </template>
-    </el-input-number>
-  </el-space>
+    </ty-input-number>
+  </ty-space>
 </template>
 
 <script lang="ts" setup>

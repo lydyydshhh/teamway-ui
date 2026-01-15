@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap items-center gap-4">
-    <el-input-number
+    <ty-input-number
       v-model="num"
       :min="1"
       :max="10"
@@ -8,14 +8,14 @@
       size="large"
       @change="handleChange"
     />
-    <el-input-number
+    <ty-input-number
       v-model="num"
       :min="1"
       :max="10"
       controls-position="right"
       @change="handleChange"
     />
-    <el-input-number
+    <ty-input-number
       v-model="num"
       :min="1"
       :max="10"

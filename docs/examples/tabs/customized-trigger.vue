@@ -1,25 +1,25 @@
-<template>
+﻿<template>
   <div style="margin-bottom: 20px">
-    <el-button size="small" @click="addTab(editableTabsValue)">
+    <ty-button size="small" @click="addTab(editableTabsValue)">
       add tab
-    </el-button>
+    </ty-button>
   </div>
-  <el-tabs
+  <ty-tabs
     v-model="editableTabsValue"
     type="card"
     class="demo-tabs"
     closable
     @tab-remove="removeTab"
   >
-    <el-tab-pane
+    <ty-tab-pane
       v-for="item in editableTabs"
       :key="item.name"
       :label="item.title"
       :name="item.name"
     >
       {{ item.content }}
-    </el-tab-pane>
-  </el-tabs>
+    </ty-tab-pane>
+  </ty-tabs>
 </template>
 
 <script lang="ts" setup>

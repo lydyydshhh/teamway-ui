@@ -1,28 +1,28 @@
-<template>
-  <el-row class="demo-avatar demo-basic">
-    <el-col :lg="12" :md="12">
+﻿<template>
+  <ty-row class="demo-avatar demo-basic">
+    <ty-col :lg="12" :md="12">
       <div class="sub-title">circle</div>
       <div class="demo-basic--circle">
         <div class="block">
-          <el-avatar :size="50" :src="circleUrl" />
+          <ty-avatar :size="50" :src="circleUrl" />
         </div>
         <div v-for="size in sizeList" :key="size" class="block">
-          <el-avatar :size="size" :src="circleUrl" />
+          <ty-avatar :size="size" :src="circleUrl" />
         </div>
       </div>
-    </el-col>
-    <el-col :lg="12" :md="12">
+    </ty-col>
+    <ty-col :lg="12" :md="12">
       <div class="sub-title">square</div>
       <div class="demo-basic--circle">
         <div class="block">
-          <el-avatar shape="square" :size="50" :src="squareUrl" />
+          <ty-avatar shape="square" :size="50" :src="squareUrl" />
         </div>
         <div v-for="size in sizeList" :key="size" class="block">
-          <el-avatar shape="square" :size="size" :src="squareUrl" />
+          <ty-avatar shape="square" :size="size" :src="squareUrl" />
         </div>
       </div>
-    </el-col>
-  </el-row>
+    </ty-col>
+  </ty-row>
 </template>
 
 <script lang="ts" setup>

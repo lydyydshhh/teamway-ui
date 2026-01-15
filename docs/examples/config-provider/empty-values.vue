@@ -1,21 +1,21 @@
-<template>
-  <el-config-provider :value-on-clear="null" :empty-values="[undefined, null]">
+﻿<template>
+  <ty-config-provider :value-on-clear="null" :empty-values="[undefined, null]">
     <div class="flex flex-wrap gap-4 items-center">
-      <el-select
+      <ty-select
         v-model="value1"
         clearable
         placeholder="Select"
         style="width: 240px"
         @change="handleChange"
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
           :value="item.value"
         />
-      </el-select>
-      <el-select-v2
+      </ty-select>
+      <ty-select-v2
         v-model="value2"
         clearable
         placeholder="Select"
@@ -25,7 +25,7 @@
         @change="handleChange"
       />
     </div>
-  </el-config-provider>
+  </ty-config-provider>
 </template>
 
 <script lang="ts" setup>

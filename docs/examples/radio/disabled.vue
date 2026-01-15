@@ -1,8 +1,8 @@
-<template>
-  <el-radio v-model="radio" disabled value="disabled">Option A</el-radio>
-  <el-radio v-model="radio" disabled value="selected and disabled">
+﻿<template>
+  <ty-radio v-model="radio" disabled value="disabled">Option A</ty-radio>
+  <ty-radio v-model="radio" disabled value="selected and disabled">
     Option B
-  </el-radio>
+  </ty-radio>
 </template>
 
 <script lang="ts" setup>

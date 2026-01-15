@@ -1,14 +1,14 @@
-<template>
-  switch parent border: <el-switch v-model="parentBorder" /> switch child
-  border: <el-switch v-model="childBorder" /> preserve expanded:
-  <el-switch v-model="preserveExpanded" />
-  <el-table
+﻿<template>
+  switch parent border: <ty-switch v-model="parentBorder" /> switch child
+  border: <ty-switch v-model="childBorder" /> preserve expanded:
+  <ty-switch v-model="preserveExpanded" />
+  <ty-table
     :data="tableData"
     :border="parentBorder"
     :preserve-expanded-content="preserveExpanded"
     style="width: 100%"
   >
-    <el-table-column type="expand">
+    <ty-table-column type="expand">
       <template #default="props">
         <div m="4">
           <p m="t-0 b-2">State: {{ props.row.state }}</p>
@@ -16,19 +16,19 @@
           <p m="t-0 b-2">Address: {{ props.row.address }}</p>
           <p m="t-0 b-2">Zip: {{ props.row.zip }}</p>
           <h3>Family</h3>
-          <el-table :data="props.row.family" :border="childBorder">
-            <el-table-column label="Name" prop="name" />
-            <el-table-column label="State" prop="state" />
-            <el-table-column label="City" prop="city" />
-            <el-table-column label="Address" prop="address" />
-            <el-table-column label="Zip" prop="zip" />
-          </el-table>
+          <ty-table :data="props.row.family" :border="childBorder">
+            <ty-table-column label="Name" prop="name" />
+            <ty-table-column label="State" prop="state" />
+            <ty-table-column label="City" prop="city" />
+            <ty-table-column label="Address" prop="address" />
+            <ty-table-column label="Zip" prop="zip" />
+          </ty-table>
         </div>
       </template>
-    </el-table-column>
-    <el-table-column label="Date" prop="date" />
-    <el-table-column label="Name" prop="name" />
-  </el-table>
+    </ty-table-column>
+    <ty-table-column label="Date" prop="date" />
+    <ty-table-column label="Name" prop="name" />
+  </ty-table>
 </template>
 
 <script lang="ts" setup>

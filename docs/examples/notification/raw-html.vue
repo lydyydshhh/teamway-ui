@@ -1,5 +1,5 @@
-<template>
-  <el-button plain @click="open"> Use HTML String </el-button>
+﻿<template>
+  <ty-button plain @click="open"> Use HTML String </ty-button>
 </template>
 
 <script lang="ts" setup>

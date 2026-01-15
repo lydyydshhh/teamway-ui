@@ -1,13 +1,13 @@
-<template>
+﻿<template>
   <div>
-    <el-button plain @click="openDialog('fade')"> Default </el-button>
-    <el-button plain @click="openDialog('scale')"> Scale </el-button>
-    <el-button plain @click="openDialog('slide')"> Slide </el-button>
-    <el-button plain @click="openDialog('bounce')"> Bounce </el-button>
-    <el-button plain @click="openDialogWithObject"> Object Config </el-button>
+    <ty-button plain @click="openDialog('fade')"> Default </ty-button>
+    <ty-button plain @click="openDialog('scale')"> Scale </ty-button>
+    <ty-button plain @click="openDialog('slide')"> Slide </ty-button>
+    <ty-button plain @click="openDialog('bounce')"> Bounce </ty-button>
+    <ty-button plain @click="openDialogWithObject"> Object Config </ty-button>
   </div>
 
-  <el-dialog
+  <ty-dialog
     v-model="dialogVisible"
     class="custom-transition-dialog"
     :title="`${currentAnimation} Animation Dialog`"
@@ -27,12 +27,12 @@
       </p>
     </div>
     <template #footer>
-      <el-button @click="dialogVisible = false">Cancel</el-button>
-      <el-button type="primary" @click="dialogVisible = false">
+      <ty-button @click="dialogVisible = false">Cancel</ty-button>
+      <ty-button type="primary" @click="dialogVisible = false">
         Confirm
-      </el-button>
+      </ty-button>
     </template>
-  </el-dialog>
+  </ty-dialog>
 </template>
 
 <script lang="ts" setup>

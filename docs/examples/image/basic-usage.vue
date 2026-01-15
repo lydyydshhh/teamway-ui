@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="demo-image">
     <div v-for="fit in fits" :key="fit" class="block">
       <span class="demonstration">{{ fit }}</span>
-      <el-image style="width: 100px; height: 100px" :src="url" :fit="fit" />
+      <ty-image style="width: 100px; height: 100px" :src="url" :fit="fit" />
     </div>
   </div>
 </template>

@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="demo-date-picker">
     <div class="block">
       <span class="demonstration">set prefix-icon</span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value1"
         type="date"
         placeholder="Pick a day"

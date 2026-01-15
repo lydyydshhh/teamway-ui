@@ -1,11 +1,11 @@
-<template>
-  <el-input
+﻿<template>
+  <ty-input
     v-model="filterText"
     class="w-60 mb-2"
     placeholder="Filter keyword"
   />
 
-  <el-tree
+  <ty-tree
     ref="treeRef"
     style="max-width: 600px"
     class="filter-tree"

@@ -1,9 +1,9 @@
-<template>
-  <el-button plain @click="dialogVisible = true">
+﻿<template>
+  <ty-button plain @click="dialogVisible = true">
     Click to open the Dialog
-  </el-button>
+  </ty-button>
 
-  <el-dialog
+  <ty-dialog
     v-model="dialogVisible"
     title="Tips"
     width="500"
@@ -12,13 +12,13 @@
     <span>This is a message</span>
     <template #footer>
       <div class="dialog-footer">
-        <el-button @click="dialogVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="dialogVisible = false">
+        <ty-button @click="dialogVisible = false">Cancel</ty-button>
+        <ty-button type="primary" @click="dialogVisible = false">
           Confirm
-        </el-button>
+        </ty-button>
       </div>
     </template>
-  </el-dialog>
+  </ty-dialog>
 </template>
 
 <script lang="ts" setup>

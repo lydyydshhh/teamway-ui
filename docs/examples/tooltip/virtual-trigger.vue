@@ -1,5 +1,5 @@
-<template>
-  <el-tooltip
+﻿<template>
+  <ty-tooltip
     v-model:visible="visible"
     content="Bottom center"
     placement="bottom"
@@ -8,7 +8,7 @@
     virtual-triggering
     :virtual-ref="triggerRef"
   />
-  <el-button @click="visible = !visible">test</el-button>
+  <ty-button @click="visible = !visible">test</ty-button>
 </template>
 
 <script setup lang="ts">

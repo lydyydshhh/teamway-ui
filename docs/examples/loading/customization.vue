@@ -1,5 +1,5 @@
-<template>
-  <el-table
+﻿<template>
+  <ty-table
     v-loading="loading"
     element-loading-text="Loading..."
     :element-loading-spinner="svg"
@@ -8,11 +8,11 @@
     :data="tableData"
     style="width: 100%"
   >
-    <el-table-column prop="date" label="Date" width="180" />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" />
-  </el-table>
-  <el-table
+    <ty-table-column prop="date" label="Date" width="180" />
+    <ty-table-column prop="name" label="Name" width="180" />
+    <ty-table-column prop="address" label="Address" />
+  </ty-table>
+  <ty-table
     v-loading="loading"
     :element-loading-svg="svg"
     class="custom-loading-svg"
@@ -20,10 +20,10 @@
     :data="tableData"
     style="width: 100%"
   >
-    <el-table-column prop="date" label="Date" width="180" />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" />
-  </el-table>
+    <ty-table-column prop="date" label="Date" width="180" />
+    <ty-table-column prop="name" label="Name" width="180" />
+    <ty-table-column prop="address" label="Address" />
+  </ty-table>
 </template>
 
 <script lang="ts" setup>

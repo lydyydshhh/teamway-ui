@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <div class="example-basic">
-    <el-time-picker v-model="value1" placeholder="Arbitrary time" />
-    <el-time-picker
+    <ty-time-picker v-model="value1" placeholder="Arbitrary time" />
+    <ty-time-picker
       v-model="value2"
       arrow-control
       placeholder="Arbitrary time"

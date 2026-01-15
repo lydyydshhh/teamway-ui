@@ -1,5 +1,5 @@
-<template>
-  <el-cascader
+﻿<template>
+  <ty-cascader
     :options="options"
     clearable
     :clear-icon="CloseBold"

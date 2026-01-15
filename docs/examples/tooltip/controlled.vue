@@ -1,12 +1,12 @@
-<template>
-  <el-tooltip :visible="visible">
+﻿<template>
+  <ty-tooltip :visible="visible">
     <template #content>
       <span>Content</span>
     </template>
-    <el-button @mouseenter="visible = true" @mouseleave="visible = false">
+    <ty-button @mouseenter="visible = true" @mouseleave="visible = false">
       Hover me
-    </el-button>
-  </el-tooltip>
+    </ty-button>
+  </ty-tooltip>
 </template>
 
 <script setup lang="ts">

@@ -16,7 +16,7 @@ const config = reactive({
 
 <template>
   <div class="wrapper">
-    <el-watermark
+    <ty-watermark
       class="watermark"
       :content="config.content"
       :font="config.font"
@@ -30,49 +30,49 @@ const config = reactive({
         <h2>A Vue 3 based component library for designers and developers</h2>
         <img src="/images/hamburger.png" alt="示例图片" />
       </div>
-    </el-watermark>
-    <el-form
+    </ty-watermark>
+    <ty-form
       class="form"
       :model="config"
       label-position="top"
       label-width="50px"
     >
-      <el-form-item label="Content">
-        <el-input v-model="config.content" />
-      </el-form-item>
-      <el-form-item label="Color">
-        <el-color-picker v-model="config.font.color" show-alpha />
-      </el-form-item>
-      <el-form-item label="FontSize">
-        <el-slider v-model="config.font.fontSize" />
-      </el-form-item>
-      <el-form-item label="zIndex">
-        <el-slider v-model="config.zIndex" />
-      </el-form-item>
-      <el-form-item label="Rotate">
-        <el-slider v-model="config.rotate" :min="-180" :max="180" />
-      </el-form-item>
-      <el-form-item label="Gap">
-        <el-space>
-          <el-input-number v-model="config.gap[0]" controls-position="right" />
-          <el-input-number v-model="config.gap[1]" controls-position="right" />
-        </el-space>
-      </el-form-item>
-      <el-form-item label="Offset">
-        <el-space>
-          <el-input-number
+      <ty-form-item label="Content">
+        <ty-input v-model="config.content" />
+      </ty-form-item>
+      <ty-form-item label="Color">
+        <ty-color-picker v-model="config.font.color" show-alpha />
+      </ty-form-item>
+      <ty-form-item label="FontSize">
+        <ty-slider v-model="config.font.fontSize" />
+      </ty-form-item>
+      <ty-form-item label="zIndex">
+        <ty-slider v-model="config.zIndex" />
+      </ty-form-item>
+      <ty-form-item label="Rotate">
+        <ty-slider v-model="config.rotate" :min="-180" :max="180" />
+      </ty-form-item>
+      <ty-form-item label="Gap">
+        <ty-space>
+          <ty-input-number v-model="config.gap[0]" controls-position="right" />
+          <ty-input-number v-model="config.gap[1]" controls-position="right" />
+        </ty-space>
+      </ty-form-item>
+      <ty-form-item label="Offset">
+        <ty-space>
+          <ty-input-number
             v-model="config.offset[0]"
             placeholder="offsetLeft"
             controls-position="right"
           />
-          <el-input-number
+          <ty-input-number
             v-model="config.offset[1]"
             placeholder="offsetTop"
             controls-position="right"
           />
-        </el-space>
-      </el-form-item>
-    </el-form>
+        </ty-space>
+      </ty-form-item>
+    </ty-form>
   </div>
 </template>
 

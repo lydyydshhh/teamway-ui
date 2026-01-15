@@ -1,14 +1,14 @@
-<template>
-  <el-switch
+﻿<template>
+  <ty-switch
     v-model="value"
     size="large"
     active-text="Open"
     inactive-text="Close"
   />
   <br />
-  <el-switch v-model="value" active-text="Open" inactive-text="Close" />
+  <ty-switch v-model="value" active-text="Open" inactive-text="Close" />
   <br />
-  <el-switch
+  <ty-switch
     v-model="value"
     size="small"
     active-text="Open"

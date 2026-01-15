@@ -1,18 +1,18 @@
-<template>
-  <el-table :data="tableData" style="width: 100%">
-    <el-table-column type="selection" width="55" />
-    <el-table-column label="Date" width="120">
+﻿<template>
+  <ty-table :data="tableData" style="width: 100%">
+    <ty-table-column type="selection" width="55" />
+    <ty-table-column label="Date" width="120">
       <template #default="scope">{{ scope.row.date }}</template>
-    </el-table-column>
-    <el-table-column property="name" label="Name" width="120" />
-    <el-table-column
+    </ty-table-column>
+    <ty-table-column property="name" label="Name" width="120" />
+    <ty-table-column
       property="address"
       label="use show-overflow-tooltip"
       width="240"
       show-overflow-tooltip
     />
-    <el-table-column property="address" label="address" />
-  </el-table>
+    <ty-table-column property="address" label="address" />
+  </ty-table>
 </template>
 
 <script lang="ts" setup>

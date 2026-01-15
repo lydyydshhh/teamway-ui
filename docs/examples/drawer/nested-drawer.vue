@@ -1,19 +1,19 @@
-<template>
-  <el-button type="primary" @click="drawer = true"> open </el-button>
+﻿<template>
+  <ty-button type="primary" @click="drawer = true"> open </ty-button>
 
-  <el-drawer v-model="drawer" title="I'm outer Drawer" size="50%">
+  <ty-drawer v-model="drawer" title="I'm outer Drawer" size="50%">
     <div>
-      <el-button @click="innerDrawer = true">Click me!</el-button>
-      <el-drawer
+      <ty-button @click="innerDrawer = true">Click me!</ty-button>
+      <ty-drawer
         v-model="innerDrawer"
         title="I'm inner Drawer"
         :append-to-body="true"
         :before-close="handleClose"
       >
         <p>_(:зゝ∠)_</p>
-      </el-drawer>
+      </ty-drawer>
     </div>
-  </el-drawer>
+  </ty-drawer>
 </template>
 
 <script lang="ts" setup>

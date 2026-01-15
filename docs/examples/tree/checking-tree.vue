@@ -1,5 +1,5 @@
-<template>
-  <el-tree
+﻿<template>
+  <ty-tree
     ref="treeRef"
     style="max-width: 600px"
     :data="data"
@@ -11,11 +11,11 @@
   />
 
   <div class="flex flex-wrap gap-1 mt-2">
-    <el-button class="!ml-0" @click="getCheckedNodes">get by node</el-button>
-    <el-button class="!ml-0" @click="getCheckedKeys">get by key</el-button>
-    <el-button class="!ml-0" @click="setCheckedNodes">set by node</el-button>
-    <el-button class="!ml-0" @click="setCheckedKeys">set by key</el-button>
-    <el-button class="!ml-0" @click="resetChecked">reset</el-button>
+    <ty-button class="!ml-0" @click="getCheckedNodes">get by node</ty-button>
+    <ty-button class="!ml-0" @click="getCheckedKeys">get by key</ty-button>
+    <ty-button class="!ml-0" @click="setCheckedNodes">set by node</ty-button>
+    <ty-button class="!ml-0" @click="setCheckedKeys">set by key</ty-button>
+    <ty-button class="!ml-0" @click="resetChecked">reset</ty-button>
   </div>
 </template>
 

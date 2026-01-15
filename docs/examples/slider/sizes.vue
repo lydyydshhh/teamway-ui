@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="slider-demo-block">
-    <el-slider v-model="value" show-input size="large" />
-    <el-slider v-model="value" show-input />
-    <el-slider v-model="value" show-input size="small" />
+    <ty-slider v-model="value" show-input size="large" />
+    <ty-slider v-model="value" show-input />
+    <ty-slider v-model="value" show-input size="small" />
   </div>
 </template>
 

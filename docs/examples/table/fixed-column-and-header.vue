@@ -1,12 +1,12 @@
-<template>
-  <el-table :data="tableData" style="width: 100%" height="250">
-    <el-table-column fixed prop="date" label="Date" width="150" />
-    <el-table-column prop="name" label="Name" width="120" />
-    <el-table-column prop="state" label="State" width="120" />
-    <el-table-column prop="city" label="City" width="320" />
-    <el-table-column prop="address" label="Address" width="600" />
-    <el-table-column prop="zip" label="Zip" />
-  </el-table>
+﻿<template>
+  <ty-table :data="tableData" style="width: 100%" height="250">
+    <ty-table-column fixed prop="date" label="Date" width="150" />
+    <ty-table-column prop="name" label="Name" width="120" />
+    <ty-table-column prop="state" label="State" width="120" />
+    <ty-table-column prop="city" label="City" width="320" />
+    <ty-table-column prop="address" label="Address" width="600" />
+    <ty-table-column prop="zip" label="Zip" />
+  </ty-table>
 </template>
 
 <script lang="ts" setup>

@@ -1,27 +1,27 @@
-<template>
+﻿<template>
   <div class="demo-image__error" flex gap-2>
-    <el-image />
-    <el-image>
+    <ty-image />
+    <ty-image>
       <template #error>
         <div class="image-viewer-slot image-slot">
-          <el-icon><icon-picture /></el-icon>
+          <ty-icon><icon-picture /></ty-icon>
         </div>
       </template>
-    </el-image>
-    <el-image :src="url" :preview-src-list="srcList" show-progress>
+    </ty-image>
+    <ty-image :src="url" :preview-src-list="srcList" show-progress>
       <template #viewer-error="{ activeIndex, src }">
         <div class="image-slot viewer-error">
-          <el-icon><icon-picture /></el-icon>
+          <ty-icon><icon-picture /></ty-icon>
           <span>
             this is viewer-error slot. current index: {{ activeIndex }}. src:
             {{ src }}
           </span>
         </div>
       </template>
-    </el-image>
-    <el-button @click="showPreview = true"> preview controlled </el-button>
+    </ty-image>
+    <ty-button @click="showPreview = true"> preview controlled </ty-button>
 
-    <el-image-viewer
+    <ty-image-viewer
       v-if="showPreview"
       show-progress
       :url-list="srcList"
@@ -29,14 +29,14 @@
     >
       <template #viewer-error="{ activeIndex, src }">
         <div class="image-slot viewer-error">
-          <el-icon><icon-picture /></el-icon>
+          <ty-icon><icon-picture /></ty-icon>
           <span>
             this is viewer-error slot. current index: {{ activeIndex }}. src:
             {{ src }}
           </span>
         </div>
       </template>
-    </el-image-viewer>
+    </ty-image-viewer>
   </div>
 </template>
 

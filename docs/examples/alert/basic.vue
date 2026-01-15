@@ -1,10 +1,10 @@
-<template>
+﻿<template>
   <div style="max-width: 600px">
-    <el-alert title="Primary alert" type="primary" />
-    <el-alert title="Success alert" type="success" />
-    <el-alert title="Info alert" type="info" />
-    <el-alert title="Warning alert" type="warning" />
-    <el-alert title="Error alert" type="error" />
+    <ty-alert title="Primary alert" type="primary" />
+    <ty-alert title="Success alert" type="success" />
+    <ty-alert title="Info alert" type="info" />
+    <ty-alert title="Warning alert" type="warning" />
+    <ty-alert title="Error alert" type="error" />
   </div>
 </template>
 

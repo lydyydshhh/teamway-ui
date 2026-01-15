@@ -1,27 +1,27 @@
-<template>
+﻿<template>
   <div>
-    <el-radio-group v-model="radio" size="large" fill="#409eff">
-      <el-radio-button label="New York" value="New York" />
-      <el-radio-button label="Washington" value="Washington" />
-      <el-radio-button label="Los Angeles" value="Los Angeles" />
-      <el-radio-button label="Chicago" value="Chicago" />
-    </el-radio-group>
+    <ty-radio-group v-model="radio" size="large" fill="#409eff">
+      <ty-radio-button label="New York" value="New York" />
+      <ty-radio-button label="Washington" value="Washington" />
+      <ty-radio-button label="Los Angeles" value="Los Angeles" />
+      <ty-radio-button label="Chicago" value="Chicago" />
+    </ty-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio" text-color="#fff" fill="#6c6cff">
-      <el-radio-button label="New York" value="New York" />
-      <el-radio-button label="Washington" value="Washington" />
-      <el-radio-button label="Los Angeles" value="Los Angeles" />
-      <el-radio-button label="Chicago" value="Chicago" />
-    </el-radio-group>
+    <ty-radio-group v-model="radio" text-color="#fff" fill="#6c6cff">
+      <ty-radio-button label="New York" value="New York" />
+      <ty-radio-button label="Washington" value="Washington" />
+      <ty-radio-button label="Los Angeles" value="Los Angeles" />
+      <ty-radio-button label="Chicago" value="Chicago" />
+    </ty-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio" size="small">
-      <el-radio-button label="New York" value="New York" />
-      <el-radio-button label="Washington" value="Washington" disabled />
-      <el-radio-button label="Los Angeles" value="Los Angeles" />
-      <el-radio-button label="Chicago" value="Chicago" />
-    </el-radio-group>
+    <ty-radio-group v-model="radio" size="small">
+      <ty-radio-button label="New York" value="New York" />
+      <ty-radio-button label="Washington" value="Washington" disabled />
+      <ty-radio-button label="Los Angeles" value="Los Angeles" />
+      <ty-radio-button label="Chicago" value="Chicago" />
+    </ty-radio-group>
   </div>
 </template>
 

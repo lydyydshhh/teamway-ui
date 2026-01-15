@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div style="height: 400px">
-    <el-auto-resizer>
+    <ty-auto-resizer>
       <template #default="{ height, width }">
-        <el-table-v2
+        <ty-table-v2
           :columns="columns"
           :cell-props="cellProps"
           :class="kls"
@@ -11,7 +11,7 @@
           :height="height"
         />
       </template>
-    </el-auto-resizer>
+    </ty-auto-resizer>
   </div>
 </template>
 

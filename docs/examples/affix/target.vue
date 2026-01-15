@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="affix-container">
-    <el-affix target=".affix-container" :offset="80">
-      <el-button type="primary">Target container</el-button>
-    </el-affix>
+    <ty-affix target=".affix-container" :offset="80">
+      <ty-button type="primary">Target container</ty-button>
+    </ty-affix>
   </div>
 </template>
 

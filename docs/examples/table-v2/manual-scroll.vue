@@ -1,20 +1,20 @@
-<template>
+﻿<template>
   <div class="mb-4 flex items-center">
-    <el-form-item label="Scroll pixels" class="mr-4">
-      <el-input v-model="scrollDelta" />
-    </el-form-item>
-    <el-form-item label="Scroll rows">
-      <el-input v-model="scrollRows" />
-    </el-form-item>
+    <ty-form-item label="Scroll pixels" class="mr-4">
+      <ty-input v-model="scrollDelta" />
+    </ty-form-item>
+    <ty-form-item label="Scroll rows">
+      <ty-input v-model="scrollRows" />
+    </ty-form-item>
   </div>
   <div class="mb-4 flex items-center">
-    <el-button @click="scrollByPixels"> Scroll by pixels </el-button>
-    <el-button @click="scrollByRows"> Scroll by rows </el-button>
+    <ty-button @click="scrollByPixels"> Scroll by pixels </ty-button>
+    <ty-button @click="scrollByRows"> Scroll by rows </ty-button>
   </div>
   <div style="height: 400px">
-    <el-auto-resizer>
+    <ty-auto-resizer>
       <template #default="{ height, width }">
-        <el-table-v2
+        <ty-table-v2
           ref="tableRef"
           :columns="columns"
           :data="data"
@@ -23,7 +23,7 @@
           fixed
         />
       </template>
-    </el-auto-resizer>
+    </ty-auto-resizer>
   </div>
 </template>
 

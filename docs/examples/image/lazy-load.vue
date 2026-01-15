@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="demo-image__lazy">
-    <el-image v-for="url in urls" :key="url" :src="url" lazy />
+    <ty-image v-for="url in urls" :key="url" :src="url" lazy />
   </div>
 </template>
 

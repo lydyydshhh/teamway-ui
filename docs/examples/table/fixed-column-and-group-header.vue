@@ -1,14 +1,14 @@
-<template>
-  <el-table :data="tableData" style="width: 100%" height="250">
-    <el-table-column prop="date" label="Date" />
-    <el-table-column prop="name" label="Name" />
-    <el-table-column prop="zip" label="Zip" />
-    <el-table-column label="Address Info" fixed="right">
-      <el-table-column prop="state" label="State" />
-      <el-table-column prop="city" label="City" />
-      <el-table-column prop="address" label="Address" min-width="200" />
-    </el-table-column>
-  </el-table>
+﻿<template>
+  <ty-table :data="tableData" style="width: 100%" height="250">
+    <ty-table-column prop="date" label="Date" />
+    <ty-table-column prop="name" label="Name" />
+    <ty-table-column prop="zip" label="Zip" />
+    <ty-table-column label="Address Info" fixed="right">
+      <ty-table-column prop="state" label="State" />
+      <ty-table-column prop="city" label="City" />
+      <ty-table-column prop="address" label="Address" min-width="200" />
+    </ty-table-column>
+  </ty-table>
 </template>
 
 <script lang="ts" setup>

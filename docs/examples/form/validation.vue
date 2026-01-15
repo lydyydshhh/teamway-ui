@@ -1,91 +1,91 @@
-<template>
-  <el-form
+﻿<template>
+  <ty-form
     ref="ruleFormRef"
     style="max-width: 600px"
     :model="ruleForm"
     :rules="rules"
     label-width="auto"
   >
-    <el-form-item label="Activity name" prop="name">
-      <el-input v-model="ruleForm.name" />
-    </el-form-item>
-    <el-form-item label="Activity zone" prop="region">
-      <el-select v-model="ruleForm.region" placeholder="Activity zone">
-        <el-option label="Zone one" value="shanghai" />
-        <el-option label="Zone two" value="beijing" />
-      </el-select>
-    </el-form-item>
-    <el-form-item label="Activity count" prop="count">
-      <el-select-v2
+    <ty-form-item label="Activity name" prop="name">
+      <ty-input v-model="ruleForm.name" />
+    </ty-form-item>
+    <ty-form-item label="Activity zone" prop="region">
+      <ty-select v-model="ruleForm.region" placeholder="Activity zone">
+        <ty-option label="Zone one" value="shanghai" />
+        <ty-option label="Zone two" value="beijing" />
+      </ty-select>
+    </ty-form-item>
+    <ty-form-item label="Activity count" prop="count">
+      <ty-select-v2
         v-model="ruleForm.count"
         placeholder="Activity count"
         :options="options"
       />
-    </el-form-item>
-    <el-form-item label="Activity time" required>
-      <el-col :span="11">
-        <el-form-item prop="date1">
-          <el-date-picker
+    </ty-form-item>
+    <ty-form-item label="Activity time" required>
+      <ty-col :span="11">
+        <ty-form-item prop="date1">
+          <ty-date-picker
             v-model="ruleForm.date1"
             type="date"
             aria-label="Pick a date"
             placeholder="Pick a date"
             style="width: 100%"
           />
-        </el-form-item>
-      </el-col>
-      <el-col class="text-center" :span="2">
+        </ty-form-item>
+      </ty-col>
+      <ty-col class="text-center" :span="2">
         <span class="text-gray-500">-</span>
-      </el-col>
-      <el-col :span="11">
-        <el-form-item prop="date2">
-          <el-time-picker
+      </ty-col>
+      <ty-col :span="11">
+        <ty-form-item prop="date2">
+          <ty-time-picker
             v-model="ruleForm.date2"
             aria-label="Pick a time"
             placeholder="Pick a time"
             style="width: 100%"
           />
-        </el-form-item>
-      </el-col>
-    </el-form-item>
-    <el-form-item label="Instant delivery" prop="delivery">
-      <el-switch v-model="ruleForm.delivery" />
-    </el-form-item>
-    <el-form-item label="Activity location" prop="location">
-      <el-segmented v-model="ruleForm.location" :options="locationOptions" />
-    </el-form-item>
-    <el-form-item label="Activity type" prop="type">
-      <el-checkbox-group v-model="ruleForm.type">
-        <el-checkbox value="Online activities" name="type">
+        </ty-form-item>
+      </ty-col>
+    </ty-form-item>
+    <ty-form-item label="Instant delivery" prop="delivery">
+      <ty-switch v-model="ruleForm.delivery" />
+    </ty-form-item>
+    <ty-form-item label="Activity location" prop="location">
+      <ty-segmented v-model="ruleForm.location" :options="locationOptions" />
+    </ty-form-item>
+    <ty-form-item label="Activity type" prop="type">
+      <ty-checkbox-group v-model="ruleForm.type">
+        <ty-checkbox value="Online activities" name="type">
           Online activities
-        </el-checkbox>
-        <el-checkbox value="Promotion activities" name="type">
+        </ty-checkbox>
+        <ty-checkbox value="Promotion activities" name="type">
           Promotion activities
-        </el-checkbox>
-        <el-checkbox value="Offline activities" name="type">
+        </ty-checkbox>
+        <ty-checkbox value="Offline activities" name="type">
           Offline activities
-        </el-checkbox>
-        <el-checkbox value="Simple brand exposure" name="type">
+        </ty-checkbox>
+        <ty-checkbox value="Simple brand exposure" name="type">
           Simple brand exposure
-        </el-checkbox>
-      </el-checkbox-group>
-    </el-form-item>
-    <el-form-item label="Resources" prop="resource">
-      <el-radio-group v-model="ruleForm.resource">
-        <el-radio value="Sponsorship">Sponsorship</el-radio>
-        <el-radio value="Venue">Venue</el-radio>
-      </el-radio-group>
-    </el-form-item>
-    <el-form-item label="Activity form" prop="desc">
-      <el-input v-model="ruleForm.desc" type="textarea" />
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="submitForm(ruleFormRef)">
+        </ty-checkbox>
+      </ty-checkbox-group>
+    </ty-form-item>
+    <ty-form-item label="Resources" prop="resource">
+      <ty-radio-group v-model="ruleForm.resource">
+        <ty-radio value="Sponsorship">Sponsorship</ty-radio>
+        <ty-radio value="Venue">Venue</ty-radio>
+      </ty-radio-group>
+    </ty-form-item>
+    <ty-form-item label="Activity form" prop="desc">
+      <ty-input v-model="ruleForm.desc" type="textarea" />
+    </ty-form-item>
+    <ty-form-item>
+      <ty-button type="primary" @click="submitForm(ruleFormRef)">
         Create
-      </el-button>
-      <el-button @click="resetForm(ruleFormRef)">Reset</el-button>
-    </el-form-item>
-  </el-form>
+      </ty-button>
+      <ty-button @click="resetForm(ruleFormRef)">Reset</ty-button>
+    </ty-form-item>
+  </ty-form>
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
-<template>
-  <el-select
+﻿<template>
+  <ty-select
     v-model="value"
     :empty-values="[null, undefined]"
     :value-on-clear="null"
@@ -8,13 +8,13 @@
     style="width: 240px"
     @clear="handleClear"
   >
-    <el-option
+    <ty-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value"
     />
-  </el-select>
+  </ty-select>
 </template>
 
 <script lang="ts" setup>

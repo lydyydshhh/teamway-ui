@@ -1,9 +1,9 @@
-<template>
+﻿<template>
   <div>
-    <el-link>default</el-link>
-    <el-link underline="always">always</el-link>
-    <el-link underline="hover">hover</el-link>
-    <el-link underline="never">never</el-link>
+    <ty-link>default</ty-link>
+    <ty-link underline="always">always</ty-link>
+    <ty-link underline="hover">hover</ty-link>
+    <ty-link underline="never">never</ty-link>
   </div>
 </template>
 

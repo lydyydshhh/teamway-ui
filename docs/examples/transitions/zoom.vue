@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div>
-    <el-button @click="show = !show">Click Me</el-button>
+    <ty-button @click="show = !show">Click Me</ty-button>
 
     <div class="transition-container">
       <transition name="el-zoom-in-left">

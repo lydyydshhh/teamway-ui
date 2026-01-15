@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="custom-style">
-    <el-segmented v-model="value" :options="options" />
+    <ty-segmented v-model="value" :options="options" />
   </div>
 </template>
 

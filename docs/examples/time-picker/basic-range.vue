@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="example-basic">
-    <el-time-picker
+    <ty-time-picker
       v-model="value1"
       :disabled-hours="disabledHours"
       :disabled-minutes="disabledMinutes"

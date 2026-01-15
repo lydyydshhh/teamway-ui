@@ -1,5 +1,5 @@
-<template>
-  <el-table-v2
+﻿<template>
+  <ty-table-v2
     :columns="columns"
     :data="data"
     :row-height="40"
@@ -11,12 +11,12 @@
         class="el-loading-mask"
         style="display: flex; align-items: center; justify-content: center"
       >
-        <el-icon class="is-loading" color="var(--ty-color-primary)" :size="26">
+        <ty-icon class="is-loading" color="var(--ty-color-primary)" :size="26">
           <loading-icon />
-        </el-icon>
+        </ty-icon>
       </div>
     </template>
-  </el-table-v2>
+  </ty-table-v2>
 </template>
 
 <script lang="ts" setup>

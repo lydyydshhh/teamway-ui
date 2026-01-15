@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div>
-    <el-config-provider :message="config">
-      <el-button @click="open">OPEN</el-button>
-    </el-config-provider>
+    <ty-config-provider :message="config">
+      <ty-button @click="open">OPEN</ty-button>
+    </ty-config-provider>
   </div>
 </template>
 

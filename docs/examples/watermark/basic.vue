@@ -1,4 +1,4 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 import { reactive, watch } from 'vue'
 import { isDark } from '~/composables/dark'
 
@@ -20,7 +20,7 @@ watch(
 </script>
 
 <template>
-  <el-watermark :font="font">
+  <ty-watermark :font="font">
     <div style="height: 500px" />
-  </el-watermark>
+  </ty-watermark>
 </template>

@@ -1,9 +1,9 @@
-<template>
-  <el-space :size="size" spacer="|">
+﻿<template>
+  <ty-space :size="size" spacer="|">
     <div v-for="i in 2" :key="i">
-      <el-button> button {{ i }} </el-button>
+      <ty-button> button {{ i }} </ty-button>
     </div>
-  </el-space>
+  </ty-space>
 </template>
 
 <script lang="ts" setup>

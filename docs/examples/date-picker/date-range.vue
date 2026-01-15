@@ -1,13 +1,13 @@
-<template>
-  <el-radio-group v-model="size" aria-label="size control" class="mb-4">
-    <el-radio-button value="large">large</el-radio-button>
-    <el-radio-button value="default">default</el-radio-button>
-    <el-radio-button value="small">small</el-radio-button>
-  </el-radio-group>
+﻿<template>
+  <ty-radio-group v-model="size" aria-label="size control" class="mb-4">
+    <ty-radio-button value="large">large</ty-radio-button>
+    <ty-radio-button value="default">default</ty-radio-button>
+    <ty-radio-button value="small">small</ty-radio-button>
+  </ty-radio-group>
   <div class="demo-date-picker">
     <div class="block">
       <span class="demonstration">Default</span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value1"
         type="daterange"
         range-separator="To"
@@ -18,7 +18,7 @@
     </div>
     <div class="block">
       <span class="demonstration">With quick options</span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value2"
         type="daterange"
         unlink-panels

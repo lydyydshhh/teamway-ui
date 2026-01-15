@@ -1,36 +1,36 @@
-<template>
-  <el-space direction="vertical">
-    <el-space>
-      <el-input-number v-model="num" />
-      <el-input-number v-model="num">
+﻿<template>
+  <ty-space direction="vertical">
+    <ty-space>
+      <ty-input-number v-model="num" />
+      <ty-input-number v-model="num">
         <template #decrease-icon>
-          <el-icon>
+          <ty-icon>
             <ArrowDown />
-          </el-icon>
+          </ty-icon>
         </template>
         <template #increase-icon>
-          <el-icon>
+          <ty-icon>
             <ArrowUp />
-          </el-icon>
+          </ty-icon>
         </template>
-      </el-input-number>
-    </el-space>
-    <el-space>
-      <el-input-number v-model="num" controls-position="right" />
-      <el-input-number v-model="num" controls-position="right">
+      </ty-input-number>
+    </ty-space>
+    <ty-space>
+      <ty-input-number v-model="num" controls-position="right" />
+      <ty-input-number v-model="num" controls-position="right">
         <template #decrease-icon>
-          <el-icon>
+          <ty-icon>
             <Minus />
-          </el-icon>
+          </ty-icon>
         </template>
         <template #increase-icon>
-          <el-icon>
+          <ty-icon>
             <Plus />
-          </el-icon>
+          </ty-icon>
         </template>
-      </el-input-number>
-    </el-space>
-  </el-space>
+      </ty-input-number>
+    </ty-space>
+  </ty-space>
 </template>
 
 <script lang="ts" setup>

@@ -1,15 +1,15 @@
-<template>
+﻿<template>
   <div style="max-width: 600px">
-    <el-alert title="Primary alert" type="primary" show-icon />
-    <el-alert title="Success alert" type="success" show-icon />
-    <el-alert title="Info alert" type="info" show-icon />
-    <el-alert title="Warning alert" type="warning" show-icon />
-    <el-alert title="Error alert" type="error" show-icon />
-    <el-alert title="Error alert with custom icon" type="error" show-icon>
+    <ty-alert title="Primary alert" type="primary" show-icon />
+    <ty-alert title="Success alert" type="success" show-icon />
+    <ty-alert title="Info alert" type="info" show-icon />
+    <ty-alert title="Warning alert" type="warning" show-icon />
+    <ty-alert title="Error alert" type="error" show-icon />
+    <ty-alert title="Error alert with custom icon" type="error" show-icon>
       <template #icon>
         <Bell />
       </template>
-    </el-alert>
+    </ty-alert>
   </div>
 </template>
 

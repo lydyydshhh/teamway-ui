@@ -1,5 +1,5 @@
-<template>
-  <el-table-v2
+﻿<template>
+  <ty-table-v2
     fixed
     :columns="fixedColumns"
     :data="data"

@@ -1,10 +1,10 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-1">
-    <el-button class="!ml-0" :plain="true" @click="open5">Primary</el-button>
-    <el-button class="!ml-0" :plain="true" @click="open2">Success</el-button>
-    <el-button class="!ml-0" :plain="true" @click="open3">Warning</el-button>
-    <el-button class="!ml-0" :plain="true" @click="open1">Info</el-button>
-    <el-button class="!ml-0" :plain="true" @click="open4">Error</el-button>
+    <ty-button class="!ml-0" :plain="true" @click="open5">Primary</ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="open2">Success</ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="open3">Warning</ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="open1">Info</ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="open4">Error</ty-button>
   </div>
 </template>
 

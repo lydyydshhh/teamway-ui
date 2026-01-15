@@ -1,10 +1,10 @@
-<template>
-  <el-badge :value="200" :max="99" class="item">
-    <el-button>comments</el-button>
-  </el-badge>
-  <el-badge :value="100" :max="10" class="item">
-    <el-button>replies</el-button>
-  </el-badge>
+﻿<template>
+  <ty-badge :value="200" :max="99" class="item">
+    <ty-button>comments</ty-button>
+  </ty-badge>
+  <ty-badge :value="100" :max="10" class="item">
+    <ty-button>replies</ty-button>
+  </ty-badge>
 </template>
 
 <style scoped>

@@ -1,7 +1,7 @@
-<template>
-  <el-popconfirm title="Are you sure to delete this?">
+﻿<template>
+  <ty-popconfirm title="Are you sure to delete this?">
     <template #reference>
-      <el-button>Delete</el-button>
+      <ty-button>Delete</ty-button>
     </template>
-  </el-popconfirm>
+  </ty-popconfirm>
 </template>

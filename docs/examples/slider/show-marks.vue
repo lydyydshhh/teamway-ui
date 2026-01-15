@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="slider-demo-block">
-    <el-slider v-model="value" range :marks="marks" />
+    <ty-slider v-model="value" range :marks="marks" />
   </div>
 </template>
 

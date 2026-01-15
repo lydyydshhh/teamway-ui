@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="slider-demo-block">
-    <el-slider v-model="value" show-input />
+    <ty-slider v-model="value" show-input />
   </div>
 </template>
 

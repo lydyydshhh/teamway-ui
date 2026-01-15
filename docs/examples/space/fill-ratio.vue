@@ -1,32 +1,32 @@
-<template>
+﻿<template>
   <div>
     <div style="margin-bottom: 15px">
       direction:
-      <el-radio v-model="direction" value="horizontal">horizontal</el-radio>
-      <el-radio v-model="direction" value="vertical">vertical</el-radio>
+      <ty-radio v-model="direction" value="horizontal">horizontal</ty-radio>
+      <ty-radio v-model="direction" value="vertical">vertical</ty-radio>
     </div>
     <div style="margin-bottom: 15px">
-      fillRatio:<el-slider v-model="fillRatio" />
+      fillRatio:<ty-slider v-model="fillRatio" />
     </div>
-    <el-space
+    <ty-space
       fill
       wrap
       :fill-ratio="fillRatio"
       :direction="direction"
       style="width: 100%"
     >
-      <el-card v-for="i in 5" :key="i" class="box-card">
+      <ty-card v-for="i in 5" :key="i" class="box-card">
         <template #header>
           <div class="card-header">
             <span>Card name</span>
-            <el-button class="button" text>Operation button</el-button>
+            <ty-button class="button" text>Operation button</ty-button>
           </div>
         </template>
         <div v-for="o in 4" :key="o" class="text item">
           {{ 'List item ' + o }}
         </div>
-      </el-card>
-    </el-space>
+      </ty-card>
+    </ty-space>
   </div>
 </template>
 

@@ -1,29 +1,29 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-1">
-    <el-button class="!ml-0" plain @click="dialogVisible = true">
+    <ty-button class="!ml-0" plain @click="dialogVisible = true">
       Open a draggable Dialog
-    </el-button>
-    <el-button class="!ml-0" plain @click="dialogOverflowVisible = true">
+    </ty-button>
+    <ty-button class="!ml-0" plain @click="dialogOverflowVisible = true">
       Open a overflow draggable Dialog
-    </el-button>
-    <el-button class="!ml-0" plain @click="customDraggingVisible = true">
+    </ty-button>
+    <ty-button class="!ml-0" plain @click="customDraggingVisible = true">
       Open a custom dragging style Dialog
-    </el-button>
+    </ty-button>
   </div>
 
-  <el-dialog v-model="dialogVisible" title="Tips" width="500" draggable>
+  <ty-dialog v-model="dialogVisible" title="Tips" width="500" draggable>
     <span>It's a draggable Dialog</span>
     <template #footer>
       <div class="dialog-footer">
-        <el-button @click="dialogVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="dialogVisible = false">
+        <ty-button @click="dialogVisible = false">Cancel</ty-button>
+        <ty-button type="primary" @click="dialogVisible = false">
           Confirm
-        </el-button>
+        </ty-button>
       </div>
     </template>
-  </el-dialog>
+  </ty-dialog>
 
-  <el-dialog
+  <ty-dialog
     v-model="dialogOverflowVisible"
     title="Tips"
     width="500"
@@ -33,15 +33,15 @@
     <span>It's a overflow draggable Dialog</span>
     <template #footer>
       <div class="dialog-footer">
-        <el-button @click="dialogOverflowVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="dialogOverflowVisible = false">
+        <ty-button @click="dialogOverflowVisible = false">Cancel</ty-button>
+        <ty-button type="primary" @click="dialogOverflowVisible = false">
           Confirm
-        </el-button>
+        </ty-button>
       </div>
     </template>
-  </el-dialog>
+  </ty-dialog>
 
-  <el-dialog
+  <ty-dialog
     v-model="customDraggingVisible"
     class="custom-dragging-style"
     title="Custom Dragging Style"
@@ -54,13 +54,13 @@
     >
     <template #footer>
       <div class="dialog-footer">
-        <el-button @click="customDraggingVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="customDraggingVisible = false">
+        <ty-button @click="customDraggingVisible = false">Cancel</ty-button>
+        <ty-button type="primary" @click="customDraggingVisible = false">
           Confirm
-        </el-button>
+        </ty-button>
       </div>
     </template>
-  </el-dialog>
+  </ty-dialog>
 </template>
 
 <script lang="ts" setup>

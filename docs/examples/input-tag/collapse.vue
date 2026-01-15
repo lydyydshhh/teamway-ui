@@ -1,14 +1,14 @@
-<template>
+﻿<template>
   <div class="m-4">
     <p>use collapse-tags</p>
-    <el-input-tag
+    <ty-input-tag
       v-model="input1"
       collapse-tags
       placeholder="Please input"
       aria-label="Please click the Enter key after input"
     />
     <p>use collapse-tags-tooltip</p>
-    <el-input-tag
+    <ty-input-tag
       v-model="input2"
       collapse-tags
       collapse-tags-tooltip
@@ -16,7 +16,7 @@
       aria-label="Please click the Enter key after input"
     />
     <p>use max-collapse-tags</p>
-    <el-input-tag
+    <ty-input-tag
       v-model="input3"
       collapse-tags
       collapse-tags-tooltip

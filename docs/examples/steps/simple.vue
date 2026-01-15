@@ -1,21 +1,21 @@
-<template>
-  <el-steps
+﻿<template>
+  <ty-steps
     class="mb-4"
     style="max-width: 600px"
     :space="200"
     :active="1"
     simple
   >
-    <el-step title="Step 1" :icon="Edit" />
-    <el-step title="Step 2" :icon="UploadFilled" />
-    <el-step title="Step 3" :icon="Picture" />
-  </el-steps>
+    <ty-step title="Step 1" :icon="Edit" />
+    <ty-step title="Step 2" :icon="UploadFilled" />
+    <ty-step title="Step 3" :icon="Picture" />
+  </ty-steps>
 
-  <el-steps style="max-width: 600px" :active="1" finish-status="success" simple>
-    <el-step title="Step 1" />
-    <el-step title="Step 2" />
-    <el-step title="Step 3" />
-  </el-steps>
+  <ty-steps style="max-width: 600px" :active="1" finish-status="success" simple>
+    <ty-step title="Step 1" />
+    <ty-step title="Step 2" />
+    <ty-step title="Step 3" />
+  </ty-steps>
 </template>
 
 <script lang="ts" setup>

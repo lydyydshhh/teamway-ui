@@ -1,11 +1,11 @@
-<template>
-  <el-steps style="max-width: 600px" :active="active" finish-status="success">
-    <el-step title="Step 1" />
-    <el-step title="Step 2" />
-    <el-step title="Step 3" />
-  </el-steps>
+﻿<template>
+  <ty-steps style="max-width: 600px" :active="active" finish-status="success">
+    <ty-step title="Step 1" />
+    <ty-step title="Step 2" />
+    <ty-step title="Step 3" />
+  </ty-steps>
 
-  <el-button style="margin-top: 12px" @click="next">Next step</el-button>
+  <ty-button style="margin-top: 12px" @click="next">Next step</ty-button>
 </template>
 
 <script lang="ts" setup>

@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="demo-datetime-picker">
     <div class="block">
       <span class="demonstration">Start and end date time 12:00:00</span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value1"
         type="datetimerange"
         start-placeholder="Start Date"
@@ -14,7 +14,7 @@
       <span class="demonstration">
         Start date time 12:00:00, end date time 08:00:00
       </span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value2"
         type="datetimerange"
         start-placeholder="Start Date"

@@ -1,14 +1,14 @@
-<template>
-  <el-radio-group v-model="direction" @change="drawer = true">
-    <el-radio-button value="ttb">top</el-radio-button>
-    <el-radio-button value="rtl">right</el-radio-button>
-    <el-radio-button value="btt">bottom</el-radio-button>
-    <el-radio-button value="ltr">left</el-radio-button>
-  </el-radio-group>
+﻿<template>
+  <ty-radio-group v-model="direction" @change="drawer = true">
+    <ty-radio-button value="ttb">top</ty-radio-button>
+    <ty-radio-button value="rtl">right</ty-radio-button>
+    <ty-radio-button value="btt">bottom</ty-radio-button>
+    <ty-radio-button value="ltr">left</ty-radio-button>
+  </ty-radio-group>
 
-  <el-drawer v-model="drawer" :direction="direction" resizable>
+  <ty-drawer v-model="drawer" :direction="direction" resizable>
     This is drawer content.
-  </el-drawer>
+  </ty-drawer>
 </template>
 
 <script lang="ts" setup>

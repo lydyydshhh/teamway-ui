@@ -1,5 +1,5 @@
-<template>
-  <el-autocomplete
+﻿<template>
+  <ty-autocomplete
     v-model="state"
     :fetch-suggestions="querySearch"
     popper-class="my-autocomplete"
@@ -7,15 +7,15 @@
     @select="handleSelect"
   >
     <template #suffix>
-      <el-icon class="el-input__icon" @click="handleIconClick">
+      <ty-icon class="el-input__icon" @click="handleIconClick">
         <edit />
-      </el-icon>
+      </ty-icon>
     </template>
     <template #default="{ item }">
       <div class="value">{{ item.value }}</div>
       <span class="link">{{ item.link }}</span>
     </template>
-  </el-autocomplete>
+  </ty-autocomplete>
 </template>
 
 <script lang="ts" setup>

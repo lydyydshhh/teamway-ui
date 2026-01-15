@@ -1,10 +1,10 @@
-<template>
+﻿<template>
   <div class="flex gap-12">
     <div class="grid gap-3">
-      <el-button @click="handleClick">
+      <ty-button @click="handleClick">
         openPreview with showPreview method
-      </el-button>
-      <el-image
+      </ty-button>
+      <ty-image
         ref="imageRef"
         style="width: 100px; height: 100px"
         :src="url"
@@ -14,8 +14,8 @@
       />
     </div>
     <div>
-      <el-button @click="showPreview = true"> preview controlled </el-button>
-      <el-image-viewer
+      <ty-button @click="showPreview = true"> preview controlled </ty-button>
+      <ty-image-viewer
         v-if="showPreview"
         :url-list="srcList"
         show-progress

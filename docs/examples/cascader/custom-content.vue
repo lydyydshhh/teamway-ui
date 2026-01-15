@@ -1,10 +1,10 @@
-<template>
-  <el-cascader :options="options">
+﻿<template>
+  <ty-cascader :options="options">
     <template #default="{ node, data }">
       <span>{{ data.label }}</span>
       <span v-if="!node.isLeaf"> ({{ data.children.length }}) </span>
     </template>
-  </el-cascader>
+  </ty-cascader>
 </template>
 
 <script lang="ts" setup>

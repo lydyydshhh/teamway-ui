@@ -1,9 +1,9 @@
-<template>
+﻿<template>
   <div class="demo-date-picker">
     <div class="container">
       <div class="block">
         <span class="demonstration">Week</span>
-        <el-date-picker
+        <ty-date-picker
           v-model="value1"
           type="week"
           format="[Week] ww"
@@ -12,7 +12,7 @@
       </div>
       <div class="block">
         <span class="demonstration">Dates</span>
-        <el-date-picker
+        <ty-date-picker
           v-model="value2"
           type="dates"
           placeholder="Pick one or more dates"
@@ -22,7 +22,7 @@
     <div class="container">
       <div class="block">
         <span class="demonstration">Year</span>
-        <el-date-picker
+        <ty-date-picker
           v-model="value3"
           type="year"
           placeholder="Pick a year"
@@ -30,7 +30,7 @@
       </div>
       <div class="block">
         <span class="demonstration">Years</span>
-        <el-date-picker
+        <ty-date-picker
           v-model="value4"
           type="years"
           placeholder="Pick one or more years"
@@ -40,7 +40,7 @@
     <div class="container">
       <div class="block">
         <span class="demonstration">Month</span>
-        <el-date-picker
+        <ty-date-picker
           v-model="value5"
           type="month"
           placeholder="Pick a month"
@@ -48,7 +48,7 @@
       </div>
       <div class="block">
         <span class="demonstration">Months</span>
-        <el-date-picker
+        <ty-date-picker
           v-model="value6"
           type="months"
           placeholder="Pick one or more months"

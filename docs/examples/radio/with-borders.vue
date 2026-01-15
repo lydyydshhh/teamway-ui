@@ -1,27 +1,27 @@
-<template>
+﻿<template>
   <div>
-    <el-radio-group v-model="radio1">
-      <el-radio value="1" size="large" border>Option A</el-radio>
-      <el-radio value="2" size="large" border>Option B</el-radio>
-    </el-radio-group>
+    <ty-radio-group v-model="radio1">
+      <ty-radio value="1" size="large" border>Option A</ty-radio>
+      <ty-radio value="2" size="large" border>Option B</ty-radio>
+    </ty-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio2">
-      <el-radio value="1" border>Option A</el-radio>
-      <el-radio value="2" border>Option B</el-radio>
-    </el-radio-group>
+    <ty-radio-group v-model="radio2">
+      <ty-radio value="1" border>Option A</ty-radio>
+      <ty-radio value="2" border>Option B</ty-radio>
+    </ty-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio3" size="small">
-      <el-radio value="1" border>Option A</el-radio>
-      <el-radio value="2" border disabled>Option B</el-radio>
-    </el-radio-group>
+    <ty-radio-group v-model="radio3" size="small">
+      <ty-radio value="1" border>Option A</ty-radio>
+      <ty-radio value="2" border disabled>Option B</ty-radio>
+    </ty-radio-group>
   </div>
   <div style="margin-top: 20px">
-    <el-radio-group v-model="radio4" size="small" disabled>
-      <el-radio value="1" border>Option A</el-radio>
-      <el-radio value="2" border>Option B</el-radio>
-    </el-radio-group>
+    <ty-radio-group v-model="radio4" size="small" disabled>
+      <ty-radio value="1" border>Option A</ty-radio>
+      <ty-radio value="2" border>Option B</ty-radio>
+    </ty-radio-group>
   </div>
 </template>
 

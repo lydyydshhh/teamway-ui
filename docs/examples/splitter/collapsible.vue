@@ -1,5 +1,5 @@
-<template>
-  <el-switch
+﻿<template>
+  <ty-switch
     v-model="isCollapsible"
     active-text="enable"
     inactive-text="disable"
@@ -9,27 +9,27 @@
   <div
     style="height: 250px; box-shadow: var(--ty-border-color-light) 0px 0px 10px"
   >
-    <el-splitter>
-      <el-splitter-panel :collapsible="isCollapsible" min="50">
+    <ty-splitter>
+      <ty-splitter-panel :collapsible="isCollapsible" min="50">
         <div class="demo-panel">1</div>
-      </el-splitter-panel>
-      <el-splitter-panel :collapsible="isCollapsible">
+      </ty-splitter-panel>
+      <ty-splitter-panel :collapsible="isCollapsible">
         <div class="demo-panel">2</div>
-      </el-splitter-panel>
-      <el-splitter-panel>
+      </ty-splitter-panel>
+      <ty-splitter-panel>
         <div class="demo-panel">3</div>
-      </el-splitter-panel>
-      <el-splitter-panel :collapsible="isCollapsible">
-        <el-splitter layout="vertical">
-          <el-splitter-panel :collapsible="isCollapsible">
+      </ty-splitter-panel>
+      <ty-splitter-panel :collapsible="isCollapsible">
+        <ty-splitter layout="vertical">
+          <ty-splitter-panel :collapsible="isCollapsible">
             <div class="demo-panel">4</div>
-          </el-splitter-panel>
-          <el-splitter-panel :collapsible="isCollapsible">
+          </ty-splitter-panel>
+          <ty-splitter-panel :collapsible="isCollapsible">
             <div class="demo-panel">5</div>
-          </el-splitter-panel>
-        </el-splitter>
-      </el-splitter-panel>
-    </el-splitter>
+          </ty-splitter-panel>
+        </ty-splitter>
+      </ty-splitter-panel>
+    </ty-splitter>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
-<template>
-  <el-select v-model="value" placeholder="Select" style="width: 240px">
-    <el-option
+﻿<template>
+  <ty-select v-model="value" placeholder="Select" style="width: 240px">
+    <ty-option
       v-for="item in cities"
       :key="item.value"
       :label="item.label"
@@ -16,8 +16,8 @@
       >
         {{ item.value }}
       </span>
-    </el-option>
-  </el-select>
+    </ty-option>
+  </ty-select>
 </template>
 
 <script lang="ts" setup>

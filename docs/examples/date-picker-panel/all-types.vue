@@ -1,20 +1,20 @@
-<template>
+﻿<template>
   <div>
     <div class="flex gap-4">
       <div class="flex flex-col basis-150px gap-1">
         <span>Type:</span>
-        <el-select v-model="type">
-          <el-option
+        <ty-select v-model="type">
+          <ty-option
             v-for="optionType in types"
             :key="optionType"
             :value="optionType"
           />
-        </el-select>
+        </ty-select>
       </div>
     </div>
-    <el-divider />
+    <ty-divider />
     <div class="flex justify-center">
-      <el-date-picker-panel v-model="date" :type="type" />
+      <ty-date-picker-panel v-model="date" :type="type" />
     </div>
   </div>
 </template>

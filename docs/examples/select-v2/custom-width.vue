@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-4 items-center">
-    <el-select-v2
+    <ty-select-v2
       v-model="value"
       :options="options"
       placeholder="Please select"
@@ -8,7 +8,7 @@
       :fit-input-width="false"
     />
 
-    <el-select-v2
+    <ty-select-v2
       v-model="value"
       :options="options"
       placeholder="Please select"
@@ -16,7 +16,7 @@
       fit-input-width
     />
 
-    <el-select-v2
+    <ty-select-v2
       v-model="value"
       :options="options"
       placeholder="Please select"
@@ -26,7 +26,7 @@
       <template #default="{ item }">
         <span>{{ item.value + item.label }}</span>
       </template>
-    </el-select-v2>
+    </ty-select-v2>
   </div>
 </template>
 

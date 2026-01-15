@@ -1,18 +1,18 @@
-<template>
+﻿<template>
   <div
     style="height: 250px; box-shadow: var(--ty-border-color-light) 0px 0px 10px"
   >
-    <el-splitter lazy>
-      <el-splitter-panel collapsible min="50">
+    <ty-splitter lazy>
+      <ty-splitter-panel collapsible min="50">
         <div class="demo-panel">1</div>
-      </el-splitter-panel>
-      <el-splitter-panel collapsible>
+      </ty-splitter-panel>
+      <ty-splitter-panel collapsible>
         <div class="demo-panel">2</div>
-      </el-splitter-panel>
-      <el-splitter-panel collapsible>
+      </ty-splitter-panel>
+      <ty-splitter-panel collapsible>
         <div class="demo-panel">3</div>
-      </el-splitter-panel>
-    </el-splitter>
+      </ty-splitter-panel>
+    </ty-splitter>
   </div>
 </template>
 

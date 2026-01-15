@@ -1,18 +1,18 @@
-<template>
+﻿<template>
   <div>
-    <el-table
+    <ty-table
       :data="tableData"
       style="width: 100%; margin-bottom: 20px"
       row-key="id"
       border
       default-expand-all
     >
-      <el-table-column prop="date" label="Date" sortable />
-      <el-table-column prop="name" label="Name" sortable />
-      <el-table-column prop="address" label="Address" sortable />
-    </el-table>
+      <ty-table-column prop="date" label="Date" sortable />
+      <ty-table-column prop="name" label="Name" sortable />
+      <ty-table-column prop="address" label="Address" sortable />
+    </ty-table>
 
-    <el-table
+    <ty-table
       :data="tableData1"
       style="width: 100%"
       row-key="id"
@@ -21,10 +21,10 @@
       :load="load"
       :tree-props="{ children: 'children', hasChildren: 'hasChildren' }"
     >
-      <el-table-column prop="date" label="Date" />
-      <el-table-column prop="name" label="Name" />
-      <el-table-column prop="address" label="Address" />
-    </el-table>
+      <ty-table-column prop="date" label="Date" />
+      <ty-table-column prop="name" label="Name" />
+      <ty-table-column prop="address" label="Address" />
+    </ty-table>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="flex flex-col items-center">
-    <el-switch
+    <ty-switch
       v-model="showPrefix"
       active-text="show prefix"
       inactive-text="hide prefix"
@@ -8,7 +8,7 @@
     <div class="flex flex-wrap">
       <div class="m-4">
         <p>checkStrictly | Single mode</p>
-        <el-cascader
+        <ty-cascader
           v-model="value"
           :options="options"
           :props="props1"
@@ -17,7 +17,7 @@
       </div>
       <div class="m-4">
         <p>Multiple mode</p>
-        <el-cascader
+        <ty-cascader
           v-model="value2"
           show-checked-strategy="parent"
           :options="options"

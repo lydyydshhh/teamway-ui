@@ -1,13 +1,13 @@
-<template>
-  <el-scrollbar ref="scrollbarRef" height="400px" always @scroll="scroll">
+﻿<template>
+  <ty-scrollbar ref="scrollbarRef" height="400px" always @scroll="scroll">
     <div ref="innerRef">
       <p v-for="item in 20" :key="item" class="scrollbar-demo-item">
         {{ item }}
       </p>
     </div>
-  </el-scrollbar>
+  </ty-scrollbar>
 
-  <el-slider
+  <ty-slider
     v-model="value"
     :max="max"
     :format-tooltip="formatTooltip"

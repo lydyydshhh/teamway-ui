@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="demo-date-picker">
     <div class="block">
       <p>Component value：{{ value }}</p>
-      <el-date-picker
+      <ty-date-picker
         v-model="value"
         type="daterange"
         start-placeholder="Start date"

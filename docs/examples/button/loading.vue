@@ -1,7 +1,7 @@
-<template>
-  <el-button type="primary" loading>Loading</el-button>
-  <el-button type="primary" :loading-icon="Eleme" loading>Loading</el-button>
-  <el-button type="primary" loading>
+﻿<template>
+  <ty-button type="primary" loading>Loading</ty-button>
+  <ty-button type="primary" :loading-icon="Eleme" loading>Loading</ty-button>
+  <ty-button type="primary" loading>
     <template #loading>
       <div class="custom-loading">
         <svg class="circular" viewBox="-10, -10, 50, 50">
@@ -21,7 +21,7 @@
       </div>
     </template>
     Loading
-  </el-button>
+  </ty-button>
 </template>
 
 <script lang="ts" setup>

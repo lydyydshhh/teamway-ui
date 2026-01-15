@@ -1,9 +1,9 @@
-<template>
-  <el-button ref="buttonRef" v-click-outside="onClickOutside">
+﻿<template>
+  <ty-button ref="buttonRef" v-click-outside="onClickOutside">
     Click me
-  </el-button>
+  </ty-button>
 
-  <el-popover
+  <ty-popover
     ref="popoverRef"
     :virtual-ref="buttonRef"
     trigger="click"
@@ -11,7 +11,7 @@
     virtual-triggering
   >
     <span> Some content </span>
-  </el-popover>
+  </ty-popover>
 </template>
 
 <script setup lang="ts">

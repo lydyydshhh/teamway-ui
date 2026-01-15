@@ -1,5 +1,5 @@
-<template>
-  <el-input-number v-model="num" :step="2" />
+﻿<template>
+  <ty-input-number v-model="num" :step="2" />
 </template>
 
 <script lang="ts" setup>

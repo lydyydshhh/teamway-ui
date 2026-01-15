@@ -1,5 +1,5 @@
-<template>
-  <el-select
+﻿<template>
+  <ty-select
     v-model="value"
     :options="options"
     :props="props"

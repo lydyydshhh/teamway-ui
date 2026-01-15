@@ -1,23 +1,23 @@
-<template>
+﻿<template>
   <div class="block text-center">
     <span class="demonstration">Motion blur the switch (default)</span>
-    <el-carousel height="200px" motion-blur>
-      <el-carousel-item v-for="item in 4" :key="item">
+    <ty-carousel height="200px" motion-blur>
+      <ty-carousel-item v-for="item in 4" :key="item">
         <h3 class="small justify-center" text="2xl">{{ item }}</h3>
-      </el-carousel-item>
-    </el-carousel>
+      </ty-carousel-item>
+    </ty-carousel>
   </div>
   <p class="text-center demonstration">Vertical effect</p>
-  <el-carousel
+  <ty-carousel
     height="200px"
     direction="vertical"
     motion-blur
     :autoplay="false"
   >
-    <el-carousel-item v-for="item in 4" :key="item">
+    <ty-carousel-item v-for="item in 4" :key="item">
       <h3 text="2xl" justify="center">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
+    </ty-carousel-item>
+  </ty-carousel>
 </template>
 
 <style scoped>

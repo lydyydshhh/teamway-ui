@@ -1,39 +1,39 @@
-<template>
-  <el-table
+﻿<template>
+  <ty-table
     :data="tableData"
     show-overflow-tooltip
     :tooltip-formatter="tableRowFormatter"
     style="width: 100%"
   >
-    <el-table-column
+    <ty-table-column
       prop="address"
       label="extends table formatter"
       width="240"
     />
-    <el-table-column
+    <ty-table-column
       prop="tags"
       label="formatter object"
       width="240"
       :tooltip-formatter="({ row }) => row.tags.join(', ')"
     >
       <template #default="{ row }">
-        <el-tag
+        <ty-tag
           v-for="tag in row.tags"
           :key="tag"
           class="tag-item"
           type="primary"
         >
           {{ tag }}
-        </el-tag>
+        </ty-tag>
       </template>
-    </el-table-column>
-    <el-table-column
+    </ty-table-column>
+    <ty-table-column
       prop="url"
       label="with vnode"
       width="240"
       :tooltip-formatter="withVNode"
     />
-  </el-table>
+  </ty-table>
 </template>
 
 <script lang="ts" setup>

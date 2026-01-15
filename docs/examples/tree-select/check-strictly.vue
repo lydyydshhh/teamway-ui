@@ -1,14 +1,14 @@
-<template>
-  <el-tree-select
+﻿<template>
+  <ty-tree-select
     v-model="value"
     :data="data"
     check-strictly
     :render-after-expand="false"
     style="width: 240px"
   />
-  <el-divider />
+  <ty-divider />
   show checkbox:
-  <el-tree-select
+  <ty-tree-select
     v-model="value"
     :data="data"
     check-strictly
@@ -16,9 +16,9 @@
     show-checkbox
     style="width: 240px"
   />
-  <el-divider />
+  <ty-divider />
   show checkbox with `check-on-click-node`:
-  <el-tree-select
+  <ty-tree-select
     v-model="value"
     :data="data"
     check-strictly

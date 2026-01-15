@@ -1,5 +1,5 @@
-<template>
-  <el-color-picker v-model="color" show-alpha :predefine="predefineColors" />
+﻿<template>
+  <ty-color-picker v-model="color" show-alpha :predefine="predefineColors" />
 </template>
 
 <script lang="ts" setup>

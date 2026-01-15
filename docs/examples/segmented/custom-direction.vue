@@ -1,18 +1,18 @@
-<template>
+﻿<template>
   <div>
-    <el-segmented
+    <ty-segmented
       v-model="size"
       :options="sizeOptions"
       style="margin-bottom: 1rem"
     />
     <br />
-    <el-segmented
+    <ty-segmented
       v-model="direction"
       :options="directionOptions"
       style="margin-bottom: 1rem"
     />
     <br />
-    <el-segmented
+    <ty-segmented
       v-model="value"
       :options="options"
       :direction="direction"
@@ -28,13 +28,13 @@
             direction === 'horizontal' && 'p-2',
           ]"
         >
-          <el-icon size="20">
+          <ty-icon size="20">
             <component :is="scope.item.icon" />
-          </el-icon>
+          </ty-icon>
           <div>{{ scope.item.label }}</div>
         </div>
       </template>
-    </el-segmented>
+    </ty-segmented>
   </div>
 </template>
 

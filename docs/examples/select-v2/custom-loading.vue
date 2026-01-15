@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap">
     <div class="m-4">
       <p>loading icon1</p>
-      <el-select-v2
+      <ty-select-v2
         v-model="value"
         multiple
         filterable
@@ -19,11 +19,11 @@
             <circle class="path" cx="25" cy="25" r="20" fill="none" />
           </svg>
         </template>
-      </el-select-v2>
+      </ty-select-v2>
     </div>
     <div class="m-4">
       <p>loading icon2</p>
-      <el-select-v2
+      <ty-select-v2
         v-model="value"
         multiple
         filterable
@@ -36,7 +36,7 @@
         style="width: 240px"
       >
         <template #loading>
-          <el-icon class="is-loading">
+          <ty-icon class="is-loading">
             <svg class="circular" viewBox="0 0 20 20">
               <g
                 class="path2 loading-path"
@@ -49,9 +49,9 @@
                 <circle r="3.375" class="dot3" rx="0" ry="0" />
               </g>
             </svg>
-          </el-icon>
+          </ty-icon>
         </template>
-      </el-select-v2>
+      </ty-select-v2>
     </div>
   </div>
 </template>

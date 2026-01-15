@@ -1,5 +1,5 @@
-<template>
-  <el-input-number v-model="num" :disabled="true" />
+﻿<template>
+  <ty-input-number v-model="num" :disabled="true" />
 </template>
 
 <script lang="ts" setup>

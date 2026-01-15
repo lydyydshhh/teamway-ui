@@ -1,5 +1,5 @@
-<template>
-  <el-button :plain="true" @click="openHTML">Use HTML string</el-button>
+﻿<template>
+  <ty-button :plain="true" @click="openHTML">Use HTML string</ty-button>
 </template>
 
 <script lang="ts" setup>

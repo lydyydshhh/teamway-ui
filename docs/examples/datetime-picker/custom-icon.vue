@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <div class="demo-datetime-picker-icon">
     <div class="block">
-      <el-date-picker
+      <ty-date-picker
         v-model="value1"
         type="datetime"
         placeholder="Pick a Date"
@@ -10,13 +10,13 @@
         time-format="HH:mm"
       >
         <template #prev-month>
-          <el-icon><CaretLeft /></el-icon>
+          <ty-icon><CaretLeft /></ty-icon>
         </template>
         <template #next-month>
-          <el-icon><CaretRight /></el-icon>
+          <ty-icon><CaretRight /></ty-icon>
         </template>
         <template #prev-year>
-          <el-icon>
+          <ty-icon>
             <svg
               viewBox="0 0 20 20"
               version="1.1"
@@ -30,10 +30,10 @@
                 </g>
               </g>
             </svg>
-          </el-icon>
+          </ty-icon>
         </template>
         <template #next-year>
-          <el-icon>
+          <ty-icon>
             <svg
               viewBox="0 0 20 20"
               version="1.1"
@@ -47,13 +47,13 @@
                 </g>
               </g>
             </svg>
-          </el-icon>
+          </ty-icon>
         </template>
-      </el-date-picker>
+      </ty-date-picker>
     </div>
     <div class="line" />
     <div class="block">
-      <el-date-picker
+      <ty-date-picker
         v-model="value2"
         type="datetimerange"
         start-placeholder="Start date"
@@ -64,13 +64,13 @@
         unlink-panels
       >
         <template #prev-month>
-          <el-icon><CaretLeft /></el-icon>
+          <ty-icon><CaretLeft /></ty-icon>
         </template>
         <template #next-month>
-          <el-icon><CaretRight /></el-icon>
+          <ty-icon><CaretRight /></ty-icon>
         </template>
         <template #prev-year>
-          <el-icon>
+          <ty-icon>
             <svg
               viewBox="0 0 20 20"
               version="1.1"
@@ -84,10 +84,10 @@
                 </g>
               </g>
             </svg>
-          </el-icon>
+          </ty-icon>
         </template>
         <template #next-year>
-          <el-icon>
+          <ty-icon>
             <svg
               viewBox="0 0 20 20"
               version="1.1"
@@ -101,9 +101,9 @@
                 </g>
               </g>
             </svg>
-          </el-icon>
+          </ty-icon>
         </template>
-      </el-date-picker>
+      </ty-date-picker>
     </div>
   </div>
 </template>

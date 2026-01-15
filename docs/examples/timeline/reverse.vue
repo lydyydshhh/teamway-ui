@@ -1,15 +1,15 @@
-<template>
-  <el-switch v-model="reverse" active-text="reverse" />
+﻿<template>
+  <ty-switch v-model="reverse" active-text="reverse" />
 
-  <el-timeline class="mt-2" :reverse="reverse">
-    <el-timeline-item
+  <ty-timeline class="mt-2" :reverse="reverse">
+    <ty-timeline-item
       v-for="(activity, index) in activities"
       :key="index"
       :timestamp="activity.timestamp"
     >
       {{ activity.content }}
-    </el-timeline-item>
-  </el-timeline>
+    </ty-timeline-item>
+  </ty-timeline>
 </template>
 
 <script lang="ts" setup>

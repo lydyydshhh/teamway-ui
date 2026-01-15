@@ -1,5 +1,5 @@
-<template>
-  <el-popconfirm
+﻿<template>
+  <ty-popconfirm
     width="220"
     :icon="InfoFilled"
     icon-color="#626AEF"
@@ -7,20 +7,20 @@
     @cancel="onCancel"
   >
     <template #reference>
-      <el-button>Delete</el-button>
+      <ty-button>Delete</ty-button>
     </template>
     <template #actions="{ confirm, cancel }">
-      <el-button size="small" @click="cancel">No!</el-button>
-      <el-button
+      <ty-button size="small" @click="cancel">No!</ty-button>
+      <ty-button
         type="danger"
         size="small"
         :disabled="!clicked"
         @click="confirm"
       >
         Yes?
-      </el-button>
+      </ty-button>
     </template>
-  </el-popconfirm>
+  </ty-popconfirm>
 </template>
 
 <script setup lang="ts">

@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-1">
-    <el-button class="!ml-0" plain @click="open">Common VNode</el-button>
-    <el-button class="!ml-0" plain @click="open1">Dynamic props</el-button>
+    <ty-button class="!ml-0" plain @click="open">Common VNode</ty-button>
+    <ty-button class="!ml-0" plain @click="open1">Dynamic props</ty-button>
   </div>
 </template>
 

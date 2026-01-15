@@ -1,11 +1,11 @@
-<template>
-  <el-tabs
+﻿<template>
+  <ty-tabs
     v-model="activeName"
     class="demo-tabs"
     default-value="third"
     @tab-click="handleClick"
   >
-    <el-tab-pane
+    <ty-tab-pane
       v-for="tab in tabs"
       :key="tab.name"
       :label="tab.label"
@@ -14,8 +14,8 @@
       default-value: third
       <br />
       active: {{ activeName }}
-    </el-tab-pane>
-  </el-tabs>
+    </ty-tab-pane>
+  </ty-tabs>
 </template>
 
 <script lang="ts" setup>

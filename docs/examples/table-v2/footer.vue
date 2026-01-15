@@ -1,5 +1,5 @@
-<template>
-  <el-table-v2
+﻿<template>
+  <ty-table-v2
     :columns="columns"
     :data="data"
     :row-height="40"
@@ -20,7 +20,7 @@
         Display a message in the footer
       </div>
     </template>
-  </el-table-v2>
+  </ty-table-v2>
 </template>
 
 <script lang="ts" setup>

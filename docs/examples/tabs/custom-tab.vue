@@ -1,18 +1,18 @@
-<template>
-  <el-tabs type="border-card" class="demo-tabs">
-    <el-tab-pane>
+﻿<template>
+  <ty-tabs type="border-card" class="demo-tabs">
+    <ty-tab-pane>
       <template #label>
         <span class="custom-tabs-label">
-          <el-icon><calendar /></el-icon>
+          <ty-icon><calendar /></ty-icon>
           <span>Route</span>
         </span>
       </template>
       Route
-    </el-tab-pane>
-    <el-tab-pane label="Config">Config</el-tab-pane>
-    <el-tab-pane label="Role">Role</el-tab-pane>
-    <el-tab-pane label="Task">Task</el-tab-pane>
-  </el-tabs>
+    </ty-tab-pane>
+    <ty-tab-pane label="Config">Config</ty-tab-pane>
+    <ty-tab-pane label="Role">Role</ty-tab-pane>
+    <ty-tab-pane label="Task">Task</ty-tab-pane>
+  </ty-tabs>
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
-<template>
-  <el-mention
+﻿<template>
+  <ty-mention
     v-model="value"
     type="textarea"
     :options="options"

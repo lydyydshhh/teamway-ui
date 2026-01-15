@@ -1,21 +1,21 @@
-<template>
+﻿<template>
   <div class="button-example">
     <div class="button-row">
-      <el-button disabled>Default</el-button>
-      <el-button type="primary" disabled>Primary</el-button>
-      <el-button type="success" disabled>Success</el-button>
-      <el-button type="info" disabled>Info</el-button>
-      <el-button type="warning" disabled>Warning</el-button>
-      <el-button type="danger" disabled>Danger</el-button>
+      <ty-button disabled>Default</ty-button>
+      <ty-button type="primary" disabled>Primary</ty-button>
+      <ty-button type="success" disabled>Success</ty-button>
+      <ty-button type="info" disabled>Info</ty-button>
+      <ty-button type="warning" disabled>Warning</ty-button>
+      <ty-button type="danger" disabled>Danger</ty-button>
     </div>
 
     <div class="button-row">
-      <el-button plain disabled>Plain</el-button>
-      <el-button type="primary" plain disabled>Primary</el-button>
-      <el-button type="success" plain disabled>Success</el-button>
-      <el-button type="info" plain disabled>Info</el-button>
-      <el-button type="warning" plain disabled>Warning</el-button>
-      <el-button type="danger" plain disabled>Danger</el-button>
+      <ty-button plain disabled>Plain</ty-button>
+      <ty-button type="primary" plain disabled>Primary</ty-button>
+      <ty-button type="success" plain disabled>Success</ty-button>
+      <ty-button type="info" plain disabled>Info</ty-button>
+      <ty-button type="warning" plain disabled>Warning</ty-button>
+      <ty-button type="danger" plain disabled>Danger</ty-button>
     </div>
   </div>
 </template>

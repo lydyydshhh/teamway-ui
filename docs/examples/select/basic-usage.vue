@@ -1,12 +1,12 @@
-<template>
-  <el-select v-model="value" placeholder="Select" style="width: 240px">
-    <el-option
+﻿<template>
+  <ty-select v-model="value" placeholder="Select" style="width: 240px">
+    <ty-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value"
     />
-  </el-select>
+  </ty-select>
 </template>
 
 <script lang="ts" setup>

@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <div class="m-4">
     <p>Strategy: child (default, show all selected child nodes)</p>
-    <el-cascader
+    <ty-cascader
       v-model="value1"
       :options="options"
       :props="props"
@@ -15,7 +15,7 @@
     <p>
       Strategy: parent (show only parent nodes when all children are selected)
     </p>
-    <el-cascader
+    <ty-cascader
       v-model="value2"
       :options="options"
       :props="props"

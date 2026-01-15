@@ -1,5 +1,5 @@
-<template>
-  <el-table-v2
+﻿<template>
+  <ty-table-v2
     fixed
     :columns="fixedColumns"
     :data="data"
@@ -11,7 +11,7 @@
     <template #header="props">
       <customized-header v-bind="props" />
     </template>
-  </el-table-v2>
+  </ty-table-v2>
 </template>
 
 <script lang="tsx" setup>

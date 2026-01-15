@@ -1,10 +1,10 @@
-<template>
-  <el-switch
+﻿<template>
+  <ty-switch
     v-model="value1"
     :loading="loading1"
     :before-change="beforeChange1"
   />
-  <el-switch
+  <ty-switch
     v-model="value2"
     class="ml-2"
     :loading="loading2"

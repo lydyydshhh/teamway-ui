@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="common-layout">
-    <el-container>
-      <el-header>Header</el-header>
-      <el-main>Main</el-main>
-    </el-container>
+    <ty-container>
+      <ty-header>Header</ty-header>
+      <ty-main>Main</ty-main>
+    </ty-container>
   </div>
 </template>

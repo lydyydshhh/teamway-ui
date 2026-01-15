@@ -1,5 +1,5 @@
-<template>
-  <el-tree
+﻿<template>
+  <ty-tree
     style="max-width: 600px"
     :data="data"
     show-checkbox

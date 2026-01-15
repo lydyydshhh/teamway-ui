@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <div>
-    <el-row>
-      <el-col :span="18">
+    <ty-row>
+      <ty-col :span="18">
         <div
           style="
             height: 30px;
@@ -47,23 +47,23 @@
             part3
           </div>
         </div>
-      </el-col>
-      <el-col :span="6">
+      </ty-col>
+      <ty-col :span="6">
         <div class="vp-raw">
-          <el-anchor
+          <ty-anchor
             :container="containerRef"
             direction="vertical"
             type="default"
             :offset="30"
             @click="handleClick"
           >
-            <el-anchor-link href="#part1" title="part1" />
-            <el-anchor-link href="#part2" title="part2" />
-            <el-anchor-link href="#part3" title="part3" />
-          </el-anchor>
+            <ty-anchor-link href="#part1" title="part1" />
+            <ty-anchor-link href="#part2" title="part2" />
+            <ty-anchor-link href="#part3" title="part3" />
+          </ty-anchor>
         </div>
-      </el-col>
-    </el-row>
+      </ty-col>
+    </ty-row>
   </div>
 </template>
 

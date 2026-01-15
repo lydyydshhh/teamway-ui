@@ -1,21 +1,21 @@
-<template>
-  <el-badge value="new" class="item">
-    <el-button>comments</el-button>
-  </el-badge>
-  <el-badge value="hot" class="item">
-    <el-button>replies</el-button>
-  </el-badge>
-  <el-badge value="99" class="item">
-    <el-button>share</el-button>
+﻿<template>
+  <ty-badge value="new" class="item">
+    <ty-button>comments</ty-button>
+  </ty-badge>
+  <ty-badge value="hot" class="item">
+    <ty-button>replies</ty-button>
+  </ty-badge>
+  <ty-badge value="99" class="item">
+    <ty-button>share</ty-button>
     <template #content="{ value }">
       <div class="custom-content">
-        <el-icon>
+        <ty-icon>
           <Message />
-        </el-icon>
+        </ty-icon>
         <span>{{ value }}</span>
       </div>
     </template>
-  </el-badge>
+  </ty-badge>
 </template>
 
 <script setup lang="ts">

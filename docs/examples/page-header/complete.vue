@@ -1,20 +1,20 @@
-<template>
+﻿<template>
   <div aria-label="A complete example of page header">
-    <el-page-header @back="onBack">
+    <ty-page-header @back="onBack">
       <template #breadcrumb>
-        <el-breadcrumb separator="/">
-          <el-breadcrumb-item :to="{ path: './page-header.html' }">
+        <ty-breadcrumb separator="/">
+          <ty-breadcrumb-item :to="{ path: './page-header.html' }">
             homepage
-          </el-breadcrumb-item>
-          <el-breadcrumb-item>
+          </ty-breadcrumb-item>
+          <ty-breadcrumb-item>
             <a href="./page-header.html">route 1</a>
-          </el-breadcrumb-item>
-          <el-breadcrumb-item>route 2</el-breadcrumb-item>
-        </el-breadcrumb>
+          </ty-breadcrumb-item>
+          <ty-breadcrumb-item>route 2</ty-breadcrumb-item>
+        </ty-breadcrumb>
       </template>
       <template #content>
         <div class="flex items-center">
-          <el-avatar
+          <ty-avatar
             class="mr-3"
             :size="32"
             src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png"
@@ -26,37 +26,37 @@
           >
             Sub title
           </span>
-          <el-tag>Default</el-tag>
+          <ty-tag>Default</ty-tag>
         </div>
       </template>
       <template #extra>
         <div class="flex items-center">
-          <el-button>Print</el-button>
-          <el-button type="primary" class="ml-2">Edit</el-button>
+          <ty-button>Print</ty-button>
+          <ty-button type="primary" class="ml-2">Edit</ty-button>
         </div>
       </template>
 
-      <el-descriptions :column="3" size="small" class="mt-4">
-        <el-descriptions-item label="Username">
+      <ty-descriptions :column="3" size="small" class="mt-4">
+        <ty-descriptions-item label="Username">
           kooriookami
-        </el-descriptions-item>
-        <el-descriptions-item label="Telephone">
+        </ty-descriptions-item>
+        <ty-descriptions-item label="Telephone">
           18100000000
-        </el-descriptions-item>
-        <el-descriptions-item label="Place">Suzhou</el-descriptions-item>
-        <el-descriptions-item label="Remarks">
-          <el-tag size="small">School</el-tag>
-        </el-descriptions-item>
-        <el-descriptions-item label="Address">
+        </ty-descriptions-item>
+        <ty-descriptions-item label="Place">Suzhou</ty-descriptions-item>
+        <ty-descriptions-item label="Remarks">
+          <ty-tag size="small">School</ty-tag>
+        </ty-descriptions-item>
+        <ty-descriptions-item label="Address">
           No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province
-        </el-descriptions-item>
-      </el-descriptions>
+        </ty-descriptions-item>
+      </ty-descriptions>
       <p class="mt-4 text-sm">
         Element Plus team uses <b>weekly</b> release strategy under normal
         circumstance, but critical bug fixes would require hotfix so the actual
         release number <b>could be</b> more than 1 per week.
       </p>
-    </el-page-header>
+    </ty-page-header>
   </div>
 </template>
 

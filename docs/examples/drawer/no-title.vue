@@ -1,9 +1,9 @@
-<template>
-  <el-button type="primary" @click="drawer = true"> open </el-button>
+﻿<template>
+  <ty-button type="primary" @click="drawer = true"> open </ty-button>
 
-  <el-drawer v-model="drawer" title="I am the title" :with-header="false">
+  <ty-drawer v-model="drawer" title="I am the title" :with-header="false">
     <span>Hi there!</span>
-  </el-drawer>
+  </ty-drawer>
 </template>
 
 <script lang="ts" setup>

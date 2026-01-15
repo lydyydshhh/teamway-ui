@@ -1,9 +1,9 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-1">
-    <el-button class="!ml-0" :plain="true" @click="open">
+    <ty-button class="!ml-0" :plain="true" @click="open">
       Show message
-    </el-button>
-    <el-button class="!ml-0" :plain="true" @click="openVn">VNode</el-button>
+    </ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="openVn">VNode</ty-button>
   </div>
 </template>
 

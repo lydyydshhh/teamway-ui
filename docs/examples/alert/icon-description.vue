@@ -1,30 +1,30 @@
-<template>
+﻿<template>
   <div style="max-width: 600px">
-    <el-alert
+    <ty-alert
       title="Primary alert"
       type="primary"
       description="More text description"
       show-icon
     />
-    <el-alert
+    <ty-alert
       title="Success alert"
       type="success"
       description="More text description"
       show-icon
     />
-    <el-alert
+    <ty-alert
       title="Info alert"
       type="info"
       description="More text description"
       show-icon
     />
-    <el-alert
+    <ty-alert
       title="Warning alert"
       type="warning"
       description="More text description"
       show-icon
     />
-    <el-alert
+    <ty-alert
       title="Error alert"
       type="error"
       description="More text description"

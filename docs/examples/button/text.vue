@@ -1,19 +1,19 @@
-<template>
+﻿<template>
   <p>Basic text button</p>
   <div class="mb-4">
-    <el-button
+    <ty-button
       v-for="button in buttons"
       :key="button.text"
       :type="button.type"
       text
     >
       {{ button.text }}
-    </el-button>
+    </ty-button>
   </div>
 
   <p>Background color always on</p>
   <div class="mb-4">
-    <el-button
+    <ty-button
       v-for="button in buttons"
       :key="button.text"
       :type="button.type"
@@ -21,12 +21,12 @@
       bg
     >
       {{ button.text }}
-    </el-button>
+    </ty-button>
   </div>
 
   <p>Disabled text button</p>
   <div>
-    <el-button
+    <ty-button
       v-for="button in buttons"
       :key="button.text"
       :type="button.type"
@@ -34,7 +34,7 @@
       disabled
     >
       {{ button.text }}
-    </el-button>
+    </ty-button>
   </div>
 </template>
 

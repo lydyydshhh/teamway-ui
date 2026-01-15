@@ -1,118 +1,118 @@
-<template>
+﻿<template>
   <div class="popconfirm-base-box">
     <div class="row center">
-      <el-popconfirm
+      <ty-popconfirm
         class="box-item"
         title="Top Left prompts info"
         placement="top-start"
       >
         <template #reference>
-          <el-button>top-start</el-button>
+          <ty-button>top-start</ty-button>
         </template>
-      </el-popconfirm>
-      <el-popconfirm
+      </ty-popconfirm>
+      <ty-popconfirm
         class="box-item"
         title="Top Center prompts info"
         placement="top"
       >
         <template #reference>
-          <el-button>top</el-button>
+          <ty-button>top</ty-button>
         </template>
-      </el-popconfirm>
-      <el-popconfirm
+      </ty-popconfirm>
+      <ty-popconfirm
         class="box-item"
         title="Top Right prompts info"
         placement="top-end"
       >
         <template #reference>
-          <el-button>top-end</el-button>
+          <ty-button>top-end</ty-button>
         </template>
-      </el-popconfirm>
+      </ty-popconfirm>
     </div>
     <div class="row">
-      <el-popconfirm
+      <ty-popconfirm
         class="box-item"
         title="Left Top prompts info"
         placement="left-start"
       >
         <template #reference>
-          <el-button>left-start</el-button>
+          <ty-button>left-start</ty-button>
         </template>
-      </el-popconfirm>
-      <el-popconfirm
+      </ty-popconfirm>
+      <ty-popconfirm
         class="box-item"
         title="Right Top prompts info"
         placement="right-start"
       >
         <template #reference>
-          <el-button>right-start</el-button>
+          <ty-button>right-start</ty-button>
         </template>
-      </el-popconfirm>
+      </ty-popconfirm>
     </div>
     <div class="row">
-      <el-popconfirm
+      <ty-popconfirm
         class="box-item"
         title="Left Center prompts info"
         placement="left"
       >
         <template #reference>
-          <el-button class="mt-3 mb-3">left</el-button>
+          <ty-button class="mt-3 mb-3">left</ty-button>
         </template>
-      </el-popconfirm>
-      <el-popconfirm
+      </ty-popconfirm>
+      <ty-popconfirm
         class="box-item"
         title="Right Center prompts info"
         placement="right"
       >
         <template #reference>
-          <el-button>right</el-button>
+          <ty-button>right</ty-button>
         </template>
-      </el-popconfirm>
+      </ty-popconfirm>
     </div>
     <div class="row">
-      <el-popconfirm
+      <ty-popconfirm
         class="box-item"
         title="Left Bottom prompts info"
         placement="left-end"
       >
         <template #reference>
-          <el-button>left-end</el-button>
+          <ty-button>left-end</ty-button>
         </template>
-      </el-popconfirm>
-      <el-popconfirm
+      </ty-popconfirm>
+      <ty-popconfirm
         class="box-item"
         title="Right Bottom prompts info"
         placement="right-end"
       >
         <template #reference>
-          <el-button>right-end</el-button>
+          <ty-button>right-end</ty-button>
         </template>
-      </el-popconfirm>
+      </ty-popconfirm>
     </div>
     <div class="row center">
-      <el-popconfirm
+      <ty-popconfirm
         class="box-item"
         title="Bottom Left prompts info"
         placement="bottom-start"
       >
-        <template #reference> <el-button>bottom-start</el-button></template>
-      </el-popconfirm>
-      <el-popconfirm
+        <template #reference> <ty-button>bottom-start</ty-button></template>
+      </ty-popconfirm>
+      <ty-popconfirm
         class="box-item"
         title="Bottom Center prompts info"
         placement="bottom"
       >
-        <template #reference> <el-button>bottom</el-button></template>
-      </el-popconfirm>
-      <el-popconfirm
+        <template #reference> <ty-button>bottom</ty-button></template>
+      </ty-popconfirm>
+      <ty-popconfirm
         class="box-item"
         title="Bottom Right prompts info"
         placement="bottom-end"
       >
         <template #reference>
-          <el-button>bottom-end</el-button>
+          <ty-button>bottom-end</ty-button>
         </template>
-      </el-popconfirm>
+      </ty-popconfirm>
     </div>
   </div>
 </template>

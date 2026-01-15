@@ -1,12 +1,12 @@
-<template>
+﻿<template>
   <div class="demo-progress">
-    <el-progress type="dashboard" :percentage="percentage" :color="colors" />
-    <el-progress type="dashboard" :percentage="percentage2" :color="colors" />
+    <ty-progress type="dashboard" :percentage="percentage" :color="colors" />
+    <ty-progress type="dashboard" :percentage="percentage2" :color="colors" />
     <div>
-      <el-button-group>
-        <el-button :icon="Minus" @click="decrease" />
-        <el-button :icon="Plus" @click="increase" />
-      </el-button-group>
+      <ty-button-group>
+        <ty-button :icon="Minus" @click="decrease" />
+        <ty-button :icon="Plus" @click="increase" />
+      </ty-button-group>
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <div class="demo-datetime-picker">
     <div class="block">
-      <el-date-picker
+      <ty-date-picker
         v-model="value1"
         type="datetime"
         placeholder="Pick a Date"
@@ -12,7 +12,7 @@
     </div>
     <div class="line" />
     <div class="block">
-      <el-date-picker
+      <ty-date-picker
         v-model="value2"
         type="datetimerange"
         start-placeholder="Start date"

@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="demo-autocomplete">
     <div class="demo-block">
       <div class="demo-title">list suggestions when activated</div>
-      <el-autocomplete
+      <ty-autocomplete
         v-model="state1"
         :fetch-suggestions="querySearch"
         clearable
@@ -13,7 +13,7 @@
     </div>
     <div class="demo-block">
       <div class="demo-title">list suggestions on input</div>
-      <el-autocomplete
+      <ty-autocomplete
         v-model="state2"
         :fetch-suggestions="querySearch"
         :trigger-on-focus="false"

@@ -1,33 +1,33 @@
-<template>
+﻿<template>
   <div class="flex gap-2">
-    <el-check-tag checked>Checked</el-check-tag>
-    <el-check-tag :checked="checked" @change="onChange">Toggle me</el-check-tag>
-    <el-check-tag disabled>Disabled</el-check-tag>
+    <ty-check-tag checked>Checked</ty-check-tag>
+    <ty-check-tag :checked="checked" @change="onChange">Toggle me</ty-check-tag>
+    <ty-check-tag disabled>Disabled</ty-check-tag>
   </div>
   <div class="flex gap-2 mt-4">
-    <el-check-tag :checked="checked1" type="primary" @change="onChange1">
+    <ty-check-tag :checked="checked1" type="primary" @change="onChange1">
       Tag 1
-    </el-check-tag>
-    <el-check-tag :checked="checked2" type="success" @change="onChange2">
+    </ty-check-tag>
+    <ty-check-tag :checked="checked2" type="success" @change="onChange2">
       Tag 2
-    </el-check-tag>
-    <el-check-tag :checked="checked3" type="info" @change="onChange3">
+    </ty-check-tag>
+    <ty-check-tag :checked="checked3" type="info" @change="onChange3">
       Tag 3
-    </el-check-tag>
-    <el-check-tag :checked="checked4" type="warning" @change="onChange4">
+    </ty-check-tag>
+    <ty-check-tag :checked="checked4" type="warning" @change="onChange4">
       Tag 4
-    </el-check-tag>
-    <el-check-tag :checked="checked5" type="danger" @change="onChange5">
+    </ty-check-tag>
+    <ty-check-tag :checked="checked5" type="danger" @change="onChange5">
       Tag 5
-    </el-check-tag>
-    <el-check-tag
+    </ty-check-tag>
+    <ty-check-tag
       :checked="checked6"
       disabled
       type="success"
       @change="onChange6"
     >
       Tag 6
-    </el-check-tag>
+    </ty-check-tag>
   </div>
 </template>
 

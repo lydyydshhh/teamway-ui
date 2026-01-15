@@ -1,12 +1,12 @@
-<template>
-  <el-input-tag v-model="input" clearable placeholder="Please input">
+﻿<template>
+  <ty-input-tag v-model="input" clearable placeholder="Please input">
     <template #prefix>
-      <el-icon><ElementPlus /></el-icon>
+      <ty-icon><ElementPlus /></ty-icon>
     </template>
     <template #suffix>
-      <el-icon><Search /></el-icon>
+      <ty-icon><Search /></ty-icon>
     </template>
-  </el-input-tag>
+  </ty-input-tag>
 </template>
 
 <script lang="ts" setup>

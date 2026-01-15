@@ -1,5 +1,5 @@
-<template>
-  <el-table-v2
+﻿<template>
+  <ty-table-v2
     :columns="columns"
     :data="data"
     :estimated-row-height="50"
@@ -10,7 +10,7 @@
     <template #row="props">
       <Row v-bind="props" />
     </template>
-  </el-table-v2>
+  </ty-table-v2>
 </template>
 
 <script lang="tsx" setup>

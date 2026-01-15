@@ -1,22 +1,22 @@
-<template>
-  <el-tree-v2
+﻿<template>
+  <ty-tree-v2
     style="max-width: 600px"
     :data="data"
     :props="props"
     :height="200"
   >
     <template #default="{ node }">
-      <el-icon class="el-icon--left">
+      <ty-icon class="el-icon--left">
         <Document v-if="node.isLeaf" />
         <Folder v-else-if="!node.expanded" />
         <FolderOpened v-else />
-      </el-icon>
+      </ty-icon>
       <span class="prefix" :class="{ 'is-leaf': node.isLeaf }"
         >[ElementPlus]</span
       >
       <span>{{ node.label }}</span>
     </template>
-  </el-tree-v2>
+  </ty-tree-v2>
 </template>
 
 <script lang="ts" setup>

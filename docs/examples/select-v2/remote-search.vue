@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap">
     <div class="m-4">
       <p>default</p>
-      <el-select-v2
+      <ty-select-v2
         v-model="value"
         style="width: 240px"
         multiple
@@ -17,7 +17,7 @@
     </div>
     <div class="m-4">
       <p>use remote-show-suffix</p>
-      <el-select-v2
+      <ty-select-v2
         v-model="value"
         style="width: 240px"
         multiple

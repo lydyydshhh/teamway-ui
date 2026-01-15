@@ -1,15 +1,15 @@
-<template>
-  <el-checkbox-group v-model="checkList">
-    <el-checkbox label="Option A" value="Value A" />
-    <el-checkbox label="Option B" value="Value B" />
-    <el-checkbox label="Option C" value="Value C" />
-    <el-checkbox label="disabled" value="Value disabled" disabled />
-    <el-checkbox
+﻿<template>
+  <ty-checkbox-group v-model="checkList">
+    <ty-checkbox label="Option A" value="Value A" />
+    <ty-checkbox label="Option B" value="Value B" />
+    <ty-checkbox label="Option C" value="Value C" />
+    <ty-checkbox label="disabled" value="Value disabled" disabled />
+    <ty-checkbox
       label="selected and disabled"
       value="Value selected and disabled"
       disabled
     />
-  </el-checkbox-group>
+  </ty-checkbox-group>
 </template>
 
 <script lang="ts" setup>

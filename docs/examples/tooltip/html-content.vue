@@ -1,8 +1,8 @@
-<template>
-  <el-tooltip
+﻿<template>
+  <ty-tooltip
     content="<span>The content can be <strong>HTML</strong></span>"
     raw-content
   >
-    <el-button>hover me</el-button>
-  </el-tooltip>
+    <ty-button>hover me</ty-button>
+  </ty-tooltip>
 </template>

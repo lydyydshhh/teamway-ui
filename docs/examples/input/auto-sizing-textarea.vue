@@ -1,5 +1,5 @@
-<template>
-  <el-input
+﻿<template>
+  <ty-input
     v-model="textarea1"
     style="width: 240px"
     autosize
@@ -7,7 +7,7 @@
     placeholder="Please input"
   />
   <div style="margin: 20px 0" />
-  <el-input
+  <ty-input
     v-model="textarea2"
     style="width: 240px"
     :autosize="{ minRows: 2, maxRows: 4 }"

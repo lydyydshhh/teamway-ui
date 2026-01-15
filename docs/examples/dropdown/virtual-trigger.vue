@@ -1,12 +1,12 @@
-<template>
-  <el-card
+﻿<template>
+  <ty-card
     class="content"
     @click="handleClick"
     @contextmenu="handleContextmenu"
   >
     Right click
-  </el-card>
-  <el-dropdown
+  </ty-card>
+  <ty-dropdown
     ref="dropdownRef"
     :virtual-ref="triggerRef"
     :show-arrow="false"
@@ -18,15 +18,15 @@
     placement="bottom-start"
   >
     <template #dropdown>
-      <el-dropdown-menu>
-        <el-dropdown-item :icon="Plus">Action 1</el-dropdown-item>
-        <el-dropdown-item :icon="CirclePlusFilled"> Action 2 </el-dropdown-item>
-        <el-dropdown-item :icon="CirclePlus">Action 3</el-dropdown-item>
-        <el-dropdown-item :icon="Check">Action 4</el-dropdown-item>
-        <el-dropdown-item :icon="CircleCheck">Action 5</el-dropdown-item>
-      </el-dropdown-menu>
+      <ty-dropdown-menu>
+        <ty-dropdown-item :icon="Plus">Action 1</ty-dropdown-item>
+        <ty-dropdown-item :icon="CirclePlusFilled"> Action 2 </ty-dropdown-item>
+        <ty-dropdown-item :icon="CirclePlus">Action 3</ty-dropdown-item>
+        <ty-dropdown-item :icon="Check">Action 4</ty-dropdown-item>
+        <ty-dropdown-item :icon="CircleCheck">Action 5</ty-dropdown-item>
+      </ty-dropdown-menu>
     </template>
-  </el-dropdown>
+  </ty-dropdown>
 </template>
 
 <script lang="ts" setup>
