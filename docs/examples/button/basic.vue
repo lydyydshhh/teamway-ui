@@ -1,39 +1,39 @@
 <template>
   <div class="button-example">
     <div class="button-row">
-      <el-button>Default</el-button>
-      <el-button type="primary">Primary</el-button>
-      <el-button type="success">Success</el-button>
-      <el-button type="info">Info</el-button>
-      <el-button type="warning">Warning</el-button>
-      <el-button type="danger">Danger</el-button>
+      <ty-button>Default</ty-button>
+      <ty-button type="primary">Primary</ty-button>
+      <ty-button type="success">Success</ty-button>
+      <ty-button type="info">Info</ty-button>
+      <ty-button type="warning">Warning</ty-button>
+      <ty-button type="danger">Danger</ty-button>
     </div>
 
     <div class="button-row">
-      <el-button plain>Plain</el-button>
-      <el-button type="primary" plain>Primary</el-button>
-      <el-button type="success" plain>Success</el-button>
-      <el-button type="info" plain>Info</el-button>
-      <el-button type="warning" plain>Warning</el-button>
-      <el-button type="danger" plain>Danger</el-button>
+      <ty-button plain>Plain</ty-button>
+      <ty-button type="primary" plain>Primary</ty-button>
+      <ty-button type="success" plain>Success</ty-button>
+      <ty-button type="info" plain>Info</ty-button>
+      <ty-button type="warning" plain>Warning</ty-button>
+      <ty-button type="danger" plain>Danger</ty-button>
     </div>
 
     <div class="button-row">
-      <el-button round>Round</el-button>
-      <el-button type="primary" round>Primary</el-button>
-      <el-button type="success" round>Success</el-button>
-      <el-button type="info" round>Info</el-button>
-      <el-button type="warning" round>Warning</el-button>
-      <el-button type="danger" round>Danger</el-button>
+      <ty-button round>Round</ty-button>
+      <ty-button type="primary" round>Primary</ty-button>
+      <ty-button type="success" round>Success</ty-button>
+      <ty-button type="info" round>Info</ty-button>
+      <ty-button type="warning" round>Warning</ty-button>
+      <ty-button type="danger" round>Danger</ty-button>
     </div>
 
     <div class="button-row">
-      <el-button :icon="Search" circle />
-      <el-button type="primary" :icon="Edit" circle />
-      <el-button type="success" :icon="Check" circle />
-      <el-button type="info" :icon="Message" circle />
-      <el-button type="warning" :icon="Star" circle />
-      <el-button type="danger" :icon="Delete" circle />
+      <ty-button :icon="Search" circle />
+      <ty-button type="primary" :icon="Edit" circle />
+      <ty-button type="success" :icon="Check" circle />
+      <ty-button type="info" :icon="Message" circle />
+      <ty-button type="warning" :icon="Star" circle />
+      <ty-button type="danger" :icon="Delete" circle />
     </div>
   </div>
 </template>

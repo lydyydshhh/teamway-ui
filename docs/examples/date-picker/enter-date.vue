@@ -75,7 +75,7 @@ const disabledDate = (time: Date) => {
 .demo-date-picker .block {
   padding: 1.5rem 0;
   text-align: center;
-  border-right: solid 1px var(--el-border-color);
+  border-right: solid 1px var(--ty-border-color);
   flex: 1;
   min-width: 300px;
 }
@@ -86,7 +86,7 @@ const disabledDate = (time: Date) => {
 
 .demo-date-picker .demonstration {
   display: block;
-  color: var(--el-text-color-secondary);
+  color: var(--ty-text-color-secondary);
   font-size: 14px;
   margin-bottom: 1rem;
 }
@@ -97,7 +97,7 @@ const disabledDate = (time: Date) => {
     padding: 1rem 0;
     min-width: auto;
     border-right: none;
-    border-bottom: solid 1px var(--el-border-color);
+    border-bottom: solid 1px var(--ty-border-color);
   }
 
   .demo-date-picker .block:last-child {

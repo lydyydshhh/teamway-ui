@@ -71,7 +71,7 @@ const openDialogWithObject = () => {
 
 <style scoped>
 code {
-  background: var(--el-bg-color-page);
+  background: var(--ty-bg-color-page);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;

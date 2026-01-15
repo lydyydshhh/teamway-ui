@@ -105,12 +105,12 @@ const tableData = ref(Array.from({ length: 20 }).fill(item))
 <style scoped>
 .layout-container-demo .el-header {
   position: relative;
-  background-color: var(--el-color-primary-light-7);
-  color: var(--el-text-color-primary);
+  background-color: var(--ty-color-primary-light-7);
+  color: var(--ty-text-color-primary);
 }
 .layout-container-demo .el-aside {
-  color: var(--el-text-color-primary);
-  background: var(--el-color-primary-light-8);
+  color: var(--ty-text-color-primary);
+  background: var(--ty-color-primary-light-8);
 }
 .layout-container-demo .el-menu {
   border-right: none;

@@ -90,7 +90,7 @@ const isHoliday = ({ dayjs }) => {
   position: absolute;
   width: 6px;
   height: 6px;
-  background: var(--el-color-danger);
+  background: var(--ty-color-danger);
   border-radius: 50%;
   bottom: 0px;
   left: 50%;

@@ -47,7 +47,7 @@ const formatTooltip = (val: number) => {
 }
 .slider-demo-block .demonstration {
   font-size: 14px;
-  color: var(--el-text-color-secondary);
+  color: var(--ty-text-color-secondary);
   line-height: 44px;
   flex: 1;
   overflow: hidden;

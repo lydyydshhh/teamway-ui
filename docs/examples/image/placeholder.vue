@@ -24,7 +24,7 @@ const src =
 .demo-image__placeholder .block {
   padding: 30px 0;
   text-align: center;
-  border-right: solid 1px var(--el-border-color);
+  border-right: solid 1px var(--ty-border-color);
   display: inline-block;
   width: 49%;
   box-sizing: border-box;
@@ -32,7 +32,7 @@ const src =
 }
 .demo-image__placeholder .demonstration {
   display: block;
-  color: var(--el-text-color-secondary);
+  color: var(--ty-text-color-secondary);
   font-size: 14px;
   margin-bottom: 20px;
 }
@@ -48,8 +48,8 @@ const src =
   align-items: center;
   width: 100%;
   height: 100%;
-  background: var(--el-fill-color-light);
-  color: var(--el-text-color-secondary);
+  background: var(--ty-fill-color-light);
+  color: var(--ty-text-color-secondary);
   font-size: 14px;
 }
 .demo-image__placeholder .dot {

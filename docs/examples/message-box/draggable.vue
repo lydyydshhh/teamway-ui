@@ -95,7 +95,7 @@ const open3 = () => {
 
 <style>
 .custom-dragging-message-box.is-dragging {
-  border: 2px dashed var(--el-color-primary);
+  border: 2px dashed var(--ty-color-primary);
   opacity: 0.65;
 }
 </style>

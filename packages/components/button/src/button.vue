@@ -35,7 +35,7 @@ import { buttonEmits, buttonProps } from './button'
 import { useButtonCustomStyle } from './button-custom'
 
 defineOptions({
-  name: 'ElButton',
+  name: 'TyButton',
 })
 
 const props = defineProps(buttonProps)

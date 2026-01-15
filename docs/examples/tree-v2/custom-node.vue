@@ -66,10 +66,10 @@ const data = createData(4, 30, 40)
 
 <style scoped>
 .prefix {
-  color: var(--el-color-primary);
+  color: var(--ty-color-primary);
   margin-right: 10px;
 }
 .prefix.is-leaf {
-  color: var(--el-color-success);
+  color: var(--ty-color-success);
 }
 </style>

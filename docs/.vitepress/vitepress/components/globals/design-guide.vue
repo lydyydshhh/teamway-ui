@@ -34,7 +34,7 @@
   padding: 0 7px;
 }
 .card {
-  background: var(--el-fill-color-lighter);
+  background: var(--ty-fill-color-lighter);
   height: 204px;
   text-align: center;
 

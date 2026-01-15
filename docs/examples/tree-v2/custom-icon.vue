@@ -64,6 +64,6 @@ const data = createData(4, 30, 40)
 <style scoped>
 .node-icon {
   margin-right: 5px;
-  color: var(--el-color-warning);
+  color: var(--ty-color-warning);
 }
 </style>

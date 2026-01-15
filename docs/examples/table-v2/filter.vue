@@ -133,7 +133,7 @@ const fixedColumns = columns.map((column, columnIndex) => {
 
 <style>
 .el-table-v2__demo-filter {
-  border-top: var(--el-border);
+  border-top: var(--ty-border);
   margin: 12px -12px -12px;
   padding: 0 12px;
   display: flex;

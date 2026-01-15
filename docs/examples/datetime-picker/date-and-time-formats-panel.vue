@@ -49,13 +49,13 @@ const value2 = ref('')
 }
 .line {
   width: 1px;
-  background-color: var(--el-border-color);
+  background-color: var(--ty-border-color);
 }
 
 @media (max-width: 768px) {
   .demo-datetime-picker .block {
     flex: 100%;
-    border-bottom: solid 1px var(--el-border-color);
+    border-bottom: solid 1px var(--ty-border-color);
   }
 
   .demo-datetime-picker .block:last-child {

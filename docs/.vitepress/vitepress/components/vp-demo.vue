@@ -170,13 +170,13 @@ const copyCode = async () => {
 <style scoped lang="scss">
 .example {
   border: 1px solid var(--border-color);
-  border-radius: var(--el-border-radius-base);
+  border-radius: var(--ty-border-radius-base);
 
   .example-showcase {
     padding: 1.5rem;
     margin: 0.5px;
     background-color: var(--bg-color);
-    border-radius: var(--el-border-radius-base);
+    border-radius: var(--ty-border-radius-base);
     overflow: auto;
     &:has(.el-affix) {
       overflow: visible;
@@ -224,7 +224,7 @@ const copyCode = async () => {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     margin-top: -1px;
-    color: var(--el-text-color-secondary);
+    color: var(--ty-text-color-secondary);
     cursor: pointer;
     position: sticky;
     left: 0;
@@ -237,7 +237,7 @@ const copyCode = async () => {
     }
 
     &:hover {
-      color: var(--el-color-primary);
+      color: var(--ty-color-primary);
     }
   }
 }

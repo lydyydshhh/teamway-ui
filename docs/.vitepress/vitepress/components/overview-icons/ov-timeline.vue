@@ -6,16 +6,16 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="280" height="180" fill="var(--el-fill-color-light)" />
-    <circle cx="114" cy="54" r="3" fill="var(--el-color-primary)" />
-    <circle cx="114" cy="90" r="3" fill="var(--el-border-color-dark)" />
-    <circle cx="114" cy="126" r="3" fill="var(--el-border-color-dark)" />
+    <rect width="280" height="180" fill="var(--ty-fill-color-light)" />
+    <circle cx="114" cy="54" r="3" fill="var(--ty-color-primary)" />
+    <circle cx="114" cy="90" r="3" fill="var(--ty-border-color-dark)" />
+    <circle cx="114" cy="126" r="3" fill="var(--ty-border-color-dark)" />
     <line
       x1="114.15"
       y1="60"
       x2="114.15"
       y2="84"
-      stroke="var(--el-border-color-dark)"
+      stroke="var(--ty-border-color-dark)"
       stroke-width="0.3"
     />
     <line
@@ -23,7 +23,7 @@
       y1="96"
       x2="114.15"
       y2="120"
-      stroke="var(--el-border-color-dark)"
+      stroke="var(--ty-border-color-dark)"
       stroke-width="0.3"
     />
     <rect
@@ -32,7 +32,7 @@
       width="45"
       height="4"
       rx="2"
-      fill="var(--el-color-primary)"
+      fill="var(--ty-color-primary)"
     />
     <rect
       x="127"
@@ -40,7 +40,7 @@
       width="45"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--ty-border-color-dark)"
     />
     <rect
       x="127"
@@ -48,7 +48,7 @@
       width="45"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--ty-border-color-dark)"
     />
     <rect
       x="127"
@@ -56,7 +56,7 @@
       width="24"
       height="4"
       rx="2"
-      fill="var(--el-color-primary)"
+      fill="var(--ty-color-primary)"
     />
     <rect
       x="127"
@@ -64,7 +64,7 @@
       width="24"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--ty-border-color-dark)"
     />
     <rect
       x="127"
@@ -72,7 +72,7 @@
       width="24"
       height="4"
       rx="2"
-      fill="var(--el-border-color-dark)"
+      fill="var(--ty-border-color-dark)"
     />
   </svg>
 </template>

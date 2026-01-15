@@ -14,8 +14,8 @@ const options = ['Delicacy', 'Desserts&Drinks', 'Fresh foods', 'Supermarket']
 
 <style scoped>
 .custom-style .el-segmented {
-  --el-segmented-item-selected-color: var(--el-text-color-primary);
-  --el-segmented-item-selected-bg-color: #ffd100;
-  --el-border-radius-base: 16px;
+  --ty-segmented-item-selected-color: var(--ty-text-color-primary);
+  --ty-segmented-item-selected-bg-color: #ffd100;
+  --ty-border-radius-base: 16px;
 }
 </style>

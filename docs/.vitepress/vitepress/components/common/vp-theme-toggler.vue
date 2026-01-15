@@ -96,9 +96,9 @@ const beforeChange = () => {
 
 <style lang="scss" scoped>
 :deep(.el-switch__core) {
-  --el-switch-on-color: var(--bg-color-mute);
-  --el-switch-off-color: var(--bg-color-mute);
-  --el-switch-border-color: var(--border-color);
+  --ty-switch-on-color: var(--bg-color-mute);
+  --ty-switch-off-color: var(--bg-color-mute);
+  --ty-switch-border-color: var(--border-color);
 
   .el-switch__action {
     width: 14px;

@@ -54,7 +54,7 @@ const Row = ({ rowData, rowIndex, cells, columns }) => {
     const style = {
       ...cells[colSpanIndex].props.style,
       width: `${width}px`,
-      backgroundColor: 'var(--el-color-primary-light-3)',
+      backgroundColor: 'var(--ty-color-primary-light-3)',
     }
     cells[colSpanIndex] = cloneVNode(cells[colSpanIndex], { style })
   }

@@ -74,7 +74,7 @@ const url =
   font-size: 30px;
 }
 .image-viewer-slot {
-  background: var(--el-fill-color-light);
+  background: var(--ty-fill-color-light);
 }
 .viewer-error {
   color: #000;

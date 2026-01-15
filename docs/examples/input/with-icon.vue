@@ -65,7 +65,7 @@ const input4 = ref('')
 .label {
   display: block;
   margin-bottom: 1rem;
-  color: var(--el-text-color-regular);
+  color: var(--ty-text-color-regular);
 }
 
 .input-container {
