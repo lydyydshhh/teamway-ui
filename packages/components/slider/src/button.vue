@@ -39,7 +39,7 @@ import { sliderButtonEmits, sliderButtonProps } from './button'
 import type { SliderButtonInitData } from './button'
 
 defineOptions({
-  name: 'ElSliderButton',
+  name: 'TySliderButton',
 })
 
 const props = defineProps(sliderButtonProps)

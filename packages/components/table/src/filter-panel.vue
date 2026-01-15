@@ -126,7 +126,7 @@ import type { TableHeader } from './table-header'
 import type { Store } from './store'
 
 export default defineComponent({
-  name: 'ElTableFilterPanel',
+  name: 'TyTableFilterPanel',
   components: {
     ElCheckbox,
     ElCheckboxGroup,

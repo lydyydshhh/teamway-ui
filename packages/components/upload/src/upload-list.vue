@@ -126,7 +126,7 @@ import { uploadListEmits, uploadListProps } from './upload-list'
 import type { UploadFile } from './upload'
 
 defineOptions({
-  name: 'ElUploadList',
+  name: 'TyUploadList',
 })
 
 const props = defineProps(uploadListProps)

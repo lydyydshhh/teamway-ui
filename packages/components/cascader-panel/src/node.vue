@@ -74,7 +74,7 @@ import type { PropType } from 'vue'
 import type { CheckboxValueType } from '@element-plus/components/checkbox'
 
 defineOptions({
-  name: 'ElCascaderNode',
+  name: 'TyCascaderNode',
 })
 
 const props = defineProps({

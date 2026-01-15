@@ -69,7 +69,7 @@ import type { VNode } from 'vue'
 import type { TransferPanelState } from './transfer-panel'
 
 defineOptions({
-  name: 'ElTransferPanel',
+  name: 'TyTransferPanel',
 })
 
 const props = defineProps(transferPanelProps)

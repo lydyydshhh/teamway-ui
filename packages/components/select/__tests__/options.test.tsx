@@ -11,7 +11,7 @@ describe('options', () => {
   let wrapper: ReturnType<typeof mount>
 
   const ElOptionStub = defineComponent({
-    name: 'ElOption',
+    name: 'TyOption',
     props: {
       label: String,
       value: [String, Number, Boolean, Object] as PropType<
@@ -24,7 +24,7 @@ describe('options', () => {
   const getLabel = (i: number | string) => `label-${i}`
 
   const ElOptionGroupStub = defineComponent({
-    name: 'ElOptionGroup',
+    name: 'TyOptionGroup',
     props: {
       label: String,
     },

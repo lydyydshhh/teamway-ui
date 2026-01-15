@@ -200,7 +200,7 @@ import type { Table } from './table/defaults'
 
 let tableIdSeed = 1
 export default defineComponent({
-  name: 'ElTable',
+  name: 'TyTable',
   directives: {
     Mousewheel,
   },

@@ -21,9 +21,9 @@ import { selectKey } from './token'
 import { BORDER_HORIZONTAL_WIDTH } from '@element-plus/constants'
 
 export default defineComponent({
-  name: 'ElSelectDropdown',
+  name: 'TySelectDropdown',
 
-  componentName: 'ElSelectDropdown',
+  componentName: 'TySelectDropdown',
 
   setup() {
     const select = inject(selectKey)!

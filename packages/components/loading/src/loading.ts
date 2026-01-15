@@ -79,7 +79,7 @@ export function createLoadingComponent(
   }
 
   const elLoadingComponent = defineComponent({
-    name: 'ElLoading',
+    name: 'TyLoading',
     setup(_, { expose }) {
       const { ns, zIndex } = useGlobalComponentSettings('loading')
 

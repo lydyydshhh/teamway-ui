@@ -79,7 +79,7 @@ import type { TooltipContentInstance } from './content'
 import type { PopperInstance } from '@element-plus/components/popper'
 
 defineOptions({
-  name: 'ElTooltip',
+  name: 'TyTooltip',
 })
 
 const props = defineProps(useTooltipProps)

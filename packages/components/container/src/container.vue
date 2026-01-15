@@ -12,7 +12,7 @@ import { buildProps } from '@element-plus/utils'
 import type { Component, VNode } from 'vue'
 
 defineOptions({
-  name: 'ElContainer',
+  name: 'TyContainer',
 })
 
 const props = defineProps(

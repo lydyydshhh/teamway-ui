@@ -118,7 +118,7 @@ import { drawerEmits, drawerProps } from './drawer'
 import { useResizable } from './composables/useResizable'
 
 defineOptions({
-  name: 'ElDrawer',
+  name: 'TyDrawer',
   inheritAttrs: false,
 })
 

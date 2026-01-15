@@ -11,7 +11,7 @@ import type { TreeInstance } from '@element-plus/components/tree'
 import type { SelectInstance } from '@element-plus/components/select'
 
 export default defineComponent({
-  name: 'ElTreeSelect',
+  name: 'TyTreeSelect',
   // disable `ElSelect` inherit current attrs
   inheritAttrs: false,
   props: {

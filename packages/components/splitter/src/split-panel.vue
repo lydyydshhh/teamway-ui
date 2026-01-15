@@ -20,7 +20,7 @@ import { splitterRootContextKey } from './type'
 
 const ns = useNamespace('splitter-panel')
 
-const COMPONENT_NAME = 'ElSplitterPanel'
+const COMPONENT_NAME = 'TySplitterPanel'
 defineOptions({
   name: COMPONENT_NAME,
 })

@@ -5,7 +5,7 @@ import type { FlattenVNodes } from '@element-plus/utils'
 import type { Component, VNode } from 'vue'
 
 export default defineComponent({
-  name: 'ElTourSteps',
+  name: 'TyTourSteps',
   props: {
     current: {
       type: Number,

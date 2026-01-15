@@ -48,7 +48,7 @@ import type { CascaderNode } from './types'
 import type { PropType } from 'vue'
 
 defineOptions({
-  name: 'ElCascaderMenu',
+  name: 'TyCascaderMenu',
 })
 
 const props = defineProps({

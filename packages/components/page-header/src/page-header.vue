@@ -59,7 +59,7 @@ import { useLocale, useNamespace } from '@element-plus/hooks'
 import { pageHeaderEmits, pageHeaderProps } from './page-header'
 
 defineOptions({
-  name: 'ElPageHeader',
+  name: 'TyPageHeader',
 })
 
 defineProps(pageHeaderProps)

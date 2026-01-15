@@ -56,7 +56,7 @@ import { popoverEmits, popoverProps } from './popover'
 import type { TooltipInstance } from '@element-plus/components/tooltip'
 
 defineOptions({
-  name: 'ElPopover',
+  name: 'TyPopover',
 })
 
 const props = defineProps(popoverProps)

@@ -57,7 +57,7 @@ import { MENU_INJECTION_KEY, SUB_MENU_INJECTION_KEY } from './tokens'
 
 import type { MenuItemRegistered, MenuProvider, SubMenuProvider } from './types'
 
-const COMPONENT_NAME = 'ElMenuItem'
+const COMPONENT_NAME = 'TyMenuItem'
 defineOptions({
   name: COMPONENT_NAME,
 })

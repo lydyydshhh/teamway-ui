@@ -20,7 +20,7 @@ import { uploadDraggerEmits, uploadDraggerProps } from './upload-dragger'
 
 import type { UploadRawFile } from './upload'
 
-const COMPONENT_NAME = 'ElUploadDrag'
+const COMPONENT_NAME = 'TyUploadDrag'
 
 defineOptions({
   name: COMPONENT_NAME,

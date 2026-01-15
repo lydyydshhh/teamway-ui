@@ -42,7 +42,7 @@ import { dialogContentEmits, dialogContentProps } from './dialog-content'
 const { t } = useLocale()
 const { Close } = CloseComponents
 
-defineOptions({ name: 'ElDialogContent' })
+defineOptions({ name: 'TyDialogContent' })
 const props = defineProps(dialogContentProps)
 defineEmits(dialogContentEmits)
 

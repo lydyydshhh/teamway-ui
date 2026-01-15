@@ -32,7 +32,7 @@ import { tourContentEmits, tourContentProps } from './content'
 import { tourKey, useFloating } from './helper'
 
 defineOptions({
-  name: 'ElTourContent',
+  name: 'TyTourContent',
 })
 
 const props = defineProps(tourContentProps)

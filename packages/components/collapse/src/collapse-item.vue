@@ -48,7 +48,7 @@ import { collapseItemProps } from './collapse-item'
 import { useCollapseItem, useCollapseItemDOM } from './use-collapse-item'
 
 defineOptions({
-  name: 'ElCollapseItem',
+  name: 'TyCollapseItem',
 })
 
 const props = defineProps(collapseItemProps)

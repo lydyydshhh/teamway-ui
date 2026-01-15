@@ -316,7 +316,7 @@ import { selectV2InjectionKey } from './token'
 import { BORDER_HORIZONTAL_WIDTH } from '@element-plus/constants'
 
 export default defineComponent({
-  name: 'ElSelectV2',
+  name: 'TySelectV2',
   components: {
     ElSelectMenu,
     ElTag,

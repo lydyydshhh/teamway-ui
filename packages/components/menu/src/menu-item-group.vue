@@ -15,7 +15,7 @@ import { useNamespace } from '@element-plus/hooks'
 import { menuItemGroupProps } from './menu-item-group'
 
 defineOptions({
-  name: 'ElMenuItemGroup',
+  name: 'TyMenuItemGroup',
 })
 defineProps(menuItemGroupProps)
 const ns = useNamespace('menu-item-group')

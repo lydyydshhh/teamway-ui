@@ -108,7 +108,7 @@ import { switchEmits, switchProps } from './switch'
 
 import type { CSSProperties } from 'vue'
 
-const COMPONENT_NAME = 'ElSwitch'
+const COMPONENT_NAME = 'TySwitch'
 defineOptions({
   name: COMPONENT_NAME,
 })

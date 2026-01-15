@@ -99,7 +99,7 @@ import type { CSSProperties } from 'vue'
 import type { ProgressColor } from './progress'
 
 defineOptions({
-  name: 'ElProgress',
+  name: 'TyProgress',
 })
 
 const STATUS_COLOR_MAP: Record<string, string> = {

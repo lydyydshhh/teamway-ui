@@ -38,7 +38,7 @@ cat > $DIRNAME/src/$INPUT_NAME.vue <<EOF
 import { ${PROP_NAME}Emits, ${PROP_NAME}Props } from './$INPUT_NAME'
 
 defineOptions({
-  name: 'El$NAME',
+  name: 'Ty$NAME',
 })
 
 const props = defineProps(${PROP_NAME}Props)

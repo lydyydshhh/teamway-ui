@@ -23,7 +23,7 @@ import { isBoolean } from '@element-plus/utils'
 import { linkEmits, linkProps } from './link'
 
 defineOptions({
-  name: 'ElLink',
+  name: 'TyLink',
 })
 const props = defineProps(linkProps)
 const emit = defineEmits(linkEmits)

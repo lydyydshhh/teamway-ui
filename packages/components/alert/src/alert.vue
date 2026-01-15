@@ -58,7 +58,7 @@ import { alertEmits, alertProps } from './alert'
 const { Close } = TypeComponents
 
 defineOptions({
-  name: 'ElAlert',
+  name: 'TyAlert',
 })
 
 const props = defineProps(alertProps)

@@ -48,7 +48,7 @@ import { defaultProps, segmentedEmits, segmentedProps } from './segmented'
 import type { Option } from './types'
 
 defineOptions({
-  name: 'ElSegmented',
+  name: 'TySegmented',
 })
 
 const props = defineProps(segmentedProps)

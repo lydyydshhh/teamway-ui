@@ -162,7 +162,7 @@ const modes: Record<'CONTAIN' | 'ORIGINAL', ImageViewerMode> = {
 }
 
 defineOptions({
-  name: 'ElImageViewer',
+  name: 'TyImageViewer',
 })
 
 const props = defineProps(imageViewerProps)

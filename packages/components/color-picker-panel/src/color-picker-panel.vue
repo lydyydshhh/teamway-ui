@@ -63,7 +63,7 @@ import { useCommonColor } from './composables/use-common-color'
 import type { InputInstance } from '@element-plus/components/input'
 
 defineOptions({
-  name: 'ElColorPickerPanel',
+  name: 'TyColorPickerPanel',
 })
 const props = defineProps(colorPickerPanelProps)
 const emit = defineEmits(colorPickerPanelEmits)

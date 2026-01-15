@@ -24,7 +24,7 @@ import { popperTriggerProps } from './trigger'
 import type { WatchStopHandle } from 'vue'
 
 defineOptions({
-  name: 'ElPopperTrigger',
+  name: 'TyPopperTrigger',
   inheritAttrs: false,
 })
 

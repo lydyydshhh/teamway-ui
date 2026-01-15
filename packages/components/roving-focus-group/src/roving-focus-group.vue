@@ -12,7 +12,7 @@ import ElRovingFocusGroupImpl from './roving-focus-group-impl.vue'
 import { ElCollection as ElFocusGroupCollection } from './roving-focus-group'
 
 export default defineComponent({
-  name: 'ElRovingFocusGroup',
+  name: 'TyRovingFocusGroup',
   components: {
     ElFocusGroupCollection,
     ElRovingFocusGroupImpl,

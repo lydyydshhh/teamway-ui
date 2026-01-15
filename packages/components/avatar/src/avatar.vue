@@ -26,7 +26,7 @@ import { avatarGroupContextKey } from './constants'
 import type { CSSProperties } from 'vue'
 
 defineOptions({
-  name: 'ElAvatar',
+  name: 'TyAvatar',
 })
 
 const props = defineProps(avatarProps)

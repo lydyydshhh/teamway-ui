@@ -17,7 +17,7 @@ import { tabBarProps } from './tab-bar'
 
 import type { CSSProperties } from 'vue'
 
-const COMPONENT_NAME = 'ElTabBar'
+const COMPONENT_NAME = 'TyTabBar'
 defineOptions({
   name: COMPONENT_NAME,
 })

@@ -31,7 +31,7 @@ import { usePagination } from '../usePagination'
 import { paginationSizesProps } from './sizes'
 
 defineOptions({
-  name: 'ElPaginationSizes',
+  name: 'TyPaginationSizes',
 })
 
 const props = defineProps(paginationSizesProps)

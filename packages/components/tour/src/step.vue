@@ -78,7 +78,7 @@ import { tourKey } from './helper'
 import type { TourBtnProps } from './types'
 
 defineOptions({
-  name: 'ElTourStep',
+  name: 'TyTourStep',
 })
 
 const props = defineProps(tourStepProps)

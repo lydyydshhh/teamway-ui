@@ -31,7 +31,7 @@ import { descriptionsRowProps } from './descriptions-row'
 import type { IDescriptionsInject } from './descriptions.type'
 
 defineOptions({
-  name: 'ElDescriptionsRow',
+  name: 'TyDescriptionsRow',
 })
 
 defineProps(descriptionsRowProps)

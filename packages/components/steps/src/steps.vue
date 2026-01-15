@@ -15,7 +15,7 @@ import { STEPS_INJECTION_KEY } from './tokens'
 import type { StepItemState } from './item.vue'
 
 defineOptions({
-  name: 'ElSteps',
+  name: 'TySteps',
 })
 
 const props = defineProps(stepsProps)

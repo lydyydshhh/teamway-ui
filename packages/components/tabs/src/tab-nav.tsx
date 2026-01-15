@@ -83,7 +83,7 @@ export type TabNavProps = ExtractPropTypes<typeof tabNavProps>
 export type TabNavPropsPublic = ExtractPublicPropTypes<typeof tabNavProps>
 export type TabNavEmits = typeof tabNavEmits
 
-const COMPONENT_NAME = 'ElTabNav'
+const COMPONENT_NAME = 'TyTabNav'
 const TabNav = defineComponent({
   name: COMPONENT_NAME,
   props: tabNavProps,

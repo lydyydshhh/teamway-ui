@@ -63,7 +63,7 @@ import type { Nullable } from '@element-plus/utils'
 import type { FilterValue, TreeData, TreeKey, TreeNodeData } from './tree.type'
 
 export default defineComponent({
-  name: 'ElTree',
+  name: 'TyTree',
   components: { ElTreeNode },
   props: treeProps,
   emits: treeEmits,

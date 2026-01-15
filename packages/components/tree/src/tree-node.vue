@@ -111,7 +111,7 @@ import type { RootTreeType, TreeNodeData, TreeOptionProps } from './tree.type'
 import type { CheckboxValueType } from '@element-plus/components/checkbox'
 
 export default defineComponent({
-  name: 'ElTreeNode',
+  name: 'TyTreeNode',
   components: {
     ElCollapseTransition,
     ElCheckbox,

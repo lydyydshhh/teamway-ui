@@ -24,7 +24,7 @@ import type {
 } from './types'
 import type { FormItemProp } from './form-item'
 
-const COMPONENT_NAME = 'ElForm'
+const COMPONENT_NAME = 'TyForm'
 defineOptions({
   name: COMPONENT_NAME,
 })

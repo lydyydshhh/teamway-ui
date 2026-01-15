@@ -91,7 +91,7 @@ import { dialogEmits, dialogProps } from './dialog'
 import { useDialog } from './use-dialog'
 
 defineOptions({
-  name: 'ElDialog',
+  name: 'TyDialog',
   inheritAttrs: false,
 })
 

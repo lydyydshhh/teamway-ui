@@ -60,7 +60,7 @@ import { tagEmits, tagProps } from './tag'
 import type { VNode } from 'vue'
 
 defineOptions({
-  name: 'ElTag',
+  name: 'TyTag',
 })
 const props = defineProps(tagProps)
 const emit = defineEmits(tagEmits)

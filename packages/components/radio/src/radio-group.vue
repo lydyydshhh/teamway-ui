@@ -46,7 +46,7 @@ import ElRadioButton from './radio-button.vue'
 import type { RadioGroupProps } from './radio-group'
 
 defineOptions({
-  name: 'ElRadioGroup',
+  name: 'TyRadioGroup',
 })
 
 const props = defineProps(radioGroupProps)

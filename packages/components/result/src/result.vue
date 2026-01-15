@@ -31,7 +31,7 @@ import { useNamespace } from '@element-plus/hooks'
 import { IconComponentMap, IconMap, resultProps } from './result'
 
 defineOptions({
-  name: 'ElResult',
+  name: 'TyResult',
 })
 
 const props = defineProps(resultProps)

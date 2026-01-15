@@ -96,7 +96,7 @@ import { useLocale, useNamespace } from '@element-plus/hooks'
 import { carouselEmits, carouselProps } from './carousel'
 import { useCarousel } from './use-carousel'
 
-const COMPONENT_NAME = 'ElCarousel'
+const COMPONENT_NAME = 'TyCarousel'
 defineOptions({
   name: COMPONENT_NAME,
 })

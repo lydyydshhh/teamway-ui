@@ -50,7 +50,7 @@ import { notificationEmits, notificationProps } from './notification'
 import type { CSSProperties } from 'vue'
 
 defineOptions({
-  name: 'ElNotification',
+  name: 'TyNotification',
 })
 
 const props = defineProps(notificationProps)

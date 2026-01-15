@@ -67,7 +67,7 @@ import type {
 import type { CascaderMenuInstance } from './instance'
 
 defineOptions({
-  name: 'ElCascaderPanel',
+  name: 'TyCascaderPanel',
 })
 
 const props = defineProps(cascaderPanelProps)

@@ -67,7 +67,7 @@ import SelectController from './select-controller.vue'
 
 const ns = useNamespace('calendar')
 
-const COMPONENT_NAME = 'ElCalendar'
+const COMPONENT_NAME = 'TyCalendar'
 defineOptions({
   name: COMPONENT_NAME,
 })

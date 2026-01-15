@@ -25,7 +25,7 @@ import { dropdownItemProps } from './dropdown'
 import { DROPDOWN_INJECTION_KEY } from './tokens'
 
 export default defineComponent({
-  name: 'ElDropdownItem',
+  name: 'TyDropdownItem',
   components: {
     ElRovingFocusItem,
     ElDropdownItemImpl,

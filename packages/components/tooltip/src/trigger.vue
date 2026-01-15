@@ -33,7 +33,7 @@ import { whenTrigger } from './utils'
 import type { OnlyChildExpose } from '@element-plus/components/slot'
 
 defineOptions({
-  name: 'ElTooltipTrigger',
+  name: 'TyTooltipTrigger',
 })
 
 const props = defineProps(useTooltipTriggerProps)

@@ -24,7 +24,7 @@ import { svPanelProps } from '../props/sv-panel'
 import { useSvPanel, useSvPanelDOM } from '../composables/use-sv-panel'
 
 defineOptions({
-  name: 'ElSvPanel',
+  name: 'TySvPanel',
 })
 
 const props = defineProps(svPanelProps)

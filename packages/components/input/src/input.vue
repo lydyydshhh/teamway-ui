@@ -208,7 +208,7 @@ import type { StyleValue } from 'vue'
 
 type TargetElement = HTMLInputElement | HTMLTextAreaElement
 
-const COMPONENT_NAME = 'ElInput'
+const COMPONENT_NAME = 'TyInput'
 defineOptions({
   name: COMPONENT_NAME,
   inheritAttrs: false,

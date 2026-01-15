@@ -8,7 +8,7 @@
 import { useNamespace } from '@element-plus/hooks'
 
 defineOptions({
-  name: 'ElMain',
+  name: 'TyMain',
 })
 
 const ns = useNamespace('main')

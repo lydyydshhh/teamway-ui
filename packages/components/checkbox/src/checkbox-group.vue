@@ -43,7 +43,7 @@ import ElCheckboxButton from './checkbox-button.vue'
 import type { CheckboxGroupValueType } from './checkbox-group'
 
 defineOptions({
-  name: 'ElCheckboxGroup',
+  name: 'TyCheckboxGroup',
 })
 
 const props = defineProps(checkboxGroupProps)

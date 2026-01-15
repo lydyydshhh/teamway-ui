@@ -8,7 +8,7 @@ import type { ComponentInternalInstance } from 'vue'
 import type { RootTreeType } from './tree.type'
 
 export default defineComponent({
-  name: 'ElTreeNodeContent',
+  name: 'TyTreeNodeContent',
   props: {
     node: {
       type: Object,

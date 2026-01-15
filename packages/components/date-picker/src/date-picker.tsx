@@ -19,7 +19,7 @@ import type {
 import type { DatePickerExpose } from './instance'
 
 export default defineComponent({
-  name: 'ElDatePicker',
+  name: 'TyDatePicker',
   install: null,
   props: datePickerProps,
   emits: [UPDATE_MODEL_EVENT],

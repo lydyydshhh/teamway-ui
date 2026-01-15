@@ -149,7 +149,7 @@ import {
 } from './composables'
 
 defineOptions({
-  name: 'ElInputTag',
+  name: 'TyInputTag',
   inheritAttrs: false,
 })
 

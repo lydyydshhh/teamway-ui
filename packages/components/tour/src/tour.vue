@@ -45,7 +45,7 @@ import { tourKey, useTarget } from './helper'
 import type { TourStepProps } from './step'
 
 defineOptions({
-  name: 'ElTour',
+  name: 'TyTour',
   inheritAttrs: false,
 })
 

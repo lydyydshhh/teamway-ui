@@ -63,7 +63,7 @@ import { isTriggerType } from './utils'
 import type { PopperContentInstance } from '@element-plus/components/popper'
 
 defineOptions({
-  name: 'ElTooltipContent',
+  name: 'TyTooltipContent',
   inheritAttrs: false,
 })
 

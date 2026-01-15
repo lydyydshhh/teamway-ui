@@ -80,7 +80,7 @@ import type { TooltipInstance } from '@element-plus/components/tooltip'
 import type { MentionCtx, MentionOption } from './types'
 
 defineOptions({
-  name: 'ElMention',
+  name: 'TyMention',
   inheritAttrs: false,
 })
 

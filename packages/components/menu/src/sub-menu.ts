@@ -113,7 +113,7 @@ export const subMenuProps = buildProps({
 export type SubMenuProps = ExtractPropTypes<typeof subMenuProps>
 export type SubMenuPropsPublic = ExtractPublicPropTypes<typeof subMenuProps>
 
-const COMPONENT_NAME = 'ElSubMenu'
+const COMPONENT_NAME = 'TySubMenu'
 export default defineComponent({
   name: COMPONENT_NAME,
   props: subMenuProps,

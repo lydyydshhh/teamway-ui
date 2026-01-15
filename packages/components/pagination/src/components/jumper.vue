@@ -28,7 +28,7 @@ import { usePagination } from '../usePagination'
 import { paginationJumperProps } from './jumper'
 
 defineOptions({
-  name: 'ElPaginationJumper',
+  name: 'TyPaginationJumper',
 })
 
 defineProps(paginationJumperProps)

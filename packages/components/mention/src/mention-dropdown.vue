@@ -50,7 +50,7 @@ import { mentionDropdownEmits, mentionDropdownProps } from './mention-dropdown'
 import type { MentionOption } from './types'
 
 defineOptions({
-  name: 'ElMentionDropdown',
+  name: 'TyMentionDropdown',
 })
 
 const props = defineProps(mentionDropdownProps)

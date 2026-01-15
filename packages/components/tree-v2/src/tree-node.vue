@@ -74,7 +74,7 @@ import type { CheckboxValueType } from '@element-plus/components/checkbox'
 import type { TreeNode } from './types'
 
 defineOptions({
-  name: 'ElTreeNode',
+  name: 'TyTreeNode',
 })
 
 const props = defineProps(treeNodeProps)

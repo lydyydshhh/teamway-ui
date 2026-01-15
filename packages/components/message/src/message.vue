@@ -71,7 +71,7 @@ import type { CSSProperties } from 'vue'
 const { Close } = TypeComponents
 
 defineOptions({
-  name: 'ElMessage',
+  name: 'TyMessage',
 })
 
 const props = defineProps(messageProps)

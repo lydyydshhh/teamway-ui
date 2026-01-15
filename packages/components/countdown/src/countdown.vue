@@ -22,7 +22,7 @@ import { countdownEmits, countdownProps } from './countdown'
 import { formatTime, getTime } from './utils'
 
 defineOptions({
-  name: 'ElCountdown',
+  name: 'TyCountdown',
 })
 
 const props = defineProps(countdownProps)

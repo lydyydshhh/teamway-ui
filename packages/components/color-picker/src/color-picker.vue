@@ -139,7 +139,7 @@ import type { ColorPickerPanelInstance } from '@element-plus/components/color-pi
 import type { TooltipInstance } from '@element-plus/components/tooltip'
 
 defineOptions({
-  name: 'ElColorPicker',
+  name: 'TyColorPicker',
 })
 const props = defineProps(colorPickerProps)
 

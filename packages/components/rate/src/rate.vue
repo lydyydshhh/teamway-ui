@@ -107,7 +107,7 @@ function getValueFromMap<T>(
 }
 
 defineOptions({
-  name: 'ElRate',
+  name: 'TyRate',
 })
 
 const props = defineProps(rateProps)

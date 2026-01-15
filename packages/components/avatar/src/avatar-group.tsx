@@ -14,7 +14,7 @@ import { avatarGroupContextKey } from './constants'
 import { avatarGroupProps } from './avatar-group-props'
 
 export default defineComponent({
-  name: 'ElAvatarGroup',
+  name: 'TyAvatarGroup',
   props: avatarGroupProps,
   setup(props, { slots }) {
     const ns = useNamespace('avatar-group')

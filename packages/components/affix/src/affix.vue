@@ -31,7 +31,7 @@ import { affixEmits, affixProps } from './affix'
 
 import type { CSSProperties } from 'vue'
 
-const COMPONENT_NAME = 'ElAffix'
+const COMPONENT_NAME = 'TyAffix'
 defineOptions({
   name: COMPONENT_NAME,
 })

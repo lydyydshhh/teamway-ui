@@ -17,7 +17,7 @@ import defaultProps from './defaults'
 import type { VNode } from 'vue'
 
 export default defineComponent({
-  name: 'ElTableBody',
+  name: 'TyTableBody',
   props: defaultProps,
   setup(props) {
     const instance = getCurrentInstance()

@@ -84,7 +84,7 @@ import type {
 import type { TransferPanelInstance } from './transfer-panel'
 
 defineOptions({
-  name: 'ElTransfer',
+  name: 'TyTransfer',
 })
 
 const props = defineProps(transferProps)

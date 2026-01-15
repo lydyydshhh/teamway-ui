@@ -121,7 +121,7 @@ import type { CSSProperties } from 'vue'
 const { ButtonGroup: ElButtonGroup } = ElButton
 
 export default defineComponent({
-  name: 'ElDropdown',
+  name: 'TyDropdown',
   components: {
     ElButton,
     ElButtonGroup,

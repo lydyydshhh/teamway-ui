@@ -354,7 +354,7 @@ import ElOptionGroup from './option-group.vue'
 import type { AppConfig, AppContext, VNode } from 'vue'
 import type { SelectContext } from './type'
 
-const COMPONENT_NAME = 'ElSelect'
+const COMPONENT_NAME = 'TySelect'
 
 type WarnHandler = AppConfig['warnHandler']
 

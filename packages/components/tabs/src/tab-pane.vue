@@ -30,7 +30,7 @@ import { useNamespace } from '@element-plus/hooks'
 import { tabsRootContextKey } from './constants'
 import { tabPaneProps } from './tab-pane'
 
-const COMPONENT_NAME = 'ElTabPane'
+const COMPONENT_NAME = 'TyTabPane'
 defineOptions({
   name: COMPONENT_NAME,
 })

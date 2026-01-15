@@ -26,7 +26,7 @@ import { breadcrumbItemProps } from './breadcrumb-item'
 import type { Router } from 'vue-router'
 
 defineOptions({
-  name: 'ElBreadcrumbItem',
+  name: 'TyBreadcrumbItem',
 })
 
 const props = defineProps(breadcrumbItemProps)

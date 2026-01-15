@@ -41,7 +41,7 @@ export interface TableHeaderProps<T extends DefaultRow> {
 }
 
 export default defineComponent({
-  name: 'ElTableHeader',
+  name: 'TyTableHeader',
   components: {
     ElCheckbox,
   },

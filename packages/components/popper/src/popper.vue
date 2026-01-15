@@ -11,7 +11,7 @@ import type { Instance as PopperInstance } from '@popperjs/core'
 import type { ElPopperInjectionContext } from './constants'
 
 defineOptions({
-  name: 'ElPopper',
+  name: 'TyPopper',
   inheritAttrs: false,
 })
 const props = defineProps(popperProps)

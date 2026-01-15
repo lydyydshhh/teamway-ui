@@ -52,7 +52,7 @@ dayjs.extend(customParseFormat)
 const { Option: ElOption } = ElSelect
 
 defineOptions({
-  name: 'ElTimeSelect',
+  name: 'TyTimeSelect',
 })
 
 defineEmits([CHANGE_EVENT, 'blur', 'focus', 'clear', UPDATE_MODEL_EVENT])

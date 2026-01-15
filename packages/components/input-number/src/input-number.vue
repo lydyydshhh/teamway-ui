@@ -105,7 +105,7 @@ import { inputNumberEmits, inputNumberProps } from './input-number'
 import type { InputInstance } from '@element-plus/components/input'
 
 defineOptions({
-  name: 'ElInputNumber',
+  name: 'TyInputNumber',
 })
 
 const props = defineProps(inputNumberProps)

@@ -21,7 +21,7 @@ import { ElIcon } from '@element-plus/components/icon'
 import { paginationNextProps } from './next'
 
 defineOptions({
-  name: 'ElPaginationNext',
+  name: 'TyPaginationNext',
 })
 
 const props = defineProps(paginationNextProps)

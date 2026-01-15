@@ -30,8 +30,8 @@ import type { Component, VNode, VNodeArrayChildren } from 'vue'
 import type { OptionInternalInstance, OptionPublicInstance } from './type'
 
 export default defineComponent({
-  name: 'ElOptionGroup',
-  componentName: 'ElOptionGroup',
+  name: 'TyOptionGroup',
+  componentName: 'TyOptionGroup',
 
   props: {
     /**

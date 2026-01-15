@@ -81,7 +81,7 @@ export interface IStepsInject {
 }
 
 defineOptions({
-  name: 'ElStep',
+  name: 'TyStep',
 })
 
 const props = defineProps(stepProps)

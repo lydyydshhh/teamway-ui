@@ -29,7 +29,7 @@ import { skeletonProps } from './skeleton'
 import ElSkeletonItem from './skeleton-item.vue'
 
 defineOptions({
-  name: 'ElSkeleton',
+  name: 'TySkeleton',
 })
 const props = defineProps(skeletonProps)
 

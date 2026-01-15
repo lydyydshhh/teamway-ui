@@ -42,7 +42,7 @@ import {
 import type { WatchStopHandle } from 'vue'
 
 defineOptions({
-  name: 'ElPopperContent',
+  name: 'TyPopperContent',
 })
 
 const emit = defineEmits(popperContentEmits)

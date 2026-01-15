@@ -48,7 +48,7 @@ import { TIMELINE_INJECTION_KEY } from './tokens'
 import type { TimelineProvider } from './tokens'
 
 defineOptions({
-  name: 'ElTimelineItem',
+  name: 'TyTimelineItem',
 })
 
 const props = defineProps(timelineItemProps)

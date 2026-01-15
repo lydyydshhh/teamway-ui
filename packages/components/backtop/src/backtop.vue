@@ -21,7 +21,7 @@ import { useNamespace } from '@element-plus/hooks'
 import { backtopEmits, backtopProps } from './backtop'
 import { useBackTop } from './use-backtop'
 
-const COMPONENT_NAME = 'ElBacktop'
+const COMPONENT_NAME = 'TyBacktop'
 
 defineOptions({
   name: COMPONENT_NAME,

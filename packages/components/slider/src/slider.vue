@@ -127,7 +127,7 @@ import {
 import type { SliderInitData } from './slider'
 
 defineOptions({
-  name: 'ElSlider',
+  name: 'TySlider',
 })
 
 const props = defineProps(sliderProps)

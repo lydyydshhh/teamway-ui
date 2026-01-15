@@ -67,7 +67,7 @@ import { popconfirmEmits, popconfirmProps } from './popconfirm'
 import type { TooltipInstance } from '@element-plus/components/tooltip'
 
 defineOptions({
-  name: 'ElPopconfirm',
+  name: 'TyPopconfirm',
 })
 
 const props = defineProps(popconfirmProps)
