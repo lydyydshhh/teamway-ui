@@ -19,8 +19,8 @@ const removeTag = (str: string) => str.replace(/<span.*<\/span>/g, '')
   <aside ref="container" class="toc-wrapper">
     <nav class="toc-content">
       <h3 class="toc-content__heading">Contents</h3>
-      <el-anchor :offset="70" :bound="120">
-        <el-anchor-link
+      <ty-anchor :offset="70" :bound="120">
+        <ty-anchor-link
           v-for="{ link, text, children } in headers"
           :key="link"
           :href="link"
@@ -28,17 +28,17 @@ const removeTag = (str: string) => str.replace(/<span.*<\/span>/g, '')
         >
           <div :title="removeTag(text)" v-html="text" />
           <template v-if="children" #sub-link>
-            <el-anchor-link
+            <ty-anchor-link
               v-for="{ link: childLink, text: childText } in children"
               :key="childLink"
               :href="childLink"
               :title="text"
             >
               <div :title="removeTag(childText)" v-html="childText" />
-            </el-anchor-link>
+            </ty-anchor-link>
           </template>
-        </el-anchor-link>
-      </el-anchor>
+        </ty-anchor-link>
+      </ty-anchor>
       <!-- <SponsorLarge
         class="mt-8 toc-ads flex flex-col"
         item-style="width: 180px; height: 55px;"
@@ -61,8 +61,8 @@ const removeTag = (str: string) => str.replace(/<span.*<\/span>/g, '')
     width: 100%;
   }
 }
-.el-anchor__item {
-  .el-anchor__link > div {
+.ty-anchor__item {
+  .ty-anchor__link > div {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
