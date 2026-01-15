@@ -11,7 +11,7 @@
         class="el-loading-mask"
         style="display: flex; align-items: center; justify-content: center"
       >
-        <el-icon class="is-loading" color="var(--el-color-primary)" :size="26">
+        <el-icon class="is-loading" color="var(--ty-color-primary)" :size="26">
           <loading-icon />
         </el-icon>
       </div>

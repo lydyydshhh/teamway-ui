@@ -46,7 +46,7 @@ const { circleUrl, squareUrl, sizeList } = toRefs(state)
 .demo-basic .sub-title {
   margin-bottom: 10px;
   font-size: 14px;
-  color: var(--el-text-color-secondary);
+  color: var(--ty-text-color-secondary);
 }
 .demo-basic .demo-basic--circle,
 .demo-basic .demo-basic--square {
@@ -55,13 +55,13 @@ const { circleUrl, squareUrl, sizeList } = toRefs(state)
   align-items: center;
 }
 .demo-basic .block:not(:last-child) {
-  border-right: 1px solid var(--el-border-color);
+  border-right: 1px solid var(--ty-border-color);
 }
 .demo-basic .block {
   flex: 1;
 }
 .demo-basic .el-col:not(:last-child) {
-  border-right: 1px solid var(--el-border-color);
+  border-right: 1px solid var(--ty-border-color);
 }
 @media screen and (max-width: 992px) {
   .demo-basic .el-col:not(:last-child) {

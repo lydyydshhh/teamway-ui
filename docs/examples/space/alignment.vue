@@ -36,6 +36,6 @@
   width: 240px;
   margin-bottom: 20px;
   padding: 8px;
-  border: 1px solid var(--el-border-color);
+  border: 1px solid var(--ty-border-color);
 }
 </style>

@@ -111,7 +111,7 @@ const handleClear = () => {
 }
 
 .cascader-custom-header-footer > div:not(:last-child) {
-  border-right: 1px solid var(--el-border-color);
+  border-right: 1px solid var(--ty-border-color);
 }
 
 .cascader-custom-header .el-checkbox {

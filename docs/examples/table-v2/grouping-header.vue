@@ -111,7 +111,7 @@ const headerClass = ({
 
 <style>
 .el-el-table-v2__header-row .custom-header-cell {
-  border-right: 1px solid var(--el-border-color);
+  border-right: 1px solid var(--ty-border-color);
 }
 
 .el-el-table-v2__header-row .custom-header-cell:last-child {
@@ -119,8 +119,8 @@ const headerClass = ({
 }
 
 .el-primary-color {
-  background-color: var(--el-color-primary);
-  color: var(--el-color-white);
+  background-color: var(--ty-color-primary);
+  color: var(--ty-color-white);
   font-size: 14px;
   font-weight: bold;
 }

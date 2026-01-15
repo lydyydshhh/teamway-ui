@@ -68,10 +68,10 @@ describe('use-namespace', () => {
     ])
 
     const style = wrapper.find('#testId').attributes('style')
-    expect(style).toMatch('--el-border-style: solid;')
-    expect(style).not.toMatch('--el-border-width:')
-    expect(style).toMatch('--el-table-text-color: #409eff;')
-    expect(style).not.toMatch('--el-table-active-color:')
+    expect(style).toMatch('--ty-border-style: solid;')
+    expect(style).not.toMatch('--ty-border-width:')
+    expect(style).toMatch('--ty-table-text-color: #409eff;')
+    expect(style).not.toMatch('--ty-table-active-color:')
   })
 
   it('overrides namespace', () => {

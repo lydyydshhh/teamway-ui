@@ -21,7 +21,7 @@
 
 <style scoped>
 .demonstration {
-  color: var(--el-text-color-secondary);
+  color: var(--ty-text-color-secondary);
 }
 
 .el-carousel__item h3 {

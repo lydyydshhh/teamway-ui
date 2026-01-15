@@ -2860,7 +2860,7 @@ _2022-09-16_
 - Components [table] throw error when no matching column (#9682 by @qq282126990)
 - Components [table-v2] cell and header-cell slots parmas (#9665 by @chenxch)
 - Components [select-v2] fix placeholder style (#9707 by @holazz)
-- Components [select-v2] respect `--el-component-size` (#9706 by @holazz)
+- Components [select-v2] respect `--ty-component-size` (#9706 by @holazz)
 - Components [time-picker] fix end-time can't be callback (#9669 by @MrCat33)
 - Components [tree] setCurrentKey() type error (#9709 by @zhiyuanzmj)
 - Components [cascader] fix large interval when multiple checkboxes (#9428 by @Tsong-LC)
@@ -3868,7 +3868,7 @@ _2022-03-25_
 - Theme-chalk use css var instead of component hex colors (#6727 by @YunYouJun)
 - Docs switch to unocss (#6728 by @sxzz)
 - Components [empty] refactor (#6703 by @buqiyuan)
-- Theme-chalk use getCssVar instead of var(--el) & fix details
+- Theme-chalk use getCssVar instead of var(--ty) & fix details
 - Components [upload] improve code and typings (#6762 by @sxzz)
 - Components [time-picker] use useNamespace (#6523 by @gjfei)
 - Theme-chalk remove default size class & simplify button css (#6782 by @YunYouJun)
@@ -4640,7 +4640,7 @@ _2021-12-10_
 
 - Change icon package name (#4625 by @sxzz)
 - Components refactor drawer (#4282 by @Alanscut)
-- Style rename -color-base to --el-bg-color (#4615 by @YunYouJun)
+- Style rename -color-base to --ty-bg-color (#4615 by @YunYouJun)
 - Components refactor calendar (#4325 by @Alanscut)
 - Components refactor progress
 - Components refactor progress

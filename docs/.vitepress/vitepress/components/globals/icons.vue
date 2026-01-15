@@ -150,7 +150,7 @@ const filterCategories = computed(() => {
       top: 0;
       width: 100%;
       height: 1px;
-      background-color: var(--el-border-color);
+      background-color: var(--ty-border-color);
       z-index: 2;
     }
 
@@ -161,17 +161,17 @@ const filterCategories = computed(() => {
       top: 0;
       width: 1px;
       height: 100%;
-      background-color: var(--el-border-color);
+      background-color: var(--ty-border-color);
       z-index: 2;
     }
 
     .icon-item {
       text-align: center;
-      color: var(--el-text-color-regular);
+      color: var(--ty-text-color-regular);
       height: 90px;
       font-size: 13px;
       position: relative;
-      transition: background-color var(--el-transition-duration);
+      transition: background-color var(--ty-transition-duration);
 
       &::before {
         content: '';
@@ -180,7 +180,7 @@ const filterCategories = computed(() => {
         top: 0;
         width: 1px;
         height: 100%;
-        background-color: var(--el-border-color);
+        background-color: var(--ty-border-color);
         z-index: 2;
       }
 
@@ -191,12 +191,12 @@ const filterCategories = computed(() => {
         bottom: 0;
         width: 100%;
         height: 1px;
-        background-color: var(--el-border-color);
+        background-color: var(--ty-border-color);
         z-index: 2;
       }
 
       &:hover {
-        background-color: var(--el-border-color-extra-light);
+        background-color: var(--ty-border-color-extra-light);
         color: var(--brand-color-light);
 
         .el-icon {

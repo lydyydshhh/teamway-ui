@@ -21,7 +21,7 @@ describe('Avatar.vue', () => {
 
   test('size is number', () => {
     const wrapper = mount(() => <Avatar size={50} />)
-    expect(wrapper.attributes('style')).toContain('--el-avatar-size: 50px;')
+    expect(wrapper.attributes('style')).toContain('--ty-avatar-size: 50px;')
   })
 
   test('size is string', () => {

@@ -79,6 +79,6 @@ const data: Tree[] = [
 
 <style>
 .is-penultimate > .el-tree-node__content {
-  color: var(--el-color-primary);
+  color: var(--ty-color-primary);
 }
 </style>

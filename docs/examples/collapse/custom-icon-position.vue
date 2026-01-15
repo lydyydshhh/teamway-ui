@@ -8,7 +8,7 @@
         active-value="right"
         inactive-text="left"
         active-text="right"
-        style="--el-switch-off-color: #88b8fe"
+        style="--ty-switch-off-color: #88b8fe"
       />
     </div>
 

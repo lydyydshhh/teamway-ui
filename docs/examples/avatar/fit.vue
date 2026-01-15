@@ -42,6 +42,6 @@ const { fits, url } = toRefs(state)
 .demo-fit .title {
   margin-bottom: 10px;
   font-size: 14px;
-  color: var(--el-text-color-secondary);
+  color: var(--ty-text-color-secondary);
 }
 </style>

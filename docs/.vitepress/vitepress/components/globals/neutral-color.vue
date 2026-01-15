@@ -7,7 +7,7 @@
           :key="i"
           class="demo-color-box demo-color-box-other"
           :style="{
-            color: 'var(--el-bg-color)',
+            color: 'var(--ty-bg-color)',
             background: text.var.value,
           }"
         >
@@ -45,7 +45,7 @@
             background: fill.var.value,
             border: `1px solid ${
               fill.name === 'Blank Fill'
-                ? 'var(--el-border-color-light)'
+                ? 'var(--ty-border-color-light)'
                 : 'transparent'
             }`,
           }"
@@ -94,7 +94,7 @@
             border:
               '1px solid ' +
               (!isDark || bg.name === 'Base Background'
-                ? 'var(--el-border-color-light)'
+                ? 'var(--ty-border-color-light)'
                 : 'transparent'),
           }"
         >

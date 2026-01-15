@@ -8,7 +8,7 @@
       style="
         padding: 30px 0;
         text-align: center;
-        border-right: solid 1px var(--el-border-color);
+        border-right: solid 1px var(--ty-border-color);
         flex: 1;
       "
     >
@@ -16,7 +16,7 @@
         class="demonstration"
         style="
           display: block;
-          color: var(--el-text-color-secondary);
+          color: var(--ty-text-color-secondary);
           font-size: 14px;
           margin-bottom: 20px;
         "
@@ -26,7 +26,7 @@
         class="demonstration"
         style="
           display: block;
-          color: var(--el-text-color-secondary);
+          color: var(--ty-text-color-secondary);
           font-size: 14px;
           margin-bottom: 20px;
         "
@@ -45,7 +45,7 @@
       style="
         padding: 30px 0;
         text-align: center;
-        border-right: solid 1px var(--el-border-color);
+        border-right: solid 1px var(--ty-border-color);
         flex: 1;
       "
     >
@@ -53,7 +53,7 @@
         class="demonstration"
         style="
           display: block;
-          color: var(--el-text-color-secondary);
+          color: var(--ty-text-color-secondary);
           font-size: 14px;
           margin-bottom: 20px;
         "
@@ -63,7 +63,7 @@
         class="demonstration"
         style="
           display: block;
-          color: var(--el-text-color-secondary);
+          color: var(--ty-text-color-secondary);
           font-size: 14px;
           margin-bottom: 20px;
         "
@@ -86,7 +86,7 @@
         class="demonstration"
         style="
           display: block;
-          color: var(--el-text-color-secondary);
+          color: var(--ty-text-color-secondary);
           font-size: 14px;
           margin-bottom: 20px;
         "
@@ -96,7 +96,7 @@
         class="demonstration"
         style="
           display: block;
-          color: var(--el-text-color-secondary);
+          color: var(--ty-text-color-secondary);
           font-size: 14px;
           margin-bottom: 20px;
         "

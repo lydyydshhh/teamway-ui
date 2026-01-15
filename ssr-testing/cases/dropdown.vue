@@ -4,7 +4,7 @@
       class="el-dropdown-link"
       style="
         cursor: pointer;
-        color: var(--el-color-primary);
+        color: var(--ty-color-primary);
         display: flex;
         align-items: center;
       "
