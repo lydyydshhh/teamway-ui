@@ -103,19 +103,19 @@ const tableData = ref(Array.from({ length: 20 }).fill(item))
 </script>
 
 <style scoped>
-.layout-container-demo .el-header {
+.layout-container-demo .ty-header {
   position: relative;
   background-color: var(--ty-color-primary-light-7);
   color: var(--ty-text-color-primary);
 }
-.layout-container-demo .el-aside {
+.layout-container-demo .ty-aside {
   color: var(--ty-text-color-primary);
   background: var(--ty-color-primary-light-8);
 }
-.layout-container-demo .el-menu {
+.layout-container-demo .ty-menu {
   border-right: none;
 }
-.layout-container-demo .el-main {
+.layout-container-demo .ty-main {
   padding: 0;
 }
 .layout-container-demo .toolbar {

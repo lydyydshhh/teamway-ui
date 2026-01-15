@@ -1,8 +1,8 @@
 <script lang="ts">
 import { computed, defineComponent, h, onMounted, reactive, ref } from 'vue'
 import { pick } from 'lodash-unified'
-import { ElSelect, selectProps } from '@element-plus/components/select'
-import { ElTree, treeProps } from '@element-plus/components/tree'
+import { TySelect, selectProps } from '@element-plus/components/select'
+import { TyTree, treeProps } from '@element-plus/components/tree'
 import { useSelect } from './select'
 import { useTree } from './tree'
 import CacheOptions from './cache-options'
@@ -12,7 +12,7 @@ import type { SelectInstance } from '@element-plus/components/select'
 
 export default defineComponent({
   name: 'TyTreeSelect',
-  // disable `ElSelect` inherit current attrs
+  // disable `TySelect` inherit current attrs
   inheritAttrs: false,
   props: {
     ...selectProps,
@@ -40,7 +40,7 @@ export default defineComponent({
       key,
     })
 
-    // expose ElTree/ElSelect methods
+    // expose TyTree/TySelect methods
     const methods = reactive({})
     expose(methods)
     onMounted(() => {
@@ -74,7 +74,7 @@ export default defineComponent({
 
     return () =>
       h(
-        ElSelect,
+        TySelect,
         /**
          * 1. The `props` is processed into `Refs`, but `v-bind` and
          * render function props cannot read `Refs`, so use `reactive`
@@ -91,7 +91,7 @@ export default defineComponent({
           default: () => [
             h(CacheOptions, { data: cacheOptions.value }),
             h(
-              ElTree,
+              TyTree,
               reactive({
                 ...treeProps,
                 ref: (ref: TreeInstance) => (tree.value = ref),

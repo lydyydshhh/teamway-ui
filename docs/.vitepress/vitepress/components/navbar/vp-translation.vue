@@ -14,31 +14,31 @@ const toTranslation = () => {
 <template>
   <div class="translation-container">
     <ClientOnly>
-      <ElDropdown popper-class="translation-popup" role="navigation">
-        <ElIcon :size="24" :aria-label="locale.language">
+      <TyDropdown popper-class="translation-popup" role="navigation">
+        <TyIcon :size="24" :aria-label="locale.language">
           <i-ri-translate-2 />
-        </ElIcon>
+        </TyIcon>
         <template #dropdown>
-          <ElDropdownMenu>
+          <TyDropdownMenu>
             <a v-for="l in langs" :key="l" :href="getTargetUrl(l)">
-              <ElDropdownItem
+              <TyDropdownItem
                 :class="{ language: true, selected: l === lang }"
                 @click.stop="switchLang(l)"
               >
                 {{ languageMap[l] }}
-              </ElDropdownItem>
+              </TyDropdownItem>
             </a>
             <a :href="`/${lang}/guide/translation`">
-              <ElDropdownItem
+              <TyDropdownItem
                 class="language selected"
                 @click.stop="toTranslation"
               >
                 {{ locale.help }}
-              </ElDropdownItem>
+              </TyDropdownItem>
             </a>
-          </ElDropdownMenu>
+          </TyDropdownMenu>
         </template>
-      </ElDropdown>
+      </TyDropdown>
     </ClientOnly>
   </div>
 </template>
@@ -59,7 +59,7 @@ const toTranslation = () => {
 </style>
 
 <style lang="scss">
-.el-dropdown__popper.translation-popup {
+.ty-dropdown__popper.translation-popup {
   --ty-bg-color-overlay: var(--bg-color);
   --ty-popper-border-radius: 8px;
   --ty-border-color-light: transparent;
@@ -68,7 +68,7 @@ const toTranslation = () => {
   min-width: 192px;
   transition: background-color 0.5s;
 
-  .el-popper__arrow {
+  .ty-popper__arrow {
     display: none;
   }
 

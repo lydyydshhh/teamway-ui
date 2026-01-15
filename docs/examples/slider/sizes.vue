@@ -17,11 +17,11 @@ const value = ref(0)
   max-width: 600px;
 }
 
-.el-slider {
+.ty-slider {
   margin-top: 20px;
 }
 
-.el-slider:first-child {
+.ty-slider:first-child {
   margin-top: 0;
 }
 </style>

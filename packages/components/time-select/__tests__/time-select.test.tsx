@@ -16,8 +16,8 @@ afterEach(() => {
   document.documentElement.innerHTML = ''
 })
 
-const WRAPPER_CLASS_NAME = 'el-select__wrapper'
-const PLACEHOLDER_CLASS_NAME = 'el-select__placeholder'
+const WRAPPER_CLASS_NAME = 'ty-select__wrapper'
+const PLACEHOLDER_CLASS_NAME = 'ty-select__placeholder'
 
 describe('TimeSelect', () => {
   it('create', async () => {
@@ -25,7 +25,7 @@ describe('TimeSelect', () => {
       <TimeSelect style={{ color: 'red' }} class="customClass" />
     ))
 
-    const outerInput = wrapper.find('.el-select')
+    const outerInput = wrapper.find('.ty-select')
     expect(outerInput.classes()).toContain('customClass')
     expect(outerInput.attributes().style).toBeDefined()
   })
@@ -154,7 +154,7 @@ describe('TimeSelect', () => {
     const select = wrapper.findComponent({ name: 'ElTimeSelect' })
     const input = wrapper.find('input')
     await input.trigger('click')
-    const items = document.querySelectorAll('.el-select-dropdown__item>span')
+    const items = document.querySelectorAll('.ty-select-dropdown__item>span')
 
     expect(select.props().includeEndTime).toBe(true)
     expect(items).toHaveLength(289)
@@ -168,7 +168,7 @@ describe('TimeSelect', () => {
     const select = wrapper.findComponent({ name: 'ElTimeSelect' })
     const input = wrapper.find('input')
     await input.trigger('click')
-    const items = document.querySelectorAll('.el-select-dropdown__item>span')
+    const items = document.querySelectorAll('.ty-select-dropdown__item>span')
 
     expect(select.props().includeEndTime).toBe(false)
     expect(items).toHaveLength(288)
@@ -182,7 +182,7 @@ describe('TimeSelect', () => {
     const select = wrapper.findComponent({ name: 'ElTimeSelect' })
     const input = wrapper.find('input')
     await input.trigger('click')
-    const items = document.querySelectorAll('.el-select-dropdown__item>span')
+    const items = document.querySelectorAll('.ty-select-dropdown__item>span')
 
     expect(select.props().includeEndTime).toBe(false)
     expect(items).toHaveLength(6)
@@ -201,7 +201,7 @@ describe('TimeSelect', () => {
     await nextTick()
     await nextTick()
 
-    const popperEl = document.querySelector('.el-select__popper')
+    const popperEl = document.querySelector('.ty-select__popper')
     const attr = popperEl?.getAttribute('aria-hidden')
     expect(attr).toEqual('false')
   })
@@ -219,7 +219,7 @@ describe('TimeSelect', () => {
     await nextTick()
     await nextTick()
 
-    const popperEl = document.querySelector('.el-select__popper')
+    const popperEl = document.querySelector('.ty-select__popper')
     const attr = popperEl?.getAttribute('aria-hidden')
     expect(attr).toEqual('true')
   })
@@ -239,7 +239,7 @@ describe('TimeSelect', () => {
     const input = wrapper.find('input')
     await input.trigger('click')
     await nextTick()
-    const option = document.querySelector('.el-select-dropdown__item')
+    const option = document.querySelector('.ty-select-dropdown__item')
     expect(option?.textContent).toBe('01:00 PM')
   })
 
@@ -253,7 +253,7 @@ describe('TimeSelect', () => {
 
       await nextTick()
       const formItem = wrapper.find('[data-test-ref="item"]')
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       const timeSelectInput = wrapper.find('input')
       expect(formItem.attributes().role).toBeFalsy()
       expect(formItemLabel.attributes().for).toBe(
@@ -274,7 +274,7 @@ describe('TimeSelect', () => {
 
       await nextTick()
       const formItem = wrapper.find('[data-test-ref="item"]')
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       const timeSelectInput = wrapper.find('input')
       expect(formItem.attributes().role).toBeFalsy()
       expect(timeSelectInput.attributes().id).toBe('foobar')

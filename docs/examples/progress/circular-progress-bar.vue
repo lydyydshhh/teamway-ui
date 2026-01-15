@@ -9,7 +9,7 @@
 </template>
 
 <style scoped>
-.demo-progress .el-progress--circle {
+.demo-progress .ty-progress--circle {
   margin-right: 15px;
 }
 </style>

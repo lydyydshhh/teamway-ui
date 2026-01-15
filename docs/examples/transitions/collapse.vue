@@ -5,8 +5,8 @@
     <div style="margin-top: 20px; height: 210px">
       <ty-collapse-transition>
         <div v-show="show">
-          <div class="transition-box">el-collapse-transition</div>
-          <div class="transition-box mt-[10px]">el-collapse-transition</div>
+          <div class="transition-box">ty-collapse-transition</div>
+          <div class="transition-box mt-[10px]">ty-collapse-transition</div>
         </div>
       </ty-collapse-transition>
     </div>

@@ -3,8 +3,8 @@ import Countdown from './src/countdown.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElCountdown: SFCWithInstall<typeof Countdown> =
+export const TyCountdown: SFCWithInstall<typeof Countdown> =
   withInstall(Countdown)
-export default ElCountdown
+export default TyCountdown
 
 export * from './src/countdown'

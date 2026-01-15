@@ -8,7 +8,7 @@
 </template>
 
 <style scoped>
-.el-link {
+.ty-link {
   margin-right: 8px;
 }
 </style>

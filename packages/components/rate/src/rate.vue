@@ -23,7 +23,7 @@
       @mouseleave="resetCurrentValue"
       @click="selectValue(item)"
     >
-      <el-icon
+      <ty-icon
         ref="iconRefs"
         :class="[
           ns.e('icon'),
@@ -45,14 +45,14 @@
           v-show="showDecimalIcon(item)"
           :class="[ns.em('decimal', 'box')]"
         />
-        <el-icon
+        <ty-icon
           v-show="showDecimalIcon(item)"
           :style="decimalStyle"
           :class="[ns.e('icon'), ns.e('decimal')]"
         >
           <component :is="decimalIconComponent" />
-        </el-icon>
-      </el-icon>
+        </ty-icon>
+      </ty-icon>
     </span>
     <span
       v-if="showText || showScore"
@@ -79,7 +79,7 @@ import {
   useFormItemInputId,
   useFormSize,
 } from '@element-plus/components/form'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { useNamespace } from '@element-plus/hooks'
 import { rateEmits, rateProps } from './rate'
 

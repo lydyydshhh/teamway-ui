@@ -6,9 +6,9 @@
     type="button"
     @click="onClose"
   >
-    <el-icon :class="ns.e('close')">
+    <ty-icon :class="ns.e('close')">
       <component :is="mergedCloseIcon" />
-    </el-icon>
+    </ty-icon>
   </button>
   <header :class="[ns.e('header'), { 'show-close': showClose }]">
     <slot name="header">
@@ -39,7 +39,7 @@
       </template>
     </div>
     <div :class="ns.b('buttons')">
-      <el-button
+      <ty-button
         v-if="current > 0"
         size="small"
         :type="mergedType"
@@ -47,8 +47,8 @@
         @click="onPrev"
       >
         {{ prevButtonProps?.children ?? t('el.tour.previous') }}
-      </el-button>
-      <el-button
+      </ty-button>
+      <ty-button
         v-if="current <= total - 1"
         size="small"
         :type="mergedType === 'primary' ? 'default' : 'primary'"
@@ -59,7 +59,7 @@
           nextButtonProps?.children ??
           (current === total - 1 ? t('el.tour.finish') : t('el.tour.next'))
         }}
-      </el-button>
+      </ty-button>
     </div>
   </footer>
 </template>
@@ -68,8 +68,8 @@
 import { computed, inject, onBeforeUnmount, onMounted, watch } from 'vue'
 import { EVENT_CODE } from '@element-plus/constants'
 import { omit } from 'lodash-unified'
-import { ElButton } from '@element-plus/components/button'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyButton } from '@element-plus/components/button'
+import { TyIcon } from '@element-plus/components/icon'
 import { CloseComponents, getEventCode } from '@element-plus/utils'
 import { useLocale } from '@element-plus/hooks'
 import { tourStepEmits, tourStepProps } from './step'
@@ -155,7 +155,7 @@ const onClose = () => {
 }
 
 const handleKeydown = (e: KeyboardEvent) => {
-  const target = e.target as HTMLElement | null
+  const target = e.target as HTMLTyement | null
   if (target?.isContentEditable) return
   const code = getEventCode(e)
 

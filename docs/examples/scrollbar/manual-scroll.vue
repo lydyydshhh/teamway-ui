@@ -24,7 +24,7 @@ type Arrayable<T> = T | T[]
 
 const max = ref(0)
 const value = ref(0)
-const innerRef = ref<HTMLDivElement>()
+const innerRef = ref<HTMLDivTyement>()
 const scrollbarRef = ref<ScrollbarInstance>()
 
 onMounted(() => {
@@ -52,7 +52,7 @@ const formatTooltip = (value: number) => `${value} px`
   background: var(--ty-color-primary-light-9);
   color: var(--ty-color-primary);
 }
-.el-slider {
+.ty-slider {
   margin-top: 20px;
 }
 </style>

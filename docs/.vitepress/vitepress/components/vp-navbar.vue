@@ -40,9 +40,9 @@ const currentLink = computed(() => {
             alt="Element Plus Logo"
           />
         </a>
-        <el-tag round size="small" title="latest version">{{
+        <ty-tag round size="small" title="latest version">{{
           epVersion.replace('0.0.0-staging.', '')
-        }}</el-tag>
+        }}</ty-tag>
       </div>
       <div class="content">
         <VPNavbarSearch class="search" :options="theme.agolia" multilang />

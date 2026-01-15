@@ -81,17 +81,17 @@ const data: Tree[] = [
 </script>
 
 <style>
-.is-penultimate > .el-tree-node__content {
+.is-penultimate > .ty-tree-node__content {
   color: #626aef;
 }
-.is-penultimate > .el-tree-node__children > div {
+.is-penultimate > .ty-tree-node__children > div {
   display: inline-block;
   margin-right: 4px;
 
-  &:not(:first-child) .el-tree-node__content {
+  &:not(:first-child) .ty-tree-node__content {
     padding-left: 0px !important;
   }
-  .el-tree-node__content {
+  .ty-tree-node__content {
     padding-right: 16px;
   }
 }

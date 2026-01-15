@@ -164,7 +164,7 @@ describe('ElFormItem', () => {
 
     await nextTick()
     const [name, email, address] = wrapper
-      .findAll('.el-form-item__label')
+      .findAll('.ty-form-item__label')
       .map((el) => el.element.tagName.toLowerCase())
 
     expect(name).toBe('label')
@@ -198,13 +198,13 @@ describe('ElFormItem', () => {
       },
     })
     expect(wrapper.findComponent({ ref: 'labelTop' }).classes()).toContain(
-      'el-form-item--label-top'
+      'ty-form-item--label-top'
     )
     expect(wrapper.findComponent({ ref: 'labelLeft' }).classes()).toContain(
-      'el-form-item--label-left'
+      'ty-form-item--label-left'
     )
     expect(wrapper.findComponent({ ref: 'labelRight' }).classes()).toContain(
-      'el-form-item--label-right'
+      'ty-form-item--label-right'
     )
   })
 
@@ -225,10 +225,10 @@ describe('ElFormItem', () => {
         )
       },
     })
-    expect(wrapper.find('.el-form-item__label').exists()).toBe(false)
+    expect(wrapper.find('.ty-form-item__label').exists()).toBe(false)
     showLabel.value = true
     await nextTick()
-    const labelSlot = wrapper.find('.el-form-item__label')
+    const labelSlot = wrapper.find('.ty-form-item__label')
     expect(labelSlot.exists()).toBe(true)
     expect(labelSlot.text()).toBe(AXIOM)
   })

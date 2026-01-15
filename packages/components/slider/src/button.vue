@@ -11,7 +11,7 @@
     @blur="handleMouseLeave"
     @keydown="onKeyDown"
   >
-    <el-tooltip
+    <ty-tooltip
       ref="tooltip"
       :visible="tooltipVisible"
       :placement="placement"
@@ -25,13 +25,13 @@
         <span>{{ formatValue }}</span>
       </template>
       <div :class="[ns.e('button'), { hover: hovering, dragging }]" />
-    </el-tooltip>
+    </ty-tooltip>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed, reactive, toRefs } from 'vue'
-import { ElTooltip } from '@element-plus/components/tooltip'
+import { TyTooltip } from '@element-plus/components/tooltip'
 import { useNamespace } from '@element-plus/hooks'
 import { useSliderButton } from './composables'
 import { sliderButtonEmits, sliderButtonProps } from './button'

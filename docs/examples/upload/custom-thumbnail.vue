@@ -4,24 +4,24 @@
 
     <template #file="{ file }">
       <div>
-        <img class="el-upload-list__item-thumbnail" :src="file.url" alt="" />
-        <span class="el-upload-list__item-actions">
+        <img class="ty-upload-list__item-thumbnail" :src="file.url" alt="" />
+        <span class="ty-upload-list__item-actions">
           <span
-            class="el-upload-list__item-preview"
+            class="ty-upload-list__item-preview"
             @click="handlePictureCardPreview(file)"
           >
             <ty-icon><zoom-in /></ty-icon>
           </span>
           <span
             v-if="!disabled"
-            class="el-upload-list__item-delete"
+            class="ty-upload-list__item-delete"
             @click="handleDownload(file)"
           >
             <ty-icon><Download /></ty-icon>
           </span>
           <span
             v-if="!disabled"
-            class="el-upload-list__item-delete"
+            class="ty-upload-list__item-delete"
             @click="handleRemove(file)"
           >
             <ty-icon><Delete /></ty-icon>

@@ -26,7 +26,7 @@
           placeholder="Pick a date"
         >
           <template #suffix>
-            <ty-icon class="el-input__icon"><calendar /></ty-icon>
+            <ty-icon class="ty-input__icon"><calendar /></ty-icon>
           </template>
         </ty-input>
         <ty-input
@@ -35,7 +35,7 @@
           placeholder="Type something"
         >
           <template #prefix>
-            <ty-icon class="el-input__icon"><search /></ty-icon>
+            <ty-icon class="ty-input__icon"><search /></ty-icon>
           </template>
         </ty-input>
       </div>

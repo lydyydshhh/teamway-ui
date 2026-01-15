@@ -4,11 +4,11 @@
 
 <script lang="ts" setup>
 import { markRaw } from 'vue'
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'element-plus'
 import { Delete } from '@element-plus/icons-vue'
 
 const open = () => {
-  ElMessageBox.confirm(
+  TyMessageBox.confirm(
     'It will permanently delete the file. Continue?',
     'Warning',
     {
@@ -19,13 +19,13 @@ const open = () => {
     }
   )
     .then(() => {
-      ElMessage({
+      TyMessage({
         type: 'success',
         message: 'Delete completed',
       })
     })
     .catch(() => {
-      ElMessage({
+      TyMessage({
         type: 'info',
         message: 'Delete canceled',
       })

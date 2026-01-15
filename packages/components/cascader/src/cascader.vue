@@ -1,5 +1,5 @@
 <template>
-  <el-tooltip
+  <ty-tooltip
     ref="tooltipRef"
     :visible="popperVisible"
     :teleported="teleported"
@@ -27,7 +27,7 @@
         @mouseenter="inputHover = true"
         @mouseleave="inputHover = false"
       >
-        <el-input
+        <ty-input
           ref="inputRef"
           v-model="inputValue"
           :placeholder="currentPlaceholder"
@@ -46,24 +46,24 @@
             <slot name="prefix" />
           </template>
           <template #suffix>
-            <el-icon
+            <ty-icon
               v-if="clearBtnVisible"
               key="clear"
               :class="[nsInput.e('icon'), 'icon-circle-close']"
               @click.stop="handleClear"
             >
               <component :is="clearIcon" />
-            </el-icon>
-            <el-icon
+            </ty-icon>
+            <ty-icon
               v-else
               key="arrow-down"
               :class="cascaderIconKls"
               @click.stop="togglePopperVisible()"
             >
               <arrow-down />
-            </el-icon>
+            </ty-icon>
           </template>
-        </el-input>
+        </ty-input>
 
         <div
           v-if="multiple"
@@ -74,7 +74,7 @@
           ]"
         >
           <slot name="tag" :data="tags" :delete-tag="deleteTag">
-            <el-tag
+            <ty-tag
               v-for="tag in showTagList"
               :key="tag.key"
               :type="tagType"
@@ -86,9 +86,9 @@
               @close="deleteTag(tag)"
             >
               <span>{{ tag.text }}</span>
-            </el-tag>
+            </ty-tag>
           </slot>
-          <el-tooltip
+          <ty-tooltip
             v-if="collapseTags && tags.length > maxCollapseTags"
             ref="tagTooltipRef"
             :disabled="popperVisible || !collapseTagsTooltip"
@@ -100,7 +100,7 @@
             :persistent="persistent"
           >
             <template #default>
-              <el-tag
+              <ty-tag
                 :closable="false"
                 :size="tagSize"
                 :type="tagType"
@@ -110,17 +110,17 @@
                 <span :class="nsCascader.e('tags-text')">
                   + {{ tags.length - maxCollapseTags }}
                 </span>
-              </el-tag>
+              </ty-tag>
             </template>
             <template #content>
-              <el-scrollbar :max-height="maxCollapseTagsTooltipHeight">
+              <ty-scrollbar :max-height="maxCollapseTagsTooltipHeight">
                 <div :class="nsCascader.e('collapse-tags')">
                   <div
                     v-for="(tag, idx) in collapseTagList"
                     :key="idx"
                     :class="nsCascader.e('collapse-tag')"
                   >
-                    <el-tag
+                    <ty-tag
                       :key="tag.key"
                       class="in-tooltip"
                       :type="tagType"
@@ -132,12 +132,12 @@
                       @close="deleteTag(tag)"
                     >
                       <span>{{ tag.text }}</span>
-                    </el-tag>
+                    </ty-tag>
                   </div>
                 </div>
-              </el-scrollbar>
+              </ty-scrollbar>
             </template>
-          </el-tooltip>
+          </ty-tooltip>
           <input
             v-if="filterable && !isDisabled"
             v-model="searchInputValue"
@@ -159,7 +159,7 @@
       <div v-if="$slots.header" :class="nsCascader.e('header')" @click.stop>
         <slot name="header" />
       </div>
-      <el-cascader-panel
+      <ty-cascader-panel
         v-show="!filtering"
         ref="cascaderPanelRef"
         v-model="checkedValue"
@@ -173,8 +173,8 @@
         <template #empty>
           <slot name="empty" />
         </template>
-      </el-cascader-panel>
-      <el-scrollbar
+      </ty-cascader-panel>
+      <ty-scrollbar
         v-if="filterable"
         v-show="filtering"
         ref="suggestionPanel"
@@ -196,9 +196,9 @@
           >
             <slot name="suggestion-item" :item="item">
               <span>{{ item.text }}</span>
-              <el-icon v-if="item.checked">
+              <ty-icon v-if="item.checked">
                 <check />
-              </el-icon>
+              </ty-icon>
             </slot>
           </li>
         </template>
@@ -207,12 +207,12 @@
             {{ t('el.cascader.noMatch') }}
           </li>
         </slot>
-      </el-scrollbar>
+      </ty-scrollbar>
       <div v-if="$slots.footer" :class="nsCascader.e('footer')" @click.stop>
         <slot name="footer" />
       </div>
     </template>
-  </el-tooltip>
+  </ty-tooltip>
 </template>
 
 <script lang="ts" setup>
@@ -227,12 +227,12 @@ import {
   isClient,
   isPromise,
 } from '@element-plus/utils'
-import ElCascaderPanel from '@element-plus/components/cascader-panel'
-import ElInput from '@element-plus/components/input'
-import ElTooltip from '@element-plus/components/tooltip'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import ElTag from '@element-plus/components/tag'
-import ElIcon from '@element-plus/components/icon'
+import TyCascaderPanel from '@element-plus/components/cascader-panel'
+import TyInput from '@element-plus/components/input'
+import TyTooltip from '@element-plus/components/tooltip'
+import TyScrollbar from '@element-plus/components/scrollbar'
+import TyTag from '@element-plus/components/tag'
+import TyIcon from '@element-plus/components/icon'
 import {
   useFormDisabled,
   useFormItem,
@@ -585,7 +585,7 @@ const updateStyle = () => {
 
   if (tagWrapperEl) {
     const { offsetHeight } = tagWrapperEl
-    // 2 is el-input__wrapper padding
+    // 2 is ty-input__wrapper padding
     const height =
       tags.value.length > 0
         ? `${Math.max(offsetHeight, inputInitialHeight) - 2}px`
@@ -600,7 +600,7 @@ const updateStyle = () => {
       if (prefix) {
         left = prefix.offsetWidth
         if (left > 0) {
-          left += sizeMapPadding[realSize.value || 'default'] // this is the default padding of el-input__wrapper
+          left += sizeMapPadding[realSize.value || 'default'] // this is the default padding of ty-input__wrapper
         }
       }
       tagWrapperEl.style.left = `${left}px`

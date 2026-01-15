@@ -203,5 +203,5 @@ Typical issue: [#7287](https://github.com/element-plus/element-plus/issues/7287)
 PS: Since the ElInput component does not have a default width, when the clearable icon is displayed, the width of the component will be expanded, which can be solved by setting width.
 
 ```vue
-<el-input v-model="input" clearable style="width: 200px" />
+<ty-input v-model="input" clearable style="width: 200px" />
 ```

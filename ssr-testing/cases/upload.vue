@@ -1,5 +1,5 @@
 <template>
-  <el-upload
+  <ty-upload
     class="upload-demo"
     action="https://jsonplaceholder.typicode.com/posts/"
     :on-preview="handlePreview"
@@ -8,13 +8,13 @@
     :limit="3"
     :file-list="fileList"
   >
-    <el-button type="primary">Click to upload</el-button>
+    <ty-button type="primary">Click to upload</ty-button>
     <template #tip>
-      <div class="el-upload__tip">
+      <div class="ty-upload__tip">
         jpg/png files with a size less than 500kb
       </div>
     </template>
-  </el-upload>
+  </ty-upload>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'

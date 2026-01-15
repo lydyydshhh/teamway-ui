@@ -52,7 +52,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { TyMessageBox } from 'element-plus'
 
 const formLabelWidth = '80px'
 let timer
@@ -107,7 +107,7 @@ const handleClose = (done) => {
   if (loading.value) {
     return
   }
-  ElMessageBox.confirm('Do you want to submit?')
+  TyMessageBox.confirm('Do you want to submit?')
     .then(() => {
       loading.value = true
       timer = setTimeout(() => {

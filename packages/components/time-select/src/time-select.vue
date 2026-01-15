@@ -1,5 +1,5 @@
 <template>
-  <el-select
+  <ty-select
     ref="select"
     :model-value="value"
     :disabled="_disabled"
@@ -20,7 +20,7 @@
     @focus="(event) => $emit('focus', event)"
     @clear="() => $emit('clear')"
   >
-    <el-option
+    <ty-option
       v-for="item in items"
       :key="item.value"
       :label="item.value"
@@ -28,20 +28,20 @@
       :disabled="item.disabled"
     />
     <template #prefix>
-      <el-icon v-if="prefixIcon" :class="nsInput.e('prefix-icon')">
+      <ty-icon v-if="prefixIcon" :class="nsInput.e('prefix-icon')">
         <component :is="prefixIcon" />
-      </el-icon>
+      </ty-icon>
     </template>
-  </el-select>
+  </ty-select>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
-import ElSelect from '@element-plus/components/select'
+import TySelect from '@element-plus/components/select'
 import { useFormDisabled } from '@element-plus/components/form'
-import ElIcon from '@element-plus/components/icon'
+import TyIcon from '@element-plus/components/icon'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import { timeSelectProps } from './time-select'
@@ -49,7 +49,7 @@ import { compareTime, formatTime, nextTime, parseTime } from './utils'
 
 dayjs.extend(customParseFormat)
 
-const { Option: ElOption } = ElSelect
+const { Option: TyOption } = TySelect
 
 defineOptions({
   name: 'TyTimeSelect',
@@ -60,7 +60,7 @@ defineEmits([CHANGE_EVENT, 'blur', 'focus', 'clear', UPDATE_MODEL_EVENT])
 const props = defineProps(timeSelectProps)
 
 const nsInput = useNamespace('input')
-const select = ref<typeof ElSelect>()
+const select = ref<typeof TySelect>()
 
 const _disabled = useFormDisabled()
 const { lang } = useLocale()

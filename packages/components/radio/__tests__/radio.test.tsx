@@ -12,7 +12,7 @@ describe('Radio', () => {
   test('create', async () => {
     const radio = ref('')
     const wrapper = mount(() => <Radio v-model={radio.value} label="a" />)
-    expect(wrapper.classes()).toContain('el-radio')
+    expect(wrapper.classes()).toContain('ty-radio')
     await wrapper.trigger('click')
     expect(wrapper.classes()).toContain('is-checked')
   })
@@ -80,7 +80,7 @@ describe('Radio group', () => {
       </RadioGroup>
     ))
     await nextTick()
-    const [radio1, radio2] = wrapper.findAll('.el-radio')
+    const [radio1, radio2] = wrapper.findAll('.ty-radio')
     expect(radio1.classes()).toContain('is-checked')
     await radio2.trigger('click')
     expect(radio2.classes()).toContain('is-checked')
@@ -114,8 +114,8 @@ describe('Radio group', () => {
       </RadioGroup>
     ))
 
-    const id1 = wrapper1.find('.el-radio').find('input').attributes('name')
-    const id2 = wrapper2.find('.el-radio').find('input').attributes('name')
+    const id1 = wrapper1.find('.ty-radio').find('input').attributes('name')
+    const id2 = wrapper2.find('.ty-radio').find('input').attributes('name')
 
     expect(id1).not.toEqual(id2)
   })
@@ -135,7 +135,7 @@ describe('Radio group', () => {
     ))
     expect(wrapper.find('label.is-disabled').exists()).toBe(true)
 
-    const [radio1, radio2] = wrapper.findAll('.el-radio')
+    const [radio1, radio2] = wrapper.findAll('.ty-radio')
     expect(radio1.classes()).toContain('is-checked')
     await radio2.trigger('click')
     expect(radio.value).toEqual(3)
@@ -157,7 +157,7 @@ describe('Radio group', () => {
         <Radio value={9}>9</Radio>
       </RadioGroup>
     ))
-    const radio2 = wrapper.findAll('.el-radio').at(1)
+    const radio2 = wrapper.findAll('.ty-radio').at(1)
     await radio2?.trigger('click')
     await nextTick()
     expect(data.value).toEqual(6)
@@ -198,7 +198,7 @@ describe('Radio group', () => {
       </RadioGroup>
     ))
 
-    const [radio1, radio2] = wrapper.findAll('.el-radio-button')
+    const [radio1, radio2] = wrapper.findAll('.ty-radio-button')
     expect(radio1.classes()).toContain('is-active')
     expect(wrapper.findAll('.is-disabled').length).toBe(3)
     await radio2.trigger('click')
@@ -206,7 +206,7 @@ describe('Radio group', () => {
     expect(radio1.classes()).toContain('is-active')
   })
 
-  it('renders el-radio-group using default option fields', async () => {
+  it('renders ty-radio-group using default option fields', async () => {
     const radio = ref(3)
     const options = [
       {
@@ -226,14 +226,14 @@ describe('Radio group', () => {
       <RadioGroup v-model={radio.value} options={options} />
     ))
     await nextTick()
-    const [radio1, radio2] = wrapper.findAll('.el-radio')
+    const [radio1, radio2] = wrapper.findAll('.ty-radio')
     expect(radio1.classes()).toContain('is-checked')
     await radio2.trigger('click')
     expect(radio2.classes()).toContain('is-checked')
     expect(radio.value).toEqual(6)
   })
 
-  it('renders el-radio-group with custom option fields', async () => {
+  it('renders ty-radio-group with custom option fields', async () => {
     const radio = ref(3)
     const options = [
       {
@@ -257,14 +257,14 @@ describe('Radio group', () => {
       />
     ))
     await nextTick()
-    const [radio1, radio2] = wrapper.findAll('.el-radio')
+    const [radio1, radio2] = wrapper.findAll('.ty-radio')
     expect(radio1.classes()).toContain('is-checked')
     await radio2.trigger('click')
     expect(radio2.classes()).toContain('is-checked')
     expect(radio.value).toEqual(6)
   })
 
-  it('renders el-radio-group using default option fields with radio-button', async () => {
+  it('renders ty-radio-group using default option fields with radio-button', async () => {
     const radio = ref(3)
     const options = [
       {
@@ -284,14 +284,14 @@ describe('Radio group', () => {
       <RadioGroup v-model={radio.value} options={options} type="button" />
     ))
     await nextTick()
-    const [btn1, btn2] = wrapper.findAll('.el-radio-button')
+    const [btn1, btn2] = wrapper.findAll('.ty-radio-button')
     expect(btn1.classes()).toContain('is-active')
     await btn2.trigger('click')
     expect(btn2.classes()).toContain('is-active')
     expect(radio.value).toEqual(6)
   })
 
-  it('renders el-radio-group with custom option fields and disabled using el-radio-button', async () => {
+  it('renders ty-radio-group with custom option fields and disabled using ty-radio-button', async () => {
     const radio = ref(3)
     const options = [
       { id: 3, label: 'Option A' },
@@ -307,7 +307,7 @@ describe('Radio group', () => {
       />
     ))
     await nextTick()
-    const [btn1, btn2, btn3] = wrapper.findAll('.el-radio-button')
+    const [btn1, btn2, btn3] = wrapper.findAll('.ty-radio-button')
     expect(btn1.classes()).toContain('is-active')
     await btn2.trigger('click')
     expect(btn2.classes()).toContain('is-active')
@@ -317,7 +317,7 @@ describe('Radio group', () => {
     expect(radio.value).toEqual(6)
   })
 
-  it('should avoid passing alias fields to el-radio', async () => {
+  it('should avoid passing alias fields to ty-radio', async () => {
     const modelValue = ref(1)
     const options = [{ value: '3', name: 'Option A' }]
     const wrapper = mount(() => (
@@ -328,11 +328,11 @@ describe('Radio group', () => {
       />
     ))
     await nextTick()
-    const radio = wrapper.find('.el-radio')
+    const radio = wrapper.find('.ty-radio')
     expect(radio.find('input').attributes('name')).not.toBe('Option A')
   })
 
-  it('passes custom attributes from options to el-radio', () => {
+  it('passes custom attributes from options to ty-radio', () => {
     const options = [
       { value: 'a', label: 'A', 'data-test': 'custom-attr-1' },
       { value: 'b', label: 'B', 'data-test': 'custom-attr-2' },
@@ -340,7 +340,7 @@ describe('Radio group', () => {
     const wrapper = mount(RadioGroup, {
       props: { options },
     })
-    const [radio1, radio2] = wrapper.findAll('.el-radio')
+    const [radio1, radio2] = wrapper.findAll('.ty-radio')
     expect(radio1.attributes('data-test')).toBe('custom-attr-1')
     expect(radio2.attributes('data-test')).toBe('custom-attr-2')
   })
@@ -360,7 +360,7 @@ describe('Radio Button', () => {
         <RadioButton value={9}>9</RadioButton>
       </RadioGroup>
     ))
-    const [radio1, radio2] = wrapper.findAll('.el-radio-button')
+    const [radio1, radio2] = wrapper.findAll('.ty-radio-button')
     expect(radio1.classes()).toContain('is-active')
     await radio2.trigger('click')
     expect(radio2.classes()).toContain('is-active')
@@ -380,7 +380,7 @@ describe('Radio Button', () => {
         <RadioButton value={9}>9</RadioButton>
       </RadioGroup>
     ))
-    const radio1 = wrapper.find('.el-radio-button')
+    const radio1 = wrapper.find('.ty-radio-button')
     expect(radio1.find('span').attributes('style')).toContain(
       'background-color: rgb(0, 0, 0); border-color: #000; box-shadow: -1px 0 0 0 #000; color: rgb(255, 255, 0);'
     )
@@ -403,7 +403,7 @@ describe('Radio Button', () => {
         <RadioButton value={9}>9</RadioButton>
       </RadioGroup>
     ))
-    const radio2 = wrapper.findAll('.el-radio-button').at(1)
+    const radio2 = wrapper.findAll('.ty-radio-button').at(1)
     await radio2?.trigger('click')
     expect(radio.value).toEqual(6)
   })
@@ -444,7 +444,7 @@ describe('Radio Button', () => {
         <RadioButton value={9}>9</RadioButton>
       </RadioGroup>
     ))
-    expect(wrapper.findAll('.el-radio-button--large').length).toBe(3)
+    expect(wrapper.findAll('.ty-radio-button--large').length).toBe(3)
   })
 
   describe('form item accessibility integration', () => {
@@ -460,7 +460,7 @@ describe('Radio Button', () => {
       await nextTick()
       const formItem = await wrapper.findComponent(ElFormItem)
       const radioGroup = await wrapper.findComponent(RadioGroup)
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItem.attributes().role).toBeFalsy()
       expect(radioGroup.attributes().role).toBe('radiogroup')
       expect(formItemLabel.attributes().for).toBe(radioGroup.attributes().id)
@@ -481,7 +481,7 @@ describe('Radio Button', () => {
       await nextTick()
       const formItem = await wrapper.findComponent(ElFormItem)
       const radioGroup = await wrapper.findComponent(RadioGroup)
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItemLabel.attributes().for).toBe(radioGroup.attributes().id)
       expect(radioGroup.attributes().role).toBe('radiogroup')
       expect(radioGroup.attributes()['aria-label']).toBe('Foo')
@@ -505,7 +505,7 @@ describe('Radio Button', () => {
       const formItem = await wrapper.findComponent(ElFormItem)
       const [radioGroup1, radioGroup2] =
         await wrapper.findAllComponents(RadioGroup)
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItem.attributes().role).toBe('group')
       expect(formItem.attributes()['aria-labelledby']).toBe(
         formItemLabel.attributes().id
@@ -537,7 +537,7 @@ describe('Radio Button', () => {
       ))
       await nextTick()
 
-      const radios = wrapper.findAll('.el-radio')
+      const radios = wrapper.findAll('.ty-radio')
       expect(radios.length).toBe(2)
       radios.forEach((r) => {
         expect(r.classes()).not.toContain('is-disabled')

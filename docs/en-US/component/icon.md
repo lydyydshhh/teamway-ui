@@ -98,12 +98,12 @@ so you need to use an alias in order to render the icon, if you register `Menu` 
 :::
 
 ```vue
-<!-- Use el-icon to provide attributes to SVG icon -->
+<!-- Use ty-icon to provide attributes to SVG icon -->
 <template>
   <div>
-    <el-icon :size="size" :color="color">
+    <ty-icon :size="size" :color="color">
       <Edit />
-    </el-icon>
+    </ty-icon>
     <!-- Or use it independently without derive attributes from parent -->
     <Edit />
   </div>
@@ -123,9 +123,9 @@ import { Edit, Share, Delete, Search, Loading } from '@element-plus/icons-vue'
   </div>
 </ElRow>
 
-## Combined with el-icon
+## Combined with ty-icon
 
-`el-icon` provides extra attributes for raw SVG icon, for more detail, please read to the end.
+`ty-icon` provides extra attributes for raw SVG icon, for more detail, please read to the end.
 
 ```vue
 <template>
@@ -133,24 +133,24 @@ import { Edit, Share, Delete, Search, Loading } from '@element-plus/icons-vue'
     with extra class <b>is-loading</b>, your icon is able to rotate 360 deg in 2
     seconds, you can also override this
   </p>
-  <el-icon :size="20">
+  <ty-icon :size="20">
     <Edit />
-  </el-icon>
-  <el-icon color="#409efc" class="no-inherit">
+  </ty-icon>
+  <ty-icon color="#409efc" class="no-inherit">
     <Share />
-  </el-icon>
-  <el-icon>
+  </ty-icon>
+  <ty-icon>
     <Delete />
-  </el-icon>
-  <el-icon class="is-loading">
+  </ty-icon>
+  <ty-icon class="is-loading">
     <Loading />
-  </el-icon>
-  <el-button type="primary">
-    <el-icon style="vertical-align: middle">
+  </ty-icon>
+  <ty-button type="primary">
+    <ty-icon style="vertical-align: middle">
       <Search />
-    </el-icon>
+    </ty-icon>
     <span style="vertical-align: middle"> Search </span>
-  </el-button>
+  </ty-button>
 </template>
 ```
 

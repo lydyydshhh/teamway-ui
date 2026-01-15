@@ -87,9 +87,9 @@ const rules = reactive<FormRules<typeof ruleForm>>({
   age: [{ validator: checkAge, trigger: 'blur' }],
 })
 
-const submitForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.validate((valid) => {
+const submitForm = (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  formTy.validate((valid) => {
     if (valid) {
       console.log('submit!')
     } else {
@@ -98,8 +98,8 @@ const submitForm = (formEl: FormInstance | undefined) => {
   })
 }
 
-const resetForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.resetFields()
+const resetForm = (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  formTy.resetFields()
 }
 </script>

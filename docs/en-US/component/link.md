@@ -70,9 +70,9 @@ Starting from ^(2.9.9) , you can use `'always' | 'hover' | 'never'` to control w
 ```vue
 <template>
   <!-- works before 2.9.9, use 'hover' after, removed in 3.0.0 -->
-  <el-link underline>link</el-link>
+  <ty-link underline>link</ty-link>
   <!-- works before 2.9.9, use 'never' after, removed in 3.0.0 -->
-  <el-link :underline="false">link</el-link>
+  <ty-link :underline="false">link</ty-link>
 </template>
 ```
 

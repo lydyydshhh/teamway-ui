@@ -3,10 +3,10 @@ import DatePickerPanel from './src/date-picker-panel'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElDatePickerPanel: SFCWithInstall<typeof DatePickerPanel> =
+export const TyDatePickerPanel: SFCWithInstall<typeof DatePickerPanel> =
   withInstall(DatePickerPanel)
 
-export default ElDatePickerPanel
+export default TyDatePickerPanel
 export * from './src/constants'
 export * from './src/props/date-picker-panel'
 export * from './src/types'

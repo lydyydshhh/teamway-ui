@@ -24,7 +24,7 @@ defineOptions({
 const props = defineProps(tabBarProps)
 
 const rootTabs = inject(tabsRootContextKey)
-if (!rootTabs) throwError(COMPONENT_NAME, '<el-tabs><el-tab-bar /></el-tabs>')
+if (!rootTabs) throwError(COMPONENT_NAME, '<ty-tabs><ty-tab-bar /></ty-tabs>')
 
 const ns = useNamespace('tabs')
 

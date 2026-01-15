@@ -1,47 +1,47 @@
 <template>
-  <el-row>
-    <el-col :sm="12" :lg="6">
-      <el-result
+  <ty-row>
+    <ty-col :sm="12" :lg="6">
+      <ty-result
         icon="success"
         title="Success Tip"
         sub-title="Please follow the instructions"
       >
         <template #extra>
-          <el-button type="primary">Back</el-button>
+          <ty-button type="primary">Back</ty-button>
         </template>
-      </el-result>
-    </el-col>
-    <el-col :sm="12" :lg="6">
-      <el-result
+      </ty-result>
+    </ty-col>
+    <ty-col :sm="12" :lg="6">
+      <ty-result
         icon="warning"
         title="Warning Tip"
         sub-title="Please follow the instructions"
       >
         <template #extra>
-          <el-button type="primary">Back</el-button>
+          <ty-button type="primary">Back</ty-button>
         </template>
-      </el-result>
-    </el-col>
-    <el-col :sm="12" :lg="6">
-      <el-result
+      </ty-result>
+    </ty-col>
+    <ty-col :sm="12" :lg="6">
+      <ty-result
         icon="error"
         title="Error Tip"
         sub-title="Please follow the instructions"
       >
         <template #extra>
-          <el-button type="primary">Back</el-button>
+          <ty-button type="primary">Back</ty-button>
         </template>
-      </el-result>
-    </el-col>
-    <el-col :sm="12" :lg="6">
-      <el-result icon="info" title="Info Tip">
+      </ty-result>
+    </ty-col>
+    <ty-col :sm="12" :lg="6">
+      <ty-result icon="info" title="Info Tip">
         <template #sub-title>
           <p>Using slot as subtitle</p>
         </template>
         <template #extra>
-          <el-button type="primary">Back</el-button>
+          <ty-button type="primary">Back</ty-button>
         </template>
-      </el-result>
-    </el-col>
-  </el-row>
+      </ty-result>
+    </ty-col>
+  </ty-row>
 </template>

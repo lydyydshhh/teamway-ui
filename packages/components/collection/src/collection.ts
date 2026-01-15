@@ -4,32 +4,32 @@ import CollectionItem from './collection-item.vue'
 
 import type { InjectionKey, SetupContext } from 'vue'
 import type {
-  ElCollectionInjectionContext,
-  ElCollectionItemInjectionContext,
+  TyCollectionInjectionContext,
+  TyCollectionItemInjectionContext,
 } from './tokens'
 
-export const COLLECTION_ITEM_SIGN = `data-el-collection-item`
+export const COLLECTION_ITEM_SIGN = `data-ty-collection-item`
 
 // Make sure the first letter of name is capitalized
 export const createCollectionWithScope = (name: string) => {
-  const COLLECTION_NAME = `El${name}Collection`
+  const COLLECTION_NAME = `Ty${name}Collection`
   const COLLECTION_ITEM_NAME = `${COLLECTION_NAME}Item`
-  const COLLECTION_INJECTION_KEY: InjectionKey<ElCollectionInjectionContext> =
+  const COLLECTION_INJECTION_KEY: InjectionKey<TyCollectionInjectionContext> =
     Symbol(COLLECTION_NAME)
-  const COLLECTION_ITEM_INJECTION_KEY: InjectionKey<ElCollectionItemInjectionContext> =
+  const COLLECTION_ITEM_INJECTION_KEY: InjectionKey<TyCollectionItemInjectionContext> =
     Symbol(COLLECTION_ITEM_NAME)
 
-  const ElCollection = Object.assign({}, Collection, {
+  const TyCollection = Object.assign({}, Collection, {
     name: COLLECTION_NAME,
     setup() {
       const collectionRef = ref<HTMLElement>()
-      const itemMap: ElCollectionInjectionContext['itemMap'] = new Map()
+      const itemMap: TyCollectionInjectionContext['itemMap'] = new Map()
       const getItems = (() => {
-        const collectionEl = unref(collectionRef)
+        const collectionTy = unref(collectionRef)
 
-        if (!collectionEl) return []
+        if (!collectionTy) return []
         const orderedNodes = Array.from(
-          collectionEl.querySelectorAll(`[${COLLECTION_ITEM_SIGN}]`)
+          collectionTy.querySelectorAll(`[${COLLECTION_ITEM_SIGN}]`)
         )
 
         const items = [...itemMap.values()]
@@ -37,7 +37,7 @@ export const createCollectionWithScope = (name: string) => {
         return items.sort(
           (a, b) => orderedNodes.indexOf(a.ref!) - orderedNodes.indexOf(b.ref!)
         )
-      }) as ElCollectionInjectionContext['getItems']
+      }) as TyCollectionInjectionContext['getItems']
 
       provide(COLLECTION_INJECTION_KEY, {
         itemMap,
@@ -47,7 +47,7 @@ export const createCollectionWithScope = (name: string) => {
     },
   })
 
-  const ElCollectionItem = Object.assign({}, CollectionItem, {
+  const TyCollectionItem = Object.assign({}, CollectionItem, {
     name: COLLECTION_ITEM_NAME,
     setup(_: unknown, { attrs }: SetupContext) {
       const collectionItemRef = ref<HTMLElement>()
@@ -58,18 +58,18 @@ export const createCollectionWithScope = (name: string) => {
       })
 
       onMounted(() => {
-        const collectionItemEl = unref(collectionItemRef)
-        if (collectionItemEl) {
-          collectionInjection.itemMap.set(collectionItemEl, {
-            ref: collectionItemEl,
+        const collectionItemTy = unref(collectionItemRef)
+        if (collectionItemTy) {
+          collectionInjection.itemMap.set(collectionItemTy, {
+            ref: collectionItemTy,
             ...attrs,
           })
         }
       })
 
       onBeforeUnmount(() => {
-        const collectionItemEl = unref(collectionItemRef)!
-        collectionInjection.itemMap.delete(collectionItemEl)
+        const collectionItemTy = unref(collectionItemRef)!
+        collectionInjection.itemMap.delete(collectionItemTy)
       })
     },
   })
@@ -77,7 +77,7 @@ export const createCollectionWithScope = (name: string) => {
   return {
     COLLECTION_INJECTION_KEY,
     COLLECTION_ITEM_INJECTION_KEY,
-    ElCollection,
-    ElCollectionItem,
+    TyCollection,
+    TyCollectionItem,
   }
 }

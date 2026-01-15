@@ -58,7 +58,7 @@ colors.forEach((color) => {
 </script>
 
 <style scoped>
-.el-tag {
+.ty-tag {
   border: none;
   aspect-ratio: 1;
 }

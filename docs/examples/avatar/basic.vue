@@ -60,11 +60,11 @@ const { circleUrl, squareUrl, sizeList } = toRefs(state)
 .demo-basic .block {
   flex: 1;
 }
-.demo-basic .el-col:not(:last-child) {
+.demo-basic .ty-col:not(:last-child) {
   border-right: 1px solid var(--ty-border-color);
 }
 @media screen and (max-width: 992px) {
-  .demo-basic .el-col:not(:last-child) {
+  .demo-basic .ty-col:not(:last-child) {
     border-right: none;
   }
 }

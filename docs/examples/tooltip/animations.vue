@@ -1,5 +1,5 @@
 ﻿<template>
-  <ty-tooltip content="I am an el-tooltip" transition="slide-fade">
+  <ty-tooltip content="I am an ty-tooltip" transition="slide-fade">
     <ty-button>trigger me</ty-button>
   </ty-tooltip>
 </template>

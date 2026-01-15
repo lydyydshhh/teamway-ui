@@ -73,9 +73,9 @@
     >
       <slot :percentage="percentage">
         <span v-if="!status">{{ content }}</span>
-        <el-icon v-else>
+        <ty-icon v-else>
           <component :is="statusIcon" />
-        </el-icon>
+        </ty-icon>
       </slot>
     </div>
   </div>
@@ -83,7 +83,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import {
   Check,
   CircleCheck,

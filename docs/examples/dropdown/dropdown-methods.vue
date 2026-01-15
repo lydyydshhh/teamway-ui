@@ -6,7 +6,7 @@
     <ty-button @click="showClick">show</ty-button>
   </div>
   <ty-dropdown ref="dropdown1" trigger="contextmenu" style="margin-right: 30px">
-    <span class="el-dropdown-link"> Dropdown List1 </span>
+    <span class="ty-dropdown-link"> Dropdown List1 </span>
     <template #dropdown>
       <ty-dropdown-menu>
         <ty-dropdown-item>Action 1</ty-dropdown-item>
@@ -19,7 +19,7 @@
   </ty-dropdown>
 
   <ty-dropdown trigger="contextmenu" @visible-change="handleVisible2">
-    <span class="el-dropdown-link"> Dropdown List2 </span>
+    <span class="ty-dropdown-link"> Dropdown List2 </span>
     <template #dropdown>
       <ty-dropdown-menu>
         <ty-dropdown-item>Action 1</ty-dropdown-item>
@@ -53,7 +53,7 @@ function showClick() {
 </script>
 
 <style scoped>
-.example-showcase .el-dropdown-link {
+.example-showcase .ty-dropdown-link {
   cursor: pointer;
   color: var(--ty-color-primary);
   display: flex;

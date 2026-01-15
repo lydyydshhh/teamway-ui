@@ -29,7 +29,7 @@ form/basic-form
 
 > <i>When there is only one single-line text input field in a form, the user agent should accept Enter in that field as a request to submit the form.</i>
 
-To prevent this behavior, you can add `@submit.prevent` on `<el-form>`.
+To prevent this behavior, you can add `@submit.prevent` on `<ty-form>`.
 
 :::
 
@@ -47,7 +47,7 @@ form/inline-form
 
 Depending on your design, there are several different ways to align your label element.
 
-You can set `label-position` of `el-form-item` separately ^(2.7.7). If the value is empty, the `label-position` of `el-form` is used.
+You can set `label-position` of `ty-form-item` separately ^(2.7.7). If the value is empty, the `label-position` of `ty-form` is used.
 
 :::demo The `label-position` attribute decides how labels align, it can be `top` or `left`. When set to `top`, labels will be placed at the top of the form field.
 
@@ -99,7 +99,7 @@ form/number-validate
 
 :::tip
 
-When an `el-form-item` is nested in another `el-form-item`, its label width will be `0`. You can set `label-width` on that `el-form-item` if needed.
+When an `ty-form-item` is nested in another `ty-form-item`, its label width will be `0`. You can set `label-width` on that `ty-form-item` if needed.
 
 :::
 
@@ -115,7 +115,7 @@ form/size-control
 
 ## Accessibility
 
-When only a single input (or related control such as select or checkbox) is inside of a `el-form-item`, the form item's label will automatically be attached to that input. However, if multiple inputs are inside of the `el-form-item`, the form item will be assigned the [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) role of [group](https://www.w3.org/TR/wai-aria/#group) instead. In this case, it is your responsibility to assign assistive labels to the individual inputs.
+When only a single input (or related control such as select or checkbox) is inside of a `ty-form-item`, the form item's label will automatically be attached to that input. However, if multiple inputs are inside of the `ty-form-item`, the form item will be assigned the [WAI-ARIA](https://www.w3.org/WAI/standards-guidelines/aria/) role of [group](https://www.w3.org/TR/wai-aria/#group) instead. In this case, it is your responsibility to assign assistive labels to the individual inputs.
 
 :::demo
 
@@ -198,7 +198,7 @@ form/accessibility
 
 :::tip
 
-If you don't want to trigger the validator based on input events, set the `validate-event` attribute as `false` on the corresponding input type components (`<el-input>`, `<el-radio>`, `<el-select>`, ...).
+If you don't want to trigger the validator based on input events, set the `validate-event` attribute as `false` on the corresponding input type components (`<ty-input>`, `<ty-radio>`, `<ty-select>`, ...).
 
 :::
 

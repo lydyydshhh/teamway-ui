@@ -3,9 +3,9 @@ import Autocomplete from './src/autocomplete.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElAutocomplete: SFCWithInstall<typeof Autocomplete> =
+export const TyAutocomplete: SFCWithInstall<typeof Autocomplete> =
   withInstall(Autocomplete)
 
-export default ElAutocomplete
+export default TyAutocomplete
 
 export * from './src/autocomplete'

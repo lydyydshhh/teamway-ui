@@ -128,7 +128,7 @@ const InfiniteScroll: ObjectDirective<
       {
         scope: SCOPE,
         from: 'the directive v-infinite-scroll',
-        replacement: 'the el-scrollbar infinite scroll',
+        replacement: 'the ty-scrollbar infinite scroll',
         version: '3.0.0',
         ref: 'https://element-plus.org/en-US/component/scrollbar#infinite-scroll',
       },

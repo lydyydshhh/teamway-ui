@@ -18,11 +18,11 @@
     @pointermove="(e) => $emit('pointermove', e)"
     @pointerleave="(e) => $emit('pointerleave', e)"
   >
-    <el-icon v-if="icon || $slots.icon">
+    <ty-icon v-if="icon || $slots.icon">
       <slot name="icon">
         <component :is="icon" />
       </slot>
-    </el-icon>
+    </ty-icon>
     <slot />
   </li>
 </template>
@@ -34,7 +34,7 @@ import {
   ROVING_FOCUS_ITEM_COLLECTION_INJECTION_KEY,
 } from '@element-plus/components/roving-focus-group'
 import { COLLECTION_ITEM_SIGN } from '@element-plus/components/collection'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { useNamespace } from '@element-plus/hooks'
 import {
   composeEventHandlers,
@@ -48,7 +48,7 @@ import { DROPDOWN_INJECTION_KEY } from './tokens'
 export default defineComponent({
   name: 'DropdownItemImpl',
   components: {
-    ElIcon,
+    TyIcon,
   },
   props: dropdownItemProps,
   emits: ['pointermove', 'pointerleave', 'click', 'clickimpl'],

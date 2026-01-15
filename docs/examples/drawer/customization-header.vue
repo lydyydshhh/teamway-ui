@@ -6,7 +6,7 @@
     <template #header="{ close, titleId, titleClass }">
       <h4 :id="titleId" :class="titleClass">This is a custom header!</h4>
       <ty-button type="danger" @click="close">
-        <ty-icon class="el-icon--left"><CircleCloseFilled /></ty-icon>
+        <ty-icon class="ty-icon--left"><CircleCloseFilled /></ty-icon>
         Close
       </ty-button>
     </template>

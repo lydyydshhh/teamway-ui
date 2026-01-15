@@ -14,10 +14,10 @@
 <script lang="tsx" setup>
 import { ref } from 'vue'
 import {
-  ElButton,
-  ElTag,
   TableV2FixedDir,
   TableV2SortOrder,
+  TyButton,
+  TyTag,
 } from 'element-plus'
 
 import type { Column, SortBy } from 'element-plus'
@@ -55,7 +55,7 @@ const columns: Column<any>[] = [
     dataKey: 'name',
     width: 150,
     align: 'center',
-    cellRenderer: ({ cellData: name }) => <ElTag>{name}</ElTag>,
+    cellRenderer: ({ cellData: name }) => <TyTag>{name}</TyTag>,
   },
   {
     key: 'description',
@@ -71,10 +71,10 @@ const columns: Column<any>[] = [
     title: 'Operations',
     cellRenderer: () => (
       <>
-        <ElButton size="small">Edit</ElButton>
-        <ElButton size="small" type="danger">
+        <TyButton size="small">Edit</TyButton>
+        <TyButton size="small" type="danger">
           Delete
-        </ElButton>
+        </TyButton>
       </>
     ),
     width: 150,

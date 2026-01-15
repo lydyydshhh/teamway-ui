@@ -9,14 +9,14 @@
 
 <script lang="ts" setup>
 import { h } from 'vue'
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 const open = () => {
-  ElMessage('This is a message.')
+  TyMessage('This is a message.')
 }
 
 const openVn = () => {
-  ElMessage({
+  TyMessage({
     message: h('p', { style: 'line-height: 1; font-size: 14px' }, [
       h('span', null, 'Message can be '),
       h('i', { style: 'color: teal' }, 'VNode'),

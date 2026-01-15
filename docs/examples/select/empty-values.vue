@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 const value = ref('')
 
@@ -51,6 +51,6 @@ const options = [
 ]
 
 const handleClear = () => {
-  ElMessage.info(`The clear value is: ${value.value}`)
+  TyMessage.info(`The clear value is: ${value.value}`)
 }
 </script>

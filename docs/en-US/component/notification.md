@@ -102,7 +102,7 @@ ElNotification({
 
 In this case you should call `ElNotification(options)`. We have also registered methods for different types, e.g. `ElNotification.success(options)`. You can call `ElNotification.closeAll()` to manually close all the instances. In ^(2.10.5) you can manually update the offsets of all instances in a specific direction by calling `ElNotification.updateOffsets(position)`.
 
-## App context inheritance <el-tag>> 2.0.4</el-tag>
+## App context inheritance <ty-tag>> 2.0.4</ty-tag>
 
 Now notification accepts a `context` as second parameter of the message constructor which allows you to inject current app's context to notification which allows you to inherit all the properties of the app.
 

@@ -3,7 +3,7 @@
     <div v-if="$slots.header" :class="ns.be('dropdown', 'header')">
       <slot name="header" />
     </div>
-    <el-scrollbar
+    <ty-scrollbar
       v-show="options.length > 0 && !loading"
       :id="contentId"
       ref="scrollbarRef"
@@ -30,7 +30,7 @@
           <span>{{ item.label ?? item.value }}</span>
         </slot>
       </li>
-    </el-scrollbar>
+    </ty-scrollbar>
     <div v-if="loading" :class="ns.be('dropdown', 'loading')">
       <slot name="loading"> {{ t('el.mention.loading') }} </slot>
     </div>
@@ -44,7 +44,7 @@
 import { computed, nextTick, ref, watch } from 'vue'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import { scrollIntoView } from '@element-plus/utils'
-import ElScrollbar from '@element-plus/components/scrollbar'
+import TyScrollbar from '@element-plus/components/scrollbar'
 import { mentionDropdownEmits, mentionDropdownProps } from './mention-dropdown'
 
 import type { MentionOption } from './types'
@@ -60,7 +60,7 @@ const ns = useNamespace('mention')
 const { t } = useLocale()
 const hoveringIndex = ref(-1)
 
-const scrollbarRef = ref<InstanceType<typeof ElScrollbar>>()
+const scrollbarRef = ref<InstanceType<typeof TyScrollbar>>()
 const optionRefs = ref<HTMLElement[]>()
 const dropdownRef = ref<HTMLElement>()
 

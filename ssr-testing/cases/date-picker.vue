@@ -33,7 +33,7 @@
       >
         Value: {{ value1 }}
       </div>
-      <el-date-picker
+      <ty-date-picker
         v-model="value1"
         type="date"
         placeholder="Pick a Date"
@@ -70,7 +70,7 @@
       >
         Value：{{ value2 }}
       </div>
-      <el-date-picker
+      <ty-date-picker
         v-model="value2"
         type="date"
         placeholder="Pick a Date"
@@ -103,7 +103,7 @@
       >
         Value：{{ value3 }}
       </div>
-      <el-date-picker
+      <ty-date-picker
         v-model="value3"
         type="date"
         placeholder="Pick a Date"

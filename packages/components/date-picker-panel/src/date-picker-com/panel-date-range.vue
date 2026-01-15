@@ -29,7 +29,7 @@
         <div v-if="showTime" :class="drpNs.e('time-header')">
           <span :class="drpNs.e('editors-wrap')">
             <span :class="drpNs.e('time-picker-wrap')">
-              <el-input
+              <ty-input
                 size="small"
                 :disabled="rangeState.selecting || dateRangeDisabled"
                 :placeholder="t('el.datepicker.startDate')"
@@ -45,7 +45,7 @@
               v-clickoutside="handleMinTimeClose"
               :class="drpNs.e('time-picker-wrap')"
             >
-              <el-input
+              <ty-input
                 size="small"
                 :class="drpNs.e('editor')"
                 :disabled="rangeState.selecting || dateRangeDisabled"
@@ -67,11 +67,11 @@
             </span>
           </span>
           <span>
-            <el-icon><arrow-right /></el-icon>
+            <ty-icon><arrow-right /></ty-icon>
           </span>
           <span :class="drpNs.e('editors-wrap')" class="is-right">
             <span :class="drpNs.e('time-picker-wrap')">
-              <el-input
+              <ty-input
                 size="small"
                 :class="drpNs.e('editor')"
                 :disabled="rangeState.selecting || dateRangeDisabled"
@@ -87,7 +87,7 @@
               v-clickoutside="handleMaxTimeClose"
               :class="drpNs.e('time-picker-wrap')"
             >
-              <el-input
+              <ty-input
                 size="small"
                 :class="drpNs.e('editor')"
                 :disabled="rangeState.selecting || dateRangeDisabled"
@@ -120,9 +120,9 @@
               @click="leftPrevYear"
             >
               <slot name="prev-year">
-                <el-icon>
+                <ty-icon>
                   <d-arrow-left />
-                </el-icon>
+                </ty-icon>
               </slot>
             </button>
             <button
@@ -135,9 +135,9 @@
               @click="leftPrevMonth"
             >
               <slot name="prev-month">
-                <el-icon>
+                <ty-icon>
                   <arrow-left />
-                </el-icon>
+                </ty-icon>
               </slot>
             </button>
             <button
@@ -153,9 +153,9 @@
               @click="leftNextYear"
             >
               <slot name="next-year">
-                <el-icon>
+                <ty-icon>
                   <d-arrow-right />
-                </el-icon>
+                </ty-icon>
               </slot>
             </button>
             <button
@@ -171,9 +171,9 @@
               @click="leftNextMonth"
             >
               <slot name="next-month">
-                <el-icon>
+                <ty-icon>
                   <arrow-right />
-                </el-icon>
+                </ty-icon>
               </slot>
             </button>
             <div>
@@ -254,9 +254,9 @@
               @click="rightPrevYear"
             >
               <slot name="prev-year">
-                <el-icon>
+                <ty-icon>
                   <d-arrow-left />
-                </el-icon>
+                </ty-icon>
               </slot>
             </button>
             <button
@@ -269,9 +269,9 @@
               @click="rightPrevMonth"
             >
               <slot name="prev-month">
-                <el-icon>
+                <ty-icon>
                   <arrow-left />
-                </el-icon>
+                </ty-icon>
               </slot>
             </button>
             <button
@@ -283,9 +283,9 @@
               @click="rightNextYear"
             >
               <slot name="next-year">
-                <el-icon>
+                <ty-icon>
                   <d-arrow-right />
-                </el-icon>
+                </ty-icon>
               </slot>
             </button>
             <button
@@ -298,9 +298,9 @@
               @click="rightNextMonth"
             >
               <slot name="next-month">
-                <el-icon>
+                <ty-icon>
                   <arrow-right />
-                </el-icon>
+                </ty-icon>
               </slot>
             </button>
             <div>
@@ -375,7 +375,7 @@
       v-if="showFooter && showTime && (showConfirm || clearable)"
       :class="ppNs.e('footer')"
     >
-      <el-button
+      <ty-button
         v-if="clearable"
         text
         size="small"
@@ -383,8 +383,8 @@
         @click="onClear"
       >
         {{ t('el.datepicker.clear') }}
-      </el-button>
-      <el-button
+      </ty-button>
+      <ty-button
         v-if="showConfirm"
         plain
         size="small"
@@ -393,7 +393,7 @@
         @click="handleRangeConfirm(false)"
       >
         {{ t('el.datepicker.confirm') }}
-      </el-button>
+      </ty-button>
     </div>
   </div>
 </template>
@@ -403,8 +403,8 @@ import { computed, inject, nextTick, ref, toRef, unref, watch } from 'vue'
 import dayjs from 'dayjs'
 import { ClickOutside as vClickoutside } from '@element-plus/directives'
 import { useLocale } from '@element-plus/hooks'
-import ElButton from '@element-plus/components/button'
-import ElInput from '@element-plus/components/input'
+import TyButton from '@element-plus/components/button'
+import TyInput from '@element-plus/components/input'
 import {
   DEFAULT_FORMATS_DATE,
   DEFAULT_FORMATS_TIME,
@@ -413,7 +413,7 @@ import {
   extractDateFormat,
   extractTimeFormat,
 } from '@element-plus/components/time-picker'
-import ElIcon from '@element-plus/components/icon'
+import TyIcon from '@element-plus/components/icon'
 import {
   ArrowLeft,
   ArrowRight,

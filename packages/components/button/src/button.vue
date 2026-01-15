@@ -9,14 +9,14 @@
   >
     <template v-if="loading">
       <slot v-if="$slots.loading" name="loading" />
-      <el-icon v-else :class="ns.is('loading')">
+      <ty-icon v-else :class="ns.is('loading')">
         <component :is="loadingIcon" />
-      </el-icon>
+      </ty-icon>
     </template>
-    <el-icon v-else-if="icon || $slots.icon">
+    <ty-icon v-else-if="icon || $slots.icon">
       <component :is="icon" v-if="icon" />
       <slot v-else name="icon" />
-    </el-icon>
+    </ty-icon>
     <span
       v-if="$slots.default"
       :class="{ [ns.em('text', 'expand')]: shouldAddSpace }"
@@ -28,7 +28,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { useNamespace } from '@element-plus/hooks'
 import { useButton } from './use-button'
 import { buttonEmits, buttonProps } from './button'

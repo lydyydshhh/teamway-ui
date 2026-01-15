@@ -12,11 +12,11 @@
 import { ref } from 'vue'
 import dayjs from 'dayjs'
 import {
-  ElButton,
-  ElIcon,
-  ElTag,
-  ElTooltip,
   TableV2FixedDir,
+  TyButton,
+  TyIcon,
+  TyTag,
+  TyTooltip,
 } from 'element-plus'
 import { Timer } from '@element-plus/icons-vue'
 
@@ -38,16 +38,16 @@ const columns: Column<any>[] = [
     width: 150,
     fixed: TableV2FixedDir.LEFT,
     cellRenderer: ({ cellData: date }) => (
-      <ElTooltip content={dayjs(date).format('YYYY/MM/DD')}>
+      <TyTooltip content={dayjs(date).format('YYYY/MM/DD')}>
         {
           <span class="flex items-center">
-            <ElIcon class="mr-3">
+            <TyIcon class="mr-3">
               <Timer />
-            </ElIcon>
+            </TyIcon>
             {dayjs(date).format('YYYY/MM/DD')}
           </span>
         }
-      </ElTooltip>
+      </TyTooltip>
     ),
   },
   {
@@ -56,17 +56,17 @@ const columns: Column<any>[] = [
     dataKey: 'name',
     width: 150,
     align: 'center',
-    cellRenderer: ({ cellData: name }) => <ElTag>{name}</ElTag>,
+    cellRenderer: ({ cellData: name }) => <TyTag>{name}</TyTag>,
   },
   {
     key: 'operations',
     title: 'Operations',
     cellRenderer: () => (
       <>
-        <ElButton size="small">Edit</ElButton>
-        <ElButton size="small" type="danger">
+        <TyButton size="small">Edit</TyButton>
+        <TyButton size="small" type="danger">
           Delete
-        </ElButton>
+        </TyButton>
       </>
     ),
     width: 150,

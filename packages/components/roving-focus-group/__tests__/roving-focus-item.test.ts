@@ -76,15 +76,15 @@ describe('<ElRovingFocusItem />', () => {
     mount(
       {
         template: `<div>
-        <el-roving-focus-item v-bind="$attrs">
+        <ty-roving-focus-item v-bind="$attrs">
           <focus-item />
-        </el-roving-focus-item>
-        <el-roving-focus-item v-bind="$attrs">
+        </ty-roving-focus-item>
+        <ty-roving-focus-item v-bind="$attrs">
           <focus-item />
-        </el-roving-focus-item>
-        <el-roving-focus-item v-bind="$attrs">
+        </ty-roving-focus-item>
+        <ty-roving-focus-item v-bind="$attrs">
           <focus-item />
-        </el-roving-focus-item>
+        </ty-roving-focus-item>
       </div>`,
         components: {
           ElRovingFocusItem,
@@ -172,17 +172,17 @@ describe('<ElRovingFocusItem />', () => {
       const getItems = () => [...itemMap.values()]
       const wrapper = mount(
         {
-          template: `<el-roving-focus-group-impl current-tab-id="test_id" orientation="horizontal">
-        <el-roving-focus-item v-bind="$attrs">
+          template: `<ty-roving-focus-group-impl current-tab-id="test_id" orientation="horizontal">
+        <ty-roving-focus-item v-bind="$attrs">
           <focus-item />
-        </el-roving-focus-item>
-        <el-roving-focus-item v-bind="$attrs">
+        </ty-roving-focus-item>
+        <ty-roving-focus-item v-bind="$attrs">
           <focus-item />
-        </el-roving-focus-item>
-        <el-roving-focus-item v-bind="$attrs">
+        </ty-roving-focus-item>
+        <ty-roving-focus-item v-bind="$attrs">
           <focus-item />
-        </el-roving-focus-item>
-      </el-roving-focus-group-impl>`,
+        </ty-roving-focus-item>
+      </ty-roving-focus-group-impl>`,
           components: {
             ElRovingFocusGroupImpl,
             ElRovingFocusItem,

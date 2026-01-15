@@ -106,7 +106,7 @@ import {
   background-color: var(--ty-fill-color) !important;
 }
 
-.el-statistic {
+.ty-statistic {
   --ty-statistic-content-font-size: 28px;
 }
 

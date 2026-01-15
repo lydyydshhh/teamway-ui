@@ -1,7 +1,7 @@
 <template>
   <div class="overview-container">
     <div class="search-content">
-      <el-input
+      <ty-input
         ref="searchRef"
         v-model="query"
         :prefix-icon="Search"
@@ -18,9 +18,9 @@
       >
         <p class="component-title">
           {{ group.text }}
-          <el-tag effect="dark" round size="small">
+          <ty-tag effect="dark" round size="small">
             {{ group.children.length }}
-          </el-tag>
+          </ty-tag>
         </p>
         <div class="card-content">
           <a
@@ -29,13 +29,13 @@
             tabindex="0"
             :href="withBase(item.link)"
           >
-            <el-card
+            <ty-card
               shadow="hover"
               @click.stop="toPage(item.link)"
               @keydown.enter="toPage(item.link)"
             >
               <template #header>
-                <el-text truncated>{{ item.text }}</el-text>
+                <ty-text truncated>{{ item.text }}</ty-text>
                 <span v-if="item.promotion" class="vp-tag">
                   {{ item.promotion }}
                 </span>
@@ -45,34 +45,34 @@
                 <component :is="getIcon(item.link)" v-if="getIcon(item.link)" />
                 <span v-else>Todo</span>
               </template>
-            </el-card>
+            </ty-card>
           </a>
         </div>
       </div>
 
-      <el-empty
+      <ty-empty
         v-if="!filteredSidebars.length"
         :description="locale['empty-description']"
       />
 
       <p class="designed-by">
         Icons designed by
-        <el-link
+        <ty-link
           type="primary"
           underline="never"
           href="https://github.com/daodaozz08"
           target="_blank"
         >
           @叨叨
-        </el-link>
-        <el-link
+        </ty-link>
+        <ty-link
           type="primary"
           underline="never"
           href="https://github.com/zhiwendesign"
           target="_blank"
         >
           @卡卡
-        </el-link>
+        </ty-link>
       </p>
     </div>
   </div>
@@ -139,7 +139,7 @@ onMounted(() => {
     top: 60px;
     z-index: 10;
 
-    .el-input {
+    .ty-input {
       background: var(--bg-color);
     }
   }
@@ -170,19 +170,19 @@ onMounted(() => {
           }
         }
 
-        :deep(.el-card) {
+        :deep(.ty-card) {
           width: 100%;
           cursor: pointer;
           transition: none;
 
-          .el-card__header {
+          .ty-card__header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 8px;
             padding: 8px 12px;
 
-            .el-text {
+            .ty-text {
               font-size: 14px;
               font-weight: 500;
               color: var(--ty-text-color-regular);
@@ -190,7 +190,7 @@ onMounted(() => {
             }
           }
 
-          .el-card__body {
+          .ty-card__body {
             padding: 0;
             display: flex;
             justify-content: center;

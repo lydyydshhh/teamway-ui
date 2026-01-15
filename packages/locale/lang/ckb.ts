@@ -120,7 +120,7 @@ export default {
       prevPages: 'Previous {pager} pages', // to be translated
       nextPages: 'Next {pager} pages', // to be translated
       deprecationWarning:
-        'بەکارهێنانی بەکارنەهێنراو دۆزراوەتەوە، تکایە بۆ وردەکاری زیاتر سەردانی بەڵگەنامەکانی el-pagination بکە',
+        'بەکارهێنانی بەکارنەهێنراو دۆزراوەتەوە، تکایە بۆ وردەکاری زیاتر سەردانی بەڵگەنامەکانی ty-pagination بکە',
     },
     dialog: {
       close: 'داخستنی ئەم دیالۆگە',

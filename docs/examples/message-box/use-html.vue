@@ -3,10 +3,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessageBox } from 'element-plus'
+import { TyMessageBox } from 'element-plus'
 
 const open = () => {
-  ElMessageBox.alert(
+  TyMessageBox.alert(
     '<strong>proxy is <i>HTML</i> string</strong>',
     'HTML String',
     {

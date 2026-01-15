@@ -86,7 +86,7 @@ const handleCheckAll = (val: CheckboxValueType) => {
 
 <style>
 .custom-header {
-  .el-checkbox {
+  .ty-checkbox {
     display: flex;
     height: unset;
   }

@@ -13,10 +13,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'element-plus'
 
 const open = () => {
-  ElMessageBox.confirm(
+  TyMessageBox.confirm(
     'proxy will permanently delete the file. Continue?',
     'Warning',
     {
@@ -27,13 +27,13 @@ const open = () => {
     }
   )
     .then(() => {
-      ElMessage({
+      TyMessage({
         type: 'success',
         message: 'Delete completed',
       })
     })
     .catch(() => {
-      ElMessage({
+      TyMessage({
         type: 'info',
         message: 'Delete canceled',
       })
@@ -41,7 +41,7 @@ const open = () => {
 }
 
 const open2 = () => {
-  ElMessageBox.confirm(
+  TyMessageBox.confirm(
     'proxy will permanently delete the file. Continue?',
     'Warning',
     {
@@ -53,13 +53,13 @@ const open2 = () => {
     }
   )
     .then(() => {
-      ElMessage({
+      TyMessage({
         type: 'success',
         message: 'Delete completed',
       })
     })
     .catch(() => {
-      ElMessage({
+      TyMessage({
         type: 'info',
         message: 'Delete canceled',
       })
@@ -67,7 +67,7 @@ const open2 = () => {
 }
 
 const open3 = () => {
-  ElMessageBox.confirm(
+  TyMessageBox.confirm(
     'This message box has custom dragging styles. Try dragging it to see the effects!',
     'Custom Dragging Style',
     {
@@ -79,13 +79,13 @@ const open3 = () => {
     }
   )
     .then(() => {
-      ElMessage({
+      TyMessage({
         type: 'success',
         message: 'Action completed',
       })
     })
     .catch(() => {
-      ElMessage({
+      TyMessage({
         type: 'info',
         message: 'Action canceled',
       })

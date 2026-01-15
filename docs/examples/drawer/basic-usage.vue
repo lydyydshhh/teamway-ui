@@ -46,7 +46,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { TyMessageBox } from 'element-plus'
 
 import type { DrawerProps } from 'element-plus'
 
@@ -55,7 +55,7 @@ const drawer2 = ref(false)
 const direction = ref<DrawerProps['direction']>('rtl')
 const radio1 = ref('Option 1')
 const handleClose = (done: () => void) => {
-  ElMessageBox.confirm('Are you sure you want to close this?')
+  TyMessageBox.confirm('Are you sure you want to close this?')
     .then(() => {
       done()
     })
@@ -67,7 +67,7 @@ function cancelClick() {
   drawer2.value = false
 }
 function confirmClick() {
-  ElMessageBox.confirm(`Are you confirm to chose ${radio1.value} ?`)
+  TyMessageBox.confirm(`Are you confirm to chose ${radio1.value} ?`)
     .then(() => {
       drawer2.value = false
     })

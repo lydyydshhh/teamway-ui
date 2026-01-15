@@ -46,11 +46,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.demo-progress .el-progress--line {
+.demo-progress .ty-progress--line {
   margin-bottom: 15px;
   max-width: 600px;
 }
-.demo-progress .el-progress--circle {
+.demo-progress .ty-progress--circle {
   margin-right: 15px;
 }
 </style>

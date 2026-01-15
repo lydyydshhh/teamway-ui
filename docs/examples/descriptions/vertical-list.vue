@@ -62,7 +62,7 @@ const blockMargin = computed(() => {
 </script>
 
 <style scoped>
-.el-descriptions {
+.ty-descriptions {
   margin-top: 20px;
 }
 </style>

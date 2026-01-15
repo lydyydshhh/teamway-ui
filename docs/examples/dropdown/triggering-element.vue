@@ -2,7 +2,7 @@
   <div class="flex flex-wrap items-center">
     <ty-dropdown>
       <ty-button type="primary">
-        Dropdown List<ty-icon class="el-icon--right"><arrow-down /></ty-icon>
+        Dropdown List<ty-icon class="ty-icon--right"><arrow-down /></ty-icon>
       </ty-button>
       <template #dropdown>
         <ty-dropdown-menu>
@@ -39,10 +39,10 @@ const handleClick = () => {
 </script>
 
 <style scoped>
-.example-showcase .el-dropdown + .el-dropdown {
+.example-showcase .ty-dropdown + .ty-dropdown {
   margin-left: 15px;
 }
-.example-showcase .el-dropdown-link {
+.example-showcase .ty-dropdown-link {
   cursor: pointer;
   color: var(--ty-color-primary);
   display: flex;

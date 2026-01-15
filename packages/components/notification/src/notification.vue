@@ -14,9 +14,9 @@
       @mouseleave="startTimer"
       @click="onClick"
     >
-      <el-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
+      <ty-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
         <component :is="iconComponent" />
-      </el-icon>
+      </ty-icon>
       <div :class="ns.e('group')">
         <h2 :class="ns.e('title')" v-text="title" />
         <div
@@ -30,9 +30,9 @@
             <p v-else v-html="message" />
           </slot>
         </div>
-        <el-icon v-if="showClose" :class="ns.e('closeBtn')" @click.stop="close">
+        <ty-icon v-if="showClose" :class="ns.e('closeBtn')" @click.stop="close">
           <component :is="closeIcon" />
-        </el-icon>
+        </ty-icon>
       </div>
     </div>
   </transition>
@@ -43,7 +43,7 @@ import { computed, onMounted, ref } from 'vue'
 import { useEventListener, useTimeoutFn } from '@vueuse/core'
 import { TypeComponentsMap, getEventCode } from '@element-plus/utils'
 import { EVENT_CODE } from '@element-plus/constants'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
 import { notificationEmits, notificationProps } from './notification'
 

@@ -42,7 +42,7 @@ If you use volar, please add the global component type definition to `compilerOp
 
 You need to use an additional plugin to import components you used.
 
-#### Auto import <el-tag type="primary" style="vertical-align: middle;" effect="dark" size="small">Recommend</el-tag>
+#### Auto import <ty-tag type="primary" style="vertical-align: middle;" effect="dark" size="small">Recommend</ty-tag>
 
 First you need to install `unplugin-vue-components` and `unplugin-auto-import`.
 
@@ -148,14 +148,14 @@ And refer to the [docs](https://github.com/element-plus/unplugin-element-plus#re
 
 ```vue [App.vue]
 <template>
-  <el-button>I am ElButton</el-button>
+  <ty-button>I am ElButton</ty-button>
 </template>
 
 <script>
 import { ElButton } from 'element-plus'
 
 export default {
-  components: { ElButton },
+  // components: { ElButton },
 }
 </script>
 ```
@@ -199,9 +199,9 @@ On-demand:
 
 ```vue [App.vue]
 <template>
-  <el-config-provider :size="size" :z-index="zIndex">
+  <ty-config-provider :size="size" :z-index="zIndex">
     <app />
-  </el-config-provider>
+  </ty-config-provider>
 </template>
 
 <script>
@@ -210,7 +210,7 @@ import { ElConfigProvider } from 'element-plus'
 
 export default defineComponent({
   components: {
-    ElConfigProvider,
+    // ElConfigProvider,
   },
   setup() {
     return {

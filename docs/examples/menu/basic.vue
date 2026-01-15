@@ -1,7 +1,7 @@
 ﻿<template>
   <ty-menu
     :default-active="activeIndex"
-    class="el-menu-demo"
+    class="ty-menu-demo"
     mode="horizontal"
     @select="handleSelect"
   >
@@ -24,7 +24,7 @@
   <div class="h-6" />
   <ty-menu
     :default-active="activeIndex2"
-    class="el-menu-demo"
+    class="ty-menu-demo"
     mode="horizontal"
     background-color="#545c64"
     text-color="#fff"

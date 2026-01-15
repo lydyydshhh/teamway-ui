@@ -18,10 +18,10 @@ import { Bell } from '@element-plus/icons-vue'
 </script>
 
 <style scoped>
-.el-alert {
+.ty-alert {
   margin: 20px 0 0;
 }
-.el-alert:first-child {
+.ty-alert:first-child {
   margin: 0;
 }
 </style>

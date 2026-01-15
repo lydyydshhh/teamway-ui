@@ -1,227 +1,227 @@
-import { ElAffix } from '@element-plus/components/affix'
-import { ElAlert } from '@element-plus/components/alert'
-import { ElAutocomplete } from '@element-plus/components/autocomplete'
-import { ElAvatar, ElAvatarGroup } from '@element-plus/components/avatar'
-import { ElBacktop } from '@element-plus/components/backtop'
-import { ElBadge } from '@element-plus/components/badge'
+import { TyAffix } from '@element-plus/components/affix'
+import { TyAlert } from '@element-plus/components/alert'
+import { TyAutocomplete } from '@element-plus/components/autocomplete'
+import { TyAvatar, TyAvatarGroup } from '@element-plus/components/avatar'
+import { TyBacktop } from '@element-plus/components/backtop'
+import { TyBadge } from '@element-plus/components/badge'
 import {
-  ElBreadcrumb,
-  ElBreadcrumbItem,
+  TyBreadcrumb,
+  TyBreadcrumbItem,
 } from '@element-plus/components/breadcrumb'
-import { ElButton, ElButtonGroup } from '@element-plus/components/button'
-import { ElCalendar } from '@element-plus/components/calendar'
-import { ElCard } from '@element-plus/components/card'
-import { ElCarousel, ElCarouselItem } from '@element-plus/components/carousel'
-import { ElCascader } from '@element-plus/components/cascader'
-import { ElCascaderPanel } from '@element-plus/components/cascader-panel'
-import { ElCheckTag } from '@element-plus/components/check-tag'
+import { TyButton, TyButtonGroup } from '@element-plus/components/button'
+import { TyCalendar } from '@element-plus/components/calendar'
+import { TyCard } from '@element-plus/components/card'
+import { TyCarousel, TyCarouselItem } from '@element-plus/components/carousel'
+import { TyCascader } from '@element-plus/components/cascader'
+import { TyCascaderPanel } from '@element-plus/components/cascader-panel'
+import { TyCheckTag } from '@element-plus/components/check-tag'
 import {
-  ElCheckbox,
-  ElCheckboxButton,
-  ElCheckboxGroup,
+  TyCheckbox,
+  TyCheckboxButton,
+  TyCheckboxGroup,
 } from '@element-plus/components/checkbox'
-import { ElCol } from '@element-plus/components/col'
-import { ElCollapse, ElCollapseItem } from '@element-plus/components/collapse'
-import { ElCollapseTransition } from '@element-plus/components/collapse-transition'
-import { ElColorPickerPanel } from '@element-plus/components/color-picker-panel'
-import { ElColorPicker } from '@element-plus/components/color-picker'
-import { ElConfigProvider } from '@element-plus/components/config-provider'
+import { TyCol } from '@element-plus/components/col'
+import { TyCollapse, TyCollapseItem } from '@element-plus/components/collapse'
+import { TyCollapseTransition } from '@element-plus/components/collapse-transition'
+import { TyColorPickerPanel } from '@element-plus/components/color-picker-panel'
+import { TyColorPicker } from '@element-plus/components/color-picker'
+import { TyConfigProvider } from '@element-plus/components/config-provider'
 import {
-  ElAside,
-  ElContainer,
-  ElFooter,
-  ElHeader,
-  ElMain,
+  TyAside,
+  TyContainer,
+  TyFooter,
+  TyHeader,
+  TyMain,
 } from '@element-plus/components/container'
-import { ElDatePicker } from '@element-plus/components/date-picker'
-import { ElDatePickerPanel } from '@element-plus/components/date-picker-panel'
+import { TyDatePicker } from '@element-plus/components/date-picker'
+import { TyDatePickerPanel } from '@element-plus/components/date-picker-panel'
 import {
-  ElDescriptions,
-  ElDescriptionsItem,
+  TyDescriptions,
+  TyDescriptionsItem,
 } from '@element-plus/components/descriptions'
-import { ElDialog } from '@element-plus/components/dialog'
-import { ElDivider } from '@element-plus/components/divider'
-import { ElDrawer } from '@element-plus/components/drawer'
+import { TyDialog } from '@element-plus/components/dialog'
+import { TyDivider } from '@element-plus/components/divider'
+import { TyDrawer } from '@element-plus/components/drawer'
 import {
-  ElDropdown,
-  ElDropdownItem,
-  ElDropdownMenu,
+  TyDropdown,
+  TyDropdownItem,
+  TyDropdownMenu,
 } from '@element-plus/components/dropdown'
-import { ElEmpty } from '@element-plus/components/empty'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
-import { ElIcon } from '@element-plus/components/icon'
-import { ElImage } from '@element-plus/components/image'
-import { ElImageViewer } from '@element-plus/components/image-viewer'
-import { ElInput } from '@element-plus/components/input'
-import { ElInputNumber } from '@element-plus/components/input-number'
-import { ElInputTag } from '@element-plus/components/input-tag'
-import { ElLink } from '@element-plus/components/link'
+import { TyEmpty } from '@element-plus/components/empty'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
+import { TyIcon } from '@element-plus/components/icon'
+import { TyImage } from '@element-plus/components/image'
+import { TyImageViewer } from '@element-plus/components/image-viewer'
+import { TyInput } from '@element-plus/components/input'
+import { TyInputNumber } from '@element-plus/components/input-number'
+import { TyInputTag } from '@element-plus/components/input-tag'
+import { TyLink } from '@element-plus/components/link'
 import {
-  ElMenu,
-  ElMenuItem,
-  ElMenuItemGroup,
-  ElSubMenu,
+  TyMenu,
+  TyMenuItem,
+  TyMenuItemGroup,
+  TySubMenu,
 } from '@element-plus/components/menu'
-import { ElPageHeader } from '@element-plus/components/page-header'
-import { ElPagination } from '@element-plus/components/pagination'
-import { ElPopconfirm } from '@element-plus/components/popconfirm'
-import { ElPopover } from '@element-plus/components/popover'
-import { ElPopper } from '@element-plus/components/popper'
-import { ElProgress } from '@element-plus/components/progress'
+import { TyPageHeader } from '@element-plus/components/page-header'
+import { TyPagination } from '@element-plus/components/pagination'
+import { TyPopconfirm } from '@element-plus/components/popconfirm'
+import { TyPopover } from '@element-plus/components/popover'
+import { TyPopper } from '@element-plus/components/popper'
+import { TyProgress } from '@element-plus/components/progress'
 import {
-  ElRadio,
-  ElRadioButton,
-  ElRadioGroup,
+  TyRadio,
+  TyRadioButton,
+  TyRadioGroup,
 } from '@element-plus/components/radio'
-import { ElRate } from '@element-plus/components/rate'
-import { ElResult } from '@element-plus/components/result'
-import { ElRow } from '@element-plus/components/row'
-import { ElScrollbar } from '@element-plus/components/scrollbar'
+import { TyRate } from '@element-plus/components/rate'
+import { TyResult } from '@element-plus/components/result'
+import { TyRow } from '@element-plus/components/row'
+import { TyScrollbar } from '@element-plus/components/scrollbar'
 import {
-  ElOption,
-  ElOptionGroup,
-  ElSelect,
+  TyOption,
+  TyOptionGroup,
+  TySelect,
 } from '@element-plus/components/select'
-import { ElSelectV2 } from '@element-plus/components/select-v2'
-import { ElSkeleton, ElSkeletonItem } from '@element-plus/components/skeleton'
-import { ElSlider } from '@element-plus/components/slider'
-import { ElSpace } from '@element-plus/components/space'
-import { ElStatistic } from '@element-plus/components/statistic'
-import { ElCountdown } from '@element-plus/components/countdown'
-import { ElStep, ElSteps } from '@element-plus/components/steps'
-import { ElSwitch } from '@element-plus/components/switch'
-import { ElTable, ElTableColumn } from '@element-plus/components/table'
-import { ElAutoResizer, ElTableV2 } from '@element-plus/components/table-v2'
-import { ElTabPane, ElTabs } from '@element-plus/components/tabs'
-import { ElTag } from '@element-plus/components/tag'
-import { ElText } from '@element-plus/components/text'
-import { ElTimePicker } from '@element-plus/components/time-picker'
-import { ElTimeSelect } from '@element-plus/components/time-select'
-import { ElTimeline, ElTimelineItem } from '@element-plus/components/timeline'
-import { ElTooltip } from '@element-plus/components/tooltip'
-import { ElTransfer } from '@element-plus/components/transfer'
-import { ElTree } from '@element-plus/components/tree'
-import { ElTreeSelect } from '@element-plus/components/tree-select'
-import { ElTreeV2 } from '@element-plus/components/tree-v2'
-import { ElUpload } from '@element-plus/components/upload'
-import { ElWatermark } from '@element-plus/components/watermark'
-import { ElTour, ElTourStep } from '@element-plus/components/tour'
-import { ElAnchor, ElAnchorLink } from '@element-plus/components/anchor'
-import { ElSegmented } from '@element-plus/components/segmented'
-import { ElMention } from '@element-plus/components/mention'
-import { ElSplitter, ElSplitterPanel } from '@element-plus/components/splitter'
+import { TySelectV2 } from '@element-plus/components/select-v2'
+import { TySkeleton, TySkeletonItem } from '@element-plus/components/skeleton'
+import { TySlider } from '@element-plus/components/slider'
+import { TySpace } from '@element-plus/components/space'
+import { TyStatistic } from '@element-plus/components/statistic'
+import { TyCountdown } from '@element-plus/components/countdown'
+import { TyStep, TySteps } from '@element-plus/components/steps'
+import { TySwitch } from '@element-plus/components/switch'
+import { TyTable, TyTableColumn } from '@element-plus/components/table'
+import { TyAutoResizer, TyTableV2 } from '@element-plus/components/table-v2'
+import { TyTabPane, TyTabs } from '@element-plus/components/tabs'
+import { TyTag } from '@element-plus/components/tag'
+import { TyText } from '@element-plus/components/text'
+import { TyTimePicker } from '@element-plus/components/time-picker'
+import { TyTimeSelect } from '@element-plus/components/time-select'
+import { TyTimeline, TyTimelineItem } from '@element-plus/components/timeline'
+import { TyTooltip } from '@element-plus/components/tooltip'
+import { TyTransfer } from '@element-plus/components/transfer'
+import { TyTree } from '@element-plus/components/tree'
+import { TyTreeSelect } from '@element-plus/components/tree-select'
+import { TyTreeV2 } from '@element-plus/components/tree-v2'
+import { TyUpload } from '@element-plus/components/upload'
+import { TyWatermark } from '@element-plus/components/watermark'
+import { TyTour, TyTourStep } from '@element-plus/components/tour'
+import { TyAnchor, TyAnchorLink } from '@element-plus/components/anchor'
+import { TySegmented } from '@element-plus/components/segmented'
+import { TyMention } from '@element-plus/components/mention'
+import { TySplitter, TySplitterPanel } from '@element-plus/components/splitter'
 
 import type { Plugin } from 'vue'
 
 export default [
-  ElAffix,
-  ElAlert,
-  ElAutocomplete,
-  ElAutoResizer,
-  ElAvatar,
-  ElAvatarGroup,
-  ElBacktop,
-  ElBadge,
-  ElBreadcrumb,
-  ElBreadcrumbItem,
-  ElButton,
-  ElButtonGroup,
-  ElCalendar,
-  ElCard,
-  ElCarousel,
-  ElCarouselItem,
-  ElCascader,
-  ElCascaderPanel,
-  ElCheckTag,
-  ElCheckbox,
-  ElCheckboxButton,
-  ElCheckboxGroup,
-  ElCol,
-  ElCollapse,
-  ElCollapseItem,
-  ElCollapseTransition,
-  ElColorPickerPanel,
-  ElColorPicker,
-  ElConfigProvider,
-  ElContainer,
-  ElAside,
-  ElFooter,
-  ElHeader,
-  ElMain,
-  ElDatePicker,
-  ElDatePickerPanel,
-  ElDescriptions,
-  ElDescriptionsItem,
-  ElDialog,
-  ElDivider,
-  ElDrawer,
-  ElDropdown,
-  ElDropdownItem,
-  ElDropdownMenu,
-  ElEmpty,
-  ElForm,
-  ElFormItem,
-  ElIcon,
-  ElImage,
-  ElImageViewer,
-  ElInput,
-  ElInputNumber,
-  ElInputTag,
-  ElLink,
-  ElMenu,
-  ElMenuItem,
-  ElMenuItemGroup,
-  ElSubMenu,
-  ElPageHeader,
-  ElPagination,
-  ElPopconfirm,
-  ElPopover,
-  ElPopper,
-  ElProgress,
-  ElRadio,
-  ElRadioButton,
-  ElRadioGroup,
-  ElRate,
-  ElResult,
-  ElRow,
-  ElScrollbar,
-  ElSelect,
-  ElOption,
-  ElOptionGroup,
-  ElSelectV2,
-  ElSkeleton,
-  ElSkeletonItem,
-  ElSlider,
-  ElSpace,
-  ElStatistic,
-  ElCountdown,
-  ElSteps,
-  ElStep,
-  ElSwitch,
-  ElTable,
-  ElTableColumn,
-  ElTableV2,
-  ElTabs,
-  ElTabPane,
-  ElTag,
-  ElText,
-  ElTimePicker,
-  ElTimeSelect,
-  ElTimeline,
-  ElTimelineItem,
-  ElTooltip,
-  ElTransfer,
-  ElTree,
-  ElTreeSelect,
-  ElTreeV2,
-  ElUpload,
-  ElWatermark,
-  ElTour,
-  ElTourStep,
-  ElAnchor,
-  ElAnchorLink,
-  ElSegmented,
-  ElMention,
-  ElSplitter,
-  ElSplitterPanel,
+  TyAffix,
+  TyAlert,
+  TyAutocomplete,
+  TyAutoResizer,
+  TyAvatar,
+  TyAvatarGroup,
+  TyBacktop,
+  TyBadge,
+  TyBreadcrumb,
+  TyBreadcrumbItem,
+  TyButton,
+  TyButtonGroup,
+  TyCalendar,
+  TyCard,
+  TyCarousel,
+  TyCarouselItem,
+  TyCascader,
+  TyCascaderPanel,
+  TyCheckTag,
+  TyCheckbox,
+  TyCheckboxButton,
+  TyCheckboxGroup,
+  TyCol,
+  TyCollapse,
+  TyCollapseItem,
+  TyCollapseTransition,
+  TyColorPickerPanel,
+  TyColorPicker,
+  TyConfigProvider,
+  TyContainer,
+  TyAside,
+  TyFooter,
+  TyHeader,
+  TyMain,
+  TyDatePicker,
+  TyDatePickerPanel,
+  TyDescriptions,
+  TyDescriptionsItem,
+  TyDialog,
+  TyDivider,
+  TyDrawer,
+  TyDropdown,
+  TyDropdownItem,
+  TyDropdownMenu,
+  TyEmpty,
+  TyForm,
+  TyFormItem,
+  TyIcon,
+  TyImage,
+  TyImageViewer,
+  TyInput,
+  TyInputNumber,
+  TyInputTag,
+  TyLink,
+  TyMenu,
+  TyMenuItem,
+  TyMenuItemGroup,
+  TySubMenu,
+  TyPageHeader,
+  TyPagination,
+  TyPopconfirm,
+  TyPopover,
+  TyPopper,
+  TyProgress,
+  TyRadio,
+  TyRadioButton,
+  TyRadioGroup,
+  TyRate,
+  TyResult,
+  TyRow,
+  TyScrollbar,
+  TySelect,
+  TyOption,
+  TyOptionGroup,
+  TySelectV2,
+  TySkeleton,
+  TySkeletonItem,
+  TySlider,
+  TySpace,
+  TyStatistic,
+  TyCountdown,
+  TySteps,
+  TyStep,
+  TySwitch,
+  TyTable,
+  TyTableColumn,
+  TyTableV2,
+  TyTabs,
+  TyTabPane,
+  TyTag,
+  TyText,
+  TyTimePicker,
+  TyTimeSelect,
+  TyTimeline,
+  TyTimelineItem,
+  TyTooltip,
+  TyTransfer,
+  TyTree,
+  TyTreeSelect,
+  TyTreeV2,
+  TyUpload,
+  TyWatermark,
+  TyTour,
+  TyTourStep,
+  TyAnchor,
+  TyAnchorLink,
+  TySegmented,
+  TyMention,
+  TySplitter,
+  TySplitterPanel,
 ] as Plugin[]

@@ -41,7 +41,7 @@ const formatTooltip = (val: number) => {
   display: flex;
   align-items: center;
 }
-.slider-demo-block .el-slider {
+.slider-demo-block .ty-slider {
   margin-top: 0;
   margin-left: 12px;
 }
@@ -55,7 +55,7 @@ const formatTooltip = (val: number) => {
   white-space: nowrap;
   margin-bottom: 0;
 }
-.slider-demo-block .demonstration + .el-slider {
+.slider-demo-block .demonstration + .ty-slider {
   flex: 0 0 70%;
 }
 </style>

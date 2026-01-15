@@ -3,10 +3,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'element-plus'
 
 const open = () => {
-  ElMessageBox.confirm(
+  TyMessageBox.confirm(
     'proxy will permanently delete the file. Continue?',
     'Warning',
     {
@@ -17,13 +17,13 @@ const open = () => {
     }
   )
     .then(() => {
-      ElMessage({
+      TyMessage({
         type: 'success',
         message: 'Delete completed',
       })
     })
     .catch(() => {
-      ElMessage({
+      TyMessage({
         type: 'info',
         message: 'Delete canceled',
       })

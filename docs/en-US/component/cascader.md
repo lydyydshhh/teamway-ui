@@ -29,7 +29,7 @@ cascader/option-disabling
 
 ## Clearable
 
-Set `clearable` attribute for `el-cascader` and a clear icon will appear when selected and hovered
+Set `clearable` attribute for `ty-cascader` and a clear icon will appear when selected and hovered
 
 :::demo
 
@@ -65,7 +65,7 @@ Do:
 
 ```vue
 <template>
-  <el-cascader :props="props" />
+  <ty-cascader :props="props" />
 </template>
 
 <script lang="ts" setup>
@@ -78,7 +78,7 @@ Don't do:
 ```vue
 <template>
   <!--  Object literal binging here is invalid syntax for cascader  -->
-  <el-cascader :props="{ multiple: true }" />
+  <ty-cascader :props="{ multiple: true }" />
 </template>
 ```
 
@@ -112,7 +112,7 @@ cascader/dynamic-loading
 
 Search and select options with a keyword.
 
-:::demo Adding `filterable` to `el-cascader` enables filtering. Cascader will match nodes whose label or parent's label (according to `show-all-levels`) includes input keyword. Of course, you can customize search logic by `filter-method` which accepts a function, the first parameter is `node`, the second is `keyword`, and need return a boolean value indicating whether it hits.
+:::demo Adding `filterable` to `ty-cascader` enables filtering. Cascader will match nodes whose label or parent's label (according to `show-all-levels`) includes input keyword. Of course, you can customize search logic by `filter-method` which accepts a function, the first parameter is `node`, the second is `keyword`, and need return a boolean value indicating whether it hits.
 
 cascader/filterable
 
@@ -142,7 +142,7 @@ cascader/custom-suggestion-item
 
 `CascaderPanel` is the core component of `Cascader` which has various of features such as single selection, multiple selection, dynamic loading and so on.
 
-:::demo Just like `el-cascader`, you can set alternative options by `options`, and enable other features by `props`, see the API form below for details.
+:::demo Just like `ty-cascader`, you can set alternative options by `options`, and enable other features by `props`, see the API form below for details.
 
 cascader/panel
 
@@ -152,7 +152,7 @@ cascader/panel
 
 You can customize tags.
 
-:::demo Insert customized tags into the slot of `el-cascader`. `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` will not work.
+:::demo Insert customized tags into the slot of `ty-cascader`. `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` will not work.
 
 cascader/custom-tag
 

@@ -11,7 +11,7 @@ Display multiple data with similar format. You can sort, filter, compare your da
 
 Basic table is just for data display.
 
-:::demo After setting attribute `data` of `el-table` with an object array, you can use `prop` (corresponding to a key of the object in `data` array) in `el-table-column` to insert data to table columns, and set the attribute `label` to define the column name. You can also use the attribute `width` to define the width of columns.
+:::demo After setting attribute `data` of `ty-table` with an object array, you can use `prop` (corresponding to a key of the object in `data` array) in `ty-table-column` to insert data to table columns, and set the attribute `label` to define the column name. You can also use the attribute `width` to define the width of columns.
 
 table/basic
 
@@ -39,7 +39,7 @@ table/with-border
 
 You can highlight your table content to distinguish between "success, information, warning, danger" and other states.
 
-:::demo Use `row-class-name` in `el-table` to add custom classes to a certain row. Then you can style it with custom classes.
+:::demo Use `row-class-name` in `ty-table` to add custom classes to a certain row. Then you can style it with custom classes.
 
 table/with-status
 
@@ -59,7 +59,7 @@ table/show-overflow-tooltip
 
 When there are too many rows, you can use a fixed header.
 
-:::demo By setting the attribute `height` of `el-table`, you can fix the table header without any other codes.
+:::demo By setting the attribute `height` of `ty-table`, you can fix the table header without any other codes.
 
 table/fixed-header
 
@@ -69,7 +69,7 @@ table/fixed-header
 
 When there are too many columns, you can fix some of them.
 
-:::demo Attribute `fixed` is used in `el-table-column`, it accepts a `Boolean`. If `true`, the column will be fixed at left. It also accepts two string literals: 'left' and 'right', both indicating that the column will be fixed at corresponding direction.
+:::demo Attribute `fixed` is used in `ty-table-column`, it accepts a `Boolean`. If `true`, the column will be fixed at left. It also accepts two string literals: 'left' and 'right', both indicating that the column will be fixed at corresponding direction.
 
 table/fixed-column
 
@@ -89,7 +89,7 @@ table/fixed-column-and-header
 
 When the the data is dynamically changed, you might want the table to have a maximum height rather than a fixed height and to show the scroll bar if needed.
 
-:::demo By setting the attribute `max-height` of `el-table`, you can fix the table header. The table body scrolls only if the height of the rows exceeds the max height value.
+:::demo By setting the attribute `max-height` of `ty-table`, you can fix the table header. The table body scrolls only if the height of the rows exceeds the max height value.
 
 table/fixed-header-with-fluid-header
 
@@ -99,7 +99,7 @@ table/fixed-header-with-fluid-header
 
 When the data structure is complex, you can use group header to show the data hierarchy.
 
-:::demo Only need to place el-table-column inside a el-table-column, you can achieve group header.
+:::demo Only need to place ty-table-column inside a ty-table-column, you can achieve group header.
 
 table/grouping-header
 
@@ -109,7 +109,7 @@ table/grouping-header
 
 fixed group head is supported
 
-:::demo The attribute `fixed` of the group header is determined by the outermost `el-table-column`
+:::demo The attribute `fixed` of the group header is determined by the outermost `ty-table-column`
 
 table/fixed-column-and-group-header
 
@@ -119,7 +119,7 @@ table/fixed-column-and-group-header
 
 Single row selection is supported.
 
-:::demo Table supports single row selection. You can activate it by adding the `highlight-current-row` attribute. An event called `current-change` will be triggered when row selection changes, and its parameters are the rows after and before this change: `currentRow` and `oldCurrentRow`. If you need to display row index, you can add a new `el-table-column` with its `type` attribute assigned to `index`, and you will see the index starting from 1.
+:::demo Table supports single row selection. You can activate it by adding the `highlight-current-row` attribute. An event called `current-change` will be triggered when row selection changes, and its parameters are the rows after and before this change: `currentRow` and `oldCurrentRow`. If you need to display row index, you can add a new `ty-table-column` with its `type` attribute assigned to `index`, and you will see the index starting from 1.
 
 table/single-select
 
@@ -131,7 +131,7 @@ You can also select multiple rows.
 
 After ^(2.8.3), `toggleRowSelection` supports the third parameter `ignoreSelectable` to determine whether to ignore the selectable attribute.
 
-:::demo Activating multiple selection is easy: simply add an `el-table-column` with its `type` set to `selection`.
+:::demo Activating multiple selection is easy: simply add an `ty-table-column` with its `type` set to `selection`.
 
 table/multi-select
 
@@ -151,7 +151,7 @@ table/sort
 
 Filter the table to find desired data.
 
-:::demo Set attribute `filters` and `filter-method` in `el-table-column` makes this column filterable. `filters` is an array, and `filter-method` is a function deciding which rows are displayed. It has three parameters: `value`, `row` and `column`.
+:::demo Set attribute `filters` and `filter-method` in `ty-table-column` makes this column filterable. `filters` is an array, and `filter-method` is a function deciding which rows are displayed. It has three parameters: `value`, `row` and `column`.
 
 table/filter
 
@@ -183,7 +183,7 @@ When the row content is too long and you do not want to display the horizontal s
 
 After ^(2.9.7), `preserve-expanded-content` is added to control whether to preserve expanded row content in DOM when collapsed.
 
-:::demo Activate expandable row by adding type="expand" and slot. The template for el-table-column will be rendered as the contents of the expanded row, and you can access the same attributes as when you are using `slot` in custom column templates.
+:::demo Activate expandable row by adding type="expand" and slot. The template for ty-table-column will be rendered as the contents of the expanded row, and you can access the same attributes as when you are using `slot` in custom column templates.
 
 table/expandable-row
 
@@ -229,7 +229,7 @@ table/rowspan-and-colspan
 
 You can customize row index in `type=index` columns.
 
-:::demo To customize row indices, use `index` attribute on `el-table-column` with `type=index`. If it is assigned to a number, all indices will have an offset of that number. It also accepts a method with each index (starting from `0`) as parameter, and the returned value will be displayed as index.
+:::demo To customize row indices, use `index` attribute on `ty-table-column` with `type=index`. If it is assigned to a number, all indices will have an offset of that number. It also accepts a method with each index (starting from `0`) as parameter, and the returned value will be displayed as index.
 
 table/custom-index
 
@@ -377,7 +377,7 @@ table/tooltip-formatter
 | sort-method                | sorting method, works when `sortable` is `true`. Should return a number, just like Array.sort                                                                                                                      | ^[Function]`<T = any>(a: T, b: T) => number`                                                                                                                                | —                                 |
 | sort-by                    | specify which property to sort by, works when `sortable` is `true` and `sort-method` is `undefined`. If set to an Array, the column will sequentially sort by the next property if the previous one is equal       | ^[Function]`(row: any, index: number) => string` / ^[string] / ^[array]`string[]`                                                                                           | —                                 |
 | sort-orders                | the order of the sorting strategies used when sorting the data, works when `sortable` is `true`. Accepts an array, as the user clicks on the header, the column is sorted in order of the elements in the array    | ^[object]`('ascending' \| 'descending' \| null)[]`                                                                                                                          | ['ascending', 'descending', null] |
-| resizable                  | whether column width can be resized, works when `border` of `el-table` is `true`                                                                                                                                   | ^[boolean]                                                                                                                                                                  | true                              |
+| resizable                  | whether column width can be resized, works when `border` of `ty-table` is `true`                                                                                                                                   | ^[boolean]                                                                                                                                                                  | true                              |
 | formatter                  | function that formats cell content                                                                                                                                                                                 | ^[function]`(row: any, column: TableColumnCtx<T>, cellValue: any, index: number) => VNode \| string`                                                                        | —                                 |
 | show-overflow-tooltip      | whether to hide extra content and show them in a tooltip when hovering on the cell                                                                                                                                 | ^[boolean] / [`object`](#table-attributes) ^(2.2.28)                                                                                                                        | undefined                         |
 | align                      | alignment                                                                                                                                                                                                          | ^[enum]`'left' \| 'center' \| 'right'`                                                                                                                                      | left                              |
@@ -492,11 +492,11 @@ type TableColumnCtx<T extends DefaultRow = DefaultRow> = {
 
 ```vue{4}
 <template>
-  <el-table-column width="180">
+  <ty-table-column width="180">
     <template #default="scope">
-      <el-image preview-teleported :preview-src-list="srcList" />
+      <ty-image preview-teleported :preview-src-list="srcList" />
     </template>
-  </el-table-column>
+  </ty-table-column>
 </template>
 ```
 

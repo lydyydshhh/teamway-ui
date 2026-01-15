@@ -8,7 +8,7 @@
   >
     <template #overlay>
       <div
-        class="el-loading-mask"
+        class="ty-loading-mask"
         style="display: flex; align-items: center; justify-content: center"
       >
         <ty-icon class="is-loading" color="var(--ty-color-primary)" :size="26">
@@ -54,7 +54,7 @@ const data = generateData(columns, 200)
 </script>
 
 <style>
-.example-showcase .el-table-v2__overlay {
+.example-showcase .ty-table-v2__overlay {
   z-index: 9;
 }
 </style>

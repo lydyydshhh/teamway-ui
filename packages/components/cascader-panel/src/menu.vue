@@ -1,5 +1,5 @@
 <template>
-  <el-scrollbar
+  <ty-scrollbar
     :key="menuId"
     tag="ul"
     role="menu"
@@ -9,7 +9,7 @@
     @mousemove="handleMouseMove"
     @mouseleave="clearHoverZone"
   >
-    <el-cascader-node
+    <ty-cascader-node
       v-for="node in nodes"
       :key="node.uid"
       :node="node"
@@ -17,9 +17,9 @@
       @expand="handleExpand"
     />
     <div v-if="isLoading" :class="ns.e('empty-text')">
-      <el-icon size="14" :class="ns.is('loading')">
+      <ty-icon size="14" :class="ns.is('loading')">
         <loading />
-      </el-icon>
+      </ty-icon>
       {{ t('el.cascader.loading') }}
     </div>
     <div v-else-if="isEmpty" :class="ns.e('empty-text')">
@@ -32,16 +32,16 @@
       :class="ns.e('hover-zone')"
     ></svg>
     <!-- eslint-enable vue/html-self-closing -->
-  </el-scrollbar>
+  </ty-scrollbar>
 </template>
 
 <script lang="ts" setup>
 import { computed, getCurrentInstance, inject, ref } from 'vue'
-import ElScrollbar from '@element-plus/components/scrollbar'
+import TyScrollbar from '@element-plus/components/scrollbar'
 import { useId, useLocale, useNamespace } from '@element-plus/hooks'
 import { Loading } from '@element-plus/icons-vue'
-import ElIcon from '@element-plus/components/icon'
-import ElCascaderNode from './node.vue'
+import TyIcon from '@element-plus/components/icon'
+import TyCascaderNode from './node.vue'
 import { CASCADER_PANEL_INJECTION_KEY } from './types'
 
 import type { CascaderNode } from './types'

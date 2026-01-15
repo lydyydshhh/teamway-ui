@@ -45,7 +45,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElButton } from 'element-plus'
+import { TyButton } from 'element-plus'
 
 import type {
   RenderContentContext,
@@ -86,7 +86,7 @@ const renderContent: RenderContentFunction = (h, { node, data }) => {
       h('span', null, node.label),
       h('div', null, [
         h(
-          ElButton,
+          TyButton,
           {
             type: 'primary',
             link: true,
@@ -97,7 +97,7 @@ const renderContent: RenderContentFunction = (h, { node, data }) => {
           }
         ),
         h(
-          ElButton,
+          TyButton,
           {
             type: 'danger',
             link: true,

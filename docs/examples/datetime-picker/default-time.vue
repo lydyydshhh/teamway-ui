@@ -76,11 +76,11 @@ const defaultTime2: [Date, Date] = [
     border-bottom: none;
   }
 
-  :deep(.el-date-editor.el-input) {
+  :deep(.ty-date-editor.ty-input) {
     width: 100%;
   }
 
-  :deep(.el-date-editor.el-input__wrapper) {
+  :deep(.ty-date-editor.ty-input__wrapper) {
     width: 100%;
     max-width: 300px;
   }

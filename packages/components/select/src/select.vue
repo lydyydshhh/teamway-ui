@@ -6,7 +6,7 @@
     @[mouseEnterEventName]="states.inputHovering = true"
     @mouseleave="states.inputHovering = false"
   >
-    <el-tooltip
+    <ty-tooltip
       ref="tooltipRef"
       :visible="dropdownMenuVisible"
       :placement="placement"
@@ -69,7 +69,7 @@
                 :key="getValueKey(item)"
                 :class="nsSelect.e('selected-item')"
               >
-                <el-tag
+                <ty-tag
                   :closable="!selectDisabled && !item.isDisabled"
                   :size="collapseTagSize"
                   :type="tagType"
@@ -88,10 +88,10 @@
                       {{ item.currentLabel }}
                     </slot>
                   </span>
-                </el-tag>
+                </ty-tag>
               </div>
 
-              <el-tooltip
+              <ty-tooltip
                 v-if="collapseTags && states.selected.length > maxCollapseTags"
                 ref="tagTooltipRef"
                 :disabled="dropdownMenuVisible || !collapseTagsTooltip"
@@ -108,7 +108,7 @@
                     ref="collapseItemRef"
                     :class="nsSelect.e('selected-item')"
                   >
-                    <el-tag
+                    <ty-tag
                       :closable="false"
                       :size="collapseTagSize"
                       :type="tagType"
@@ -119,7 +119,7 @@
                       <span :class="nsSelect.e('tags-text')">
                         + {{ states.selected.length - maxCollapseTags }}
                       </span>
-                    </el-tag>
+                    </ty-tag>
                   </div>
                 </template>
                 <template #content>
@@ -129,7 +129,7 @@
                       :key="getValueKey(item)"
                       :class="nsSelect.e('selected-item')"
                     >
-                      <el-tag
+                      <ty-tag
                         class="in-tooltip"
                         :closable="!selectDisabled && !item.isDisabled"
                         :size="collapseTagSize"
@@ -148,11 +148,11 @@
                             {{ item.currentLabel }}
                           </slot>
                         </span>
-                      </el-tag>
+                      </ty-tag>
                     </div>
                   </div>
                 </template>
-              </el-tooltip>
+              </ty-tooltip>
             </slot>
             <div
               :class="[
@@ -220,13 +220,13 @@
             </div>
           </div>
           <div ref="suffixRef" :class="nsSelect.e('suffix')">
-            <el-icon
+            <ty-icon
               v-if="iconComponent && !showClearBtn"
               :class="[nsSelect.e('caret'), nsSelect.e('icon'), iconReverse]"
             >
               <component :is="iconComponent" />
-            </el-icon>
-            <el-icon
+            </ty-icon>
+            <ty-icon
               v-if="showClearBtn && clearIcon"
               :class="[
                 nsSelect.e('caret'),
@@ -236,8 +236,8 @@
               @click="handleClearClick"
             >
               <component :is="clearIcon" />
-            </el-icon>
-            <el-icon
+            </ty-icon>
+            <ty-icon
               v-if="validateState && validateIcon && needStatusIcon"
               :class="[
                 nsInput.e('icon'),
@@ -246,12 +246,12 @@
               ]"
             >
               <component :is="validateIcon" />
-            </el-icon>
+            </ty-icon>
           </div>
         </div>
       </template>
       <template #content>
-        <el-select-menu ref="menuRef">
+        <ty-select-menu ref="menuRef">
           <div
             v-if="$slots.header"
             :class="nsSelect.be('dropdown', 'header')"
@@ -259,7 +259,7 @@
           >
             <slot name="header" />
           </div>
-          <el-scrollbar
+          <ty-scrollbar
             v-show="states.options.size > 0 && !loading"
             :id="contentId"
             ref="scrollbarRef"
@@ -272,30 +272,30 @@
             aria-orientation="vertical"
             @scroll="popupScroll"
           >
-            <el-option
+            <ty-option
               v-if="showNewOption"
               :value="states.inputValue"
               :created="true"
             />
-            <el-options>
+            <ty-options>
               <slot>
                 <template v-for="(option, index) in options" :key="index">
-                  <el-option-group
+                  <ty-option-group
                     v-if="getOptions(option)?.length"
                     :label="getLabel(option)"
                     :disabled="getDisabled(option)"
                   >
-                    <el-option
+                    <ty-option
                       v-for="item in getOptions(option)"
                       :key="getValue(item)"
                       v-bind="getOptionProps(item)"
                     />
-                  </el-option-group>
-                  <el-option v-else v-bind="getOptionProps(option)" />
+                  </ty-option-group>
+                  <ty-option v-else v-bind="getOptionProps(option)" />
                 </template>
               </slot>
-            </el-options>
-          </el-scrollbar>
+            </ty-options>
+          </ty-scrollbar>
           <div
             v-if="$slots.loading && loading"
             :class="nsSelect.be('dropdown', 'loading')"
@@ -317,9 +317,9 @@
           >
             <slot name="footer" />
           </div>
-        </el-select-menu>
+        </ty-select-menu>
       </template>
-    </el-tooltip>
+    </ty-tooltip>
   </div>
 </template>
 
@@ -335,21 +335,21 @@ import {
   watch,
 } from 'vue'
 import { ClickOutside } from '@element-plus/directives'
-import ElTooltip from '@element-plus/components/tooltip'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import ElTag from '@element-plus/components/tag'
-import ElIcon from '@element-plus/components/icon'
+import TyTooltip from '@element-plus/components/tooltip'
+import TyScrollbar from '@element-plus/components/scrollbar'
+import TyTag from '@element-plus/components/tag'
+import TyIcon from '@element-plus/components/icon'
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import { flattedChildren, isArray, isObject } from '@element-plus/utils'
 import { useCalcInputWidth } from '@element-plus/hooks'
 import { useProps } from '@element-plus/components/select-v2/src/useProps'
-import ElOption from './option.vue'
-import ElSelectMenu from './select-dropdown.vue'
+import TyOption from './option.vue'
+import TySelectMenu from './select-dropdown.vue'
 import { useSelect } from './useSelect'
 import { selectKey } from './token'
-import ElOptions from './options'
+import TyOptions from './options'
 import { selectProps } from './select'
-import ElOptionGroup from './option-group.vue'
+import TyOptionGroup from './option-group.vue'
 
 import type { AppConfig, AppContext, VNode } from 'vue'
 import type { SelectContext } from './type'
@@ -376,7 +376,7 @@ const createSelectWarnHandler = (appContext: AppContext): WarnHandler => {
       (message.includes(
         'Slot "default" invoked outside of the render function'
       ) &&
-        args[2]?.includes('ElTreeSelect'))
+        args[2]?.includes('TyTreeSelect'))
     )
       return
     const original = warnHandlerMap.get(appContext)?.originalWarnHandler
@@ -405,14 +405,14 @@ export default defineComponent({
   name: COMPONENT_NAME,
   componentName: COMPONENT_NAME,
   components: {
-    ElSelectMenu,
-    ElOption,
-    ElOptions,
-    ElOptionGroup,
-    ElTag,
-    ElScrollbar,
-    ElTooltip,
-    ElIcon,
+    TySelectMenu,
+    TyOption,
+    TyOptions,
+    TyOptionGroup,
+    TyTag,
+    TyScrollbar,
+    TyTooltip,
+    TyIcon,
   },
   directives: { ClickOutside },
   props: selectProps,
@@ -478,11 +478,11 @@ export default defineComponent({
         if (
           isObject(item) &&
           // @ts-expect-error
-          (item.type.name === 'ElOption' || item.type.name === 'ElTree')
+          (item.type.name === 'TyOption' || item.type.name === 'TyTree')
         ) {
           // @ts-expect-error
           const _name = item.type.name
-          if (_name === 'ElTree') {
+          if (_name === 'TyTree') {
             // tree-select component is a special case.
             // So we need to handle it separately.
             const treeData = item.props?.data || []
@@ -493,7 +493,7 @@ export default defineComponent({
                 (isObject(treeItem.value) ? '' : treeItem.value)
               API.onOptionCreate(treeItem)
             })
-          } else if (_name === 'ElOption') {
+          } else if (_name === 'TyOption') {
             const obj = { ...item.props } as any
             obj.currentLabel =
               obj.label || (isObject(obj.value) ? '' : obj.value)

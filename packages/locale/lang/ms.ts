@@ -122,7 +122,7 @@ export default {
       prevPages: 'Halaman {pager} sebelumnya',
       nextPages: 'Halaman {pager} seterusnya',
       deprecationWarning:
-        'Penggunaan yang ditamatkan dikesan, sila rujuk dokumentasi el-pagination untuk butiran lanjut',
+        'Penggunaan yang ditamatkan dikesan, sila rujuk dokumentasi ty-pagination untuk butiran lanjut',
     },
     dialog: {
       close: 'Tutup dialog ini',

@@ -68,16 +68,16 @@ const copyCode = async () => {
       <slot name="source" />
     </div>
 
-    <ElDivider class="m-0" />
+    <TyDivider class="m-0" />
 
     <div class="op-btns">
-      <ElTooltip
+      <TyTooltip
         :content="locale['edit-in-editor']"
         :show-arrow="false"
         :trigger="['hover', 'focus']"
         :trigger-keys="[]"
       >
-        <ElIcon :size="16" class="op-btn">
+        <TyIcon :size="16" class="op-btn">
           <a
             :href="playgroundUrl"
             :aria-label="locale['edit-in-editor']"
@@ -86,15 +86,15 @@ const copyCode = async () => {
           >
             <i-ri-flask-line />
           </a>
-        </ElIcon>
-      </ElTooltip>
-      <ElTooltip
+        </TyIcon>
+      </TyTooltip>
+      <TyTooltip
         :content="locale['edit-on-github']"
         :show-arrow="false"
         :trigger="['hover', 'focus']"
         :trigger-keys="[]"
       >
-        <ElIcon :size="16" class="op-btn github">
+        <TyIcon :size="16" class="op-btn github">
           <a
             :href="demoSourceUrl"
             :aria-label="locale['edit-on-github']"
@@ -103,15 +103,15 @@ const copyCode = async () => {
           >
             <i-ri-github-line />
           </a>
-        </ElIcon>
-      </ElTooltip>
-      <ElTooltip
+        </TyIcon>
+      </TyTooltip>
+      <TyTooltip
         :content="locale['copy-code']"
         :show-arrow="false"
         :trigger="['hover', 'focus']"
         :trigger-keys="[]"
       >
-        <ElIcon
+        <TyIcon
           :size="16"
           :aria-label="locale['copy-code']"
           class="op-btn"
@@ -122,9 +122,9 @@ const copyCode = async () => {
           @keydown.prevent.space="copyCode"
         >
           <i-ri-file-copy-line />
-        </ElIcon>
-      </ElTooltip>
-      <ElTooltip
+        </TyIcon>
+      </TyTooltip>
+      <TyTooltip
         :content="locale['view-source']"
         :show-arrow="false"
         :trigger="['hover', 'focus']"
@@ -135,21 +135,21 @@ const copyCode = async () => {
           :aria-label="
             sourceVisible ? locale['hide-source'] : locale['view-source']
           "
-          class="reset-btn el-icon op-btn"
+          class="reset-btn ty-icon op-btn"
           @click="toggleSourceVisible()"
         >
-          <ElIcon :size="16">
+          <TyIcon :size="16">
             <i-ri-code-line />
-          </ElIcon>
+          </TyIcon>
         </button>
-      </ElTooltip>
+      </TyTooltip>
     </div>
 
-    <ElCollapseTransition>
+    <TyCollapseTransition>
       <SourceCode :visible="sourceVisible" :source="source" />
-    </ElCollapseTransition>
+    </TyCollapseTransition>
 
-    <Transition name="el-fade-in-linear">
+    <Transition name="ty-fade-in-linear">
       <div
         v-show="sourceVisible"
         class="example-float-control"
@@ -158,9 +158,9 @@ const copyCode = async () => {
         @click="toggleSourceVisible(false)"
         @keydown="onSourceVisibleKeydown"
       >
-        <ElIcon :size="16">
+        <TyIcon :size="16">
           <CaretTop />
-        </ElIcon>
+        </TyIcon>
         <span>{{ locale['hide-source'] }}</span>
       </div>
     </Transition>
@@ -178,7 +178,7 @@ const copyCode = async () => {
     background-color: var(--bg-color);
     border-radius: var(--ty-border-radius-base);
     overflow: auto;
-    &:has(.el-affix) {
+    &:has(.ty-affix) {
       overflow: visible;
     }
   }
@@ -190,7 +190,7 @@ const copyCode = async () => {
     justify-content: flex-end;
     height: 2.5rem;
 
-    .el-icon {
+    .ty-icon {
       &:hover {
         color: var(--text-color);
       }

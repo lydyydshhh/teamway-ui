@@ -63,7 +63,7 @@ export default defineComponent({
     const isOption = (
       node: VNode
     ): node is VNode & { component: OptionInternalInstance } =>
-      (node.type as Component).name === 'ElOption' && !!node.component?.proxy
+      (node.type as Component).name === 'TyOption' && !!node.component?.proxy
 
     // get all instances of options
     const flattedChildren = (node: VNode | VNodeArrayChildren) => {

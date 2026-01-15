@@ -40,7 +40,7 @@ const isVertical = computed(() => {
     const vNodes: VNode[] = slots.default()
     return vNodes.some((vNode) => {
       const tag = (vNode.type as Component).name
-      return tag === 'ElHeader' || tag === 'ElFooter'
+      return tag === 'TyHeader' || tag === 'TyFooter'
     })
   } else {
     return false

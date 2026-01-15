@@ -7,8 +7,8 @@
     multiple
     :on-change="handleChange"
   >
-    <ty-icon class="el-icon--upload"><upload-filled /></ty-icon>
-    <div class="el-upload__text">
+    <ty-icon class="ty-icon--upload"><upload-filled /></ty-icon>
+    <div class="ty-upload__text">
       Drop directory here or <em>click to upload</em>
     </div>
   </ty-upload>

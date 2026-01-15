@@ -8,7 +8,7 @@ import { POPPER_INJECTION_KEY } from './constants'
 import { popperProps } from './popper'
 
 import type { Instance as PopperInstance } from '@popperjs/core'
-import type { ElPopperInjectionContext } from './constants'
+import type { TyPopperInjectionContext } from './constants'
 
 defineOptions({
   name: 'TyPopper',
@@ -43,7 +43,7 @@ const popperProvides = {
    * @description role determines how aria attributes are distributed
    */
   role,
-} as ElPopperInjectionContext
+} as TyPopperInjectionContext
 
 defineExpose(popperProvides)
 

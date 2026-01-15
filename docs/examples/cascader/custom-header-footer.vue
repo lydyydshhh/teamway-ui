@@ -114,7 +114,7 @@ const handleClear = () => {
   border-right: 1px solid var(--ty-border-color);
 }
 
-.cascader-custom-header .el-checkbox {
+.cascader-custom-header .ty-checkbox {
   display: flex;
   height: unset;
 }

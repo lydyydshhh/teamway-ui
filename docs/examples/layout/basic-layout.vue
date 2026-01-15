@@ -60,15 +60,15 @@
 </template>
 
 <style>
-.el-row {
+.ty-row {
   margin-bottom: 20px;
 }
 
-.el-row:last-child {
+.ty-row:last-child {
   margin-bottom: 0;
 }
 
-.el-col {
+.ty-col {
   border-radius: 4px;
 }
 

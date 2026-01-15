@@ -37,7 +37,7 @@
 </template>
 
 <style scoped>
-.example-showcase .el-dropdown + .el-dropdown {
+.example-showcase .ty-dropdown + .ty-dropdown {
   margin-left: 15px;
 }
 </style>

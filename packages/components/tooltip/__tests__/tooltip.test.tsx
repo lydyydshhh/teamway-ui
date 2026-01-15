@@ -51,7 +51,7 @@ describe('<ElTooltip />', () => {
       wrapper = createComponent({ appendTo: '#test' }, 'test appendTo props')
       await nextTick()
       const trigger$ = findTrigger()
-      const triggerEl = trigger$.find('.el-tooltip__trigger')
+      const triggerEl = trigger$.find('.ty-tooltip__trigger')
       await triggerEl.trigger('mouseenter')
       expect(document.querySelector('#test')?.innerHTML).toContain(
         'test appendTo props'
@@ -76,7 +76,7 @@ describe('<ElTooltip />', () => {
       await nextTick()
 
       const trigger$ = findTrigger()
-      const triggerEl = trigger$.find('.el-tooltip__trigger')
+      const triggerEl = trigger$.find('.ty-tooltip__trigger')
 
       vi.useFakeTimers()
       await triggerEl.trigger('mouseenter')
@@ -105,7 +105,7 @@ describe('<ElTooltip />', () => {
       await nextTick()
 
       const trigger$ = findTrigger()
-      const triggerEl = trigger$.find('.el-tooltip__trigger')
+      const triggerEl = trigger$.find('.ty-tooltip__trigger')
 
       vi.useFakeTimers()
       await triggerEl.trigger('focus')
@@ -134,7 +134,7 @@ describe('<ElTooltip />', () => {
       await nextTick()
 
       const trigger$ = findTrigger()
-      const triggerEl = trigger$.find('.el-tooltip__trigger')
+      const triggerEl = trigger$.find('.ty-tooltip__trigger')
 
       vi.useFakeTimers()
       await triggerEl.trigger('click')
@@ -176,7 +176,7 @@ describe('<ElTooltip />', () => {
       await rAF()
 
       expect(wrapper.emitted()).toHaveProperty('show')
-      expect(document.querySelector('.el-popper')).toBeTruthy()
+      expect(document.querySelector('.ty-popper')).toBeTruthy()
 
       vi.useFakeTimers()
       await inputEl.trigger('blur')
@@ -198,7 +198,7 @@ describe('<ElTooltip />', () => {
       await nextTick()
 
       const trigger$ = findTrigger()
-      const triggerEl = trigger$.find('.el-tooltip__trigger')
+      const triggerEl = trigger$.find('.ty-tooltip__trigger')
 
       expect(document.activeElement).not.toBe(triggerEl.element)
 
@@ -223,7 +223,7 @@ describe('<ElTooltip />', () => {
       await nextTick()
 
       const trigger$ = findTrigger()
-      const triggerEl = trigger$.find('.el-tooltip__trigger')
+      const triggerEl = trigger$.find('.ty-tooltip__trigger')
 
       expect(document.activeElement).not.toBe(triggerEl.element)
 

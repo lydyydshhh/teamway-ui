@@ -22,9 +22,9 @@
       :class="labelLeftKls"
     >
       <slot name="inactive">
-        <el-icon v-if="inactiveIcon">
+        <ty-icon v-if="inactiveIcon">
           <component :is="inactiveIcon" />
-        </el-icon>
+        </ty-icon>
         <span v-if="!inactiveIcon && inactiveText" :aria-hidden="checked">{{
           inactiveText
         }}</span>
@@ -34,34 +34,34 @@
       <div v-if="inlinePrompt" :class="ns.e('inner')">
         <div v-if="!checked" :class="ns.e('inner-wrapper')">
           <slot name="inactive">
-            <el-icon v-if="inactiveIcon">
+            <ty-icon v-if="inactiveIcon">
               <component :is="inactiveIcon" />
-            </el-icon>
+            </ty-icon>
             <span v-if="!inactiveIcon && inactiveText">{{ inactiveText }}</span>
           </slot>
         </div>
         <div v-else :class="ns.e('inner-wrapper')">
           <slot name="active">
-            <el-icon v-if="activeIcon">
+            <ty-icon v-if="activeIcon">
               <component :is="activeIcon" />
-            </el-icon>
+            </ty-icon>
             <span v-if="!activeIcon && activeText">{{ activeText }}</span>
           </slot>
         </div>
       </div>
       <div :class="ns.e('action')">
-        <el-icon v-if="loading" :class="ns.is('loading')">
+        <ty-icon v-if="loading" :class="ns.is('loading')">
           <loading />
-        </el-icon>
+        </ty-icon>
         <slot v-else-if="checked" name="active-action">
-          <el-icon v-if="activeActionIcon">
+          <ty-icon v-if="activeActionIcon">
             <component :is="activeActionIcon" />
-          </el-icon>
+          </ty-icon>
         </slot>
         <slot v-else-if="!checked" name="inactive-action">
-          <el-icon v-if="inactiveActionIcon">
+          <ty-icon v-if="inactiveActionIcon">
             <component :is="inactiveActionIcon" />
-          </el-icon>
+          </ty-icon>
         </slot>
       </div>
     </span>
@@ -70,9 +70,9 @@
       :class="labelRightKls"
     >
       <slot name="active">
-        <el-icon v-if="activeIcon">
+        <ty-icon v-if="activeIcon">
           <component :is="activeIcon" />
-        </el-icon>
+        </ty-icon>
         <span v-if="!activeIcon && activeText" :aria-hidden="!checked">{{
           activeText
         }}</span>
@@ -90,7 +90,7 @@ import {
   isPromise,
   throwError,
 } from '@element-plus/utils'
-import ElIcon from '@element-plus/components/icon'
+import TyIcon from '@element-plus/components/icon'
 import {
   useFormDisabled,
   useFormItem,

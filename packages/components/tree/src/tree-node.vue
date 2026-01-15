@@ -94,9 +94,9 @@ import {
   watch,
 } from 'vue'
 import { debugWarn, isFunction, isString } from '@element-plus/utils'
-import ElCollapseTransition from '@element-plus/components/collapse-transition'
-import ElCheckbox from '@element-plus/components/checkbox'
-import { ElIcon } from '@element-plus/components/icon'
+import TyCollapseTransition from '@element-plus/components/collapse-transition'
+import TyCheckbox from '@element-plus/components/checkbox'
+import { TyIcon } from '@element-plus/components/icon'
 import { CaretRight, Loading } from '@element-plus/icons-vue'
 import { useNamespace } from '@element-plus/hooks'
 import NodeContent from './tree-node-content.vue'
@@ -113,10 +113,10 @@ import type { CheckboxValueType } from '@element-plus/components/checkbox'
 export default defineComponent({
   name: 'TyTreeNode',
   components: {
-    ElCollapseTransition,
-    ElCheckbox,
+    TyCollapseTransition,
+    TyCheckbox,
     NodeContent,
-    ElIcon,
+    TyIcon,
     Loading,
   },
   props: {

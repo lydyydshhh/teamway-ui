@@ -37,8 +37,8 @@ import {
   checkboxGroupProps,
 } from './checkbox-group'
 import { checkboxGroupContextKey } from './constants'
-import ElCheckbox from './checkbox.vue'
-import ElCheckboxButton from './checkbox-button.vue'
+import TyCheckbox from './checkbox.vue'
+import TyCheckboxButton from './checkbox-button.vue'
 
 import type { CheckboxGroupValueType } from './checkbox-group'
 
@@ -86,7 +86,7 @@ const getOptionProps = (option: Record<string, any>) => {
 }
 
 const optionComponent = computed(() =>
-  props.type === 'button' ? ElCheckboxButton : ElCheckbox
+  props.type === 'button' ? TyCheckboxButton : TyCheckbox
 )
 
 provide(checkboxGroupContextKey, {

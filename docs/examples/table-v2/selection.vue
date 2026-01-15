@@ -16,7 +16,7 @@
 
 <script lang="tsx" setup>
 import { ref, unref } from 'vue'
-import { ElCheckbox, useLocale } from 'element-plus'
+import { TyCheckbox, useLocale } from 'element-plus'
 
 import type { FunctionalComponent } from 'vue'
 import type { CheckboxValueType, Column } from 'element-plus'
@@ -37,7 +37,7 @@ const SelectionCell: FunctionalComponent<SelectionCellProps> = ({
   onChange,
 }) => {
   return (
-    <ElCheckbox
+    <TyCheckbox
       onChange={onChange}
       modelValue={value}
       ariaLabel={ariaLabel}

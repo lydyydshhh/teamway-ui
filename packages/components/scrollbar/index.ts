@@ -3,9 +3,9 @@ import Scrollbar from './src/scrollbar.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElScrollbar: SFCWithInstall<typeof Scrollbar> =
+export const TyScrollbar: SFCWithInstall<typeof Scrollbar> =
   withInstall(Scrollbar)
-export default ElScrollbar
+export default TyScrollbar
 
 export * from './src/util'
 export * from './src/scrollbar'

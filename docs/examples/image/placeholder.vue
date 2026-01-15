@@ -36,7 +36,7 @@ const src =
   font-size: 14px;
   margin-bottom: 20px;
 }
-.demo-image__placeholder .el-image {
+.demo-image__placeholder .ty-image {
   padding: 0 5px;
   max-width: 300px;
   max-height: 200px;

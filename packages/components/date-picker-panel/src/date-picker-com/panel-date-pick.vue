@@ -28,7 +28,7 @@
       <div :class="ppNs.e('body')">
         <div v-if="showTime" :class="dpNs.e('time-header')">
           <span :class="dpNs.e('editor-wrap')">
-            <el-input
+            <ty-input
               :placeholder="t('el.datepicker.selectDate')"
               :model-value="visibleDate"
               size="small"
@@ -43,7 +43,7 @@
             v-click-outside="handleTimePickClose"
             :class="dpNs.e('editor-wrap')"
           >
-            <el-input
+            <ty-input
               :placeholder="t('el.datepicker.selectTime')"
               :model-value="visibleTime"
               size="small"
@@ -80,7 +80,7 @@
               @click="moveByYear(false)"
             >
               <slot name="prev-year">
-                <el-icon><d-arrow-left /></el-icon>
+                <ty-icon><d-arrow-left /></ty-icon>
               </slot>
             </button>
             <button
@@ -93,7 +93,7 @@
               @click="moveByMonth(false)"
             >
               <slot name="prev-month">
-                <el-icon><arrow-left /></el-icon>
+                <ty-icon><arrow-left /></ty-icon>
               </slot>
             </button>
           </span>
@@ -132,7 +132,7 @@
               @click="moveByMonth(true)"
             >
               <slot name="next-month">
-                <el-icon><arrow-right /></el-icon>
+                <ty-icon><arrow-right /></ty-icon>
               </slot>
             </button>
             <button
@@ -144,7 +144,7 @@
               @click="moveByYear(true)"
             >
               <slot name="next-year">
-                <el-icon><d-arrow-right /></el-icon>
+                <ty-icon><d-arrow-right /></ty-icon>
               </slot>
             </button>
           </span>
@@ -191,7 +191,7 @@
       v-if="showFooter && footerVisible && footerFilled"
       :class="ppNs.e('footer')"
     >
-      <el-button
+      <ty-button
         v-show="!isMultipleType && showNow"
         text
         size="small"
@@ -200,8 +200,8 @@
         @click="changeToNow"
       >
         {{ t('el.datepicker.now') }}
-      </el-button>
-      <el-button
+      </ty-button>
+      <ty-button
         v-if="showConfirm"
         plain
         size="small"
@@ -210,7 +210,7 @@
         @click="onConfirm"
       >
         {{ t('el.datepicker.confirm') }}
-      </el-button>
+      </ty-button>
     </div>
   </div>
 </template>
@@ -227,10 +227,10 @@ import {
   watch,
 } from 'vue'
 import dayjs from 'dayjs'
-import ElButton from '@element-plus/components/button'
+import TyButton from '@element-plus/components/button'
 import { ClickOutside as vClickOutside } from '@element-plus/directives'
 import { useLocale, useNamespace } from '@element-plus/hooks'
-import ElInput from '@element-plus/components/input'
+import TyInput from '@element-plus/components/input'
 import {
   DEFAULT_FORMATS_DATE,
   DEFAULT_FORMATS_TIME,
@@ -239,7 +239,7 @@ import {
   extractDateFormat,
   extractTimeFormat,
 } from '@element-plus/components/time-picker'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import {
   extractFirst,
   getEventCode,

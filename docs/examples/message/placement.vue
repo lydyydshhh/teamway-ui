@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 import type { MessagePlacement, MessageType } from 'element-plus'
 
@@ -62,7 +62,7 @@ const openMsg = (placement: MessagePlacement = 'top') => {
       break
   }
 
-  ElMessage({
+  TyMessage({
     message: `This is a message from the ${placement} ${count}`,
     type,
     placement,

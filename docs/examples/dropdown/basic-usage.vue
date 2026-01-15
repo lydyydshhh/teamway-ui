@@ -1,8 +1,8 @@
 ﻿<template>
   <ty-dropdown>
-    <span class="el-dropdown-link">
+    <span class="ty-dropdown-link">
       Dropdown List
-      <ty-icon class="el-icon--right">
+      <ty-icon class="ty-icon--right">
         <arrow-down />
       </ty-icon>
     </span>
@@ -23,7 +23,7 @@ import { ArrowDown } from '@element-plus/icons-vue'
 </script>
 
 <style scoped>
-.example-showcase .el-dropdown-link {
+.example-showcase .ty-dropdown-link {
   cursor: pointer;
   color: var(--ty-color-primary);
   display: flex;

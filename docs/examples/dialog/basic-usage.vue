@@ -23,12 +23,12 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { TyMessageBox } from 'element-plus'
 
 const dialogVisible = ref(false)
 
 const handleClose = (done: () => void) => {
-  ElMessageBox.confirm('Are you sure to close this dialog?')
+  TyMessageBox.confirm('Are you sure to close this dialog?')
     .then(() => {
       done()
     })

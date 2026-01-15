@@ -1,7 +1,7 @@
 ﻿<template>
   <ty-menu
     ellipsis
-    class="el-menu-popper-demo"
+    class="ty-menu-popper-demo"
     mode="horizontal"
     :popper-offset="16"
     style="max-width: 600px"

@@ -4,7 +4,7 @@
       <h5 class="mb-2">Default colors</h5>
       <ty-menu
         default-active="2"
-        class="el-menu-vertical-demo"
+        class="ty-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
       >
@@ -44,7 +44,7 @@
       <ty-menu
         active-text-color="#ffd04b"
         background-color="#545c64"
-        class="el-menu-vertical-demo"
+        class="ty-menu-vertical-demo"
         default-active="2"
         text-color="#fff"
         @open="handleOpen"

@@ -38,7 +38,7 @@
 
 <script lang="ts" setup>
 import { h } from 'vue'
-import { ElLink, type TableTooltipData } from 'element-plus'
+import { type TableTooltipData, TyLink } from 'element-plus'
 
 type TableData = {
   address: string
@@ -74,7 +74,7 @@ const tableRowFormatter = (data: TableTooltipData<TableData>) => {
 }
 
 const withVNode = (data: TableTooltipData<TableData>) => {
-  return h(ElLink, { type: 'primary', href: data.cellValue }, () =>
+  return h(TyLink, { type: 'primary', href: data.cellValue }, () =>
     h('span', null, data.cellValue)
   )
 }

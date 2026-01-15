@@ -5,7 +5,7 @@
   </ty-radio-group>
   <ty-menu
     default-active="2"
-    class="el-menu-vertical-demo"
+    class="ty-menu-vertical-demo"
     :collapse="isCollapse"
     @open="handleOpen"
     @close="handleClose"
@@ -62,7 +62,7 @@ const handleClose = (key: string, keyPath: string[]) => {
 </script>
 
 <style>
-.el-menu-vertical-demo:not(.el-menu--collapse) {
+.ty-menu-vertical-demo:not(.ty-menu--collapse) {
   width: 200px;
   min-height: 400px;
 }

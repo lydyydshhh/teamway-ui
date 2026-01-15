@@ -7,7 +7,7 @@
       @click.stop="handleClick"
     >
       <slot>
-        <el-icon :class="ns.e('icon')"><caret-top /></el-icon>
+        <ty-icon :class="ns.e('icon')"><caret-top /></ty-icon>
       </slot>
     </div>
   </transition>
@@ -15,7 +15,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { CaretTop } from '@element-plus/icons-vue'
 import { useNamespace } from '@element-plus/hooks'
 import { backtopEmits, backtopProps } from './backtop'

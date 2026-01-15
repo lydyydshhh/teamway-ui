@@ -20,7 +20,7 @@
           @keydown.space.prevent.stop="handleYearTableClick"
           @keydown.enter.prevent.stop="handleYearTableClick"
         >
-          <el-date-picker-cell :cell="cell" />
+          <ty-date-picker-cell :cell="cell" />
         </td>
       </tr>
     </tbody>
@@ -35,7 +35,7 @@ import { rangeArr } from '@element-plus/components/time-picker'
 import { castArray, hasClass } from '@element-plus/utils'
 import { basicYearTableProps } from '../props/basic-year-table'
 import { getValidDateOfYear } from '../utils'
-import ElDatePickerCell from './basic-cell-render'
+import TyDatePickerCell from './basic-cell-render'
 
 import type { Dayjs } from 'dayjs'
 

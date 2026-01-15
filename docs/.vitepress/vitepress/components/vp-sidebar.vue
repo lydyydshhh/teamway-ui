@@ -10,7 +10,7 @@ const { sidebars, hasSidebar } = useSidebar()
 </script>
 
 <template>
-  <el-scrollbar v-if="hasSidebar" :class="{ sidebar: true, open }">
+  <ty-scrollbar v-if="hasSidebar" :class="{ sidebar: true, open }">
     <aside>
       <slot name="top" />
       <div class="sidebar-groups">
@@ -32,5 +32,5 @@ const { sidebars, hasSidebar } = useSidebar()
       </div>
       <slot name="bottom" />
     </aside>
-  </el-scrollbar>
+  </ty-scrollbar>
 </template>

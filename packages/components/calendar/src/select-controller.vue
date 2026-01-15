@@ -1,5 +1,5 @@
 <template>
-  <el-select
+  <ty-select
     :model-value="yearValue"
     size="small"
     :class="nsSelect.e('year')"
@@ -7,7 +7,7 @@
     :options="yearOptions"
     @change="handleYearChange"
   />
-  <el-select
+  <ty-select
     :model-value="monthValue"
     size="small"
     :class="nsSelect.e('month')"
@@ -15,17 +15,17 @@
     :options="monthOptions"
     @change="handleMonthChange"
   />
-  <el-button size="small" @click="selectToday">
+  <ty-button size="small" @click="selectToday">
     {{ t('el.datepicker.today') }}
-  </el-button>
+  </ty-button>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
 import dayjs from 'dayjs'
 import { useLocale, useNamespace } from '@element-plus/hooks'
-import ElSelect from '@element-plus/components/select'
-import { ElButton } from '@element-plus/components/button'
+import TySelect from '@element-plus/components/select'
+import { TyButton } from '@element-plus/components/button'
 import { isFunction } from '@element-plus/utils'
 import {
   selectControllerEmits,

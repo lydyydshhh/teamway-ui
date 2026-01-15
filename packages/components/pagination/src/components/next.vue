@@ -8,16 +8,16 @@
     @click="$emit('click', $event)"
   >
     <span v-if="nextText">{{ nextText }}</span>
-    <el-icon v-else>
+    <ty-icon v-else>
       <component :is="nextIcon" />
-    </el-icon>
+    </ty-icon>
   </button>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { useLocale } from '@element-plus/hooks'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { paginationNextProps } from './next'
 
 defineOptions({

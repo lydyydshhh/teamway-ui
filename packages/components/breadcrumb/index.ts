@@ -4,14 +4,14 @@ import BreadcrumbItem from './src/breadcrumb-item.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElBreadcrumb: SFCWithInstall<typeof Breadcrumb> & {
+export const TyBreadcrumb: SFCWithInstall<typeof Breadcrumb> & {
   BreadcrumbItem: typeof BreadcrumbItem
 } = withInstall(Breadcrumb, {
   BreadcrumbItem,
 })
-export const ElBreadcrumbItem: SFCWithInstall<typeof BreadcrumbItem> =
+export const TyBreadcrumbItem: SFCWithInstall<typeof BreadcrumbItem> =
   withNoopInstall(BreadcrumbItem)
-export default ElBreadcrumb
+export default TyBreadcrumb
 
 export * from './src/breadcrumb'
 export * from './src/breadcrumb-item'

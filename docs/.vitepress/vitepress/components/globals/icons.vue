@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, shallowRef } from 'vue'
 import clipboardCopy from 'clipboard-copy'
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 import * as Icons from '@element-plus/icons-vue'
 import { useLang } from '../../composables/lang'
 import localeData from '../../../i18n/component/icons.json'
@@ -23,13 +23,13 @@ const copyContent = async (content) => {
   try {
     await clipboardCopy(content)
 
-    ElMessage({
+    TyMessage({
       showClose: true,
       message: locale.value['copy-success'],
       type: 'success',
     })
   } catch {
-    ElMessage({
+    TyMessage({
       showClose: true,
       message: locale.value['copy-error'],
       type: 'error',
@@ -39,7 +39,7 @@ const copyContent = async (content) => {
 
 const copySvgIcon = async (name, refs) => {
   if (copyIcon.value) {
-    await copyContent(`<el-icon><${name} /></el-icon>`)
+    await copyContent(`<ty-icon><${name} /></ty-icon>`)
   } else {
     let content = refs[name]?.[0].querySelector('svg')?.outerHTML ?? ''
     if (content) {
@@ -83,14 +83,14 @@ const filterCategories = computed(() => {
 
 <template>
   <div style="text-align: right">
-    <el-switch
+    <ty-switch
       v-model="copyIcon"
       active-text="Copy icon code"
       inactive-text="Copy SVG content"
     />
   </div>
   <div class="icon-search-content">
-    <el-input
+    <ty-input
       v-model="query"
       :prefix-icon="Icons.Search"
       size="large"
@@ -108,9 +108,9 @@ const filterCategories = computed(() => {
         @click="copySvgIcon(component.name, $refs)"
       >
         <span class="demo-svg-icon">
-          <ElIcon :size="20">
+          <TyIcon :size="20">
             <component :is="component" />
-          </ElIcon>
+          </TyIcon>
           <span class="icon-name">{{ component.name }}</span>
         </span>
       </li>
@@ -199,7 +199,7 @@ const filterCategories = computed(() => {
         background-color: var(--ty-border-color-extra-light);
         color: var(--brand-color-light);
 
-        .el-icon {
+        .ty-icon {
           color: var(--brand-color-light);
         }
       }
@@ -231,7 +231,7 @@ const filterCategories = computed(() => {
   z-index: 10;
   margin-bottom: 1.5rem;
 
-  .el-input {
+  .ty-input {
     background: var(--bg-color);
   }
 }

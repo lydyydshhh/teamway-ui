@@ -3,10 +3,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ElNotification } from 'element-plus'
+import { TyNotification } from 'element-plus'
 
 const open = () => {
-  ElNotification.success({
+  TyNotification.success({
     title: 'Info',
     message: 'This is a message without close button',
     showClose: false,

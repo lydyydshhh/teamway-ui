@@ -1,10 +1,10 @@
 <template>
-  <el-teleport
+  <ty-teleport
     :to="appendTo"
     :disabled="appendTo !== 'body' ? false : !appendToBody"
   >
     <transition v-bind="transitionConfig">
-      <el-overlay
+      <ty-overlay
         v-show="visible"
         custom-mask-event
         :mask="modal"
@@ -30,7 +30,7 @@
           @mousedown="overlayEvent.onMousedown"
           @mouseup="overlayEvent.onMouseup"
         >
-          <el-focus-trap
+          <ty-focus-trap
             loop
             :trapped="visible"
             focus-start-el="container"
@@ -39,7 +39,7 @@
             @focusout-prevented="onFocusoutPrevented"
             @release-requested="onCloseRequested"
           >
-            <el-dialog-content
+            <ty-dialog-content
               v-if="rendered"
               ref="dialogContentRef"
               v-bind="$attrs"
@@ -71,21 +71,21 @@
               <template v-if="$slots.footer" #footer>
                 <slot name="footer" />
               </template>
-            </el-dialog-content>
-          </el-focus-trap>
+            </ty-dialog-content>
+          </ty-focus-trap>
         </div>
-      </el-overlay>
+      </ty-overlay>
     </transition>
-  </el-teleport>
+  </ty-teleport>
 </template>
 
 <script lang="ts" setup>
 import { computed, provide, ref, useSlots } from 'vue'
-import { ElOverlay } from '@element-plus/components/overlay'
+import { TyOverlay } from '@element-plus/components/overlay'
 import { useDeprecated, useNamespace, useSameTarget } from '@element-plus/hooks'
-import ElFocusTrap from '@element-plus/components/focus-trap'
-import ElTeleport from '@element-plus/components/teleport'
-import ElDialogContent from './dialog-content.vue'
+import TyFocusTrap from '@element-plus/components/focus-trap'
+import TyTeleport from '@element-plus/components/teleport'
+import TyDialogContent from './dialog-content.vue'
 import { dialogInjectionKey } from './constants'
 import { dialogEmits, dialogProps } from './dialog'
 import { useDialog } from './use-dialog'
@@ -101,7 +101,7 @@ const slots = useSlots()
 
 useDeprecated(
   {
-    scope: 'el-dialog',
+    scope: 'ty-dialog',
     from: 'the title slot',
     replacement: 'the header slot',
     version: '3.0.0',

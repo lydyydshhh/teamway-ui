@@ -1,5 +1,5 @@
 <template>
-  <el-popover
+  <ty-popover
     ref="popover"
     placement="right"
     title="Title"
@@ -8,7 +8,7 @@
     content="this is content, this is content, this is content"
   >
     <template #reference>
-      <el-button>Focus to activate</el-button>
+      <ty-button>Focus to activate</ty-button>
     </template>
-  </el-popover>
+  </ty-popover>
 </template>

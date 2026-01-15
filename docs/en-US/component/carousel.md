@@ -9,7 +9,7 @@ Loop a series of images or texts in a limited space
 
 ## Basic usage
 
-:::demo Combine `el-carousel` with `el-carousel-item`, and you'll get a carousel. Content of each slide is completely customizable, and you just need to place it inside `el-carousel-item` tag. By default the carousel switches when mouse hovers over an indicator. Set `trigger` to `click`, and the carousel switches only when an indicator is clicked.
+:::demo Combine `ty-carousel` with `ty-carousel-item`, and you'll get a carousel. Content of each slide is completely customizable, and you just need to place it inside `ty-carousel-item` tag. By default the carousel switches when mouse hovers over an indicator. Set `trigger` to `click`, and the carousel switches only when an indicator is clicked.
 
 carousel/basic
 
@@ -112,7 +112,7 @@ carousel/vertical
 | Method               | Description                                                                                                                     | Type                                           |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | activeIndex ^(2.7.8) | active slide index                                                                                                              | ^[number]                                      |
-| setActiveItem        | manually switch slide, index of the slide to be switched to, starting from 0; or the `name` of corresponding `el-carousel-item` | ^[Function]`(index: string \| number) => void` |
+| setActiveItem        | manually switch slide, index of the slide to be switched to, starting from 0; or the `name` of corresponding `ty-carousel-item` | ^[Function]`(index: string \| number) => void` |
 | prev                 | switch to the previous slide                                                                                                    | ^[Function]`() => void`                        |
 | next                 | switch to the next slide                                                                                                        | ^[Function]`() => void`                        |
 

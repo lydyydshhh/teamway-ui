@@ -1,14 +1,14 @@
 <template>
-  <el-tooltip
+  <ty-tooltip
     :disabled="disabled"
     content="click to close tooltip function"
     placement="bottom"
     effect="light"
   >
-    <el-button @click="disabled = !disabled"
-      >click to {{ disabled ? 'active' : 'close' }} tooltip function</el-button
+    <ty-button @click="disabled = !disabled"
+      >click to {{ disabled ? 'active' : 'close' }} tooltip function</ty-button
     >
-  </el-tooltip>
+  </ty-tooltip>
 </template>
 
 <script lang="ts" setup>

@@ -1,13 +1,13 @@
 <template>
-  <el-timeline>
-    <el-timeline-item
+  <ty-timeline>
+    <ty-timeline-item
       v-for="(activity, index) in activities"
       :key="index"
       :timestamp="activity.timestamp"
     >
       {{ activity.content }}
-    </el-timeline-item>
-  </el-timeline>
+    </ty-timeline-item>
+  </ty-timeline>
 </template>
 
 <script lang="ts" setup>

@@ -119,7 +119,7 @@ export default {
       prevPages: 'صفحات {pager} السابقة',
       nextPages: 'صفحات {pager} التالية',
       deprecationWarning:
-        'Deprecated usages detected, please refer to the el-pagination documentation for more details', // to be translated
+        'Deprecated usages detected, please refer to the ty-pagination documentation for more details', // to be translated
     },
     dialog: {
       close: 'أغلق هذا التبويب',

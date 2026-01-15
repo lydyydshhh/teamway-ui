@@ -27,7 +27,7 @@ const {
   addChild: addStep,
   removeChild: removeStep,
   ChildrenSorter: StepsSorter,
-} = useOrderedChildren<StepItemState>(getCurrentInstance()!, 'ElStep')
+} = useOrderedChildren<StepItemState>(getCurrentInstance()!, 'TyStep')
 
 watch(steps, () => {
   steps.value.forEach((instance: StepItemState, index: number) => {

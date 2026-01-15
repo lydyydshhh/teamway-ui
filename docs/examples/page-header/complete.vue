@@ -52,7 +52,7 @@
         </ty-descriptions-item>
       </ty-descriptions>
       <p class="mt-4 text-sm">
-        Element Plus team uses <b>weekly</b> release strategy under normal
+        Tyement Plus team uses <b>weekly</b> release strategy under normal
         circumstance, but critical bug fixes would require hotfix so the actual
         release number <b>could be</b> more than 1 per week.
       </p>
@@ -61,7 +61,7 @@
 </template>
 
 <script setup lang="ts">
-import { ElNotification as notify } from 'element-plus'
+import { TyNotification as notify } from 'element-plus'
 
 const onBack = () => {
   notify('Back')

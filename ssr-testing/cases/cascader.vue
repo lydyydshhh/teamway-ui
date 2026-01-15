@@ -3,11 +3,11 @@
     <span class="example-demonstration" style="margin: 1rem"
       >Child options expand when clicked (default)</span
     >
-    <el-cascader v-model="value" :options="options" @change="handleChange" />
+    <ty-cascader v-model="value" :options="options" @change="handleChange" />
   </div>
   <div class="example-block">
     <span class="example-demonstration">Child options expand when hovered</span>
-    <el-cascader
+    <ty-cascader
       v-model="value"
       :options="options"
       :props="props"

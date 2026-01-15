@@ -3,20 +3,20 @@
     <ty-button @click="show = !show">Click Me</ty-button>
 
     <div class="transition-container">
-      <transition name="el-zoom-in-left">
-        <div v-show="show" class="transition-box">.el-zoom-in-left</div>
+      <transition name="ty-zoom-in-left">
+        <div v-show="show" class="transition-box">.ty-zoom-in-left</div>
       </transition>
 
-      <transition name="el-zoom-in-center">
-        <div v-show="show" class="transition-box">.el-zoom-in-center</div>
+      <transition name="ty-zoom-in-center">
+        <div v-show="show" class="transition-box">.ty-zoom-in-center</div>
       </transition>
 
-      <transition name="el-zoom-in-top">
-        <div v-show="show" class="transition-box">.el-zoom-in-top</div>
+      <transition name="ty-zoom-in-top">
+        <div v-show="show" class="transition-box">.ty-zoom-in-top</div>
       </transition>
 
-      <transition name="el-zoom-in-bottom">
-        <div v-show="show" class="transition-box">.el-zoom-in-bottom</div>
+      <transition name="ty-zoom-in-bottom">
+        <div v-show="show" class="transition-box">.ty-zoom-in-bottom</div>
       </transition>
     </div>
   </div>

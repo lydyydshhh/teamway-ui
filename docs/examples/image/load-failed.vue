@@ -55,7 +55,7 @@ const url =
 </script>
 
 <style scoped>
-.demo-image__error .el-image {
+.demo-image__error .ty-image {
   max-width: 300px;
   max-height: 200px;
   width: 100%;
@@ -70,7 +70,7 @@ const url =
   height: 200px;
   background: #fff;
 }
-.demo-image__error .image-slot .el-icon {
+.demo-image__error .image-slot .ty-icon {
   font-size: 30px;
 }
 .image-viewer-slot {

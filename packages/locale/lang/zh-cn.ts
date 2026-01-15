@@ -117,7 +117,7 @@ export default {
       prevPages: '向前 {pager} 页',
       nextPages: '向后 {pager} 页',
       deprecationWarning:
-        '你使用了一些已被废弃的用法，请参考 el-pagination 的官方文档',
+        '你使用了一些已被废弃的用法，请参考 ty-pagination 的官方文档',
     },
     dialog: {
       close: '关闭此对话框',

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-// import { ElMessageBox } from 'element-plus'
+// import { TyMessageBox } from 'element-plus'
 // import dayjs from 'dayjs'
 import { isClient, useEventListener, useToggle } from '@vueuse/core'
 import { EVENT_CODE } from 'element-plus'
@@ -38,7 +38,7 @@ useEventListener('keydown', (e) => {
   if (!isClient) return
   if (e.code === EVENT_CODE.esc && isSidebarOpen.value) {
     toggleSidebar(false)
-    document.querySelector<HTMLButtonElement>('.sidebar-button')?.focus()
+    document.querySelector<HTMLButtonTyement>('.sidebar-button')?.focus()
   }
 })
 
@@ -66,7 +66,7 @@ onMounted(async () => {
   //       return
   //   }
   //   try {
-  //     await ElMessageBox.confirm(
+  //     await TyMessageBox.confirm(
   //       '建议大陆用户访问部署在国内的站点，是否跳转？',
   //       '提示',
   //       {

@@ -6,7 +6,7 @@ lang: en-US
 # TreeSelect
 
 The tree selector of the dropdown menu,
-it combines the functions of components `el-tree` and `el-select`.
+it combines the functions of components `ty-tree` and `ty-select`.
 
 ## Basic usage
 
@@ -119,7 +119,7 @@ tree-select/node-key
 
 ### Attributes
 
-Since this component combines the functions of components `el-tree` and `el-select`,
+Since this component combines the functions of components `ty-tree` and `ty-select`,
 the original properties have not been changed, so no repetition here,
 and please go to the original component to view the documentation.
 

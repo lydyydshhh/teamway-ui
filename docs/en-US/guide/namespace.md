@@ -26,9 +26,9 @@ Use `ElConfigProvider` wrap your root component.
 
 ```vue [App.vue]
 <template>
-  <el-config-provider namespace="ep">
+  <ty-config-provider namespace="ep">
     <!-- ... -->
-  </el-config-provider>
+  </ty-config-provider>
 </template>
 ```
 

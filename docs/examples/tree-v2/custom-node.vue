@@ -6,7 +6,7 @@
     :height="200"
   >
     <template #default="{ node }">
-      <ty-icon class="el-icon--left">
+      <ty-icon class="ty-icon--left">
         <Document v-if="node.isLeaf" />
         <Folder v-else-if="!node.expanded" />
         <FolderOpened v-else />

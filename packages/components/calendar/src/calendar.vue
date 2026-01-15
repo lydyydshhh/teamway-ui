@@ -7,17 +7,17 @@
           v-if="validatedRange.length === 0 && controllerType === 'button'"
           :class="ns.e('button-group')"
         >
-          <el-button-group>
-            <el-button size="small" @click="selectDate('prev-month')">
+          <ty-button-group>
+            <ty-button size="small" @click="selectDate('prev-month')">
               {{ t('el.datepicker.prevMonth') }}
-            </el-button>
-            <el-button size="small" @click="selectDate('today')">
+            </ty-button>
+            <ty-button size="small" @click="selectDate('today')">
               {{ t('el.datepicker.today') }}
-            </el-button>
-            <el-button size="small" @click="selectDate('next-month')">
+            </ty-button>
+            <ty-button size="small" @click="selectDate('next-month')">
               {{ t('el.datepicker.nextMonth') }}
-            </el-button>
-          </el-button-group>
+            </ty-button>
+          </ty-button-group>
         </div>
         <div
           v-else-if="validatedRange.length === 0 && controllerType === 'select'"
@@ -58,7 +58,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ElButton, ElButtonGroup } from '@element-plus/components/button'
+import { TyButton, TyButtonGroup } from '@element-plus/components/button'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import DateTable from './date-table.vue'
 import { useCalendar } from './use-calendar'

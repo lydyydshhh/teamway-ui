@@ -3,7 +3,7 @@
     :class="[ns.b('panel'), ns.is('bordered', border)]"
     @keydown="handleKeyDown"
   >
-    <el-cascader-menu
+    <ty-cascader-menu
       v-for="(menu, index) in menus"
       :key="index"
       :ref="(item) => (menuList[index] = item as CascaderMenuInstance)"
@@ -13,7 +13,7 @@
       <template #empty>
         <slot name="empty" />
       </template>
-    </el-cascader-menu>
+    </ty-cascader-menu>
   </div>
 </template>
 
@@ -46,7 +46,7 @@ import {
   UPDATE_MODEL_EVENT,
 } from '@element-plus/constants'
 import { useNamespace } from '@element-plus/hooks'
-import ElCascaderMenu from './menu.vue'
+import TyCascaderMenu from './menu.vue'
 import Store from './store'
 import Node from './node'
 import {
@@ -62,7 +62,7 @@ import type {
   CascaderNodeValue,
   CascaderOption,
   CascaderValue,
-  ElCascaderPanelContext,
+  TyCascaderPanelContext,
 } from './types'
 import type { CascaderMenuInstance } from './instance'
 
@@ -115,7 +115,7 @@ const initStore = () => {
   }
 }
 
-const lazyLoad: ElCascaderPanelContext['lazyLoad'] = (node, cb) => {
+const lazyLoad: TyCascaderPanelContext['lazyLoad'] = (node, cb) => {
   const cfg = config.value
   node! = node || new Node({}, cfg, undefined, true)
   node.loading = true
@@ -144,7 +144,7 @@ const lazyLoad: ElCascaderPanelContext['lazyLoad'] = (node, cb) => {
   cfg.lazyLoad(node, resolve, reject)
 }
 
-const expandNode: ElCascaderPanelContext['expandNode'] = (node, silent) => {
+const expandNode: TyCascaderPanelContext['expandNode'] = (node, silent) => {
   const { level } = node
   const newMenus = menus.value.slice(0, level)
   let newExpandingNode: CascaderNode
@@ -163,7 +163,7 @@ const expandNode: ElCascaderPanelContext['expandNode'] = (node, silent) => {
   }
 }
 
-const handleCheckChange: ElCascaderPanelContext['handleCheckChange'] = (
+const handleCheckChange: TyCascaderPanelContext['handleCheckChange'] = (
   node,
   checked,
   emitClose = true

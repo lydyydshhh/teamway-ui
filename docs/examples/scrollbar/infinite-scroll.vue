@@ -32,7 +32,7 @@ const loadMore = (direction: ScrollbarDirection) => {
   background: var(--ty-color-primary-light-9);
   color: var(--ty-color-primary);
 }
-.el-slider {
+.ty-slider {
   margin-top: 20px;
 }
 </style>

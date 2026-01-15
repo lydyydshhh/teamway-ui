@@ -29,7 +29,7 @@ skeleton/configurable-rows
 
 ## Animation
 
-We have provided a switch flag indicating whether showing the loading animation, called `animated` when this is true, all children of `el-skeleton` will show animation
+We have provided a switch flag indicating whether showing the loading animation, called `animated` when this is true, all children of `ty-skeleton` will show animation
 
 :::demo
 

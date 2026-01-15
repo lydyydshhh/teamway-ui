@@ -1,5 +1,5 @@
 <template>
-  <el-tooltip
+  <ty-tooltip
     ref="popperRef"
     :visible="suggestionVisible"
     :placement="placement"
@@ -28,7 +28,7 @@
       :aria-expanded="suggestionVisible"
       :aria-owns="listboxId"
     >
-      <el-input
+      <ty-input
         ref="inputRef"
         v-bind="mergeProps(passInputProps, $attrs)"
         :model-value="modelValue"
@@ -53,7 +53,7 @@
         <template v-if="$slots.suffix" #suffix>
           <slot name="suffix" />
         </template>
-      </el-input>
+      </ty-input>
     </div>
     <template #content>
       <div
@@ -72,7 +72,7 @@
         >
           <slot name="header" />
         </div>
-        <el-scrollbar
+        <ty-scrollbar
           :id="listboxId"
           tag="ul"
           :wrap-class="ns.be('suggestion', 'wrap')"
@@ -81,9 +81,9 @@
         >
           <li v-if="suggestionLoading">
             <slot name="loading">
-              <el-icon :class="ns.is('loading')">
+              <ty-icon :class="ns.is('loading')">
                 <Loading />
-              </el-icon>
+              </ty-icon>
             </slot>
           </li>
           <template v-else>
@@ -99,7 +99,7 @@
               <slot :item="item">{{ item[valueKey] }}</slot>
             </li>
           </template>
-        </el-scrollbar>
+        </ty-scrollbar>
         <div
           v-if="$slots.footer"
           :class="ns.be('suggestion', 'footer')"
@@ -109,7 +109,7 @@
         </div>
       </div>
     </template>
-  </el-tooltip>
+  </ty-tooltip>
 </template>
 
 <script lang="ts" setup>
@@ -132,10 +132,10 @@ import {
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
 } from '@element-plus/constants'
-import ElInput, { inputProps } from '@element-plus/components/input'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import ElTooltip from '@element-plus/components/tooltip'
-import ElIcon from '@element-plus/components/icon'
+import TyInput, { inputProps } from '@element-plus/components/input'
+import TyScrollbar from '@element-plus/components/scrollbar'
+import TyTooltip from '@element-plus/components/tooltip'
+import TyIcon from '@element-plus/components/icon'
 import { useFormDisabled } from '@element-plus/components/form'
 import { autocompleteEmits, autocompleteProps } from './autocomplete'
 
@@ -276,7 +276,7 @@ const handleFocus = (evt: FocusEvent) => {
 
 const handleBlur = (evt: FocusEvent) => {
   setTimeout(() => {
-    // validate current focus event is inside el-tooltip-content
+    // validate current focus event is inside ty-tooltip-content
     // if so, ignore the blur event and the next focus event
     if (popperRef.value?.isFocusInsideContent()) {
       ignoreFocusEvent = true
@@ -460,9 +460,9 @@ defineExpose({
   activated,
   /** @description remote search loading status */
   loading,
-  /** @description el-input component instance */
+  /** @description ty-input component instance */
   inputRef,
-  /** @description el-tooltip component instance */
+  /** @description ty-tooltip component instance */
   popperRef,
   /** @description fetch suggestions result */
   suggestions,

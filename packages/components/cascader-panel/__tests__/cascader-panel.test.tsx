@@ -103,12 +103,12 @@ const CUSTOM_PROPS_OPTIONS = [
   },
 ]
 
-const MENU = '.el-cascader-menu'
-const NODE = '.el-cascader-node'
-const VALID_NODE = '.el-cascader-node:not(.is-disabled)'
-const EXPAND_ARROW = '.arrow-right.el-cascader-node__postfix'
-const CHECKBOX = '.el-checkbox__input'
-const RADIO = '.el-radio__input'
+const MENU = '.ty-cascader-menu'
+const NODE = '.ty-cascader-node'
+const VALID_NODE = '.ty-cascader-node:not(.is-disabled)'
+const EXPAND_ARROW = '.arrow-right.ty-cascader-node__postfix'
+const CHECKBOX = '.ty-checkbox__input'
+const RADIO = '.ty-radio__input'
 
 let id = 0
 
@@ -1035,7 +1035,7 @@ describe('CascaderPanel.vue', () => {
       <CascaderPanel options={NORMAL_OPTIONS} onChange={handleChange} />
     ))
     const vm = wrapper.findComponent(CascaderPanel).vm
-    const firstColumnItems = wrapper.findAll('.el-cascader-node')
+    const firstColumnItems = wrapper.findAll('.ty-cascader-node')
     const bjNode = firstColumnItems.find((node) =>
       node.text().includes('Beijing')
     )
@@ -1101,7 +1101,7 @@ describe('CascaderPanel.vue', () => {
       />
     ))
 
-    const node = wrapper.find('.el-cascader-node__label')
+    const node = wrapper.find('.ty-cascader-node__label')
     await node.trigger('click')
     await nextTick()
     expect(onChange).toHaveBeenCalledOnce()
@@ -1133,7 +1133,7 @@ describe('CascaderPanel.vue', () => {
       />
     ))
 
-    const node = wrapper.find('.el-cascader-node')
+    const node = wrapper.find('.ty-cascader-node')
     await node.trigger('click')
     await nextTick()
     expect(onChange).toHaveBeenCalledOnce()
@@ -1165,7 +1165,7 @@ describe('CascaderPanel.vue', () => {
       />
     ))
 
-    const node = wrapper.find('.el-cascader-node')
+    const node = wrapper.find('.ty-cascader-node')
     await node.trigger('click')
     await nextTick()
     expect(onChange).toHaveBeenCalledOnce()

@@ -1,7 +1,7 @@
 ﻿<template>
   <ty-dropdown @command="handleCommand">
-    <span class="el-dropdown-link">
-      Dropdown List<ty-icon class="el-icon--right"><arrow-down /></ty-icon>
+    <span class="ty-dropdown-link">
+      Dropdown List<ty-icon class="ty-icon--right"><arrow-down /></ty-icon>
     </span>
     <template #dropdown>
       <ty-dropdown-menu>
@@ -16,16 +16,16 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 import { ArrowDown } from '@element-plus/icons-vue'
 
 const handleCommand = (command: string | number | object) => {
-  ElMessage(`click on item ${command}`)
+  TyMessage(`click on item ${command}`)
 }
 </script>
 
 <style scoped>
-.example-showcase .el-dropdown-link {
+.example-showcase .ty-dropdown-link {
   cursor: pointer;
   color: var(--ty-color-primary);
   display: flex;

@@ -1,5 +1,5 @@
 <template>
-  <el-teleport to="body" :disabled="!teleported">
+  <ty-teleport to="body" :disabled="!teleported">
     <transition name="viewer-fade" appear>
       <div
         ref="wrapper"
@@ -7,7 +7,7 @@
         :class="ns.e('wrapper')"
         :style="{ zIndex }"
       >
-        <el-focus-trap
+        <ty-focus-trap
           loop
           trapped
           :focus-trap-el="wrapper"
@@ -19,22 +19,22 @@
 
           <!-- CLOSE -->
           <span :class="[ns.e('btn'), ns.e('close')]" @click="hide">
-            <el-icon>
+            <ty-icon>
               <Close />
-            </el-icon>
+            </ty-icon>
           </span>
 
           <!-- ARROW -->
           <template v-if="!isSingle">
             <span :class="arrowPrevKls" @click="prev">
-              <el-icon>
+              <ty-icon>
                 <ArrowLeft />
-              </el-icon>
+              </ty-icon>
             </span>
             <span :class="arrowNextKls" @click="next">
-              <el-icon>
+              <ty-icon>
                 <ArrowRight />
-              </el-icon>
+              </ty-icon>
             </span>
           </template>
           <div
@@ -61,23 +61,23 @@
                 :active-index="activeIndex"
                 :set-active-item="setActiveItem"
               >
-                <el-icon @click="handleActions('zoomOut')">
+                <ty-icon @click="handleActions('zoomOut')">
                   <ZoomOut />
-                </el-icon>
-                <el-icon @click="handleActions('zoomIn')">
+                </ty-icon>
+                <ty-icon @click="handleActions('zoomIn')">
                   <ZoomIn />
-                </el-icon>
+                </ty-icon>
                 <i :class="ns.e('actions__divider')" />
-                <el-icon @click="toggleMode">
+                <ty-icon @click="toggleMode">
                   <component :is="mode.icon" />
-                </el-icon>
+                </ty-icon>
                 <i :class="ns.e('actions__divider')" />
-                <el-icon @click="handleActions('anticlockwise')">
+                <ty-icon @click="handleActions('anticlockwise')">
                   <RefreshLeft />
-                </el-icon>
-                <el-icon @click="handleActions('clockwise')">
+                </ty-icon>
+                <ty-icon @click="handleActions('clockwise')">
                   <RefreshRight />
-                </el-icon>
+                </ty-icon>
               </slot>
             </div>
           </div>
@@ -104,10 +104,10 @@
             />
           </div>
           <slot />
-        </el-focus-trap>
+        </ty-focus-trap>
       </div>
     </transition>
-  </el-teleport>
+  </ty-teleport>
 </template>
 
 <script lang="ts" setup>
@@ -131,9 +131,9 @@ import {
 } from '@element-plus/hooks'
 import { EVENT_CODE } from '@element-plus/constants'
 import { getEventCode, keysOf } from '@element-plus/utils'
-import ElFocusTrap from '@element-plus/components/focus-trap'
-import ElTeleport from '@element-plus/components/teleport'
-import ElIcon from '@element-plus/components/icon'
+import TyFocusTrap from '@element-plus/components/focus-trap'
+import TyTeleport from '@element-plus/components/teleport'
+import TyIcon from '@element-plus/components/icon'
 import {
   ArrowLeft,
   ArrowRight,
@@ -311,7 +311,7 @@ function handleImgError(e: Event) {
   loadError.value = true
   loading.value = false
   emit('error', e)
-  ;(e.target as HTMLImageElement).alt = t('el.image.error')
+  ;(e.target as HTMLImageElement).alt = t('ty.image.error')
 }
 
 function handleMouseDown(e: MouseEvent) {

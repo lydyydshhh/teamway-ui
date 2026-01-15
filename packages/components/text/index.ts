@@ -3,7 +3,7 @@ import Text from './src/text.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElText: SFCWithInstall<typeof Text> = withInstall(Text)
-export default ElText
+export const TyText: SFCWithInstall<typeof Text> = withInstall(Text)
+export default TyText
 
 export * from './src/text'

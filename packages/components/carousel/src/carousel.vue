@@ -15,9 +15,9 @@
         @mouseleave="handleButtonLeave"
         @click.stop="throttledArrowClick(activeIndex - 1)"
       >
-        <ElIcon>
+        <TyIcon>
           <ArrowLeft />
-        </ElIcon>
+        </TyIcon>
       </button>
     </transition>
     <transition v-if="arrowDisplay" name="carousel-arrow-right">
@@ -33,9 +33,9 @@
         @mouseleave="handleButtonLeave"
         @click.stop="throttledArrowClick(activeIndex + 1)"
       >
-        <ElIcon>
+        <TyIcon>
           <ArrowRight />
-        </ElIcon>
+        </TyIcon>
       </button>
     </transition>
     <div
@@ -90,7 +90,7 @@
 
 <script lang="ts" setup>
 import { computed, unref } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import { carouselEmits, carouselProps } from './carousel'
@@ -175,7 +175,7 @@ function handleTransitionEnd(e: TransitionEvent) {
 defineExpose({
   /** @description active slide index */
   activeIndex: exposeActiveIndex,
-  /** @description manually switch slide, index of the slide to be switched to, starting from 0; or the `name` of corresponding `el-carousel-item` */
+  /** @description manually switch slide, index of the slide to be switched to, starting from 0; or the `name` of corresponding `ty-carousel-item` */
   setActiveItem,
   /** @description switch to the previous slide */
   prev,

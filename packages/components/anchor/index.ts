@@ -4,13 +4,13 @@ import AnchorLink from './src/anchor-link.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElAnchor: SFCWithInstall<typeof Anchor> & {
+export const TyAnchor: SFCWithInstall<typeof Anchor> & {
   AnchorLink: typeof AnchorLink
 } = withInstall(Anchor, {
   AnchorLink,
 })
-export const ElAnchorLink: SFCWithInstall<typeof AnchorLink> =
+export const TyAnchorLink: SFCWithInstall<typeof AnchorLink> =
   withNoopInstall(AnchorLink)
-export default ElAnchor
+export default TyAnchor
 
 export * from './src/anchor'

@@ -3,8 +3,8 @@
     <div :class="[ns.b(), ns.is('animated', animated)]" v-bind="$attrs">
       <template v-for="i in count" :key="i">
         <slot v-if="uiLoading" :key="i" name="template">
-          <el-skeleton-item :class="ns.is('first')" variant="p" />
-          <el-skeleton-item
+          <ty-skeleton-item :class="ns.is('first')" variant="p" />
+          <ty-skeleton-item
             v-for="item in rows"
             :key="item"
             :class="[
@@ -26,7 +26,7 @@
 import { toRef } from 'vue'
 import { useNamespace, useThrottleRender } from '@element-plus/hooks'
 import { skeletonProps } from './skeleton'
-import ElSkeletonItem from './skeleton-item.vue'
+import TySkeletonItem from './skeleton-item.vue'
 
 defineOptions({
   name: 'TySkeleton',

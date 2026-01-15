@@ -14,7 +14,7 @@ const fullscreen = ref()
 </script>
 
 <template>
-  <Transition name="el-fade-in" @enter="lock" @after-leave="cleanup">
+  <Transition name="ty-fade-in" @enter="lock" @after-leave="cleanup">
     <div v-if="fullScreen" ref="fullscreen">
       <div class="full-screen-container">
         <VPFullScreenMenu @close="$emit('close')" />
@@ -38,16 +38,16 @@ const fullscreen = ref()
   transition: background-color 0.5s;
   overflow-y: auto;
 
-  &.el-fade-in-enter-active,
-  &.el-fade-in-leave-active {
+  &.ty-fade-in-enter-active,
+  &.ty-fade-in-leave-active {
     .full-screen-container {
       transition: transform var(--ty-transition-duration)
         var(--ty-transition-function-ease-in-out-bezier);
     }
   }
 
-  &.el-fade-in-enter-from,
-  &.el-fade-in-leave-to {
+  &.ty-fade-in-enter-from,
+  &.ty-fade-in-leave-to {
     .full-screen-container {
       transform: translateY(-8px);
     }

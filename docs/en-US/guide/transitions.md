@@ -10,7 +10,7 @@ Before that, please read the [transition docs](https://vuejs.org/guide/built-ins
 
 ## Fade
 
-:::demo We have two fading effects: `el-fade-in-linear` and `el-fade-in`.
+:::demo We have two fading effects: `ty-fade-in-linear` and `ty-fade-in`.
 
 transitions/fade
 
@@ -18,7 +18,7 @@ transitions/fade
 
 ## Zoom
 
-:::demo `el-zoom-in-left`, `el-zoom-in-center`, `el-zoom-in-top` and `el-zoom-in-bottom` are provided.
+:::demo `ty-zoom-in-left`, `ty-zoom-in-center`, `ty-zoom-in-top` and `ty-zoom-in-bottom` are provided.
 
 transitions/zoom
 
@@ -26,7 +26,7 @@ transitions/zoom
 
 ## Collapse
 
-For collapse effect, use the `el-collapse-transition` component.
+For collapse effect, use the `ty-collapse-transition` component.
 
 :::demo
 

@@ -68,7 +68,7 @@ const select = ref('')
 </script>
 
 <style>
-.input-with-select .el-input-group__prepend {
+.input-with-select .ty-input-group__prepend {
   background-color: var(--ty-fill-color-blank);
 }
 </style>

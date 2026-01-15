@@ -6,7 +6,7 @@ import { ElMessage } from '..'
 import Message from '../src/method'
 import { messageTypes } from '../src/message'
 
-const selector = '.el-message'
+const selector = '.ty-message'
 // TODO: testing the original transition with `nextTick`'
 
 describe('Message on command', () => {

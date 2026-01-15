@@ -1,14 +1,14 @@
 <template>
   <div>
-    <el-button @click="show = !show">Click Me</el-button>
+    <ty-button @click="show = !show">Click Me</ty-button>
 
     <div style="margin-top: 20px; height: 200px">
-      <el-collapse-transition>
+      <ty-collapse-transition>
         <div v-show="show">
-          <div class="transition-box">el-collapse-transition</div>
-          <div class="transition-box mt-[10px]">el-collapse-transition</div>
+          <div class="transition-box">ty-collapse-transition</div>
+          <div class="transition-box mt-[10px]">ty-collapse-transition</div>
         </div>
-      </el-collapse-transition>
+      </ty-collapse-transition>
     </div>
   </div>
 </template>

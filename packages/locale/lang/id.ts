@@ -120,7 +120,7 @@ export default {
       prevPages: 'Previous {pager} pages', // to be translated
       nextPages: 'Next {pager} pages', // to be translated
       deprecationWarning:
-        'Penggunaan yang tidak akan digunakan lagi terdeteksi, silakan lihat dokumentasi el-pagination untuk lebih jelasnya',
+        'Penggunaan yang tidak akan digunakan lagi terdeteksi, silakan lihat dokumentasi ty-pagination untuk lebih jelasnya',
     },
     dialog: {
       close: 'Close this dialog', // to be translated

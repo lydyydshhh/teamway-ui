@@ -3,8 +3,8 @@
     <ty-col :span="8">
       <span class="demonstration">hover to trigger</span>
       <ty-dropdown>
-        <span class="el-dropdown-link">
-          Dropdown List<ty-icon class="el-icon--right"><arrow-down /></ty-icon>
+        <span class="ty-dropdown-link">
+          Dropdown List<ty-icon class="ty-icon--right"><arrow-down /></ty-icon>
         </span>
         <template #dropdown>
           <ty-dropdown-menu>
@@ -22,8 +22,8 @@
     <ty-col :span="8">
       <span class="demonstration">click to trigger</span>
       <ty-dropdown trigger="click">
-        <span class="el-dropdown-link">
-          Dropdown List<ty-icon class="el-icon--right"><arrow-down /></ty-icon>
+        <span class="ty-dropdown-link">
+          Dropdown List<ty-icon class="ty-icon--right"><arrow-down /></ty-icon>
         </span>
         <template #dropdown>
           <ty-dropdown-menu>
@@ -41,8 +41,8 @@
     <ty-col :span="8">
       <span class="demonstration">right click to trigger</span>
       <ty-dropdown trigger="contextmenu">
-        <span class="el-dropdown-link">
-          Dropdown List<ty-icon class="el-icon--right"><arrow-down /></ty-icon>
+        <span class="ty-dropdown-link">
+          Dropdown List<ty-icon class="ty-icon--right"><arrow-down /></ty-icon>
         </span>
         <template #dropdown>
           <ty-dropdown-menu>
@@ -79,7 +79,7 @@ import {
   margin-bottom: 20px;
 }
 
-.block-col-2 .el-dropdown-link {
+.block-col-2 .ty-dropdown-link {
   display: flex;
   align-items: center;
 }

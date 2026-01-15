@@ -1,7 +1,7 @@
 ﻿<template>
   <ty-dropdown :hide-on-click="false">
-    <span class="el-dropdown-link">
-      Dropdown List<ty-icon class="el-icon--right"><arrow-down /></ty-icon>
+    <span class="ty-dropdown-link">
+      Dropdown List<ty-icon class="ty-icon--right"><arrow-down /></ty-icon>
     </span>
     <template #dropdown>
       <ty-dropdown-menu>
@@ -21,10 +21,10 @@ import { ArrowDown } from '@element-plus/icons-vue'
 </script>
 
 <style scoped>
-.example-showcase .el-dropdown + .el-dropdown {
+.example-showcase .ty-dropdown + .ty-dropdown {
   margin-left: 15px;
 }
-.example-showcase .el-dropdown-link {
+.example-showcase .ty-dropdown-link {
   cursor: pointer;
   color: var(--ty-color-primary);
   display: flex;

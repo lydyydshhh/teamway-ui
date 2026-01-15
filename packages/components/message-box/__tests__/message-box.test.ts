@@ -8,7 +8,7 @@ import { QuestionFilled as QuestionFilledIcon } from '@element-plus/icons-vue'
 import MessageBox from '../src/messageBox'
 import { ElMessageBox } from '..'
 
-const selector = '.el-overlay'
+const selector = '.ty-overlay'
 const QuestionFilled = markRaw(QuestionFilledIcon)
 
 vi.mock('@element-plus/utils/error', () => ({
@@ -50,15 +50,15 @@ describe('MessageBox', () => {
     expect(msgbox).toBeDefined()
     await rAF()
     expect(
-      msgbox.querySelector('.el-message-box__title span').textContent
+      msgbox.querySelector('.ty-message-box__title span').textContent
     ).toEqual('消息')
     expect(
-      msgbox.querySelector('.el-message-box__message').querySelector('p')
+      msgbox.querySelector('.ty-message-box__message').querySelector('p')
         .textContent
     ).toEqual('这是一段内容')
     /** custom inline style */
     expect(
-      (msgbox.querySelector('.el-message-box') as HTMLElement).style.width
+      (msgbox.querySelector('.ty-message-box') as HTMLElement).style.width
     ).toEqual('100px')
     MessageBox.close()
     await rAF()
@@ -78,9 +78,9 @@ describe('MessageBox', () => {
       message: '这是一段内容',
     })
     await rAF()
-    const icon = document.querySelector('.el-message-box__status')
+    const icon = document.querySelector('.ty-message-box__status')
 
-    expect(icon.classList.contains('el-icon')).toBe(true)
+    expect(icon.classList.contains('ty-icon')).toBe(true)
 
     const svg = mount(QuestionFilled).find('svg').element
     expect(icon.querySelector('svg').innerHTML).toBe(svg.innerHTML)
@@ -93,7 +93,7 @@ describe('MessageBox', () => {
       message: '<strong>html string</strong>',
     })
     await rAF()
-    const message = document.querySelector('.el-message-box__message strong')
+    const message = document.querySelector('.ty-message-box__message strong')
     expect(message.textContent).toEqual('html string')
   })
 
@@ -114,7 +114,7 @@ describe('MessageBox', () => {
     await rAF()
 
     const btn = document.querySelector(
-      '.el-message-box__close'
+      '.ty-message-box__close'
     ) as HTMLButtonElement
     btn.click()
     await rAF()
@@ -131,7 +131,7 @@ describe('MessageBox', () => {
     await rAF()
     const msgbox: HTMLElement = document.querySelector(selector)
     expect(msgbox.style.display).toEqual('')
-    expect(msgbox.querySelector('.el-icon-warning')).toBeDefined()
+    expect(msgbox.querySelector('.ty-icon-warning')).toBeDefined()
   })
 
   test('confirm', async () => {
@@ -142,7 +142,7 @@ describe('MessageBox', () => {
     await rAF()
     const btn = document
       .querySelector(selector)
-      .querySelector('.el-button--primary') as HTMLButtonElement
+      .querySelector('.ty-button--primary') as HTMLButtonElement
     btn.click()
     await rAF()
     const msgbox: HTMLElement = document.querySelector(selector)
@@ -156,7 +156,7 @@ describe('MessageBox', () => {
     })
     await rAF()
     const btnElm = document.querySelector(
-      '.el-message-box__btns .el-button--primary'
+      '.ty-message-box__btns .ty-button--primary'
     )
     const haveFocus = btnElm.isSameNode(document.activeElement)
     expect(haveFocus).toBe(false)
@@ -171,7 +171,7 @@ describe('MessageBox', () => {
     await rAF()
     const inputElm = document
       .querySelector(selector)
-      .querySelector('.el-message-box__input')
+      .querySelector('.ty-message-box__input')
     const haveFocus = inputElm
       .querySelector('input')
       .isSameNode(document.activeElement)
@@ -203,7 +203,7 @@ describe('MessageBox', () => {
     })
     await rAF()
     const closeBtn = document.querySelector(
-      '.el-message-box__close'
+      '.ty-message-box__close'
     ) as HTMLButtonElement
     closeBtn.click()
     await rAF()
@@ -225,7 +225,7 @@ describe('MessageBox', () => {
     await rAF()
     ;(
       document.querySelector(
-        '.el-message-box__btns .el-button--primary'
+        '.ty-message-box__btns .ty-button--primary'
       ) as HTMLButtonElement
     ).click()
     await rAF()
@@ -242,7 +242,7 @@ describe('MessageBox', () => {
       )
       await rAF()
       const btn = document.querySelector(
-        '.el-message-box__btns .el-button--primary'
+        '.ty-message-box__btns .ty-button--primary'
       ) as HTMLButtonElement
       btn.click()
       await rAF()
@@ -257,7 +257,7 @@ describe('MessageBox', () => {
         }
       )
       await rAF()
-      const btn = document.querySelector('.el-message-box__btns .el-button')
+      const btn = document.querySelector('.ty-message-box__btns .ty-button')
       ;(btn as HTMLButtonElement).click()
       await rAF()
       expect(msgAction).toEqual('cancel')
@@ -350,7 +350,7 @@ describe('MessageBox', () => {
       const msgbox: HTMLElement = document.querySelector(selector)!
       const msgboxDialog = msgbox.querySelector('[role="dialog"]')!
       const msgboxContent = msgboxDialog.querySelector(
-        '.el-message-box__content'
+        '.ty-message-box__content'
       )!
       expect(msgboxDialog.getAttribute('aria-describedby')).toBe(
         msgboxContent.getAttribute('id')
@@ -386,8 +386,8 @@ describe('MessageBox', () => {
       })
       await rAF()
       const msgbox: HTMLElement = document.querySelector(selector)!
-      const confirmBtn = msgbox.querySelector('.el-button--primary')!
-      const error = msgbox.querySelector('.el-message-box__errormsg')!
+      const confirmBtn = msgbox.querySelector('.ty-button--primary')!
+      const error = msgbox.querySelector('.ty-message-box__errormsg')!
 
       expect(inputValidator).toHaveBeenCalledTimes(0)
       expect(error.textContent).toBe('')
@@ -411,10 +411,10 @@ describe('MessageBox', () => {
 
     await rAF()
     const cancelBtn = document.querySelector(
-      '.el-message-box__btns .el-button--warning'
+      '.ty-message-box__btns .ty-button--warning'
     )
     const confirmBtn = document.querySelector(
-      '.el-message-box__btns .el-button--danger'
+      '.ty-message-box__btns .ty-button--danger'
     )
 
     expect(cancelBtn).not.toBeNull()

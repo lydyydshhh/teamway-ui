@@ -13,7 +13,7 @@ The available time range is 00:00 to 23:59
 
 Provide a list of fixed time for users to choose.
 
-:::demo Use `el-time-select` label, then assign start time, end time and time step with `start`, `end` and `step`.
+:::demo Use `ty-time-select` label, then assign start time, end time and time step with `start`, `end` and `step`.
 
 time-select/basic
 

@@ -12,10 +12,10 @@ import SubMenu from '../src/sub-menu'
 const _mount = (template: string, options = {}) =>
   mount({
     components: {
-      'el-menu': Menu,
-      'el-menu-item-group': MenuGroup,
-      'el-menu-item': MenuItem,
-      'el-sub-menu': SubMenu,
+      'ty-menu': Menu,
+      'ty-menu-item-group': MenuGroup,
+      'ty-menu-item': MenuItem,
+      'ty-sub-menu': SubMenu,
     },
     template,
     ...options,
@@ -28,10 +28,10 @@ describe('menu', () => {
 
   test('create', async () => {
     const wrapper = _mount(
-      `<el-menu>
-        <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-        <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-      </el-menu>`
+      `<ty-menu>
+        <ty-menu-item index="1" ref="item1">处理中心</ty-menu-item>
+        <ty-menu-item index="2" ref="item2">订单管理</ty-menu-item>
+      </ty-menu>`
     )
     const item1 = await wrapper.findComponent({ ref: 'item1' })
     const item2 = await wrapper.findComponent({ ref: 'item2' })
@@ -49,13 +49,13 @@ describe('menu', () => {
     const activeTextColor = '#0f0'
 
     const wrapper = _mount(
-      `<el-menu default-active="2"
+      `<ty-menu default-active="2"
         background-color="${backgroundColor}"
         text-color="${textColor}"
         active-text-color="${activeTextColor}">
-        <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-        <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-      </el-menu>`
+        <ty-menu-item index="1" ref="item1">处理中心</ty-menu-item>
+        <ty-menu-item index="2" ref="item2">订单管理</ty-menu-item>
+      </ty-menu>`
     )
     const instance = wrapper.vm.$el
     const item1 = await wrapper.findComponent({ ref: 'item1' })
@@ -76,10 +76,10 @@ describe('menu', () => {
   })
   test('menu-item click', async () => {
     const wrapper = _mount(
-      `<el-menu>
-        <el-menu-item @click="onMenuItemClick" index="1" ref="item1">处理中心</el-menu-item>
-        <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-      </el-menu>`,
+      `<ty-menu>
+        <ty-menu-item @click="onMenuItemClick" index="1" ref="item1">处理中心</ty-menu-item>
+        <ty-menu-item index="2" ref="item2">订单管理</ty-menu-item>
+      </ty-menu>`,
       {
         data() {
           return {
@@ -104,10 +104,10 @@ describe('menu', () => {
   })
   test('menu-item disabled', async () => {
     const wrapper = _mount(
-      `<el-menu default-active="2">
-        <el-menu-item index="1" ref="item1" disabled>处理中心</el-menu-item>
-        <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-      </el-menu>`
+      `<ty-menu default-active="2">
+        <ty-menu-item index="1" ref="item1" disabled>处理中心</ty-menu-item>
+        <ty-menu-item index="2" ref="item2">订单管理</ty-menu-item>
+      </ty-menu>`
     )
     const item1 = await wrapper.findComponent({ ref: 'item1' })
     const item2 = await wrapper.findComponent({ ref: 'item2' })
@@ -119,32 +119,32 @@ describe('menu', () => {
   test('open method', async () => {
     const wrapper = _mount(
       `<div>
-          <el-menu
+          <ty-menu
             ref="menu"
             default-active="2"
-            class="el-menu-vertical-demo"
+            class="ty-menu-vertical-demo"
           >
-            <el-sub-menu index="1" ref="subMenu">
+            <ty-sub-menu index="1" ref="subMenu">
               <template #title>
                 <span>导航一</span>
               </template>
-              <el-menu-item-group>
+              <ty-menu-item-group>
                 <template #title>分组一</template>
-                <el-menu-item index="1-1">选项1</el-menu-item>
-                <el-menu-item index="1-2">选项2</el-menu-item>
-              </el-menu-item-group>
-              <el-menu-item-group title="分组2">
-                <el-menu-item index="1-3">选项3</el-menu-item>
-              </el-menu-item-group>
-              <el-sub-menu index="1-4">
+                <ty-menu-item index="1-1">选项1</ty-menu-item>
+                <ty-menu-item index="1-2">选项2</ty-menu-item>
+              </ty-menu-item-group>
+              <ty-menu-item-group title="分组2">
+                <ty-menu-item index="1-3">选项3</ty-menu-item>
+              </ty-menu-item-group>
+              <ty-sub-menu index="1-4">
                 <template #title>选项4</template>
-                <el-menu-item index="1-4-1">选项1</el-menu-item>
-              </el-sub-menu>
-            </el-sub-menu>
-            <el-menu-item index="2">
+                <ty-menu-item index="1-4-1">选项1</ty-menu-item>
+              </ty-sub-menu>
+            </ty-sub-menu>
+            <ty-menu-item index="2">
               <template #title>导航二</template>
-            </el-menu-item>
-          </el-menu>
+            </ty-menu-item>
+          </ty-menu>
           <button @click="open"></button>
         </div>
       `,
@@ -168,13 +168,13 @@ describe('menu', () => {
 
   test('hover-bg-color', async () => {
     const wrapper = _mount(
-      `<el-menu ref="menu" default-active="2"
+      `<ty-menu ref="menu" default-active="2"
         :background-color="background"
         text-color="#000"
         active-text-color="#0f0">
-        <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-        <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-      </el-menu>`,
+        <ty-menu-item index="1" ref="item1">处理中心</ty-menu-item>
+        <ty-menu-item index="2" ref="item2">订单管理</ty-menu-item>
+      </ty-menu>`,
       {
         data() {
           return {
@@ -199,10 +199,10 @@ describe('menu', () => {
 describe('default active', () => {
   test('normal active', async () => {
     const wrapper = _mount(
-      `<el-menu default-active="2">
-        <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-        <el-menu-item index="2" ref="item2">订单管理</el-menu-item>
-      </el-menu>`
+      `<ty-menu default-active="2">
+        <ty-menu-item index="1" ref="item1">处理中心</ty-menu-item>
+        <ty-menu-item index="2" ref="item2">订单管理</ty-menu-item>
+      </ty-menu>`
     )
     const item1 = await wrapper.findComponent({ ref: 'item1' })
     const item2 = await wrapper.findComponent({ ref: 'item2' })
@@ -214,10 +214,10 @@ describe('default active', () => {
   })
   test('dynamic active', async () => {
     const wrapper = _mount(
-      `<el-menu :default-active="active">
-        <el-menu-item index="1" ref="item1">active watch处理中心</el-menu-item>
-        <el-menu-item index="2" ref="item2">active watch订单管理</el-menu-item>
-      </el-menu>`,
+      `<ty-menu :default-active="active">
+        <ty-menu-item index="1" ref="item1">active watch处理中心</ty-menu-item>
+        <ty-menu-item index="2" ref="item2">active watch订单管理</ty-menu-item>
+      </ty-menu>`,
       {
         data() {
           return {
@@ -235,16 +235,16 @@ describe('default active', () => {
   test('vertical submenu item active', async () => {
     const wrapper = _mount(
       `<div>
-        <el-menu default-active="2-2" mode="vertical">
-          <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-          <el-sub-menu index="2" ref="submenu">
+        <ty-menu default-active="2-2" mode="vertical">
+          <ty-menu-item index="1" ref="item1">处理中心</ty-menu-item>
+          <ty-sub-menu index="2" ref="submenu">
             <template slot="title">我的工作台</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-          </el-sub-menu>
-          <el-menu-item index="3">订单管理</el-menu-item>
-        </el-menu>
+            <ty-menu-item index="2-1">选项1</ty-menu-item>
+            <ty-menu-item index="2-2" ref="submenuItem2">选项2</ty-menu-item>
+            <ty-menu-item index="2-3">选项3</ty-menu-item>
+          </ty-sub-menu>
+          <ty-menu-item index="3">订单管理</ty-menu-item>
+        </ty-menu>
       </div>`
     )
     const submenu = await wrapper.findComponent({ ref: 'submenu' })
@@ -257,16 +257,16 @@ describe('default active', () => {
   test('horizontal submenu item active', async () => {
     const wrapper = _mount(
       `<div>
-        <el-menu default-active="2-2">
-          <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-          <el-sub-menu index="2" ref="submenu">
+        <ty-menu default-active="2-2">
+          <ty-menu-item index="1" ref="item1">处理中心</ty-menu-item>
+          <ty-sub-menu index="2" ref="submenu">
             <template slot="title">我的工作台</template>
-            <el-menu-item index="2-1">选项1</el-menu-item>
-            <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-          </el-sub-menu>
-          <el-menu-item index="3">订单管理</el-menu-item>
-        </el-menu>
+            <ty-menu-item index="2-1">选项1</ty-menu-item>
+            <ty-menu-item index="2-2" ref="submenuItem2">选项2</ty-menu-item>
+            <ty-menu-item index="2-3">选项3</ty-menu-item>
+          </ty-sub-menu>
+          <ty-menu-item index="3">订单管理</ty-menu-item>
+        </ty-menu>
       </div>`
     )
     const submenu = await wrapper.findComponent({ ref: 'submenu' })
@@ -281,20 +281,20 @@ describe('default active', () => {
 describe('submenu', () => {
   test('toggle', async () => {
     const wrapper = _mount(
-      `<el-menu>
-        <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-        <el-sub-menu index="2" ref="submenu">
+      `<ty-menu>
+        <ty-menu-item index="1" ref="item1">处理中心</ty-menu-item>
+        <ty-sub-menu index="2" ref="submenu">
           <template slot="title">我的工作台</template>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
-        </el-sub-menu>
-        <el-menu-item index="3">订单管理</el-menu-item>
-      </el-menu>`
+          <ty-menu-item index="2-1">选项1</ty-menu-item>
+          <ty-menu-item index="2-2" ref="submenuItem2">选项2</ty-menu-item>
+          <ty-menu-item index="2-3">选项3</ty-menu-item>
+        </ty-sub-menu>
+        <ty-menu-item index="3">订单管理</ty-menu-item>
+      </ty-menu>`
     )
     const submenu = await wrapper.findComponent({ ref: 'submenu' })
     const submenuItem2 = await wrapper.findComponent({ ref: 'submenuItem2' })
-    submenu.vm.$el.querySelector('.el-sub-menu__title').click()
+    submenu.vm.$el.querySelector('.ty-sub-menu__title').click()
     await nextTick()
     expect(submenu.classes()).toContain('is-opened')
     submenuItem2.trigger('click')
@@ -306,21 +306,21 @@ describe('submenu', () => {
   })
   test('default opened', async () => {
     const wrapper = _mount(
-      `<el-menu :default-openeds="defaultOpeneds">
-        <el-menu-item index="1">default opened处理中心</el-menu-item>
-        <el-sub-menu index="2" ref="submenu1">
+      `<ty-menu :default-openeds="defaultOpeneds">
+        <ty-menu-item index="1">default opened处理中心</ty-menu-item>
+        <ty-sub-menu index="2" ref="submenu1">
           <template slot="title">default opened我的工作台</template>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2" ref="submenu1Item2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
-        </el-sub-menu>
-        <el-sub-menu index="3" ref="submenu2">
+          <ty-menu-item index="2-1">选项1</ty-menu-item>
+          <ty-menu-item index="2-2" ref="submenu1Item2">选项2</ty-menu-item>
+          <ty-menu-item index="2-3">选项3</ty-menu-item>
+        </ty-sub-menu>
+        <ty-sub-menu index="3" ref="submenu2">
           <template slot="title">default opened订单管理</template>
-          <el-menu-item index="3-1">选项1</el-menu-item>
-          <el-menu-item index="3-2" ref="submenu2Item2">选项2</el-menu-item>
-          <el-menu-item index="3-3">选项3</el-menu-item>
-        </el-sub-menu>
-      </el-menu>`,
+          <ty-menu-item index="3-1">选项1</ty-menu-item>
+          <ty-menu-item index="3-2" ref="submenu2Item2">选项2</ty-menu-item>
+          <ty-menu-item index="3-3">选项3</ty-menu-item>
+        </ty-sub-menu>
+      </ty-menu>`,
       {
         data() {
           return {
@@ -342,16 +342,16 @@ describe('submenu', () => {
   })
   test('disabled', async () => {
     const wrapper = _mount(
-      `<el-menu>
-        <el-menu-item index="1" ref="item1">处理中心</el-menu-item>
-        <el-sub-menu index="2" ref="submenu" disabled>
+      `<ty-menu>
+        <ty-menu-item index="1" ref="item1">处理中心</ty-menu-item>
+        <ty-sub-menu index="2" ref="submenu" disabled>
           <template slot="title">我的工作台</template>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
-        </el-sub-menu>
-        <el-menu-item index="3">订单管理</el-menu-item>
-      </el-menu>`,
+          <ty-menu-item index="2-1">选项1</ty-menu-item>
+          <ty-menu-item index="2-2" ref="submenuItem2">选项2</ty-menu-item>
+          <ty-menu-item index="2-3">选项3</ty-menu-item>
+        </ty-sub-menu>
+        <ty-menu-item index="3">订单管理</ty-menu-item>
+      </ty-menu>`,
       {
         data() {
           return {
@@ -370,24 +370,24 @@ describe('submenu', () => {
 describe('other', () => {
   test('disabled', async () => {
     const wrapper = _mount(
-      `<el-menu unique-opened default-active="2-2">
-        <el-menu-item index="1">处理中心</el-menu-item>
-        <el-sub-menu index="2" ref="submenu1">
+      `<ty-menu unique-opened default-active="2-2">
+        <ty-menu-item index="1">处理中心</ty-menu-item>
+        <ty-sub-menu index="2" ref="submenu1">
           <template slot="title">我的工作台</template>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2" ref="submenu1Item2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
-        </el-sub-menu>
-        <el-sub-menu index="3" ref="submenu2">
+          <ty-menu-item index="2-1">选项1</ty-menu-item>
+          <ty-menu-item index="2-2" ref="submenu1Item2">选项2</ty-menu-item>
+          <ty-menu-item index="2-3">选项3</ty-menu-item>
+        </ty-sub-menu>
+        <ty-sub-menu index="3" ref="submenu2">
           <template slot="title">订单管理</template>
-          <el-menu-item index="3-1">选项1</el-menu-item>
-          <el-menu-item index="3-2" ref="submenu2Item2">选项2</el-menu-item>
-          <el-menu-item index="3-3">选项3</el-menu-item>
-        </el-sub-menu>
-      </el-menu>`
+          <ty-menu-item index="3-1">选项1</ty-menu-item>
+          <ty-menu-item index="3-2" ref="submenu2Item2">选项2</ty-menu-item>
+          <ty-menu-item index="3-3">选项3</ty-menu-item>
+        </ty-sub-menu>
+      </ty-menu>`
     )
     const submenu2 = await wrapper.findComponent({ ref: 'submenu2' })
-    submenu2.vm.$el.querySelector('.el-sub-menu__title').click()
+    submenu2.vm.$el.querySelector('.ty-sub-menu__title').click()
     await nextTick()
     const submenu1 = await wrapper.findComponent({ ref: 'submenu1' })
     expect(submenu1.classes().includes('is-opened')).toBeFalsy()
@@ -395,16 +395,16 @@ describe('other', () => {
   test('horizontal mode', async () => {
     const onOpen = vi.fn()
     const wrapper = _mount(
-      `<el-menu mode="horizontal" @open="onOpen">
-        <el-menu-item index="1">处理中心</el-menu-item>
-        <el-sub-menu index="2" ref="submenu">
+      `<ty-menu mode="horizontal" @open="onOpen">
+        <ty-menu-item index="1">处理中心</ty-menu-item>
+        <ty-sub-menu index="2" ref="submenu">
           <template slot="title">我的工作台</template>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2" ref="submenuItem2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
-        </el-sub-menu>
-        <el-menu-item index="3">订单管理</el-menu-item>
-      </el-menu>`,
+          <ty-menu-item index="2-1">选项1</ty-menu-item>
+          <ty-menu-item index="2-2" ref="submenuItem2">选项2</ty-menu-item>
+          <ty-menu-item index="2-3">选项3</ty-menu-item>
+        </ty-sub-menu>
+        <ty-menu-item index="3">订单管理</ty-menu-item>
+      </ty-menu>`,
       {
         methods: {
           onOpen,
@@ -413,7 +413,7 @@ describe('other', () => {
     )
     await nextTick()
 
-    expect(wrapper.classes()).toContain('el-menu--horizontal')
+    expect(wrapper.classes()).toContain('ty-menu--horizontal')
     const submenu = wrapper.findComponent({ ref: 'submenu' })
 
     vi.useFakeTimers()
@@ -427,35 +427,35 @@ describe('other', () => {
   })
   test('menu group', async () => {
     const wrapper = _mount(
-      `<el-menu mode="vertical" default-active="1">
-        <el-menu-item-group title="分组一" ref="group1">
-          <el-menu-item index="1">导航一</el-menu-item>
-          <el-menu-item index="2">导航二</el-menu-item>
-        </el-menu-item-group>
-        <el-sub-menu index="5">
+      `<ty-menu mode="vertical" default-active="1">
+        <ty-menu-item-group title="分组一" ref="group1">
+          <ty-menu-item index="1">导航一</ty-menu-item>
+          <ty-menu-item index="2">导航二</ty-menu-item>
+        </ty-menu-item-group>
+        <ty-sub-menu index="5">
           <template slot="title">导航五</template>
-          <el-menu-item-group title="分组二">
-            <el-menu-item index="5-1">选项1</el-menu-item>
-            <el-menu-item index="5-2">选项2</el-menu-item>
-          </el-menu-item-group>
-        </el-sub-menu>
-      </el-menu>`
+          <ty-menu-item-group title="分组二">
+            <ty-menu-item index="5-1">选项1</ty-menu-item>
+            <ty-menu-item index="5-2">选项2</ty-menu-item>
+          </ty-menu-item-group>
+        </ty-sub-menu>
+      </ty-menu>`
     )
     const group1 = await wrapper.findComponent({ ref: 'group1' })
     expect(
-      group1.vm.$el.querySelector('.el-menu-item-group__title').innerHTML
+      group1.vm.$el.querySelector('.ty-menu-item-group__title').innerHTML
     ).toEqual('分组一')
   })
   test('dynamic menus, issue 9092', async () => {
     const wrapper = _mount(
-      `<el-menu :default-active="active">
-        <el-menu-item
+      `<ty-menu :default-active="active">
+        <ty-menu-item
           v-for="menu in menus"
           :index="menu.name"
           :key="menu.name">
           {{menu.description}}
-        </el-menu-item>
-      </el-menu>`,
+        </ty-menu-item>
+      </ty-menu>`,
       {
         data() {
           return {
@@ -476,22 +476,22 @@ describe('other', () => {
 
     await nextTick()
     expect(
-      instance.$el.querySelector('.el-menu-item.is-active').innerHTML
+      instance.$el.querySelector('.ty-menu-item.is-active').innerHTML
     ).toEqual('new')
   })
 
   test('should not generate nodes from comments, issue 21750', async () => {
     const itemWidth = 100
     const wrapper = _mount(
-      `<el-menu mode="horizontal" default-active="1">
+      `<ty-menu mode="horizontal" default-active="1">
         <!-- comment -->
-        <el-menu-item index="1">Workbenches</el-menu-item>
+        <ty-menu-item index="1">Workbenches</ty-menu-item>
         <!-- comment -->
-        <el-menu-item index="2">Users</el-menu-item>
+        <ty-menu-item index="2">Users</ty-menu-item>
         <!-- comment -->
         <!-- comment -->
         <!-- comment -->
-      </el-menu>`
+      </ty-menu>`
     )
 
     const menu = wrapper.findComponent({ name: 'ElMenu' })
@@ -534,18 +534,18 @@ describe('other', () => {
     const itemWidth = 100
 
     const wrapper = _mount(
-      `<el-menu mode="horizontal" default-active="1">
+      `<ty-menu mode="horizontal" default-active="1">
         <!-- comment -->
-        <el-menu-item index="1">选项1</el-menu-item>
+        <ty-menu-item index="1">选项1</ty-menu-item>
         <!-- comment -->
-        <el-menu-item index="2">选项2</el-menu-item>
+        <ty-menu-item index="2">选项2</ty-menu-item>
         <!-- comment -->
-        <el-menu-item index="3">选项3</el-menu-item>
+        <ty-menu-item index="3">选项3</ty-menu-item>
         <!-- comment -->
-        <el-menu-item index="4">选项4</el-menu-item>
+        <ty-menu-item index="4">选项4</ty-menu-item>
         <!-- comment -->
-        <el-menu-item index="5">选项5</el-menu-item>
-      </el-menu>`
+        <ty-menu-item index="5">选项5</ty-menu-item>
+      </ty-menu>`
     )
 
     const menu = wrapper.findComponent({ name: 'ElMenu' })
@@ -575,7 +575,7 @@ describe('other', () => {
     await rAF()
     await nextTick()
 
-    expect(menu.element.querySelectorAll('.el-menu-item').length).toBe(1)
+    expect(menu.element.querySelectorAll('.ty-menu-item').length).toBe(1)
     expect(wrapper.findComponent({ name: 'ElSubMenu' }).exists()).toBeTruthy()
 
     menuItemSpy.mockReturnValue(itemWidth * 6)
@@ -583,7 +583,7 @@ describe('other', () => {
 
     await rAF()
     await nextTick()
-    expect(menu.element.querySelectorAll('.el-menu-item').length).toBe(5)
+    expect(menu.element.querySelectorAll('.ty-menu-item').length).toBe(5)
     expect(wrapper.findComponent({ name: 'ElSubMenu' }).exists()).toBeFalsy()
 
     wrapper.unmount()

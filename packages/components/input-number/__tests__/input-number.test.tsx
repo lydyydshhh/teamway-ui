@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, it, test, vi } from 'vitest'
 import { ArrowDown, ArrowUp } from '@element-plus/icons-vue'
 import { ElForm, ElFormItem } from '@element-plus/components/form'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import InputNumber from '../src/input-number.vue'
 
@@ -122,7 +122,7 @@ describe('InputNumber.vue', () => {
     const num = ref(1)
     const wrapper = mount(() => <InputNumber min={3} v-model={num.value} />)
     expect(wrapper.find('input').element.value).toEqual('3')
-    wrapper.find('.el-input-number__decrease').trigger('mousedown')
+    wrapper.find('.ty-input-number__decrease').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.find('input').element.value).toEqual('3')
@@ -132,7 +132,7 @@ describe('InputNumber.vue', () => {
     const num = ref(5)
     const wrapper = mount(() => <InputNumber max={3} v-model={num.value} />)
     expect(wrapper.find('input').element.value).toEqual('3')
-    wrapper.find('.el-input-number__increase').trigger('mousedown')
+    wrapper.find('.ty-input-number__increase').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.find('input').element.value).toEqual('3')
@@ -141,15 +141,15 @@ describe('InputNumber.vue', () => {
   test('step, increase and decrease', async () => {
     const num = ref(0)
     const wrapper = mount(() => <InputNumber v-model={num.value} step={2} />)
-    wrapper.find('.el-input-number__decrease').trigger('mousedown')
+    wrapper.find('.ty-input-number__decrease').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.find('input').element.value).toEqual('-2')
-    wrapper.find('.el-input-number__increase').trigger('mousedown')
+    wrapper.find('.ty-input-number__increase').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.find('input').element.value).toEqual('0')
-    wrapper.find('.el-input-number__increase').trigger('mousedown')
+    wrapper.find('.ty-input-number__increase').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.find('input').element.value).toEqual('2')
@@ -266,16 +266,16 @@ describe('InputNumber.vue', () => {
       <InputNumber readonly v-model={num.value} onFocus={handleFocus} />
     ))
 
-    wrapper.find('.el-input__inner').trigger('focus')
+    wrapper.find('.ty-input__inner').trigger('focus')
     await nextTick()
     expect(handleFocus).toHaveBeenCalledTimes(1)
 
-    wrapper.find('.el-input-number__decrease').trigger('mousedown')
+    wrapper.find('.ty-input-number__decrease').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.find('input').element.value).toEqual('0')
 
-    wrapper.find('.el-input-number__increase').trigger('mousedown')
+    wrapper.find('.ty-input-number__increase').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.find('input').element.value).toEqual('0')
@@ -286,11 +286,11 @@ describe('InputNumber.vue', () => {
     const wrapper = mount(() => (
       <InputNumber disabled={true} v-model={num.value} />
     ))
-    wrapper.find('.el-input-number__decrease').trigger('mousedown')
+    wrapper.find('.ty-input-number__decrease').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.find('input').element.value).toEqual('0')
-    wrapper.find('.el-input-number__increase').trigger('mousedown')
+    wrapper.find('.ty-input-number__increase').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.find('input').element.value).toEqual('0')
@@ -301,8 +301,8 @@ describe('InputNumber.vue', () => {
     const wrapper = mount(() => (
       <InputNumber controls={false} v-model={num.value} />
     ))
-    expect(wrapper.find('.el-input-number__increase').exists()).toBe(false)
-    expect(wrapper.find('.el-input-number__decrease').exists()).toBe(false)
+    expect(wrapper.find('.ty-input-number__increase').exists()).toBe(false)
+    expect(wrapper.find('.ty-input-number__decrease').exists()).toBe(false)
   })
 
   test('controls-position', async () => {
@@ -342,7 +342,7 @@ describe('InputNumber.vue', () => {
   test('change-event', async () => {
     const num = ref(0)
     const wrapper = mount(() => <InputNumber v-model={num.value} />)
-    wrapper.find('.el-input-number__increase').trigger('mousedown')
+    wrapper.find('.ty-input-number__increase').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.getComponent(InputNumber).emitted('change')).toHaveLength(1)
@@ -352,7 +352,7 @@ describe('InputNumber.vue', () => {
     expect(
       wrapper.getComponent(InputNumber).emitted(UPDATE_MODEL_EVENT)
     ).toHaveLength(1)
-    wrapper.find('.el-input-number__increase').trigger('mousedown')
+    wrapper.find('.ty-input-number__increase').trigger('mousedown')
     document.dispatchEvent(mouseup)
     await nextTick()
     expect(wrapper.getComponent(InputNumber).emitted('change')).toHaveLength(2)
@@ -538,8 +538,8 @@ describe('InputNumber.vue', () => {
 
       await nextTick()
       const formItem = wrapper.find('[data-test-ref="item"]')
-      const formItemLabel = formItem.find('.el-form-item__label')
-      const innerInput = wrapper.find('.el-input__inner')
+      const formItemLabel = formItem.find('.ty-form-item__label')
+      const innerInput = wrapper.find('.ty-input__inner')
       expect(formItem.attributes().role).toBeFalsy()
       expect(formItemLabel.attributes().for).toBe(innerInput.attributes().id)
     })
@@ -553,8 +553,8 @@ describe('InputNumber.vue', () => {
 
       await nextTick()
       const formItem = wrapper.find('[data-test-ref="item"]')
-      const formItemLabel = formItem.find('.el-form-item__label')
-      const innerInput = wrapper.find('.el-input__inner')
+      const formItemLabel = formItem.find('.ty-form-item__label')
+      const innerInput = wrapper.find('.ty-input__inner')
       expect(formItem.attributes().role).toBeFalsy()
       expect(innerInput.attributes().id).toBe('foobar')
       expect(formItemLabel.attributes().for).toBe(innerInput.attributes().id)
@@ -581,7 +581,7 @@ describe('InputNumber.vue', () => {
       ))
 
       await nextTick()
-      const inputNumber = wrapper.find('.el-input-number')
+      const inputNumber = wrapper.find('.ty-input-number')
       expect(inputNumber.classes()).not.toContain('is-disabled')
     })
   })
@@ -627,24 +627,24 @@ describe('InputNumber.vue', () => {
       <InputNumber
         v-slots={{
           decreaseIcon: () => (
-            <ElIcon>
+            <TyIcon>
               <ArrowDown />
-            </ElIcon>
+            </TyIcon>
           ),
           increaseIcon: () => (
-            <ElIcon>
+            <TyIcon>
               <ArrowUp />
-            </ElIcon>
+            </TyIcon>
           ),
         }}
       />
     ))
-    const increase = wrapper.find('.el-input-number__increase i')
-    const decrease = wrapper.find('.el-input-number__decrease i')
+    const increase = wrapper.find('.ty-input-number__increase i')
+    const decrease = wrapper.find('.ty-input-number__decrease i')
     expect(increase.exists()).toBe(true)
     expect(decrease.exists()).toBe(true)
-    expect(increase.classes()).toContain('el-icon')
-    expect(decrease.classes()).toContain('el-icon')
+    expect(increase.classes()).toContain('ty-icon')
+    expect(decrease.classes()).toContain('ty-icon')
   })
 
   // fix: #18275
@@ -672,7 +672,7 @@ describe('InputNumber.vue', () => {
 
         await nextTick()
 
-        const root = wrapper.find('.el-input-number')
+        const root = wrapper.find('.ty-input-number')
         expect(root.classes()).toContain(expectedClass)
       }
     )

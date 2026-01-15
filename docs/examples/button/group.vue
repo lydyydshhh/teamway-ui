@@ -2,7 +2,7 @@
   <ty-button-group class="mb-4">
     <ty-button type="primary" :icon="ArrowLeft">Previous Page</ty-button>
     <ty-button type="primary">
-      Next Page<ty-icon class="el-icon--right"><ArrowRight /></ty-icon>
+      Next Page<ty-icon class="ty-icon--right"><ArrowRight /></ty-icon>
     </ty-button>
   </ty-button-group>
   <br />

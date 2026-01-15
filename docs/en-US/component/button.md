@@ -45,7 +45,7 @@ button/link
 
 :::tip
 
-Text button has been upgraded with a new design since <el-tag round effect="plain" size="small">2.2.0</el-tag> , if you want to use the
+Text button has been upgraded with a new design since <ty-tag round effect="plain" size="small">2.2.0</ty-tag> , if you want to use the
 previous version like button, you might want to check [Link](./link.md#basic) out.
 
 The API is also updated, because the `type` attribute also represents the button's style. So we have to make a new API
@@ -77,7 +77,7 @@ Displayed as a button group, can be used to group a series of similar operations
 
 In ^(2.11.9) you can use the `direction` attribute.
 
-:::demo Use tag `<el-button-group>` to group your buttons.
+:::demo Use tag `<ty-button-group>` to group your buttons.
 
 button/group
 

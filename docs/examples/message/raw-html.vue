@@ -3,10 +3,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 const openHTML = () => {
-  ElMessage({
+  TyMessage({
     dangerouslyUseHTMLString: true,
     message: '<strong>This is <i>HTML</i> string</strong>',
   })

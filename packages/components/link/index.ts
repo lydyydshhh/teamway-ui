@@ -3,7 +3,7 @@ import Link from './src/link.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElLink: SFCWithInstall<typeof Link> = withInstall(Link)
-export default ElLink
+export const TyLink: SFCWithInstall<typeof Link> = withInstall(Link)
+export default TyLink
 
 export * from './src/link'

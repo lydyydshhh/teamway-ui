@@ -7,7 +7,7 @@
     @select="handleSelect"
   >
     <template #suffix>
-      <ty-icon class="el-input__icon" @click="handleIconClick">
+      <ty-icon class="ty-input__icon" @click="handleIconClick">
         <edit />
       </ty-icon>
     </template>

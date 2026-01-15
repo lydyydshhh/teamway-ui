@@ -24,7 +24,7 @@
         "
         >{{ fit }}</span
       >
-      <el-image style="width: 100px; height: 100px" :url="url" :fit="fit" />
+      <ty-image style="width: 100px; height: 100px" :url="url" :fit="fit" />
     </div>
   </div>
 </template>

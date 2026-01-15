@@ -16,7 +16,7 @@
 </template>
 
 <style>
-.el-col {
+.ty-col {
   border-radius: 4px;
 }
 

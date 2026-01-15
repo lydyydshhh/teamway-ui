@@ -154,7 +154,7 @@ const states = [
 </script>
 
 <style>
-.el-select-dropdown__loading {
+.ty-select-dropdown__loading {
   display: flex;
   justify-content: center;
   align-items: center;

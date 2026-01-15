@@ -29,7 +29,7 @@ import {
 } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
 import { ArrowDown, ArrowRight } from '@element-plus/icons-vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import useMenu from './use-menu'
 import { useMenuCssVar } from './use-menu-css-var'
 import { MENU_INJECTION_KEY, SUB_MENU_INJECTION_KEY } from './tokens'
@@ -360,7 +360,7 @@ export default defineComponent({
       const titleTag: VNodeArrayChildren = [
         slots.title?.(),
         h(
-          ElIcon,
+          TyIcon,
           {
             class: nsSubMenu.e('icon-arrow'),
             style: {

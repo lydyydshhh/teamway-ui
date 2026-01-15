@@ -2,7 +2,7 @@ import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
 import { InfoFilled } from '@element-plus/icons-vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import Badge from '../src/badge.vue'
 
 const AXIOM = 'Rem is the best girl'
@@ -10,7 +10,7 @@ const AXIOM = 'Rem is the best girl'
 describe('Badge', () => {
   test('has value', () => {
     const wrapper = mount(() => <Badge value={80} />)
-    expect(wrapper.find('.el-badge__content').text()).toEqual('80')
+    expect(wrapper.find('.ty-badge__content').text()).toEqual('80')
   })
 
   test('is fixed', () => {
@@ -21,8 +21,8 @@ describe('Badge', () => {
         }}
       />
     ))
-    expect(wrapper.find('.el-badge__content.is-fixed').exists()).toBe(true)
-    expect(wrapper.find('.el-badge').text()).toBe(AXIOM)
+    expect(wrapper.find('.ty-badge__content.is-fixed').exists()).toBe(true)
+    expect(wrapper.find('.ty-badge').text()).toBe(AXIOM)
   })
 
   test('is dot', () => {
@@ -34,9 +34,9 @@ describe('Badge', () => {
         }}
       />
     ))
-    expect(wrapper.find('.el-badge__content.is-dot').exists()).toBe(true)
+    expect(wrapper.find('.ty-badge__content.is-dot').exists()).toBe(true)
     expect(
-      wrapper.find('.el-badge__content.el-badge__content--danger').exists()
+      wrapper.find('.ty-badge__content.ty-badge__content--danger').exists()
     ).toBe(true)
   })
 
@@ -50,19 +50,19 @@ describe('Badge', () => {
         }}
       />
     ))
-    expect(wrapper.find('.el-badge__content.is-dot').exists()).toBe(true)
+    expect(wrapper.find('.ty-badge__content.is-dot').exists()).toBe(true)
     expect(
-      wrapper.find('.el-badge__content.el-badge__content--success').exists()
+      wrapper.find('.ty-badge__content.ty-badge__content--success').exists()
     ).toBe(true)
   })
 
   test('max', async () => {
     const badgeValue = ref(200)
     const wrapper = mount(() => <Badge max={100} value={badgeValue.value} />)
-    expect(wrapper.find('.el-badge__content').text()).toEqual('100+')
+    expect(wrapper.find('.ty-badge__content').text()).toEqual('100+')
     badgeValue.value = 80
     await nextTick()
-    expect(wrapper.find('.el-badge__content').text()).toEqual('80')
+    expect(wrapper.find('.ty-badge__content').text()).toEqual('80')
   })
 
   test('showZero', async () => {
@@ -71,28 +71,28 @@ describe('Badge', () => {
     const wrapper = mount(() => (
       <Badge showZero={showZero.value} value={badgeValue.value} />
     ))
-    expect(wrapper.find('.el-badge__content').text()).toEqual('0')
+    expect(wrapper.find('.ty-badge__content').text()).toEqual('0')
     showZero.value = false
     await nextTick()
-    expect(wrapper.find('.el-badge__content').classes()).toContain(
+    expect(wrapper.find('.ty-badge__content').classes()).toContain(
       'is-hide-zero'
     )
 
     badgeValue.value = 1
     await nextTick()
-    expect(wrapper.find('.el-badge__content').text()).toEqual('1')
-    expect(wrapper.find('.el-badge__content').classes()).not.toContain(
+    expect(wrapper.find('.ty-badge__content').text()).toEqual('1')
+    expect(wrapper.find('.ty-badge__content').classes()).not.toContain(
       'is-hide-zero'
     )
     badgeValue.value = 0
     await nextTick()
-    expect(wrapper.find('.el-badge__content').classes()).toContain(
+    expect(wrapper.find('.ty-badge__content').classes()).toContain(
       'is-hide-zero'
     )
 
     showZero.value = true
     await nextTick()
-    expect(wrapper.find('.el-badge__content').classes()).not.toContain(
+    expect(wrapper.find('.ty-badge__content').classes()).not.toContain(
       'is-hide-zero'
     )
   })
@@ -103,17 +103,17 @@ describe('Badge', () => {
     const wrapper = mount(() => (
       <Badge showZero={showZero.value} max={-1} value={badgeValue.value} />
     ))
-    expect(wrapper.find('.el-badge__content').text()).toEqual('-1+')
+    expect(wrapper.find('.ty-badge__content').text()).toEqual('-1+')
     showZero.value = false
     badgeValue.value = 0
     await nextTick()
-    expect(wrapper.find('.el-badge__content').text()).toEqual('-1+')
+    expect(wrapper.find('.ty-badge__content').text()).toEqual('-1+')
   })
 
   test('color', () => {
     const badgeValue = ref(20)
     const wrapper = mount(() => <Badge value={badgeValue.value} color="blue" />)
-    expect(wrapper.find('.el-badge__content').attributes('style')).toContain(
+    expect(wrapper.find('.ty-badge__content').attributes('style')).toContain(
       'background-color: blue'
     )
   })
@@ -123,7 +123,7 @@ describe('Badge', () => {
     const wrapper = mount(() => (
       <Badge value={badgeValue.value} badgeStyle={{ background: 'blue' }} />
     ))
-    expect(wrapper.find('.el-badge__content').attributes('style')).toContain(
+    expect(wrapper.find('.ty-badge__content').attributes('style')).toContain(
       'background: blue'
     )
   })
@@ -141,10 +141,10 @@ describe('Badge', () => {
     const wrapper = mount(() => (
       <Badge value={badgeValue.value} offset={[10, 10]} />
     ))
-    expect(wrapper.find('.el-badge__content').attributes('style')).toContain(
+    expect(wrapper.find('.ty-badge__content').attributes('style')).toContain(
       'margin-right: -10px'
     )
-    expect(wrapper.find('.el-badge__content').attributes('style')).toContain(
+    expect(wrapper.find('.ty-badge__content').attributes('style')).toContain(
       'margin-top: 10px'
     )
   })
@@ -156,15 +156,15 @@ describe('Badge', () => {
         v-slots={{
           content: ({ value }: { value: string }) => (
             <div class="custom">
-              <ElIcon>
+              <TyIcon>
                 <InfoFilled />
-              </ElIcon>
+              </TyIcon>
               <span>{value}</span>
             </div>
           ),
         }}
       />
     ))
-    expect(wrapper.find('.el-badge__content .custom').exists()).toBe(true)
+    expect(wrapper.find('.ty-badge__content .custom').exists()).toBe(true)
   })
 })

@@ -1,6 +1,6 @@
 <template>
-  <el-row :gutter="12">
-    <el-col :span="6" :xs="{ span: 12 }">
+  <ty-row :gutter="12">
+    <ty-col :span="6" :xs="{ span: 12 }">
       <div class="demo-color-box-group">
         <div
           v-for="(text, i) in textColors"
@@ -17,9 +17,9 @@
           </div>
         </div>
       </div>
-    </el-col>
+    </ty-col>
 
-    <el-col :span="6" :xs="{ span: 12 }">
+    <ty-col :span="6" :xs="{ span: 12 }">
       <div class="demo-color-box-group">
         <div
           v-for="(border, i) in borderColors"
@@ -33,9 +33,9 @@
           </div>
         </div>
       </div>
-    </el-col>
+    </ty-col>
 
-    <el-col :span="6" :xs="{ span: 12 }">
+    <ty-col :span="6" :xs="{ span: 12 }">
       <div class="demo-color-box-group">
         <div
           v-for="(fill, i) in fillColors"
@@ -56,9 +56,9 @@
           </div>
         </div>
       </div>
-    </el-col>
+    </ty-col>
 
-    <el-col :span="6" :xs="{ span: 12 }">
+    <ty-col :span="6" :xs="{ span: 12 }">
       <div class="demo-color-box-group">
         <div
           class="demo-color-box demo-color-box-other"
@@ -104,8 +104,8 @@
           </div>
         </div>
       </div>
-    </el-col>
-  </el-row>
+    </ty-col>
+  </ty-row>
 </template>
 
 <script lang="ts" setup>

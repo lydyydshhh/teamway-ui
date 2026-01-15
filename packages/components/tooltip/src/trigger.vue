@@ -1,5 +1,5 @@
 <template>
-  <el-popper-trigger
+  <ty-popper-trigger
     :id="id"
     :virtual-ref="virtualRef"
     :open="open"
@@ -14,12 +14,12 @@
     @keydown="onKeydown"
   >
     <slot />
-  </el-popper-trigger>
+  </ty-popper-trigger>
 </template>
 
 <script lang="ts" setup>
 import { inject, nextTick, ref, toRef, unref } from 'vue'
-import { ElPopperTrigger } from '@element-plus/components/popper'
+import { TyPopperTrigger } from '@element-plus/components/popper'
 import {
   composeEventHandlers,
   focusElement,

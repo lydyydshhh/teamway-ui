@@ -3,17 +3,17 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'element-plus'
 
 import type { Action } from 'element-plus'
 
 const open = () => {
-  ElMessageBox.alert('This is a message', 'Title', {
+  TyMessageBox.alert('This is a message', 'Title', {
     // if you want to disable its autofocus
     // autofocus: false,
     confirmButtonText: 'OK',
     callback: (action: Action) => {
-      ElMessage({
+      TyMessage({
         type: 'info',
         message: `action: ${action}`,
       })

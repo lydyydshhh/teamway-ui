@@ -59,9 +59,9 @@ const rules = reactive<FormRules<RuleForm>>({
   desc: [{ required: true, message: 'Please input desc', trigger: 'blur' }],
 })
 
-const submitForm = async (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  await formEl.validate((valid, fields) => {
+const submitForm = async (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  await formTy.validate((valid, fields) => {
     if (valid) {
       console.log('submit!')
     } else {
@@ -70,8 +70,8 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   })
 }
 
-const resetForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.resetFields()
+const resetForm = (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  formTy.resetFields()
 }
 </script>

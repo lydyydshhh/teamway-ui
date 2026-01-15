@@ -23,7 +23,7 @@ const { t } = useLocale()
 const props = defineProps(breadcrumbProps)
 
 const ns = useNamespace('breadcrumb')
-const breadcrumb = ref<HTMLDivElement>()
+const breadcrumb = ref<HTMLDivTyement>()
 
 provide(breadcrumbKey, props)
 

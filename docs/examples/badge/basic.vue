@@ -15,9 +15,9 @@
     <ty-button>custom background</ty-button>
   </ty-badge>
   <ty-dropdown trigger="click">
-    <span class="el-dropdown-link">
+    <span class="ty-dropdown-link">
       Click Me
-      <ty-icon class="el-icon--right"><caret-bottom /></ty-icon>
+      <ty-icon class="ty-icon--right"><caret-bottom /></ty-icon>
     </span>
     <template #dropdown>
       <ty-dropdown-menu>
@@ -44,7 +44,7 @@ import { CaretBottom } from '@element-plus/icons-vue'
   margin-right: 30px;
 }
 
-.el-dropdown {
+.ty-dropdown {
   margin-top: 1.1rem;
 }
 </style>

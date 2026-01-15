@@ -18,13 +18,13 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { TyMessageBox } from 'element-plus'
 
 const drawer = ref(false)
 const innerDrawer = ref(false)
 
 const handleClose = (done: () => void) => {
-  ElMessageBox.confirm('You still have unsaved data, proceed?')
+  TyMessageBox.confirm('You still have unsaved data, proceed?')
     .then(() => {
       done()
     })

@@ -100,7 +100,7 @@ export default defineComponent({
         sortable,
         // index 列
         index: props.index,
-        // <el-table-column key="xxx" />
+        // <ty-table-column key="xxx" />
         rawColumnKey: instance.vnode.key,
       }
 

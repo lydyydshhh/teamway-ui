@@ -12,44 +12,44 @@
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 const open1 = () => {
-  ElMessage({
+  TyMessage({
     showClose: true,
     message: 'This is a info message.',
   })
 }
 const open2 = () => {
-  ElMessage({
+  TyMessage({
     showClose: true,
     message: 'Congrats, this is a success message.',
     type: 'success',
   })
 }
 const open3 = () => {
-  ElMessage({
+  TyMessage({
     showClose: true,
     message: 'Warning, this is a warning message.',
     type: 'warning',
   })
 }
 const open4 = () => {
-  ElMessage({
+  TyMessage({
     showClose: true,
     message: 'Oops, this is a error message.',
     type: 'error',
   })
 }
 const open5 = () => {
-  ElMessage({
+  TyMessage({
     showClose: true,
     message: 'Oops, this is a message that does not automatically close.',
     duration: 0,
   })
 }
 const open6 = () => {
-  ElMessage({
+  TyMessage({
     showClose: true,
     message: 'This is a primary message.',
     type: 'primary',

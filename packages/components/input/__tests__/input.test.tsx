@@ -61,7 +61,7 @@ describe('Input.vue', () => {
   })
 
   describe('test emoji', () => {
-    test('el-input should minimize value between emoji length and maxLength', async () => {
+    test('ty-input should minimize value between emoji length and maxLength', async () => {
       const inputVal = ref('12🌚')
       const wrapper = mount(() => (
         <Input
@@ -76,7 +76,7 @@ describe('Input.vue', () => {
       const nativeInput = inputElm.element
       expect(nativeInput.value).toMatchInlineSnapshot(`"12🌚"`)
 
-      const elCount = wrapper.find('.el-input__count-inner')
+      const elCount = wrapper.find('.ty-input__count-inner')
       expect(elCount.exists()).toBe(true)
       expect(elCount.text()).toMatchInlineSnapshot(`"4 / 4"`)
 
@@ -91,7 +91,7 @@ describe('Input.vue', () => {
       expect(elCount.text()).toMatchInlineSnapshot(`"8 / 4"`)
       expect(Array.from(vm.$el.classList)).toMatchInlineSnapshot(`
         [
-          "el-input",
+          "ty-input",
           "is-exceed",
           "test-exceed",
         ]
@@ -113,7 +113,7 @@ describe('Input.vue', () => {
       const nativeInput = inputElm.element
       expect(nativeInput.value).toMatchInlineSnapshot(`"啊好😄"`)
 
-      const elCount = wrapper.find('.el-input__count')
+      const elCount = wrapper.find('.ty-input__count')
       expect(elCount.exists()).toBe(true)
       expect(elCount.text()).toMatchInlineSnapshot(`"4 / 4"`)
 
@@ -123,7 +123,7 @@ describe('Input.vue', () => {
       expect(elCount.text()).toMatchInlineSnapshot(`"8 / 4"`)
       expect(Array.from(vm.$el.classList)).toMatchInlineSnapshot(`
         [
-          "el-textarea",
+          "ty-textarea",
           "is-exceed",
         ]
       `)
@@ -132,24 +132,24 @@ describe('Input.vue', () => {
 
   test('suffixIcon', () => {
     const wrapper = mount(() => <Input suffix-icon="time" />)
-    const icon = wrapper.find('.el-input__icon')
+    const icon = wrapper.find('.ty-input__icon')
     expect(icon.exists()).toBe(true)
   })
 
   test('prefixIcon', () => {
     const wrapper = mount(() => <Input prefix-icon="time" />)
-    const icon = wrapper.find('.el-input__icon')
+    const icon = wrapper.find('.ty-input__icon')
     expect(icon.exists()).toBe(true)
   })
 
   test('size', () => {
     const wrapper = mount(() => <Input size="large" />)
-    expect(wrapper.classes('el-input--large')).toBe(true)
+    expect(wrapper.classes('ty-input--large')).toBe(true)
   })
 
   test('type', () => {
     const wrapper = mount(() => <Input type="textarea" />)
-    expect(wrapper.classes('el-textarea')).toBe(true)
+    expect(wrapper.classes('ty-textarea')).toBe(true)
   })
 
   test('rows', () => {
@@ -236,12 +236,12 @@ describe('Input.vue', () => {
     const inputElm3 = wrapper.vm.$el.querySelector('.test-password')
     const inputElm4 = wrapper.vm.$el.querySelector('.test-initial-exceed')
 
-    expect(inputElm1.querySelectorAll('.el-input__count').length).toEqual(0)
-    expect(inputElm2.querySelectorAll('.el-input__count').length).toEqual(1)
-    expect(inputElm3.querySelectorAll('.el-input__count').length).toEqual(0)
+    expect(inputElm1.querySelectorAll('.ty-input__count').length).toEqual(0)
+    expect(inputElm2.querySelectorAll('.ty-input__count').length).toEqual(1)
+    expect(inputElm3.querySelectorAll('.ty-input__count').length).toEqual(0)
     expect(Array.from(inputElm4.classList)).toMatchInlineSnapshot(`
       [
-        "el-input",
+        "ty-input",
         "is-exceed",
         "test-initial-exceed",
       ]
@@ -249,13 +249,13 @@ describe('Input.vue', () => {
 
     show.value = true
     await nextTick()
-    expect(inputElm1.querySelectorAll('.el-input__count').length).toEqual(1)
+    expect(inputElm1.querySelectorAll('.ty-input__count').length).toEqual(1)
 
     input4.value = '1'
     await nextTick()
     expect(Array.from(inputElm4.classList)).toMatchInlineSnapshot(`
       [
-        "el-input",
+        "ty-input",
         "test-initial-exceed",
       ]
     `)
@@ -473,7 +473,7 @@ describe('Input.vue', () => {
       // focus to show clear button
       await input.trigger('focus')
       await nextTick()
-      vm.$el.querySelector('.el-input__clear').click()
+      vm.$el.querySelector('.ty-input__clear').click()
       await nextTick()
       expect(content.value).toEqual('')
       expect(handleClear).toBeCalled()
@@ -561,7 +561,7 @@ describe('Input.vue', () => {
       <Input type="password" modelValue={password.value} show-password />
     ))
 
-    const icon = wrapper.find('.el-input__icon.el-input__password')
+    const icon = wrapper.find('.ty-input__icon.ty-input__password')
     const d = icon.find('path').element.getAttribute('d')
     await icon.trigger('click')
     const d0 = icon.find('path').element.getAttribute('d')
@@ -574,7 +574,7 @@ describe('Input.vue', () => {
       <Input type="password" modelValue={password.value} show-password />
     ))
 
-    const icon = wrapper.find('.el-input__icon.el-input__password')
+    const icon = wrapper.find('.ty-input__icon.ty-input__password')
     const input = wrapper.find('input')
 
     expect(input.element.value).toBe('123456')
@@ -603,7 +603,7 @@ describe('Input.vue', () => {
       await nextTick()
       const formItem = wrapper.find('[data-test-ref="item"]')
       const input = wrapper.find('[data-test-ref="input"]')
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItem.attributes().role).toBeFalsy()
       expect(formItemLabel.attributes().for).toBe(input.attributes().id)
     })
@@ -618,7 +618,7 @@ describe('Input.vue', () => {
       await nextTick()
       const formItem = wrapper.find('[data-test-ref="item"]')
       const input = wrapper.find('[data-test-ref="input"]')
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItem.attributes().role).toBeFalsy()
       expect(input.attributes().id).toBe('foobar')
       expect(formItemLabel.attributes().for).toBe(input.attributes().id)
@@ -645,7 +645,7 @@ describe('Input.vue', () => {
       ))
 
       await nextTick()
-      const input = wrapper.find('.el-input')
+      const input = wrapper.find('.ty-input')
       expect(input.classes()).not.toContain('is-disabled')
     })
   })
@@ -793,7 +793,7 @@ describe('Input.vue', () => {
       />
     ))
 
-    const wordLimit = wrapper.find('.el-input__count')
+    const wordLimit = wrapper.find('.ty-input__count')
     await nextTick()
     expect(wordLimit.exists()).toBe(true)
     expect(wordLimit.element.className.includes('is-outside')).toBeTruthy()
@@ -809,7 +809,7 @@ describe('Input.vue', () => {
       />
     ))
 
-    const wordLimit = wrapper.find('.el-input__count')
+    const wordLimit = wrapper.find('.ty-input__count')
     await nextTick()
     expect(wordLimit.exists()).toBe(true)
     expect(wordLimit.element.className.includes('is-outside')).toBeTruthy()

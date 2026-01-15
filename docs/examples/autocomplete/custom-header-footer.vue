@@ -96,7 +96,7 @@ const handleClear = () => {
   flex: 1;
   text-align: center;
 }
-.autocomplete-custom-header-footer > div > :deep(.el-autocomplete) {
+.autocomplete-custom-header-footer > div > :deep(.ty-autocomplete) {
   width: 50%;
 }
 

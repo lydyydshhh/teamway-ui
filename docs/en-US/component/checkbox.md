@@ -22,12 +22,12 @@ If you are using a version **less than** ^(2.6.0) and using `checkbox-group`, pl
 
 ```vue
 <template>
-  <el-checkbox-group v-model="checkList">
+  <ty-checkbox-group v-model="checkList">
     <!-- works when >=2.6.0, recommended ✔️ value not work when <2.6.0 ❌ -->
-    <el-checkbox label="Option 1" value="Value 1" />
+    <ty-checkbox label="Option 1" value="Value 1" />
     <!-- works when <2.6.0, deprecated act as value when >=3.0.0 -->
-    <el-checkbox label="Option 2 & Value 2" />
-  </el-checkbox-group>
+    <ty-checkbox label="Option 2 & Value 2" />
+  </ty-checkbox-group>
 </template>
 ```
 
@@ -35,7 +35,7 @@ If you are using a version **less than** ^(2.6.0) and using `checkbox-group`, pl
 
 Checkbox can be used alone to switch between two states.
 
-:::demo Define `v-model`(bind variable) in `el-checkbox`. The default value is a `Boolean` for single `checkbox`, and it becomes `true` when selected. Content inside the `el-checkbox` tag will become the description following the button of the checkbox.
+:::demo Define `v-model`(bind variable) in `ty-checkbox`. The default value is a `Boolean` for single `checkbox`, and it becomes `true` when selected. Content inside the `ty-checkbox` tag will become the description following the button of the checkbox.
 
 checkbox/basic
 
@@ -55,7 +55,7 @@ checkbox/disabled
 
 It is used for multiple checkboxes which are bound in one group, and indicates whether one option is selected by checking if it is checked.
 
-:::demo `checkbox-group` element can manage multiple checkboxes in one group by using `v-model` which is bound as an `Array`. Inside the `el-checkbox` element, `value` is the value of the checkbox. If no content is nested in that tag, `label` will be rendered as the description following the button of the checkbox. `value` also corresponds with the element values in the array. It is selected if the specified value exists in the array, and vice versa.
+:::demo `checkbox-group` element can manage multiple checkboxes in one group by using `v-model` which is bound as an `Array`. Inside the `ty-checkbox` element, `value` is the value of the checkbox. If no content is nested in that tag, `label` will be rendered as the description following the button of the checkbox. `value` also corresponds with the element values in the array. It is selected if the specified value exists in the array, and vice versa.
 
 checkbox/grouping
 
@@ -63,7 +63,7 @@ checkbox/grouping
 
 ## Options attribute ^(2.11.2)
 
-:::demo Shortcut from basic `el-checkbox-group` usage. You can customize the alias of the `options` through the `props` attribute.
+:::demo Shortcut from basic `ty-checkbox-group` usage. You can customize the alias of the `options` through the `props` attribute.
 
 checkbox/options
 
@@ -93,7 +93,7 @@ checkbox/limitation
 
 Checkbox with button styles.
 
-:::demo You just need to change `el-checkbox` element into `el-checkbox-button` element. We also provide `size` attribute.
+:::demo You just need to change `ty-checkbox` element into `ty-checkbox-button` element. We also provide `size` attribute.
 
 checkbox/button-style
 

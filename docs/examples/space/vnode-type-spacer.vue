@@ -8,8 +8,8 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue'
-import { ElDivider } from 'element-plus'
+import { TyDivider } from 'element-plus'
 
 const size = ref(10)
-const spacer = h(ElDivider, { direction: 'vertical' })
+const spacer = h(TyDivider, { direction: 'vertical' })
 </script>

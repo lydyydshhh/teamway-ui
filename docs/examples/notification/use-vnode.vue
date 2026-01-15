@@ -7,10 +7,10 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue'
-import { ElNotification, ElSwitch } from 'element-plus'
+import { TyNotification, TySwitch } from 'element-plus'
 
 const open = () => {
-  ElNotification({
+  TyNotification({
     title: 'Use Vnode',
     message: h('p', null, [
       h('span', null, 'Message can be '),
@@ -21,11 +21,11 @@ const open = () => {
 
 const open1 = () => {
   const checked = ref<boolean | string | number>(false)
-  ElNotification({
+  TyNotification({
     title: 'Use Vnode',
     // Should pass a function if VNode contains dynamic props
     message: () =>
-      h(ElSwitch, {
+      h(TySwitch, {
         modelValue: checked.value,
         'onUpdate:modelValue': (val: boolean | string | number) => {
           checked.value = val
