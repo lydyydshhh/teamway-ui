@@ -14,7 +14,7 @@ import {
 } from 'vue'
 import { unrefElement, useResizeObserver } from '@vueuse/core'
 import { isNil } from 'lodash-unified'
-import ElIcon from '@element-plus/components/icon'
+import TyIcon from '@element-plus/components/icon'
 import { More } from '@element-plus/icons-vue'
 import {
   buildProps,
@@ -519,7 +519,7 @@ export default defineComponent({
               {
                 title: () =>
                   h(
-                    ElIcon,
+                    TyIcon,
                     {
                       class: nsSubMenu.e('icon-more'),
                     },

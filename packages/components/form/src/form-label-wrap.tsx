@@ -31,7 +31,7 @@ export default defineComponent({
     if (!formItemContext)
       throwError(
         COMPONENT_NAME,
-        'usage: <el-form-item><label-wrap /></el-form-item>'
+        'usage: <ty-form-item><label-wrap /></ty-form-item>'
       )
 
     const ns = useNamespace('form')

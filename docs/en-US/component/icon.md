@@ -114,14 +114,14 @@ so you need to use an alias in order to render the icon, if you register `Menu` 
 import { Edit, Share, Delete, Search, Loading } from '@element-plus/icons-vue'
 </vp-script>
 
-<ElRow>
+<TyRow>
   <div>
-    <ElIcon :size="30">
+    <TyIcon :size="30">
       <Edit />
-    </ElIcon>
+    </TyIcon>
     <Edit />
   </div>
-</ElRow>
+</TyRow>
 
 ## Combined with ty-icon
 
@@ -154,32 +154,32 @@ import { Edit, Share, Delete, Search, Loading } from '@element-plus/icons-vue'
 </template>
 ```
 
-<ElRow>
+<TyRow>
   <p>
     with extra class <b>is-loading</b>, your icon is able to rotate 360 deg in 2
     seconds, you can also override this
   </p>
   <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-    <ElIcon :size="20">
+    <TyIcon :size="20">
       <Edit />
-    </ElIcon>
-    <ElIcon color="#409efc" class="no-inherit">
+    </TyIcon>
+    <TyIcon color="#409efc" class="no-inherit">
       <Share />
-    </ElIcon>
-    <ElIcon>
+    </TyIcon>
+    <TyIcon>
       <Delete />
-    </ElIcon>
-    <ElIcon class="is-loading">
+    </TyIcon>
+    <TyIcon class="is-loading">
       <Loading />
-    </ElIcon>
-    <ElButton type="primary">
-      <ElIcon style="vertical-align: middle; color: #fff;">
+    </TyIcon>
+    <TyButton type="primary">
+      <TyIcon style="vertical-align: middle; color: #fff;">
         <Search />
-      </ElIcon>
+      </TyIcon>
       <span style="vertical-align: middle;"> Search </span>
-    </ElButton>
+    </TyButton>
   </div>
-</ElRow>
+</TyRow>
 
 ## Using SVG icon directly
 
@@ -196,7 +196,7 @@ import { Edit, Share, Delete, Search, Loading } from '@element-plus/icons-vue'
 </template>
 ```
 
-<ElRow>
+<TyRow>
   <div style="font-size: 20px;">
     <!-- Since svg icons do not carry any attributes by default -->
     <!-- You need to provide attributes directly -->
@@ -205,7 +205,7 @@ import { Edit, Share, Delete, Search, Loading } from '@element-plus/icons-vue'
     <Delete style="width: 1em; height: 1em; margin-right: 8px;" />
     <Search style="width: 1em; height: 1em; margin-right: 8px;" />
   </div>
-</ElRow>
+</TyRow>
 
 ## Icon Collection{#icon-collection}
 

@@ -34,7 +34,7 @@ const {
   children: panels,
   addChild: registerPanel,
   ChildrenSorter: PanelsSorter,
-} = useOrderedChildren<PanelItemState>(getCurrentInstance()!, 'ElSplitterPanel')
+} = useOrderedChildren<PanelItemState>(getCurrentInstance()!, 'TySplitterPanel')
 
 watch(panels, () => {
   movingIndex.value = null

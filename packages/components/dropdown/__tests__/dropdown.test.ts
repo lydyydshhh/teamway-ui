@@ -1083,7 +1083,7 @@ describe('Dropdown', () => {
     // The ty-icon should be rendered
     const icon = wrapper
       .findComponent({ name: 'DropdownItemImpl' })
-      .findComponent({ name: 'ElIcon' })
+      .findComponent({ name: 'TyIcon' })
     expect(icon.exists()).toBe(true)
 
     // The icon content should be rendered
@@ -1118,7 +1118,7 @@ describe('Dropdown', () => {
     // Find icon element
     const icon = wrapper
       .findComponent({ name: 'DropdownItemImpl' })
-      .findComponent({ name: 'ElIcon' })
+      .findComponent({ name: 'TyIcon' })
 
     // The icon slot content shouldn't be rendered
     expect(icon.exists()).toBe(false)

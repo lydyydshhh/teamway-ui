@@ -72,8 +72,8 @@ import { withInstall } from '@element-plus/utils'
 import $NAME from './src/$INPUT_NAME.vue'
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const El$NAME: SFCWithInstall<typeof $NAME> = withInstall($NAME)
-export default El$NAME
+export const Ty$NAME: SFCWithInstall<typeof $NAME> = withInstall($NAME)
+export default Ty$NAME
 
 export * from './src/$INPUT_NAME'
 export type { ${NAME}Instance } from './src/instance'
@@ -112,4 +112,4 @@ perl -0777 -pi -e "s/\n\n/\nexport * from '.\/$INPUT_NAME'\n\n/" $FILE_PATH/comp
 
 TYPE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../typings" && pwd)
 
-perl -0777 -pi -e "s/\n\s+}/\n    El$NAME: typeof import('element-plus')['El$NAME']\n  }/" $TYPE_PATH/global.d.ts
+perl -0777 -pi -e "s/\n\s+}/\n    Ty$NAME: typeof import('element-plus')['Ty$NAME']\n  }/" $TYPE_PATH/global.d.ts
