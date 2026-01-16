@@ -14,7 +14,7 @@ import VPNav from './vp-nav.vue'
 import VPSubNav from './vp-subnav.vue'
 import VPSidebar from './vp-sidebar.vue'
 import VPContent from './vp-content.vue'
-import VPSponsors from './vp-sponsors.vue'
+// import VPSponsors from './vp-sponsors.vue'
 
 // const USER_PREFER_GITHUB_PAGE = 'USER_PREFER_GITHUB_PAGE'
 const [isSidebarOpen, toggleSidebar] = useToggle(false)
@@ -38,7 +38,7 @@ useEventListener('keydown', (e) => {
   if (!isClient) return
   if (e.code === EVENT_CODE.esc && isSidebarOpen.value) {
     toggleSidebar(false)
-    document.querySelector<HTMLButtonTyement>('.sidebar-button')?.focus()
+    document.querySelector<HTMLButtonElement>('.sidebar-button')?.focus()
   }
 })
 
@@ -101,9 +101,9 @@ onMounted(async () => {
       @open-menu="toggleSidebar(true)"
     />
     <VPSidebar :open="isSidebarOpen" @close="toggleSidebar(false)">
-      <template #top>
+      <!-- <template #top>
         <VPSponsors />
-      </template>
+      </template> -->
       <template #bottom>
         <slot name="sidebar-bottom" />
       </template>

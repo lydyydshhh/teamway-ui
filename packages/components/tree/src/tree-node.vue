@@ -29,7 +29,7 @@
       :class="ns.be('node', 'content')"
       :style="{ paddingLeft: (node.level - 1) * tree.props.indent + 'px' }"
     >
-      <el-icon
+      <ty-icon
         v-if="tree.props.icon || CaretRight"
         :class="[
           ns.be('node', 'expand-icon'),
@@ -41,8 +41,8 @@
         @click.stop="handleExpandIconClick"
       >
         <component :is="tree.props.icon || CaretRight" />
-      </el-icon>
-      <el-checkbox
+      </ty-icon>
+      <ty-checkbox
         v-if="showCheckbox"
         :model-value="node.checked"
         :indeterminate="node.indeterminate"
@@ -50,15 +50,15 @@
         @click.stop
         @change="handleCheckChange"
       />
-      <el-icon
+      <ty-icon
         v-if="node.loading"
         :class="[ns.be('node', 'loading-icon'), ns.is('loading')]"
       >
         <loading />
-      </el-icon>
+      </ty-icon>
       <node-content :node="node" :render-content="renderContent" />
     </div>
-    <el-collapse-transition>
+    <ty-collapse-transition>
       <div
         v-if="!renderAfterExpand || childNodeRendered"
         v-show="expanded"
@@ -67,7 +67,7 @@
         :aria-expanded="expanded"
         @click.stop
       >
-        <el-tree-node
+        <ty-tree-node
           v-for="child in node.childNodes"
           :key="getNodeKey(child)"
           :render-content="renderContent"
@@ -79,7 +79,7 @@
           @node-expand="handleChildNodeExpand"
         />
       </div>
-    </el-collapse-transition>
+    </ty-collapse-transition>
   </div>
 </template>
 
