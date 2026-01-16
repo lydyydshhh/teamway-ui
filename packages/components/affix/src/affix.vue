@@ -1,10 +1,10 @@
 <template>
   <div ref="root" :class="ns.b()" :style="rootStyle">
-    <el-teleport :disabled="teleportDisabled" :to="appendTo">
+    <ty-teleport :disabled="teleportDisabled" :to="appendTo">
       <div :class="{ [ns.m('fixed')]: fixed }" :style="affixStyle">
         <slot />
       </div>
-    </el-teleport>
+    </ty-teleport>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ import {
   useEventListener,
   useWindowSize,
 } from '@vueuse/core'
-import ElTeleport from '@element-plus/components/teleport'
+import TyTeleport from '@element-plus/components/teleport'
 import { addUnit, getScrollContainer, throwError } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
 import { CHANGE_EVENT } from '@element-plus/constants'
@@ -31,7 +31,7 @@ import { affixEmits, affixProps } from './affix'
 
 import type { CSSProperties } from 'vue'
 
-const COMPONENT_NAME = 'ElAffix'
+const COMPONENT_NAME = 'TyAffix'
 defineOptions({
   name: COMPONENT_NAME,
 })

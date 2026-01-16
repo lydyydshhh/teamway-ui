@@ -1,5 +1,5 @@
 <template>
-  <el-tooltip
+  <ty-tooltip
     ref="tooltipRef"
     :offset="0"
     :placement="placement"
@@ -24,20 +24,20 @@
         :class="ns.e('multiple')"
       >
         <div :class="ns.e('content')">
-          <el-scrollbar :wrap-class="ns.e('wrap')">
-            <el-checkbox-group
+          <ty-scrollbar :wrap-class="ns.e('wrap')">
+            <ty-checkbox-group
               v-model="filteredValue"
               :class="ns.e('checkbox-group')"
             >
-              <el-checkbox
+              <ty-checkbox
                 v-for="filter in filters"
                 :key="filter.value"
                 :value="filter.value"
               >
                 {{ filter.text }}
-              </el-checkbox>
-            </el-checkbox-group>
-          </el-scrollbar>
+              </ty-checkbox>
+            </ty-checkbox-group>
+          </ty-scrollbar>
         </div>
         <div :class="ns.e('bottom')">
           <button
@@ -92,29 +92,29 @@
         :class="`${ns.namespace.value}-table__column-filter-trigger`"
         :aria-label="t('el.table.filterLabel', { column: column?.label || '' })"
       >
-        <el-icon>
+        <ty-icon>
           <slot name="filter-icon">
             <arrow-up v-if="column?.filterOpened" />
             <arrow-down v-else />
           </slot>
-        </el-icon>
+        </ty-icon>
       </button>
     </template>
-  </el-tooltip>
+  </ty-tooltip>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, ref } from 'vue'
-import { ElCheckbox, ElCheckboxGroup } from '@element-plus/components/checkbox'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyCheckbox, TyCheckboxGroup } from '@element-plus/components/checkbox'
+import { TyIcon } from '@element-plus/components/icon'
 import { ArrowDown, ArrowUp } from '@element-plus/icons-vue'
 import { EVENT_CODE } from '@element-plus/constants'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import {
-  ElTooltip,
+  TyTooltip,
   useTooltipContentProps,
 } from '@element-plus/components/tooltip'
-import ElScrollbar from '@element-plus/components/scrollbar'
+import TyScrollbar from '@element-plus/components/scrollbar'
 import { getEventCode, isPropAbsent } from '@element-plus/utils'
 
 import type { DefaultRow } from './table/defaults'
@@ -126,13 +126,13 @@ import type { TableHeader } from './table-header'
 import type { Store } from './store'
 
 export default defineComponent({
-  name: 'ElTableFilterPanel',
+  name: 'TyTableFilterPanel',
   components: {
-    ElCheckbox,
-    ElCheckboxGroup,
-    ElScrollbar,
-    ElTooltip,
-    ElIcon,
+    TyCheckbox,
+    TyCheckboxGroup,
+    TyScrollbar,
+    TyTooltip,
+    TyIcon,
     ArrowDown,
     ArrowUp,
   },

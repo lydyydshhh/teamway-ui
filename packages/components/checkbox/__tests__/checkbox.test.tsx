@@ -13,7 +13,7 @@ describe('Checkbox', () => {
     const checked = ref(false)
     const wrapper = mount(() => <Checkbox v-model={checked.value} label="a" />)
 
-    expect(wrapper.classes()).toContain('el-checkbox')
+    expect(wrapper.classes()).toContain('ty-checkbox')
     expect(wrapper.classes()).not.toContain('is-disabled')
     await wrapper.trigger('click')
     expect(wrapper.classes()).toContain('is-checked')
@@ -23,7 +23,7 @@ describe('Checkbox', () => {
 
   test('label set to number 0', async () => {
     const wrapper = mount(() => <Checkbox label={0} />)
-    expect(wrapper.find('.el-checkbox__label').text()).toBe('0')
+    expect(wrapper.find('.ty-checkbox__label').text()).toBe('0')
   })
 
   describe('no v-model', () => {
@@ -190,7 +190,7 @@ describe('Checkbox', () => {
       <CheckboxGroup v-model={checkedValues.value} options={options} />
     ))
     await nextTick()
-    const checkboxes = wrapper.findAll('.el-checkbox')
+    const checkboxes = wrapper.findAll('.ty-checkbox')
     expect(checkboxes[1].classes()).toContain('is-checked')
     await checkboxes[0].trigger('click')
     expect(checkedValues.value).toEqual(['b', 'a'])
@@ -218,7 +218,7 @@ describe('Checkbox', () => {
       />
     ))
     await nextTick()
-    const checkboxes = wrapper.findAll('.el-checkbox-button')
+    const checkboxes = wrapper.findAll('.ty-checkbox-button')
     expect(checkboxes[1].classes()).toContain('is-checked')
     await checkboxes[0].trigger('click')
     expect(checkedValues.value).toEqual(['b', 'a'])
@@ -231,7 +231,7 @@ describe('Checkbox', () => {
     expect(checkboxes[2].classes()).toContain('is-disabled')
   })
 
-  test('should avoid passing alias fields to el-checkbox', async () => {
+  test('should avoid passing alias fields to ty-checkbox', async () => {
     const modelValue = ref(1)
     const options = [{ value: '3', name: 'Option A' }]
     const wrapper = mount(() => (
@@ -242,7 +242,7 @@ describe('Checkbox', () => {
       />
     ))
     await nextTick()
-    const checkbox = wrapper.find('.el-checkbox')
+    const checkbox = wrapper.find('.ty-checkbox')
     expect(checkbox.find('input').attributes('name')).not.toBe('Option A')
   })
 
@@ -504,7 +504,7 @@ describe('Checkbox', () => {
       </CheckboxGroup>
     ))
 
-    const checkbox = wrapper.find('.el-checkbox')
+    const checkbox = wrapper.find('.ty-checkbox')
     await checkbox.trigger('click')
     expect(checklist.value[0]).toEqual('')
   })
@@ -519,7 +519,7 @@ describe('Checkbox', () => {
       </CheckboxGroup>
     ))
 
-    const checkbox = wrapper.find('.el-checkbox')
+    const checkbox = wrapper.find('.ty-checkbox')
     await checkbox.trigger('click')
     expect(checklist.value[0]).toEqual({ a: 1 })
     expect(checkbox.classes()).contains('is-checked')
@@ -563,7 +563,7 @@ describe('check-button', () => {
       <CheckboxButton v-model={checked.value} label="a" value="a" />
     ))
 
-    expect(wrapper.classes()).toContain('el-checkbox-button')
+    expect(wrapper.classes()).toContain('ty-checkbox-button')
     await wrapper.trigger('click')
     expect(wrapper.classes()).toContain('is-checked')
     await wrapper.trigger('click')
@@ -640,7 +640,7 @@ describe('check-button', () => {
     expect(checkList.value.length).toBe(2)
     expect(checkbox.classes()).contains('is-checked')
     expect(
-      checkbox.find('.el-checkbox-button__inner').attributes('style')
+      checkbox.find('.ty-checkbox-button__inner').attributes('style')
     ).contains('border-color: #ff0000;')
   })
 
@@ -655,7 +655,7 @@ describe('check-button', () => {
       </CheckboxGroup>
     ))
 
-    expect(wrapper.find('tr').classes('el-checkbox-group')).toBeTruthy()
+    expect(wrapper.find('tr').classes('ty-checkbox-group')).toBeTruthy()
   })
 
   test('button group min and max', async () => {
@@ -764,7 +764,7 @@ describe('check-button', () => {
     test('checked', () => {
       const wrapper = mount(() => <Checkbox checked />)
 
-      expect(wrapper.find('.el-checkbox').classes()).contains('is-checked')
+      expect(wrapper.find('.ty-checkbox').classes()).contains('is-checked')
     })
   })
 
@@ -778,8 +778,8 @@ describe('check-button', () => {
 
       const formItem = await wrapper.findComponent(ElFormItem)
       const checkbox = await wrapper.findComponent(Checkbox)
-      const formItemLabel = formItem.find('.el-form-item__label')
-      const checkboxInput = checkbox.find('.el-checkbox__original')
+      const formItemLabel = formItem.find('.ty-form-item__label')
+      const checkboxInput = checkbox.find('.ty-checkbox__original')
       expect(checkboxInput.attributes('id')).toBe(
         formItemLabel.attributes('for')
       )
@@ -794,8 +794,8 @@ describe('check-button', () => {
 
       const formItem = await wrapper.findComponent(ElFormItem)
       const checkbox = await wrapper.findComponent(Checkbox)
-      const checkboxLabel = checkbox.find('.el-checkbox__label')
-      const checkboxInput = checkbox.find('.el-checkbox__original')
+      const checkboxLabel = checkbox.find('.ty-checkbox__label')
+      const checkboxInput = checkbox.find('.ty-checkbox__original')
       expect(checkboxLabel.element.textContent).toBe('Foo')
       expect(checkboxInput.attributes('id')).toBeFalsy()
       expect(formItem.attributes('role')).toBe('group')
@@ -813,7 +813,7 @@ describe('check-button', () => {
 
       const formItem = await wrapper.findComponent(ElFormItem)
       const checkboxGroup = await wrapper.findComponent(CheckboxGroup)
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItem.attributes('role')).toBeFalsy()
       expect(checkboxGroup.attributes('role')).toBe('group')
       expect(formItemLabel.attributes('for')).toBe(
@@ -836,7 +836,7 @@ describe('check-button', () => {
 
       const formItem = await wrapper.findComponent(ElFormItem)
       const checkboxGroup = await wrapper.findComponent(CheckboxGroup)
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItemLabel.attributes('for')).toBe(
         checkboxGroup.attributes('id')
       )
@@ -870,7 +870,7 @@ describe('check-button', () => {
       const checkboxGroup2 = await wrapper.findComponent({
         ref: 'checkboxGroup2',
       })
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItem.attributes('role')).toBe('group')
       expect(formItem.attributes()['aria-labelledby']).toBe(
         formItemLabel.attributes('id')

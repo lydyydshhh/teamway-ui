@@ -18,7 +18,7 @@ describe('Divider.vue', () => {
 
   test('direction', () => {
     const wrapper = mount(() => <Divider direction="vertical" />)
-    expect(wrapper.classes()).toContain('el-divider--vertical')
+    expect(wrapper.classes()).toContain('ty-divider--vertical')
   })
 
   test('contentPosition', () => {
@@ -30,7 +30,7 @@ describe('Divider.vue', () => {
         contentPosition="right"
       />
     ))
-    expect(wrapper.find('.el-divider__text').classes()).toContain('is-right')
+    expect(wrapper.find('.ty-divider__text').classes()).toContain('is-right')
   })
 
   test('customClass', () => {

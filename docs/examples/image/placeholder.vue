@@ -1,16 +1,16 @@
-<template>
+﻿<template>
   <div class="demo-image__placeholder">
     <div class="block">
       <span class="demonstration">Default</span>
-      <el-image :src="src" />
+      <ty-image :src="src" />
     </div>
     <div class="block">
       <span class="demonstration">Custom</span>
-      <el-image :src="src">
+      <ty-image :src="src">
         <template #placeholder>
           <div class="image-slot">Loading<span class="dot">...</span></div>
         </template>
-      </el-image>
+      </ty-image>
     </div>
   </div>
 </template>
@@ -36,7 +36,7 @@ const src =
   font-size: 14px;
   margin-bottom: 20px;
 }
-.demo-image__placeholder .el-image {
+.demo-image__placeholder .ty-image {
   padding: 0 5px;
   max-width: 300px;
   max-height: 200px;

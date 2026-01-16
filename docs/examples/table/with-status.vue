@@ -1,13 +1,13 @@
-<template>
-  <el-table
+﻿<template>
+  <ty-table
     :data="tableData"
     style="width: 100%"
     :row-class-name="tableRowClassName"
   >
-    <el-table-column prop="date" label="Date" width="180" />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" />
-  </el-table>
+    <ty-table-column prop="date" label="Date" width="180" />
+    <ty-table-column prop="name" label="Name" width="180" />
+    <ty-table-column prop="address" label="Address" />
+  </ty-table>
 </template>
 
 <script lang="ts" setup>
@@ -57,10 +57,10 @@ const tableData: User[] = [
 </script>
 
 <style>
-.el-table .warning-row {
+.ty-table .warning-row {
   --ty-table-tr-bg-color: var(--ty-color-warning-light-9);
 }
-.el-table .success-row {
+.ty-table .success-row {
   --ty-table-tr-bg-color: var(--ty-color-success-light-9);
 }
 </style>

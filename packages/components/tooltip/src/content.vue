@@ -1,5 +1,5 @@
 <template>
-  <el-teleport :disabled="!teleported" :to="appendTo">
+  <ty-teleport :disabled="!teleported" :to="appendTo">
     <transition
       v-if="shouldRender || !ariaHidden"
       :name="transitionClass"
@@ -9,7 +9,7 @@
       @after-enter="onAfterShow"
       @before-leave="onBeforeLeave"
     >
-      <el-popper-content
+      <ty-popper-content
         v-show="shouldShow"
         :id="id"
         ref="contentRef"
@@ -40,9 +40,9 @@
         @close="onClose"
       >
         <slot />
-      </el-popper-content>
+      </ty-popper-content>
     </transition>
-  </el-teleport>
+  </ty-teleport>
 </template>
 
 <script lang="ts" setup>
@@ -54,8 +54,8 @@ import {
   composeEventHandlers,
   focusElement,
 } from '@element-plus/utils'
-import { ElPopperContent } from '@element-plus/components/popper'
-import ElTeleport from '@element-plus/components/teleport'
+import { TyPopperContent } from '@element-plus/components/popper'
+import TyTeleport from '@element-plus/components/teleport'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { useTooltipContentProps } from './content'
 import { isTriggerType } from './utils'
@@ -63,7 +63,7 @@ import { isTriggerType } from './utils'
 import type { PopperContentInstance } from '@element-plus/components/popper'
 
 defineOptions({
-  name: 'ElTooltipContent',
+  name: 'TyTooltipContent',
   inheritAttrs: false,
 })
 
@@ -206,11 +206,11 @@ watch(
 
 defineExpose({
   /**
-   * @description el-popper-content component instance
+   * @description ty-popper-content component instance
    */
   contentRef,
   /**
-   * @description validate current focus event is trigger inside el-popper-content
+   * @description validate current focus event is trigger inside ty-popper-content
    */
   isFocusInsideContent,
 })

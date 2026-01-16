@@ -1,26 +1,26 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-1">
-    <el-button class="!ml-0" :plain="true" @click="openMsg()"> Top </el-button>
-    <el-button class="!ml-0" :plain="true" @click="openMsg('top-left')">
+    <ty-button class="!ml-0" :plain="true" @click="openMsg()"> Top </ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="openMsg('top-left')">
       Top Left
-    </el-button>
-    <el-button class="!ml-0" :plain="true" @click="openMsg('top-right')">
+    </ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="openMsg('top-right')">
       Top Right
-    </el-button>
-    <el-button class="!ml-0" :plain="true" @click="openMsg('bottom')">
+    </ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="openMsg('bottom')">
       Bottom
-    </el-button>
-    <el-button class="!ml-0" :plain="true" @click="openMsg('bottom-left')">
+    </ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="openMsg('bottom-left')">
       Bottom Left
-    </el-button>
-    <el-button class="!ml-0" :plain="true" @click="openMsg('bottom-right')">
+    </ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="openMsg('bottom-right')">
       Bottom Right
-    </el-button>
+    </ty-button>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 import type { MessagePlacement, MessageType } from 'element-plus'
 
@@ -62,7 +62,7 @@ const openMsg = (placement: MessagePlacement = 'top') => {
       break
   }
 
-  ElMessage({
+  TyMessage({
     message: `This is a message from the ${placement} ${count}`,
     type,
     placement,

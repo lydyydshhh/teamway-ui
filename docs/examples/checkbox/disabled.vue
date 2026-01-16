@@ -1,6 +1,6 @@
-<template>
-  <el-checkbox v-model="checked1" disabled>Disabled</el-checkbox>
-  <el-checkbox v-model="checked2">Not disabled</el-checkbox>
+﻿<template>
+  <ty-checkbox v-model="checked1" disabled>Disabled</ty-checkbox>
+  <ty-checkbox v-model="checked2">Not disabled</ty-checkbox>
 </template>
 
 <script lang="ts" setup>

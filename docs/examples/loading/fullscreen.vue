@@ -1,17 +1,17 @@
-<template>
-  <el-button
+﻿<template>
+  <ty-button
     v-loading.fullscreen.lock="fullscreenLoading"
     type="primary"
     @click="openFullScreen1"
   >
     As a directive
-  </el-button>
-  <el-button type="primary" @click="openFullScreen2"> As a service </el-button>
+  </ty-button>
+  <ty-button type="primary" @click="openFullScreen2"> As a service </ty-button>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElLoading } from 'element-plus'
+import { TyLoading } from 'element-plus'
 
 const fullscreenLoading = ref(false)
 const openFullScreen1 = () => {
@@ -22,7 +22,7 @@ const openFullScreen1 = () => {
 }
 
 const openFullScreen2 = () => {
-  const loading = ElLoading.service({
+  const loading = TyLoading.service({
     lock: true,
     text: 'Loading',
     background: 'rgba(0, 0, 0, 0.7)',

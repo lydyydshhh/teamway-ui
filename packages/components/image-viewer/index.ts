@@ -3,8 +3,8 @@ import ImageViewer from './src/image-viewer.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElImageViewer: SFCWithInstall<typeof ImageViewer> =
+export const TyImageViewer: SFCWithInstall<typeof ImageViewer> =
   withInstall(ImageViewer)
-export default ElImageViewer
+export default TyImageViewer
 
 export * from './src/image-viewer'

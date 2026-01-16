@@ -10,7 +10,7 @@
     ]"
     role="tree"
   >
-    <el-tree-node
+    <ty-tree-node
       v-for="child in root.childNodes"
       :key="getNodeKey(child)"
       :node="child"
@@ -50,7 +50,7 @@ import { useLocale, useNamespace } from '@element-plus/hooks'
 import { formItemContextKey } from '@element-plus/components/form'
 import TreeStore from './model/tree-store'
 import { getNodeKey as getNodeKeyUtil, handleCurrentChange } from './model/util'
-import ElTreeNode from './tree-node.vue'
+import TyTreeNode from './tree-node.vue'
 import { useNodeExpandEventBroadcast } from './model/useNodeExpandEventBroadcast'
 import { useDragNodeHandler } from './model/useDragNode'
 import { useKeydown } from './model/useKeydown'
@@ -63,8 +63,8 @@ import type { Nullable } from '@element-plus/utils'
 import type { FilterValue, TreeData, TreeKey, TreeNodeData } from './tree.type'
 
 export default defineComponent({
-  name: 'ElTree',
-  components: { ElTreeNode },
+  name: 'TyTree',
+  components: { TyTreeNode },
   props: treeProps,
   emits: treeEmits,
   setup(props, ctx) {
@@ -113,7 +113,7 @@ export default defineComponent({
     const isSelectTree = computed(() => {
       let parent = instance?.parent
       while (parent) {
-        if (parent.type.name === 'ElTreeSelect') {
+        if (parent.type.name === 'TyTreeSelect') {
           return true
         }
         parent = parent.parent

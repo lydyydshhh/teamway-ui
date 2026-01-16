@@ -1,93 +1,93 @@
-<template>
-  <el-container class="layout-container-demo" style="height: 500px">
-    <el-aside width="200px">
-      <el-scrollbar>
-        <el-menu :default-openeds="['1', '3']">
-          <el-sub-menu index="1">
+﻿<template>
+  <ty-container class="layout-container-demo" style="height: 500px">
+    <ty-aside width="200px">
+      <ty-scrollbar>
+        <ty-menu :default-openeds="['1', '3']">
+          <ty-sub-menu index="1">
             <template #title>
-              <el-icon><message /></el-icon>Navigator One
+              <ty-icon><message /></ty-icon>Navigator One
             </template>
-            <el-menu-item-group>
+            <ty-menu-item-group>
               <template #title>Group 1</template>
-              <el-menu-item index="1-1">Option 1</el-menu-item>
-              <el-menu-item index="1-2">Option 2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="Group 2">
-              <el-menu-item index="1-3">Option 3</el-menu-item>
-            </el-menu-item-group>
-            <el-sub-menu index="1-4">
+              <ty-menu-item index="1-1">Option 1</ty-menu-item>
+              <ty-menu-item index="1-2">Option 2</ty-menu-item>
+            </ty-menu-item-group>
+            <ty-menu-item-group title="Group 2">
+              <ty-menu-item index="1-3">Option 3</ty-menu-item>
+            </ty-menu-item-group>
+            <ty-sub-menu index="1-4">
               <template #title>Option4</template>
-              <el-menu-item index="1-4-1">Option 4-1</el-menu-item>
-            </el-sub-menu>
-          </el-sub-menu>
-          <el-sub-menu index="2">
+              <ty-menu-item index="1-4-1">Option 4-1</ty-menu-item>
+            </ty-sub-menu>
+          </ty-sub-menu>
+          <ty-sub-menu index="2">
             <template #title>
-              <el-icon><icon-menu /></el-icon>Navigator Two
+              <ty-icon><icon-menu /></ty-icon>Navigator Two
             </template>
-            <el-menu-item-group>
+            <ty-menu-item-group>
               <template #title>Group 1</template>
-              <el-menu-item index="2-1">Option 1</el-menu-item>
-              <el-menu-item index="2-2">Option 2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="Group 2">
-              <el-menu-item index="2-3">Option 3</el-menu-item>
-            </el-menu-item-group>
-            <el-sub-menu index="2-4">
+              <ty-menu-item index="2-1">Option 1</ty-menu-item>
+              <ty-menu-item index="2-2">Option 2</ty-menu-item>
+            </ty-menu-item-group>
+            <ty-menu-item-group title="Group 2">
+              <ty-menu-item index="2-3">Option 3</ty-menu-item>
+            </ty-menu-item-group>
+            <ty-sub-menu index="2-4">
               <template #title>Option 4</template>
-              <el-menu-item index="2-4-1">Option 4-1</el-menu-item>
-            </el-sub-menu>
-          </el-sub-menu>
-          <el-sub-menu index="3">
+              <ty-menu-item index="2-4-1">Option 4-1</ty-menu-item>
+            </ty-sub-menu>
+          </ty-sub-menu>
+          <ty-sub-menu index="3">
             <template #title>
-              <el-icon><setting /></el-icon>Navigator Three
+              <ty-icon><setting /></ty-icon>Navigator Three
             </template>
-            <el-menu-item-group>
+            <ty-menu-item-group>
               <template #title>Group 1</template>
-              <el-menu-item index="3-1">Option 1</el-menu-item>
-              <el-menu-item index="3-2">Option 2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="Group 2">
-              <el-menu-item index="3-3">Option 3</el-menu-item>
-            </el-menu-item-group>
-            <el-sub-menu index="3-4">
+              <ty-menu-item index="3-1">Option 1</ty-menu-item>
+              <ty-menu-item index="3-2">Option 2</ty-menu-item>
+            </ty-menu-item-group>
+            <ty-menu-item-group title="Group 2">
+              <ty-menu-item index="3-3">Option 3</ty-menu-item>
+            </ty-menu-item-group>
+            <ty-sub-menu index="3-4">
               <template #title>Option 4</template>
-              <el-menu-item index="3-4-1">Option 4-1</el-menu-item>
-            </el-sub-menu>
-          </el-sub-menu>
-        </el-menu>
-      </el-scrollbar>
-    </el-aside>
+              <ty-menu-item index="3-4-1">Option 4-1</ty-menu-item>
+            </ty-sub-menu>
+          </ty-sub-menu>
+        </ty-menu>
+      </ty-scrollbar>
+    </ty-aside>
 
-    <el-container>
-      <el-header style="text-align: right; font-size: 12px">
+    <ty-container>
+      <ty-header style="text-align: right; font-size: 12px">
         <div class="toolbar">
-          <el-dropdown>
-            <el-icon style="margin-right: 8px; margin-top: 1px">
+          <ty-dropdown>
+            <ty-icon style="margin-right: 8px; margin-top: 1px">
               <setting />
-            </el-icon>
+            </ty-icon>
             <template #dropdown>
-              <el-dropdown-menu>
-                <el-dropdown-item>View</el-dropdown-item>
-                <el-dropdown-item>Add</el-dropdown-item>
-                <el-dropdown-item>Delete</el-dropdown-item>
-              </el-dropdown-menu>
+              <ty-dropdown-menu>
+                <ty-dropdown-item>View</ty-dropdown-item>
+                <ty-dropdown-item>Add</ty-dropdown-item>
+                <ty-dropdown-item>Delete</ty-dropdown-item>
+              </ty-dropdown-menu>
             </template>
-          </el-dropdown>
+          </ty-dropdown>
           <span>Tom</span>
         </div>
-      </el-header>
+      </ty-header>
 
-      <el-main>
-        <el-scrollbar>
-          <el-table :data="tableData">
-            <el-table-column prop="date" label="Date" width="140" />
-            <el-table-column prop="name" label="Name" width="120" />
-            <el-table-column prop="address" label="Address" />
-          </el-table>
-        </el-scrollbar>
-      </el-main>
-    </el-container>
-  </el-container>
+      <ty-main>
+        <ty-scrollbar>
+          <ty-table :data="tableData">
+            <ty-table-column prop="date" label="Date" width="140" />
+            <ty-table-column prop="name" label="Name" width="120" />
+            <ty-table-column prop="address" label="Address" />
+          </ty-table>
+        </ty-scrollbar>
+      </ty-main>
+    </ty-container>
+  </ty-container>
 </template>
 
 <script lang="ts" setup>
@@ -103,19 +103,19 @@ const tableData = ref(Array.from({ length: 20 }).fill(item))
 </script>
 
 <style scoped>
-.layout-container-demo .el-header {
+.layout-container-demo .ty-header {
   position: relative;
   background-color: var(--ty-color-primary-light-7);
   color: var(--ty-text-color-primary);
 }
-.layout-container-demo .el-aside {
+.layout-container-demo .ty-aside {
   color: var(--ty-text-color-primary);
   background: var(--ty-color-primary-light-8);
 }
-.layout-container-demo .el-menu {
+.layout-container-demo .ty-menu {
   border-right: none;
 }
-.layout-container-demo .el-main {
+.layout-container-demo .ty-main {
   padding: 0;
 }
 .layout-container-demo .toolbar {

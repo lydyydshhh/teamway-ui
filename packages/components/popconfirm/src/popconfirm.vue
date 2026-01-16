@@ -1,5 +1,5 @@
 <template>
-  <el-tooltip
+  <ty-tooltip
     ref="tooltipRef"
     trigger="click"
     :effect="effect"
@@ -18,33 +18,33 @@
     <template #content>
       <div ref="rootRef" tabindex="-1" :class="ns.b()">
         <div :class="ns.e('main')">
-          <el-icon
+          <ty-icon
             v-if="!hideIcon && icon"
             :class="ns.e('icon')"
             :style="{ color: iconColor }"
           >
             <component :is="icon" />
-          </el-icon>
+          </ty-icon>
           {{ title }}
         </div>
         <div :class="ns.e('action')">
           <slot name="actions" :confirm="confirm" :cancel="cancel">
-            <el-button
+            <ty-button
               size="small"
               :type="cancelButtonType === 'text' ? '' : cancelButtonType"
               :text="cancelButtonType === 'text'"
               @click="cancel"
             >
               {{ finalCancelButtonText }}
-            </el-button>
-            <el-button
+            </ty-button>
+            <ty-button
               size="small"
               :type="confirmButtonType === 'text' ? '' : confirmButtonType"
               :text="confirmButtonType === 'text'"
               @click="confirm"
             >
               {{ finalConfirmButtonText }}
-            </el-button>
+            </ty-button>
           </slot>
         </div>
       </div>
@@ -52,14 +52,14 @@
     <template v-if="$slots.reference">
       <slot name="reference" />
     </template>
-  </el-tooltip>
+  </ty-tooltip>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref, unref } from 'vue'
-import ElButton from '@element-plus/components/button'
-import ElIcon from '@element-plus/components/icon'
-import ElTooltip from '@element-plus/components/tooltip'
+import TyButton from '@element-plus/components/button'
+import TyIcon from '@element-plus/components/icon'
+import TyTooltip from '@element-plus/components/tooltip'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import { addUnit } from '@element-plus/utils'
 import { popconfirmEmits, popconfirmProps } from './popconfirm'
@@ -67,7 +67,7 @@ import { popconfirmEmits, popconfirmProps } from './popconfirm'
 import type { TooltipInstance } from '@element-plus/components/tooltip'
 
 defineOptions({
-  name: 'ElPopconfirm',
+  name: 'TyPopconfirm',
 })
 
 const props = defineProps(popconfirmProps)

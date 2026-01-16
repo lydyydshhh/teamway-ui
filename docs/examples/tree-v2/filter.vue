@@ -1,11 +1,11 @@
-<template>
-  <el-input
+﻿<template>
+  <ty-input
     v-model="query"
     style="width: 240px"
     placeholder="Please enter keyword"
     @input="onQueryChanged"
   />
-  <el-tree-v2
+  <ty-tree-v2
     ref="treeRef"
     style="max-width: 600px"
     :data="data"

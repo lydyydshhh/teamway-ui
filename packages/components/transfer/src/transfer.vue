@@ -19,24 +19,24 @@
       <slot name="left-footer" />
     </transfer-panel>
     <div :class="ns.e('buttons')">
-      <el-button
+      <ty-button
         type="primary"
         :class="[ns.e('button'), ns.is('with-texts', hasButtonTexts)]"
         :disabled="isEmpty(checkedState.rightChecked)"
         @click="addToLeft"
       >
-        <el-icon><arrow-left /></el-icon>
+        <ty-icon><arrow-left /></ty-icon>
         <span v-if="!isUndefined(buttonTexts[0])">{{ buttonTexts[0] }}</span>
-      </el-button>
-      <el-button
+      </ty-button>
+      <ty-button
         type="primary"
         :class="[ns.e('button'), ns.is('with-texts', hasButtonTexts)]"
         :disabled="isEmpty(checkedState.leftChecked)"
         @click="addToRight"
       >
         <span v-if="!isUndefined(buttonTexts[1])">{{ buttonTexts[1] }}</span>
-        <el-icon><arrow-right /></el-icon>
-      </el-button>
+        <ty-icon><arrow-right /></ty-icon>
+      </ty-button>
     </div>
     <transfer-panel
       ref="rightPanel"
@@ -63,8 +63,8 @@
 import { Comment, computed, h, reactive, ref, useSlots, watch } from 'vue'
 import { debugWarn, isEmpty, isUndefined } from '@element-plus/utils'
 import { useLocale, useNamespace } from '@element-plus/hooks'
-import { ElButton } from '@element-plus/components/button'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyButton } from '@element-plus/components/button'
+import { TyIcon } from '@element-plus/components/icon'
 import { useFormItem } from '@element-plus/components/form'
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
 import { transferEmits, transferProps } from './transfer'
@@ -84,7 +84,7 @@ import type {
 import type { TransferPanelInstance } from './transfer-panel'
 
 defineOptions({
-  name: 'ElTransfer',
+  name: 'TyTransfer',
 })
 
 const props = defineProps(transferProps)

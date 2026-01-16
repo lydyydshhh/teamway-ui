@@ -1,28 +1,28 @@
-<template>
-  <el-affix :offset="60">
-    <el-anchor :offset="70" style="width: 300px">
-      <el-anchor-link :href="`#${locale['basic-usage']}`">
+﻿<template>
+  <ty-affix :offset="60">
+    <ty-anchor :offset="70" style="width: 300px">
+      <ty-anchor-link :href="`#${locale['basic-usage']}`">
         {{ locale['Basic Usage'] }}
-      </el-anchor-link>
-      <el-anchor-link :href="`#${locale['horizontal-mode']}`">
+      </ty-anchor-link>
+      <ty-anchor-link :href="`#${locale['horizontal-mode']}`">
         {{ locale['Horizontal Mode'] }}
-      </el-anchor-link>
-      <el-anchor-link :href="`#${locale['scroll-container']}`">
+      </ty-anchor-link>
+      <ty-anchor-link :href="`#${locale['scroll-container']}`">
         {{ locale['Scroll Container'] }}
-      </el-anchor-link>
-      <el-anchor-link :href="`#${locale['anchor-api']}`">
+      </ty-anchor-link>
+      <ty-anchor-link :href="`#${locale['anchor-api']}`">
         {{ locale['Anchor API'] }}
         <template #sub-link>
-          <el-anchor-link :href="`#${locale['anchor-attributes']}`">
+          <ty-anchor-link :href="`#${locale['anchor-attributes']}`">
             {{ locale['Anchor Attributes'] }}
-          </el-anchor-link>
-          <el-anchor-link :href="`#${locale['anchor-events']}`">
+          </ty-anchor-link>
+          <ty-anchor-link :href="`#${locale['anchor-events']}`">
             {{ locale['Anchor Events'] }}
-          </el-anchor-link>
+          </ty-anchor-link>
         </template>
-      </el-anchor-link>
-    </el-anchor>
-  </el-affix>
+      </ty-anchor-link>
+    </ty-anchor>
+  </ty-affix>
 </template>
 
 <script lang="ts" setup>

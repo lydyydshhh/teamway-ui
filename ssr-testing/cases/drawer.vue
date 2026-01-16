@@ -1,42 +1,42 @@
 <template>
-  <el-radio-group v-model="direction">
-    <el-radio label="ltr">left to right</el-radio>
-    <el-radio label="rtl">right to left</el-radio>
-    <el-radio label="ttb">top to bottom</el-radio>
-    <el-radio label="btt">bottom to top</el-radio>
-  </el-radio-group>
+  <ty-radio-group v-model="direction">
+    <ty-radio label="ltr">left to right</ty-radio>
+    <ty-radio label="rtl">right to left</ty-radio>
+    <ty-radio label="ttb">top to bottom</ty-radio>
+    <ty-radio label="btt">bottom to top</ty-radio>
+  </ty-radio-group>
 
-  <el-button type="primary" style="margin-left: 16px" @click="drawer = true">
+  <ty-button type="primary" style="margin-left: 16px" @click="drawer = true">
     open
-  </el-button>
-  <el-button type="primary" style="margin-left: 16px" @click="drawer2 = true">
+  </ty-button>
+  <ty-button type="primary" style="margin-left: 16px" @click="drawer2 = true">
     with footer
-  </el-button>
+  </ty-button>
 
-  <el-drawer v-model="drawer" title="I am the title" :direction="direction">
+  <ty-drawer v-model="drawer" title="I am the title" :direction="direction">
     <span>Hi, there!</span>
-  </el-drawer>
-  <el-drawer v-model="drawer2" :direction="direction">
+  </ty-drawer>
+  <ty-drawer v-model="drawer2" :direction="direction">
     <template #title>
       <h4>set title by slot</h4>
     </template>
     <template #default>
       <div>
-        <el-radio v-model="radio1" label="Option 1" size="large"
-          >Option 1</el-radio
+        <ty-radio v-model="radio1" label="Option 1" size="large"
+          >Option 1</ty-radio
         >
-        <el-radio v-model="radio1" label="Option 2" size="large"
-          >Option 2</el-radio
+        <ty-radio v-model="radio1" label="Option 2" size="large"
+          >Option 2</ty-radio
         >
       </div>
     </template>
     <template #footer>
       <div style="flex: auto">
-        <el-button @click="cancelClick">cancel</el-button>
-        <el-button type="primary">confirm</el-button>
+        <ty-button @click="cancelClick">cancel</ty-button>
+        <ty-button type="primary">confirm</ty-button>
       </div>
     </template>
-  </el-drawer>
+  </ty-drawer>
 </template>
 
 <script lang="ts" setup>

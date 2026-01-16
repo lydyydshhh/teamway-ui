@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="demo-image__custom-toolbar">
-    <el-image
+    <ty-image
       style="width: 100px; height: 100px"
       :src="url"
       :preview-src-list="srcList"
@@ -9,7 +9,7 @@
       <template #progress="{ activeIndex, total }">
         <span>{{ activeIndex + 1 + '-' + total }}</span>
       </template>
-    </el-image>
+    </ty-image>
   </div>
 </template>
 

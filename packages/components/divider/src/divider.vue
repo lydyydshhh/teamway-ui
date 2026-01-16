@@ -21,7 +21,7 @@ import { dividerProps } from './divider'
 import type { CSSProperties } from 'vue'
 
 defineOptions({
-  name: 'ElDivider',
+  name: 'TyDivider',
 })
 const props = defineProps(dividerProps)
 const ns = useNamespace('divider')

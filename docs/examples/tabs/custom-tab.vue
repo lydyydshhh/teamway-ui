@@ -1,18 +1,18 @@
-<template>
-  <el-tabs type="border-card" class="demo-tabs">
-    <el-tab-pane>
+﻿<template>
+  <ty-tabs type="border-card" class="demo-tabs">
+    <ty-tab-pane>
       <template #label>
         <span class="custom-tabs-label">
-          <el-icon><calendar /></el-icon>
+          <ty-icon><calendar /></ty-icon>
           <span>Route</span>
         </span>
       </template>
       Route
-    </el-tab-pane>
-    <el-tab-pane label="Config">Config</el-tab-pane>
-    <el-tab-pane label="Role">Role</el-tab-pane>
-    <el-tab-pane label="Task">Task</el-tab-pane>
-  </el-tabs>
+    </ty-tab-pane>
+    <ty-tab-pane label="Config">Config</ty-tab-pane>
+    <ty-tab-pane label="Role">Role</ty-tab-pane>
+    <ty-tab-pane label="Task">Task</ty-tab-pane>
+  </ty-tabs>
 </template>
 
 <script lang="ts" setup>
@@ -20,13 +20,13 @@ import { Calendar } from '@element-plus/icons-vue'
 </script>
 
 <style>
-.demo-tabs > .el-tabs__content {
+.demo-tabs > .ty-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;
   font-weight: 600;
 }
-.demo-tabs .custom-tabs-label .el-icon {
+.demo-tabs .custom-tabs-label .ty-icon {
   vertical-align: middle;
 }
 .demo-tabs .custom-tabs-label span {

@@ -112,7 +112,7 @@ export type TabsEmits = typeof tabsEmits
 export type TabsPanes = Record<number, TabsPaneContext>
 
 const Tabs = defineComponent({
-  name: 'ElTabs',
+  name: 'TyTabs',
 
   props: tabsProps,
   emits: tabsEmits,

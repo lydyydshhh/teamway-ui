@@ -1,35 +1,35 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-1">
-    <el-button class="!ml-0" :plain="true" @click="open5">Primary</el-button>
-    <el-button class="!ml-0" :plain="true" @click="open2">Success</el-button>
-    <el-button class="!ml-0" :plain="true" @click="open3">Warning</el-button>
-    <el-button class="!ml-0" :plain="true" @click="open1">Info</el-button>
-    <el-button class="!ml-0" :plain="true" @click="open4">Error</el-button>
+    <ty-button class="!ml-0" :plain="true" @click="open5">Primary</ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="open2">Success</ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="open3">Warning</ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="open1">Info</ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="open4">Error</ty-button>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 const open1 = () => {
-  ElMessage('This is a info message.')
+  TyMessage('This is a info message.')
 }
 const open2 = () => {
-  ElMessage({
+  TyMessage({
     message: 'Congrats, this is a success message.',
     type: 'success',
   })
 }
 const open3 = () => {
-  ElMessage({
+  TyMessage({
     message: 'Warning, this is a warning message.',
     type: 'warning',
   })
 }
 const open4 = () => {
-  ElMessage.error('Oops, this is a error message.')
+  TyMessage.error('Oops, this is a error message.')
 }
 const open5 = () => {
-  ElMessage.primary('This is a primary message.')
+  TyMessage.primary('This is a primary message.')
 }
 </script>

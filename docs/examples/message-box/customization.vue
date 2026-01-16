@@ -1,13 +1,13 @@
-<template>
-  <el-button plain @click="open">Click to open Message Box</el-button>
+﻿<template>
+  <ty-button plain @click="open">Click to open Message Box</ty-button>
 </template>
 
 <script lang="ts" setup>
 import { h } from 'vue'
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'element-plus'
 
 const open = () => {
-  ElMessageBox({
+  TyMessageBox({
     title: 'Message',
     message: h('p', null, [
       h('span', null, 'Message can be '),
@@ -31,7 +31,7 @@ const open = () => {
       }
     },
   }).then((action) => {
-    ElMessage({
+    TyMessage({
       type: 'info',
       message: `action: ${action}`,
     })

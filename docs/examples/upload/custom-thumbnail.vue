@@ -1,39 +1,39 @@
-<template>
-  <el-upload action="#" list-type="picture-card" :auto-upload="false">
-    <el-icon><Plus /></el-icon>
+﻿<template>
+  <ty-upload action="#" list-type="picture-card" :auto-upload="false">
+    <ty-icon><Plus /></ty-icon>
 
     <template #file="{ file }">
       <div>
-        <img class="el-upload-list__item-thumbnail" :src="file.url" alt="" />
-        <span class="el-upload-list__item-actions">
+        <img class="ty-upload-list__item-thumbnail" :src="file.url" alt="" />
+        <span class="ty-upload-list__item-actions">
           <span
-            class="el-upload-list__item-preview"
+            class="ty-upload-list__item-preview"
             @click="handlePictureCardPreview(file)"
           >
-            <el-icon><zoom-in /></el-icon>
+            <ty-icon><zoom-in /></ty-icon>
           </span>
           <span
             v-if="!disabled"
-            class="el-upload-list__item-delete"
+            class="ty-upload-list__item-delete"
             @click="handleDownload(file)"
           >
-            <el-icon><Download /></el-icon>
+            <ty-icon><Download /></ty-icon>
           </span>
           <span
             v-if="!disabled"
-            class="el-upload-list__item-delete"
+            class="ty-upload-list__item-delete"
             @click="handleRemove(file)"
           >
-            <el-icon><Delete /></el-icon>
+            <ty-icon><Delete /></ty-icon>
           </span>
         </span>
       </div>
     </template>
-  </el-upload>
+  </ty-upload>
 
-  <el-dialog v-model="dialogVisible">
+  <ty-dialog v-model="dialogVisible">
     <img w-full :src="dialogImageUrl" alt="Preview Image" />
-  </el-dialog>
+  </ty-dialog>
 </template>
 
 <script lang="ts" setup>

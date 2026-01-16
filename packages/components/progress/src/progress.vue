@@ -73,9 +73,9 @@
     >
       <slot :percentage="percentage">
         <span v-if="!status">{{ content }}</span>
-        <el-icon v-else>
+        <ty-icon v-else>
           <component :is="statusIcon" />
-        </el-icon>
+        </ty-icon>
       </slot>
     </div>
   </div>
@@ -83,7 +83,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import {
   Check,
   CircleCheck,
@@ -99,7 +99,7 @@ import type { CSSProperties } from 'vue'
 import type { ProgressColor } from './progress'
 
 defineOptions({
-  name: 'ElProgress',
+  name: 'TyProgress',
 })
 
 const STATUS_COLOR_MAP: Record<string, string> = {

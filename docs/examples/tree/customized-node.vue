@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <div class="custom-tree-container">
     <p>Using render-content</p>
-    <el-tree
+    <ty-tree
       ref="treeRef1"
       style="max-width: 600px"
       :data="dataSource"
@@ -12,7 +12,7 @@
       :render-content="renderContent"
     />
     <p>Using scoped slot</p>
-    <el-tree
+    <ty-tree
       ref="treeRef2"
       style="max-width: 600px"
       :data="dataSource"
@@ -25,27 +25,27 @@
         <div class="custom-tree-node">
           <span>{{ node.label }}</span>
           <div>
-            <el-button type="primary" link @click="append(data)">
+            <ty-button type="primary" link @click="append(data)">
               Append
-            </el-button>
-            <el-button
+            </ty-button>
+            <ty-button
               style="margin-left: 4px"
               type="danger"
               link
               @click="remove(node, data)"
             >
               Delete
-            </el-button>
+            </ty-button>
           </div>
         </div>
       </template>
-    </el-tree>
+    </ty-tree>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElButton } from 'element-plus'
+import { TyButton } from 'element-plus'
 
 import type {
   RenderContentContext,
@@ -86,7 +86,7 @@ const renderContent: RenderContentFunction = (h, { node, data }) => {
       h('span', null, node.label),
       h('div', null, [
         h(
-          ElButton,
+          TyButton,
           {
             type: 'primary',
             link: true,
@@ -97,7 +97,7 @@ const renderContent: RenderContentFunction = (h, { node, data }) => {
           }
         ),
         h(
-          ElButton,
+          TyButton,
           {
             type: 'danger',
             link: true,

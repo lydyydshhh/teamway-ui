@@ -1,41 +1,41 @@
-<template>
-  <el-table :data="tableData" style="width: 100%">
-    <el-table-column label="Date" width="180">
+﻿<template>
+  <ty-table :data="tableData" style="width: 100%">
+    <ty-table-column label="Date" width="180">
       <template #default="scope">
         <div style="display: flex; align-items: center">
-          <el-icon><timer /></el-icon>
+          <ty-icon><timer /></ty-icon>
           <span style="margin-left: 10px">{{ scope.row.date }}</span>
         </div>
       </template>
-    </el-table-column>
-    <el-table-column label="Name" width="180">
+    </ty-table-column>
+    <ty-table-column label="Name" width="180">
       <template #default="scope">
-        <el-popover effect="light" trigger="hover" placement="top" width="auto">
+        <ty-popover effect="light" trigger="hover" placement="top" width="auto">
           <template #default>
             <div>name: {{ scope.row.name }}</div>
             <div>address: {{ scope.row.address }}</div>
           </template>
           <template #reference>
-            <el-tag>{{ scope.row.name }}</el-tag>
+            <ty-tag>{{ scope.row.name }}</ty-tag>
           </template>
-        </el-popover>
+        </ty-popover>
       </template>
-    </el-table-column>
-    <el-table-column label="Operations">
+    </ty-table-column>
+    <ty-table-column label="Operations">
       <template #default="scope">
-        <el-button size="small" @click="handleEdit(scope.$index, scope.row)">
+        <ty-button size="small" @click="handleEdit(scope.$index, scope.row)">
           Edit
-        </el-button>
-        <el-button
+        </ty-button>
+        <ty-button
           size="small"
           type="danger"
           @click="handleDelete(scope.$index, scope.row)"
         >
           Delete
-        </el-button>
+        </ty-button>
       </template>
-    </el-table-column>
-  </el-table>
+    </ty-table-column>
+  </ty-table>
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 - scope: 'component'
-  name: 'el-button'
+  name: 'ty-button'
   type: 'props'
   version: '2.2.0'
   commit_hash: 'a4aad5a'

@@ -61,8 +61,8 @@ const setupConfig = (configEnv) => {
       editLinks: true,
       editLinkText: 'Edit this page on GitHub',
 
-      logo: '/images/element-plus-logo.svg',
-      logoSmall: '/images/element-plus-logo-small.svg',
+      logo: '/images/teamway-ui-logo.svg',
+      logoSmall: '/images/teamway-ui-logo-small.svg',
       sidebars,
       nav,
       agolia: {
@@ -95,7 +95,7 @@ const setupConfig = (configEnv) => {
       if (context.teleports) {
         const body = Object.entries(context.teleports).reduce(
           (all, [key, value]) => {
-            if (key.startsWith('#el-popper-container-')) {
+            if (key.startsWith('#ty-popper-container-')) {
               return `${all}<div id="${key.slice(1)}">${value}</div>`
             }
             return all

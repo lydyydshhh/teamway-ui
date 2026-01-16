@@ -7,7 +7,7 @@ import Main from './src/main.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElContainer: SFCWithInstall<typeof Container> & {
+export const TyContainer: SFCWithInstall<typeof Container> & {
   Aside: typeof Aside
   Footer: typeof Footer
   Header: typeof Header
@@ -19,11 +19,11 @@ export const ElContainer: SFCWithInstall<typeof Container> & {
   Main,
 })
 
-export default ElContainer
-export const ElAside: SFCWithInstall<typeof Aside> = withNoopInstall(Aside)
-export const ElFooter: SFCWithInstall<typeof Footer> = withNoopInstall(Footer)
-export const ElHeader: SFCWithInstall<typeof Header> = withNoopInstall(Header)
-export const ElMain: SFCWithInstall<typeof Main> = withNoopInstall(Main)
+export default TyContainer
+export const TyAside: SFCWithInstall<typeof Aside> = withNoopInstall(Aside)
+export const TyFooter: SFCWithInstall<typeof Footer> = withNoopInstall(Footer)
+export const TyHeader: SFCWithInstall<typeof Header> = withNoopInstall(Header)
+export const TyMain: SFCWithInstall<typeof Main> = withNoopInstall(Main)
 
 export type ContainerInstance = InstanceType<typeof Container> & unknown
 export type AsideInstance = InstanceType<typeof Aside> & unknown

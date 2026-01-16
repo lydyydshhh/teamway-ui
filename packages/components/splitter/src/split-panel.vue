@@ -20,7 +20,7 @@ import { splitterRootContextKey } from './type'
 
 const ns = useNamespace('splitter-panel')
 
-const COMPONENT_NAME = 'ElSplitterPanel'
+const COMPONENT_NAME = 'TySplitterPanel'
 defineOptions({
   name: COMPONENT_NAME,
 })
@@ -32,7 +32,7 @@ const splitterContext = inject(splitterRootContextKey)
 if (!splitterContext)
   throwError(
     COMPONENT_NAME,
-    'usage: <el-splitter><el-splitter-panel /></el-splitter/>'
+    'usage: <ty-splitter><ty-splitter-panel /></ty-splitter/>'
   )
 
 const { panels, layout, lazy, containerSize, pxSizes } = toRefs(splitterContext)
@@ -46,7 +46,7 @@ const {
   onMoving,
 } = splitterContext
 
-const panelEl = ref<HTMLDivElement>()
+const panelTy = ref<HTMLDivElement>()
 const instance = getCurrentInstance()!
 const uid = instance.uid
 
@@ -156,7 +156,7 @@ watch(
 )
 
 const _panel = reactive({
-  el: panelEl.value!,
+  el: panelTy.value!,
   uid,
   getVnode: () => instance.vnode,
   setIndex,
@@ -170,13 +170,13 @@ onBeforeUnmount(() => unregisterPanel(_panel))
 
 defineExpose({
   /** @description splitter-panel html element */
-  splitterPanelRef: panelEl,
+  splitterPanelRef: panelTy,
 })
 </script>
 
 <template>
   <div
-    ref="panelEl"
+    ref="panelTy"
     :class="[ns.b()]"
     :style="{ flexBasis: `${panelSize}px` }"
     v-bind="$attrs"

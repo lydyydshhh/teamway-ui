@@ -221,7 +221,7 @@ Like this:
 If you just want to customize a particular component, just add inline styles for certain components individually.
 
 ```html
-<el-tag style="--ty-tag-bg-color: red">Tag</el-tag>
+<ty-tag style="--ty-tag-bg-color: red">Tag</ty-tag>
 ```
 
 For performance reasons, it is more recommended to custom css variables under a class rather than the global `:root`.

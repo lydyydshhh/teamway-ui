@@ -5,14 +5,14 @@
       :class="[ns.b(), ns.m(type), ns.is('center', center), ns.is(effect)]"
       role="alert"
     >
-      <el-icon
+      <ty-icon
         v-if="showIcon && ($slots.icon || iconComponent)"
         :class="[ns.e('icon'), ns.is('big', hasDesc)]"
       >
         <slot name="icon">
           <component :is="iconComponent" />
         </slot>
-      </el-icon>
+      </ty-icon>
 
       <div :class="ns.e('content')">
         <span
@@ -34,9 +34,9 @@
           >
             {{ closeText }}
           </div>
-          <el-icon v-else :class="ns.e('close-btn')" @click="close">
+          <ty-icon v-else :class="ns.e('close-btn')" @click="close">
             <Close />
-          </el-icon>
+          </ty-icon>
         </template>
       </div>
     </div>
@@ -45,7 +45,7 @@
 
 <script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import {
   TypeComponents,
   TypeComponentsMap,
@@ -58,7 +58,7 @@ import { alertEmits, alertProps } from './alert'
 const { Close } = TypeComponents
 
 defineOptions({
-  name: 'ElAlert',
+  name: 'TyAlert',
 })
 
 const props = defineProps(alertProps)

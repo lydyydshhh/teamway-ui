@@ -4,13 +4,13 @@ import FormItem from './src/form-item.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElForm: SFCWithInstall<typeof Form> & {
+export const TyForm: SFCWithInstall<typeof Form> & {
   FormItem: typeof FormItem
 } = withInstall(Form, {
   FormItem,
 })
-export default ElForm
-export const ElFormItem: SFCWithInstall<typeof FormItem> =
+export default TyForm
+export const TyFormItem: SFCWithInstall<typeof FormItem> =
   withNoopInstall(FormItem)
 
 export * from './src/form'

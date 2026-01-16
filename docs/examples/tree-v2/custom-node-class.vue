@@ -1,5 +1,5 @@
-<template>
-  <el-tree-v2
+﻿<template>
+  <ty-tree-v2
     style="max-width: 600px"
     :data="data"
     show-checkbox
@@ -78,7 +78,7 @@ const data: Tree[] = [
 </script>
 
 <style>
-.is-penultimate > .el-tree-node__content {
+.is-penultimate > .ty-tree-node__content {
   color: var(--ty-color-primary);
 }
 </style>

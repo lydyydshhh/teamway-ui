@@ -3,8 +3,8 @@ import ColorPicker from './src/color-picker.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElColorPicker: SFCWithInstall<typeof ColorPicker> =
+export const TyColorPicker: SFCWithInstall<typeof ColorPicker> =
   withInstall(ColorPicker)
-export default ElColorPicker
+export default TyColorPicker
 
 export * from './src/color-picker'

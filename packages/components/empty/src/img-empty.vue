@@ -113,7 +113,7 @@
 import { useId, useNamespace } from '@element-plus/hooks'
 
 defineOptions({
-  name: 'ImgEmpty',
+  name: 'TyImgEmpty',
 })
 
 const ns = useNamespace('empty')

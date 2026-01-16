@@ -1,5 +1,5 @@
-<template>
-  <el-input-tag v-model="input" draggable placeholder="Please input" />
+﻿<template>
+  <ty-input-tag v-model="input" draggable placeholder="Please input" />
 </template>
 
 <script lang="ts" setup>

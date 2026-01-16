@@ -1,20 +1,20 @@
-<template>
-  <el-row :gutter="20">
-    <el-col :span="6"><div class="grid-content ep-bg-purple" /></el-col>
-    <el-col :span="6"><div class="grid-content ep-bg-purple" /></el-col>
-    <el-col :span="6"><div class="grid-content ep-bg-purple" /></el-col>
-    <el-col :span="6"><div class="grid-content ep-bg-purple" /></el-col>
-  </el-row>
+﻿<template>
+  <ty-row :gutter="20">
+    <ty-col :span="6"><div class="grid-content ep-bg-purple" /></ty-col>
+    <ty-col :span="6"><div class="grid-content ep-bg-purple" /></ty-col>
+    <ty-col :span="6"><div class="grid-content ep-bg-purple" /></ty-col>
+    <ty-col :span="6"><div class="grid-content ep-bg-purple" /></ty-col>
+  </ty-row>
 </template>
 
 <style>
-.el-row {
+.ty-row {
   margin-bottom: 20px;
 }
-.el-row:last-child {
+.ty-row:last-child {
   margin-bottom: 0;
 }
-.el-col {
+.ty-col {
   border-radius: 4px;
 }
 

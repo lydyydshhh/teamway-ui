@@ -1,6 +1,6 @@
 <template>
   <span :class="ns.e('sizes')">
-    <el-select
+    <ty-select
       :model-value="innerPageSize"
       :disabled="disabled"
       :popper-class="popperClass"
@@ -11,27 +11,27 @@
       :append-to="appendSizeTo"
       @change="handleChange"
     >
-      <el-option
+      <ty-option
         v-for="item in innerPageSizes"
         :key="item"
         :value="item"
         :label="item + t('el.pagination.pagesize')"
       />
-    </el-select>
+    </ty-select>
   </span>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { ElOption, ElSelect } from '@element-plus/components/select'
+import { TyOption, TySelect } from '@element-plus/components/select'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import { isArray } from '@element-plus/utils'
 import { usePagination } from '../usePagination'
 import { paginationSizesProps } from './sizes'
 
 defineOptions({
-  name: 'ElPaginationSizes',
+  name: 'TyPaginationSizes',
 })
 
 const props = defineProps(paginationSizesProps)

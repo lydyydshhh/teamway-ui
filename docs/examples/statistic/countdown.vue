@@ -1,32 +1,32 @@
-<template>
-  <el-row :gutter="16">
-    <el-col :xs="24" :sm="12" :md="8" class="text-center mb-4">
-      <el-countdown title="Start to grab" :value="value" />
-    </el-col>
-    <el-col :xs="24" :sm="12" :md="8" class="text-center mb-4">
-      <el-countdown
+﻿<template>
+  <ty-row :gutter="16">
+    <ty-col :xs="24" :sm="12" :md="8" class="text-center mb-4">
+      <ty-countdown title="Start to grab" :value="value" />
+    </ty-col>
+    <ty-col :xs="24" :sm="12" :md="8" class="text-center mb-4">
+      <ty-countdown
         title="Remaining VIP time"
         format="HH:mm:ss"
         :value="value1"
       />
-      <el-button class="countdown-footer" type="primary" @click="reset">
+      <ty-button class="countdown-footer" type="primary" @click="reset">
         Reset
-      </el-button>
-    </el-col>
-    <el-col :xs="24" :sm="12" :md="8" class="text-center mb-4">
-      <el-countdown format="DD [days] HH:mm:ss" :value="value2">
+      </ty-button>
+    </ty-col>
+    <ty-col :xs="24" :sm="12" :md="8" class="text-center mb-4">
+      <ty-countdown format="DD [days] HH:mm:ss" :value="value2">
         <template #title>
           <div style="display: inline-flex; align-items: center">
-            <el-icon style="margin-right: 4px" :size="12">
+            <ty-icon style="margin-right: 4px" :size="12">
               <Calendar />
-            </el-icon>
+            </ty-icon>
             Still to go until next month
           </div>
         </template>
-      </el-countdown>
+      </ty-countdown>
       <div class="countdown-footer">{{ value2.format('YYYY-MM-DD') }}</div>
-    </el-col>
-  </el-row>
+    </ty-col>
+  </ty-row>
 </template>
 
 <script lang="ts" setup>

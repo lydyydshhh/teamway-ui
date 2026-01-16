@@ -1,9 +1,9 @@
-<template>
-  <el-button plain @click="centerDialogVisible = true">
+﻿<template>
+  <ty-button plain @click="centerDialogVisible = true">
     Click to open the Dialog
-  </el-button>
+  </ty-button>
 
-  <el-dialog
+  <ty-dialog
     v-model="centerDialogVisible"
     title="Warning"
     width="500"
@@ -12,13 +12,13 @@
     <span>Open the dialog from the center from the screen</span>
     <template #footer>
       <div class="dialog-footer">
-        <el-button @click="centerDialogVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="centerDialogVisible = false">
+        <ty-button @click="centerDialogVisible = false">Cancel</ty-button>
+        <ty-button type="primary" @click="centerDialogVisible = false">
           Confirm
-        </el-button>
+        </ty-button>
       </div>
     </template>
-  </el-dialog>
+  </ty-dialog>
 </template>
 
 <script lang="ts" setup>

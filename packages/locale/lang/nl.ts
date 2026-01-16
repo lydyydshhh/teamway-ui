@@ -120,7 +120,7 @@ export default {
       prevPages: "Vorige {pager} pagina's",
       nextPages: "Volgende {pager} pagina's",
       deprecationWarning:
-        'Deprecated usages detected, please refer to the el-pagination documentation for more details', // to be translated
+        'Deprecated usages detected, please refer to the ty-pagination documentation for more details', // to be translated
     },
     dialog: {
       close: 'Close this dialog', // to be translated

@@ -35,9 +35,9 @@
             :class="nsUpload.be('list', 'item-name')"
             @click.prevent="handlePreview(file)"
           >
-            <el-icon :class="nsIcon.m('document')">
+            <ty-icon :class="nsIcon.m('document')">
               <Document />
-            </el-icon>
+            </ty-icon>
             <span
               :class="nsUpload.be('list', 'item-file-name')"
               :title="file.name"
@@ -45,7 +45,7 @@
               {{ file.name }}
             </span>
           </a>
-          <el-progress
+          <ty-progress
             v-if="file.status === 'uploading'"
             :type="listType === 'picture-card' ? 'circle' : 'line'"
             :stroke-width="listType === 'picture-card' ? 6 : 2"
@@ -55,26 +55,26 @@
         </div>
 
         <label :class="nsUpload.be('list', 'item-status-label')">
-          <el-icon
+          <ty-icon
             v-if="listType === 'text'"
             :class="[nsIcon.m('upload-success'), nsIcon.m('circle-check')]"
           >
             <circle-check />
-          </el-icon>
-          <el-icon
+          </ty-icon>
+          <ty-icon
             v-else-if="['picture-card', 'picture'].includes(listType)"
             :class="[nsIcon.m('upload-success'), nsIcon.m('check')]"
           >
             <Check />
-          </el-icon>
+          </ty-icon>
         </label>
-        <el-icon
+        <ty-icon
           v-if="!disabled"
           :class="nsIcon.m('close')"
           @click="handleRemove(file)"
         >
           <Close />
-        </el-icon>
+        </ty-icon>
         <!-- Due to close btn only appears when li gets focused disappears after li gets blurred, thus keyboard navigation can never reach close btn-->
         <!-- This is a bug which needs to be fixed -->
         <!-- TODO: Fix the incorrect navigation interaction -->
@@ -89,16 +89,16 @@
             :class="nsUpload.be('list', 'item-preview')"
             @click="handlePreview(file)"
           >
-            <el-icon :class="nsIcon.m('zoom-in')"><zoom-in /></el-icon>
+            <ty-icon :class="nsIcon.m('zoom-in')"><zoom-in /></ty-icon>
           </span>
           <span
             v-if="!disabled"
             :class="nsUpload.be('list', 'item-delete')"
             @click="handleRemove(file)"
           >
-            <el-icon :class="nsIcon.m('delete')">
+            <ty-icon :class="nsIcon.m('delete')">
               <Delete />
-            </el-icon>
+            </ty-icon>
           </span>
         </span>
       </slot>
@@ -109,7 +109,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import {
   Check,
   CircleCheck,
@@ -119,14 +119,14 @@ import {
   ZoomIn,
 } from '@element-plus/icons-vue'
 import { useLocale, useNamespace } from '@element-plus/hooks'
-import ElProgress from '@element-plus/components/progress'
+import TyProgress from '@element-plus/components/progress'
 import { useFormDisabled } from '@element-plus/components/form'
 import { uploadListEmits, uploadListProps } from './upload-list'
 
 import type { UploadFile } from './upload'
 
 defineOptions({
-  name: 'ElUploadList',
+  name: 'TyUploadList',
 })
 
 const props = defineProps(uploadListProps)

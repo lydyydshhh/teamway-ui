@@ -1,35 +1,35 @@
-<template>
+﻿<template>
   <div style="font-size: 14px">
     <p>open(close) the Dropdown list2 will close(open) the Dropdown List1.</p>
   </div>
   <div style="margin: 15px">
-    <el-button @click="showClick">show</el-button>
+    <ty-button @click="showClick">show</ty-button>
   </div>
-  <el-dropdown ref="dropdown1" trigger="contextmenu" style="margin-right: 30px">
-    <span class="el-dropdown-link"> Dropdown List1 </span>
+  <ty-dropdown ref="dropdown1" trigger="contextmenu" style="margin-right: 30px">
+    <span class="ty-dropdown-link"> Dropdown List1 </span>
     <template #dropdown>
-      <el-dropdown-menu>
-        <el-dropdown-item>Action 1</el-dropdown-item>
-        <el-dropdown-item>Action 2</el-dropdown-item>
-        <el-dropdown-item>Action 3</el-dropdown-item>
-        <el-dropdown-item disabled>Action 4</el-dropdown-item>
-        <el-dropdown-item divided>Action 5</el-dropdown-item>
-      </el-dropdown-menu>
+      <ty-dropdown-menu>
+        <ty-dropdown-item>Action 1</ty-dropdown-item>
+        <ty-dropdown-item>Action 2</ty-dropdown-item>
+        <ty-dropdown-item>Action 3</ty-dropdown-item>
+        <ty-dropdown-item disabled>Action 4</ty-dropdown-item>
+        <ty-dropdown-item divided>Action 5</ty-dropdown-item>
+      </ty-dropdown-menu>
     </template>
-  </el-dropdown>
+  </ty-dropdown>
 
-  <el-dropdown trigger="contextmenu" @visible-change="handleVisible2">
-    <span class="el-dropdown-link"> Dropdown List2 </span>
+  <ty-dropdown trigger="contextmenu" @visible-change="handleVisible2">
+    <span class="ty-dropdown-link"> Dropdown List2 </span>
     <template #dropdown>
-      <el-dropdown-menu>
-        <el-dropdown-item>Action 1</el-dropdown-item>
-        <el-dropdown-item>Action 2</el-dropdown-item>
-        <el-dropdown-item>Action 3</el-dropdown-item>
-        <el-dropdown-item disabled>Action 4</el-dropdown-item>
-        <el-dropdown-item divided>Action 5</el-dropdown-item>
-      </el-dropdown-menu>
+      <ty-dropdown-menu>
+        <ty-dropdown-item>Action 1</ty-dropdown-item>
+        <ty-dropdown-item>Action 2</ty-dropdown-item>
+        <ty-dropdown-item>Action 3</ty-dropdown-item>
+        <ty-dropdown-item disabled>Action 4</ty-dropdown-item>
+        <ty-dropdown-item divided>Action 5</ty-dropdown-item>
+      </ty-dropdown-menu>
     </template>
-  </el-dropdown>
+  </ty-dropdown>
 </template>
 
 <script setup lang="ts">
@@ -53,7 +53,7 @@ function showClick() {
 </script>
 
 <style scoped>
-.example-showcase .el-dropdown-link {
+.example-showcase .ty-dropdown-link {
   cursor: pointer;
   color: var(--ty-color-primary);
   display: flex;

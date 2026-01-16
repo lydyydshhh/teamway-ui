@@ -88,7 +88,7 @@
         </div>
       </template>
     </div>
-    <el-input-number
+    <ty-input-number
       v-if="showInput && !range"
       ref="input"
       :model-value="firstValue"
@@ -109,7 +109,7 @@
 <script lang="ts" setup>
 import { computed, provide, reactive, toRefs } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import ElInputNumber from '@element-plus/components/input-number'
+import TyInputNumber from '@element-plus/components/input-number'
 import { useFormItemInputId, useFormSize } from '@element-plus/components/form'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import { sliderContextKey } from './constants'
@@ -127,7 +127,7 @@ import {
 import type { SliderInitData } from './slider'
 
 defineOptions({
-  name: 'ElSlider',
+  name: 'TySlider',
 })
 
 const props = defineProps(sliderProps)

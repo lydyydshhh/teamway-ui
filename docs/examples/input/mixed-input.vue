@@ -1,59 +1,59 @@
-<template>
+﻿<template>
   <div>
-    <el-input
+    <ty-input
       v-model="input1"
       style="max-width: 600px"
       placeholder="Please input"
     >
       <template #prepend>Http://</template>
-    </el-input>
+    </ty-input>
   </div>
   <div class="mt-4">
-    <el-input
+    <ty-input
       v-model="input2"
       style="max-width: 600px"
       placeholder="Please input"
     >
       <template #append>.com</template>
-    </el-input>
+    </ty-input>
   </div>
   <div class="mt-4">
-    <el-input
+    <ty-input
       v-model="input3"
       style="max-width: 600px"
       placeholder="Please input"
       class="input-with-select"
     >
       <template #prepend>
-        <el-select v-model="select" placeholder="Select" style="width: 115px">
-          <el-option label="Restaurant" value="1" />
-          <el-option label="Order No." value="2" />
-          <el-option label="Tel" value="3" />
-        </el-select>
+        <ty-select v-model="select" placeholder="Select" style="width: 115px">
+          <ty-option label="Restaurant" value="1" />
+          <ty-option label="Order No." value="2" />
+          <ty-option label="Tel" value="3" />
+        </ty-select>
       </template>
       <template #append>
-        <el-button :icon="Search" />
+        <ty-button :icon="Search" />
       </template>
-    </el-input>
+    </ty-input>
   </div>
   <div class="mt-4">
-    <el-input
+    <ty-input
       v-model="input3"
       style="max-width: 600px"
       placeholder="Please input"
       class="input-with-select"
     >
       <template #prepend>
-        <el-button :icon="Search" />
+        <ty-button :icon="Search" />
       </template>
       <template #append>
-        <el-select v-model="select" placeholder="Select" style="width: 115px">
-          <el-option label="Restaurant" value="1" />
-          <el-option label="Order No." value="2" />
-          <el-option label="Tel" value="3" />
-        </el-select>
+        <ty-select v-model="select" placeholder="Select" style="width: 115px">
+          <ty-option label="Restaurant" value="1" />
+          <ty-option label="Order No." value="2" />
+          <ty-option label="Tel" value="3" />
+        </ty-select>
       </template>
-    </el-input>
+    </ty-input>
   </div>
 </template>
 
@@ -68,7 +68,7 @@ const select = ref('')
 </script>
 
 <style>
-.input-with-select .el-input-group__prepend {
+.input-with-select .ty-input-group__prepend {
   background-color: var(--ty-fill-color-blank);
 }
 </style>

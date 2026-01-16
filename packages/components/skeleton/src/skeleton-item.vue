@@ -10,7 +10,7 @@ import { PictureFilled } from '@element-plus/icons-vue'
 import { skeletonItemProps } from './skeleton-item'
 
 defineOptions({
-  name: 'ElSkeletonItem',
+  name: 'TySkeletonItem',
 })
 defineProps(skeletonItemProps)
 const ns = useNamespace('skeleton')

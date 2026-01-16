@@ -1,15 +1,15 @@
-<template>
-  <el-button type="primary" @click="open = true">Begin Tour</el-button>
+﻿<template>
+  <ty-button type="primary" @click="open = true">Begin Tour</ty-button>
 
-  <el-divider />
+  <ty-divider />
 
-  <el-space>
-    <el-button ref="ref1">Upload</el-button>
-    <el-button ref="ref2" type="primary">Save</el-button>
-    <el-button ref="ref3" :icon="MoreFilled" />
-  </el-space>
+  <ty-space>
+    <ty-button ref="ref1">Upload</ty-button>
+    <ty-button ref="ref2" type="primary">Save</ty-button>
+    <ty-button ref="ref3" :icon="MoreFilled" />
+  </ty-space>
 
-  <el-tour
+  <ty-tour
     v-model="open"
     :mask="{
       style: {
@@ -18,14 +18,14 @@
       color: 'rgba(80, 255, 255, .4)',
     }"
   >
-    <el-tour-step :target="ref1?.$el" title="Upload File">
+    <ty-tour-step :target="ref1?.$el" title="Upload File">
       <img
-        src="https://element-plus.org/images/element-plus-logo.svg"
+        src="https://element-plus.org/images/teamway-ui-logo.svg"
         alt="tour.png"
       />
       <div>Put you files here.</div>
-    </el-tour-step>
-    <el-tour-step
+    </ty-tour-step>
+    <ty-tour-step
       :target="ref2?.$el"
       title="Save"
       description="Save your changes"
@@ -36,13 +36,13 @@
         color: 'rgba(40, 0, 255, .4)',
       }"
     />
-    <el-tour-step
+    <ty-tour-step
       :target="ref3?.$el"
       title="Other Actions"
       description="Click to see other"
       :mask="false"
     />
-  </el-tour>
+  </ty-tour>
 </template>
 
 <script setup lang="ts">

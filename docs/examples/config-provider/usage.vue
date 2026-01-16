@@ -1,12 +1,12 @@
-<template>
+﻿<template>
   <div>
-    <el-button mb-2 @click="toggle">Switch Language</el-button>
+    <ty-button mb-2 @click="toggle">Switch Language</ty-button>
     <br />
 
-    <el-config-provider :locale="locale">
-      <el-table mb-1 :data="[]" />
-      <el-pagination :total="100" />
-    </el-config-provider>
+    <ty-config-provider :locale="locale">
+      <ty-table mb-1 :data="[]" />
+      <ty-pagination :total="100" />
+    </ty-config-provider>
   </div>
 </template>
 

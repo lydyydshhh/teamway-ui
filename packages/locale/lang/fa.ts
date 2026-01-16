@@ -122,7 +122,7 @@ export default {
       prevPages: '{pager} صفحات قبلی',
       nextPages: '{pager} صفحات بعدی',
       deprecationWarning:
-        'استفاده‌های منسوخ شناسایی شد، لطفاً به مستندات el-pagination مراجعه کنید',
+        'استفاده‌های منسوخ شناسایی شد، لطفاً به مستندات ty-pagination مراجعه کنید',
     },
     dialog: {
       close: 'بستن این دیالوگ',

@@ -507,17 +507,17 @@ export default defineConfig([
               group: [
                 '@element-plus/theme-chalk/**/*.scss',
                 '!@element-plus/theme-chalk/src/*.scss',
-                '@element-plus/theme-chalk/src/el-*.scss',
+                '@element-plus/theme-chalk/src/ty-*.scss',
               ],
               message: 'Use @element-plus/theme-chalk/src/*.scss instead.',
             },
             {
               group: [
                 '@element-plus/theme-chalk/**/*.css',
-                '!@element-plus/theme-chalk/el-*.css',
+                '!@element-plus/theme-chalk/ty-*.css',
                 '!@element-plus/theme-chalk/base.css',
               ],
-              message: 'Use @element-plus/theme-chalk/el-*.css instead.',
+              message: 'Use @element-plus/theme-chalk/ty-*.css instead.',
             },
             {
               group: [

@@ -1,74 +1,74 @@
-<template>
-  <el-row>
-    <el-col :span="24">
+﻿<template>
+  <ty-row>
+    <ty-col :span="24">
       <div class="grid-content ep-bg-purple-dark" />
-    </el-col>
-  </el-row>
-  <el-row>
-    <el-col :span="12">
+    </ty-col>
+  </ty-row>
+  <ty-row>
+    <ty-col :span="12">
       <div class="grid-content ep-bg-purple" />
-    </el-col>
-    <el-col :span="12">
+    </ty-col>
+    <ty-col :span="12">
       <div class="grid-content ep-bg-purple-light" />
-    </el-col>
-  </el-row>
-  <el-row>
-    <el-col :span="8">
+    </ty-col>
+  </ty-row>
+  <ty-row>
+    <ty-col :span="8">
       <div class="grid-content ep-bg-purple" />
-    </el-col>
-    <el-col :span="8">
+    </ty-col>
+    <ty-col :span="8">
       <div class="grid-content ep-bg-purple-light" />
-    </el-col>
-    <el-col :span="8">
+    </ty-col>
+    <ty-col :span="8">
       <div class="grid-content ep-bg-purple" />
-    </el-col>
-  </el-row>
-  <el-row>
-    <el-col :span="6">
+    </ty-col>
+  </ty-row>
+  <ty-row>
+    <ty-col :span="6">
       <div class="grid-content ep-bg-purple" />
-    </el-col>
-    <el-col :span="6">
+    </ty-col>
+    <ty-col :span="6">
       <div class="grid-content ep-bg-purple-light" />
-    </el-col>
-    <el-col :span="6">
+    </ty-col>
+    <ty-col :span="6">
       <div class="grid-content ep-bg-purple" />
-    </el-col>
-    <el-col :span="6">
+    </ty-col>
+    <ty-col :span="6">
       <div class="grid-content ep-bg-purple-light" />
-    </el-col>
-  </el-row>
-  <el-row>
-    <el-col :span="4">
+    </ty-col>
+  </ty-row>
+  <ty-row>
+    <ty-col :span="4">
       <div class="grid-content ep-bg-purple" />
-    </el-col>
-    <el-col :span="4">
+    </ty-col>
+    <ty-col :span="4">
       <div class="grid-content ep-bg-purple-light" />
-    </el-col>
-    <el-col :span="4">
+    </ty-col>
+    <ty-col :span="4">
       <div class="grid-content ep-bg-purple" />
-    </el-col>
-    <el-col :span="4">
+    </ty-col>
+    <ty-col :span="4">
       <div class="grid-content ep-bg-purple-light" />
-    </el-col>
-    <el-col :span="4">
+    </ty-col>
+    <ty-col :span="4">
       <div class="grid-content ep-bg-purple" />
-    </el-col>
-    <el-col :span="4">
+    </ty-col>
+    <ty-col :span="4">
       <div class="grid-content ep-bg-purple-light" />
-    </el-col>
-  </el-row>
+    </ty-col>
+  </ty-row>
 </template>
 
 <style>
-.el-row {
+.ty-row {
   margin-bottom: 20px;
 }
 
-.el-row:last-child {
+.ty-row:last-child {
   margin-bottom: 0;
 }
 
-.el-col {
+.ty-col {
   border-radius: 4px;
 }
 

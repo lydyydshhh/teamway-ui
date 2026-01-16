@@ -15,7 +15,7 @@
       :scrollbar-always-on="scrollbarAlwaysOn"
     >
       <template #default="{ data, index, style }">
-        <el-tree-node
+        <ty-tree-node
           :key="data[index].key"
           :style="style"
           :node="data[index]"
@@ -50,11 +50,11 @@ import { useLocale, useNamespace } from '@element-plus/hooks'
 import { formItemContextKey } from '@element-plus/components/form'
 import { FixedSizeList } from '@element-plus/components/virtual-list'
 import { useTree } from './composables/useTree'
-import ElTreeNode from './tree-node.vue'
+import TyTreeNode from './tree-node.vue'
 import { ROOT_TREE_INJECTION_KEY, treeEmits, treeProps } from './virtual-tree'
 
 defineOptions({
-  name: 'ElTreeV2',
+  name: 'TyTreeV2',
 })
 
 const props = defineProps(treeProps)

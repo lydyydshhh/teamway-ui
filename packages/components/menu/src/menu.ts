@@ -207,7 +207,7 @@ export type MenuEmits = typeof menuEmits
 const DEFAULT_MORE_ITEM_WIDTH = 64
 
 export default defineComponent({
-  name: 'ElMenu',
+  name: 'TyMenu',
 
   props: menuProps,
   emits: menuEmits,

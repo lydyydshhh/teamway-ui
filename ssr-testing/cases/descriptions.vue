@@ -1,13 +1,13 @@
 <template>
-  <el-descriptions title="User Info">
-    <el-descriptions-item label="Username">kooriookami</el-descriptions-item>
-    <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
-    <el-descriptions-item label="Place">Suzhou</el-descriptions-item>
-    <el-descriptions-item label="Remarks">
-      <el-tag size="small">School</el-tag>
-    </el-descriptions-item>
-    <el-descriptions-item label="Address">
+  <ty-descriptions title="User Info">
+    <ty-descriptions-item label="Username">kooriookami</ty-descriptions-item>
+    <ty-descriptions-item label="Telephone">18100000000</ty-descriptions-item>
+    <ty-descriptions-item label="Place">Suzhou</ty-descriptions-item>
+    <ty-descriptions-item label="Remarks">
+      <ty-tag size="small">School</ty-tag>
+    </ty-descriptions-item>
+    <ty-descriptions-item label="Address">
       No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province
-    </el-descriptions-item>
-  </el-descriptions>
+    </ty-descriptions-item>
+  </ty-descriptions>
 </template>

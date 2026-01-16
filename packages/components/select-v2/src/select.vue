@@ -6,7 +6,7 @@
     @mouseenter="states.inputHovering = true"
     @mouseleave="states.inputHovering = false"
   >
-    <el-tooltip
+    <ty-tooltip
       ref="tooltipRef"
       :visible="dropdownMenuVisible"
       :teleported="teleported"
@@ -69,7 +69,7 @@
                 :key="getValueKey(getValue(item))"
                 :class="nsSelect.e('selected-item')"
               >
-                <el-tag
+                <ty-tag
                   :closable="!selectDisabled && !getDisabled(item)"
                   :size="collapseTagSize"
                   :type="tagType"
@@ -88,10 +88,10 @@
                       {{ getLabel(item) }}
                     </slot>
                   </span>
-                </el-tag>
+                </ty-tag>
               </div>
 
-              <el-tooltip
+              <ty-tooltip
                 v-if="collapseTags && modelValue.length > maxCollapseTags"
                 ref="tagTooltipRef"
                 :disabled="dropdownMenuVisible || !collapseTagsTooltip"
@@ -108,7 +108,7 @@
                     ref="collapseItemRef"
                     :class="nsSelect.e('selected-item')"
                   >
-                    <el-tag
+                    <ty-tag
                       :closable="false"
                       :size="collapseTagSize"
                       :type="tagType"
@@ -119,7 +119,7 @@
                       <span :class="nsSelect.e('tags-text')">
                         + {{ modelValue.length - maxCollapseTags }}
                       </span>
-                    </el-tag>
+                    </ty-tag>
                   </div>
                 </template>
                 <template #content>
@@ -129,7 +129,7 @@
                       :key="getValueKey(getValue(selected))"
                       :class="nsSelect.e('selected-item')"
                     >
-                      <el-tag
+                      <ty-tag
                         class="in-tooltip"
                         :closable="!selectDisabled && !getDisabled(selected)"
                         :size="collapseTagSize"
@@ -148,11 +148,11 @@
                             {{ getLabel(selected) }}
                           </slot>
                         </span>
-                      </el-tag>
+                      </ty-tag>
                     </div>
                   </div>
                 </template>
-              </el-tooltip>
+              </ty-tooltip>
             </slot>
             <div
               :class="[
@@ -229,14 +229,14 @@
             </div>
           </div>
           <div ref="suffixRef" :class="nsSelect.e('suffix')">
-            <el-icon
+            <ty-icon
               v-if="iconComponent"
               v-show="!showClearBtn"
               :class="[nsSelect.e('caret'), nsInput.e('icon'), iconReverse]"
             >
               <component :is="iconComponent" />
-            </el-icon>
-            <el-icon
+            </ty-icon>
+            <ty-icon
               v-if="showClearBtn && clearIcon"
               :class="[
                 nsSelect.e('caret'),
@@ -246,8 +246,8 @@
               @click.prevent.stop="handleClear"
             >
               <component :is="clearIcon" />
-            </el-icon>
-            <el-icon
+            </ty-icon>
+            <ty-icon
               v-if="validateState && validateIcon && needStatusIcon"
               :class="[
                 nsInput.e('icon'),
@@ -256,12 +256,12 @@
               ]"
             >
               <component :is="validateIcon" />
-            </el-icon>
+            </ty-icon>
           </div>
         </div>
       </template>
       <template #content>
-        <el-select-menu
+        <ty-select-menu
           :id="contentId"
           ref="menuRef"
           :data="filteredOptions"
@@ -295,9 +295,9 @@
               <slot name="footer" />
             </div>
           </template>
-        </el-select-menu>
+        </ty-select-menu>
       </template>
-    </el-tooltip>
+    </ty-tooltip>
   </div>
 </template>
 
@@ -305,23 +305,23 @@
 import { computed, defineComponent, provide, reactive, toRefs } from 'vue'
 import { isArray } from '@element-plus/utils'
 import { ClickOutside } from '@element-plus/directives'
-import ElTooltip from '@element-plus/components/tooltip'
-import ElTag from '@element-plus/components/tag'
-import ElIcon from '@element-plus/components/icon'
+import TyTooltip from '@element-plus/components/tooltip'
+import TyTag from '@element-plus/components/tag'
+import TyIcon from '@element-plus/components/icon'
 import { useCalcInputWidth, useId } from '@element-plus/hooks'
-import ElSelectMenu from './select-dropdown'
+import TySelectMenu from './select-dropdown'
 import useSelect from './useSelect'
 import { selectV2Emits, selectV2Props } from './defaults'
 import { selectV2InjectionKey } from './token'
 import { BORDER_HORIZONTAL_WIDTH } from '@element-plus/constants'
 
 export default defineComponent({
-  name: 'ElSelectV2',
+  name: 'TySelectV2',
   components: {
-    ElSelectMenu,
-    ElTag,
-    ElTooltip,
-    ElIcon,
+    TySelectMenu,
+    TyTag,
+    TyTooltip,
+    TyIcon,
   },
   directives: { ClickOutside },
   props: selectV2Props,

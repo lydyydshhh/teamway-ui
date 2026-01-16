@@ -108,7 +108,7 @@ describe('Popover.vue', () => {
 
     await nextTick()
     const trigger$ = wrapper.findComponent(ElPopperTrigger)
-    const triggerEl = trigger$.find('.el-tooltip__trigger')
+    const triggerEl = trigger$.find('.ty-tooltip__trigger')
     vi.useFakeTimers()
     await triggerEl.trigger('click')
     vi.runAllTimers()
@@ -132,8 +132,8 @@ describe('Popover.vue', () => {
     const wrapper = _mount({ visible: false, trigger: 'click' })
     await nextTick()
     const trigger$ = wrapper.findComponent(ElPopperTrigger)
-    const triggerEl = trigger$.find('.el-tooltip__trigger')
-    const popoverDom: HTMLElement = document.querySelector('.el-popper')!
+    const triggerEl = trigger$.find('.ty-tooltip__trigger')
+    const popoverDom: HTMLElement = document.querySelector('.ty-popper')!
 
     vi.useFakeTimers()
     await triggerEl.trigger('click')
@@ -178,8 +178,8 @@ describe('Popover.vue', () => {
     )
     await nextTick()
     const trigger$ = wrapper.findComponent(ElPopperTrigger)
-    const triggerEl = trigger$.find('.el-tooltip__trigger')
-    const popoverDom: HTMLElement = document.querySelector('.el-popper')!
+    const triggerEl = trigger$.find('.ty-tooltip__trigger')
+    const popoverDom: HTMLElement = document.querySelector('.ty-popper')!
 
     vi.useFakeTimers()
     await triggerEl.trigger('click')

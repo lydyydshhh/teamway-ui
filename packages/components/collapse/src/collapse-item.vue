@@ -18,13 +18,13 @@
         <slot name="title" :is-active="isActive">{{ title }}</slot>
       </span>
       <slot name="icon" :is-active="isActive">
-        <el-icon :class="arrowKls">
+        <ty-icon :class="arrowKls">
           <component :is="icon" />
-        </el-icon>
+        </ty-icon>
       </slot>
     </div>
 
-    <el-collapse-transition>
+    <ty-collapse-transition>
       <div
         v-show="isActive"
         :id="scopedContentId"
@@ -37,18 +37,18 @@
           <slot />
         </div>
       </div>
-    </el-collapse-transition>
+    </ty-collapse-transition>
   </div>
 </template>
 
 <script lang="ts" setup>
-import ElCollapseTransition from '@element-plus/components/collapse-transition'
-import ElIcon from '@element-plus/components/icon'
+import TyCollapseTransition from '@element-plus/components/collapse-transition'
+import TyIcon from '@element-plus/components/icon'
 import { collapseItemProps } from './collapse-item'
 import { useCollapseItem, useCollapseItemDOM } from './use-collapse-item'
 
 defineOptions({
-  name: 'ElCollapseItem',
+  name: 'TyCollapseItem',
 })
 
 const props = defineProps(collapseItemProps)

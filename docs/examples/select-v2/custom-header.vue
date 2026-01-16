@@ -1,5 +1,5 @@
-<template>
-  <el-select-v2
+﻿<template>
+  <ty-select-v2
     v-model="value"
     :options="options"
     multiple
@@ -11,15 +11,15 @@
     style="width: 240px"
   >
     <template #header>
-      <el-checkbox
+      <ty-checkbox
         v-model="checkAll"
         :indeterminate="indeterminate"
         @change="handleCheckAll"
       >
         All
-      </el-checkbox>
+      </ty-checkbox>
     </template>
-  </el-select-v2>
+  </ty-select-v2>
 </template>
 
 <script lang="ts" setup>
@@ -62,7 +62,7 @@ const handleCheckAll = (val: CheckboxValueType) => {
 
 <style>
 .custom-header {
-  .el-checkbox {
+  .ty-checkbox {
     display: flex;
     height: unset;
   }

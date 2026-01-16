@@ -1,7 +1,7 @@
-<template>
-  <el-switch v-model="value1" :active-icon="Check" :inactive-icon="Close" />
+﻿<template>
+  <ty-switch v-model="value1" :active-icon="Check" :inactive-icon="Close" />
   <br />
-  <el-switch
+  <ty-switch
     v-model="value2"
     class="mt-2"
     style="margin-left: 24px"

@@ -8,20 +8,20 @@
     @click="$emit('click', $event)"
   >
     <span v-if="prevText">{{ prevText }}</span>
-    <el-icon v-else>
+    <ty-icon v-else>
       <component :is="prevIcon" />
-    </el-icon>
+    </ty-icon>
   </button>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { useLocale } from '@element-plus/hooks'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { paginationPrevEmits, paginationPrevProps } from './prev'
 
 defineOptions({
-  name: 'ElPaginationPrev',
+  name: 'TyPaginationPrev',
 })
 
 const props = defineProps(paginationPrevProps)

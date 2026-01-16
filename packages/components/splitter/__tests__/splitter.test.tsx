@@ -32,8 +32,8 @@ describe('Splitter', () => {
       </ElSplitter>
     ))
 
-    expect(wrapper.find('.el-splitter').exists()).toBe(true)
-    expect(wrapper.findAll('.el-splitter-panel')).toHaveLength(2)
+    expect(wrapper.find('.ty-splitter').exists()).toBe(true)
+    expect(wrapper.findAll('.ty-splitter-panel')).toHaveLength(2)
   })
 
   it('should render with vertical layout', () => {
@@ -44,7 +44,7 @@ describe('Splitter', () => {
       </ElSplitter>
     ))
 
-    expect(wrapper.find('.el-splitter__vertical').exists()).toBe(true)
+    expect(wrapper.find('.ty-splitter__vertical').exists()).toBe(true)
   })
 
   it('should keep panels size consistent with props.size when containerSize is 0.', async () => {
@@ -69,7 +69,7 @@ describe('Splitter', () => {
     ))
 
     await nextTick()
-    const panels = wrapper.findAll('.el-splitter-panel')
+    const panels = wrapper.findAll('.ty-splitter-panel')
 
     // default size
     expect(panels[0].attributes('style')).toContain('flex-basis: 70px;')
@@ -104,14 +104,14 @@ describe('Splitter', () => {
       </div>
     ))
     await nextTick()
-    const panels = wrapper.findAll('.el-splitter-panel')
+    const panels = wrapper.findAll('.ty-splitter-panel')
 
     // default size
     expect(panels[0].attributes('style')).toContain('flex-basis: 150px;')
 
     // mock mouse event
     const simulateDrag = async (startPos: number, endPos: number) => {
-      const splitBar = wrapper.find('.el-splitter-bar__dragger')
+      const splitBar = wrapper.find('.ty-splitter-bar__dragger')
 
       // Simulate mouse down
       const mousedown = new MouseEvent('mousedown', { bubbles: true })
@@ -153,12 +153,12 @@ describe('Splitter', () => {
     ))
     await nextTick()
 
-    const panels = wrapper.findAll('.el-splitter-panel')
+    const panels = wrapper.findAll('.ty-splitter-panel')
     const startCollapseButton = wrapper.find(
-      '.el-splitter-bar__horizontal-collapse-icon-start'
+      '.ty-splitter-bar__horizontal-collapse-icon-start'
     )
     const endCollapseButton = wrapper.find(
-      '.el-splitter-bar__horizontal-collapse-icon-end'
+      '.ty-splitter-bar__horizontal-collapse-icon-end'
     )
 
     // default size
@@ -200,7 +200,7 @@ describe('Splitter', () => {
 
     // mock mouse event
     const simulateDrag = async (startPos: number, endPos: number) => {
-      const splitBar = wrapper.find('.el-splitter-bar__dragger')
+      const splitBar = wrapper.find('.ty-splitter-bar__dragger')
 
       // Simulate mouse down
       const mousedown = new MouseEvent('mousedown', { bubbles: true })
@@ -247,10 +247,10 @@ describe('Splitter', () => {
     await nextTick()
 
     const startCollapseButton = wrapper.find(
-      '.el-splitter-bar__horizontal-collapse-icon-start'
+      '.ty-splitter-bar__horizontal-collapse-icon-start'
     )
     const endCollapseButton = wrapper.find(
-      '.el-splitter-bar__horizontal-collapse-icon-end'
+      '.ty-splitter-bar__horizontal-collapse-icon-end'
     )
 
     // Click collapse button
@@ -283,12 +283,12 @@ describe('Splitter', () => {
     ))
     await nextTick()
 
-    const panels = wrapper.findAll('.el-splitter-panel')
+    const panels = wrapper.findAll('.ty-splitter-panel')
     const startCollapseButton = wrapper.find(
-      '.el-splitter-bar__horizontal-collapse-icon-start'
+      '.ty-splitter-bar__horizontal-collapse-icon-start'
     )
     const endCollapseButton = wrapper.find(
-      '.el-splitter-bar__horizontal-collapse-icon-end'
+      '.ty-splitter-bar__horizontal-collapse-icon-end'
     )
 
     // default size
@@ -326,8 +326,8 @@ describe('Splitter', () => {
       </div>
     ))
     await nextTick()
-    const panels = wrapper.findAll('.el-splitter-panel')
-    const splitBar = wrapper.find('.el-splitter-bar__dragger')
+    const panels = wrapper.findAll('.ty-splitter-panel')
+    const splitBar = wrapper.find('.ty-splitter-bar__dragger')
 
     const mousedown = new MouseEvent('mousedown', { bubbles: true })
     Object.defineProperty(mousedown, 'pageX', { value: 200 })
@@ -356,8 +356,8 @@ describe('Splitter', () => {
       </div>
     ))
     await nextTick()
-    const panels = wrapper.findAll('.el-splitter-panel')
-    const splitBar = wrapper.find('.el-splitter-bar__dragger')
+    const panels = wrapper.findAll('.ty-splitter-panel')
+    const splitBar = wrapper.find('.ty-splitter-bar__dragger')
 
     const mousedown = new MouseEvent('mousedown', { bubbles: true })
     Object.defineProperty(mousedown, 'pageX', { value: 200 })
@@ -388,7 +388,7 @@ describe('Splitter', () => {
     ))
     await nextTick()
 
-    const splitBar = wrapper.find('.el-splitter-bar__dragger')
+    const splitBar = wrapper.find('.ty-splitter-bar__dragger')
 
     const mousedown = new MouseEvent('mousedown', { bubbles: true })
     Object.defineProperty(mousedown, 'pageX', { value: 200 })
@@ -407,7 +407,7 @@ describe('Splitter', () => {
 
     expect(onResizeEnd).toHaveBeenCalledWith(0, [150, 250])
 
-    const panels = wrapper.findAll('.el-splitter-panel')
+    const panels = wrapper.findAll('.ty-splitter-panel')
     expect(panels[0].attributes('style')).toContain('flex-basis: 150px;')
     expect(panels[1].attributes('style')).toContain('flex-basis: 250px;')
   })
@@ -424,13 +424,13 @@ describe('Splitter', () => {
     ))
     await nextTick()
 
-    expect(wrapper.find('.el-splitter__mask').exists()).toBeFalsy()
+    expect(wrapper.find('.ty-splitter__mask').exists()).toBeFalsy()
 
-    const splitBar = wrapper.find('.el-splitter-bar__dragger')
+    const splitBar = wrapper.find('.ty-splitter-bar__dragger')
     const mousedown = new MouseEvent('mousedown', { bubbles: true })
     Object.defineProperty(mousedown, 'pageX', { value: 200 })
     splitBar.element.dispatchEvent(mousedown)
     await nextTick()
-    expect(wrapper.find('.el-splitter__mask').exists()).toBeFalsy()
+    expect(wrapper.find('.ty-splitter__mask').exists()).toBeFalsy()
   })
 })

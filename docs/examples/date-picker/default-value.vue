@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="demo-date-picker">
     <div class="block">
       <span class="demonstration">date</span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value1"
         type="date"
         placeholder="Pick a date"
@@ -11,7 +11,7 @@
     </div>
     <div class="block">
       <span class="demonstration">daterange</span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value2"
         type="daterange"
         start-placeholder="Start Date"

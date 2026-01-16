@@ -83,7 +83,7 @@ const beforeChange = () => {
 
 <template>
   <ClientOnly>
-    <el-switch
+    <ty-switch
       ref="switchRef"
       v-model="darkMode"
       v-bind="$attrs"
@@ -95,12 +95,12 @@ const beforeChange = () => {
 </template>
 
 <style lang="scss" scoped>
-:deep(.el-switch__core) {
+:deep(.ty-switch__core) {
   --ty-switch-on-color: var(--bg-color-mute);
   --ty-switch-off-color: var(--bg-color-mute);
   --ty-switch-border-color: var(--border-color);
 
-  .el-switch__action {
+  .ty-switch__action {
     width: 14px;
     height: 14px;
   }

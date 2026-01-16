@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="flex flex-col items-start gap-4">
-    <el-segmented v-model="value" :options="options" size="large" />
-    <el-segmented v-model="value" :options="options" size="default" />
-    <el-segmented v-model="value" :options="options" size="small" />
+    <ty-segmented v-model="value" :options="options" size="large" />
+    <ty-segmented v-model="value" :options="options" size="default" />
+    <ty-segmented v-model="value" :options="options" size="small" />
   </div>
 </template>
 

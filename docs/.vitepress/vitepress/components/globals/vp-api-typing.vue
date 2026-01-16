@@ -19,8 +19,8 @@ const detail = computed(() => apiTypingLocale[lang.value].detail)
       {{ type }}
     </code>
     <ClientOnly>
-      <ElTooltip v-if="details" effect="light" trigger="click">
-        <ElButton
+      <TyTooltip v-if="details" effect="light" trigger="click">
+        <TyButton
           text
           :icon="Warning"
           :aria-label="detail"
@@ -40,7 +40,7 @@ const detail = computed(() => apiTypingLocale[lang.value].detail)
             </div>
           </slot>
         </template>
-      </ElTooltip>
+      </TyTooltip>
     </ClientOnly>
   </span>
 </template>

@@ -3,8 +3,8 @@ import Popconfirm from './src/popconfirm.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElPopconfirm: SFCWithInstall<typeof Popconfirm> =
+export const TyPopconfirm: SFCWithInstall<typeof Popconfirm> =
   withInstall(Popconfirm)
-export default ElPopconfirm
+export default TyPopconfirm
 
 export * from './src/popconfirm'

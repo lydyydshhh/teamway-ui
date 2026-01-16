@@ -11,7 +11,7 @@ import { useNamespace } from '@element-plus/hooks'
 import type { CSSProperties } from 'vue'
 
 defineOptions({
-  name: 'ElFooter',
+  name: 'TyFooter',
 })
 const props = defineProps({
   /**

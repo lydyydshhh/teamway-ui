@@ -1,5 +1,5 @@
-<template>
-  <el-transfer
+﻿<template>
+  <ty-transfer
     v-model="value"
     filterable
     :filter-method="filterMethod"

@@ -1,19 +1,19 @@
-<template>
-  <el-button plain @click="drawerVisible = true">
+﻿<template>
+  <ty-button plain @click="drawerVisible = true">
     Open the modal Drawer
-  </el-button>
+  </ty-button>
 
-  <el-drawer v-model="drawerVisible" :modal="false" modal-penetrable>
+  <ty-drawer v-model="drawerVisible" :modal="false" modal-penetrable>
     <span>It's a modal Drawer</span>
     <template #footer>
       <div class="drawer-footer">
-        <el-button @click="drawerVisible = false">Cancel</el-button>
-        <el-button type="primary" @click="drawerVisible = false">
+        <ty-button @click="drawerVisible = false">Cancel</ty-button>
+        <ty-button type="primary" @click="drawerVisible = false">
           Confirm
-        </el-button>
+        </ty-button>
       </div>
     </template>
-  </el-drawer>
+  </ty-drawer>
 </template>
 
 <script lang="ts" setup>

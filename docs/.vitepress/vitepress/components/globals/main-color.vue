@@ -10,8 +10,8 @@ const { copyColor } = useCopyColor()
 </script>
 
 <template>
-  <el-row :gutter="12">
-    <el-col :span="10" :xs="{ span: 12 }">
+  <ty-row :gutter="12">
+    <ty-col :span="10" :xs="{ span: 12 }">
       <div class="demo-color-box" :style="{ background: primary }">
         Brand Color
         <div class="value" text="xs">{{ primary.toUpperCase() }}</div>
@@ -28,6 +28,6 @@ const { copyColor } = useCopyColor()
           />
         </div>
       </div>
-    </el-col>
-  </el-row>
+    </ty-col>
+  </ty-row>
 </template>

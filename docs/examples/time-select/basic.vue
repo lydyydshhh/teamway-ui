@@ -1,5 +1,5 @@
-<template>
-  <el-time-select
+﻿<template>
+  <ty-time-select
     v-model="value"
     style="width: 240px"
     start="08:30"

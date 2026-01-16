@@ -1,12 +1,12 @@
-<template>
-  <el-button plain @click="open">Click to open Message Box</el-button>
+﻿<template>
+  <ty-button plain @click="open">Click to open Message Box</ty-button>
 </template>
 
 <script lang="ts" setup>
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'element-plus'
 
 const open = () => {
-  ElMessageBox.prompt('Please input your e-mail', 'Tip', {
+  TyMessageBox.prompt('Please input your e-mail', 'Tip', {
     confirmButtonText: 'OK',
     cancelButtonText: 'Cancel',
     inputPattern:
@@ -14,13 +14,13 @@ const open = () => {
     inputErrorMessage: 'Invalid Email',
   })
     .then(({ value }) => {
-      ElMessage({
+      TyMessage({
         type: 'success',
         message: `Your email is:${value}`,
       })
     })
     .catch(() => {
-      ElMessage({
+      TyMessage({
         type: 'info',
         message: 'Input canceled',
       })

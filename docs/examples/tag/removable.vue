@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="flex gap-2">
-    <el-tag v-for="tag in tags" :key="tag.name" closable :type="tag.type">
+    <ty-tag v-for="tag in tags" :key="tag.name" closable :type="tag.type">
       {{ tag.name }}
-    </el-tag>
+    </ty-tag>
   </div>
 </template>
 

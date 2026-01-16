@@ -15,7 +15,7 @@ import { STEPS_INJECTION_KEY } from './tokens'
 import type { StepItemState } from './item.vue'
 
 defineOptions({
-  name: 'ElSteps',
+  name: 'TySteps',
 })
 
 const props = defineProps(stepsProps)
@@ -27,7 +27,7 @@ const {
   addChild: addStep,
   removeChild: removeStep,
   ChildrenSorter: StepsSorter,
-} = useOrderedChildren<StepItemState>(getCurrentInstance()!, 'ElStep')
+} = useOrderedChildren<StepItemState>(getCurrentInstance()!, 'TyStep')
 
 watch(steps, () => {
   steps.value.forEach((instance: StepItemState, index: number) => {

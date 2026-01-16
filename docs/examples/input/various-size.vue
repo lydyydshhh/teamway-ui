@@ -1,17 +1,17 @@
-<template>
+﻿<template>
   <div class="flex gap-4 mb-4 items-center">
-    <el-input
+    <ty-input
       v-model="input1"
       style="width: 240px"
       size="large"
       placeholder="Please Input"
     />
-    <el-input
+    <ty-input
       v-model="input2"
       style="width: 240px"
       placeholder="Please Input"
     />
-    <el-input
+    <ty-input
       v-model="input3"
       style="width: 240px"
       size="small"
@@ -19,20 +19,20 @@
     />
   </div>
   <div class="flex gap-4 mb-4 items-center">
-    <el-input
+    <ty-input
       v-model="input1"
       style="width: 240px"
       size="large"
       placeholder="Please Input"
       :suffix-icon="Search"
     />
-    <el-input
+    <ty-input
       v-model="input2"
       style="width: 240px"
       placeholder="Please Input"
       :suffix-icon="Search"
     />
-    <el-input
+    <ty-input
       v-model="input3"
       style="width: 240px"
       size="small"
@@ -41,20 +41,20 @@
     />
   </div>
   <div class="flex gap-4 items-center">
-    <el-input
+    <ty-input
       v-model="input1"
       style="width: 240px"
       size="large"
       placeholder="Please Input"
       :prefix-icon="Search"
     />
-    <el-input
+    <ty-input
       v-model="input2"
       style="width: 240px"
       placeholder="Please Input"
       :prefix-icon="Search"
     />
-    <el-input
+    <ty-input
       v-model="input3"
       style="width: 240px"
       size="small"

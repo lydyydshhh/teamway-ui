@@ -57,11 +57,11 @@ const _mount = (template: string, data: any = () => ({}), otherObj?) =>
   mount(
     {
       components: {
-        'el-select': Select,
-        'el-option': Option,
-        'el-group-option': Group,
-        'el-form-item': ElFormItem,
-        'el-form': ElForm,
+        'ty-select': Select,
+        'ty-option': Option,
+        'ty-group-option': Group,
+        'ty-form-item': ElFormItem,
+        'ty-form': ElForm,
       },
       template,
       data,
@@ -83,7 +83,7 @@ const _mount = (template: string, data: any = () => ({}), otherObj?) =>
 function getOptions(): HTMLElement[] {
   return Array.from(
     document.querySelectorAll<HTMLElement>(
-      'body > div:last-child .el-select-dropdown__item'
+      'body > div:last-child .ty-select-dropdown__item'
     )
   )
 }
@@ -135,7 +135,7 @@ const getSelectVm = (configs: SelectProps = {}, options?) => {
 
   return _mount(
     `
-    <el-select
+    <ty-select
       ref="select"
       v-model="value"
       :multiple="multiple"
@@ -154,14 +154,14 @@ const getSelectVm = (configs: SelectProps = {}, options?) => {
       :automatic-dropdown="automaticDropdown"
       :size="size"
       :fit-input-width="fitInputWidth">
-      <el-option
+      <ty-option
         v-for="item in options"
         :label="item.label"
         :key="item.value"
         :disabled="item.disabled"
         :value="item.value">
-      </el-option>
-    </el-select>
+      </ty-option>
+    </ty-select>
   `,
     () => ({
       options,
@@ -270,7 +270,7 @@ const getGroupSelectVm = (configs: SelectProps = {}, options?) => {
   }
   return _mount(
     `
-    <el-select
+    <ty-select
       ref="select"
       v-model="value"
       :multiple="multiple"
@@ -286,18 +286,18 @@ const getGroupSelectVm = (configs: SelectProps = {}, options?) => {
       :remoteMethod="remoteMethod"
       :automatic-dropdown="automaticDropdown"
       :fit-input-width="fitInputWidth">
-     <el-group-option
+     <ty-group-option
         v-for="group in options"
         :key="group.label"
         :disabled="group.disabled"
         :label="group.label">
-        <el-option
+        <ty-option
           v-for="item in group.options"
           :key="item.value"
           :label="item.label"
           :value="item.value"/>
-      </el-group-option>
-    </el-select>
+      </ty-group-option>
+    </ty-select>
 `,
     () => ({
       options,
@@ -319,12 +319,12 @@ const getGroupSelectVm = (configs: SelectProps = {}, options?) => {
   )
 }
 
-const CLASS_NAME = 'el-select'
-const WRAPPER_CLASS_NAME = 'el-select__wrapper'
-const OPTION_ITEM_CLASS_NAME = 'el-select-dropdown__item'
-const PLACEHOLDER_CLASS_NAME = 'el-select__placeholder'
+const CLASS_NAME = 'ty-select'
+const WRAPPER_CLASS_NAME = 'ty-select__wrapper'
+const OPTION_ITEM_CLASS_NAME = 'ty-select-dropdown__item'
+const PLACEHOLDER_CLASS_NAME = 'ty-select__placeholder'
 const DEFAULT_PLACEHOLDER = 'Select'
-const TAG_NAME = `${WRAPPER_CLASS_NAME} .el-tag`
+const TAG_NAME = `${WRAPPER_CLASS_NAME} .ty-tag`
 
 describe('Select', () => {
   let wrapper: ReturnType<typeof _mount>
@@ -333,7 +333,7 @@ describe('Select', () => {
   })
 
   test('create', async () => {
-    wrapper = _mount(`<el-select v-model="value"></el-select>`, () => ({
+    wrapper = _mount(`<ty-select v-model="value"></ty-select>`, () => ({
       value: '',
     }))
     expect(wrapper.classes()).toContain(CLASS_NAME)
@@ -369,21 +369,21 @@ describe('Select', () => {
 
   test('custom popper style', async () => {
     wrapper = getSelectVm({ popperStyle: 'background: red;' })
-    const popper = document.querySelector('.el-popper') as HTMLElement
+    const popper = document.querySelector('.ty-popper') as HTMLElement
     expect(popper.style.background).toBe('red')
   })
 
   test('default value', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value">
-        <el-option
+      <ty-select v-model="value">
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -409,14 +409,14 @@ describe('Select', () => {
     process.env.RUN_TEST_WITH_PERSISTENT = 'true'
     wrapper = _mount(
       `
-      <el-select v-model="value" :persistent="false">
-        <el-option
+      <ty-select v-model="value" :persistent="false">
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -442,14 +442,14 @@ describe('Select', () => {
     process.env.RUN_TEST_WITH_PERSISTENT = 'true'
     wrapper = _mount(
       `
-      <el-select v-model="value" :persistent="false">
-        <el-option
+      <ty-select v-model="value" :persistent="false">
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -482,14 +482,14 @@ describe('Select', () => {
     process.env.RUN_TEST_WITH_PERSISTENT = 'true'
     wrapper = _mount(
       `
-      <el-select v-model="value" :persistent="false">
-        <el-option
+      <ty-select v-model="value" :persistent="false">
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [],
@@ -522,17 +522,17 @@ describe('Select', () => {
   test('should not render the empty slot when multiple is true and persistent is false', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" multiple :persistent="false">
-        <el-option
+      <ty-select v-model="value" multiple :persistent="false">
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
+        </ty-option>
         <template #empty>
           <div class="empty-slot">EmptySlot</div>
         </template>
-      </el-select>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -567,14 +567,14 @@ describe('Select', () => {
     process.env.RUN_TEST_WITH_PERSISTENT = 'true'
     wrapper = _mount(
       `
-      <el-select v-model="value" :persistent="false" multiple>
-        <el-option
+      <ty-select v-model="value" :persistent="false" multiple>
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -601,14 +601,14 @@ describe('Select', () => {
   test('multiple is true and persistent is false, render the label and dynamically modify options', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" :persistent="false" multiple>
-        <el-option
+      <ty-select v-model="value" :persistent="false" multiple>
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [],
@@ -637,14 +637,14 @@ describe('Select', () => {
   test('expose select label', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" :multiple="multiple">
-        <el-option
+      <ty-select v-model="value" :multiple="multiple">
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -682,14 +682,14 @@ describe('Select', () => {
   test('set default value to object', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value">
-        <el-option
+      <ty-select v-model="value">
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -719,14 +719,14 @@ describe('Select', () => {
   test('custom label', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value">
-        <el-option
+      <ty-select v-model="value">
+        <ty-option
           v-for="item in options"
           :label="item.name"
           :key="item.id"
           :value="item.id">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -750,14 +750,14 @@ describe('Select', () => {
   test('custom label with object', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" value-key="id">
-        <el-option
+      <ty-select v-model="value" value-key="id">
+        <ty-option
           v-for="item in options"
           :label="item.name"
           :key="item.id"
           :value="item">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -783,14 +783,14 @@ describe('Select', () => {
   test('value bind object with value-key', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" value-key="id">
-        <el-option
+      <ty-select v-model="value" value-key="id">
+        <ty-option
           v-for="item in options"
           :key="item.id"
           :label="item.label"
           :value="item"
         />
-      </el-select>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -818,14 +818,14 @@ describe('Select', () => {
   test('set default value to object with value-key', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" value-key="id">
-        <el-option
+      <ty-select v-model="value" value-key="id">
+        <ty-option
           v-for="item in options"
           :key="item.id"
           :label="item.label"
           :value="item"
         />
-      </el-select>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -846,14 +846,14 @@ describe('Select', () => {
   test('sync set value and options', async () => {
     wrapper = _mount(
       `
-    <el-select v-model="value">
-      <el-option
+    <ty-select v-model="value">
+      <ty-option
         v-for="item in options"
         :label="item.label"
         :key="item.value"
         :value="item.value">
-      </el-option>
-    </el-select>
+      </ty-option>
+    </ty-select>
   `,
       () => ({
         options: [
@@ -884,15 +884,15 @@ describe('Select', () => {
   test('single select', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" @change="handleChange">
-        <el-option
+      <ty-select v-model="value" @change="handleChange">
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
           <p>{{item.label}} {{item.value}}</p>
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -962,7 +962,7 @@ describe('Select', () => {
   })
 
   test('disabled select', () => {
-    wrapper = _mount(`<el-select disabled></el-select>`)
+    wrapper = _mount(`<ty-select disabled></ty-select>`)
     expect(wrapper.find(`.${WRAPPER_CLASS_NAME}`).classes()).toContain(
       'is-disabled'
     )
@@ -1047,14 +1047,14 @@ describe('Select', () => {
   test('visible event', async () => {
     wrapper = _mount(
       `
-    <el-select v-model="value" @visible-change="handleVisibleChange">
-      <el-option
+    <ty-select v-model="value" @visible-change="handleVisibleChange">
+      <ty-option
         v-for="item in options"
         :label="item.label"
         :key="item.value"
         :value="item.value">
-      </el-option>
-    </el-select>`,
+      </ty-option>
+    </ty-select>`,
       () => ({
         options: [],
         value: '',
@@ -1106,18 +1106,18 @@ describe('Select', () => {
 
   test('keyboard operations when options have the same label', async () => {
     wrapper = _mount(
-      `<el-select
+      `<ty-select
         v-model="value"
         clearable
         filterable
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value"
         />
-      </el-select>`,
+      </ty-select>`,
       () => ({
         options: [
           {
@@ -1192,7 +1192,7 @@ describe('Select', () => {
   })
 
   test('suffix icon', async () => {
-    wrapper = _mount(`<el-select></el-select>`)
+    wrapper = _mount(`<ty-select></ty-select>`)
     let suffixIcon = wrapper.findComponent(ArrowDown)
     expect(suffixIcon.exists()).toBe(true)
     await wrapper.setProps({ suffixIcon: markRaw(CaretTop) })
@@ -1201,7 +1201,7 @@ describe('Select', () => {
   })
 
   test('test remote show suffix', async () => {
-    wrapper = _mount(`<el-select></el-select>`)
+    wrapper = _mount(`<ty-select></ty-select>`)
     await wrapper.setProps({
       remote: true,
       filters: true,
@@ -1349,18 +1349,18 @@ describe('Select', () => {
     ]
     wrapper = _mount(
       `
-      <el-select
+      <ty-select
         v-model="value"
         filterable
         allowCreate
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [],
@@ -1388,7 +1388,7 @@ describe('Select', () => {
     options[3].click()
     await nextTick()
     expect(vm.value.includes('选项2') && vm.value.includes('选项4')).toBe(true)
-    const tagCloseIcons = wrapper.findAll('.el-tag__close')
+    const tagCloseIcons = wrapper.findAll('.ty-tag__close')
     await tagCloseIcons[0].trigger('click')
     expect(vm.value.indexOf('选项1')).toBe(-1)
   })
@@ -1396,10 +1396,10 @@ describe('Select', () => {
   test('multiple select when content overflow', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="selectedList" multiple placeholder="请选择">
-        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
-        </el-option>
-      </el-select>
+      <ty-select v-model="selectedList" multiple placeholder="请选择">
+        <ty-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -1439,7 +1439,7 @@ describe('Select', () => {
     await nextTick()
     options[2].click()
     await nextTick()
-    const tagWrappers = wrapper.findAll('.el-tag')
+    const tagWrappers = wrapper.findAll('.ty-tag')
     for (const tagWrapper of tagWrappers) {
       const tagWrapperDom = tagWrapper.element
       expect(tagWrapperDom.style.maxWidth).toBe('200px')
@@ -1449,10 +1449,10 @@ describe('Select', () => {
   test('multiple select with collapseTags when content overflow', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="selectedList" multiple collapseTags placeholder="请选择">
-        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
-        </el-option>
-      </el-select>
+      <ty-select v-model="selectedList" multiple collapseTags placeholder="请选择">
+        <ty-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -1488,7 +1488,7 @@ describe('Select', () => {
     selectRef.vm.states.selectionWidth = 200
     options[0].click()
     await nextTick()
-    const tagWrappers = wrapper.findAll('.el-tag')
+    const tagWrappers = wrapper.findAll('.ty-tag')
     const tagWrapperDom = tagWrappers[0].element
     expect(tagWrapperDom.style.maxWidth).toBe('200px')
     options[1].click()
@@ -1505,10 +1505,10 @@ describe('Select', () => {
 
     wrapper = _mount(
       `
-      <el-select v-model="selectedList" multiple collapseTags collapse-tags-tooltip placeholder="请选择">
-        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
-        </el-option>
-      </el-select>
+      <ty-select v-model="selectedList" multiple collapseTags collapse-tags-tooltip placeholder="请选择">
+        <ty-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -1545,9 +1545,9 @@ describe('Select', () => {
     await nextTick()
     options[2].click()
     await nextTick()
-    const triggerWrappers = wrapper.findAll('.el-tooltip__trigger')
+    const triggerWrappers = wrapper.findAll('.ty-tooltip__trigger')
     expect(triggerWrappers[0]).toBeDefined()
-    const tags = document.querySelectorAll('.el-select__tags-text')
+    const tags = document.querySelectorAll('.ty-select__tags-text')
     expect(tags.length).toBe(2)
     expect(tags[1].textContent).toBe(' + 2')
 
@@ -1557,10 +1557,10 @@ describe('Select', () => {
   test('multiple select with maxCollapseTags', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="selectedList" multiple collapseTags :max-collapse-tags="3" placeholder="请选择">
-        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
-        </el-option>
-      </el-select>
+      <ty-select v-model="selectedList" multiple collapseTags :max-collapse-tags="3" placeholder="请选择">
+        <ty-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -1597,9 +1597,9 @@ describe('Select', () => {
     await nextTick()
     options[2].click()
     await nextTick()
-    const triggerWrappers = wrapper.findAll('.el-tooltip__trigger')
+    const triggerWrappers = wrapper.findAll('.ty-tooltip__trigger')
     expect(triggerWrappers[0]).toBeDefined()
-    const tags = document.querySelectorAll('.el-select__tags-text')
+    const tags = document.querySelectorAll('.ty-select__tags-text')
     expect(tags.length).toBe(3)
   })
 
@@ -1608,15 +1608,15 @@ describe('Select', () => {
 
     wrapper = _mount(
       `
-      <el-select v-model="value" multiple @remove-tag="handleRemoveTag">
-        <el-option
+      <ty-select v-model="value" multiple @remove-tag="handleRemoveTag">
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
           <p>{{item.label}} {{item.value}}</p>
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -1649,7 +1649,7 @@ describe('Select', () => {
     const vm = wrapper.vm as any
     await nextTick()
     expect(vm.value.length).toBe(2)
-    const tagCloseIcons = wrapper.findAll('.el-tag__close')
+    const tagCloseIcons = wrapper.findAll('.ty-tag__close')
     await tagCloseIcons[1].trigger('click')
     expect(vm.value.length).toBe(1)
 
@@ -1662,14 +1662,14 @@ describe('Select', () => {
   test('allow remove non existant option', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" multiple filterable>
-        <el-option
+      <ty-select v-model="value" multiple filterable>
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [],
@@ -1680,7 +1680,7 @@ describe('Select', () => {
     await nextTick()
     const vm = wrapper.vm as any
     expect(vm.value.length).toBe(1)
-    expect(wrapper.findAll('.el-tag').length).toBe(1)
+    expect(wrapper.findAll('.ty-tag').length).toBe(1)
 
     const input = wrapper.find('input')
     await input.trigger('keydown', {
@@ -1688,7 +1688,7 @@ describe('Select', () => {
       key: EVENT_CODE.backspace,
     })
 
-    expect(wrapper.findAll('.el-tag').length).toBe(0)
+    expect(wrapper.findAll('.ty-tag').length).toBe(0)
     expect(vm.value.length).toBe(0)
   })
 
@@ -1707,7 +1707,7 @@ describe('Select', () => {
 
   test('event:focus', async () => {
     const handleFocus = vi.fn()
-    wrapper = _mount(`<el-select @focus="handleFocus" />`, () => ({
+    wrapper = _mount(`<ty-select @focus="handleFocus" />`, () => ({
       handleFocus,
     }))
     const select = wrapper.findComponent({ name: 'ElSelect' })
@@ -1720,7 +1720,7 @@ describe('Select', () => {
 
   test('should show clear btn on focus', async () => {
     const wrapper = _mount(
-      `<el-select v-model="value" :options="options" clearable />`,
+      `<ty-select v-model="value" :options="options" clearable />`,
       () => ({
         options: [
           {
@@ -1740,7 +1740,7 @@ describe('Select', () => {
 
   test('event:blur', async () => {
     const handleBlur = vi.fn()
-    wrapper = _mount(`<el-select @blur="handleBlur" />`, () => ({
+    wrapper = _mount(`<ty-select @blur="handleBlur" />`, () => ({
       handleBlur,
     }))
     const select = wrapper.findComponent({ name: 'ElSelect' })
@@ -1755,20 +1755,20 @@ describe('Select', () => {
     const handleFocus = vi.fn()
     const handleBlur = vi.fn()
     wrapper = _mount(
-      `<el-select
+      `<ty-select
         v-model="value"
         clearable
         filterable
         @focus="handleFocus"
         @blur="handleBlur"
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value"
         />
-      </el-select>`,
+      </ty-select>`,
       () => ({
         options: [
           {
@@ -1814,7 +1814,7 @@ describe('Select', () => {
     const handleBlur = vi.fn()
     wrapper = _mount(
       `
-    <el-select
+    <ty-select
       @focus="handleFocus"
       @blur="handleBlur"
       multiple
@@ -1844,20 +1844,20 @@ describe('Select', () => {
     const handleFocus = vi.fn()
     const handleBlur = vi.fn()
     wrapper = _mount(
-      `<el-select
+      `<ty-select
         v-model="value"
         multiple
         @focus="handleFocus"
         @blur="handleBlur"
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
           <p>{{item.label}} {{item.value}}</p>
-        </el-option>
-      </el-select>`,
+        </ty-option>
+      </ty-select>`,
       () => ({
         options: [
           {
@@ -1892,7 +1892,7 @@ describe('Select', () => {
 
     await input.trigger('focus')
     expect(handleFocus).toHaveBeenCalledTimes(1)
-    const tagCloseIcons = wrapper.findAll('.el-tag__close')
+    const tagCloseIcons = wrapper.findAll('.ty-tag__close')
     await tagCloseIcons[1].trigger('click')
     await tagCloseIcons[0].trigger('click')
     expect(handleFocus).toHaveBeenCalledTimes(1)
@@ -1905,7 +1905,7 @@ describe('Select', () => {
     const handleBlur = vi.fn()
     wrapper = _mount(
       `
-      <el-select @blur="handleBlur" />
+      <ty-select @blur="handleBlur" />
       <button>button</button>
       `,
       () => ({ handleBlur })
@@ -1963,11 +1963,11 @@ describe('Select', () => {
     let callCount = 0
     wrapper = _mount(
       `
-    <el-select v-model="value" @change="change" ref="select">
-      <el-option label="1" value="1" />
-      <el-option label="2" value="2" />
-      <el-option label="3" value="3" />
-    </el-select>`,
+    <ty-select v-model="value" @change="change" ref="select">
+      <ty-option label="1" value="1" />
+      <ty-option label="2" value="2" />
+      <ty-option label="3" value="3" />
+    </ty-select>`,
       () => ({
         value: '1',
         change: () => ++callCount,
@@ -1984,11 +1984,11 @@ describe('Select', () => {
   test('render slot `empty`', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value">
+      <ty-select v-model="value">
         <template #empty>
           <div class="empty-slot">EmptySlot</div>
         </template>
-      </el-select>`,
+      </ty-select>`,
       () => ({
         value: '1',
       })
@@ -2002,9 +2002,9 @@ describe('Select', () => {
   test('should set placeholder to label of selected option when filterable is true and multiple is false', async () => {
     wrapper = _mount(
       `
-      <el-select ref="select" v-model="value" filterable>
-        <el-option label="test" value="test" />
-      </el-select>`,
+      <ty-select ref="select" v-model="value" filterable>
+        <ty-option label="test" value="test" />
+      </ty-select>`,
       () => ({ value: 'test' })
     )
     const vm = wrapper.vm as any
@@ -2020,14 +2020,14 @@ describe('Select', () => {
   test('default value is null or undefined', async () => {
     wrapper = _mount(
       `
-    <el-select v-model="value">
-      <el-option
+    <ty-select v-model="value">
+      <ty-option
         v-for="item in options"
         :label="item.label"
         :key="item.value"
         :value="item.value">
-      </el-option>
-    </el-select>`,
+      </ty-option>
+    </ty-select>`,
       () => ({
         options: [
           {
@@ -2056,14 +2056,14 @@ describe('Select', () => {
   test('emptyText error show', async () => {
     wrapper = _mount(
       `
-    <el-select :model-value="value" filterable placeholder="Select">
-      <el-option
+    <ty-select :model-value="value" filterable placeholder="Select">
+      <ty-option
         v-for="item in options"
         :key="item.value"
         :label="item.label"
         :value="item.value">
-      </el-option>
-    </el-select>`,
+      </ty-option>
+    </ty-select>`,
       () => ({
         options: [
           {
@@ -2095,17 +2095,17 @@ describe('Select', () => {
     await trigger.trigger('click')
     await nextTick()
     expect(
-      !!(document.querySelector('.el-select__popper') as HTMLElement).style
+      !!(document.querySelector('.ty-select__popper') as HTMLElement).style
         .display
     ).toBeFalsy()
-    expect(wrapper.findAll('.el-select-dropdown__empty').length).toBe(0)
+    expect(wrapper.findAll('.ty-select-dropdown__empty').length).toBe(0)
   })
 
   test('multiple select with remote load', async () => {
     vi.useFakeTimers()
     wrapper = mount({
       template: `
-      <el-select
+      <ty-select
         v-model="value"
         multiple
         filterable
@@ -2115,13 +2115,13 @@ describe('Select', () => {
         :remote-method="remoteMethod"
         :loading="loading"
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
           :value="item"
         />
-      </el-select>`,
+      </ty-select>`,
       components: { ElSelect: Select, ElOption: Option },
       data() {
         return {
@@ -2241,20 +2241,20 @@ describe('Select', () => {
   test('disabled group', async () => {
     wrapper = _mount(
       `
-    <el-select v-model="value">
-      <el-group-option
+    <ty-select v-model="value">
+      <ty-group-option
         v-for="group in options"
         :key="group.label"
         :label="group.label"
         :disabled="group.disabled">
-        <el-option
+        <ty-option
           v-for="item in group.options"
           :key="item.value"
           :label="item.label"
           :value="item.value">
-        </el-option>
-      </el-group-option>
-    </el-select>`,
+        </ty-option>
+      </ty-group-option>
+    </ty-select>`,
       () => ({
         options: [
           {
@@ -2294,10 +2294,10 @@ describe('Select', () => {
     expect(vm.value).toBe('Shanghai')
   })
 
-  test('el-option-group should visible when el-option in a component', async () => {
+  test('ty-option-group should visible when ty-option in a component', async () => {
     const Options = defineComponent({
       components: {
-        'el-option': Option,
+        'ty-option': Option,
       },
       props: {
         options: {
@@ -2306,7 +2306,7 @@ describe('Select', () => {
         },
       },
       template: `
-        <el-option
+        <ty-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
@@ -2317,19 +2317,19 @@ describe('Select', () => {
 
     wrapper = mount({
       template: `
-        <el-select v-model="value">
-          <el-option-group
+        <ty-select v-model="value">
+          <ty-option-group
             v-for="group in options"
             :key="group.label"
             :label="group.label"
           >
             <Options :options="group.options" />
-          </el-option-group>
-        </el-select>
+          </ty-option-group>
+        </ty-select>
       `,
       components: {
-        'el-select': Select,
-        'el-option-group': Group,
+        'ty-select': Select,
+        'ty-option-group': Group,
         Options,
       },
       data() {
@@ -2357,10 +2357,10 @@ describe('Select', () => {
     expect(wrapper.findComponent(Group).vm.visible).toBe(true)
   })
 
-  test('el-option-group should visible when custom option component', async () => {
+  test('ty-option-group should visible when custom option component', async () => {
     const CustomOptions = defineComponent({
       components: {
-        'el-option': Option,
+        'ty-option': Option,
       },
       props: {
         label: {
@@ -2373,19 +2373,19 @@ describe('Select', () => {
         },
       },
       template: `
-        <el-option
+        <ty-option
           :label="label"
           :value="value"
         >
           {{label}} - some extra text
-        </el-option>
+        </ty-option>
       `,
     })
 
     wrapper = mount({
       template: `
-        <el-select v-model="value">
-          <el-option-group
+        <ty-select v-model="value">
+          <ty-option-group
             v-for="group in options"
             :key="group.label"
             :label="group.label"
@@ -2396,12 +2396,12 @@ describe('Select', () => {
               :label="item.label"
               :value="item.value"
             />
-          </el-option-group>
-        </el-select>
+          </ty-option-group>
+        </ty-select>
       `,
       components: {
-        'el-select': Select,
-        'el-option-group': Group,
+        'ty-select': Select,
+        'ty-option-group': Group,
         CustomOptions,
       },
       data() {
@@ -2432,16 +2432,16 @@ describe('Select', () => {
   test('tag of disabled option is not closable', async () => {
     wrapper = _mount(
       `
-    <el-select v-model="vendors" multiple :collapse-tags="isCollapsed" :clearable="isClearable" placeholder="Select Business Unit">
-    <el-option
+    <ty-select v-model="vendors" multiple :collapse-tags="isCollapsed" :clearable="isClearable" placeholder="Select Business Unit">
+    <ty-option
       v-for="(vendor, index) in options"
       :key="index"
       :value="index + 1"
       :label="vendor.name"
       :disabled="vendor.isDisabled"
     >
-    </el-option>
-  </el-select>`,
+    </ty-option>
+  </ty-select>`,
       () => ({
         vendors: [2, 3, 4],
         isCollapsed: false,
@@ -2457,12 +2457,12 @@ describe('Select', () => {
     const vm = wrapper.vm as any
     await nextTick()
     const selectVm = wrapper.findComponent({ name: 'ElSelect' }).vm as any
-    expect(wrapper.findAll('.el-tag').length).toBe(3)
-    const tagCloseIcons = wrapper.findAll('.el-tag__close')
+    expect(wrapper.findAll('.ty-tag').length).toBe(3)
+    const tagCloseIcons = wrapper.findAll('.ty-tag__close')
     expect(tagCloseIcons.length).toBe(1)
     await tagCloseIcons[0].trigger('click')
-    expect(wrapper.findAll('.el-tag__close').length).toBe(0)
-    expect(wrapper.findAll('.el-tag').length).toBe(2)
+    expect(wrapper.findAll('.ty-tag__close').length).toBe(0)
+    expect(wrapper.findAll('.ty-tag').length).toBe(2)
 
     //test if is clearable
     vm.isClearable = true
@@ -2471,9 +2471,9 @@ describe('Select', () => {
     selectVm.states.inputHovering = true
     await selectVm.$nextTick()
     const iconClear = wrapper.findComponent(CircleClose)
-    expect(wrapper.findAll('.el-tag').length).toBe(3)
+    expect(wrapper.findAll('.ty-tag').length).toBe(3)
     await iconClear.trigger('click')
-    expect(wrapper.findAll('.el-tag').length).toBe(2)
+    expect(wrapper.findAll('.ty-tag').length).toBe(2)
 
     // test for collapse select
     vm.vendors = [1, 2, 4]
@@ -2481,17 +2481,17 @@ describe('Select', () => {
     vm.isClearable = false
     await nextTick()
     expect(
-      wrapper.findAll('.el-tag').filter((item) => {
+      wrapper.findAll('.ty-tag').filter((item) => {
         return !hasClass(item.element, 'in-tooltip')
       }).length
     ).toBe(2)
-    await wrapper.find('.el-tag__close').trigger('click')
+    await wrapper.find('.ty-tag__close').trigger('click')
     expect(
-      wrapper.findAll('.el-tag').filter((item) => {
+      wrapper.findAll('.ty-tag').filter((item) => {
         return !hasClass(item.element, 'in-tooltip')
       }).length
     ).toBe(2)
-    expect(wrapper.findAll('.el-tag__close').length).toBe(0)
+    expect(wrapper.findAll('.ty-tag__close').length).toBe(0)
 
     // test for collapse select if is clearable
     vm.vendors = [1, 2, 4]
@@ -2499,31 +2499,31 @@ describe('Select', () => {
     vm.isClearable = true
     await nextTick()
     expect(
-      wrapper.findAll('.el-tag__close').filter((item) => {
+      wrapper.findAll('.ty-tag__close').filter((item) => {
         return !hasClass(item.element.parentElement, 'in-tooltip')
       }).length
     ).toBe(1)
-    await wrapper.find('.el-tag__close').trigger('click')
+    await wrapper.find('.ty-tag__close').trigger('click')
     expect(
-      wrapper.findAll('.el-tag').filter((item) => {
+      wrapper.findAll('.ty-tag').filter((item) => {
         return !hasClass(item.element, 'in-tooltip')
       }).length
     ).toBe(2)
-    expect(wrapper.findAll('.el-tag__close').length).toBe(0)
+    expect(wrapper.findAll('.ty-tag__close').length).toBe(0)
   })
 
   test('tag type', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" multiple tag-type="success">
-        <el-option
+      <ty-select v-model="value" multiple tag-type="success">
+        <ty-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
           :value="item.value"
         >
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -2544,21 +2544,21 @@ describe('Select', () => {
     const options = getOptions()
     options[1].click()
     await nextTick()
-    expect(wrapper.find('.el-tag').classes()).toContain('el-tag--success')
+    expect(wrapper.find('.ty-tag').classes()).toContain('ty-tag--success')
   })
 
   test('modelValue should be deep reactive in multiple mode', async () => {
     wrapper = _mount(
       `
-    <el-select v-model="modelValue" multiple>
-      <el-option
+    <ty-select v-model="modelValue" multiple>
+      <ty-option
         v-for="option in options"
         :key="option.value"
         :value="option.value"
         :label="option.label"
       >
-      </el-option>
-    </el-select>`,
+      </ty-option>
+    </ty-select>`,
       () => ({
         modelValue: [1],
         options: [
@@ -2571,21 +2571,21 @@ describe('Select', () => {
     )
     const vm = wrapper.vm as any
     await nextTick()
-    expect(wrapper.findAll('.el-tag').length).toBe(1)
+    expect(wrapper.findAll('.ty-tag').length).toBe(1)
 
     vm._.data.modelValue.splice(0, 1)
 
     await nextTick()
-    expect(wrapper.findAll('.el-tag').length).toBe(0)
+    expect(wrapper.findAll('.ty-tag').length).toBe(0)
   })
 
   test('should reset placeholder after clear when both multiple and filterable are true', async () => {
     const placeholder = 'placeholder'
     wrapper = _mount(
       `
-    <el-select v-model="modelValue" multiple filterable placeholder=${placeholder}>
-      <el-option label="1" value="1" />
-    </el-select>`,
+    <ty-select v-model="modelValue" multiple filterable placeholder=${placeholder}>
+      <ty-option label="1" value="1" />
+    </ty-select>`,
       () => ({
         modelValue: ['1'],
       })
@@ -2594,7 +2594,7 @@ describe('Select', () => {
 
     expect(wrapper.find(`.${PLACEHOLDER_CLASS_NAME}`).exists()).toBe(false)
 
-    const tagCloseIcon = wrapper.find('.el-tag__close')
+    const tagCloseIcon = wrapper.find('.ty-tag__close')
     await tagCloseIcon.trigger('click')
     expect(wrapper.find(`.${PLACEHOLDER_CLASS_NAME}`).text()).toBe(placeholder)
 
@@ -2613,7 +2613,7 @@ describe('Select', () => {
       clearable: true,
     })
     const select = wrapper.findComponent({ name: 'ElSelect' })
-    const trigger = wrapper.find('.el-select__suffix')
+    const trigger = wrapper.find('.ty-select__suffix')
     await trigger.trigger('click')
     expect((select.vm as any).expanded).toBe(true)
     await trigger.trigger('click')
@@ -2751,15 +2751,15 @@ describe('Select', () => {
       expect(document.body.innerHTML).toBe('')
       wrapper = _mount(
         `
-      <el-select v-model="modelValue" multiple>
-        <el-option
+      <ty-select v-model="modelValue" multiple>
+        <ty-option
           v-for="option in options"
           :key="option.value"
           :value="option.value"
           :label="option.label"
         >
-        </el-option>
-      </el-select>`,
+        </ty-option>
+      </ty-select>`,
         () => ({
           modelValue: [1],
           options: [
@@ -2780,15 +2780,15 @@ describe('Select', () => {
       expect(document.body.innerHTML).toBe('')
       wrapper = _mount(
         `
-      <el-select v-model="modelValue" multiple :teleported="false">
-        <el-option
+      <ty-select v-model="modelValue" multiple :teleported="false">
+        <ty-option
           v-for="option in options"
           :key="option.value"
           :value="option.value"
           :label="option.label"
         >
-        </el-option>
-      </el-select>`,
+        </ty-option>
+      </ty-select>`,
         () => ({
           modelValue: [1],
           options: [
@@ -2811,18 +2811,18 @@ describe('Select', () => {
     const modelValue = [{ value: `value:Alaska`, label: `label:Alaska` }]
     const wrapper = _mount(
       `
-    <el-select v-model="modelValue"
+    <ty-select v-model="modelValue"
       multiple
       value-key="value"
       filterable>
-      <el-option
+      <ty-option
         v-for="option in options"
         :key="option.value"
         :value="option.value"
         :label="option.label"
       >
-      </el-option>
-    </el-select>`,
+      </ty-option>
+    </ty-select>`,
       () => ({
         modelValue,
         options,
@@ -2853,11 +2853,11 @@ describe('Select', () => {
   describe('form item accessibility integration', () => {
     it('automatic id attachment', async () => {
       const wrapper = _mount(
-        `<el-form-item label="Foobar" data-test-ref="item">
-          <el-select v-model="modelValue">
-            <el-option label="1" value="1" />
-          </el-select>
-        </el-form-item>`,
+        `<ty-form-item label="Foobar" data-test-ref="item">
+          <ty-select v-model="modelValue">
+            <ty-option label="1" value="1" />
+          </ty-select>
+        </ty-form-item>`,
         () => ({
           modelValue: 1,
         })
@@ -2865,7 +2865,7 @@ describe('Select', () => {
 
       await nextTick()
       const formItem = wrapper.find('[data-test-ref="item"]')
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       const innerInput = wrapper.find('input')
       expect(formItem.attributes().role).toBeFalsy()
       expect(formItemLabel.attributes().for).toBe(innerInput.attributes().id)
@@ -2873,11 +2873,11 @@ describe('Select', () => {
 
     it('specified id attachment', async () => {
       const wrapper = _mount(
-        `<el-form-item label="Foobar" data-test-ref="item">
-          <el-select id="foobar" v-model="modelValue">
-            <el-option label="1" value="1" />
-          </el-select>
-        </el-form-item>`,
+        `<ty-form-item label="Foobar" data-test-ref="item">
+          <ty-select id="foobar" v-model="modelValue">
+            <ty-option label="1" value="1" />
+          </ty-select>
+        </ty-form-item>`,
         () => ({
           modelValue: 1,
         })
@@ -2885,7 +2885,7 @@ describe('Select', () => {
 
       await nextTick()
       const formItem = wrapper.find('[data-test-ref="item"]')
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       const innerInput = wrapper.find('input')
       expect(formItem.attributes().role).toBeFalsy()
       expect(innerInput.attributes().id).toBe('foobar')
@@ -2894,14 +2894,14 @@ describe('Select', () => {
 
     it('form item role is group when multiple inputs', async () => {
       const wrapper = _mount(
-        `<el-form-item label="Foobar" data-test-ref="item">
-          <el-select v-model="modelValue">
-            <el-option label="1" value="1" />
-          </el-select>
-          <el-select v-model="modelValue">
-            <el-option label="1" value="1" />
-          </el-select>
-        </el-form-item>`,
+        `<ty-form-item label="Foobar" data-test-ref="item">
+          <ty-select v-model="modelValue">
+            <ty-option label="1" value="1" />
+          </ty-select>
+          <ty-select v-model="modelValue">
+            <ty-option label="1" value="1" />
+          </ty-select>
+        </ty-form-item>`,
         () => ({
           modelValue: 1,
         })
@@ -2914,18 +2914,18 @@ describe('Select', () => {
 
     it('The disabled state of a component has higher priority than that of a form', async () => {
       const wrapper = _mount(
-        `<el-form disabled>
-          <el-select :disabled="false" v-model="modelValue">
-            <el-option label="1" value="1" />
-          </el-select>
-        </el-form>`,
+        `<ty-form disabled>
+          <ty-select :disabled="false" v-model="modelValue">
+            <ty-option label="1" value="1" />
+          </ty-select>
+        </ty-form>`,
         () => ({
           modelValue: 1,
         })
       )
 
       await nextTick()
-      const innerInput = wrapper.find('.el-select__input')
+      const innerInput = wrapper.find('.ty-select__input')
       expect(innerInput.attributes('disabled')).toBeUndefined()
     })
   })
@@ -3015,7 +3015,7 @@ describe('Select', () => {
     nativeInput.focus()
     vm.options = options
     await nextTick()
-    expect(wrapper.findAll('.el-tag')[0].text()).toBe('option 1')
+    expect(wrapper.findAll('.ty-tag')[0].text()).toBe('option 1')
   })
 
   // fix: https://github.com/element-plus/element-plus/issues/11991
@@ -3035,19 +3035,19 @@ describe('Select', () => {
     const value = ['Option2', 'Option1']
     const wrapper = _mount(
       `
-          <el-select v-model="value"
+          <ty-select v-model="value"
             multiple
             filterable
           >
-            <el-option
+            <ty-option
               v-for="option in options"
               :key="option.value"
               :value="option.value"
               :label="option.label"
               :disabled="option.disable"
             >
-            </el-option>
-          </el-select>
+            </ty-option>
+          </ty-select>
         `,
       () => ({
         value,
@@ -3055,35 +3055,35 @@ describe('Select', () => {
       })
     )
     await nextTick()
-    const selectInput = wrapper.find('.el-select__input')
-    expect(wrapper.findAll('.el-tag').length).toBe(2)
-    // after deletion, an el-tag will be deleted
+    const selectInput = wrapper.find('.ty-select__input')
+    expect(wrapper.findAll('.ty-tag').length).toBe(2)
+    // after deletion, an ty-tag will be deleted
     await selectInput.trigger('keydown', {
       code: EVENT_CODE.backspace,
       key: EVENT_CODE.backspace,
     })
     await nextTick()
-    expect(wrapper.findAll('.el-tag').length).toBe(1)
+    expect(wrapper.findAll('.ty-tag').length).toBe(1)
     await selectInput.trigger('keydown', {
       code: EVENT_CODE.backspace,
       key: EVENT_CODE.backspace,
     })
     await nextTick()
-    // after deletion, an el-tag still exist
-    expect(wrapper.findAll('.el-tag').length).toBe(1)
+    // after deletion, an ty-tag still exist
+    expect(wrapper.findAll('.ty-tag').length).toBe(1)
   })
 
   it('should render label slot with index', async () => {
     const wrapper = _mount(
       `
-      <el-select :model-value="'foo'">
-        <el-option
+      <ty-select :model-value="'foo'">
+        <ty-option
           label="foo"
           value="foo"
         >
-        </el-option>
+        </ty-option>
         <template #label="{ label, index }">{{ label }} = {{ index }}</template>
-      </el-select>
+      </ty-select>
     `
     )
     await nextTick()
@@ -3105,15 +3105,15 @@ describe('Select', () => {
     ])
     const wrapper = _mount(
       `
-        <el-select v-model="value" multiple>
-          <el-option
+        <ty-select v-model="value" multiple>
+          <ty-option
             v-for="option in options"
             :key="option.value"
             :value="option.value"
             :label="option.label"
           />
           <template #label="{ label, index }">{{ label }} = {{ index }}</template>
-        </el-select>
+        </ty-select>
       `,
       () => ({
         value,
@@ -3121,7 +3121,7 @@ describe('Select', () => {
       })
     )
     await nextTick()
-    const tag = wrapper.find('.el-tag')
+    const tag = wrapper.find('.ty-tag')
     expect(tag.text()).toBe('Label1 = 0')
     options.value.shift()
     await nextTick()
@@ -3130,7 +3130,7 @@ describe('Select', () => {
     await nextTick()
     value.value.push('Option2', 'Option3')
     await nextTick()
-    const tags = wrapper.findAll('.el-tag')
+    const tags = wrapper.findAll('.ty-tag')
     expect(tags[1].text()).toBe('Label2 = 0')
     expect(tags[2].text()).toBe('Label3 = 1')
   })
@@ -3139,14 +3139,14 @@ describe('Select', () => {
     const disabled = ref(false)
     const wrapper = _mount(
       `
-            <el-select v-model="value" multiple clearable>
-              <el-option
+            <ty-select v-model="value" multiple clearable>
+              <ty-option
                 label="foo"
                 value="foo"
                 :disabled="disabled"
               >
-              </el-option>
-            </el-select>
+              </ty-option>
+            </ty-select>
           `,
       () => ({
         value: ['foo'],
@@ -3159,34 +3159,34 @@ describe('Select', () => {
     await nextTick()
     const iconClear = wrapper.findComponent(CircleClose)
     await iconClear.trigger('click')
-    expect(wrapper.findAll('.el-tag').length).toBe(1)
-    const selectInput = wrapper.find('.el-select__input')
+    expect(wrapper.findAll('.ty-tag').length).toBe(1)
+    const selectInput = wrapper.find('.ty-select__input')
     await selectInput.trigger('keydown', {
       code: EVENT_CODE.backspace,
       key: EVENT_CODE.backspace,
     })
     await nextTick()
-    expect(wrapper.findAll('.el-tag').length).toBe(1)
+    expect(wrapper.findAll('.ty-tag').length).toBe(1)
     await selectInput.trigger('keydown', {
       code: EVENT_CODE.enter,
       key: EVENT_CODE.enter,
     })
     await nextTick()
-    expect(wrapper.findAll('.el-tag').length).toBe(1)
+    expect(wrapper.findAll('.ty-tag').length).toBe(1)
   })
 
   it('should return slot tag data correctly & dont have tag component', async () => {
     const value = [1, 3, 5]
     const wrapper = _mount(
       `
-        <el-select v-model="value" multiple>
-          <el-option v-for="option in options" :value="option.value" :label="option.label"></el-option>
+        <ty-select v-model="value" multiple>
+          <ty-option v-for="option in options" :value="option.value" :label="option.label"></ty-option>
           <template #tag="{ data }">
             <span v-for="option in data" class="no-tag" :key="option.value">
               {{ option.value }} -  {{ option.currentLabel }}
             </span>
           </template>
-        </el-select>
+        </ty-select>
       `,
       () => ({
         value,
@@ -3203,7 +3203,7 @@ describe('Select', () => {
     await nextTick()
     const slotTagEls = wrapper.findAll('.no-tag')
     expect(slotTagEls).toHaveLength(3)
-    expect(wrapper.find('.el-tag').exists()).toBe(false)
+    expect(wrapper.find('.ty-tag').exists()).toBe(false)
     slotTagEls.forEach((el, idx) => {
       expect(el.text()).toBe(`${value[idx]} - Test ${value[idx]}`)
     })
@@ -3212,14 +3212,14 @@ describe('Select', () => {
   it('should expose delete-tag through slot & be able to delete a value', async () => {
     const wrapper = _mount(
       `
-        <el-select v-model="value" multiple>
-          <el-option v-for="option in options" :value="option.value" :label="option.label"></el-option>
+        <ty-select v-model="value" multiple>
+          <ty-option v-for="option in options" :value="option.value" :label="option.label"></ty-option>
           <template #tag="{ data, deleteTag }">
             <span v-for="option in data" class="no-tag" :key="option.value" @click="deleteTag($event, option)">
               {{ option.value }} -  {{ option.currentLabel }}
             </span>
           </template>
-        </el-select>
+        </ty-select>
       `,
       () => ({
         value: [2, 3, 5],
@@ -3245,19 +3245,19 @@ describe('Select', () => {
 
   it('It should generate accessible attributes', async () => {
     wrapper = _mount(
-      `<el-select v-model="value">
-        <el-option label="label" value="1" />
-        <el-option label="disabled" value="2" disabled />
-      </el-select>`,
+      `<ty-select v-model="value">
+        <ty-option label="label" value="1" />
+        <ty-option label="disabled" value="2" disabled />
+      </ty-select>`,
       () => ({ value: '1' })
     )
 
     const dropdown = wrapper.findComponent({ name: 'ElSelectDropdown' })
     const input = wrapper.find('input')
-    const list = dropdown.find('.el-select-dropdown__list')
-    const option = dropdown.find('.el-select-dropdown__item')
+    const list = dropdown.find('.ty-select-dropdown__list')
+    const option = dropdown.find('.ty-select-dropdown__item')
     const disabledOption = dropdown.find(
-      '.el-select-dropdown__item:nth-child(2)'
+      '.ty-select-dropdown__item:nth-child(2)'
     )
 
     expect(input.attributes('role')).toBe('combobox')
@@ -3281,10 +3281,10 @@ describe('Select', () => {
 
   it('tabindex', async () => {
     wrapper = _mount(
-      `<el-select v-model="value" tabindex="1">
-        <el-option label="label" value="1" />
-        <el-option label="disabled" value="2" disabled />
-      </el-select>`,
+      `<ty-select v-model="value" tabindex="1">
+        <ty-option label="label" value="1" />
+        <ty-option label="disabled" value="2" disabled />
+      </ty-select>`,
       () => ({ value: '1' })
     )
 
@@ -3294,7 +3294,7 @@ describe('Select', () => {
 
   it('should be trigger the click event', async () => {
     const handleClick = vi.fn()
-    const wrapper = _mount(`<el-select @click="handleClick" />`, () => ({
+    const wrapper = _mount(`<ty-select @click="handleClick" />`, () => ({
       handleClick,
     }))
 
@@ -3317,14 +3317,14 @@ describe('Select', () => {
     const value = null
     const wrapper = _mount(
       `
-        <el-select v-model="value"
+        <ty-select v-model="value"
           filterable
           automatic-dropdown
           disabled
         >
-          <el-option value="1">1</el-option>
-          <el-option value="2">2</el-option>
-        </el-select>
+          <ty-option value="1">1</ty-option>
+          <ty-option value="2">2</ty-option>
+        </ty-select>
       `,
       () => ({
         value,
@@ -3334,7 +3334,7 @@ describe('Select', () => {
     await wrapper.find(`.${WRAPPER_CLASS_NAME}`).trigger('focus')
     await nextTick()
     expect(
-      (document.querySelector('.el-select__popper') as HTMLElement).style
+      (document.querySelector('.ty-select__popper') as HTMLElement).style
         .display
     ).toBe('none')
   })
@@ -3421,14 +3421,14 @@ describe('Select', () => {
       vi.useFakeTimers()
       wrapper = _mount(
         `
-        <el-select v-model="value" value-key="id" filterable default-first-option>
-          <el-option
+        <ty-select v-model="value" value-key="id" filterable default-first-option>
+          <ty-option
             v-for="item in options"
             :label="item.name"
             :key="item.id"
             :value="item">
-          </el-option>
-        </el-select>
+          </ty-option>
+        </ty-select>
       `,
         () => ({
           options: [
@@ -3473,14 +3473,14 @@ describe('Select', () => {
 
       const wrapper = _mount(
         `
-        <el-select v-model="value" filterable remote default-first-option :remoteMethod="remoteMethod">
-          <el-option
+        <ty-select v-model="value" filterable remote default-first-option :remoteMethod="remoteMethod">
+          <ty-option
             v-for="option in options"
             :key="option.value"
             :value="option.value"
             :label="option.label"
           />
-        </el-select>
+        </ty-select>
       `,
         () => ({
           value: '',
@@ -3546,14 +3546,14 @@ describe('Select', () => {
 
     const wrapper = _mount(
       `
-        <el-select v-model="value">
-          <el-option
+        <ty-select v-model="value">
+          <ty-option
             v-for="option in options"
             :key="option.value"
             :value="option.value"
             :label="option.label"
           />
-        </el-select>
+        </ty-select>
       `,
       () => ({
         value: 'aa',
@@ -3602,14 +3602,14 @@ describe('Select', () => {
   test('display correct when label is 0 or ""', async () => {
     wrapper = _mount(
       `
-      <el-select>
-        <el-option
+      <ty-select>
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value">
-        </el-option>
-      </el-select>
+        </ty-option>
+      </ty-select>
     `,
       () => ({
         options: [
@@ -3631,12 +3631,12 @@ describe('Select', () => {
   test('passes disabled prop to custom #tag slot', async () => {
     const wrapper = _mount(
       `
-      <el-select
+      <ty-select
         v-model="value"
         multiple
         :disabled="isDisabled"
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
@@ -3647,7 +3647,7 @@ describe('Select', () => {
             {{ selectDisabled ? 'selectDisabled' : 'enabled' }}
           </span>
         </template>
-      </el-select>
+      </ty-select>
       `,
       () => ({
         value: ['a', 'b'],
@@ -3667,13 +3667,13 @@ describe('Select', () => {
     expect(wrapper.find('.custom-tag').text()).toBe('enabled')
   })
 
-  test('disabled prop from el-form is passed to el-select and tag slot', async () => {
+  test('disabled prop from ty-form is passed to ty-select and tag slot', async () => {
     const wrapper = _mount(
       `
-      <el-form :disabled="formDisabled">
-        <el-form-item label="Test Select">
-          <el-select v-model="value" multiple>
-            <el-option
+      <ty-form :disabled="formDisabled">
+        <ty-form-item label="Test Select">
+          <ty-select v-model="value" multiple>
+            <ty-option
               v-for="item in options"
               :key="item.value"
               :label="item.label"
@@ -3682,9 +3682,9 @@ describe('Select', () => {
             <template #tag="{ selectDisabled }">
               <span class="custom-tag">{{ selectDisabled ? 'selectDisabled' : 'enabled' }}</span>
             </template>
-          </el-select>
-        </el-form-item>
-      </el-form>
+          </ty-select>
+        </ty-form-item>
+      </ty-form>
       `,
       () => ({
         value: ['a'],
@@ -3705,7 +3705,7 @@ describe('Select', () => {
 
   test('renders options via props', async () => {
     wrapper = _mount(
-      `<el-select v-model="value" @change="handleChange" :options="options"/>`,
+      `<ty-select v-model="value" @change="handleChange" :options="options"/>`,
       () => ({
         options: [
           {
@@ -3762,7 +3762,7 @@ describe('Select', () => {
 
   test('renders options with custom field names', async () => {
     wrapper = _mount(
-      `<el-select v-model="value" @change="handleChange" :options="options" :props="{
+      `<ty-select v-model="value" @change="handleChange" :options="options" :props="{
         value:'id'
       }"/>`,
       () => ({
@@ -3822,20 +3822,20 @@ describe('Select', () => {
   test('loading appears on first click when remote', async () => {
     wrapper = _mount(
       `
-      <el-select
+      <ty-select
         v-model="value"
         filterable
         remote
         :remote-method="remoteMethod"
         :loading="loading"
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
           :value="item"
         />
-      </el-select>`,
+      </ty-select>`,
       () => ({
         options: [],
         value: '',
@@ -3863,14 +3863,14 @@ describe('Select', () => {
   test('should trigger scroll when option value is 0', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" :teleported="false">
-        <el-option
+      <ty-select v-model="value" :teleported="false">
+        <ty-option
           v-for="{ label, value } in options"
           :key="value"
           :label="label"
           :value="value"
         />
-      </el-select>`,
+      </ty-select>`,
       () => ({
         options: Array.from({ length: 10 }).map((_, i) => ({
           label: `label-${i}`,
@@ -3882,8 +3882,8 @@ describe('Select', () => {
 
     const select = wrapper.findComponent({ name: 'ElSelect' })
     const selectVm = select.vm as any
-    const wrapEl = wrapper.find('.el-select-dropdown__wrap').element
-    const optionEls = wrapper.findAll('.el-select-dropdown__item')
+    const wrapEl = wrapper.find('.ty-select-dropdown__wrap').element
+    const optionEls = wrapper.findAll('.ty-select-dropdown__item')
     const cleanup = optionEls.map((item, i) =>
       vi.spyOn(item.element, 'offsetTop', 'get').mockReturnValue(i * 30)
     )
@@ -3911,19 +3911,19 @@ describe('Select', () => {
 
     const wrapper = _mount(
       `
-    <el-select
+    <ty-select
       ref="select"
       v-model="value"
       filterable
     >
-      <el-option
+      <ty-option
         v-for="item in options"
         :key="item.value"
         :label="item.label"
         :value="item.value"
         :disabled="item.disabled"
       />
-    </el-select>
+    </ty-select>
     `,
       () => ({
         value: '',
@@ -3963,19 +3963,19 @@ describe('Select', () => {
   test('should support selecting options with both Enter and Numpad Enter', async () => {
     const wrapper = _mount(
       `
-    <el-select
+    <ty-select
       ref="select"
       v-model="value"
       filterable
     >
-      <el-option
+      <ty-option
         v-for="item in options"
         :key="item.value"
         :label="item.label"
         :value="item.value"
         :disabled="item.disabled"
       />
-    </el-select>
+    </ty-select>
     `,
       () => ({
         options: Array.from({ length: 2 }).map((_, i) => ({
@@ -4001,18 +4001,18 @@ describe('Select', () => {
 
   test('hoveringIndex should stay on the most recently selected option when using multiple', async () => {
     wrapper = _mount(
-      `<el-select
+      `<ty-select
         v-model="value"
         clearable
         multiple
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :label="item.label"
           :key="item.value"
           :value="item.value"
         />
-      </el-select>`,
+      </ty-select>`,
       () => ({
         options: [
           {
@@ -4051,14 +4051,14 @@ describe('Select', () => {
   test('should locate the most recently selected option when using multiple', async () => {
     wrapper = _mount(
       `
-      <el-select v-model="value" :teleported="false" multiple>
-        <el-option
+      <ty-select v-model="value" :teleported="false" multiple>
+        <ty-option
           v-for="{ label, value } in options"
           :key="value"
           :label="label"
           :value="value"
         />
-      </el-select>`,
+      </ty-select>`,
       () => ({
         options: Array.from({ length: 10 }).map((_, i) => ({
           label: `label-${i}`,
@@ -4068,8 +4068,8 @@ describe('Select', () => {
       })
     )
 
-    const wrapEl = wrapper.find('.el-select-dropdown__wrap').element
-    const optionEls = wrapper.findAll('.el-select-dropdown__item')
+    const wrapEl = wrapper.find('.ty-select-dropdown__wrap').element
+    const optionEls = wrapper.findAll('.ty-select-dropdown__item')
     const cleanup = optionEls.map((item, i) =>
       vi.spyOn(item.element, 'offsetTop', 'get').mockReturnValue(i * 30)
     )
@@ -4087,8 +4087,8 @@ describe('Select', () => {
     const warnHandler = vi.fn()
     const Parent = defineComponent({
       components: {
-        'el-select': Select,
-        'el-option': Option,
+        'ty-select': Select,
+        'ty-option': Option,
       },
       setup() {
         const showFirst = ref(true)
@@ -4115,22 +4115,22 @@ describe('Select', () => {
       },
       template: `
         <div>
-          <el-select v-if="showFirst" v-model="value">
-            <el-option
+          <ty-select v-if="showFirst" v-model="value">
+            <ty-option
               v-for="item in options"
               :key="item.value"
               :label="item.label"
               :value="item.value"
             />
-          </el-select>
-          <el-select v-if="showSecond" v-model="value">
-            <el-option
+          </ty-select>
+          <ty-select v-if="showSecond" v-model="value">
+            <ty-option
               v-for="item in options"
               :key="item.value"
               :label="item.label"
               :value="item.value"
             />
-          </el-select>
+          </ty-select>
         </div>
       `,
     })
@@ -4165,9 +4165,9 @@ describe('Select', () => {
   test('limitReached: hovering via DOM event should not update index nor add class', async () => {
     wrapper = _mount(
       `
-    <el-select v-model="value" multiple :multiple-limit="1">
-      <el-option v-for="o in options" :key="o.value" :label="o.label" :value="o.value" />
-    </el-select>
+    <ty-select v-model="value" multiple :multiple-limit="1">
+      <ty-option v-for="o in options" :key="o.value" :label="o.label" :value="o.value" />
+    </ty-select>
     `,
       () => ({
         value: [],
@@ -4180,7 +4180,7 @@ describe('Select', () => {
     )
 
     const selectVm = wrapper.findComponent({ name: 'ElSelect' }).vm as any
-    await wrapper.find('.el-select__wrapper').trigger('click')
+    await wrapper.find('.ty-select__wrapper').trigger('click')
     await nextTick()
     const optionCmps = wrapper.findAllComponents({ name: 'ElOption' })
     await optionCmps[0].trigger('click')
@@ -4197,20 +4197,20 @@ describe('Select', () => {
     const handleVisibleChange = vi.fn()
     wrapper = mount({
       template: `
-      <el-select
+      <ty-select
         v-model="value"
         remote
         :remote-method="remoteMethod"
         :loading="loading"
         @visible-change="handleVisibleChange"
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
           :value="item"
         />
-      </el-select>`,
+      </ty-select>`,
       components: { ElSelect: Select, ElOption: Option },
       data() {
         return {
@@ -4257,17 +4257,17 @@ describe('Select', () => {
     vi.useFakeTimers()
     const wrapper = mount({
       components: {
-        'el-select': Select,
-        'el-option': Option,
+        'ty-select': Select,
+        'ty-option': Option,
       },
       template: `
-        <el-select
+        <ty-select
           v-model="value"
           filterable
           remote
           :remote-method="remoteMethod"
         >
-          <el-option
+          <ty-option
             v-for="item in options"
             :key="item.value"
             :label="item.label"
@@ -4276,7 +4276,7 @@ describe('Select', () => {
           <template #empty>
             <div class="custom-empty">NO DATA</div>
           </template>
-        </el-select>
+        </ty-select>
       `,
       setup() {
         const value = ref('')

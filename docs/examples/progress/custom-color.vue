@@ -1,16 +1,16 @@
-<template>
+﻿<template>
   <div class="demo-progress">
-    <el-progress :percentage="percentage" :color="customColor" />
+    <ty-progress :percentage="percentage" :color="customColor" />
 
-    <el-progress :percentage="percentage" :color="customColorMethod" />
+    <ty-progress :percentage="percentage" :color="customColorMethod" />
 
-    <el-progress :percentage="percentage" :color="customColors" />
-    <el-progress :percentage="percentage" :color="customColors" />
+    <ty-progress :percentage="percentage" :color="customColors" />
+    <ty-progress :percentage="percentage" :color="customColors" />
     <div>
-      <el-button-group>
-        <el-button :icon="Minus" @click="decrease" />
-        <el-button :icon="Plus" @click="increase" />
-      </el-button-group>
+      <ty-button-group>
+        <ty-button :icon="Minus" @click="decrease" />
+        <ty-button :icon="Plus" @click="increase" />
+      </ty-button-group>
     </div>
   </div>
 </template>
@@ -54,7 +54,7 @@ const decrease = () => {
 </script>
 
 <style scoped>
-.demo-progress .el-progress--line {
+.demo-progress .ty-progress--line {
   margin-bottom: 15px;
   max-width: 600px;
 }

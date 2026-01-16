@@ -1,21 +1,21 @@
 <template>
-  <el-button type="text" @click="dialogVisible = true"
-    >click to open the Dialog</el-button
+  <ty-button type="text" @click="dialogVisible = true"
+    >click to open the Dialog</ty-button
   >
 
-  <el-dialog v-model="dialogVisible" title="Tips" width="30%">
+  <ty-dialog v-model="dialogVisible" title="Tips" width="30%">
     <span>This is a message</span>
     <template #footer>
       <span class="dialog-footer">
-        <el-button style="margin-right: 10px" @click="dialogVisible = false"
-          >Cancel</el-button
+        <ty-button style="margin-right: 10px" @click="dialogVisible = false"
+          >Cancel</ty-button
         >
-        <el-button type="primary" @click="dialogVisible = false"
-          >Confirm</el-button
+        <ty-button type="primary" @click="dialogVisible = false"
+          >Confirm</ty-button
         >
       </span>
     </template>
-  </el-dialog>
+  </ty-dialog>
 </template>
 
 <script lang="ts" setup>

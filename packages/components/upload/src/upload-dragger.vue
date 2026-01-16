@@ -20,7 +20,7 @@ import { uploadDraggerEmits, uploadDraggerProps } from './upload-dragger'
 
 import type { UploadRawFile } from './upload'
 
-const COMPONENT_NAME = 'ElUploadDrag'
+const COMPONENT_NAME = 'TyUploadDrag'
 
 defineOptions({
   name: COMPONENT_NAME,
@@ -33,7 +33,7 @@ const uploaderContext = inject(uploadContextKey)
 if (!uploaderContext) {
   throwError(
     COMPONENT_NAME,
-    'usage: <el-upload><el-upload-dragger /></el-upload>'
+    'usage: <ty-upload><ty-upload-dragger /></ty-upload>'
   )
 }
 

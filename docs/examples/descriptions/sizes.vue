@@ -1,11 +1,11 @@
-<template>
-  <el-radio-group v-model="size">
-    <el-radio value="large">Large</el-radio>
-    <el-radio value="default">Default</el-radio>
-    <el-radio value="small">Small</el-radio>
-  </el-radio-group>
+﻿<template>
+  <ty-radio-group v-model="size">
+    <ty-radio value="large">Large</ty-radio>
+    <ty-radio value="default">Default</ty-radio>
+    <ty-radio value="small">Small</ty-radio>
+  </ty-radio-group>
 
-  <el-descriptions
+  <ty-descriptions
     class="margin-top"
     title="With border"
     :column="3"
@@ -13,66 +13,66 @@
     border
   >
     <template #extra>
-      <el-button type="primary">Operation</el-button>
+      <ty-button type="primary">Operation</ty-button>
     </template>
-    <el-descriptions-item>
+    <ty-descriptions-item>
       <template #label>
         <div class="cell-item">
-          <el-icon :style="iconStyle">
+          <ty-icon :style="iconStyle">
             <user />
-          </el-icon>
+          </ty-icon>
           Username
         </div>
       </template>
       kooriookami
-    </el-descriptions-item>
-    <el-descriptions-item>
+    </ty-descriptions-item>
+    <ty-descriptions-item>
       <template #label>
         <div class="cell-item">
-          <el-icon :style="iconStyle">
+          <ty-icon :style="iconStyle">
             <iphone />
-          </el-icon>
+          </ty-icon>
           Telephone
         </div>
       </template>
       18100000000
-    </el-descriptions-item>
-    <el-descriptions-item>
+    </ty-descriptions-item>
+    <ty-descriptions-item>
       <template #label>
         <div class="cell-item">
-          <el-icon :style="iconStyle">
+          <ty-icon :style="iconStyle">
             <location />
-          </el-icon>
+          </ty-icon>
           Place
         </div>
       </template>
       Suzhou
-    </el-descriptions-item>
-    <el-descriptions-item>
+    </ty-descriptions-item>
+    <ty-descriptions-item>
       <template #label>
         <div class="cell-item">
-          <el-icon :style="iconStyle">
+          <ty-icon :style="iconStyle">
             <tickets />
-          </el-icon>
+          </ty-icon>
           Remarks
         </div>
       </template>
-      <el-tag size="small">School</el-tag>
-    </el-descriptions-item>
-    <el-descriptions-item>
+      <ty-tag size="small">School</ty-tag>
+    </ty-descriptions-item>
+    <ty-descriptions-item>
       <template #label>
         <div class="cell-item">
-          <el-icon :style="iconStyle">
+          <ty-icon :style="iconStyle">
             <office-building />
-          </el-icon>
+          </ty-icon>
           Address
         </div>
       </template>
       No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province
-    </el-descriptions-item>
-  </el-descriptions>
+    </ty-descriptions-item>
+  </ty-descriptions>
 
-  <el-descriptions
+  <ty-descriptions
     class="margin-top"
     title="Without border"
     :column="3"
@@ -80,18 +80,18 @@
     :style="blockMargin"
   >
     <template #extra>
-      <el-button type="primary">Operation</el-button>
+      <ty-button type="primary">Operation</ty-button>
     </template>
-    <el-descriptions-item label="Username">kooriookami</el-descriptions-item>
-    <el-descriptions-item label="Telephone">18100000000</el-descriptions-item>
-    <el-descriptions-item label="Place">Suzhou</el-descriptions-item>
-    <el-descriptions-item label="Remarks">
-      <el-tag size="small">School</el-tag>
-    </el-descriptions-item>
-    <el-descriptions-item label="Address">
+    <ty-descriptions-item label="Username">kooriookami</ty-descriptions-item>
+    <ty-descriptions-item label="Telephone">18100000000</ty-descriptions-item>
+    <ty-descriptions-item label="Place">Suzhou</ty-descriptions-item>
+    <ty-descriptions-item label="Remarks">
+      <ty-tag size="small">School</ty-tag>
+    </ty-descriptions-item>
+    <ty-descriptions-item label="Address">
       No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province
-    </el-descriptions-item>
-  </el-descriptions>
+    </ty-descriptions-item>
+  </ty-descriptions>
 </template>
 
 <script setup lang="ts">
@@ -131,7 +131,7 @@ const blockMargin = computed(() => {
 </script>
 
 <style scoped>
-.el-descriptions {
+.ty-descriptions {
   margin-top: 20px;
 }
 .cell-item {

@@ -1,12 +1,12 @@
-<template>
-  <el-button plain @click="open"> Notification with offset </el-button>
+﻿<template>
+  <ty-button plain @click="open"> Notification with offset </ty-button>
 </template>
 
 <script lang="ts" setup>
-import { ElNotification } from 'element-plus'
+import { TyNotification } from 'element-plus'
 
 const open = () => {
-  ElNotification.success({
+  TyNotification.success({
     title: 'Success',
     message: 'This is a success message',
     offset: 100,

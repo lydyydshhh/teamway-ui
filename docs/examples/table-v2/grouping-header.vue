@@ -1,5 +1,5 @@
-<template>
-  <el-table-v2
+﻿<template>
+  <ty-table-v2
     fixed
     :columns="fixedColumns"
     :data="data"
@@ -11,7 +11,7 @@
     <template #header="props">
       <customized-header v-bind="props" />
     </template>
-  </el-table-v2>
+  </ty-table-v2>
 </template>
 
 <script lang="tsx" setup>
@@ -104,28 +104,28 @@ const CustomizedHeader: FunctionalComponent<
 const headerClass = ({
   headerIndex,
 }: Parameters<HeaderClassNameGetter<any>>[0]) => {
-  if (headerIndex === 1) return 'el-primary-color'
+  if (headerIndex === 1) return 'ty-primary-color'
   return ''
 }
 </script>
 
 <style>
-.el-el-table-v2__header-row .custom-header-cell {
+.ty-ty-table-v2__header-row .custom-header-cell {
   border-right: 1px solid var(--ty-border-color);
 }
 
-.el-el-table-v2__header-row .custom-header-cell:last-child {
+.ty-ty-table-v2__header-row .custom-header-cell:last-child {
   border-right: none;
 }
 
-.el-primary-color {
+.ty-primary-color {
   background-color: var(--ty-color-primary);
   color: var(--ty-color-white);
   font-size: 14px;
   font-weight: bold;
 }
 
-.el-primary-color .custom-header-cell {
+.ty-primary-color .custom-header-cell {
   padding: 0 4px;
 }
 </style>

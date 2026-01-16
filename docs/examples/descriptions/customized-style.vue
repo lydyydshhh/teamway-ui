@@ -1,6 +1,6 @@
-<template>
-  <el-descriptions title="Customized style list" :column="3" border>
-    <el-descriptions-item
+﻿<template>
+  <ty-descriptions title="Customized style list" :column="3" border>
+    <ty-descriptions-item
       label="Username"
       label-align="right"
       align="center"
@@ -9,20 +9,20 @@
       width="150px"
     >
       kooriookami
-    </el-descriptions-item>
-    <el-descriptions-item label="Telephone" label-align="right" align="center">
+    </ty-descriptions-item>
+    <ty-descriptions-item label="Telephone" label-align="right" align="center">
       18100000000
-    </el-descriptions-item>
-    <el-descriptions-item label="Place" label-align="right" align="center">
+    </ty-descriptions-item>
+    <ty-descriptions-item label="Place" label-align="right" align="center">
       Suzhou
-    </el-descriptions-item>
-    <el-descriptions-item label="Remarks" label-align="right" align="center">
-      <el-tag size="small">School</el-tag>
-    </el-descriptions-item>
-    <el-descriptions-item label="Address" label-align="right" align="center">
+    </ty-descriptions-item>
+    <ty-descriptions-item label="Remarks" label-align="right" align="center">
+      <ty-tag size="small">School</ty-tag>
+    </ty-descriptions-item>
+    <ty-descriptions-item label="Address" label-align="right" align="center">
       No.1188, Wuzhong Avenue, Wuzhong District, Suzhou, Jiangsu Province
-    </el-descriptions-item>
-  </el-descriptions>
+    </ty-descriptions-item>
+  </ty-descriptions>
 </template>
 
 <style scoped>

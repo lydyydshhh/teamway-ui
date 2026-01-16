@@ -3,7 +3,7 @@ import Divider from './src/divider.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElDivider: SFCWithInstall<typeof Divider> = withInstall(Divider)
-export default ElDivider
+export const TyDivider: SFCWithInstall<typeof Divider> = withInstall(Divider)
+export default TyDivider
 
 export * from './src/divider'

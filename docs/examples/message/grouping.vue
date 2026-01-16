@@ -1,12 +1,12 @@
-<template>
-  <el-button :plain="true" @click="open">Show message</el-button>
+﻿<template>
+  <ty-button :plain="true" @click="open">Show message</ty-button>
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 const open = () => {
-  ElMessage({
+  TyMessage({
     message: 'This is a message.',
     grouping: true,
     type: 'success',

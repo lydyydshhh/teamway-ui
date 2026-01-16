@@ -56,7 +56,7 @@ describe('Container.vue', () => {
 describe('Header', () => {
   test('create header', () => {
     const wrapper = mount(() => <Header />)
-    expect(wrapper.classes()).toContain('el-header')
+    expect(wrapper.classes()).toContain('ty-header')
   })
 
   test('header height', () => {
@@ -69,7 +69,7 @@ describe('Header', () => {
 describe('Aside', () => {
   test('aside create', () => {
     const wrapper = mount(() => <Aside />)
-    expect(wrapper.classes()).toContain('el-aside')
+    expect(wrapper.classes()).toContain('ty-aside')
   })
 
   test('aside width', () => {
@@ -82,14 +82,14 @@ describe('Aside', () => {
 describe('Main', () => {
   test('main create', () => {
     const wrapper = mount(() => <Main />)
-    expect(wrapper.classes()).toContain('el-main')
+    expect(wrapper.classes()).toContain('ty-main')
   })
 })
 
 describe('Footer', () => {
   test('footer create', () => {
     const wrapper = mount(() => <Footer />)
-    expect(wrapper.classes()).toContain('el-footer')
+    expect(wrapper.classes()).toContain('ty-footer')
   })
 
   test('footer height', () => {

@@ -18,7 +18,7 @@ export const useCarouselItem = (props: CarouselItemProps) => {
   if (!carouselContext) {
     debugWarn(
       CAROUSEL_ITEM_NAME,
-      'usage: <el-carousel></el-carousel-item></el-carousel>'
+      'usage: <ty-carousel></ty-carousel-item></ty-carousel>'
     )
   }
 

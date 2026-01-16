@@ -18,7 +18,7 @@ import type { PanelItemState } from './type'
 const ns = useNamespace('splitter')
 
 defineOptions({
-  name: 'ElSplitter',
+  name: 'TySplitter',
 })
 
 const emits = defineEmits(splitterEmits)

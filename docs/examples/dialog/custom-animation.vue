@@ -1,13 +1,13 @@
-<template>
+﻿<template>
   <div>
-    <el-button plain @click="openDialog('fade')"> Default </el-button>
-    <el-button plain @click="openDialog('scale')"> Scale </el-button>
-    <el-button plain @click="openDialog('slide')"> Slide </el-button>
-    <el-button plain @click="openDialog('bounce')"> Bounce </el-button>
-    <el-button plain @click="openDialogWithObject"> Object Config </el-button>
+    <ty-button plain @click="openDialog('fade')"> Default </ty-button>
+    <ty-button plain @click="openDialog('scale')"> Scale </ty-button>
+    <ty-button plain @click="openDialog('slide')"> Slide </ty-button>
+    <ty-button plain @click="openDialog('bounce')"> Bounce </ty-button>
+    <ty-button plain @click="openDialogWithObject"> Object Config </ty-button>
   </div>
 
-  <el-dialog
+  <ty-dialog
     v-model="dialogVisible"
     class="custom-transition-dialog"
     :title="`${currentAnimation} Animation Dialog`"
@@ -27,12 +27,12 @@
       </p>
     </div>
     <template #footer>
-      <el-button @click="dialogVisible = false">Cancel</el-button>
-      <el-button type="primary" @click="dialogVisible = false">
+      <ty-button @click="dialogVisible = false">Cancel</ty-button>
+      <ty-button type="primary" @click="dialogVisible = false">
         Confirm
-      </el-button>
+      </ty-button>
     </template>
-  </el-dialog>
+  </ty-dialog>
 </template>
 
 <script lang="ts" setup>
@@ -84,8 +84,8 @@ code {
 /* Scale Animation */
 .dialog-scale-enter-active,
 .dialog-scale-leave-active,
-.dialog-scale-enter-active .el-dialog,
-.dialog-scale-leave-active .el-dialog {
+.dialog-scale-enter-active .ty-dialog,
+.dialog-scale-leave-active .ty-dialog {
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -94,8 +94,8 @@ code {
   opacity: 0;
 }
 
-.dialog-scale-enter-from .el-dialog,
-.dialog-scale-leave-to .el-dialog {
+.dialog-scale-enter-from .ty-dialog,
+.dialog-scale-leave-to .ty-dialog {
   transform: scale(0.5);
   opacity: 0;
 }
@@ -103,8 +103,8 @@ code {
 /* Slide Animation */
 .dialog-slide-enter-active,
 .dialog-slide-leave-active,
-.dialog-slide-enter-active .el-dialog,
-.dialog-slide-leave-active .el-dialog {
+.dialog-slide-enter-active .ty-dialog,
+.dialog-slide-leave-active .ty-dialog {
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -113,8 +113,8 @@ code {
   opacity: 0;
 }
 
-.dialog-slide-enter-from .el-dialog,
-.dialog-slide-leave-to .el-dialog {
+.dialog-slide-enter-from .ty-dialog,
+.dialog-slide-leave-to .ty-dialog {
   transform: translateY(-100px);
   opacity: 0;
 }
@@ -122,8 +122,8 @@ code {
 /* Bounce Animation */
 .dialog-bounce-enter-active,
 .dialog-bounce-leave-active,
-.dialog-bounce-enter-active .el-dialog,
-.dialog-bounce-leave-active .el-dialog {
+.dialog-bounce-enter-active .ty-dialog,
+.dialog-bounce-leave-active .ty-dialog {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -132,8 +132,8 @@ code {
   opacity: 0;
 }
 
-.dialog-bounce-enter-from .el-dialog,
-.dialog-bounce-leave-to .el-dialog {
+.dialog-bounce-enter-from .ty-dialog,
+.dialog-bounce-leave-to .ty-dialog {
   transform: scale(0.3) translateY(-50px);
   opacity: 0;
 }
@@ -141,8 +141,8 @@ code {
 /* Object Configuration Animation */
 .dialog-custom-object-enter-active,
 .dialog-custom-object-leave-active,
-.dialog-custom-object-enter-active .el-dialog,
-.dialog-custom-object-leave-active .el-dialog {
+.dialog-custom-object-enter-active .ty-dialog,
+.dialog-custom-object-leave-active .ty-dialog {
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -151,8 +151,8 @@ code {
   opacity: 0;
 }
 
-.dialog-custom-object-enter-from .el-dialog,
-.dialog-custom-object-leave-to .el-dialog {
+.dialog-custom-object-enter-from .ty-dialog,
+.dialog-custom-object-leave-to .ty-dialog {
   transform: rotate(180deg) scale(0.5);
   opacity: 0;
 }

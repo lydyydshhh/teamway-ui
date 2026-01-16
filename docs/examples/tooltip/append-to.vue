@@ -1,12 +1,12 @@
-<template>
-  <el-tooltip
+﻿<template>
+  <ty-tooltip
     :append-to="targetElement"
     trigger="click"
     content="Append to .target"
     placement="top"
   >
-    <el-button class="target">Click to open tooltip</el-button>
-  </el-tooltip>
+    <ty-button class="target">Click to open tooltip</ty-button>
+  </ty-tooltip>
 </template>
 
 <script lang="ts" setup>

@@ -28,7 +28,7 @@
         height: itemSize + 'px',
       }"
     >
-      <el-icon
+      <ty-icon
         v-if="icon"
         :class="[
           ns.is('leaf', !!node?.isLeaf),
@@ -41,8 +41,8 @@
         @click.stop="handleExpandIconClick"
       >
         <component :is="icon" />
-      </el-icon>
-      <el-checkbox
+      </ty-icon>
+      <ty-checkbox
         v-if="showCheckbox"
         :model-value="checked"
         :indeterminate="indeterminate"
@@ -50,19 +50,19 @@
         @change="handleCheckChange"
         @click.stop
       />
-      <el-node-content :node="{ ...node, expanded }" />
+      <ty-node-content :node="{ ...node, expanded }" />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import ElIcon from '@element-plus/components/icon'
+import TyIcon from '@element-plus/components/icon'
 import { CaretRight } from '@element-plus/icons-vue'
-import ElCheckbox from '@element-plus/components/checkbox'
+import TyCheckbox from '@element-plus/components/checkbox'
 import { useNamespace } from '@element-plus/hooks'
 import { isFunction, isString } from '@element-plus/utils'
-import ElNodeContent from './tree-node-content'
+import TyNodeContent from './tree-node-content'
 import {
   NODE_CONTEXTMENU,
   ROOT_TREE_INJECTION_KEY,
@@ -74,7 +74,7 @@ import type { CheckboxValueType } from '@element-plus/components/checkbox'
 import type { TreeNode } from './types'
 
 defineOptions({
-  name: 'ElTreeNode',
+  name: 'TyTreeNode',
 })
 
 const props = defineProps(treeNodeProps)

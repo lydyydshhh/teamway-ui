@@ -1,5 +1,5 @@
-<template>
-  <el-tree-select
+﻿<template>
+  <ty-tree-select
     v-model="value"
     style="width: 240px"
     :data="data"

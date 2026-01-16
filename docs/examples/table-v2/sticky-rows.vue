@@ -1,5 +1,5 @@
-<template>
-  <el-table-v2
+﻿<template>
+  <ty-table-v2
     :columns="columns"
     :data="tableData"
     :fixed-data="fixedData"
@@ -64,7 +64,7 @@ const onScroll = ({ scrollTop }) => {
 </script>
 
 <style>
-.el-el-table-v2__fixed-header-row {
+.ty-ty-table-v2__fixed-header-row {
   background-color: var(--ty-color-primary-light-5);
   font-weight: bold;
 }

@@ -1,64 +1,64 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap items-center gap-4">
-    <el-dropdown placement="top-start">
-      <el-button> topStart </el-button>
+    <ty-dropdown placement="top-start">
+      <ty-button> topStart </ty-button>
       <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item>The Action 1st</el-dropdown-item>
-          <el-dropdown-item>The Action 2nd</el-dropdown-item>
-          <el-dropdown-item>The Action 3rd</el-dropdown-item>
-        </el-dropdown-menu>
+        <ty-dropdown-menu>
+          <ty-dropdown-item>The Action 1st</ty-dropdown-item>
+          <ty-dropdown-item>The Action 2nd</ty-dropdown-item>
+          <ty-dropdown-item>The Action 3rd</ty-dropdown-item>
+        </ty-dropdown-menu>
       </template>
-    </el-dropdown>
-    <el-dropdown placement="top">
-      <el-button> top </el-button>
+    </ty-dropdown>
+    <ty-dropdown placement="top">
+      <ty-button> top </ty-button>
       <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item>The Action 1st</el-dropdown-item>
-          <el-dropdown-item>The Action 2nd</el-dropdown-item>
-          <el-dropdown-item>The Action 3rd</el-dropdown-item>
-        </el-dropdown-menu>
+        <ty-dropdown-menu>
+          <ty-dropdown-item>The Action 1st</ty-dropdown-item>
+          <ty-dropdown-item>The Action 2nd</ty-dropdown-item>
+          <ty-dropdown-item>The Action 3rd</ty-dropdown-item>
+        </ty-dropdown-menu>
       </template>
-    </el-dropdown>
-    <el-dropdown placement="top-end">
-      <el-button> topEnd </el-button>
+    </ty-dropdown>
+    <ty-dropdown placement="top-end">
+      <ty-button> topEnd </ty-button>
       <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item>The Action 1st</el-dropdown-item>
-          <el-dropdown-item>The Action 2nd</el-dropdown-item>
-          <el-dropdown-item>The Action 3rd</el-dropdown-item>
-        </el-dropdown-menu>
+        <ty-dropdown-menu>
+          <ty-dropdown-item>The Action 1st</ty-dropdown-item>
+          <ty-dropdown-item>The Action 2nd</ty-dropdown-item>
+          <ty-dropdown-item>The Action 3rd</ty-dropdown-item>
+        </ty-dropdown-menu>
       </template>
-    </el-dropdown>
-    <el-dropdown placement="bottom-start">
-      <el-button> bottomStart </el-button>
+    </ty-dropdown>
+    <ty-dropdown placement="bottom-start">
+      <ty-button> bottomStart </ty-button>
       <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item>The Action 1st</el-dropdown-item>
-          <el-dropdown-item>The Action 2nd</el-dropdown-item>
-          <el-dropdown-item>The Action 3rd</el-dropdown-item>
-        </el-dropdown-menu>
+        <ty-dropdown-menu>
+          <ty-dropdown-item>The Action 1st</ty-dropdown-item>
+          <ty-dropdown-item>The Action 2nd</ty-dropdown-item>
+          <ty-dropdown-item>The Action 3rd</ty-dropdown-item>
+        </ty-dropdown-menu>
       </template>
-    </el-dropdown>
-    <el-dropdown placement="bottom">
-      <el-button> bottom </el-button>
+    </ty-dropdown>
+    <ty-dropdown placement="bottom">
+      <ty-button> bottom </ty-button>
       <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item>The Action 1st</el-dropdown-item>
-          <el-dropdown-item>The Action 2nd</el-dropdown-item>
-          <el-dropdown-item>The Action 3rd</el-dropdown-item>
-        </el-dropdown-menu>
+        <ty-dropdown-menu>
+          <ty-dropdown-item>The Action 1st</ty-dropdown-item>
+          <ty-dropdown-item>The Action 2nd</ty-dropdown-item>
+          <ty-dropdown-item>The Action 3rd</ty-dropdown-item>
+        </ty-dropdown-menu>
       </template>
-    </el-dropdown>
-    <el-dropdown placement="bottom-end">
-      <el-button> bottomEnd </el-button>
+    </ty-dropdown>
+    <ty-dropdown placement="bottom-end">
+      <ty-button> bottomEnd </ty-button>
       <template #dropdown>
-        <el-dropdown-menu>
-          <el-dropdown-item>The Action 1st</el-dropdown-item>
-          <el-dropdown-item>The Action 2nd</el-dropdown-item>
-          <el-dropdown-item>The Action 3rd</el-dropdown-item>
-        </el-dropdown-menu>
+        <ty-dropdown-menu>
+          <ty-dropdown-item>The Action 1st</ty-dropdown-item>
+          <ty-dropdown-item>The Action 2nd</ty-dropdown-item>
+          <ty-dropdown-item>The Action 3rd</ty-dropdown-item>
+        </ty-dropdown-menu>
       </template>
-    </el-dropdown>
+    </ty-dropdown>
   </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
-  <el-popper ref="popperRef" :role="role">
-    <el-tooltip-trigger
+  <ty-popper ref="popperRef" :role="role">
+    <ty-tooltip-trigger
       :disabled="disabled"
       :trigger="trigger"
       :trigger-keys="triggerKeys"
@@ -9,8 +9,8 @@
       :focus-on-target="focusOnTarget"
     >
       <slot v-if="$slots.default" />
-    </el-tooltip-trigger>
-    <el-tooltip-content
+    </ty-tooltip-trigger>
+    <ty-tooltip-content
       ref="contentRef"
       :aria-label="ariaLabel"
       :boundaries-padding="boundariesPadding"
@@ -45,9 +45,9 @@
         <span v-if="rawContent" v-html="content" />
         <span v-else>{{ content }}</span>
       </slot>
-      <el-popper-arrow v-if="showArrow" />
-    </el-tooltip-content>
-  </el-popper>
+      <ty-popper-arrow v-if="showArrow" />
+    </ty-tooltip-content>
+  </ty-popper>
 </template>
 
 <script lang="ts" setup>
@@ -62,7 +62,7 @@ import {
   unref,
   watch,
 } from 'vue'
-import { ElPopper, ElPopperArrow } from '@element-plus/components/popper'
+import { TyPopper, TyPopperArrow } from '@element-plus/components/popper'
 import { isBoolean } from '@element-plus/utils'
 import {
   useDelayedToggle,
@@ -72,14 +72,14 @@ import {
 } from '@element-plus/hooks'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { tooltipEmits, useTooltipModelToggle, useTooltipProps } from './tooltip'
-import ElTooltipTrigger from './trigger.vue'
-import ElTooltipContent from './content.vue'
+import TyTooltipTrigger from './trigger.vue'
+import TyTooltipContent from './content.vue'
 
 import type { TooltipContentInstance } from './content'
 import type { PopperInstance } from '@element-plus/components/popper'
 
 defineOptions({
-  name: 'ElTooltip',
+  name: 'TyTooltip',
 })
 
 const props = defineProps(useTooltipProps)
@@ -172,27 +172,27 @@ onBeforeUnmount(() => {
 
 defineExpose({
   /**
-   * @description el-popper component instance
+   * @description ty-popper component instance
    */
   popperRef,
   /**
-   * @description el-tooltip-content component instance
+   * @description ty-tooltip-content component instance
    */
   contentRef,
   /**
-   * @description validate current focus event is trigger inside el-tooltip-content
+   * @description validate current focus event is trigger inside ty-tooltip-content
    */
   isFocusInsideContent,
   /**
-   * @description update el-popper component instance
+   * @description update ty-popper component instance
    */
   updatePopper,
   /**
-   * @description expose onOpen function to mange el-tooltip open state
+   * @description expose onOpen function to mange ty-tooltip open state
    */
   onOpen,
   /**
-   * @description expose onClose function to manage el-tooltip close state
+   * @description expose onClose function to manage ty-tooltip close state
    */
   onClose,
   /**

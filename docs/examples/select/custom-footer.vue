@@ -1,29 +1,29 @@
-<template>
-  <el-select v-model="value" placeholder="Select" style="width: 240px">
-    <el-option
+﻿<template>
+  <ty-select v-model="value" placeholder="Select" style="width: 240px">
+    <ty-option
       v-for="item in cities"
       :key="item.value"
       :label="item.label"
       :value="item.value"
     />
     <template #footer>
-      <el-button v-if="!isAdding" text bg size="small" @click="onAddOption">
+      <ty-button v-if="!isAdding" text bg size="small" @click="onAddOption">
         Add an option
-      </el-button>
+      </ty-button>
       <template v-else>
-        <el-input
+        <ty-input
           v-model="optionName"
           class="option-input"
           placeholder="input option name"
           size="small"
         />
-        <el-button type="primary" size="small" @click="onConfirm">
+        <ty-button type="primary" size="small" @click="onConfirm">
           confirm
-        </el-button>
-        <el-button size="small" @click="clear">cancel</el-button>
+        </ty-button>
+        <ty-button size="small" @click="clear">cancel</ty-button>
       </template>
     </template>
-  </el-select>
+  </ty-select>
 </template>
 
 <script lang="ts" setup>

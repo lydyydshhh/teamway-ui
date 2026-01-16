@@ -13,7 +13,7 @@ describe('Rate.vue', () => {
         max: 10,
       },
     })
-    const stars = wrapper.findAll('.el-rate__item')
+    const stars = wrapper.findAll('.ty-rate__item')
     expect(stars.length).toMatchInlineSnapshot('10')
   })
 
@@ -23,9 +23,9 @@ describe('Rate.vue', () => {
         size: 'large',
       },
     })
-    expect(wrapper.find('.el-rate--large').exists()).toBe(true)
+    expect(wrapper.find('.ty-rate--large').exists()).toBe(true)
     await wrapper.setProps({ size: '' })
-    expect(wrapper.find('.el-rate').exists()).toBe(true)
+    expect(wrapper.find('.ty-rate').exists()).toBe(true)
   })
 
   it('allow half', async () => {
@@ -33,7 +33,7 @@ describe('Rate.vue', () => {
     const wrapper = mount(() => <Rate v-model={value.value} allowHalf />)
     const vm = wrapper.getComponent(Rate).vm as RateInstance
 
-    const secondStar = wrapper.findAll('.el-rate__item')[1]
+    const secondStar = wrapper.findAll('.ty-rate__item')[1]
       .element as HTMLElement
     vm.setCurrentValue(1, {
       target: secondStar,
@@ -52,7 +52,7 @@ describe('Rate.vue', () => {
         texts: ['1', '2', '3', '4', '5'],
       },
     })
-    const text = wrapper.find('.el-rate__text').element
+    const text = wrapper.find('.ty-rate__text').element
     expect(text.textContent).toMatchInlineSnapshot('"4"')
   })
 
@@ -64,7 +64,7 @@ describe('Rate.vue', () => {
         textColor: 'red',
       },
     })
-    const text = wrapper.find('.el-rate__text').element as HTMLSpanElement
+    const text = wrapper.find('.ty-rate__text').element as HTMLSpanElement
     expect(text.style.color).toEqual('red')
   })
 
@@ -83,7 +83,7 @@ describe('Rate.vue', () => {
     const value1 = ref(0)
     const wrapper = mount(() => <Rate v-model={value1.value} />)
 
-    const thirdStar = wrapper.findAll('.el-rate__item')[2]
+    const thirdStar = wrapper.findAll('.ty-rate__item')[2]
       .element as HTMLElement
     thirdStar.click()
 
@@ -96,7 +96,7 @@ describe('Rate.vue', () => {
       <Rate v-model={value.value} colors={['#99A9BF', '#F7BA2A', '#FF9900']} />
     ))
 
-    const rateEl = wrapper.find('.el-rate').element as HTMLElement
+    const rateEl = wrapper.find('.ty-rate').element as HTMLElement
     expect(rateEl.style.getPropertyValue('--ty-rate-fill-color')).toBe(
       '#FF9900'
     )
@@ -112,13 +112,13 @@ describe('Rate.vue', () => {
       <Rate v-model={value.value} onChange={handleChange} />
     ))
 
-    const fourthStar = wrapper.findAll('.el-rate__item')[3]
+    const fourthStar = wrapper.findAll('.ty-rate__item')[3]
       .element as HTMLElement
     fourthStar.click()
 
     expect(value.value).toEqual(4)
     expect(changeCount.value).toEqual(0)
-    const fifthStar = wrapper.findAll('.el-rate__item')[4]
+    const fifthStar = wrapper.findAll('.ty-rate__item')[4]
       .element as HTMLElement
     fifthStar.click()
     expect(value.value).toEqual(5)
@@ -135,13 +135,13 @@ describe('Rate.vue', () => {
       <Rate v-model={value.value} clearable onChange={handleChange} />
     ))
 
-    const fourthStar = wrapper.findAll('.el-rate__item')[3]
+    const fourthStar = wrapper.findAll('.ty-rate__item')[3]
       .element as HTMLElement
     fourthStar.click()
 
     expect(value.value).toEqual(0)
     expect(changeCount.value).toEqual(1)
-    const fifthStar = wrapper.findAll('.el-rate__item')[4]
+    const fifthStar = wrapper.findAll('.ty-rate__item')[4]
       .element as HTMLElement
     fifthStar.click()
     expect(value.value).toEqual(5)
@@ -151,24 +151,24 @@ describe('Rate.vue', () => {
   it('show background icon when allow-half attribute is true', async () => {
     const value = ref(3.5)
     const wrapper = mount(() => <Rate v-model={value.value} allow-half />)
-    expect(wrapper.find('.el-rate__decimal--box').exists()).toBe(true)
+    expect(wrapper.find('.ty-rate__decimal--box').exists()).toBe(true)
     expect(
-      wrapper.findAll('.el-rate__decimal--box')[3].attributes('style')
+      wrapper.findAll('.ty-rate__decimal--box')[3].attributes('style')
     ).toBe(undefined)
     value.value = 3.4
     await nextTick()
-    expect(wrapper.find('.el-rate__decimal--box').exists()).toBe(true)
+    expect(wrapper.find('.ty-rate__decimal--box').exists()).toBe(true)
     expect(
-      wrapper.findAll('.el-rate__decimal--box')[3].attributes('style')
+      wrapper.findAll('.ty-rate__decimal--box')[3].attributes('style')
     ).contain('display: none;')
   })
 
   it('show background icon when disabled attribute is true', async () => {
     const value = ref(3.2)
     const wrapper = mount(() => <Rate v-model={value.value} disabled />)
-    expect(wrapper.find('.el-rate__decimal--box').exists()).toBe(true)
+    expect(wrapper.find('.ty-rate__decimal--box').exists()).toBe(true)
     expect(
-      wrapper.findAll('.el-rate__decimal--box')[3].attributes('style')
+      wrapper.findAll('.ty-rate__decimal--box')[3].attributes('style')
     ).toBe(undefined)
   })
 
@@ -183,7 +183,7 @@ describe('Rate.vue', () => {
       await nextTick()
       const formItem = wrapper.find('[data-test-ref="item"]')
       const rate = wrapper.find('[data-test-ref="rate"]')
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItem.attributes().role).toBeFalsy()
       expect(formItemLabel.attributes().for).toBe(rate.attributes().id)
     })
@@ -198,7 +198,7 @@ describe('Rate.vue', () => {
       await nextTick()
       const formItem = wrapper.find('[data-test-ref="item"]')
       const rate = wrapper.find('[data-test-ref="rate"]')
-      const formItemLabel = formItem.find('.el-form-item__label')
+      const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItem.attributes().role).toBeFalsy()
       expect(rate.attributes().id).toBe('foobar')
       expect(formItemLabel.attributes().for).toBe(rate.attributes().id)

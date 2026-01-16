@@ -1,5 +1,5 @@
-<template>
-  <el-autocomplete
+﻿<template>
+  <ty-autocomplete
     v-model="state"
     :fetch-suggestions="querySearchAsync"
     placeholder="Please input"

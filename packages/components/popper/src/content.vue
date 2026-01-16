@@ -8,7 +8,7 @@
     @mouseenter="(e) => $emit('mouseenter', e)"
     @mouseleave="(e) => $emit('mouseleave', e)"
   >
-    <el-focus-trap
+    <ty-focus-trap
       :loop="loop"
       :trapped="trapped"
       :trap-on-focus-in="true"
@@ -21,7 +21,7 @@
       @release-requested="onReleaseRequested"
     >
       <slot />
-    </el-focus-trap>
+    </ty-focus-trap>
   </div>
 </template>
 
@@ -29,7 +29,7 @@
 import { inject, onBeforeUnmount, onMounted, provide, unref, watch } from 'vue'
 import { isNil } from 'lodash-unified'
 import { NOOP, isElement } from '@element-plus/utils'
-import ElFocusTrap from '@element-plus/components/focus-trap'
+import TyFocusTrap from '@element-plus/components/focus-trap'
 import { formItemContextKey } from '@element-plus/components/form'
 import { POPPER_CONTENT_INJECTION_KEY } from './constants'
 import { popperContentEmits, popperContentProps } from './content'
@@ -42,7 +42,7 @@ import {
 import type { WatchStopHandle } from 'vue'
 
 defineOptions({
-  name: 'ElPopperContent',
+  name: 'TyPopperContent',
 })
 
 const emit = defineEmits(popperContentEmits)

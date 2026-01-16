@@ -132,8 +132,8 @@ dropdown/virtual-trigger
 
 | Name     | Description                                                                                                                                   | Subtags       |
 | -------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| default  | content of Dropdown. Notice: Must be a valid html dom element (ex. `<span>, <button> etc.`) or `el-component`, to attach the trigger listener | —             |
-| dropdown | content of the Dropdown Menu, usually a `<el-dropdown-menu>` element                                                                          | Dropdown-Menu |
+| default  | content of Dropdown. Notice: Must be a valid html dom element (ex. `<span>, <button> etc.`) or `ty-component`, to attach the trigger listener | —             |
+| dropdown | content of the Dropdown Menu, usually a `<ty-dropdown-menu>` element                                                                          | Dropdown-Menu |
 
 ### Dropdown Events
 

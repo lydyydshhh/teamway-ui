@@ -1,18 +1,18 @@
 <template>
   <div>
-    <el-link href="https://element.eleme.io" target="_blank">default</el-link>
-    <el-link type="primary">primary</el-link>
-    <el-link type="success">success</el-link>
-    <el-link type="warning">warning</el-link>
-    <el-link type="danger">danger</el-link>
-    <el-link type="info">info</el-link>
+    <ty-link href="https://element.eleme.io" target="_blank">default</ty-link>
+    <ty-link type="primary">primary</ty-link>
+    <ty-link type="success">success</ty-link>
+    <ty-link type="warning">warning</ty-link>
+    <ty-link type="danger">danger</ty-link>
+    <ty-link type="info">info</ty-link>
   </div>
 </template>
 <style scoped>
-.el-link {
+.ty-link {
   margin-right: 8px;
 }
-.el-link .el-icon--right.el-icon {
+.ty-link .ty-icon--right.ty-icon {
   vertical-align: text-bottom;
 }
 </style>

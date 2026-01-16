@@ -1,15 +1,15 @@
-<script lang="ts" setup>
+﻿<script lang="ts" setup>
 import { isDark } from '~/composables/dark'
 </script>
 
 <template>
   <div>
-    <el-button color="#626aef" :dark="isDark">Default</el-button>
-    <el-button color="#626aef" :dark="isDark" plain>Plain</el-button>
+    <ty-button color="#626aef" :dark="isDark">Default</ty-button>
+    <ty-button color="#626aef" :dark="isDark" plain>Plain</ty-button>
 
-    <el-button color="#626aef" :dark="isDark" disabled>Disabled</el-button>
-    <el-button color="#626aef" :dark="isDark" disabled plain>
+    <ty-button color="#626aef" :dark="isDark" disabled>Disabled</ty-button>
+    <ty-button color="#626aef" :dark="isDark" disabled plain>
       Disabled Plain
-    </el-button>
+    </ty-button>
   </div>
 </template>

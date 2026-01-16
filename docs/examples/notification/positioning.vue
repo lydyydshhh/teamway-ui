@@ -1,24 +1,24 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-1">
-    <el-button class="!ml-0" plain @click="open1"> Top Right </el-button>
-    <el-button class="!ml-0" plain @click="open2"> Bottom Right </el-button>
-    <el-button class="!ml-0" plain @click="open3"> Bottom Left </el-button>
-    <el-button class="!ml-0" plain @click="open4"> Top Left </el-button>
+    <ty-button class="!ml-0" plain @click="open1"> Top Right </ty-button>
+    <ty-button class="!ml-0" plain @click="open2"> Bottom Right </ty-button>
+    <ty-button class="!ml-0" plain @click="open3"> Bottom Left </ty-button>
+    <ty-button class="!ml-0" plain @click="open4"> Top Left </ty-button>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ElNotification } from 'element-plus'
+import { TyNotification } from 'element-plus'
 
 const open1 = () => {
-  ElNotification({
+  TyNotification({
     title: 'Custom Position',
     message: "I'm at the top right corner",
   })
 }
 
 const open2 = () => {
-  ElNotification({
+  TyNotification({
     title: 'Custom Position',
     message: "I'm at the bottom right corner",
     position: 'bottom-right',
@@ -26,7 +26,7 @@ const open2 = () => {
 }
 
 const open3 = () => {
-  ElNotification({
+  TyNotification({
     title: 'Custom Position',
     message: "I'm at the bottom left corner",
     position: 'bottom-left',
@@ -34,7 +34,7 @@ const open3 = () => {
 }
 
 const open4 = () => {
-  ElNotification({
+  TyNotification({
     title: 'Custom Position',
     message: "I'm at the top left corner",
     position: 'top-left',

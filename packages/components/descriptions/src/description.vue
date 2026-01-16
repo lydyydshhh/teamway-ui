@@ -16,7 +16,7 @@
       <table :class="[ns.e('table'), ns.is('bordered', border)]">
         <tbody>
           <template v-for="(row, _index) in getRows()" :key="_index">
-            <el-descriptions-row :row="row" />
+            <ty-descriptions-row :row="row" />
           </template>
         </tbody>
       </table>
@@ -29,7 +29,7 @@ import { computed, provide, useSlots } from 'vue'
 import { flattedChildren } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
 import { useFormSize } from '@element-plus/components/form'
-import ElDescriptionsRow from './descriptions-row.vue'
+import TyDescriptionsRow from './descriptions-row.vue'
 import { descriptionsKey } from './token'
 import { descriptionProps } from './description'
 import { COMPONENT_NAME } from './constants'
@@ -38,7 +38,7 @@ import type { IDescriptionsInject } from './descriptions.type'
 import type { DescriptionItemVNode } from './description-item'
 
 defineOptions({
-  name: 'ElDescriptions',
+  name: 'TyDescriptions',
 })
 
 const props = defineProps(descriptionProps)

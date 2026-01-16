@@ -3,7 +3,7 @@ import Select from './src/select.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElSelectV2: SFCWithInstall<typeof Select> = withInstall(Select)
-export default ElSelectV2
+export const TySelectV2: SFCWithInstall<typeof Select> = withInstall(Select)
+export default TySelectV2
 
 export * from './src/token'

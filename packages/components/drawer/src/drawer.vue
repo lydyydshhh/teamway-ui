@@ -1,5 +1,5 @@
 <template>
-  <el-teleport
+  <ty-teleport
     :to="appendTo"
     :disabled="appendTo !== 'body' ? false : !appendToBody"
   >
@@ -9,7 +9,7 @@
       @after-leave="afterLeave"
       @before-leave="beforeLeave"
     >
-      <el-overlay
+      <ty-overlay
         v-show="visible"
         :mask="modal"
         :overlay-class="[
@@ -21,7 +21,7 @@
         :z-index="zIndex"
         @click="onModalClick"
       >
-        <el-focus-trap
+        <ty-focus-trap
           loop
           :trapped="visible"
           :focus-trap-el="drawerRef"
@@ -79,9 +79,9 @@
                 type="button"
                 @click="handleClose"
               >
-                <el-icon :class="ns.e('close')">
+                <ty-icon :class="ns.e('close')">
                   <close />
-                </el-icon>
+                </ty-icon>
               </button>
             </header>
             <template v-if="rendered">
@@ -99,26 +99,26 @@
               :class="ns.e('dragger')"
             />
           </div>
-        </el-focus-trap>
-      </el-overlay>
+        </ty-focus-trap>
+      </ty-overlay>
     </transition>
-  </el-teleport>
+  </ty-teleport>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
 import { Close } from '@element-plus/icons-vue'
-import { ElOverlay } from '@element-plus/components/overlay'
-import ElFocusTrap from '@element-plus/components/focus-trap'
-import ElTeleport from '@element-plus/components/teleport'
+import { TyOverlay } from '@element-plus/components/overlay'
+import TyFocusTrap from '@element-plus/components/focus-trap'
+import TyTeleport from '@element-plus/components/teleport'
 import { useDialog } from '@element-plus/components/dialog'
-import ElIcon from '@element-plus/components/icon'
+import TyIcon from '@element-plus/components/icon'
 import { useDeprecated, useLocale, useNamespace } from '@element-plus/hooks'
 import { drawerEmits, drawerProps } from './drawer'
 import { useResizable } from './composables/useResizable'
 
 defineOptions({
-  name: 'ElDrawer',
+  name: 'TyDrawer',
   inheritAttrs: false,
 })
 
@@ -128,7 +128,7 @@ const slots = useSlots()
 
 useDeprecated(
   {
-    scope: 'el-drawer',
+    scope: 'ty-drawer',
     from: 'the title slot',
     replacement: 'the header slot',
     version: '3.0.0',

@@ -1,5 +1,5 @@
-<template>
-  <el-select
+﻿<template>
+  <ty-select
     v-model="value"
     multiple
     clearable
@@ -10,21 +10,21 @@
     style="width: 240px"
   >
     <template #header>
-      <el-checkbox
+      <ty-checkbox
         v-model="checkAll"
         :indeterminate="indeterminate"
         @change="handleCheckAll"
       >
         All
-      </el-checkbox>
+      </ty-checkbox>
     </template>
-    <el-option
+    <ty-option
       v-for="item in cities"
       :key="item.value"
       :label="item.label"
       :value="item.value"
     />
-  </el-select>
+  </ty-select>
 </template>
 
 <script lang="ts" setup>
@@ -86,7 +86,7 @@ const handleCheckAll = (val: CheckboxValueType) => {
 
 <style>
 .custom-header {
-  .el-checkbox {
+  .ty-checkbox {
     display: flex;
     height: unset;
   }

@@ -1,27 +1,27 @@
-<template>
-  <el-table :data="tableData" style="width: 100%" max-height="250">
-    <el-table-column fixed prop="date" label="Date" width="150" />
-    <el-table-column prop="name" label="Name" width="120" />
-    <el-table-column prop="state" label="State" width="120" />
-    <el-table-column prop="city" label="City" width="120" />
-    <el-table-column prop="address" label="Address" width="600" />
-    <el-table-column prop="zip" label="Zip" width="120" />
-    <el-table-column fixed="right" label="Operations" min-width="120">
+﻿<template>
+  <ty-table :data="tableData" style="width: 100%" max-height="250">
+    <ty-table-column fixed prop="date" label="Date" width="150" />
+    <ty-table-column prop="name" label="Name" width="120" />
+    <ty-table-column prop="state" label="State" width="120" />
+    <ty-table-column prop="city" label="City" width="120" />
+    <ty-table-column prop="address" label="Address" width="600" />
+    <ty-table-column prop="zip" label="Zip" width="120" />
+    <ty-table-column fixed="right" label="Operations" min-width="120">
       <template #default="scope">
-        <el-button
+        <ty-button
           link
           type="primary"
           size="small"
           @click.prevent="deleteRow(scope.$index)"
         >
           Remove
-        </el-button>
+        </ty-button>
       </template>
-    </el-table-column>
-  </el-table>
-  <el-button class="mt-4" style="width: 100%" @click="onAddItem">
+    </ty-table-column>
+  </ty-table>
+  <ty-button class="mt-4" style="width: 100%" @click="onAddItem">
     Add Item
-  </el-button>
+  </ty-button>
 </template>
 
 <script lang="ts" setup>

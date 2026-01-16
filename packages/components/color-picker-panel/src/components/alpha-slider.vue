@@ -26,7 +26,7 @@ import { alphaSliderProps } from '../props/slider'
 import { useSlider, useSliderDOM } from '../composables/use-slider'
 
 defineOptions({
-  name: 'ElColorAlphaSlider',
+  name: 'TyColorAlphaSlider',
 })
 
 const props = defineProps(alphaSliderProps)

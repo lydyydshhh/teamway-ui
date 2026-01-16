@@ -1,5 +1,5 @@
-<template>
-  <el-form
+﻿<template>
+  <ty-form
     ref="ruleFormRef"
     style="max-width: 600px"
     :model="ruleForm"
@@ -8,26 +8,26 @@
     label-width="auto"
     class="demo-ruleForm"
   >
-    <el-form-item label="Password" prop="pass">
-      <el-input v-model="ruleForm.pass" type="password" autocomplete="off" />
-    </el-form-item>
-    <el-form-item label="Confirm" prop="checkPass">
-      <el-input
+    <ty-form-item label="Password" prop="pass">
+      <ty-input v-model="ruleForm.pass" type="password" autocomplete="off" />
+    </ty-form-item>
+    <ty-form-item label="Confirm" prop="checkPass">
+      <ty-input
         v-model="ruleForm.checkPass"
         type="password"
         autocomplete="off"
       />
-    </el-form-item>
-    <el-form-item label="Age" prop="age">
-      <el-input v-model.number="ruleForm.age" />
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="submitForm(ruleFormRef)">
+    </ty-form-item>
+    <ty-form-item label="Age" prop="age">
+      <ty-input v-model.number="ruleForm.age" />
+    </ty-form-item>
+    <ty-form-item>
+      <ty-button type="primary" @click="submitForm(ruleFormRef)">
         Submit
-      </el-button>
-      <el-button @click="resetForm(ruleFormRef)">Reset</el-button>
-    </el-form-item>
-  </el-form>
+      </ty-button>
+      <ty-button @click="resetForm(ruleFormRef)">Reset</ty-button>
+    </ty-form-item>
+  </ty-form>
 </template>
 
 <script lang="ts" setup>
@@ -87,9 +87,9 @@ const rules = reactive<FormRules<typeof ruleForm>>({
   age: [{ validator: checkAge, trigger: 'blur' }],
 })
 
-const submitForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.validate((valid) => {
+const submitForm = (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  formTy.validate((valid) => {
     if (valid) {
       console.log('submit!')
     } else {
@@ -98,8 +98,8 @@ const submitForm = (formEl: FormInstance | undefined) => {
   })
 }
 
-const resetForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.resetFields()
+const resetForm = (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  formTy.resetFields()
 }
 </script>

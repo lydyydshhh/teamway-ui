@@ -4,14 +4,14 @@ import SplitPanel from './src/split-panel.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElSplitter: SFCWithInstall<typeof Splitter> & {
+export const TySplitter: SFCWithInstall<typeof Splitter> & {
   SplitPanel: typeof SplitPanel
 } = withInstall(Splitter, {
   SplitPanel,
 })
-export default ElSplitter
+export default TySplitter
 
-export const ElSplitterPanel: SFCWithInstall<typeof SplitPanel> =
+export const TySplitterPanel: SFCWithInstall<typeof SplitPanel> =
   withNoopInstall(SplitPanel)
 
 export * from './src/splitter'

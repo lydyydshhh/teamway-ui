@@ -1,19 +1,19 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-4 items-center">
-    <el-select-v2
+    <ty-select-v2
       v-model="value"
       :options="options"
       placeholder="Please select"
       size="large"
       style="width: 240px"
     />
-    <el-select-v2
+    <ty-select-v2
       v-model="value"
       :options="options"
       placeholder="Please select"
       style="width: 240px"
     />
-    <el-select-v2
+    <ty-select-v2
       v-model="value"
       :options="options"
       placeholder="Please select"
@@ -36,7 +36,7 @@ const options = Array.from({ length: 1000 }).map((_, idx) => ({
 </script>
 
 <style scoped>
-.example-showcase .el-select-v2 {
+.example-showcase .ty-select-v2 {
   margin-right: 20px;
 }
 </style>

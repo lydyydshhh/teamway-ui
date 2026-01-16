@@ -10,8 +10,8 @@ const { copyColor } = useCopyColor()
 </script>
 
 <template>
-  <el-row :gutter="12">
-    <el-col
+  <ty-row :gutter="12">
+    <ty-col
       v-for="(type, i) in colorsType"
       :key="i"
       :span="6"
@@ -35,6 +35,6 @@ const { copyColor } = useCopyColor()
           />
         </div>
       </div>
-    </el-col>
-  </el-row>
+    </ty-col>
+  </ty-row>
 </template>

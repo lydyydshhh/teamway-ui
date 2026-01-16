@@ -1,13 +1,13 @@
-<template>
-  <el-mention
+﻿<template>
+  <ty-mention
     v-model="value1"
     whole
     :options="options1"
     style="width: 320px"
     placeholder="Please input"
   />
-  <el-divider />
-  <el-mention
+  <ty-divider />
+  <ty-mention
     v-model="value2"
     :options="options2"
     :prefix="['@', '#']"

@@ -3,8 +3,8 @@ import Card from './src/card.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElCard: SFCWithInstall<typeof Card> = withInstall(Card)
-export default ElCard
+export const TyCard: SFCWithInstall<typeof Card> = withInstall(Card)
+export default TyCard
 
 export * from './src/card'
 export type { CardInstance } from './src/instance'

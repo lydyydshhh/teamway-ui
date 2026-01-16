@@ -16,9 +16,9 @@
         type="button"
         @click="$emit('close')"
       >
-        <el-icon :class="ns.e('close')">
+        <ty-icon :class="ns.e('close')">
           <component :is="closeIcon || Close" />
-        </el-icon>
+        </ty-icon>
       </button>
     </header>
     <div :id="bodyId" :class="[ns.e('body'), bodyClass]">
@@ -32,7 +32,7 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { FOCUS_TRAP_INJECTION_KEY } from '@element-plus/components/focus-trap'
 import { useDraggable, useLocale } from '@element-plus/hooks'
 import { CloseComponents, composeRefs } from '@element-plus/utils'
@@ -42,7 +42,7 @@ import { dialogContentEmits, dialogContentProps } from './dialog-content'
 const { t } = useLocale()
 const { Close } = CloseComponents
 
-defineOptions({ name: 'ElDialogContent' })
+defineOptions({ name: 'TyDialogContent' })
 const props = defineProps(dialogContentProps)
 defineEmits(dialogContentEmits)
 

@@ -1,5 +1,5 @@
 <template>
-  <el-tooltip
+  <ty-tooltip
     ref="tooltipRef"
     v-bind="$attrs"
     :trigger="trigger"
@@ -43,12 +43,12 @@
         {{ content }}
       </slot>
     </template>
-  </el-tooltip>
+  </ty-tooltip>
 </template>
 
 <script lang="ts" setup>
 import { computed, ref, unref } from 'vue'
-import { ElTooltip } from '@element-plus/components/tooltip'
+import { TyTooltip } from '@element-plus/components/tooltip'
 import { addUnit } from '@element-plus/utils'
 import { useNamespace } from '@element-plus/hooks'
 import { popoverEmits, popoverProps } from './popover'
@@ -56,7 +56,7 @@ import { popoverEmits, popoverProps } from './popover'
 import type { TooltipInstance } from '@element-plus/components/tooltip'
 
 defineOptions({
-  name: 'ElPopover',
+  name: 'TyPopover',
 })
 
 const props = defineProps(popoverProps)

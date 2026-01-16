@@ -1,43 +1,43 @@
-<template>
-  <el-dropdown size="large" split-button type="primary">
+﻿<template>
+  <ty-dropdown size="large" split-button type="primary">
     Large
     <template #dropdown>
-      <el-dropdown-menu>
-        <el-dropdown-item>Action 1</el-dropdown-item>
-        <el-dropdown-item>Action 2</el-dropdown-item>
-        <el-dropdown-item>Action 3</el-dropdown-item>
-        <el-dropdown-item>Action 4</el-dropdown-item>
-      </el-dropdown-menu>
+      <ty-dropdown-menu>
+        <ty-dropdown-item>Action 1</ty-dropdown-item>
+        <ty-dropdown-item>Action 2</ty-dropdown-item>
+        <ty-dropdown-item>Action 3</ty-dropdown-item>
+        <ty-dropdown-item>Action 4</ty-dropdown-item>
+      </ty-dropdown-menu>
     </template>
-  </el-dropdown>
+  </ty-dropdown>
 
-  <el-dropdown split-button type="primary">
+  <ty-dropdown split-button type="primary">
     Default
     <template #dropdown>
-      <el-dropdown-menu>
-        <el-dropdown-item>Action 1</el-dropdown-item>
-        <el-dropdown-item>Action 2</el-dropdown-item>
-        <el-dropdown-item>Action 3</el-dropdown-item>
-        <el-dropdown-item>Action 4</el-dropdown-item>
-      </el-dropdown-menu>
+      <ty-dropdown-menu>
+        <ty-dropdown-item>Action 1</ty-dropdown-item>
+        <ty-dropdown-item>Action 2</ty-dropdown-item>
+        <ty-dropdown-item>Action 3</ty-dropdown-item>
+        <ty-dropdown-item>Action 4</ty-dropdown-item>
+      </ty-dropdown-menu>
     </template>
-  </el-dropdown>
+  </ty-dropdown>
 
-  <el-dropdown size="small" split-button type="primary">
+  <ty-dropdown size="small" split-button type="primary">
     Small
     <template #dropdown>
-      <el-dropdown-menu>
-        <el-dropdown-item>Action 1</el-dropdown-item>
-        <el-dropdown-item>Action 2</el-dropdown-item>
-        <el-dropdown-item>Action 3</el-dropdown-item>
-        <el-dropdown-item>Action 4</el-dropdown-item>
-      </el-dropdown-menu>
+      <ty-dropdown-menu>
+        <ty-dropdown-item>Action 1</ty-dropdown-item>
+        <ty-dropdown-item>Action 2</ty-dropdown-item>
+        <ty-dropdown-item>Action 3</ty-dropdown-item>
+        <ty-dropdown-item>Action 4</ty-dropdown-item>
+      </ty-dropdown-menu>
     </template>
-  </el-dropdown>
+  </ty-dropdown>
 </template>
 
 <style scoped>
-.example-showcase .el-dropdown + .el-dropdown {
+.example-showcase .ty-dropdown + .ty-dropdown {
   margin-left: 15px;
 }
 </style>

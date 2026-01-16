@@ -19,10 +19,10 @@
       @keydown.enter="decrease"
     >
       <slot name="decrease-icon">
-        <el-icon>
+        <ty-icon>
           <arrow-down v-if="controlsAtRight" />
           <minus v-else />
-        </el-icon>
+        </ty-icon>
       </slot>
     </span>
     <span
@@ -34,13 +34,13 @@
       @keydown.enter="increase"
     >
       <slot name="increase-icon">
-        <el-icon>
+        <ty-icon>
           <arrow-up v-if="controlsAtRight" />
           <plus v-else />
-        </el-icon>
+        </ty-icon>
       </slot>
     </span>
-    <el-input
+    <ty-input
       :id="id"
       ref="input"
       type="number"
@@ -68,15 +68,15 @@
       <template v-if="$slots.suffix" #suffix>
         <slot name="suffix" />
       </template>
-    </el-input>
+    </ty-input>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed, onMounted, onUpdated, reactive, ref, watch } from 'vue'
 import { isNil } from 'lodash-unified'
-import { ElInput } from '@element-plus/components/input'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyInput } from '@element-plus/components/input'
+import { TyIcon } from '@element-plus/components/icon'
 import {
   useFormDisabled,
   useFormItem,
@@ -105,7 +105,7 @@ import { inputNumberEmits, inputNumberProps } from './input-number'
 import type { InputInstance } from '@element-plus/components/input'
 
 defineOptions({
-  name: 'ElInputNumber',
+  name: 'TyInputNumber',
 })
 
 const props = defineProps(inputNumberProps)

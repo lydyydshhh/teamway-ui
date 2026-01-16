@@ -1,5 +1,5 @@
-<template>
-  <el-select-v2
+﻿<template>
+  <ty-select-v2
     v-model="value"
     multiple
     placeholder="Select"
@@ -8,14 +8,14 @@
   >
     <template #default="{ item }">
       <div class="flex items-center">
-        <el-tag :color="item.value" style="margin-right: 8px" size="small" />
+        <ty-tag :color="item.value" style="margin-right: 8px" size="small" />
         <span :style="{ color: item.value }">{{ item.label }}</span>
       </div>
     </template>
     <template #tag>
-      <el-tag v-for="color in value" :key="color" :color="color" />
+      <ty-tag v-for="color in value" :key="color" :color="color" />
     </template>
-  </el-select-v2>
+  </ty-select-v2>
 </template>
 
 <script lang="ts" setup>
@@ -58,7 +58,7 @@ colors.forEach((color) => {
 </script>
 
 <style scoped>
-.el-tag {
+.ty-tag {
   border: none;
   aspect-ratio: 1;
 }

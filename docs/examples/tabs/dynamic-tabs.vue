@@ -1,20 +1,20 @@
-<template>
-  <el-tabs
+﻿<template>
+  <ty-tabs
     v-model="editableTabsValue"
     type="card"
     editable
     class="demo-tabs"
     @edit="handleTabsEdit"
   >
-    <el-tab-pane
+    <ty-tab-pane
       v-for="item in editableTabs"
       :key="item.name"
       :label="item.title"
       :name="item.name"
     >
       {{ item.content }}
-    </el-tab-pane>
-  </el-tabs>
+    </ty-tab-pane>
+  </ty-tabs>
 </template>
 
 <script lang="ts" setup>
@@ -70,7 +70,7 @@ const handleTabsEdit = (
 </script>
 
 <style>
-.demo-tabs > .el-tabs__content {
+.demo-tabs > .ty-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;

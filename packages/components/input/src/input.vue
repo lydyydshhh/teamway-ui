@@ -23,9 +23,9 @@
         <span v-if="$slots.prefix || prefixIcon" :class="nsInput.e('prefix')">
           <span :class="nsInput.e('prefix-inner')">
             <slot name="prefix" />
-            <el-icon v-if="prefixIcon" :class="nsInput.e('icon')">
+            <ty-icon v-if="prefixIcon" :class="nsInput.e('icon')">
               <component :is="prefixIcon" />
-            </el-icon>
+            </ty-icon>
           </span>
         </span>
 
@@ -64,19 +64,19 @@
               v-if="!showClear || !showPwdVisible || !isWordLimitVisible"
             >
               <slot name="suffix" />
-              <el-icon v-if="suffixIcon" :class="nsInput.e('icon')">
+              <ty-icon v-if="suffixIcon" :class="nsInput.e('icon')">
                 <component :is="suffixIcon" />
-              </el-icon>
+              </ty-icon>
             </template>
-            <el-icon
+            <ty-icon
               v-if="showClear"
               :class="[nsInput.e('icon'), nsInput.e('clear')]"
               @mousedown.prevent="NOOP"
               @click="clear"
             >
               <component :is="clearIcon" />
-            </el-icon>
-            <el-icon
+            </ty-icon>
+            <ty-icon
               v-if="showPwdVisible"
               :class="[nsInput.e('icon'), nsInput.e('password')]"
               @click="handlePasswordVisible"
@@ -84,7 +84,7 @@
               @mouseup.prevent="NOOP"
             >
               <component :is="passwordIcon" />
-            </el-icon>
+            </ty-icon>
             <span
               v-if="isWordLimitVisible"
               :class="[
@@ -96,7 +96,7 @@
                 {{ textLength }} / {{ maxlength }}
               </span>
             </span>
-            <el-icon
+            <ty-icon
               v-if="validateState && validateIcon && needStatusIcon"
               :class="[
                 nsInput.e('icon'),
@@ -105,7 +105,7 @@
               ]"
             >
               <component :is="validateIcon" />
-            </el-icon>
+            </ty-icon>
           </span>
         </span>
       </div>
@@ -174,7 +174,7 @@ import {
 } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
 import { isNil } from 'lodash-unified'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { Hide as IconHide, View as IconView } from '@element-plus/icons-vue'
 import {
   useFormDisabled,
@@ -208,7 +208,7 @@ import type { StyleValue } from 'vue'
 
 type TargetElement = HTMLInputElement | HTMLTextAreaElement
 
-const COMPONENT_NAME = 'ElInput'
+const COMPONENT_NAME = 'TyInput'
 defineOptions({
   name: COMPONENT_NAME,
   inheritAttrs: false,

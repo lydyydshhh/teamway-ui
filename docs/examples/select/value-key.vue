@@ -1,18 +1,18 @@
-<template>
+﻿<template>
   <div class="m-4">
-    <el-select
+    <ty-select
       v-model="value"
       value-key="id"
       placeholder="Select"
       style="width: 240px"
     >
-      <el-option
+      <ty-option
         v-for="item in options"
         :key="item.id"
         :label="item.label"
         :value="item"
       />
-    </el-select>
+    </ty-select>
     <p>
       selected option's description:
       {{ value ? value.desc : 'no select' }}

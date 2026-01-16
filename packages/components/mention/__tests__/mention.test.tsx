@@ -45,8 +45,8 @@ describe('Mention.vue', () => {
 
     vi.advanceTimersByTime(150)
     await nextTick()
-    expect(document.querySelector('.el-mention-dropdown')).not.toEqual(null)
-    expect(document.querySelectorAll('.el-mention-dropdown__item').length).toBe(
+    expect(document.querySelector('.ty-mention-dropdown')).not.toEqual(null)
+    expect(document.querySelectorAll('.ty-mention-dropdown__item').length).toBe(
       4
     )
   })
@@ -76,7 +76,7 @@ describe('Mention.vue', () => {
     await wrapper.find('input').setValue('@')
     vi.advanceTimersByTime(150)
     await nextTick()
-    expect(document.querySelector('.el-mention-dropdown__loading')).not.toEqual(
+    expect(document.querySelector('.ty-mention-dropdown__loading')).not.toEqual(
       null
     )
   })
@@ -91,8 +91,8 @@ describe('Mention.vue', () => {
     await wrapper.find('input').setValue('#')
     vi.advanceTimersByTime(150)
     await nextTick()
-    expect(document.querySelector('.el-mention-dropdown')).not.toEqual(null)
-    expect(document.querySelectorAll('.el-mention-dropdown__item').length).toBe(
+    expect(document.querySelector('.ty-mention-dropdown')).not.toEqual(null)
+    expect(document.querySelectorAll('.ty-mention-dropdown__item').length).toBe(
       4
     )
   })
@@ -117,8 +117,8 @@ describe('Mention.vue', () => {
     vi.advanceTimersByTime(150)
     await nextTick()
     const dropdown = wrapper.findComponent({ name: 'ElMentionDropdown' })
-    const list = dropdown.find('.el-mention-dropdown__list')
-    const option = dropdown.find('.el-mention-dropdown__item')
+    const list = dropdown.find('.ty-mention-dropdown__list')
+    const option = dropdown.find('.ty-mention-dropdown__item')
 
     expect(list.attributes('id')).toBeTruthy()
     expect(list.attributes('role')).toBe('listbox')
@@ -139,9 +139,9 @@ describe('Mention.vue', () => {
     })
 
     const dropdown = wrapper.findComponent({ name: 'ElMentionDropdown' })
-    const option = dropdown.find('.el-mention-dropdown__item')
+    const option = dropdown.find('.ty-mention-dropdown__item')
 
-    expect(wrapper.find('.el-input').classes()).toContain('is-disabled')
+    expect(wrapper.find('.ty-input').classes()).toContain('is-disabled')
     expect(wrapper.find('input').attributes()).toHaveProperty('disabled')
     expect(option.attributes('aria-disabled')).toBe('true')
     expect(option.classes()).toContain('is-disabled')
@@ -185,8 +185,8 @@ describe('Mention.vue', () => {
 
     vi.advanceTimersByTime(150)
     await nextTick()
-    expect(document.querySelector('.el-mention-dropdown')).not.toEqual(null)
-    expect(document.querySelectorAll('.el-mention-dropdown__item').length).toBe(
+    expect(document.querySelector('.ty-mention-dropdown')).not.toEqual(null)
+    expect(document.querySelectorAll('.ty-mention-dropdown__item').length).toBe(
       4
     )
     expect(document.querySelectorAll('.is-disabled').length).toBe(2)
@@ -204,7 +204,7 @@ describe('Mention.vue', () => {
       props: { options, style: { marginTop: '100px', marginLeft: '100px' } },
     })
 
-    const elInputEl = wrapper.find('.el-input').element
+    const elInputEl = wrapper.find('.ty-input').element
     const inputEl = wrapper.find('input').element
 
     const mockBoundingClientRect = (
@@ -252,7 +252,7 @@ describe('Mention.vue', () => {
     await nextTick()
 
     const cursorStyles = wrapper
-      .find('.el-tooltip__trigger')
+      .find('.ty-tooltip__trigger')
       .attributes('style')
 
     expect(cursorStyles).toContain('left: 125px')

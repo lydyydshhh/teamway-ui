@@ -1,23 +1,23 @@
-<template>
-  <el-form
+﻿<template>
+  <ty-form
     ref="ruleFormRef"
     style="max-width: 600px"
     :model="ruleForm"
     :rules="rules"
   >
-    <el-form-item label="name" prop="name">
-      <el-mention v-model="ruleForm.name" :options="options" />
-    </el-form-item>
-    <el-form-item label="desc" prop="desc">
-      <el-mention v-model="ruleForm.desc" type="textarea" :options="options" />
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="submitForm(ruleFormRef)">
+    <ty-form-item label="name" prop="name">
+      <ty-mention v-model="ruleForm.name" :options="options" />
+    </ty-form-item>
+    <ty-form-item label="desc" prop="desc">
+      <ty-mention v-model="ruleForm.desc" type="textarea" :options="options" />
+    </ty-form-item>
+    <ty-form-item>
+      <ty-button type="primary" @click="submitForm(ruleFormRef)">
         Submit
-      </el-button>
-      <el-button @click="resetForm(ruleFormRef)">Reset</el-button>
-    </el-form-item>
-  </el-form>
+      </ty-button>
+      <ty-button @click="resetForm(ruleFormRef)">Reset</ty-button>
+    </ty-form-item>
+  </ty-form>
 </template>
 
 <script lang="ts" setup>
@@ -59,9 +59,9 @@ const rules = reactive<FormRules<RuleForm>>({
   desc: [{ required: true, message: 'Please input desc', trigger: 'blur' }],
 })
 
-const submitForm = async (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  await formEl.validate((valid, fields) => {
+const submitForm = async (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  await formTy.validate((valid, fields) => {
     if (valid) {
       console.log('submit!')
     } else {
@@ -70,8 +70,8 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   })
 }
 
-const resetForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.resetFields()
+const resetForm = (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  formTy.resetFields()
 }
 </script>

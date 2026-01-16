@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="demo-image__custom-toolbar">
-    <el-image
+    <ty-image
       style="width: 100px; height: 100px"
       :src="url"
       :preview-src-list="srcList"
@@ -10,34 +10,34 @@
       <template
         #toolbar="{ actions, prev, next, reset, activeIndex, setActiveItem }"
       >
-        <el-icon @click="prev"><Back /></el-icon>
-        <el-icon @click="next"><Right /></el-icon>
-        <el-icon @click="setActiveItem(srcList.length - 1)">
+        <ty-icon @click="prev"><Back /></ty-icon>
+        <ty-icon @click="next"><Right /></ty-icon>
+        <ty-icon @click="setActiveItem(srcList.length - 1)">
           <DArrowRight />
-        </el-icon>
-        <el-icon @click="actions('zoomOut')"><ZoomOut /></el-icon>
-        <el-icon
+        </ty-icon>
+        <ty-icon @click="actions('zoomOut')"><ZoomOut /></ty-icon>
+        <ty-icon
           @click="actions('zoomIn', { enableTransition: false, zoomRate: 2 })"
         >
           <ZoomIn />
-        </el-icon>
-        <el-icon
+        </ty-icon>
+        <ty-icon
           @click="
             actions('clockwise', { rotateDeg: 180, enableTransition: false })
           "
         >
           <RefreshRight />
-        </el-icon>
-        <el-icon @click="actions('anticlockwise')"><RefreshLeft /></el-icon>
-        <el-icon @click="reset"><Refresh /></el-icon>
-        <el-icon @click="download(activeIndex)"><Download /></el-icon>
+        </ty-icon>
+        <ty-icon @click="actions('anticlockwise')"><RefreshLeft /></ty-icon>
+        <ty-icon @click="reset"><Refresh /></ty-icon>
+        <ty-icon @click="download(activeIndex)"><Download /></ty-icon>
       </template>
-    </el-image>
+    </ty-image>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ElIcon } from 'element-plus'
+import { TyIcon } from 'element-plus'
 import {
   Back,
   DArrowRight,

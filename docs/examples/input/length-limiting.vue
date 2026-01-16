@@ -1,5 +1,5 @@
-<template>
-  <el-input
+﻿<template>
+  <ty-input
     v-model="text"
     style="width: 240px"
     maxlength="10"
@@ -7,7 +7,7 @@
     show-word-limit
     type="text"
   />
-  <el-input
+  <ty-input
     v-model="text"
     class="ml-4"
     style="width: 240px"
@@ -18,7 +18,7 @@
     type="text"
   />
   <div style="margin: 20px 0" />
-  <el-input
+  <ty-input
     v-model="textarea"
     maxlength="30"
     style="width: 240px"
@@ -26,7 +26,7 @@
     show-word-limit
     type="textarea"
   />
-  <el-input
+  <ty-input
     v-model="textarea"
     class="ml-4"
     maxlength="30"

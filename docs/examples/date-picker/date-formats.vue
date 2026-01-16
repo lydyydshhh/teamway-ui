@@ -1,9 +1,9 @@
-<template>
+﻿<template>
   <div class="demo-date-picker">
     <div class="block">
       <span class="demonstration">Emits Date object</span>
       <div class="demonstration">Value: {{ value1 }}</div>
-      <el-date-picker
+      <ty-date-picker
         v-model="value1"
         type="date"
         placeholder="Pick a Date"
@@ -13,7 +13,7 @@
     <div class="block">
       <span class="demonstration">Use value-format</span>
       <div class="demonstration">Value：{{ value2 }}</div>
-      <el-date-picker
+      <ty-date-picker
         v-model="value2"
         type="date"
         placeholder="Pick a Date"
@@ -24,7 +24,7 @@
     <div class="block">
       <span class="demonstration">Timestamp</span>
       <div class="demonstration">Value：{{ value3 }}</div>
-      <el-date-picker
+      <ty-date-picker
         v-model="value3"
         type="date"
         placeholder="Pick a Date"

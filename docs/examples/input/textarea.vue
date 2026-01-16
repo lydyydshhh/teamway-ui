@@ -1,5 +1,5 @@
-<template>
-  <el-input
+﻿<template>
+  <ty-input
     v-model="textarea"
     style="width: 240px"
     :rows="2"

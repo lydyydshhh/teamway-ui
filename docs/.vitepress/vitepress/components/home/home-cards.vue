@@ -10,15 +10,15 @@ const homeLang = computed(() => homeLocale[lang.value])
 
 <template>
   <div class="cards">
-    <el-card shadow="hover">
+    <ty-card shadow="hover">
       <guide-svg w="40" m="y-12" />
       <h3>{{ homeLang['3'] }}</h3>
       <p>{{ homeLang['4'] }}</p>
       <template #footer>
         <a :href="`/${lang}/guide/design.html`">{{ homeLang['5'] }}</a>
       </template>
-    </el-card>
-    <el-card shadow="hover">
+    </ty-card>
+    <ty-card shadow="hover">
       <component-svg w="40" m="y-12" />
       <h3>{{ homeLang['6'] }}</h3>
       <p>{{ homeLang['7'] }}</p>
@@ -27,15 +27,15 @@ const homeLang = computed(() => homeLocale[lang.value])
           {{ homeLang['5'] }}
         </a>
       </template>
-    </el-card>
-    <el-card shadow="hover">
+    </ty-card>
+    <ty-card shadow="hover">
       <resource-svg w="40" m="y-12" />
       <h3>{{ homeLang['8'] }}</h3>
       <p>{{ homeLang['9'] }}</p>
       <template #footer>
         <a :href="`/${lang}/resource/index.html`"> {{ homeLang['5'] }} </a>
       </template>
-    </el-card>
+    </ty-card>
   </div>
 </template>
 
@@ -49,7 +49,7 @@ const homeLang = computed(() => homeLocale[lang.value])
     max-width: 1200px;
   }
 
-  .el-card {
+  .ty-card {
     height: 430px;
     background: var(--bg-color);
     border: 1px solid var(--border-color);
@@ -60,12 +60,12 @@ const homeLang = computed(() => homeLocale[lang.value])
     transition: all 0.3s;
     bottom: 0;
 
-    .el-card__body {
+    .ty-card__body {
       padding: 0;
       height: 100%;
     }
 
-    .el-card__footer {
+    .ty-card__footer {
       position: sticky;
       bottom: 0;
       padding: 0;
@@ -119,7 +119,7 @@ const homeLang = computed(() => homeLocale[lang.value])
       grid-template-columns: 1fr;
     }
 
-    .el-card {
+    .ty-card {
       height: auto;
     }
   }

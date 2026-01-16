@@ -1,12 +1,12 @@
-<template>
-  <el-tree-select v-model="value" :data="data" style="width: 240px">
+﻿<template>
+  <ty-tree-select v-model="value" :data="data" style="width: 240px">
     <template #default="{ data: { label } }">
       {{ label }}<span style="color: gray">(suffix)</span>
     </template>
-  </el-tree-select>
-  <el-divider />
+  </ty-tree-select>
+  <ty-divider />
   use render content:
-  <el-tree-select
+  <ty-tree-select
     v-model="value"
     :data="data"
     :render-content="renderContent"

@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div style="height: 400px">
-    <el-auto-resizer>
+    <ty-auto-resizer>
       <template #default="{ height, width }">
-        <el-table-v2
+        <ty-table-v2
           :columns="columns"
           :data="data"
           :width="width"
@@ -10,13 +10,13 @@
           fixed
         />
       </template>
-    </el-auto-resizer>
+    </ty-auto-resizer>
   </div>
 </template>
 
 <script lang="tsx" setup>
 import { ref, withKeys } from 'vue'
-import { ElInput } from 'element-plus'
+import { TyInput } from 'element-plus'
 
 import type { FunctionalComponent } from 'vue'
 import type { Column, InputInstance } from 'element-plus'
@@ -38,7 +38,7 @@ const InputCell: FunctionalComponent<SelectionCellProps> = ({
   forwardRef,
 }) => {
   return (
-    <ElInput
+    <TyInput
       ref={forwardRef as any}
       onInput={onChange}
       onBlur={onBlur}

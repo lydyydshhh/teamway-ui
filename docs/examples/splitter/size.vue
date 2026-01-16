@@ -1,22 +1,22 @@
-<template>
+﻿<template>
   <div
     style="height: 250px; box-shadow: var(--ty-border-color-light) 0px 0px 10px"
   >
-    <el-splitter
+    <ty-splitter
       @resize-start="handleResizeStart"
       @resize-end="handleResizeEnd"
       @resize="handleResize"
     >
-      <el-splitter-panel>
+      <ty-splitter-panel>
         <div class="demo-panel">1</div>
-      </el-splitter-panel>
-      <el-splitter-panel v-model:size="size" :max="200" :min="50">
+      </ty-splitter-panel>
+      <ty-splitter-panel v-model:size="size" :max="200" :min="50">
         <div class="demo-panel">{{ size }}px</div>
-      </el-splitter-panel>
-      <el-splitter-panel>
+      </ty-splitter-panel>
+      <ty-splitter-panel>
         <div class="demo-panel">3</div>
-      </el-splitter-panel>
-    </el-splitter>
+      </ty-splitter-panel>
+    </ty-splitter>
   </div>
 </template>
 

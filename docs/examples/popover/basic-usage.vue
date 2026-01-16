@@ -1,5 +1,5 @@
-<template>
-  <el-popover
+﻿<template>
+  <ty-popover
     placement="top-start"
     title="Title"
     :width="200"
@@ -7,11 +7,11 @@
     content="this is content, this is content, this is content"
   >
     <template #reference>
-      <el-button class="m-2">Hover to activate</el-button>
+      <ty-button class="m-2">Hover to activate</ty-button>
     </template>
-  </el-popover>
+  </ty-popover>
 
-  <el-popover
+  <ty-popover
     placement="bottom"
     title="Title"
     :width="200"
@@ -19,11 +19,11 @@
     content="this is content, this is content, this is content"
   >
     <template #reference>
-      <el-button class="m-2">Click to activate</el-button>
+      <ty-button class="m-2">Click to activate</ty-button>
     </template>
-  </el-popover>
+  </ty-popover>
 
-  <el-popover
+  <ty-popover
     ref="popover"
     placement="right"
     title="Title"
@@ -32,11 +32,11 @@
     content="this is content, this is content, this is content"
   >
     <template #reference>
-      <el-button class="m-2">Focus to activate</el-button>
+      <ty-button class="m-2">Focus to activate</ty-button>
     </template>
-  </el-popover>
+  </ty-popover>
 
-  <el-popover
+  <ty-popover
     ref="popover"
     title="Title"
     :width="200"
@@ -44,11 +44,11 @@
     content="this is content, this is content, this is content"
   >
     <template #reference>
-      <el-button class="m-2">contextmenu to activate</el-button>
+      <ty-button class="m-2">contextmenu to activate</ty-button>
     </template>
-  </el-popover>
+  </ty-popover>
 
-  <el-popover
+  <ty-popover
     :visible="visible"
     placement="bottom"
     title="Title"
@@ -56,11 +56,11 @@
     content="this is content, this is content, this is content"
   >
     <template #reference>
-      <el-button class="m-2" @click="visible = !visible">
+      <ty-button class="m-2" @click="visible = !visible">
         Manual to activate
-      </el-button>
+      </ty-button>
     </template>
-  </el-popover>
+  </ty-popover>
 </template>
 
 <script lang="ts" setup>
@@ -70,7 +70,7 @@ const visible = ref(false)
 </script>
 
 <style scoped>
-.el-button + .el-button {
+.ty-button + .ty-button {
   margin-left: 8px;
 }
 </style>

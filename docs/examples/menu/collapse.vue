@@ -1,46 +1,46 @@
-<template>
-  <el-radio-group v-model="isCollapse" style="margin-bottom: 20px">
-    <el-radio-button :value="false">expand</el-radio-button>
-    <el-radio-button :value="true">collapse</el-radio-button>
-  </el-radio-group>
-  <el-menu
+﻿<template>
+  <ty-radio-group v-model="isCollapse" style="margin-bottom: 20px">
+    <ty-radio-button :value="false">expand</ty-radio-button>
+    <ty-radio-button :value="true">collapse</ty-radio-button>
+  </ty-radio-group>
+  <ty-menu
     default-active="2"
-    class="el-menu-vertical-demo"
+    class="ty-menu-vertical-demo"
     :collapse="isCollapse"
     @open="handleOpen"
     @close="handleClose"
   >
-    <el-sub-menu index="1">
+    <ty-sub-menu index="1">
       <template #title>
-        <el-icon><location /></el-icon>
+        <ty-icon><location /></ty-icon>
         <span>Navigator One</span>
       </template>
-      <el-menu-item-group>
+      <ty-menu-item-group>
         <template #title><span>Group One</span></template>
-        <el-menu-item index="1-1">item one</el-menu-item>
-        <el-menu-item index="1-2">item two</el-menu-item>
-      </el-menu-item-group>
-      <el-menu-item-group title="Group Two">
-        <el-menu-item index="1-3">item three</el-menu-item>
-      </el-menu-item-group>
-      <el-sub-menu index="1-4">
+        <ty-menu-item index="1-1">item one</ty-menu-item>
+        <ty-menu-item index="1-2">item two</ty-menu-item>
+      </ty-menu-item-group>
+      <ty-menu-item-group title="Group Two">
+        <ty-menu-item index="1-3">item three</ty-menu-item>
+      </ty-menu-item-group>
+      <ty-sub-menu index="1-4">
         <template #title><span>item four</span></template>
-        <el-menu-item index="1-4-1">item one</el-menu-item>
-      </el-sub-menu>
-    </el-sub-menu>
-    <el-menu-item index="2">
-      <el-icon><icon-menu /></el-icon>
+        <ty-menu-item index="1-4-1">item one</ty-menu-item>
+      </ty-sub-menu>
+    </ty-sub-menu>
+    <ty-menu-item index="2">
+      <ty-icon><icon-menu /></ty-icon>
       <template #title>Navigator Two</template>
-    </el-menu-item>
-    <el-menu-item index="3" disabled>
-      <el-icon><document /></el-icon>
+    </ty-menu-item>
+    <ty-menu-item index="3" disabled>
+      <ty-icon><document /></ty-icon>
       <template #title>Navigator Three</template>
-    </el-menu-item>
-    <el-menu-item index="4">
-      <el-icon><setting /></el-icon>
+    </ty-menu-item>
+    <ty-menu-item index="4">
+      <ty-icon><setting /></ty-icon>
       <template #title>Navigator Four</template>
-    </el-menu-item>
-  </el-menu>
+    </ty-menu-item>
+  </ty-menu>
 </template>
 
 <script lang="ts" setup>
@@ -62,7 +62,7 @@ const handleClose = (key: string, keyPath: string[]) => {
 </script>
 
 <style>
-.el-menu-vertical-demo:not(.el-menu--collapse) {
+.ty-menu-vertical-demo:not(.ty-menu--collapse) {
   width: 200px;
   min-height: 400px;
 }

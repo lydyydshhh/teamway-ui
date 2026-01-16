@@ -1,24 +1,24 @@
-<template>
-  <el-button text @click="table = true">
+﻿<template>
+  <ty-button text @click="table = true">
     Open Drawer with nested table
-  </el-button>
-  <el-button text @click="dialog = true">
+  </ty-button>
+  <ty-button text @click="dialog = true">
     Open Drawer with nested form
-  </el-button>
-  <el-drawer
+  </ty-button>
+  <ty-drawer
     v-model="table"
     title="I have a nested table inside!"
     direction="rtl"
     size="50%"
   >
-    <el-table :data="gridData">
-      <el-table-column property="date" label="Date" width="150" />
-      <el-table-column property="name" label="Name" width="200" />
-      <el-table-column property="address" label="Address" />
-    </el-table>
-  </el-drawer>
+    <ty-table :data="gridData">
+      <ty-table-column property="date" label="Date" width="150" />
+      <ty-table-column property="name" label="Name" width="200" />
+      <ty-table-column property="address" label="Address" />
+    </ty-table>
+  </ty-drawer>
 
-  <el-drawer
+  <ty-drawer
     v-model="dialog"
     title="I have a nested form inside!"
     :before-close="handleClose"
@@ -26,33 +26,33 @@
     class="demo-drawer"
   >
     <div class="demo-drawer__content">
-      <el-form :model="form">
-        <el-form-item label="Name" :label-width="formLabelWidth">
-          <el-input v-model="form.name" autocomplete="off" />
-        </el-form-item>
-        <el-form-item label="Area" :label-width="formLabelWidth">
-          <el-select
+      <ty-form :model="form">
+        <ty-form-item label="Name" :label-width="formLabelWidth">
+          <ty-input v-model="form.name" autocomplete="off" />
+        </ty-form-item>
+        <ty-form-item label="Area" :label-width="formLabelWidth">
+          <ty-select
             v-model="form.region"
             placeholder="Please select activity area"
           >
-            <el-option label="Area1" value="shanghai" />
-            <el-option label="Area2" value="beijing" />
-          </el-select>
-        </el-form-item>
-      </el-form>
+            <ty-option label="Area1" value="shanghai" />
+            <ty-option label="Area2" value="beijing" />
+          </ty-select>
+        </ty-form-item>
+      </ty-form>
       <div class="demo-drawer__footer">
-        <el-button @click="cancelForm">Cancel</el-button>
-        <el-button type="primary" :loading="loading" @click="onClick">
+        <ty-button @click="cancelForm">Cancel</ty-button>
+        <ty-button type="primary" :loading="loading" @click="onClick">
           {{ loading ? 'Submitting ...' : 'Submit' }}
-        </el-button>
+        </ty-button>
       </div>
     </div>
-  </el-drawer>
+  </ty-drawer>
 </template>
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { TyMessageBox } from 'element-plus'
 
 const formLabelWidth = '80px'
 let timer
@@ -107,7 +107,7 @@ const handleClose = (done) => {
   if (loading.value) {
     return
   }
-  ElMessageBox.confirm('Do you want to submit?')
+  TyMessageBox.confirm('Do you want to submit?')
     .then(() => {
       loading.value = true
       timer = setTimeout(() => {

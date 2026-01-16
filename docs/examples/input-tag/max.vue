@@ -1,5 +1,5 @@
-<template>
-  <el-input-tag v-model="input" :max="3" placeholder="enter up to 3 tags" />
+﻿<template>
+  <ty-input-tag v-model="input" :max="3" placeholder="enter up to 3 tags" />
 </template>
 
 <script lang="ts" setup>

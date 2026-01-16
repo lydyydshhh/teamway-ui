@@ -3,8 +3,8 @@ import TimeSelect from './src/time-select.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElTimeSelect: SFCWithInstall<typeof TimeSelect> =
+export const TyTimeSelect: SFCWithInstall<typeof TimeSelect> =
   withInstall(TimeSelect)
-export default ElTimeSelect
+export default TyTimeSelect
 
 export * from './src/time-select'

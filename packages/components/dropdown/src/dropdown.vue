@@ -1,6 +1,6 @@
 <template>
   <div :class="[ns.b(), ns.is('disabled', disabled)]">
-    <el-tooltip
+    <ty-tooltip
       ref="popperRef"
       :role="role"
       :effect="effect"
@@ -30,36 +30,36 @@
       @before-hide="handleBeforeHideTooltip"
     >
       <template #content>
-        <el-scrollbar
+        <ty-scrollbar
           ref="scrollbar"
           :wrap-style="wrapStyle"
           tag="div"
           :view-class="ns.e('list')"
         >
-          <el-roving-focus-group
+          <ty-roving-focus-group
             :loop="loop"
             :current-tab-id="currentTabId"
             orientation="horizontal"
             @current-tab-id-change="handleCurrentTabIdChange"
           >
             <slot name="dropdown" />
-          </el-roving-focus-group>
-        </el-scrollbar>
+          </ty-roving-focus-group>
+        </ty-scrollbar>
       </template>
       <template v-if="!splitButton" #default>
-        <el-only-child
+        <ty-only-child
           :id="triggerId"
           ref="triggeringElementRef"
           role="button"
           :tabindex="tabindex"
         >
           <slot name="default" />
-        </el-only-child>
+        </ty-only-child>
       </template>
-    </el-tooltip>
+    </ty-tooltip>
     <template v-if="splitButton">
-      <el-button-group>
-        <el-button
+      <ty-button-group>
+        <ty-button
           ref="referenceElementRef"
           v-bind="buttonProps"
           :size="dropdownSize"
@@ -69,8 +69,8 @@
           @click="handlerMainButtonClick"
         >
           <slot name="default" />
-        </el-button>
-        <el-button
+        </ty-button>
+        <ty-button
           :id="triggerId"
           ref="triggeringElementRef"
           v-bind="buttonProps"
@@ -82,9 +82,9 @@
           :tabindex="tabindex"
           :aria-label="t('el.dropdown.toggleDropdown')"
         >
-          <el-icon :class="ns.e('icon')"><arrow-down /></el-icon>
-        </el-button>
-      </el-button-group>
+          <ty-icon :class="ns.e('icon')"><arrow-down /></ty-icon>
+        </ty-button>
+      </ty-button-group>
     </template>
   </div>
 </template>
@@ -99,12 +99,12 @@ import {
   toRef,
   unref,
 } from 'vue'
-import ElButton from '@element-plus/components/button'
-import ElTooltip from '@element-plus/components/tooltip'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import ElIcon from '@element-plus/components/icon'
-import ElRovingFocusGroup from '@element-plus/components/roving-focus-group'
-import { ElOnlyChild } from '@element-plus/components/slot'
+import TyButton from '@element-plus/components/button'
+import TyTooltip from '@element-plus/components/tooltip'
+import TyScrollbar from '@element-plus/components/scrollbar'
+import TyIcon from '@element-plus/components/icon'
+import TyRovingFocusGroup from '@element-plus/components/roving-focus-group'
+import { TyOnlyChild } from '@element-plus/components/slot'
 import { useFormSize } from '@element-plus/components/form'
 import { addUnit, ensureArray } from '@element-plus/utils'
 import { ArrowDown } from '@element-plus/icons-vue'
@@ -118,18 +118,18 @@ import {
 import type { TooltipInstance } from '@element-plus/components/tooltip'
 import type { CSSProperties } from 'vue'
 
-const { ButtonGroup: ElButtonGroup } = ElButton
+const { ButtonGroup: TyButtonGroup } = TyButton
 
 export default defineComponent({
-  name: 'ElDropdown',
+  name: 'TyDropdown',
   components: {
-    ElButton,
-    ElButtonGroup,
-    ElScrollbar,
-    ElTooltip,
-    ElRovingFocusGroup,
-    ElOnlyChild,
-    ElIcon,
+    TyButton,
+    TyButtonGroup,
+    TyScrollbar,
+    TyTooltip,
+    TyRovingFocusGroup,
+    TyOnlyChild,
+    TyIcon,
     ArrowDown,
   },
   props: dropdownProps,

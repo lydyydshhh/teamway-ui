@@ -1,5 +1,5 @@
 <template>
-  <el-statistic
+  <ty-statistic
     :value="rawValue"
     :title="title"
     :prefix="prefix"
@@ -10,19 +10,19 @@
     <template v-for="(_, name) in $slots" #[name]>
       <slot :name="name" />
     </template>
-  </el-statistic>
+  </ty-statistic>
 </template>
 
 <script lang="ts" setup>
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { ElStatistic } from '@element-plus/components/statistic'
+import { TyStatistic } from '@element-plus/components/statistic'
 import { cAF, rAF } from '@element-plus/utils'
 import { CHANGE_EVENT } from '@element-plus/constants'
 import { countdownEmits, countdownProps } from './countdown'
 import { formatTime, getTime } from './utils'
 
 defineOptions({
-  name: 'ElCountdown',
+  name: 'TyCountdown',
 })
 
 const props = defineProps(countdownProps)

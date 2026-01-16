@@ -1,19 +1,19 @@
-<template>
+﻿<template>
   <div class="autocomplete-custom-header-footer">
     <div>
       <p>Custom header content</p>
-      <el-autocomplete
+      <ty-autocomplete
         v-model="headerSlotState"
         :fetch-suggestions="querySearchAsync"
         placeholder="Please input"
         @select="handleSelect"
       >
         <template #header>header content</template>
-      </el-autocomplete>
+      </ty-autocomplete>
     </div>
     <div>
       <p>Custom footer content</p>
-      <el-autocomplete
+      <ty-autocomplete
         ref="footerAutocompleteRef"
         v-model="footerSlotstate"
         :fetch-suggestions="querySearchAsync"
@@ -21,9 +21,9 @@
         @select="handleSelect"
       >
         <template #footer>
-          <el-button link size="small" @click="handleClear"> Clear </el-button>
+          <ty-button link size="small" @click="handleClear"> Clear </ty-button>
         </template>
-      </el-autocomplete>
+      </ty-autocomplete>
     </div>
   </div>
 </template>
@@ -96,7 +96,7 @@ const handleClear = () => {
   flex: 1;
   text-align: center;
 }
-.autocomplete-custom-header-footer > div > :deep(.el-autocomplete) {
+.autocomplete-custom-header-footer > div > :deep(.ty-autocomplete) {
   width: 50%;
 }
 

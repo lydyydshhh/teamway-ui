@@ -1,27 +1,27 @@
 .common-layout {
-  .el-header,
-  .el-footer,
-  .el-main,
-  .el-aside {
+  .ty-header,
+  .ty-footer,
+  .ty-main,
+  .ty-aside {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .el-header,
-  .el-footer {
+  .ty-header,
+  .ty-footer {
     background-color: var(--ty-color-primary-light-7);
     color: var(--ty-text-color-primary);
     text-align: center;
   }
 
-  .el-aside {
+  .ty-aside {
     background-color: var(--ty-color-primary-light-8);
     color: var(--ty-text-color-primary);
     text-align: center;
   }
 
-  .el-main {
+  .ty-main {
     background-color: var(--ty-color-primary-light-9);
     color: var(--ty-text-color-primary);
     text-align: center;

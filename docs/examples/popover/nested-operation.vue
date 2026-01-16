@@ -1,16 +1,16 @@
-<template>
-  <el-popover :visible="visible" placement="top" :width="180">
+﻿<template>
+  <ty-popover :visible="visible" placement="top" :width="180">
     <p>Are you sure to delete this?</p>
     <div style="text-align: right; margin: 0">
-      <el-button size="small" text @click="visible = false">cancel</el-button>
-      <el-button size="small" type="primary" @click="visible = false">
+      <ty-button size="small" text @click="visible = false">cancel</ty-button>
+      <ty-button size="small" type="primary" @click="visible = false">
         confirm
-      </el-button>
+      </ty-button>
     </div>
     <template #reference>
-      <el-button @click="visible = true">Delete</el-button>
+      <ty-button @click="visible = true">Delete</ty-button>
     </template>
-  </el-popover>
+  </ty-popover>
 </template>
 
 <script lang="ts" setup>

@@ -1,6 +1,6 @@
 <template>
-  <el-switch v-model="value1" />
-  <el-switch
+  <ty-switch v-model="value1" />
+  <ty-switch
     v-model="value2"
     class="ml-2"
     active-color="#13ce66"

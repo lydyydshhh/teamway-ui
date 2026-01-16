@@ -1,13 +1,13 @@
-<template>
+﻿<template>
   <div>
-    <el-button @click="show = !show">Click Me</el-button>
+    <ty-button @click="show = !show">Click Me</ty-button>
 
     <div class="fade-container">
-      <transition name="el-fade-in-linear">
-        <div v-show="show" class="transition-box">.el-fade-in-linear</div>
+      <transition name="ty-fade-in-linear">
+        <div v-show="show" class="transition-box">.ty-fade-in-linear</div>
       </transition>
-      <transition name="el-fade-in">
-        <div v-show="show" class="transition-box">.el-fade-in</div>
+      <transition name="ty-fade-in">
+        <div v-show="show" class="transition-box">.ty-fade-in</div>
       </transition>
     </div>
   </div>

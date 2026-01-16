@@ -121,7 +121,7 @@ export default {
       prevPages: 'Kurasa za {pager} zilizopita',
       nextPages: 'Kurasa {pager} zinazofuata',
       deprecationWarning:
-        'Matumizi yaliyoacha kutumika yamegunduliwa, tafadhali rejelea hati za el-pagination kwa maelezo zaidi',
+        'Matumizi yaliyoacha kutumika yamegunduliwa, tafadhali rejelea hati za ty-pagination kwa maelezo zaidi',
     },
     dialog: {
       close: 'funga kidirisha hiki',

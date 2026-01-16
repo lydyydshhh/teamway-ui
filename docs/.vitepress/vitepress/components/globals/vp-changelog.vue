@@ -48,25 +48,25 @@ onMounted(async () => {
 <template>
   <div class="changelogs">
     <ClientOnly>
-      <ElSkeleton :loading="loading">
+      <TySkeleton :loading="loading">
         <div class="changelog-versions">
           <p>{{ changelog['select-version'] }}:</p>
-          <ElSelect
+          <TySelect
             :model-value="currentRelease.name"
             :placeholder="changelog['select-version']"
             style="width: 200px"
             @change="onVersionChange"
           >
-            <ElOption
+            <TyOption
               v-for="release in releases"
               :key="release.id"
               :value="release.name"
             >
               {{ release.name }}
-            </ElOption>
-          </ElSelect>
+            </TyOption>
+          </TySelect>
         </div>
-        <ElCard v-if="currentRelease">
+        <TyCard v-if="currentRelease">
           <template #header>
             <div class="changelog-header">
               <div class="changelog-meta">
@@ -90,8 +90,8 @@ onMounted(async () => {
           <div>
             <VPMarkdown :content="currentRelease.body" />
           </div>
-        </ElCard>
-      </ElSkeleton>
+        </TyCard>
+      </TySkeleton>
     </ClientOnly>
   </div>
 </template>

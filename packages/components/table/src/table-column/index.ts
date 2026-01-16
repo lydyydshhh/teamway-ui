@@ -25,7 +25,7 @@ let columnIdSeed = 1
 
 //TODO: when vue 3.3 we can set this component a generic: https://github.com/vuejs/core/pull/7963
 export default defineComponent({
-  name: 'ElTableColumn',
+  name: 'TyTableColumn',
   components: {
     ElCheckbox,
   },
@@ -100,7 +100,7 @@ export default defineComponent({
         sortable,
         // index 列
         index: props.index,
-        // <el-table-column key="xxx" />
+        // <ty-table-column key="xxx" />
         rawColumnKey: instance.vnode.key,
       }
 

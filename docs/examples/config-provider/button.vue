@@ -1,24 +1,24 @@
-<template>
+﻿<template>
   <div>
     <div>
-      <el-checkbox v-model="config.autoInsertSpace">
+      <ty-checkbox v-model="config.autoInsertSpace">
         autoInsertSpace
-      </el-checkbox>
-      <el-checkbox v-model="config.plain"> plain </el-checkbox>
-      <el-checkbox v-model="config.round"> round </el-checkbox>
-      <el-checkbox v-model="config.text"> text </el-checkbox>
-      <el-select v-model="config.type" class="ml-5" style="max-width: 150px">
-        <el-option
+      </ty-checkbox>
+      <ty-checkbox v-model="config.plain"> plain </ty-checkbox>
+      <ty-checkbox v-model="config.round"> round </ty-checkbox>
+      <ty-checkbox v-model="config.text"> text </ty-checkbox>
+      <ty-select v-model="config.type" class="ml-5" style="max-width: 150px">
+        <ty-option
           v-for="type in buttonTypes.filter(Boolean)"
           :key="type"
           :value="type"
         />
-      </el-select>
+      </ty-select>
     </div>
-    <el-divider />
-    <el-config-provider :button="config">
-      <el-button>中文</el-button>
-    </el-config-provider>
+    <ty-divider />
+    <ty-config-provider :button="config">
+      <ty-button>中文</ty-button>
+    </ty-config-provider>
   </div>
 </template>
 

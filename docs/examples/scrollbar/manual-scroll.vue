@@ -1,13 +1,13 @@
-<template>
-  <el-scrollbar ref="scrollbarRef" height="400px" always @scroll="scroll">
+﻿<template>
+  <ty-scrollbar ref="scrollbarRef" height="400px" always @scroll="scroll">
     <div ref="innerRef">
       <p v-for="item in 20" :key="item" class="scrollbar-demo-item">
         {{ item }}
       </p>
     </div>
-  </el-scrollbar>
+  </ty-scrollbar>
 
-  <el-slider
+  <ty-slider
     v-model="value"
     :max="max"
     :format-tooltip="formatTooltip"
@@ -24,7 +24,7 @@ type Arrayable<T> = T | T[]
 
 const max = ref(0)
 const value = ref(0)
-const innerRef = ref<HTMLDivElement>()
+const innerRef = ref<HTMLDivTyement>()
 const scrollbarRef = ref<ScrollbarInstance>()
 
 onMounted(() => {
@@ -52,7 +52,7 @@ const formatTooltip = (value: number) => `${value} px`
   background: var(--ty-color-primary-light-9);
   color: var(--ty-color-primary);
 }
-.el-slider {
+.ty-slider {
   margin-top: 20px;
 }
 </style>

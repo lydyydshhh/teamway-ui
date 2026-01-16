@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="demo-datetime-picker">
     <div class="block">
       <span class="demonstration">Default</span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value1"
         type="datetimerange"
         range-separator="To"
@@ -12,7 +12,7 @@
     </div>
     <div class="block">
       <span class="demonstration">With shortcuts</span>
-      <el-date-picker
+      <ty-date-picker
         v-model="value2"
         type="datetimerange"
         :shortcuts="shortcuts"
@@ -102,11 +102,11 @@ const shortcuts = [
     border-bottom: none;
   }
 
-  :deep(.el-date-editor.el-input) {
+  :deep(.ty-date-editor.ty-input) {
     width: 100%;
   }
 
-  :deep(.el-date-editor.el-input__wrapper) {
+  :deep(.ty-date-editor.ty-input__wrapper) {
     width: 100%;
     max-width: 300px;
   }

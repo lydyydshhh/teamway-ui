@@ -1,5 +1,5 @@
-<template>
-  <el-table-v2
+﻿<template>
+  <ty-table-v2
     :columns="columns"
     :data="data"
     :row-height="40"
@@ -8,15 +8,15 @@
   >
     <template #overlay>
       <div
-        class="el-loading-mask"
+        class="ty-loading-mask"
         style="display: flex; align-items: center; justify-content: center"
       >
-        <el-icon class="is-loading" color="var(--ty-color-primary)" :size="26">
+        <ty-icon class="is-loading" color="var(--ty-color-primary)" :size="26">
           <loading-icon />
-        </el-icon>
+        </ty-icon>
       </div>
     </template>
-  </el-table-v2>
+  </ty-table-v2>
 </template>
 
 <script lang="ts" setup>
@@ -54,7 +54,7 @@ const data = generateData(columns, 200)
 </script>
 
 <style>
-.example-showcase .el-table-v2__overlay {
+.example-showcase .ty-table-v2__overlay {
   z-index: 9;
 }
 </style>

@@ -10,7 +10,7 @@
       <slot name="prefix" />
     </div>
     <div ref="innerRef" :class="innerKls">
-      <el-tag
+      <ty-tag
         v-for="(item, index) in showTagList"
         :key="index"
         :size="tagSize"
@@ -29,8 +29,8 @@
         <slot name="tag" :value="item" :index="index">
           {{ item }}
         </slot>
-      </el-tag>
-      <el-tooltip
+      </ty-tag>
+      <ty-tooltip
         v-if="collapseTags && modelValue && modelValue.length > maxCollapseTags"
         ref="tagTooltipRef"
         :disabled="!collapseTagsTooltip"
@@ -40,7 +40,7 @@
       >
         <template #default>
           <div ref="collapseItemRef" :class="ns.e('collapse-tag')">
-            <el-tag
+            <ty-tag
               :closable="false"
               :size="tagSize"
               :type="tagType"
@@ -48,12 +48,12 @@
               disable-transitions
             >
               + {{ modelValue.length - maxCollapseTags }}
-            </el-tag>
+            </ty-tag>
           </div>
         </template>
         <template #content>
           <div :class="ns.e('input-tag-list')">
-            <el-tag
+            <ty-tag
               v-for="(item, index) in collapseTagList"
               :key="index"
               :size="tagSize"
@@ -66,10 +66,10 @@
               <slot name="tag" :value="item" :index="index + maxCollapseTags">
                 {{ item }}
               </slot>
-            </el-tag>
+            </ty-tag>
           </div>
         </template>
-      </el-tooltip>
+      </ty-tooltip>
       <div :class="ns.e('input-wrapper')">
         <input
           :id="inputId"
@@ -110,15 +110,15 @@
     </div>
     <div v-if="showSuffix" :class="ns.e('suffix')">
       <slot name="suffix" />
-      <el-icon
+      <ty-icon
         v-if="showClear"
         :class="[ns.e('icon'), ns.e('clear')]"
         @mousedown.prevent="NOOP"
         @click="handleClear"
       >
         <component :is="clearIcon" />
-      </el-icon>
-      <el-icon
+      </ty-icon>
+      <ty-icon
         v-if="validateState && validateIcon && needStatusIcon"
         :class="[
           nsInput.e('icon'),
@@ -127,7 +127,7 @@
         ]"
       >
         <component :is="validateIcon" />
-      </el-icon>
+      </ty-icon>
     </div>
   </div>
 </template>
@@ -136,9 +136,9 @@
 import { computed, useSlots } from 'vue'
 import { useAttrs, useCalcInputWidth } from '@element-plus/hooks'
 import { NOOP, ValidateComponentsMap } from '@element-plus/utils'
-import ElTooltip from '@element-plus/components/tooltip'
-import ElIcon from '@element-plus/components/icon'
-import ElTag from '@element-plus/components/tag'
+import TyTooltip from '@element-plus/components/tooltip'
+import TyIcon from '@element-plus/components/icon'
+import TyTag from '@element-plus/components/tag'
 import { useFormItem, useFormItemInputId } from '@element-plus/components/form'
 import { inputTagEmits, inputTagProps } from './input-tag'
 import {
@@ -149,7 +149,7 @@ import {
 } from './composables'
 
 defineOptions({
-  name: 'ElInputTag',
+  name: 'TyInputTag',
   inheritAttrs: false,
 })
 

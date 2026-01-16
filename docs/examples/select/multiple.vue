@@ -1,40 +1,40 @@
-<template>
+﻿<template>
   <div class="m-4">
     <p>default</p>
-    <el-select
+    <ty-select
       v-model="value1"
       multiple
       placeholder="Select"
       style="width: 240px"
     >
-      <el-option
+      <ty-option
         v-for="item in options"
         :key="item.value"
         :label="item.label"
         :value="item.value"
       />
-    </el-select>
+    </ty-select>
   </div>
   <div class="m-4">
     <p>use collapse-tags</p>
-    <el-select
+    <ty-select
       v-model="value2"
       multiple
       collapse-tags
       placeholder="Select"
       style="width: 240px"
     >
-      <el-option
+      <ty-option
         v-for="item in options"
         :key="item.value"
         :label="item.label"
         :value="item.value"
       />
-    </el-select>
+    </ty-select>
   </div>
   <div class="m-4">
     <p>use collapse-tags-tooltip</p>
-    <el-select
+    <ty-select
       v-model="value3"
       multiple
       collapse-tags
@@ -42,17 +42,17 @@
       placeholder="Select"
       style="width: 240px"
     >
-      <el-option
+      <ty-option
         v-for="item in options"
         :key="item.value"
         :label="item.label"
         :value="item.value"
       />
-    </el-select>
+    </ty-select>
   </div>
   <div class="m-4">
     <p>use max-collapse-tags</p>
-    <el-select
+    <ty-select
       v-model="value4"
       multiple
       collapse-tags
@@ -61,13 +61,13 @@
       placeholder="Select"
       style="width: 240px"
     >
-      <el-option
+      <ty-option
         v-for="item in options"
         :key="item.value"
         :label="item.label"
         :value="item.value"
       />
-    </el-select>
+    </ty-select>
   </div>
 </template>
 

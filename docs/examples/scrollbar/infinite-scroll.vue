@@ -1,9 +1,9 @@
-<template>
-  <el-scrollbar height="400px" @end-reached="loadMore">
+﻿<template>
+  <ty-scrollbar height="400px" @end-reached="loadMore">
     <p v-for="item in num" :key="item" class="scrollbar-demo-item">
       {{ item }}
     </p>
-  </el-scrollbar>
+  </ty-scrollbar>
 </template>
 
 <script lang="ts" setup>
@@ -32,7 +32,7 @@ const loadMore = (direction: ScrollbarDirection) => {
   background: var(--ty-color-primary-light-9);
   color: var(--ty-color-primary);
 }
-.el-slider {
+.ty-slider {
   margin-top: 20px;
 }
 </style>

@@ -5,8 +5,8 @@ import { version as epVersion } from 'element-plus'
 import VPNavbarSearch from './navbar/vp-search.vue'
 import VPNavbarMenu from './navbar/vp-menu.vue'
 import VPNavbarThemeToggler from './navbar/vp-theme-toggler.vue'
-import VPNavbarTranslation from './navbar/vp-translation.vue'
-import VPNavbarSocialLinks from './navbar/vp-social-links.vue'
+// import VPNavbarTranslation from './navbar/vp-translation.vue'
+// import VPNavbarSocialLinks from './navbar/vp-social-links.vue'
 import VPNavbarHamburger from './navbar/vp-hamburger.vue'
 
 defineProps<{
@@ -36,20 +36,21 @@ const currentLink = computed(() => {
         <a :href="withBase(currentLink)">
           <img
             class="logo"
-            src="/images/element-plus-logo.svg"
-            alt="Element Plus Logo"
+            src="/images/teamway-ui-logo.svg"
+            alt="TeamwayUI Logo"
           />
+          <span>TeamwayUI</span>
         </a>
-        <el-tag round size="small" title="latest version">{{
+        <ty-tag round size="small" title="latest version">{{
           epVersion.replace('0.0.0-staging.', '')
-        }}</el-tag>
+        }}</ty-tag>
       </div>
       <div class="content">
         <VPNavbarSearch class="search" :options="theme.agolia" multilang />
         <VPNavbarMenu class="menu" />
         <VPNavbarThemeToggler class="theme-toggler" />
-        <VPNavbarTranslation class="translation" />
-        <VPNavbarSocialLinks class="social-links" />
+        <!-- <VPNavbarTranslation class="translation" /> -->
+        <!-- <VPNavbarSocialLinks class="social-links" /> -->
         <VPNavbarHamburger
           :active="fullScreen"
           class="hamburger"
@@ -68,6 +69,10 @@ const currentLink = computed(() => {
   > a {
     height: 28px;
     width: 128px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--vp-c-text-1);
   }
   .logo {
     position: relative;

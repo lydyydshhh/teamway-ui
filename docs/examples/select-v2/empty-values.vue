@@ -1,5 +1,5 @@
-<template>
-  <el-select-v2
+﻿<template>
+  <ty-select-v2
     v-model="value"
     :options="options"
     :empty-values="[null, undefined]"
@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 const value = ref('')
 
@@ -30,6 +30,6 @@ options.unshift({
 })
 
 const handleClear = () => {
-  ElMessage.info(`The clear value is: ${value.value}`)
+  TyMessage.info(`The clear value is: ${value.value}`)
 }
 </script>

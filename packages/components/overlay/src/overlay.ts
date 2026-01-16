@@ -36,7 +36,7 @@ export type OverlayEmits = typeof overlayEmits
 const BLOCK = 'overlay'
 
 export default defineComponent({
-  name: 'ElOverlay',
+  name: 'TyOverlay',
 
   props: overlayProps,
   emits: overlayEmits,

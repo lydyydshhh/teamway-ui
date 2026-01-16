@@ -57,13 +57,13 @@ describe('use-namespace', () => {
   it('should provide bem correctly', async () => {
     await nextTick()
     expect(wrapper.find('#testId').classes()).toEqual([
-      'el-table', // b()
-      'el-table-body', // b('body')
-      'el-table__content', // e('content')
-      'el-table--active', // m('active')
-      'el-table-content__active', // be('content', 'active')
-      'el-table__content--active', // em('content', 'active')
-      'el-table-body__content--active', // bem('body', 'content', 'active')
+      'ty-table', // b()
+      'ty-table-body', // b('body')
+      'ty-table__content', // e('content')
+      'ty-table--active', // m('active')
+      'ty-table-content__active', // be('content', 'active')
+      'ty-table__content--active', // em('content', 'active')
+      'ty-table-body__content--active', // bem('body', 'content', 'active')
       'is-focus', // is('focus')
     ])
 

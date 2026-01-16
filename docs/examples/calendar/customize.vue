@@ -1,12 +1,12 @@
-<template>
-  <el-calendar>
+﻿<template>
+  <ty-calendar>
     <template #date-cell="{ data }">
       <p :class="data.isSelected ? 'is-selected' : ''">
         {{ data.day.split('-').slice(1).join('-') }}
         {{ data.isSelected ? '✔️' : '' }}
       </p>
     </template>
-  </el-calendar>
+  </ty-calendar>
 </template>
 
 <style>

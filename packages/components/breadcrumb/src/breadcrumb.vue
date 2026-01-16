@@ -16,14 +16,14 @@ import { breadcrumbKey } from './constants'
 import { breadcrumbProps } from './breadcrumb'
 
 defineOptions({
-  name: 'ElBreadcrumb',
+  name: 'TyBreadcrumb',
 })
 
 const { t } = useLocale()
 const props = defineProps(breadcrumbProps)
 
 const ns = useNamespace('breadcrumb')
-const breadcrumb = ref<HTMLDivElement>()
+const breadcrumb = ref<HTMLDivTyement>()
 
 provide(breadcrumbKey, props)
 

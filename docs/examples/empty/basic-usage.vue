@@ -1,3 +1,3 @@
-<template>
-  <el-empty description="description" />
+﻿<template>
+  <ty-empty description="description" />
 </template>

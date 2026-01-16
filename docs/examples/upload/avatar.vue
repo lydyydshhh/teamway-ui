@@ -1,5 +1,5 @@
-<template>
-  <el-upload
+﻿<template>
+  <ty-upload
     class="avatar-uploader"
     action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
     :show-file-list="false"
@@ -7,13 +7,13 @@
     :before-upload="beforeAvatarUpload"
   >
     <img v-if="imageUrl" :src="imageUrl" class="avatar" />
-    <el-icon v-else class="avatar-uploader-icon"><Plus /></el-icon>
-  </el-upload>
+    <ty-icon v-else class="avatar-uploader-icon"><Plus /></ty-icon>
+  </ty-upload>
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 import { Plus } from '@element-plus/icons-vue'
 
 import type { UploadProps } from 'element-plus'
@@ -29,10 +29,10 @@ const handleAvatarSuccess: UploadProps['onSuccess'] = (
 
 const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
   if (rawFile.type !== 'image/jpeg') {
-    ElMessage.error('Avatar picture must be JPG format!')
+    TyMessage.error('Avatar picture must be JPG format!')
     return false
   } else if (rawFile.size / 1024 / 1024 > 2) {
-    ElMessage.error('Avatar picture size can not exceed 2MB!')
+    TyMessage.error('Avatar picture size can not exceed 2MB!')
     return false
   }
   return true
@@ -48,7 +48,7 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
 </style>
 
 <style>
-.avatar-uploader .el-upload {
+.avatar-uploader .ty-upload {
   border: 1px dashed var(--ty-border-color);
   border-radius: 6px;
   cursor: pointer;
@@ -57,11 +57,11 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
   transition: var(--ty-transition-duration-fast);
 }
 
-.avatar-uploader .el-upload:hover {
+.avatar-uploader .ty-upload:hover {
   border-color: var(--ty-color-primary);
 }
 
-.el-icon.avatar-uploader-icon {
+.ty-icon.avatar-uploader-icon {
   font-size: 28px;
   color: #8c939d;
   width: 178px;

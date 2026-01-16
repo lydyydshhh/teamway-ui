@@ -15,7 +15,7 @@ export function useOption(props: OptionProps, states: OptionStates) {
   // inject
   const select = inject(selectKey)
   if (!select) {
-    throwError(COMPONENT_NAME, 'usage: <el-select><el-option /></el-select/>')
+    throwError(COMPONENT_NAME, 'usage: <ty-select><ty-option /></ty-select/>')
   }
   const selectGroup = inject(selectGroupKey, { disabled: false })
 

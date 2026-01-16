@@ -183,7 +183,7 @@ select-v2/props
 
 You can customize tags.
 
-:::demo Insert customized tags into the slot of `el-select`. `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` will not work.
+:::demo Insert customized tags into the slot of `ty-select`. `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` will not work.
 
 select-v2/custom-tag
 

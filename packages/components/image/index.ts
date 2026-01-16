@@ -3,7 +3,7 @@ import Image from './src/image.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElImage: SFCWithInstall<typeof Image> = withInstall(Image)
-export default ElImage
+export const TyImage: SFCWithInstall<typeof Image> = withInstall(Image)
+export default TyImage
 
 export * from './src/image'

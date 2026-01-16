@@ -9,10 +9,10 @@ Menu that provides navigation for your website.
 
 ::: tip
 
-If you want to override the default height of el-menu, you can use the following CSS:
+If you want to override the default height of ty-menu, you can use the following CSS:
 
 ```css
-.el-menu--horizontal {
+.ty-menu--horizontal {
   --ty-menu-horizontal-height: 100px;
 }
 ```
@@ -41,7 +41,7 @@ menu/left-and-right
 
 Vertical Menu with sub-menus.
 
-:::demo You can use the el-menu-item-group component to create a menu group, and the name of the group is determined by the title prop or a named slot.
+:::demo You can use the ty-menu-item-group component to create a menu group, and the name of the group is determined by the title prop or a named slot.
 
 menu/vertical
 

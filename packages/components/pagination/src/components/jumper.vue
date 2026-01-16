@@ -1,7 +1,7 @@
 <template>
   <span :class="ns.e('jump')" :disabled="disabled">
     <span :class="[ns.e('goto')]">{{ t('el.pagination.goto') }}</span>
-    <el-input
+    <Ty-input
       :size="size"
       :class="[ns.e('editor'), ns.is('in-pagination')]"
       :min="1"
@@ -23,12 +23,12 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { useLocale, useNamespace } from '@element-plus/hooks'
-import ElInput from '@element-plus/components/input'
+import TyInput from '@element-plus/components/input'
 import { usePagination } from '../usePagination'
 import { paginationJumperProps } from './jumper'
 
 defineOptions({
-  name: 'ElPaginationJumper',
+  name: 'TyPaginationJumper',
 })
 
 defineProps(paginationJumperProps)

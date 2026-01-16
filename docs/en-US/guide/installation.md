@@ -116,10 +116,10 @@ Due to the limitations of native HTML parsing behavior, single-closed tags may c
 
 ```html
 <!-- examples -->
-<el-table>
-  <el-table-column></el-table-column>
-  <el-table-column></el-table-column>
-</el-table>
+<ty-table>
+  <ty-table-column></ty-table-column>
+  <ty-table-column></ty-table-column>
+</ty-table>
 ```
 
 :::

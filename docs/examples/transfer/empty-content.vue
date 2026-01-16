@@ -1,12 +1,12 @@
-<template>
-  <el-transfer v-model="value" :data="data">
+﻿<template>
+  <ty-transfer v-model="value" :data="data">
     <template #left-empty>
-      <el-empty :image-size="60" description="No data" />
+      <ty-empty :image-size="60" description="No data" />
     </template>
     <template #right-empty>
-      <el-empty :image-size="60" description="No data" />
+      <ty-empty :image-size="60" description="No data" />
     </template>
-  </el-transfer>
+  </ty-transfer>
 </template>
 
 <script lang="ts" setup>

@@ -1,34 +1,34 @@
-<template>
-  <el-row :gutter="16">
-    <el-col :xs="24" :sm="12" :md="6" class="text-center mb-4">
-      <el-statistic title="Daily active users" :value="268500" />
-    </el-col>
-    <el-col :xs="24" :sm="12" :md="6" class="text-center mb-4">
-      <el-statistic :value="138">
+﻿<template>
+  <ty-row :gutter="16">
+    <ty-col :xs="24" :sm="12" :md="6" class="text-center mb-4">
+      <ty-statistic title="Daily active users" :value="268500" />
+    </ty-col>
+    <ty-col :xs="24" :sm="12" :md="6" class="text-center mb-4">
+      <ty-statistic :value="138">
         <template #title>
           <div style="display: inline-flex; align-items: center">
             Ratio of men to women
-            <el-icon style="margin-left: 4px" :size="12">
+            <ty-icon style="margin-left: 4px" :size="12">
               <Male />
-            </el-icon>
+            </ty-icon>
           </div>
         </template>
         <template #suffix>/100</template>
-      </el-statistic>
-    </el-col>
-    <el-col :xs="24" :sm="12" :md="6" class="text-center mb-4">
-      <el-statistic title="Total Transactions" :value="outputValue" />
-    </el-col>
-    <el-col :xs="24" :sm="12" :md="6" class="text-center mb-4">
-      <el-statistic title="Feedback number" :value="562">
+      </ty-statistic>
+    </ty-col>
+    <ty-col :xs="24" :sm="12" :md="6" class="text-center mb-4">
+      <ty-statistic title="Total Transactions" :value="outputValue" />
+    </ty-col>
+    <ty-col :xs="24" :sm="12" :md="6" class="text-center mb-4">
+      <ty-statistic title="Feedback number" :value="562">
         <template #suffix>
-          <el-icon style="vertical-align: -0.125em">
+          <ty-icon style="vertical-align: -0.125em">
             <ChatLineRound />
-          </el-icon>
+          </ty-icon>
         </template>
-      </el-statistic>
-    </el-col>
-  </el-row>
+      </ty-statistic>
+    </ty-col>
+  </ty-row>
 </template>
 
 <script lang="ts" setup>

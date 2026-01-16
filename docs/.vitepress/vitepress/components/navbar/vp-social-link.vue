@@ -27,9 +27,9 @@ onMounted(() => {
     rel="noreferrer noopener"
     class="social-link"
   >
-    <ElIcon v-if="icon" :size="24">
+    <TyIcon v-if="icon" :size="24">
       <component :is="icon" />
-    </ElIcon>
+    </TyIcon>
   </a>
 </template>
 

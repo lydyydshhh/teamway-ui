@@ -1,15 +1,15 @@
-<template>
+﻿<template>
   <div>
-    <el-button
+    <ty-button
       v-for="i in 3"
       :key="i"
       @mouseover="(e) => (buttonRef = e.currentTarget)"
       @click="visible = !visible"
-      >Click to open tooltip</el-button
+      >Click to open tooltip</ty-button
     >
   </div>
 
-  <el-tooltip
+  <ty-tooltip
     ref="tooltipRef"
     :visible="visible"
     :popper-options="{
@@ -30,7 +30,7 @@
     <template #content>
       <span> Some content </span>
     </template>
-  </el-tooltip>
+  </ty-tooltip>
 </template>
 
 <script setup lang="ts">

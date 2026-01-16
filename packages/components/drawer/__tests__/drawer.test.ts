@@ -24,7 +24,7 @@ describe('Drawer', () => {
   test('create', async () => {
     const wrapper = _mount(
       `
-      <el-drawer :title="title" v-model="visible"></el-drawer>
+      <ty-drawer :title="title" v-model="visible"></ty-drawer>
       `,
       () => ({
         title,
@@ -34,8 +34,8 @@ describe('Drawer', () => {
     await nextTick()
     await rAF()
     await nextTick()
-    const wrapperEl = wrapper.find('.el-overlay').element as HTMLDivElement
-    const headerEl = wrapper.find('.el-drawer__header').element
+    const wrapperEl = wrapper.find('.ty-overlay').element as HTMLDivElement
+    const headerEl = wrapper.find('.ty-drawer__header').element
 
     await nextTick()
     expect(wrapperEl.style.display).not.toEqual('none')
@@ -45,11 +45,11 @@ describe('Drawer', () => {
   test('render correct content', async () => {
     const wrapper = _mount(
       `
-      <el-drawer :title='title' v-model='visible'>
+      <ty-drawer :title='title' v-model='visible'>
         <span>this is a sentence</span>
-        <el-button @click='dialogVisible = false'>cancel</el-button>
-        <el-button type='primary' @click='dialogVisible = false'>confirm</el-button>
-      </el-drawer>
+        <ty-button @click='dialogVisible = false'>cancel</ty-button>
+        <ty-button type='primary' @click='dialogVisible = false'>confirm</ty-button>
+      </ty-drawer>
       `,
       () => ({
         title,
@@ -60,10 +60,10 @@ describe('Drawer', () => {
     await nextTick()
     await rAF()
     await nextTick()
-    expect(wrapper.find('.el-drawer__body span').element.textContent).toEqual(
+    expect(wrapper.find('.ty-drawer__body span').element.textContent).toEqual(
       'this is a sentence'
     )
-    const footerBtns = wrapper.findAll('.el-button')
+    const footerBtns = wrapper.findAll('.ty-button')
     expect(footerBtns.length).toEqual(2)
     expect(footerBtns[0].find('span').element.textContent).toEqual('cancel')
     expect(footerBtns[1].find('span').element.textContent).toEqual('confirm')
@@ -72,9 +72,9 @@ describe('Drawer', () => {
   test('should append to body, when append-to-body flag is true', async () => {
     const wrapper = _mount(
       `
-      <el-drawer ref='d' :title='title' v-model='visible' :append-to-body='true'>
+      <ty-drawer ref='d' :title='title' v-model='visible' :append-to-body='true'>
         <span> content </span>
-      </el-drawer>
+      </ty-drawer>
       `,
       () => ({
         title,
@@ -87,7 +87,7 @@ describe('Drawer', () => {
     await nextTick()
     await rAF()
     await nextTick()
-    expect(document.querySelector('.el-overlay')?.parentNode).toEqual(
+    expect(document.querySelector('.ty-overlay')?.parentNode).toEqual(
       document.body
     )
   })
@@ -98,9 +98,9 @@ describe('Drawer', () => {
     const onOpened = vi.fn()
     const wrapper = _mount(
       `
-      <el-drawer :title='title' v-model='visible' @closed="onClosed" @close="onClose" @opened="onOpened">
+      <ty-drawer :title='title' v-model='visible' @closed="onClosed" @close="onClose" @opened="onOpened">
         <span>${content}</span>
-      </el-drawer>
+      </ty-drawer>
       `,
       () => ({
         title,
@@ -120,7 +120,7 @@ describe('Drawer', () => {
     await nextTick()
     expect(onOpened).not.toHaveBeenCalled()
 
-    const drawerEl = wrapper.find('.el-overlay').element as HTMLDivElement
+    const drawerEl = wrapper.find('.ty-overlay').element as HTMLDivElement
     expect(drawerEl.style.display).toEqual('none')
 
     vm.visible = true
@@ -139,9 +139,9 @@ describe('Drawer', () => {
   test('should destroy every child after drawer was closed when destroy-on-close flag is true', async () => {
     const wrapper = _mount(
       `
-      <el-drawer :title='title' v-model='visible' :append-to-body='false' :destroy-on-close='true' ref='drawer'>
+      <ty-drawer :title='title' v-model='visible' :append-to-body='false' :destroy-on-close='true' ref='drawer'>
         <span>${content}</span>
-      </el-drawer>
+      </ty-drawer>
       `,
       () => ({
         title,
@@ -153,22 +153,22 @@ describe('Drawer', () => {
     await nextTick()
     await rAF()
     await nextTick()
-    expect(wrapper.find('.el-drawer__body span').element.textContent).toEqual(
+    expect(wrapper.find('.ty-drawer__body span').element.textContent).toEqual(
       content
     )
     vm.$refs.drawer.handleClose()
     await nextTick()
     await rAF()
     await nextTick()
-    expect(wrapper.find('.el-drawer__body').exists()).toBe(false)
+    expect(wrapper.find('.ty-drawer__body').exists()).toBe(false)
   })
 
   test('should close dialog by clicking the close button', async () => {
     const wrapper = _mount(
       `
-      <el-drawer :title='title' v-model='visible' :append-to-body='false' :destroy-on-close='true' ref='drawer'>
+      <ty-drawer :title='title' v-model='visible' :append-to-body='false' :destroy-on-close='true' ref='drawer'>
         <span>${content}</span>
-      </el-drawer>
+      </ty-drawer>
       `,
       () => ({
         title,
@@ -180,7 +180,7 @@ describe('Drawer', () => {
     await nextTick()
     const vm = wrapper.vm as any
 
-    await wrapper.find('.el-drawer__close-btn').trigger('click')
+    await wrapper.find('.ty-drawer__close-btn').trigger('click')
     await nextTick()
     await rAF()
     await nextTick()
@@ -191,7 +191,7 @@ describe('Drawer', () => {
     const beforeClose = vi.fn()
     const wrapper = _mount(
       `
-      <el-drawer
+      <ty-drawer
           :before-close='beforeClose'
           :title='title'
           v-model='visible'
@@ -200,7 +200,7 @@ describe('Drawer', () => {
           ref='drawer'
           >
         <span>${content}</span>
-      </el-drawer>
+      </ty-drawer>
       `,
       () => ({
         title,
@@ -217,9 +217,9 @@ describe('Drawer', () => {
   test('should not show close button when show-close flag is false', async () => {
     const wrapper = _mount(
       `
-      <el-drawer :title='title' v-model='visible' ref='drawer' :show-close='false'>
+      <ty-drawer :title='title' v-model='visible' ref='drawer' :show-close='false'>
         <span>${content}</span>
-      </el-drawer>
+      </ty-drawer>
       `,
       () => ({
         title,
@@ -227,17 +227,17 @@ describe('Drawer', () => {
       })
     )
 
-    expect(wrapper.find('.el-drawer__close-btn').exists()).toBe(false)
+    expect(wrapper.find('.ty-drawer__close-btn').exists()).toBe(false)
   })
 
   test('drawer header should have slot props', async () => {
     const wrapper = _mount(
       `
-      <el-drawer v-model='visible' ref='drawer'>
+      <ty-drawer v-model='visible' ref='drawer'>
         <template #header="{ titleId, titleClass, close }">
           <button :data-title-id="titleId" :data-title-class="titleClass" @click="close" />
         </template>
-      </el-drawer>
+      </ty-drawer>
       `,
       () => ({
         visible: true,
@@ -248,7 +248,7 @@ describe('Drawer', () => {
     const headerButton = wrapper.find('button')
     expect(headerButton.attributes()['data-title-id']).toBeTruthy()
     expect(headerButton.attributes()['data-title-class']).toBe(
-      'el-drawer__title'
+      'ty-drawer__title'
     )
     expect(drawer.emitted().close).toBeFalsy()
     headerButton.trigger('click')
@@ -259,7 +259,7 @@ describe('Drawer', () => {
   test('should render header-class, body-class and footer-class if setted', async () => {
     const wrapper = _mount(
       `
-      <el-drawer v-model='visible' :header-class='headerClass' :body-class='bodyClass' :footer-class='footerClass'>
+      <ty-drawer v-model='visible' :header-class='headerClass' :body-class='bodyClass' :footer-class='footerClass'>
         <template #header>
           header desu
         </template>
@@ -267,7 +267,7 @@ describe('Drawer', () => {
         <template #footer>
           footer desu
         </template>
-      </el-drawer>
+      </ty-drawer>
       `,
       () => ({
         visible: true,
@@ -296,9 +296,9 @@ describe('Drawer', () => {
   test('should not render header when withHeader attribute is false', async () => {
     const wrapper = _mount(
       `
-      <el-drawer :title='title' v-model='visible' ref='drawer' :with-header='false'>
+      <ty-drawer :title='title' v-model='visible' ref='drawer' :with-header='false'>
         <span>${content}</span>
-      </el-drawer>
+      </ty-drawer>
       `,
       () => ({
         title,
@@ -306,16 +306,16 @@ describe('Drawer', () => {
       })
     )
 
-    expect(wrapper.find('.el-drawer__header').exists()).toBe(false)
+    expect(wrapper.find('.ty-drawer__header').exists()).toBe(false)
   })
 
   describe('directions', () => {
     const renderer = (direction: string) => {
       return _mount(
         `
-        <el-drawer :title='title' v-model='visible' direction='${direction}'>
+        <ty-drawer :title='title' v-model='visible' direction='${direction}'>
           <span>${content}</span>
-        </el-drawer>
+        </ty-drawer>
         `,
         () => ({
           title,
@@ -347,7 +347,7 @@ describe('Drawer', () => {
     const closed = vi.fn()
     const wrapper = _mount(
       `
-      <el-drawer
+      <ty-drawer
         :title='title'
         v-model='visible'
         ref="drawer"
@@ -356,7 +356,7 @@ describe('Drawer', () => {
         @close="close"
         @closed="closed">
         <span>${content}</span>
-      </el-drawer>
+      </ty-drawer>
       `,
       () => ({
         title,
@@ -394,11 +394,11 @@ describe('Drawer', () => {
     const renderer = (size: string, isVertical: boolean) =>
       _mount(
         `
-        <el-drawer :title='title' v-model='visible' direction='${
+        <ty-drawer :title='title' v-model='visible' direction='${
           isVertical ? 'ltr' : 'ttb'
         }' size='${size}'>
           <span>${content}</span>
-        </el-drawer>
+        </ty-drawer>
         `,
         () => ({
           visible: true,
@@ -408,7 +408,7 @@ describe('Drawer', () => {
 
     test('should effect height when drawer is vertical', async () => {
       const cleanup = defineGetter(window, 'innerWidth', '100')
-      const drawerEl = renderer('50%', true).find('.el-drawer')
+      const drawerEl = renderer('50%', true).find('.ty-drawer')
         .element as HTMLDivElement
       expect(drawerEl.style.width).toEqual('50%')
       cleanup()
@@ -416,7 +416,7 @@ describe('Drawer', () => {
 
     test('should effect width when drawer is horizontal', async () => {
       const cleanup = defineGetter(window, 'innerHeight', '100')
-      const drawerEl = renderer('50%', false).find('.el-drawer')
+      const drawerEl = renderer('50%', false).find('.ty-drawer')
         .element as HTMLDivElement
       expect(drawerEl.style.height).toEqual('50%')
       cleanup()
@@ -427,12 +427,12 @@ describe('Drawer', () => {
     test('should not render overlay when modal is false', async () => {
       const wrapper = _mount(
         `
-        <el-drawer
+        <ty-drawer
           v-model='visible'
           :title='title'
           :modal='false'>
           <span>content</span>
-        </el-drawer>
+        </ty-drawer>
         `,
         () => ({
           visible: true,
@@ -443,7 +443,7 @@ describe('Drawer', () => {
       await rAF()
       await nextTick()
 
-      expect(wrapper.find('.el-overlay').exists()).toBe(false)
+      expect(wrapper.find('.ty-overlay').exists()).toBe(false)
     })
 
     test('should not close drawer when mask is penetrable', async () => {
@@ -452,14 +452,14 @@ describe('Drawer', () => {
       const wrapper = _mount(
         `
         <div>
-          <el-drawer
+          <ty-drawer
             v-model="visible"
             :title="title"
             :modal="false"
             modal-penetrable>
             <span>content</span>
-          </el-drawer>
-          <el-button @click="onClick">button</el-button>
+          </ty-drawer>
+          <ty-button @click="onClick">button</ty-button>
         </div>
         `,
         () => ({
@@ -479,7 +479,7 @@ describe('Drawer', () => {
 
       const overlayEl = wrapper.findComponent({ name: 'ElOverlay' })
       const drawerEl = wrapper.findComponent({ name: 'ElDrawer' })
-      const buttonEl = wrapper.find('.el-button')
+      const buttonEl = wrapper.find('.ty-button')
 
       expect(overlayEl.exists()).toBe(true)
       expect(overlayEl.classes()).toContain('is-penetrable')
@@ -528,9 +528,9 @@ describe('Drawer', () => {
       const cleanup = defineGetter(window, 'innerWidth', '100')
       const wrapper = _mount(
         `
-        <el-drawer v-model='visible' direction='ltr' resizable size='50%'>
+        <ty-drawer v-model='visible' direction='ltr' resizable size='50%'>
           <span>${content}</span>
-        </el-drawer>
+        </ty-drawer>
         `,
         () => ({
           visible: true,
@@ -539,9 +539,9 @@ describe('Drawer', () => {
 
       await nextTick()
 
-      const dragger = wrapper.find('.el-drawer__dragger')
+      const dragger = wrapper.find('.ty-drawer__dragger')
       expect(dragger.exists()).toBe(true)
-      const drawerEl = wrapper.find('.el-drawer').element as HTMLDivElement
+      const drawerEl = wrapper.find('.ty-drawer').element as HTMLDivElement
       expect(drawerEl.style.width).toEqual('50%')
       Object.defineProperty(drawerEl, 'offsetWidth', {
         value: 50,
@@ -557,9 +557,9 @@ describe('Drawer', () => {
       const cleanup = defineGetter(window, 'innerHeight', '100')
       const wrapper = _mount(
         `
-        <el-drawer v-model='visible' direction='ttb' resizable size='50%'>
+        <ty-drawer v-model='visible' direction='ttb' resizable size='50%'>
           <span>${content}</span>
-        </el-drawer>
+        </ty-drawer>
         `,
         () => ({
           visible: true,
@@ -568,9 +568,9 @@ describe('Drawer', () => {
 
       await nextTick()
 
-      const dragger = wrapper.find('.el-drawer__dragger')
+      const dragger = wrapper.find('.ty-drawer__dragger')
       expect(dragger.exists()).toBe(true)
-      const drawerEl = wrapper.find('.el-drawer').element as HTMLDivElement
+      const drawerEl = wrapper.find('.ty-drawer').element as HTMLDivElement
       expect(drawerEl.style.height).toEqual('50%')
       Object.defineProperty(drawerEl, 'offsetHeight', {
         value: 50,
@@ -590,7 +590,7 @@ describe('Drawer', () => {
 
       const wrapper = _mount(
         `
-        <el-drawer
+        <ty-drawer
           v-model='visible'
           direction='ltr'
           resizable
@@ -599,7 +599,7 @@ describe('Drawer', () => {
           @resize="onResize"
           @resize-end="onResizeEnd">
           <span>${content}</span>
-        </el-drawer>
+        </ty-drawer>
         `,
         () => ({
           visible: true,
@@ -615,8 +615,8 @@ describe('Drawer', () => {
 
       await nextTick()
 
-      const dragger = wrapper.find('.el-drawer__dragger')
-      const drawerEl = wrapper.find('.el-drawer').element as HTMLDivElement
+      const dragger = wrapper.find('.ty-drawer__dragger')
+      const drawerEl = wrapper.find('.ty-drawer').element as HTMLDivElement
       Object.defineProperty(drawerEl, 'offsetWidth', {
         value: 50,
         configurable: true,
@@ -681,11 +681,11 @@ describe('Drawer', () => {
     test('title attribute should set aria-label', async () => {
       const wrapper = _mount(
         `
-        <el-drawer
+        <ty-drawer
           :title='title'
           v-model='visible'
           ref="drawer">
-        </el-drawer>
+        </ty-drawer>
         `,
         () => ({
           title,
@@ -701,13 +701,13 @@ describe('Drawer', () => {
     test('missing title attribute should point to header slot content', async () => {
       const wrapper = _mount(
         `
-        <el-drawer
+        <ty-drawer
           v-model='visible'
           ref="drawer">
           <template #header="{ titleId, titleClass }">
             <h5 :id="titleId" :class="titleClass" />
           </template>
-        </el-drawer>
+        </ty-drawer>
         `,
         () => ({
           visible: true,
@@ -715,7 +715,7 @@ describe('Drawer', () => {
       )
       await nextTick()
       const drawerDialog = wrapper.find('[role="dialog"]')
-      const drawerTitle = wrapper.find('.el-drawer__title')
+      const drawerTitle = wrapper.find('.ty-drawer__title')
       expect(drawerDialog.attributes()['aria-label']).toBeFalsy()
       expect(drawerDialog.attributes()['aria-labelledby']).toBe(
         drawerTitle.attributes().id
@@ -725,11 +725,11 @@ describe('Drawer', () => {
     test('aria-describedby should point to modal body', async () => {
       const wrapper = _mount(
         `
-        <el-drawer
+        <ty-drawer
           v-model='visible'
           ref="drawer">
           <span>${content}</span>
-        </el-drawer>
+        </ty-drawer>
         `,
         () => ({
           visible: true,
@@ -737,7 +737,7 @@ describe('Drawer', () => {
       )
       await nextTick()
       const drawerDialog = wrapper.find('[role="dialog"]')
-      const drawerBody = wrapper.find('.el-drawer__body')
+      const drawerBody = wrapper.find('.ty-drawer__body')
       expect(drawerDialog.attributes()['aria-describedby']).toBe(
         drawerBody.attributes().id
       )

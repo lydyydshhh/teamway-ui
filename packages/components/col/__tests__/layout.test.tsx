@@ -7,22 +7,22 @@ import Col from '../src/col.vue'
 describe('Col', () => {
   it('create', () => {
     const wrapper = mount(() => <Col />)
-    expect(wrapper.classes()).toContain('el-col')
+    expect(wrapper.classes()).toContain('ty-col')
   })
 
   it('span', () => {
     const wrapper = mount(() => <Col span={12} />)
-    expect(wrapper.classes()).toContain('el-col-12')
+    expect(wrapper.classes()).toContain('ty-col-12')
   })
 
   it('pull', () => {
     const wrapper = mount(() => <Col span={12} pull={3} />)
-    expect(wrapper.classes()).toContain('el-col-pull-3')
+    expect(wrapper.classes()).toContain('ty-col-pull-3')
   })
 
   it('push', () => {
     const wrapper = mount(() => <Col span={12} push={3} />)
-    expect(wrapper.classes()).toContain('el-col-push-3')
+    expect(wrapper.classes()).toContain('ty-col-push-3')
   })
 
   it('gutter', () => {
@@ -86,19 +86,19 @@ describe('Col', () => {
     })
 
     const colElmClass = wrapper.findComponent({ ref: 'col' }).classes()
-    expect(colElmClass.includes('el-col-sm-4')).toBe(true)
-    expect(colElmClass.includes('el-col-sm-4')).toBe(true)
-    expect(colElmClass.includes('el-col-sm-offset-2')).toBe(true)
-    expect(colElmClass.includes('el-col-lg-6')).toBe(true)
-    expect(colElmClass.includes('el-col-lg-offset-3')).toBe(true)
-    expect(colElmClass.includes('el-col-md-8')).toBe(true)
+    expect(colElmClass.includes('ty-col-sm-4')).toBe(true)
+    expect(colElmClass.includes('ty-col-sm-4')).toBe(true)
+    expect(colElmClass.includes('ty-col-sm-offset-2')).toBe(true)
+    expect(colElmClass.includes('ty-col-lg-6')).toBe(true)
+    expect(colElmClass.includes('ty-col-lg-offset-3')).toBe(true)
+    expect(colElmClass.includes('ty-col-md-8')).toBe(true)
   })
 })
 
 describe('Row', () => {
   test('create', () => {
     const wrapper = mount(() => <Row />)
-    expect(wrapper.classes()).toContain('el-row')
+    expect(wrapper.classes()).toContain('ty-row')
   })
 
   test('gutter', () => {

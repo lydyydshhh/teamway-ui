@@ -21,7 +21,7 @@ import { tourKey } from './helper'
 import type { CSSProperties } from 'vue'
 
 defineOptions({
-  name: 'ElTourMask',
+  name: 'TyTourMask',
   inheritAttrs: false,
 })
 

@@ -1,17 +1,17 @@
-<template>
-  <el-radio-group v-model="tabPosition" style="margin-bottom: 30px">
-    <el-radio-button value="top">top</el-radio-button>
-    <el-radio-button value="right">right</el-radio-button>
-    <el-radio-button value="bottom">bottom</el-radio-button>
-    <el-radio-button value="left">left</el-radio-button>
-  </el-radio-group>
+﻿<template>
+  <ty-radio-group v-model="tabPosition" style="margin-bottom: 30px">
+    <ty-radio-button value="top">top</ty-radio-button>
+    <ty-radio-button value="right">right</ty-radio-button>
+    <ty-radio-button value="bottom">bottom</ty-radio-button>
+    <ty-radio-button value="left">left</ty-radio-button>
+  </ty-radio-group>
 
-  <el-tabs :tab-position="tabPosition" style="height: 200px" class="demo-tabs">
-    <el-tab-pane label="User">User</el-tab-pane>
-    <el-tab-pane label="Config">Config</el-tab-pane>
-    <el-tab-pane label="Role">Role</el-tab-pane>
-    <el-tab-pane label="Task">Task</el-tab-pane>
-  </el-tabs>
+  <ty-tabs :tab-position="tabPosition" style="height: 200px" class="demo-tabs">
+    <ty-tab-pane label="User">User</ty-tab-pane>
+    <ty-tab-pane label="Config">Config</ty-tab-pane>
+    <ty-tab-pane label="Role">Role</ty-tab-pane>
+    <ty-tab-pane label="Task">Task</ty-tab-pane>
+  </ty-tabs>
 </template>
 
 <script lang="ts" setup>
@@ -23,15 +23,15 @@ const tabPosition = ref<TabsInstance['tabPosition']>('left')
 </script>
 
 <style>
-.demo-tabs > .el-tabs__content {
+.demo-tabs > .ty-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;
   font-weight: 600;
 }
 
-.el-tabs--right .el-tabs__content,
-.el-tabs--left .el-tabs__content {
+.ty-tabs--right .ty-tabs__content,
+.ty-tabs--left .ty-tabs__content {
   height: 100%;
 }
 </style>

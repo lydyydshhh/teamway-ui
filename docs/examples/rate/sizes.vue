@@ -1,9 +1,9 @@
-<template>
-  <el-rate v-model="value" size="large" />
+﻿<template>
+  <ty-rate v-model="value" size="large" />
   <br />
-  <el-rate v-model="value" />
+  <ty-rate v-model="value" />
   <br />
-  <el-rate v-model="value" size="small" />
+  <ty-rate v-model="value" size="small" />
 </template>
 
 <script lang="ts" setup>

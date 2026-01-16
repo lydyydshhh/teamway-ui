@@ -1,6 +1,6 @@
 <template>
-  <el-roving-focus-item :focusable="!disabled">
-    <el-dropdown-item-impl
+  <ty-roving-focus-item :focusable="!disabled">
+    <ty-dropdown-item-impl
       v-bind="propsAndAttrs"
       @pointerleave="handlePointerLeave"
       @pointermove="handlePointerMove"
@@ -11,24 +11,24 @@
       </template>
 
       <slot />
-    </el-dropdown-item-impl>
-  </el-roving-focus-item>
+    </ty-dropdown-item-impl>
+  </ty-roving-focus-item>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, inject } from 'vue'
-import { ElRovingFocusItem } from '@element-plus/components/roving-focus-group'
+import { TyRovingFocusItem } from '@element-plus/components/roving-focus-group'
 import { composeEventHandlers, whenMouse } from '@element-plus/utils'
-import ElDropdownItemImpl from './dropdown-item-impl.vue'
+import TyDropdownItemImpl from './dropdown-item-impl.vue'
 import { useDropdown } from './useDropdown'
 import { dropdownItemProps } from './dropdown'
 import { DROPDOWN_INJECTION_KEY } from './tokens'
 
 export default defineComponent({
-  name: 'ElDropdownItem',
+  name: 'TyDropdownItem',
   components: {
-    ElRovingFocusItem,
-    ElDropdownItemImpl,
+    TyRovingFocusItem,
+    TyDropdownItemImpl,
   },
   inheritAttrs: false,
   props: dropdownItemProps,

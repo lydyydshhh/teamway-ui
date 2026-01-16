@@ -1,5 +1,5 @@
-<template>
-  <el-tree style="max-width: 600px" :props="props" :load="loadNode" lazy />
+﻿<template>
+  <ty-tree style="max-width: 600px" :props="props" :load="loadNode" lazy />
 </template>
 
 <script lang="ts" setup>

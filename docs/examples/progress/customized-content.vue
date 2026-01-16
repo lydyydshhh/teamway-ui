@@ -1,25 +1,25 @@
-<template>
+﻿<template>
   <div class="demo-progress">
-    <el-progress :percentage="50">
-      <el-button text>Content</el-button>
-    </el-progress>
-    <el-progress
+    <ty-progress :percentage="50">
+      <ty-button text>Content</ty-button>
+    </ty-progress>
+    <ty-progress
       :text-inside="true"
       :stroke-width="20"
       :percentage="50"
       status="exception"
     >
       <span>Content</span>
-    </el-progress>
-    <el-progress type="circle" :percentage="100" status="success">
-      <el-button type="success" :icon="Check" circle />
-    </el-progress>
-    <el-progress type="dashboard" :percentage="80">
+    </ty-progress>
+    <ty-progress type="circle" :percentage="100" status="success">
+      <ty-button type="success" :icon="Check" circle />
+    </ty-progress>
+    <ty-progress type="dashboard" :percentage="80">
       <template #default="{ percentage }">
         <span class="percentage-value">{{ percentage }}%</span>
         <span class="percentage-label">Progressing</span>
       </template>
-    </el-progress>
+    </ty-progress>
   </div>
 </template>
 
@@ -38,11 +38,11 @@ import { Check } from '@element-plus/icons-vue'
   margin-top: 10px;
   font-size: 12px;
 }
-.demo-progress .el-progress--line {
+.demo-progress .ty-progress--line {
   margin-bottom: 15px;
   max-width: 600px;
 }
-.demo-progress .el-progress--circle {
+.demo-progress .ty-progress--circle {
   margin-right: 15px;
 }
 </style>

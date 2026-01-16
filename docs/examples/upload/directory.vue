@@ -1,5 +1,5 @@
-<template>
-  <el-upload
+﻿<template>
+  <ty-upload
     class="upload-demo"
     drag
     action="https://run.mocky.io/v3/9d059bf9-4660-45f2-925d-ce80ad6c4d15"
@@ -7,11 +7,11 @@
     multiple
     :on-change="handleChange"
   >
-    <el-icon class="el-icon--upload"><upload-filled /></el-icon>
-    <div class="el-upload__text">
+    <ty-icon class="ty-icon--upload"><upload-filled /></ty-icon>
+    <div class="ty-upload__text">
       Drop directory here or <em>click to upload</em>
     </div>
-  </el-upload>
+  </ty-upload>
 </template>
 
 <script setup lang="ts">

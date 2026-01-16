@@ -1,15 +1,15 @@
-<template>
+﻿<template>
   <div class="demo-input-with-icon">
     <div class="input-group">
       <span class="label">Using attributes</span>
       <div class="input-container">
-        <el-input
+        <ty-input
           v-model="input1"
           class="responsive-input"
           placeholder="Pick a date"
           :suffix-icon="Calendar"
         />
-        <el-input
+        <ty-input
           v-model="input2"
           class="responsive-input"
           placeholder="Type something"
@@ -20,24 +20,24 @@
     <div class="input-group">
       <span class="label">Using slots</span>
       <div class="input-container">
-        <el-input
+        <ty-input
           v-model="input3"
           class="responsive-input"
           placeholder="Pick a date"
         >
           <template #suffix>
-            <el-icon class="el-input__icon"><calendar /></el-icon>
+            <ty-icon class="ty-input__icon"><calendar /></ty-icon>
           </template>
-        </el-input>
-        <el-input
+        </ty-input>
+        <ty-input
           v-model="input4"
           class="responsive-input"
           placeholder="Type something"
         >
           <template #prefix>
-            <el-icon class="el-input__icon"><search /></el-icon>
+            <ty-icon class="ty-input__icon"><search /></ty-icon>
           </template>
-        </el-input>
+        </ty-input>
       </div>
     </div>
   </div>

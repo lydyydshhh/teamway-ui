@@ -1,19 +1,19 @@
-<template>
-  <el-checkbox
+﻿<template>
+  <ty-checkbox
     v-model="checkAll"
     :indeterminate="isIndeterminate"
     @change="handleCheckAllChange"
   >
     Check all
-  </el-checkbox>
-  <el-checkbox-group
+  </ty-checkbox>
+  <ty-checkbox-group
     v-model="checkedCities"
     @change="handleCheckedCitiesChange"
   >
-    <el-checkbox v-for="city in cities" :key="city" :label="city" :value="city">
+    <ty-checkbox v-for="city in cities" :key="city" :label="city" :value="city">
       {{ city }}
-    </el-checkbox>
-  </el-checkbox-group>
+    </ty-checkbox>
+  </ty-checkbox-group>
 </template>
 
 <script lang="ts" setup>

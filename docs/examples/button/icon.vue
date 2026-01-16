@@ -1,12 +1,12 @@
-<template>
+﻿<template>
   <div>
-    <el-button type="primary" :icon="Edit" />
-    <el-button type="primary" :icon="Share" />
-    <el-button type="primary" :icon="Delete" />
-    <el-button type="primary" :icon="Search">Search</el-button>
-    <el-button type="primary">
-      Upload<el-icon class="el-icon--right"><Upload /></el-icon>
-    </el-button>
+    <ty-button type="primary" :icon="Edit" />
+    <ty-button type="primary" :icon="Share" />
+    <ty-button type="primary" :icon="Delete" />
+    <ty-button type="primary" :icon="Search">Search</ty-button>
+    <ty-button type="primary">
+      Upload<ty-icon class="ty-icon--right"><Upload /></ty-icon>
+    </ty-button>
   </div>
 </template>
 

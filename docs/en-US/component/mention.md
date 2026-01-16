@@ -79,7 +79,7 @@ mention/whole
 
 ## Work with form
 
-to work with `el-form`.
+to work with `ty-form`.
 
 :::demo
 
@@ -88,7 +88,7 @@ mention/form
 :::
 
 ::: tip
-Since this component is developed based on the component [`el-input`](./input.md#attributes) , the original properties have not changed, so no repetition here,
+Since this component is developed based on the component [`ty-input`](./input.md#attributes) , the original properties have not changed, so no repetition here,
 and please go to the original component to view the documentation.
 :::
 
@@ -138,8 +138,8 @@ and please go to the original component to view the documentation.
 
 | Name                     | Description                   | Type                                    |
 | ------------------------ | ----------------------------- | --------------------------------------- |
-| input                    | el-input component instance   | ^[object]`Ref<InputInstance \| null>`   |
-| tooltip                  | el-tooltip component instance | ^[object]`Ref<TooltipInstance \| null>` |
+| input                    | ty-input component instance   | ^[object]`Ref<InputInstance \| null>`   |
+| tooltip                  | ty-tooltip component instance | ^[object]`Ref<TooltipInstance \| null>` |
 | dropdownVisible ^(2.8.5) | tooltip display status        | ^[object]`ComputedRef<boolean>`         |
 
 ## Type Declarations

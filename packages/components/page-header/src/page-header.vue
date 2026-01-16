@@ -26,16 +26,16 @@
             :class="ns.e('icon')"
           >
             <slot name="icon">
-              <el-icon v-if="icon">
+              <ty-icon v-if="icon">
                 <component :is="icon" />
-              </el-icon>
+              </ty-icon>
             </slot>
           </div>
           <div :class="ns.e('title')">
             <slot name="title">{{ title || t('el.pageHeader.title') }}</slot>
           </div>
         </div>
-        <el-divider direction="vertical" />
+        <ty-divider direction="vertical" />
         <div :class="ns.e('content')">
           <slot name="content">{{ content }}</slot>
         </div>
@@ -53,13 +53,13 @@
 </template>
 
 <script lang="ts" setup>
-import { ElIcon } from '@element-plus/components/icon'
-import { ElDivider } from '@element-plus/components/divider'
+import { TyIcon } from '@element-plus/components/icon'
+import { TyDivider } from '@element-plus/components/divider'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import { pageHeaderEmits, pageHeaderProps } from './page-header'
 
 defineOptions({
-  name: 'ElPageHeader',
+  name: 'TyPageHeader',
 })
 
 defineProps(pageHeaderProps)

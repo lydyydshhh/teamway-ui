@@ -40,7 +40,7 @@ describe('Loading', () => {
 
     await nextTick()
 
-    const maskWrapper = wrapper.find('.el-loading-mask')
+    const maskWrapper = wrapper.find('.ty-loading-mask')
     expect(maskWrapper.exists()).toBeTruthy()
 
     vi.useFakeTimers()
@@ -51,7 +51,7 @@ describe('Loading', () => {
     vi.runAllTimers()
     vi.useRealTimers()
     await nextTick()
-    expect(wrapper.find('.el-loading-mask').exists()).toBeFalsy()
+    expect(wrapper.find('.ty-loading-mask').exists()).toBeFalsy()
   })
 
   test('unmounted directive', async () => {
@@ -71,7 +71,7 @@ describe('Loading', () => {
     show2.value = false
 
     await nextTick()
-    expect(document.querySelector('.el-loading-mask')).toBeFalsy()
+    expect(document.querySelector('.ty-loading-mask')).toBeFalsy()
   })
 
   test('body directive', async () => {
@@ -79,7 +79,7 @@ describe('Loading', () => {
     _mount(() => <div v-loading_body={loading.value} />)
 
     await nextTick()
-    const mask = document.querySelector('.el-loading-mask')!
+    const mask = document.querySelector('.ty-loading-mask')!
     expect(mask.parentNode === document.body).toBeTruthy()
     loading.value = false
     document.body.removeChild(mask)
@@ -90,7 +90,7 @@ describe('Loading', () => {
     _mount(() => <div v-loading_fullscreen={loading.value} />)
 
     await nextTick()
-    const mask = document.querySelector('.el-loading-mask')!
+    const mask = document.querySelector('.ty-loading-mask')!
     expect(mask.parentNode === document.body).toBeTruthy()
     expect(mask.classList.contains('is-fullscreen')).toBeTruthy()
     loading.value = false
@@ -103,10 +103,10 @@ describe('Loading', () => {
 
     await nextTick()
     expect(
-      document.body.classList.contains('el-loading-parent--hidden')
+      document.body.classList.contains('ty-loading-parent--hidden')
     ).toBeTruthy()
     loading.value = false
-    document.body.removeChild(document.querySelector('.el-loading-mask')!)
+    document.body.removeChild(document.querySelector('.ty-loading-mask')!)
   })
 
   test('text directive', async () => {
@@ -116,7 +116,7 @@ describe('Loading', () => {
     ))
 
     await nextTick()
-    expect(wrapper.find('.el-loading-text').text()).toEqual('loading...')
+    expect(wrapper.find('.ty-loading-text').text()).toEqual('loading...')
   })
 
   test('customClass directive', async () => {
@@ -145,7 +145,7 @@ describe('Loading', () => {
 
   test('create service', async () => {
     loadingInstance = Loading()
-    expect(document.querySelector('.el-loading-mask')).toBeTruthy()
+    expect(document.querySelector('.ty-loading-mask')).toBeTruthy()
   })
 
   test('accept VNode as text', async () => {
@@ -177,12 +177,12 @@ describe('Loading', () => {
     document.body.appendChild(container)
 
     loadingInstance = Loading({ target: '.loading-container' })
-    const mask = container.querySelector('.el-loading-mask')!
+    const mask = container.querySelector('.ty-loading-mask')!
     expect(mask).toBeTruthy()
     expect(mask.parentNode).toEqual(container)
 
     expect(
-      container.classList.contains('el-loading-parent--relative')
+      container.classList.contains('ty-loading-parent--relative')
     ).toBeTruthy()
 
     vi.useFakeTimers()
@@ -192,7 +192,7 @@ describe('Loading', () => {
     await nextTick()
 
     expect(
-      container.classList.contains('el-loading-parent--relative')
+      container.classList.contains('ty-loading-parent--relative')
     ).toBeFalsy()
   })
 
@@ -202,14 +202,14 @@ describe('Loading', () => {
     document.body.appendChild(container)
 
     loadingInstance = Loading({ target: '.loading-container', body: true })
-    const mask = document.querySelector('.el-loading-mask')!
+    const mask = document.querySelector('.ty-loading-mask')!
     expect(mask).toBeTruthy()
     expect(mask.parentNode).toEqual(document.body)
   })
 
   test('fullscreen service', async () => {
     loadingInstance = Loading({ fullscreen: true })
-    const mask = document.querySelector('.el-loading-mask')!
+    const mask = document.querySelector('.ty-loading-mask')!
     expect(mask.parentNode).toEqual(document.body)
     expect(mask.classList.contains('is-fullscreen')).toBeTruthy()
   })
@@ -224,7 +224,7 @@ describe('Loading', () => {
     vi.runAllTimers()
     await nextTick()
 
-    let masks = document.querySelectorAll('.el-loading-mask')
+    let masks = document.querySelectorAll('.ty-loading-mask')
     expect(loadingInstance).toEqual(loadingInstance2)
     expect(masks.length).toEqual(1)
     loadingInstance2.close()
@@ -232,27 +232,27 @@ describe('Loading', () => {
     vi.useRealTimers()
     await nextTick()
 
-    masks = document.querySelectorAll('.el-loading-mask')
+    masks = document.querySelectorAll('.ty-loading-mask')
     expect(masks.length).toEqual(0)
   })
 
   test('lock service', async () => {
     loadingInstance = Loading({ lock: true })
     expect(
-      document.body.classList.contains('el-loading-parent--hidden')
+      document.body.classList.contains('ty-loading-parent--hidden')
     ).toBeTruthy()
   })
 
   test('text service', async () => {
     loadingInstance = Loading({ text: 'Loading...' })
-    const text = document.querySelector('.el-loading-text')!
+    const text = document.querySelector('.ty-loading-text')!
     expect(text).toBeTruthy()
     expect(text.textContent).toEqual('Loading...')
   })
 
   test('customClass service', async () => {
-    loadingInstance = Loading({ customClass: 'el-loading-custom-class' })
-    const customClass = document.querySelector('.el-loading-custom-class')
+    loadingInstance = Loading({ customClass: 'ty-loading-custom-class' })
+    const customClass = document.querySelector('.ty-loading-custom-class')
     expect(customClass).toBeTruthy()
   })
 
@@ -270,7 +270,7 @@ describe('Loading', () => {
     await nextTick()
     await nextTick()
     const maskDisplay = getComputedStyle(
-      wrapper.find('.el-loading-mask').element
+      wrapper.find('.ty-loading-mask').element
     ).display
     expect(maskDisplay).toBe('block')
   })
@@ -296,7 +296,7 @@ describe('Loading', () => {
 
     text.value = 'foo'
     await nextTick()
-    expect(wrapper.find('.el-loading-text').text()).toEqual('foo')
+    expect(wrapper.find('.ty-loading-text').text()).toEqual('foo')
 
     spinner.value = 'foo'
     await nextTick()
@@ -309,13 +309,13 @@ describe('Loading', () => {
     background.value = 'rgba(255, 255, 255, 0.5)'
     await nextTick()
     expect(
-      getComputedStyle(wrapper.find('.el-loading-mask').element).background
+      getComputedStyle(wrapper.find('.ty-loading-mask').element).background
     ).toEqual('rgba(255, 255, 255, 0.5)')
 
     customClass.value = 'foo'
     await nextTick()
     expect(
-      wrapper.find('.el-loading-mask').element.classList.contains('foo')
+      wrapper.find('.ty-loading-mask').element.classList.contains('foo')
     ).toEqual(true)
   })
 })

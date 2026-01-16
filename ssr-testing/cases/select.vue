@@ -1,28 +1,28 @@
 <template>
-  <el-select v-model="value" class="m-2" placeholder="Select" size="large">
-    <el-option
+  <ty-select v-model="value" class="m-2" placeholder="Select" size="large">
+    <ty-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value"
     />
-  </el-select>
-  <el-select v-model="value" class="m-2" placeholder="Select">
-    <el-option
+  </ty-select>
+  <ty-select v-model="value" class="m-2" placeholder="Select">
+    <ty-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value"
     />
-  </el-select>
-  <el-select v-model="value" class="m-2" placeholder="Select" size="small">
-    <el-option
+  </ty-select>
+  <ty-select v-model="value" class="m-2" placeholder="Select" size="small">
+    <ty-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
       :value="item.value"
     />
-  </el-select>
+  </ty-select>
 </template>
 
 <script lang="ts" setup>

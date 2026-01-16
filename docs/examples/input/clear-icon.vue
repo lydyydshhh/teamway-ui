@@ -1,5 +1,5 @@
-<template>
-  <el-input
+﻿<template>
+  <ty-input
     v-model="input"
     clearable
     :clear-icon="CloseBold"

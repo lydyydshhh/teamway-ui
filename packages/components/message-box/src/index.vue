@@ -1,6 +1,6 @@
 <template>
   <transition name="fade-in-linear" @after-leave="$emit('vanish')">
-    <el-overlay
+    <ty-overlay
       v-show="visible"
       :z-index="zIndex"
       :overlay-class="[ns.is('message-box'), modalClass]"
@@ -16,7 +16,7 @@
         @mousedown="overlayEvent.onMousedown"
         @mouseup="overlayEvent.onMouseup"
       >
-        <el-focus-trap
+        <ty-focus-trap
           loop
           :trapped="visible"
           :focus-trap-el="rootRef"
@@ -42,12 +42,12 @@
               :class="[ns.e('header'), { 'show-close': showClose }]"
             >
               <div :class="ns.e('title')">
-                <el-icon
+                <ty-icon
                   v-if="iconComponent && center"
                   :class="[ns.e('status'), typeClass]"
                 >
                   <component :is="iconComponent" />
-                </el-icon>
+                </ty-icon>
                 <span>{{ title }}</span>
               </div>
               <button
@@ -62,19 +62,19 @@
                   handleAction(distinguishCancelAndClose ? 'close' : 'cancel')
                 "
               >
-                <el-icon :class="ns.e('close')">
+                <ty-icon :class="ns.e('close')">
                   <component :is="closeIcon || 'close'" />
-                </el-icon>
+                </ty-icon>
               </button>
             </div>
             <div :id="contentId" :class="ns.e('content')">
               <div :class="ns.e('container')">
-                <el-icon
+                <ty-icon
                   v-if="iconComponent && !center && hasMessage"
                   :class="[ns.e('status'), typeClass]"
                 >
                   <component :is="iconComponent" />
-                </el-icon>
+                </ty-icon>
                 <div v-if="hasMessage" :class="ns.e('message')">
                   <slot>
                     <component
@@ -93,7 +93,7 @@
                 </div>
               </div>
               <div v-show="showInput" :class="ns.e('input')">
-                <el-input
+                <ty-input
                   :id="inputId"
                   ref="inputRef"
                   v-model="inputValue"
@@ -114,7 +114,7 @@
               </div>
             </div>
             <div :class="ns.e('btns')">
-              <el-button
+              <ty-button
                 v-if="showCancelButton"
                 :type="cancelButtonType === 'text' ? '' : cancelButtonType"
                 :text="cancelButtonType === 'text'"
@@ -127,8 +127,8 @@
                 @keydown.prevent.enter="handleAction('cancel')"
               >
                 {{ cancelButtonText || t('el.messagebox.cancel') }}
-              </el-button>
-              <el-button
+              </ty-button>
+              <ty-button
                 v-show="showConfirmButton"
                 ref="confirmRef"
                 :type="confirmButtonType === 'text' ? '' : confirmButtonType"
@@ -143,12 +143,12 @@
                 @keydown.prevent.enter="handleAction('confirm')"
               >
                 {{ confirmButtonText || t('el.messagebox.confirm') }}
-              </el-button>
+              </ty-button>
             </div>
           </div>
-        </el-focus-trap>
+        </ty-focus-trap>
       </div>
-    </el-overlay>
+    </ty-overlay>
   </transition>
 </template>
 
@@ -165,7 +165,7 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import ElButton from '@element-plus/components/button'
+import TyButton from '@element-plus/components/button'
 import { TrapFocus } from '@element-plus/directives'
 import {
   useDraggable,
@@ -173,8 +173,8 @@ import {
   useLockscreen,
   useSameTarget,
 } from '@element-plus/hooks'
-import ElInput from '@element-plus/components/input'
-import { ElOverlay } from '@element-plus/components/overlay'
+import TyInput from '@element-plus/components/input'
+import { TyOverlay } from '@element-plus/components/overlay'
 import {
   TypeComponents,
   TypeComponentsMap,
@@ -182,9 +182,9 @@ import {
   isString,
   isValidComponentSize,
 } from '@element-plus/utils'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { Loading } from '@element-plus/icons-vue'
-import ElFocusTrap from '@element-plus/components/focus-trap'
+import TyFocusTrap from '@element-plus/components/focus-trap'
 import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
 
 import type { ComponentPublicInstance, PropType } from 'vue'
@@ -196,16 +196,16 @@ import type {
 } from './message-box.type'
 
 export default defineComponent({
-  name: 'ElMessageBox',
+  name: 'TyMessageBox',
   directives: {
     TrapFocus,
   },
   components: {
-    ElButton,
-    ElFocusTrap,
-    ElInput,
-    ElOverlay,
-    ElIcon,
+    TyButton,
+    TyFocusTrap,
+    TyInput,
+    TyOverlay,
+    TyIcon,
     ...TypeComponents,
   },
   inheritAttrs: false,

@@ -30,7 +30,7 @@ import { useNamespace } from '@element-plus/hooks'
 import { tabsRootContextKey } from './constants'
 import { tabPaneProps } from './tab-pane'
 
-const COMPONENT_NAME = 'ElTabPane'
+const COMPONENT_NAME = 'TyTabPane'
 defineOptions({
   name: COMPONENT_NAME,
 })
@@ -41,7 +41,7 @@ const slots = useSlots()
 
 const tabsRoot = inject(tabsRootContextKey)
 if (!tabsRoot)
-  throwError(COMPONENT_NAME, 'usage: <el-tabs><el-tab-pane /></el-tabs/>')
+  throwError(COMPONENT_NAME, 'usage: <ty-tabs><ty-tab-pane /></ty-tabs/>')
 
 const ns = useNamespace('tab-pane')
 

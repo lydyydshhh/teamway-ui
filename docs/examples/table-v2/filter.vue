@@ -1,5 +1,5 @@
-<template>
-  <el-table-v2
+﻿<template>
+  <ty-table-v2
     fixed
     :columns="fixedColumns"
     :data="data"
@@ -11,11 +11,11 @@
 <script lang="tsx" setup>
 import { computed, ref } from 'vue'
 import {
-  ElButton,
-  ElCheckbox,
-  ElIcon,
-  ElPopover,
   TableV2FixedDir,
+  TyButton,
+  TyCheckbox,
+  TyIcon,
+  TyPopover,
   useLocale,
 } from 'element-plus'
 import { Filter } from '@element-plus/icons-vue'
@@ -74,7 +74,7 @@ const onReset = () => {
 }
 
 const handleShowPopover = () => {
-  const button = document.querySelector('.el-table-v2__demo-filter button')
+  const button = document.querySelector('.ty-table-v2__demo-filter button')
   ;(button as HTMLElement)?.focus()
 }
 
@@ -82,7 +82,7 @@ columns[0].headerCellRenderer = (props: HeaderCellSlotProps) => {
   return (
     <div class="flex items-center justify-center">
       <span class="mr-2 text-xs">{props.column.title}</span>
-      <ElPopover
+      <TyPopover
         ref={popoverRef}
         trigger="click"
         width={200}
@@ -92,17 +92,17 @@ columns[0].headerCellRenderer = (props: HeaderCellSlotProps) => {
           default: () => (
             <div class="filter-wrapper">
               <div class="filter-group">
-                <ElCheckbox v-model={shouldFilter.value}>
+                <TyCheckbox v-model={shouldFilter.value}>
                   Filter Text
-                </ElCheckbox>
+                </TyCheckbox>
               </div>
-              <div class="el-table-v2__demo-filter">
-                <ElButton text onClick={onFilter}>
+              <div class="ty-table-v2__demo-filter">
+                <TyButton text onClick={onFilter}>
                   Confirm
-                </ElButton>
-                <ElButton text onClick={onReset}>
+                </TyButton>
+                <TyButton text onClick={onReset}>
                   Reset
-                </ElButton>
+                </TyButton>
               </div>
             </div>
           ),
@@ -110,15 +110,15 @@ columns[0].headerCellRenderer = (props: HeaderCellSlotProps) => {
             <button
               type="button"
               aria-label={ariaLabel.value}
-              class="el-table-v2__demo-filter-btn"
+              class="ty-table-v2__demo-filter-btn"
             >
-              <ElIcon size={14}>
+              <TyIcon size={14}>
                 <Filter />
-              </ElIcon>
+              </TyIcon>
             </button>
           ),
         }}
-      </ElPopover>
+      </TyPopover>
     </div>
   )
 }
@@ -132,14 +132,14 @@ const fixedColumns = columns.map((column, columnIndex) => {
 </script>
 
 <style>
-.el-table-v2__demo-filter {
+.ty-table-v2__demo-filter {
   border-top: var(--ty-border);
   margin: 12px -12px -12px;
   padding: 0 12px;
   display: flex;
   justify-content: space-between;
 }
-.el-table-v2__demo-filter-btn {
+.ty-table-v2__demo-filter-btn {
   display: flex;
   cursor: pointer;
   padding: 0;

@@ -1,25 +1,25 @@
-<template>
-  <el-space direction="vertical" alignment="start" :size="30">
-    <el-radio-group v-model="size">
-      <el-radio value="large">Large</el-radio>
-      <el-radio value="default">Default</el-radio>
-      <el-radio value="small">Small</el-radio>
-    </el-radio-group>
+﻿<template>
+  <ty-space direction="vertical" alignment="start" :size="30">
+    <ty-radio-group v-model="size">
+      <ty-radio value="large">Large</ty-radio>
+      <ty-radio value="default">Default</ty-radio>
+      <ty-radio value="small">Small</ty-radio>
+    </ty-radio-group>
 
-    <el-space wrap :size="size">
-      <el-card v-for="i in 3" :key="i" class="box-card" style="width: 250px">
+    <ty-space wrap :size="size">
+      <ty-card v-for="i in 3" :key="i" class="box-card" style="width: 250px">
         <template #header>
           <div class="card-header">
             <span>Card name</span>
-            <el-button class="button" text>Operation button</el-button>
+            <ty-button class="button" text>Operation button</ty-button>
           </div>
         </template>
         <div v-for="o in 4" :key="o" class="text item">
           {{ 'List item ' + o }}
         </div>
-      </el-card>
-    </el-space>
-  </el-space>
+      </ty-card>
+    </ty-space>
+  </ty-space>
 </template>
 
 <script lang="ts" setup>

@@ -40,7 +40,7 @@ tooltip/theme
 
 Display multiple lines of text and set their format.
 
-:::demo Override attribute `content` of `el-tooltip` by adding a slot named `content`.
+:::demo Override attribute `content` of `ty-tooltip` by adding a slot named `content`.
 
 tooltip/rich-content
 
@@ -50,7 +50,7 @@ tooltip/rich-content
 
 In addition to basic usages, there are some attributes that allow you to customize your own:
 
-`transition` attribute allows you to customize the animation in which the tooltip shows or hides, and the default value is el-fade-in-linear.
+`transition` attribute allows you to customize the animation in which the tooltip shows or hides, and the default value is ty-fade-in-linear.
 
 `disabled` attribute allows you to disable `tooltip`. You just need set it to `true`.
 
@@ -210,12 +210,12 @@ tooltip/append-to
 
 | Name                 | Description                                                       | Type                                                |
 | -------------------- | ----------------------------------------------------------------- | --------------------------------------------------- |
-| popperRef            | el-popper component instance                                      | ^[object]`Ref<PopperInstance \| undefined>`         |
-| contentRef           | el-tooltip-content component instance                             | ^[object]`Ref<TooltipContentInstance \| undefined>` |
-| isFocusInsideContent | validate current focus event is trigger inside el-tooltip-content | ^[Function]`() => boolean \| undefined`             |
-| updatePopper         | update el-popper component instance                               | ^[Function]`() => void`                             |
-| onOpen               | expose onOpen function to mange el-tooltip open state             | ^[Function]`(event?: Event \| undefined) => void`   |
-| onClose              | expose onClose function to mange el-tooltip open state            | ^[Function]`(event?: Event \| undefined) => void`   |
+| popperRef            | ty-popper component instance                                      | ^[object]`Ref<PopperInstance \| undefined>`         |
+| contentRef           | ty-tooltip-content component instance                             | ^[object]`Ref<TooltipContentInstance \| undefined>` |
+| isFocusInsideContent | validate current focus event is trigger inside ty-tooltip-content | ^[Function]`() => boolean \| undefined`             |
+| updatePopper         | update ty-popper component instance                               | ^[Function]`() => void`                             |
+| onOpen               | expose onOpen function to mange ty-tooltip open state             | ^[Function]`(event?: Event \| undefined) => void`   |
+| onClose              | expose onClose function to mange ty-tooltip open state            | ^[Function]`(event?: Event \| undefined) => void`   |
 | hide                 | expose hide function                                              | ^[Function]`(event?: Event \| undefined) => void`   |
 
 ## FAQ
@@ -226,8 +226,8 @@ Typical issue: [#20907](https://github.com/element-plus/element-plus/issues/2090
 
 ```vue
 <template>
-  <el-tooltip content="tooltip content" placement="top" :trigger-keys="[]">
-    <el-input v-model="value" placeholder="" />
-  </el-tooltip>
+  <ty-tooltip content="tooltip content" placement="top" :trigger-keys="[]">
+    <ty-input v-model="value" placeholder="" />
+  </ty-tooltip>
 </template>
 ```

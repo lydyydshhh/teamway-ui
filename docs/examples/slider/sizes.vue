@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="slider-demo-block">
-    <el-slider v-model="value" show-input size="large" />
-    <el-slider v-model="value" show-input />
-    <el-slider v-model="value" show-input size="small" />
+    <ty-slider v-model="value" show-input size="large" />
+    <ty-slider v-model="value" show-input />
+    <ty-slider v-model="value" show-input size="small" />
   </div>
 </template>
 
@@ -17,11 +17,11 @@ const value = ref(0)
   max-width: 600px;
 }
 
-.el-slider {
+.ty-slider {
   margin-top: 20px;
 }
 
-.el-slider:first-child {
+.ty-slider:first-child {
   margin-top: 0;
 }
 </style>

@@ -72,7 +72,7 @@ export const useSelect = (
               focusLastNode(listNode)
               return
             }
-            // el-select-dropdown__item => el-tree-node__content => el-tree-node__content
+            // ty-select-dropdown__item => ty-tree-node__content => ty-tree-node__content
             select.value.optionsArray[
               select.value.states.hoveringIndex
             ].$el?.parentNode?.parentNode?.focus({ preventScroll: true })

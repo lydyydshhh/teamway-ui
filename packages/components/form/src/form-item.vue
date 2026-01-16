@@ -78,7 +78,7 @@ import type {
 import type { FormItemValidateState } from './form-item'
 
 defineOptions({
-  name: 'ElFormItem',
+  name: 'TyFormItem',
 })
 const props = defineProps(formItemProps)
 const slots = useSlots()

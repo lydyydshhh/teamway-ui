@@ -43,7 +43,7 @@
           :aria-disabled="disabled"
           @focus="handleFocus"
         >
-          <el-date-picker-cell :cell="cell" />
+          <ty-date-picker-cell :cell="cell" />
         </td>
       </tr>
     </tbody>
@@ -60,7 +60,7 @@ import {
   useBasicDateTable,
   useBasicDateTableDOM,
 } from '../composables/use-basic-date-table'
-import ElDatePickerCell from './basic-cell-render'
+import TyDatePickerCell from './basic-cell-render'
 
 const props = defineProps(basicDateTableProps)
 const emit = defineEmits(basicDateTableEmits)

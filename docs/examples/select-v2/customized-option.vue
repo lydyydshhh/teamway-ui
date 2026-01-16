@@ -1,5 +1,5 @@
-<template>
-  <el-select-v2
+﻿<template>
+  <ty-select-v2
     v-model="value"
     filterable
     :options="options"
@@ -13,7 +13,7 @@
         {{ item.value }}
       </span>
     </template>
-  </el-select-v2>
+  </ty-select-v2>
 </template>
 
 <script lang="ts" setup>

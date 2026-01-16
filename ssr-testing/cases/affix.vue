@@ -1,5 +1,5 @@
 <template>
-  <el-affix :offset="120">
-    <el-button type="primary">Offset top 120px</el-button>
-  </el-affix>
+  <ty-affix :offset="120">
+    <ty-button type="primary">Offset top 120px</ty-button>
+  </ty-affix>
 </template>

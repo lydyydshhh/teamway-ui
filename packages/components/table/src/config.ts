@@ -1,6 +1,6 @@
 import { h } from 'vue'
 import ElCheckbox from '@element-plus/components/checkbox'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { ArrowRight, Loading } from '@element-plus/icons-vue'
 import { getProp, isBoolean, isFunction, isNumber } from '@element-plus/utils'
 
@@ -165,7 +165,7 @@ export const cellForced = {
             }
 
             return [
-              h(ElIcon, null, {
+              h(TyIcon, null, {
                 default: () => {
                   return [h(ArrowRight)]
                 },
@@ -264,7 +264,7 @@ export function treeCellPrefix<T extends DefaultRow>(
           default: () => {
             return [
               h(
-                ElIcon,
+                TyIcon,
                 { class: ns.is('loading', treeNode.loading) },
                 {
                   default: () => [h(icon)],

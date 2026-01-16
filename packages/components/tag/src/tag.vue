@@ -15,9 +15,9 @@
       type="button"
       @click.stop="handleClose"
     >
-      <el-icon>
+      <ty-icon>
         <Close />
-      </el-icon>
+      </ty-icon>
     </button>
   </span>
   <transition
@@ -41,9 +41,9 @@
         type="button"
         @click.stop="handleClose"
       >
-        <el-icon>
+        <ty-icon>
           <Close />
-        </el-icon>
+        </ty-icon>
       </button>
     </span>
   </transition>
@@ -51,7 +51,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import ElIcon from '@element-plus/components/icon'
+import TyIcon from '@element-plus/components/icon'
 import { Close } from '@element-plus/icons-vue'
 import { useLocale, useNamespace } from '@element-plus/hooks'
 import { useFormSize } from '@element-plus/components/form'
@@ -60,7 +60,7 @@ import { tagEmits, tagProps } from './tag'
 import type { VNode } from 'vue'
 
 defineOptions({
-  name: 'ElTag',
+  name: 'TyTag',
 })
 const props = defineProps(tagProps)
 const emit = defineEmits(tagEmits)

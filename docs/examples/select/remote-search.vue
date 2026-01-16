@@ -1,8 +1,8 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap">
     <div class="m-4">
       <p>default</p>
-      <el-select
+      <ty-select
         v-model="value"
         multiple
         filterable
@@ -13,17 +13,17 @@
         :loading="loading"
         style="width: 240px"
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
           :value="item.value"
         />
-      </el-select>
+      </ty-select>
     </div>
     <div class="m-4">
       <p>use remote-show-suffix</p>
-      <el-select
+      <ty-select
         v-model="value"
         multiple
         filterable
@@ -35,13 +35,13 @@
         :loading="loading"
         style="width: 240px"
       >
-        <el-option
+        <ty-option
           v-for="item in options"
           :key="item.value"
           :label="item.label"
           :value="item.value"
         />
-      </el-select>
+      </ty-select>
     </div>
   </div>
 </template>

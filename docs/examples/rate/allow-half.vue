@@ -1,5 +1,5 @@
-<template>
-  <el-rate v-model="value" allow-half />
+﻿<template>
+  <ty-rate v-model="value" allow-half />
 </template>
 
 <script lang="ts" setup>

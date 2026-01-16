@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-4 items-center">
-    <el-select-v2
+    <ty-select-v2
       v-model="value1"
       :options="options"
       placeholder="Select"
@@ -11,9 +11,9 @@
         <span>{{ label }}: </span>
         <span style="font-weight: bold">{{ value }}</span>
       </template>
-    </el-select-v2>
+    </ty-select-v2>
 
-    <el-select-v2
+    <ty-select-v2
       v-model="value2"
       :options="options"
       placeholder="Select"
@@ -25,7 +25,7 @@
         <span>{{ label }}: </span>
         <span style="font-weight: bold">{{ value }}</span>
       </template>
-    </el-select-v2>
+    </ty-select-v2>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="common-layout">
-    <el-container>
-      <el-aside
+    <ty-container>
+      <ty-aside
         width="200px"
         style="
           display: flex;
@@ -9,37 +9,37 @@
           align-items: center;
           background-color: #d3dce6;
         "
-        >Aside</el-aside
+        >Aside</ty-aside
       >
-      <el-container>
-        <el-header
+      <ty-container>
+        <ty-header
           style="
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #b3c0d1;
           "
-          >Header</el-header
+          >Header</ty-header
         >
-        <el-main
+        <ty-main
           style="
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #e9eef3;
           "
-          >Main</el-main
+          >Main</ty-main
         >
-        <el-footer
+        <ty-footer
           style="
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #b3c0d1;
           "
-          >Footer</el-footer
+          >Footer</ty-footer
         >
-      </el-container>
-    </el-container>
+      </ty-container>
+    </ty-container>
   </div>
 </template>

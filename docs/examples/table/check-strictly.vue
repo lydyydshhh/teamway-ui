@@ -1,19 +1,19 @@
-<template>
-  <el-radio-group v-model="treeProps.checkStrictly" class="mb-2">
-    <el-radio-button :value="true" label="true" />
-    <el-radio-button :value="false" label="false" />
-  </el-radio-group>
-  <el-table
+﻿<template>
+  <ty-radio-group v-model="treeProps.checkStrictly" class="mb-2">
+    <ty-radio-button :value="true" label="true" />
+    <ty-radio-button :value="false" label="false" />
+  </ty-radio-group>
+  <ty-table
     :data="tableData"
     :tree-props="treeProps"
     row-key="id"
     default-expand-all
   >
-    <el-table-column type="selection" width="55" :selectable="selectable" />
-    <el-table-column prop="date" label="Date" />
-    <el-table-column prop="name" label="Name" />
-    <el-table-column prop="address" label="Address" />
-  </el-table>
+    <ty-table-column type="selection" width="55" :selectable="selectable" />
+    <ty-table-column prop="date" label="Date" />
+    <ty-table-column prop="name" label="Name" />
+    <ty-table-column prop="address" label="Address" />
+  </ty-table>
 </template>
 
 <script lang="ts" setup>

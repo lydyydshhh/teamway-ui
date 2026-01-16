@@ -23,15 +23,15 @@
       @mouseenter="clearTimer"
       @mouseleave="startTimer"
     >
-      <el-badge
+      <ty-badge
         v-if="repeatNum > 1"
         :value="repeatNum"
         :type="badgeType"
         :class="ns.e('badge')"
       />
-      <el-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
+      <ty-icon v-if="iconComponent" :class="[ns.e('icon'), typeClass]">
         <component :is="iconComponent" />
-      </el-icon>
+      </ty-icon>
       <slot>
         <p v-if="!dangerouslyUseHTMLString" :class="ns.e('content')">
           {{ message }}
@@ -39,9 +39,9 @@
         <!-- Caution here, message could've been compromised, never use user's input as message -->
         <p v-else :class="ns.e('content')" v-html="message" />
       </slot>
-      <el-icon v-if="showClose" :class="ns.e('closeBtn')" @click.stop="close">
+      <ty-icon v-if="showClose" :class="ns.e('closeBtn')" @click.stop="close">
         <Close />
-      </el-icon>
+      </ty-icon>
     </div>
   </transition>
 </template>
@@ -55,9 +55,9 @@ import {
   getEventCode,
 } from '@element-plus/utils'
 import { EVENT_CODE } from '@element-plus/constants'
-import ElBadge from '@element-plus/components/badge'
+import TyBadge from '@element-plus/components/badge'
 import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import {
   MESSAGE_DEFAULT_PLACEMENT,
   messageEmits,
@@ -71,7 +71,7 @@ import type { CSSProperties } from 'vue'
 const { Close } = TypeComponents
 
 defineOptions({
-  name: 'ElMessage',
+  name: 'TyMessage',
 })
 
 const props = defineProps(messageProps)

@@ -1,3 +1,3 @@
-<template>
-  <el-empty :image-size="200" />
+﻿<template>
+  <ty-empty :image-size="200" />
 </template>

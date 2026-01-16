@@ -1,14 +1,14 @@
-<template>
-  <el-button plain @click="open">Click to open Message Box</el-button>
+﻿<template>
+  <ty-button plain @click="open">Click to open Message Box</ty-button>
 </template>
 
 <script lang="ts" setup>
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'element-plus'
 
 import type { Action } from 'element-plus'
 
 const open = () => {
-  ElMessageBox.confirm(
+  TyMessageBox.confirm(
     'You have unsaved changes, save and proceed?',
     'Confirm',
     {
@@ -18,13 +18,13 @@ const open = () => {
     }
   )
     .then(() => {
-      ElMessage({
+      TyMessage({
         type: 'info',
         message: 'Changes saved. Proceeding to a new route.',
       })
     })
     .catch((action: Action) => {
-      ElMessage({
+      TyMessage({
         type: 'info',
         message:
           action === 'cancel'

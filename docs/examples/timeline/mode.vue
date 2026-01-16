@@ -1,20 +1,20 @@
-<template>
-  <el-radio-group v-model="mode">
-    <el-radio-button label="start" value="start" />
-    <el-radio-button label="alternate" value="alternate" />
-    <el-radio-button label="alternate-reverse" value="alternate-reverse" />
-    <el-radio-button label="end" value="end" />
-  </el-radio-group>
+﻿<template>
+  <ty-radio-group v-model="mode">
+    <ty-radio-button label="start" value="start" />
+    <ty-radio-button label="alternate" value="alternate" />
+    <ty-radio-button label="alternate-reverse" value="alternate-reverse" />
+    <ty-radio-button label="end" value="end" />
+  </ty-radio-group>
 
-  <el-timeline class="mt-4" :mode="mode">
-    <el-timeline-item
+  <ty-timeline class="mt-4" :mode="mode">
+    <ty-timeline-item
       v-for="(activity, index) in activities"
       :key="index"
       :timestamp="activity.timestamp"
     >
       {{ activity.content }}
-    </el-timeline-item>
-  </el-timeline>
+    </ty-timeline-item>
+  </ty-timeline>
 </template>
 
 <script lang="ts" setup>

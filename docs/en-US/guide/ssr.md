@@ -57,9 +57,9 @@ For example, use the `ClientOnly` component in Nuxt.
 
 ```html
 <client-only>
-  <el-tooltip content="the tooltip content">
-    <el-button>tooltip</el-button>
-  </el-tooltip>
+  <ty-tooltip content="the tooltip content">
+    <ty-button>tooltip</ty-button>
+  </ty-tooltip>
 </client-only>
 ```
 
@@ -77,9 +77,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <el-tooltip v-if="isClient" content="the tooltip content">
-    <el-button>tooltip</el-button>
-  </el-tooltip>
+  <ty-tooltip v-if="isClient" content="the tooltip content">
+    <ty-button>tooltip</ty-button>
+  </ty-tooltip>
 </template>
 ```
 
@@ -106,7 +106,7 @@ You need to inject the teleport markup close to the `<body>` tag.
 
 :::tip
 
-If you modify the [Namespace](./namespace.md) or `append-to` attribute, you need to adjust the `#el-popper-container-` value.
+If you modify the [Namespace](./namespace.md) or `append-to` attribute, you need to adjust the `#ty-popper-container-` value.
 
 :::
 
@@ -128,7 +128,7 @@ export async function render(url, manifest) {
 function renderTeleports(teleports) {
   if (!teleports) return ''
   return Object.entries(teleports).reduce((all, [key, value]) => {
-    if (key.startsWith('#el-popper-container-')) {
+    if (key.startsWith('#ty-popper-container-')) {
       return `${all}<div id="${key.slice(1)}">${value}</div>`
     }
     return all

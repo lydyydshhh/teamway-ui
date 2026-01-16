@@ -1,12 +1,12 @@
-<template>
-  <el-form
+﻿<template>
+  <ty-form
     ref="formRef"
     style="max-width: 600px"
     :model="dynamicValidateForm"
     label-width="auto"
     class="demo-dynamic"
   >
-    <el-form-item
+    <ty-form-item
       prop="email"
       label="Email"
       :rules="[
@@ -22,9 +22,9 @@
         },
       ]"
     >
-      <el-input v-model="dynamicValidateForm.email" />
-    </el-form-item>
-    <el-form-item
+      <ty-input v-model="dynamicValidateForm.email" />
+    </ty-form-item>
+    <ty-form-item
       v-for="(domain, index) in dynamicValidateForm.domains"
       :key="domain.key"
       :label="'Domain' + index"
@@ -35,17 +35,17 @@
         trigger: 'blur',
       }"
     >
-      <el-input v-model="domain.value" />
-      <el-button class="mt-2" @click.prevent="removeDomain(domain)">
+      <ty-input v-model="domain.value" />
+      <ty-button class="mt-2" @click.prevent="removeDomain(domain)">
         Delete
-      </el-button>
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
-      <el-button @click="addDomain">New domain</el-button>
-      <el-button @click="resetForm(formRef)">Reset</el-button>
-    </el-form-item>
-  </el-form>
+      </ty-button>
+    </ty-form-item>
+    <ty-form-item>
+      <ty-button type="primary" @click="submitForm(formRef)">Submit</ty-button>
+      <ty-button @click="addDomain">New domain</ty-button>
+      <ty-button @click="resetForm(formRef)">Reset</ty-button>
+    </ty-form-item>
+  </ty-form>
 </template>
 
 <script lang="ts" setup>
@@ -86,9 +86,9 @@ const addDomain = () => {
   })
 }
 
-const submitForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.validate((valid) => {
+const submitForm = (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  formTy.validate((valid) => {
     if (valid) {
       console.log('submit!')
     } else {
@@ -97,8 +97,8 @@ const submitForm = (formEl: FormInstance | undefined) => {
   })
 }
 
-const resetForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.resetFields()
+const resetForm = (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  formTy.resetFields()
 }
 </script>

@@ -1,12 +1,12 @@
-<template>
-  <el-switch
+﻿<template>
+  <ty-switch
     v-model="value1"
     class="mb-2"
     active-text="Pay by month"
     inactive-text="Pay by year"
   />
   <br />
-  <el-switch
+  <ty-switch
     v-model="value2"
     class="mb-2"
     style="--ty-switch-on-color: #13ce66; --ty-switch-off-color: #ff4949"
@@ -14,13 +14,13 @@
     inactive-text="Pay by year"
   />
   <br />
-  <el-switch
+  <ty-switch
     v-model="value3"
     inline-prompt
     active-text="是"
     inactive-text="否"
   />
-  <el-switch
+  <ty-switch
     v-model="value4"
     class="ml-2"
     inline-prompt
@@ -28,7 +28,7 @@
     active-text="Y"
     inactive-text="N"
   />
-  <el-switch
+  <ty-switch
     v-model="value6"
     class="ml-2"
     width="60"
@@ -36,7 +36,7 @@
     active-text="超出省略"
     inactive-text="超出省略"
   />
-  <el-switch
+  <ty-switch
     v-model="value5"
     class="ml-2"
     inline-prompt

@@ -1,19 +1,19 @@
-<template>
+﻿<template>
   <div class="demo-progress">
-    <el-progress :text-inside="true" :stroke-width="26" :percentage="70" />
-    <el-progress
+    <ty-progress :text-inside="true" :stroke-width="26" :percentage="70" />
+    <ty-progress
       :text-inside="true"
       :stroke-width="24"
       :percentage="100"
       status="success"
     />
-    <el-progress
+    <ty-progress
       :text-inside="true"
       :stroke-width="22"
       :percentage="80"
       status="warning"
     />
-    <el-progress
+    <ty-progress
       :text-inside="true"
       :stroke-width="20"
       :percentage="50"
@@ -23,7 +23,7 @@
 </template>
 
 <style scoped>
-.demo-progress .el-progress--line {
+.demo-progress .ty-progress--line {
   margin-bottom: 15px;
   max-width: 600px;
 }

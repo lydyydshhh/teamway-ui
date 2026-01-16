@@ -4,7 +4,7 @@ import ElText from '@element-plus/components/text'
 import { ROOT_TREE_INJECTION_KEY, treeNodeContentProps } from './virtual-tree'
 
 export default defineComponent({
-  name: 'ElTreeNodeContent',
+  name: 'TyTreeNodeContent',
   props: treeNodeContentProps,
   setup(props) {
     const tree = inject(ROOT_TREE_INJECTION_KEY)

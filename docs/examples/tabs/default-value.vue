@@ -1,11 +1,11 @@
-<template>
-  <el-tabs
+﻿<template>
+  <ty-tabs
     v-model="activeName"
     class="demo-tabs"
     default-value="third"
     @tab-click="handleClick"
   >
-    <el-tab-pane
+    <ty-tab-pane
       v-for="tab in tabs"
       :key="tab.name"
       :label="tab.label"
@@ -14,8 +14,8 @@
       default-value: third
       <br />
       active: {{ activeName }}
-    </el-tab-pane>
-  </el-tabs>
+    </ty-tab-pane>
+  </ty-tabs>
 </template>
 
 <script lang="ts" setup>
@@ -38,7 +38,7 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 </script>
 
 <style>
-.demo-tabs > .el-tabs__content {
+.demo-tabs > .ty-tabs__content {
   padding: 32px;
   color: #6b778c;
   font-size: 32px;

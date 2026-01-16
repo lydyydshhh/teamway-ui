@@ -1,7 +1,7 @@
-<template>
-  <el-badge class="item" :value="1" :offset="[10, 5]">
-    <el-button> offset</el-button>
-  </el-badge>
+﻿<template>
+  <ty-badge class="item" :value="1" :offset="[10, 5]">
+    <ty-button> offset</ty-button>
+  </ty-badge>
 </template>
 
 <style scoped>

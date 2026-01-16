@@ -40,13 +40,13 @@ import {
 } from './radio-group'
 import { radioGroupKey } from './constants'
 import { isEqual, omit } from 'lodash-unified'
-import ElRadio from './radio.vue'
-import ElRadioButton from './radio-button.vue'
+import TyRadio from './radio.vue'
+import TyRadioButton from './radio-button.vue'
 
 import type { RadioGroupProps } from './radio-group'
 
 defineOptions({
-  name: 'ElRadioGroup',
+  name: 'TyRadioGroup',
 })
 
 const props = defineProps(radioGroupProps)
@@ -93,7 +93,7 @@ const getOptionProps = (option: Record<string, any>) => {
 }
 
 const optionComponent = computed(() =>
-  props.type === 'button' ? ElRadioButton : ElRadio
+  props.type === 'button' ? TyRadioButton : TyRadio
 )
 
 provide(

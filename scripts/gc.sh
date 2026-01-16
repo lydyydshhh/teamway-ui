@@ -38,7 +38,7 @@ cat > $DIRNAME/src/$INPUT_NAME.vue <<EOF
 import { ${PROP_NAME}Emits, ${PROP_NAME}Props } from './$INPUT_NAME'
 
 defineOptions({
-  name: 'El$NAME',
+  name: 'Ty$NAME',
 })
 
 const props = defineProps(${PROP_NAME}Props)
@@ -102,7 +102,7 @@ EOF
 
 cat > $DIRNAME/style/css.ts <<EOF
 import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/el-$INPUT_NAME.css'
+import '@element-plus/theme-chalk/ty-$INPUT_NAME.css'
 EOF
 
 cat > $FILE_PATH/theme-chalk/src/$INPUT_NAME.scss <<EOF

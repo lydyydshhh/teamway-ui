@@ -1,12 +1,12 @@
-<template>
-  <el-form
+﻿<template>
+  <ty-form
     ref="formRef"
     style="max-width: 600px"
     :model="numberValidateForm"
     label-width="auto"
     class="demo-ruleForm"
   >
-    <el-form-item
+    <ty-form-item
       label="age"
       prop="age"
       :rules="[
@@ -14,17 +14,17 @@
         { type: 'number', message: 'age must be a number' },
       ]"
     >
-      <el-input
+      <ty-input
         v-model.number="numberValidateForm.age"
         type="text"
         autocomplete="off"
       />
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
-      <el-button @click="resetForm(formRef)">Reset</el-button>
-    </el-form-item>
-  </el-form>
+    </ty-form-item>
+    <ty-form-item>
+      <ty-button type="primary" @click="submitForm(formRef)">Submit</ty-button>
+      <ty-button @click="resetForm(formRef)">Reset</ty-button>
+    </ty-form-item>
+  </ty-form>
 </template>
 
 <script lang="ts" setup>
@@ -38,9 +38,9 @@ const numberValidateForm = reactive({
   age: '',
 })
 
-const submitForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.validate((valid) => {
+const submitForm = (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  formTy.validate((valid) => {
     if (valid) {
       console.log('submit!')
     } else {
@@ -49,8 +49,8 @@ const submitForm = (formEl: FormInstance | undefined) => {
   })
 }
 
-const resetForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.resetFields()
+const resetForm = (formTy: FormInstance | undefined) => {
+  if (!formTy) return
+  formTy.resetFields()
 }
 </script>

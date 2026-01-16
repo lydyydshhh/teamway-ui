@@ -1,9 +1,9 @@
-<template>
-  <el-input-tag v-model="input" size="large" placeholder="Please input" />
+﻿<template>
+  <ty-input-tag v-model="input" size="large" placeholder="Please input" />
   <br />
-  <el-input-tag v-model="input" placeholder="Please input" />
+  <ty-input-tag v-model="input" placeholder="Please input" />
   <br />
-  <el-input-tag v-model="input" size="small" placeholder="Please input" />
+  <ty-input-tag v-model="input" size="small" placeholder="Please input" />
 </template>
 
 <script lang="ts" setup>

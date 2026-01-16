@@ -1,22 +1,22 @@
-<template>
+﻿<template>
   <div class="flex flex-wrap gap-1">
-    <el-button class="!ml-0" :plain="true" @click="open">
+    <ty-button class="!ml-0" :plain="true" @click="open">
       Show message
-    </el-button>
-    <el-button class="!ml-0" :plain="true" @click="openVn">VNode</el-button>
+    </ty-button>
+    <ty-button class="!ml-0" :plain="true" @click="openVn">VNode</ty-button>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { h } from 'vue'
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 const open = () => {
-  ElMessage('This is a message.')
+  TyMessage('This is a message.')
 }
 
 const openVn = () => {
-  ElMessage({
+  TyMessage({
     message: h('p', { style: 'line-height: 1; font-size: 14px' }, [
       h('span', null, 'Message can be '),
       h('i', { style: 'color: teal' }, 'VNode'),

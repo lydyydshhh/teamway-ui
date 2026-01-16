@@ -1,18 +1,18 @@
-<template>
-  <el-select v-model="value" placeholder="Select" style="width: 240px">
-    <el-option-group
+﻿<template>
+  <ty-select v-model="value" placeholder="Select" style="width: 240px">
+    <ty-option-group
       v-for="group in options"
       :key="group.label"
       :label="group.label"
     >
-      <el-option
+      <ty-option
         v-for="item in group.options"
         :key="item.value"
         :label="item.label"
         :value="item.value"
       />
-    </el-option-group>
-  </el-select>
+    </ty-option-group>
+  </ty-select>
 </template>
 
 <script lang="ts" setup>

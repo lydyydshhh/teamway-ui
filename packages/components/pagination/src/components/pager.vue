@@ -77,7 +77,7 @@ import { CHANGE_EVENT } from '@element-plus/constants'
 import { paginationPagerProps } from './pager'
 
 defineOptions({
-  name: 'ElPaginationPager',
+  name: 'TyPaginationPager',
 })
 const props = defineProps(paginationPagerProps)
 const emit = defineEmits([CHANGE_EVENT])

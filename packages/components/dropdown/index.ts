@@ -5,17 +5,17 @@ import DropdownMenu from './src/dropdown-menu.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export const ElDropdown: SFCWithInstall<typeof Dropdown> & {
+export const TyDropdown: SFCWithInstall<typeof Dropdown> & {
   DropdownItem: typeof DropdownItem
   DropdownMenu: typeof DropdownMenu
 } = withInstall(Dropdown, {
   DropdownItem,
   DropdownMenu,
 })
-export default ElDropdown
-export const ElDropdownItem: SFCWithInstall<typeof DropdownItem> =
+export default TyDropdown
+export const TyDropdownItem: SFCWithInstall<typeof DropdownItem> =
   withNoopInstall(DropdownItem)
-export const ElDropdownMenu: SFCWithInstall<typeof DropdownMenu> =
+export const TyDropdownMenu: SFCWithInstall<typeof DropdownMenu> =
   withNoopInstall(DropdownMenu)
 export * from './src/dropdown'
 export * from './src/instance'

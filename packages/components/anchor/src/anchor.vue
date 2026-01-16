@@ -42,7 +42,7 @@ import type { CSSProperties } from 'vue'
 import type { AnchorLinkState } from './constants'
 
 defineOptions({
-  name: 'ElAnchor',
+  name: 'TyAnchor',
 })
 
 const props = defineProps(anchorProps)

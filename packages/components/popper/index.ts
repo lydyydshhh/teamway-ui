@@ -1,15 +1,15 @@
 import { withInstall } from '@element-plus/utils'
 import Popper from './src/popper.vue'
-import ElPopperArrow from './src/arrow.vue'
-import ElPopperTrigger from './src/trigger.vue'
-import ElPopperContent from './src/content.vue'
+import TyPopperArrow from './src/arrow.vue'
+import TyPopperTrigger from './src/trigger.vue'
+import TyPopperContent from './src/content.vue'
 
 import type { SFCWithInstall } from '@element-plus/utils'
 
-export { ElPopperArrow, ElPopperTrigger, ElPopperContent }
+export { TyPopperArrow, TyPopperTrigger, TyPopperContent }
 
-export const ElPopper: SFCWithInstall<typeof Popper> = withInstall(Popper)
-export default ElPopper
+export const TyPopper: SFCWithInstall<typeof Popper> = withInstall(Popper)
+export default TyPopper
 
 export * from './src/popper'
 export * from './src/trigger'

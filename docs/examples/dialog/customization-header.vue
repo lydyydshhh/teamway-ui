@@ -1,20 +1,20 @@
-<template>
-  <el-button plain @click="visible = true">
+﻿<template>
+  <ty-button plain @click="visible = true">
     Open Dialog with customized header
-  </el-button>
+  </ty-button>
 
-  <el-dialog v-model="visible" :show-close="false" width="500">
+  <ty-dialog v-model="visible" :show-close="false" width="500">
     <template #header="{ close, titleId, titleClass }">
       <div class="my-header">
         <h4 :id="titleId" :class="titleClass">This is a custom header!</h4>
-        <el-button type="danger" @click="close">
-          <el-icon class="el-icon--left"><CircleCloseFilled /></el-icon>
+        <ty-button type="danger" @click="close">
+          <ty-icon class="ty-icon--left"><CircleCloseFilled /></ty-icon>
           Close
-        </el-button>
+        </ty-button>
       </div>
     </template>
     This is dialog content.
-  </el-dialog>
+  </ty-dialog>
 </template>
 
 <script lang="ts" setup>

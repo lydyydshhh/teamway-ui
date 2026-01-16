@@ -13,7 +13,7 @@ import { rowProps } from './row'
 import type { CSSProperties } from 'vue'
 
 defineOptions({
-  name: 'ElRow',
+  name: 'TyRow',
 })
 
 const props = defineProps(rowProps)

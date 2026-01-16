@@ -22,7 +22,7 @@ import { usePredefine, usePredefineDOM } from '../composables/use-predefine'
 import { useLocale } from '@element-plus/hooks/use-locale'
 
 defineOptions({
-  name: 'ElColorPredefine',
+  name: 'TyColorPredefine',
 })
 
 const props = defineProps(predefineProps)

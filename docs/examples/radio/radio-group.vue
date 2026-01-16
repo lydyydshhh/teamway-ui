@@ -1,9 +1,9 @@
-<template>
-  <el-radio-group v-model="radio">
-    <el-radio :value="3">Option A</el-radio>
-    <el-radio :value="6">Option B</el-radio>
-    <el-radio :value="9">Option C</el-radio>
-  </el-radio-group>
+﻿<template>
+  <ty-radio-group v-model="radio">
+    <ty-radio :value="3">Option A</ty-radio>
+    <ty-radio :value="6">Option B</ty-radio>
+    <ty-radio :value="9">Option C</ty-radio>
+  </ty-radio-group>
 </template>
 
 <script lang="ts" setup>

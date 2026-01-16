@@ -5,7 +5,7 @@
     :target="disabled || !href ? undefined : target"
     @click="handleClick"
   >
-    <el-icon v-if="icon"><component :is="icon" /></el-icon>
+    <ty-icon v-if="icon"><component :is="icon" /></ty-icon>
     <span v-if="$slots.default" :class="ns.e('inner')">
       <slot />
     </span>
@@ -16,14 +16,14 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { useGlobalConfig } from '@element-plus/components/config-provider'
 import { useDeprecated, useNamespace } from '@element-plus/hooks'
 import { isBoolean } from '@element-plus/utils'
 import { linkEmits, linkProps } from './link'
 
 defineOptions({
-  name: 'ElLink',
+  name: 'TyLink',
 })
 const props = defineProps(linkProps)
 const emit = defineEmits(linkEmits)
@@ -31,7 +31,7 @@ const globalConfig = useGlobalConfig('link')
 
 useDeprecated(
   {
-    scope: 'el-link',
+    scope: 'ty-link',
     from: 'The underline option (boolean)',
     replacement: "'always' | 'hover' | 'never'",
     version: '3.0.0',

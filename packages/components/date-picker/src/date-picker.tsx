@@ -7,8 +7,8 @@ import {
 } from '@element-plus/components/time-picker'
 import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import {
-  ElDatePickerPanel,
   ROOT_PICKER_IS_DEFAULT_FORMAT_INJECTION_KEY,
+  TyDatePickerPanel,
 } from '@element-plus/components/date-picker-panel'
 import { datePickerProps } from './props'
 
@@ -19,7 +19,7 @@ import type {
 import type { DatePickerExpose } from './instance'
 
 export default defineComponent({
-  name: 'ElDatePicker',
+  name: 'TyDatePicker',
   install: null,
   props: datePickerProps,
   emits: [UPDATE_MODEL_EVENT],
@@ -71,14 +71,14 @@ export default defineComponent({
         >
           {{
             default: (scopedProps: /**FIXME: remove any type */ any) => (
-              <ElDatePickerPanel
+              <TyDatePickerPanel
                 disabled={props.disabled}
                 editable={props.editable}
                 border={false}
                 {...scopedProps}
               >
                 {slots}
-              </ElDatePickerPanel>
+              </TyDatePickerPanel>
             ),
             'range-separator': slots['range-separator'],
           }}

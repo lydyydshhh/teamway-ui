@@ -1,6 +1,6 @@
-<template>
-  <el-pagination size="small" layout="prev, pager, next" :total="50" />
-  <el-pagination
+﻿<template>
+  <ty-pagination size="small" layout="prev, pager, next" :total="50" />
+  <ty-pagination
     size="small"
     background
     layout="prev, pager, next"

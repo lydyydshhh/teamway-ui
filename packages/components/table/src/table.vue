@@ -60,7 +60,7 @@
         </table>
       </div>
       <div ref="bodyWrapper" :class="ns.e('body-wrapper')">
-        <el-scrollbar
+        <ty-scrollbar
           ref="scrollBarRef"
           :view-style="scrollbarViewStyle"
           :wrap-style="scrollbarStyle"
@@ -131,7 +131,7 @@
           >
             <slot name="append" />
           </div>
-        </el-scrollbar>
+        </ty-scrollbar>
       </div>
       <div
         v-if="showSummary && tableLayout === 'fixed'"
@@ -181,7 +181,7 @@ import {
 import { debounce } from 'lodash-unified'
 import { Mousewheel } from '@element-plus/directives'
 import { useLocale, useNamespace } from '@element-plus/hooks'
-import ElScrollbar from '@element-plus/components/scrollbar'
+import TyScrollbar from '@element-plus/components/scrollbar'
 import { createStore } from './store/helper'
 import TableLayout from './table-layout'
 import TableHeader from './table-header'
@@ -200,7 +200,7 @@ import type { Table } from './table/defaults'
 
 let tableIdSeed = 1
 export default defineComponent({
-  name: 'ElTable',
+  name: 'TyTable',
   directives: {
     Mousewheel,
   },
@@ -208,7 +208,7 @@ export default defineComponent({
     TableHeader,
     TableBody,
     TableFooter,
-    ElScrollbar,
+    TyScrollbar,
     hColgroup,
   },
   props: defaultProps,

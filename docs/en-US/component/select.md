@@ -9,13 +9,13 @@ When there are plenty of options, use a drop-down menu to display and select des
 
 :::tip
 
-After version ^(2.5.0), the default width of `el-select` changed to `100%`. When used in a inline form, the width will collapse. In order to display the width properly, you need to give `el-select` a specific width (eg: [Example](https://github.com/element-plus/element-plus/issues/15834#issuecomment-1936919229)) .
+After version ^(2.5.0), the default width of `ty-select` changed to `100%`. When used in a inline form, the width will collapse. In order to display the width properly, you need to give `ty-select` a specific width (eg: [Example](https://github.com/element-plus/element-plus/issues/15834#issuecomment-1936919229)) .
 
 :::
 
 ## Basic usage
 
-:::demo `v-model` is the value of `el-option` that is currently selected.
+:::demo `v-model` is the value of `ty-option` that is currently selected.
 
 select/basic-usage
 
@@ -23,7 +23,7 @@ select/basic-usage
 
 ## Options attribute ^(2.10.5)
 
-:::demo Shortcut from basic `el-option` usage. You can customize the alias of the `options` through the `props` attribute.
+:::demo Shortcut from basic `ty-option` usage. You can customize the alias of the `options` through the `props` attribute.
 
 select/options
 
@@ -31,7 +31,7 @@ select/options
 
 ## Disabled option
 
-:::demo Set the value of `disabled` in `el-option` to `true` to disable this option.
+:::demo Set the value of `disabled` in `ty-option` to `true` to disable this option.
 
 select/disabled-option
 
@@ -41,7 +41,7 @@ select/disabled-option
 
 Disable the whole component.
 
-:::demo Set `disabled` of `el-select` to make it disabled.
+:::demo Set `disabled` of `ty-select` to make it disabled.
 
 select/disabled
 
@@ -51,7 +51,7 @@ select/disabled
 
 You can clear Select using a clear icon.
 
-:::demo Set `clearable` attribute for `el-select` and a clear icon will appear.
+:::demo Set `clearable` attribute for `ty-select` and a clear icon will appear.
 
 select/clearable
 
@@ -69,7 +69,7 @@ select/size
 
 Multiple select uses tags to display selected options.
 
-:::demo Set `multiple` attribute for `el-select` to enable multiple mode. In this case, the value of `v-model` will be an array of selected options. By default the selected options will be displayed as Tags. You can collapse them to a text by using `collapse-tags` attribute. You can check them when mouse hover collapse text by using `collapse-tags-tooltip` attribute.
+:::demo Set `multiple` attribute for `ty-select` to enable multiple mode. In this case, the value of `v-model` will be an array of selected options. By default the selected options will be displayed as Tags. You can collapse them to a text by using `collapse-tags` attribute. You can check them when mouse hover collapse text by using `collapse-tags-tooltip` attribute.
 
 select/multiple
 
@@ -79,7 +79,7 @@ select/multiple
 
 You can customize HTML templates for options.
 
-:::demo Insert customized HTML templates into the slot of `el-option`.
+:::demo Insert customized HTML templates into the slot of `ty-option`.
 
 select/custom-template
 
@@ -109,7 +109,7 @@ select/custom-footer
 
 Display options in groups.
 
-:::demo Use `el-option-group` to group the options, and its `label` attribute stands for the name of the group.
+:::demo Use `ty-option-group` to group the options, and its `label` attribute stands for the name of the group.
 
 select/grouping
 
@@ -119,7 +119,7 @@ select/grouping
 
 You can filter options for your desired ones.
 
-:::demo Adding `filterable` to `el-select` enables filtering. By default, Select will find all the options whose `label` attribute contains the input value. If you prefer other filtering strategies, you can pass the `filter-method`. `filter-method` is a `Function` that gets called when the input value changes, and its parameter is the current input value.
+:::demo Adding `filterable` to `ty-select` enables filtering. By default, Select will find all the options whose `label` attribute contains the input value. If you prefer other filtering strategies, you can pass the `filter-method`. `filter-method` is a `Function` that gets called when the input value changes, and its parameter is the current input value.
 
 select/filterable
 
@@ -129,7 +129,7 @@ select/filterable
 
 Enter keywords and search data from server.
 
-:::demo Set the value of `filterable` and `remote` with `true` to enable remote search, and you should pass the `remote-method`. `remote-method` is a `Function` that gets called when the input value changes, and its parameter is the current input value. Note that if `el-option` is rendered with the `v-for` directive, you should add the `key` attribute for `el-option`. Its value needs to be unique, such as `item.value` in the following example.
+:::demo Set the value of `filterable` and `remote` with `true` to enable remote search, and you should pass the `remote-method`. `remote-method` is a `Function` that gets called when the input value changes, and its parameter is the current input value. Note that if `ty-option` is rendered with the `v-for` directive, you should add the `key` attribute for `ty-option`. Its value needs to be unique, such as `item.value` in the following example.
 
 select/remote-search
 
@@ -159,7 +159,7 @@ select/value-key
 
 You can customize tags.
 
-:::demo Insert customized tags into the slot of `el-select`. `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` will not work.
+:::demo Insert customized tags into the slot of `ty-select`. `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` will not work.
 
 select/custom-tag
 

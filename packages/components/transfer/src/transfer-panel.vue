@@ -1,7 +1,7 @@
 <template>
   <div :class="ns.b('panel')">
     <p :class="ns.be('panel', 'header')">
-      <el-checkbox
+      <ty-checkbox
         v-model="allChecked"
         :indeterminate="isIndeterminate"
         :validate-event="false"
@@ -9,11 +9,11 @@
       >
         {{ title }}
         <span>{{ checkedSummary }}</span>
-      </el-checkbox>
+      </ty-checkbox>
     </p>
 
     <div :class="[ns.be('panel', 'body'), ns.is('with-footer', hasFooter)]">
-      <el-input
+      <ty-input
         v-if="filterable"
         v-model="query"
         :class="ns.be('panel', 'filter')"
@@ -23,13 +23,13 @@
         clearable
         :validate-event="false"
       />
-      <el-checkbox-group
+      <ty-checkbox-group
         v-show="!hasNoMatch && !isEmpty(data)"
         v-model="checked"
         :validate-event="false"
         :class="[ns.is('filterable', filterable), ns.be('panel', 'list')]"
       >
-        <el-checkbox
+        <ty-checkbox
           v-for="item in filteredData"
           :key="item[propsAlias.key]"
           :class="ns.be('panel', 'item')"
@@ -38,8 +38,8 @@
           :validate-event="false"
         >
           <option-content :option="optionRender?.(item)" />
-        </el-checkbox>
-      </el-checkbox-group>
+        </ty-checkbox>
+      </ty-checkbox-group>
       <div
         v-show="hasNoMatch || isEmpty(data)"
         :class="ns.be('panel', 'empty')"
@@ -59,8 +59,8 @@
 import { computed, reactive, toRefs, useSlots } from 'vue'
 import { isEmpty } from '@element-plus/utils'
 import { useLocale, useNamespace } from '@element-plus/hooks'
-import { ElCheckbox, ElCheckboxGroup } from '@element-plus/components/checkbox'
-import { ElInput } from '@element-plus/components/input'
+import { TyCheckbox, TyCheckboxGroup } from '@element-plus/components/checkbox'
+import { TyInput } from '@element-plus/components/input'
 import { Search } from '@element-plus/icons-vue'
 import { transferPanelEmits, transferPanelProps } from './transfer-panel'
 import { useCheck, usePropsAlias } from './composables'
@@ -69,7 +69,7 @@ import type { VNode } from 'vue'
 import type { TransferPanelState } from './transfer-panel'
 
 defineOptions({
-  name: 'ElTransferPanel',
+  name: 'TyTransferPanel',
 })
 
 const props = defineProps(transferPanelProps)

@@ -1,13 +1,13 @@
-<template>
-  <el-table :data="tableData" border show-summary style="width: 100%">
-    <el-table-column prop="id" label="ID" width="180" />
-    <el-table-column prop="name" label="Name" />
-    <el-table-column prop="amount1" sortable label="Amount 1" />
-    <el-table-column prop="amount2" sortable label="Amount 2" />
-    <el-table-column prop="amount3" sortable label="Amount 3" />
-  </el-table>
+﻿<template>
+  <ty-table :data="tableData" border show-summary style="width: 100%">
+    <ty-table-column prop="id" label="ID" width="180" />
+    <ty-table-column prop="name" label="Name" />
+    <ty-table-column prop="amount1" sortable label="Amount 1" />
+    <ty-table-column prop="amount2" sortable label="Amount 2" />
+    <ty-table-column prop="amount3" sortable label="Amount 3" />
+  </ty-table>
 
-  <el-table
+  <ty-table
     :data="tableData"
     border
     height="200"
@@ -15,12 +15,12 @@
     show-summary
     style="width: 100%; margin-top: 20px"
   >
-    <el-table-column prop="id" label="ID" width="180" />
-    <el-table-column prop="name" label="Name" />
-    <el-table-column prop="amount1" label="Cost 1 ($)" />
-    <el-table-column prop="amount2" label="Cost 2 ($)" />
-    <el-table-column prop="amount3" label="Cost 3 ($)" />
-  </el-table>
+    <ty-table-column prop="id" label="ID" width="180" />
+    <ty-table-column prop="name" label="Name" />
+    <ty-table-column prop="amount1" label="Cost 1 ($)" />
+    <ty-table-column prop="amount2" label="Cost 2 ($)" />
+    <ty-table-column prop="amount3" label="Cost 3 ($)" />
+  </ty-table>
 </template>
 
 <script lang="ts" setup>

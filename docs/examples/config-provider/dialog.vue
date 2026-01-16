@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+﻿<script lang="ts" setup>
 import { computed, nextTick, ref, shallowReactive } from 'vue'
 
 import type { ButtonInstance, DialogTransition } from 'element-plus'
@@ -33,7 +33,7 @@ const globalConfig = computed<GlobalConfig>(() => {
           nextTick(() => {
             if (buttonRef.value) {
               const buttonRect = buttonRef.value.ref!.getBoundingClientRect()
-              const dialogEl = el.querySelector('.el-dialog') as HTMLElement
+              const dialogEl = el.querySelector('.ty-dialog') as HTMLElement
 
               if (dialogEl) {
                 const dialogRect = dialogEl.getBoundingClientRect()
@@ -55,7 +55,7 @@ const globalConfig = computed<GlobalConfig>(() => {
         },
         onEnter(el, done) {
           nextTick(() => {
-            const dialogEl = el.querySelector('.el-dialog') as HTMLElement
+            const dialogEl = el.querySelector('.ty-dialog') as HTMLElement
             if (dialogEl) {
               // force reflow
               dialogEl.offsetHeight
@@ -77,7 +77,7 @@ const globalConfig = computed<GlobalConfig>(() => {
           })
         },
         onLeave(el, done) {
-          const dialogEl = el.querySelector('.el-dialog') as HTMLElement
+          const dialogEl = el.querySelector('.ty-dialog') as HTMLElement
           if (dialogEl) {
             if (buttonRef.value) {
               const buttonRect = buttonRef.value.ref!.getBoundingClientRect()
@@ -144,19 +144,19 @@ const globalConfig = computed<GlobalConfig>(() => {
 <template>
   <div class="flex flex-col gap-4 justify-center">
     <div class="flex items-center gap-2">
-      <el-switch v-model="config.alignCenter" active-text="alignCenter" />
+      <ty-switch v-model="config.alignCenter" active-text="alignCenter" />
     </div>
     <div class="flex items-center gap-4">
-      <el-switch v-model="config.draggable" active-text="draggable" />
-      <el-switch
+      <ty-switch v-model="config.draggable" active-text="draggable" />
+      <ty-switch
         v-model="config.overflow"
         :disabled="!config.draggable"
         active-text="overflow"
       />
     </div>
     <div class="flex items-center gap-2">
-      <el-switch v-model="enableTransition" active-text="enable transition" />
-      <el-switch
+      <ty-switch v-model="enableTransition" active-text="enable transition" />
+      <ty-switch
         v-model="isObjectTransition"
         :disabled="!enableTransition"
         active-text="transition: object"
@@ -164,20 +164,20 @@ const globalConfig = computed<GlobalConfig>(() => {
       />
     </div>
     <div class="flex items-center gap-2">
-      <el-button
+      <ty-button
         ref="buttonRef"
         type="primary"
         size="small"
         @click="visible = true"
       >
         Open Dialog
-      </el-button>
+      </ty-button>
     </div>
-    <el-config-provider :dialog="globalConfig">
-      <el-dialog v-model="visible" title="Dialog Title" destroy-on-close>
+    <ty-config-provider :dialog="globalConfig">
+      <ty-dialog v-model="visible" title="Dialog Title" destroy-on-close>
         Dialog Content
-      </el-dialog>
-    </el-config-provider>
+      </ty-dialog>
+    </ty-config-provider>
     <div v-if="enableTransition" class="text-xs opacity-70">
       <div v-if="isObjectTransition">
         Using JavaScript controlled animation:
@@ -195,8 +195,8 @@ const globalConfig = computed<GlobalConfig>(() => {
 /* Bounce Animation */
 .dialog-bounce-enter-active,
 .dialog-bounce-leave-active,
-.dialog-bounce-enter-active .el-dialog,
-.dialog-bounce-leave-active .el-dialog {
+.dialog-bounce-enter-active .ty-dialog,
+.dialog-bounce-leave-active .ty-dialog {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -205,8 +205,8 @@ const globalConfig = computed<GlobalConfig>(() => {
   opacity: 0;
 }
 
-.dialog-bounce-enter-from .el-dialog,
-.dialog-bounce-leave-to .el-dialog {
+.dialog-bounce-enter-from .ty-dialog,
+.dialog-bounce-leave-to .ty-dialog {
   transform: scale(0.3) translateY(-50px);
   opacity: 0;
 }

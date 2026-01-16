@@ -1,6 +1,6 @@
 <template>
   <div ref="wrapperRef" :class="ns.b()">
-    <el-input
+    <ty-input
       v-bind="mergeProps(passInputProps, $attrs)"
       ref="elInputRef"
       :model-value="modelValue"
@@ -19,8 +19,8 @@
       <template v-for="(_, name) in $slots" #[name]="slotProps">
         <slot :name="name" v-bind="slotProps" />
       </template>
-    </el-input>
-    <el-tooltip
+    </ty-input>
+    <ty-tooltip
       ref="tooltipRef"
       :visible="dropdownVisible"
       :popper-class="[ns.e('popper'), popperClass!]"
@@ -37,7 +37,7 @@
         <div :style="cursorStyle" />
       </template>
       <template #content>
-        <el-mention-dropdown
+        <ty-mention-dropdown
           ref="dropdownRef"
           :options="filteredOptions"
           :disabled="disabled"
@@ -50,9 +50,9 @@
           <template v-for="(_, name) in $slots" #[name]="slotProps">
             <slot :name="name" v-bind="slotProps" />
           </template>
-        </el-mention-dropdown>
+        </ty-mention-dropdown>
       </template>
-    </el-tooltip>
+    </ty-tooltip>
   </div>
 </template>
 
@@ -60,8 +60,8 @@
 import { computed, mergeProps, nextTick, ref } from 'vue'
 import { pick } from 'lodash-unified'
 import { useFocusController, useId, useNamespace } from '@element-plus/hooks'
-import ElInput, { inputProps } from '@element-plus/components/input'
-import ElTooltip from '@element-plus/components/tooltip'
+import TyInput, { inputProps } from '@element-plus/components/input'
+import TyTooltip from '@element-plus/components/tooltip'
 import {
   EVENT_CODE,
   INPUT_EVENT,
@@ -71,7 +71,7 @@ import { useFormDisabled } from '@element-plus/components/form'
 import { getEventCode, isFunction } from '@element-plus/utils'
 import { mentionDefaultProps, mentionEmits, mentionProps } from './mention'
 import { getCursorPosition, getMentionCtx } from './helper'
-import ElMentionDropdown from './mention-dropdown.vue'
+import TyMentionDropdown from './mention-dropdown.vue'
 
 import type { Placement } from '@popperjs/core'
 import type { CSSProperties } from 'vue'
@@ -80,7 +80,7 @@ import type { TooltipInstance } from '@element-plus/components/tooltip'
 import type { MentionCtx, MentionOption } from './types'
 
 defineOptions({
-  name: 'ElMention',
+  name: 'TyMention',
   inheritAttrs: false,
 })
 
@@ -95,7 +95,7 @@ const contentId = useId()
 
 const elInputRef = ref<InputInstance>()
 const tooltipRef = ref<TooltipInstance>()
-const dropdownRef = ref<InstanceType<typeof ElMentionDropdown>>()
+const dropdownRef = ref<InstanceType<typeof TyMentionDropdown>>()
 
 const visible = ref(false)
 const cursorStyle = ref<CSSProperties>()
@@ -186,9 +186,9 @@ const handleInputKeyDown = (event: KeyboardEvent | Event) => {
       if (props.whole && mentionCtx.value) {
         const { splitIndex, selectionEnd, pattern, prefixIndex, prefix } =
           mentionCtx.value
-        const inputEl = getInputEl()
-        if (!inputEl) return
-        const inputValue = inputEl.value
+        const inputTy = getInputTy()
+        if (!inputTy) return
+        const inputValue = inputTy.value
         const matchOption = options.value.find((item) => item.value === pattern)
         const isWhole = isFunction(props.checkIsWhole)
           ? props.checkIsWhole(pattern, prefix)
@@ -204,8 +204,8 @@ const handleInputKeyDown = (event: KeyboardEvent | Event) => {
           const newSelectionEnd = prefixIndex
           nextTick(() => {
             // input value is updated
-            inputEl.selectionStart = newSelectionEnd
-            inputEl.selectionEnd = newSelectionEnd
+            inputTy.selectionStart = newSelectionEnd
+            inputTy.selectionEnd = newSelectionEnd
             syncDropdownVisible()
           })
         }
@@ -239,9 +239,9 @@ const getOriginalOption = (mentionOption: MentionOption) => {
 
 const handleSelect = (item: MentionOption) => {
   if (!mentionCtx.value) return
-  const inputEl = getInputEl()
-  if (!inputEl) return
-  const inputValue = inputEl.value
+  const inputTy = getInputTy()
+  if (!inputTy) return
+  const inputValue = inputTy.value
   const { split } = props
 
   const newEndPart = inputValue.slice(mentionCtx.value.end)
@@ -260,14 +260,14 @@ const handleSelect = (item: MentionOption) => {
 
   nextTick(() => {
     // input value is updated
-    inputEl.selectionStart = newSelectionEnd
-    inputEl.selectionEnd = newSelectionEnd
-    inputEl.focus()
+    inputTy.selectionStart = newSelectionEnd
+    inputTy.selectionEnd = newSelectionEnd
+    inputTy.focus()
     syncDropdownVisible()
   })
 }
 
-const getInputEl = () =>
+const getInputTy = () =>
   props.type === 'textarea'
     ? elInputRef.value?.textarea
     : elInputRef.value?.input
@@ -282,11 +282,11 @@ const syncAfterCursorMove = () => {
 }
 
 const syncCursor = () => {
-  const inputEl = getInputEl()
-  if (!inputEl) return
+  const inputTy = getInputTy()
+  if (!inputTy) return
 
-  const caretPosition = getCursorPosition(inputEl)
-  const inputRect = inputEl.getBoundingClientRect()
+  const caretPosition = getCursorPosition(inputTy)
+  const inputRect = inputTy.getBoundingClientRect()
   const wrapperRect = wrapperRef.value!.getBoundingClientRect()
 
   cursorStyle.value = {
@@ -299,13 +299,13 @@ const syncCursor = () => {
 }
 
 const syncDropdownVisible = () => {
-  const inputEl = getInputEl()
-  if (document.activeElement !== inputEl) {
+  const inputTy = getInputTy()
+  if (document.activeElement !== inputTy) {
     visible.value = false
     return
   }
   const { prefix, split } = props
-  mentionCtx.value = getMentionCtx(inputEl, prefix, split)
+  mentionCtx.value = getMentionCtx(inputTy, prefix, split)
   if (mentionCtx.value && mentionCtx.value.splitIndex === -1) {
     visible.value = true
     emit('search', mentionCtx.value.pattern, mentionCtx.value.prefix)

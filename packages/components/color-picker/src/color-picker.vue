@@ -1,5 +1,5 @@
 <template>
-  <el-tooltip
+  <ty-tooltip
     ref="popper"
     :visible="showPicker"
     :show-arrow="false"
@@ -22,7 +22,7 @@
     @hide="setShowPicker(false)"
   >
     <template #content>
-      <el-color-picker-panel
+      <ty-color-picker-panel
         ref="pickerPanelRef"
         v-bind="panelProps"
         v-click-outside:[triggerRef]="handleClickOutside"
@@ -32,7 +32,7 @@
       >
         <template #footer>
           <div>
-            <el-button
+            <ty-button
               v-if="clearable"
               :class="ns.be('footer', 'link-btn')"
               text
@@ -40,18 +40,18 @@
               @click="clear"
             >
               {{ t('el.colorpicker.clear') }}
-            </el-button>
-            <el-button
+            </ty-button>
+            <ty-button
               plain
               size="small"
               :class="ns.be('footer', 'btn')"
               @click="confirmValue"
             >
               {{ t('el.colorpicker.confirm') }}
-            </el-button>
+            </ty-button>
           </div>
         </template>
-      </el-color-picker-panel>
+      </ty-color-picker-panel>
     </template>
     <template #default>
       <div
@@ -79,34 +79,34 @@
                 backgroundColor: displayedColor,
               }"
             >
-              <el-icon
+              <ty-icon
                 v-show="modelValue || showPanelColor"
                 :class="[ns.be('picker', 'icon'), ns.is('icon-arrow-down')]"
               >
                 <arrow-down />
-              </el-icon>
-              <el-icon
+              </ty-icon>
+              <ty-icon
                 v-show="!modelValue && !showPanelColor"
                 :class="[ns.be('picker', 'empty'), ns.is('icon-close')]"
               >
                 <close />
-              </el-icon>
+              </ty-icon>
             </span>
           </span>
         </div>
       </div>
     </template>
-  </el-tooltip>
+  </ty-tooltip>
 </template>
 
 <script lang="ts" setup>
 import { computed, nextTick, provide, ref, watch } from 'vue'
 import { debounce, pick } from 'lodash-unified'
-import { ElIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@element-plus/components/icon'
 import { reactiveComputed } from '@vueuse/core'
 import { ClickOutside as vClickOutside } from '@element-plus/directives'
-import { ElTooltip } from '@element-plus/components/tooltip'
-import { ElButton } from '@element-plus/components/button'
+import { TyTooltip } from '@element-plus/components/tooltip'
+import { TyButton } from '@element-plus/components/button'
 import {
   useFormDisabled,
   useFormItem,
@@ -128,8 +128,8 @@ import { debugWarn, getEventCode } from '@element-plus/utils'
 import { ArrowDown, Close } from '@element-plus/icons-vue'
 import { colorPickerEmits, colorPickerProps } from './color-picker'
 import {
-  ElColorPickerPanel,
   ROOT_COMMON_COLOR_INJECTION_KEY,
+  TyColorPickerPanel,
   colorPickerPanelProps,
 } from '@element-plus/components/color-picker-panel'
 import Color from '@element-plus/components/color-picker-panel/src/utils/color'
@@ -139,7 +139,7 @@ import type { ColorPickerPanelInstance } from '@element-plus/components/color-pi
 import type { TooltipInstance } from '@element-plus/components/tooltip'
 
 defineOptions({
-  name: 'ElColorPicker',
+  name: 'TyColorPicker',
 })
 const props = defineProps(colorPickerProps)
 

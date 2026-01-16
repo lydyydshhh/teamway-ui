@@ -34,7 +34,7 @@ import { checkboxEmits, checkboxProps } from './checkbox'
 import type { CSSProperties } from 'vue'
 
 defineOptions({
-  name: 'ElCheckboxButton',
+  name: 'TyCheckboxButton',
 })
 
 const props = defineProps(checkboxProps)

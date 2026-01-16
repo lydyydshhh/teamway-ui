@@ -1,31 +1,31 @@
-<template>
-  <el-dropdown @command="handleCommand">
-    <span class="el-dropdown-link">
-      Dropdown List<el-icon class="el-icon--right"><arrow-down /></el-icon>
+﻿<template>
+  <ty-dropdown @command="handleCommand">
+    <span class="ty-dropdown-link">
+      Dropdown List<ty-icon class="ty-icon--right"><arrow-down /></ty-icon>
     </span>
     <template #dropdown>
-      <el-dropdown-menu>
-        <el-dropdown-item command="a">Action 1</el-dropdown-item>
-        <el-dropdown-item command="b">Action 2</el-dropdown-item>
-        <el-dropdown-item command="c">Action 3</el-dropdown-item>
-        <el-dropdown-item command="d" disabled>Action 4</el-dropdown-item>
-        <el-dropdown-item command="e" divided>Action 5</el-dropdown-item>
-      </el-dropdown-menu>
+      <ty-dropdown-menu>
+        <ty-dropdown-item command="a">Action 1</ty-dropdown-item>
+        <ty-dropdown-item command="b">Action 2</ty-dropdown-item>
+        <ty-dropdown-item command="c">Action 3</ty-dropdown-item>
+        <ty-dropdown-item command="d" disabled>Action 4</ty-dropdown-item>
+        <ty-dropdown-item command="e" divided>Action 5</ty-dropdown-item>
+      </ty-dropdown-menu>
     </template>
-  </el-dropdown>
+  </ty-dropdown>
 </template>
 
 <script lang="ts" setup>
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 import { ArrowDown } from '@element-plus/icons-vue'
 
 const handleCommand = (command: string | number | object) => {
-  ElMessage(`click on item ${command}`)
+  TyMessage(`click on item ${command}`)
 }
 </script>
 
 <style scoped>
-.example-showcase .el-dropdown-link {
+.example-showcase .ty-dropdown-link {
   cursor: pointer;
   color: var(--ty-color-primary);
   display: flex;

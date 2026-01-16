@@ -32,10 +32,10 @@ describe('Tour.vue', () => {
       },
     })
 
-    expect(document.querySelector('.el-tour__title')?.innerHTML).toEqual(
+    expect(document.querySelector('.ty-tour__title')?.innerHTML).toEqual(
       'cover title'
     )
-    expect(document.querySelector('.el-tour__body span')?.innerHTML).toEqual(
+    expect(document.querySelector('.ty-tour__body span')?.innerHTML).toEqual(
       'cover description.'
     )
   })
@@ -67,12 +67,12 @@ describe('Tour.vue', () => {
       },
     })
 
-    expect(document.querySelector('.el-tour__title')?.innerHTML).toEqual(
+    expect(document.querySelector('.ty-tour__title')?.innerHTML).toEqual(
       'first'
     )
     wrapper.find('button').trigger('click')
     await nextTick()
-    expect(document.querySelector('.el-tour__title')?.innerHTML).toEqual(
+    expect(document.querySelector('.ty-tour__title')?.innerHTML).toEqual(
       'second'
     )
   })
@@ -96,7 +96,7 @@ describe('Tour.vue', () => {
       },
     })
 
-    expect(document.querySelector('.el-tour-mask')?.innerHTML).toBeFalsy()
+    expect(document.querySelector('.ty-tour-mask')?.innerHTML).toBeFalsy()
   })
 
   test('custom indicator', () => {
@@ -122,7 +122,7 @@ describe('Tour.vue', () => {
       },
     })
 
-    expect(document.querySelector('.el-tour-indicators')?.innerHTML).toBe(
+    expect(document.querySelector('.ty-tour-indicators')?.innerHTML).toBe(
       '1 / 1'
     )
   })
@@ -146,7 +146,7 @@ describe('Tour.vue', () => {
       },
     })
 
-    expect(document.querySelector('.el-tour.el-tour--primary')).toBeTruthy()
+    expect(document.querySelector('.ty-tour.ty-tour--primary')).toBeTruthy()
   })
 
   test('no target', () => {
@@ -160,7 +160,7 @@ describe('Tour.vue', () => {
       },
     })
 
-    const style = getComputedStyle(document.querySelector('.el-tour__content')!)
+    const style = getComputedStyle(document.querySelector('.ty-tour__content')!)
     expect(style.position).toBe('fixed')
     expect(style.top).toBe('50%')
     expect(style.left).toBe('50%')

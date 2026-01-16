@@ -1,14 +1,14 @@
-<template>
+﻿<template>
   <div>
-    <el-config-provider :message="config">
-      <el-button @click="open">OPEN</el-button>
-    </el-config-provider>
+    <ty-config-provider :message="config">
+      <ty-button @click="open">OPEN</ty-button>
+    </ty-config-provider>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'element-plus'
 
 const config = reactive({
   max: 3,
@@ -17,6 +17,6 @@ const config = reactive({
 })
 
 const open = () => {
-  ElMessage('This is a message from bottom.')
+  TyMessage('This is a message from bottom.')
 }
 </script>

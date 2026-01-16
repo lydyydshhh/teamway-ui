@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="flex justify-center">
-    <el-date-picker-panel v-model="value" />
+    <ty-date-picker-panel v-model="value" />
   </div>
 </template>
 

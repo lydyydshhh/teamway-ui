@@ -51,7 +51,7 @@ avatar/fit
 
 Displayed as a avatar group.
 
-:::demo Use tag `<el-avatar-group>` to group your avatars.
+:::demo Use tag `<ty-avatar-group>` to group your avatars.
 
 avatar/group
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-// import { ElMessageBox } from 'element-plus'
+// import { TyMessageBox } from 'element-plus'
 // import dayjs from 'dayjs'
 import { isClient, useEventListener, useToggle } from '@vueuse/core'
 import { EVENT_CODE } from 'element-plus'
@@ -14,7 +14,7 @@ import VPNav from './vp-nav.vue'
 import VPSubNav from './vp-subnav.vue'
 import VPSidebar from './vp-sidebar.vue'
 import VPContent from './vp-content.vue'
-import VPSponsors from './vp-sponsors.vue'
+// import VPSponsors from './vp-sponsors.vue'
 
 // const USER_PREFER_GITHUB_PAGE = 'USER_PREFER_GITHUB_PAGE'
 const [isSidebarOpen, toggleSidebar] = useToggle(false)
@@ -66,7 +66,7 @@ onMounted(async () => {
   //       return
   //   }
   //   try {
-  //     await ElMessageBox.confirm(
+  //     await TyMessageBox.confirm(
   //       '建议大陆用户访问部署在国内的站点，是否跳转？',
   //       '提示',
   //       {
@@ -101,9 +101,9 @@ onMounted(async () => {
       @open-menu="toggleSidebar(true)"
     />
     <VPSidebar :open="isSidebarOpen" @close="toggleSidebar(false)">
-      <template #top>
+      <!-- <template #top>
         <VPSponsors />
-      </template>
+      </template> -->
       <template #bottom>
         <slot name="sidebar-bottom" />
       </template>

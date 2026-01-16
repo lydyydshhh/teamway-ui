@@ -26,7 +26,7 @@ import { hueSliderProps } from '../props/slider'
 import { useSlider, useSliderDOM } from '../composables/use-slider'
 
 defineOptions({
-  name: 'ElColorHueSlider',
+  name: 'TyColorHueSlider',
 })
 
 const props = defineProps(hueSliderProps)

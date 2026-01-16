@@ -1,9 +1,9 @@
-<template>
-  <el-page-header :icon="ArrowLeft">
+﻿<template>
+  <ty-page-header :icon="ArrowLeft">
     <template #content>
       <span class="text-large font-600 mr-3"> Title </span>
     </template>
-  </el-page-header>
+  </ty-page-header>
 </template>
 
 <script lang="ts" setup>

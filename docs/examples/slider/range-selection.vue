@@ -1,6 +1,6 @@
-<template>
+﻿<template>
   <div class="slider-demo-block">
-    <el-slider v-model="value" range show-stops :max="10" />
+    <ty-slider v-model="value" range show-stops :max="10" />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ const value = ref([4, 8])
   display: flex;
   align-items: center;
 }
-.slider-demo-block .el-slider {
+.slider-demo-block .ty-slider {
   margin-top: 0;
   margin-left: 12px;
 }

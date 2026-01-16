@@ -1,16 +1,16 @@
-<template>
+﻿<template>
   <div>
-    <el-link disabled>default</el-link>
-    <el-link type="primary" disabled>primary</el-link>
-    <el-link type="success" disabled>success</el-link>
-    <el-link type="warning" disabled>warning</el-link>
-    <el-link type="danger" disabled>danger</el-link>
-    <el-link type="info" disabled>info</el-link>
+    <ty-link disabled>default</ty-link>
+    <ty-link type="primary" disabled>primary</ty-link>
+    <ty-link type="success" disabled>success</ty-link>
+    <ty-link type="warning" disabled>warning</ty-link>
+    <ty-link type="danger" disabled>danger</ty-link>
+    <ty-link type="info" disabled>info</ty-link>
   </div>
 </template>
 
 <style scoped>
-.el-link {
+.ty-link {
   margin-right: 8px;
 }
 </style>

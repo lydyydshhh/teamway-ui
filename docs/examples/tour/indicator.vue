@@ -1,26 +1,26 @@
-<template>
-  <el-button type="primary" @click="open = true">Begin Tour</el-button>
+﻿<template>
+  <ty-button type="primary" @click="open = true">Begin Tour</ty-button>
 
-  <el-divider />
+  <ty-divider />
 
-  <el-space>
-    <el-button ref="ref1">Upload</el-button>
-    <el-button ref="ref2" type="primary">Save</el-button>
-    <el-button ref="ref3" :icon="MoreFilled" />
-  </el-space>
+  <ty-space>
+    <ty-button ref="ref1">Upload</ty-button>
+    <ty-button ref="ref2" type="primary">Save</ty-button>
+    <ty-button ref="ref3" :icon="MoreFilled" />
+  </ty-space>
 
-  <el-tour v-model="open">
-    <el-tour-step
+  <ty-tour v-model="open">
+    <ty-tour-step
       :target="ref1?.$el"
       title="Upload File"
       description="Put you files here."
     />
-    <el-tour-step
+    <ty-tour-step
       :target="ref2?.$el"
       title="Save"
       description="Save your changes"
     />
-    <el-tour-step
+    <ty-tour-step
       :target="ref3?.$el"
       title="Other Actions"
       description="Click to see other"
@@ -28,7 +28,7 @@
     <template #indicators="{ current, total }">
       <span>{{ current + 1 }} / {{ total }}</span>
     </template>
-  </el-tour>
+  </ty-tour>
 </template>
 
 <script setup lang="ts">

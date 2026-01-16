@@ -1,7 +1,7 @@
-<template>
+﻿<template>
   <div class="flex gap-2">
-    <el-tag size="large">Large</el-tag>
-    <el-tag>Default</el-tag>
-    <el-tag size="small">Small</el-tag>
+    <ty-tag size="large">Large</ty-tag>
+    <ty-tag>Default</ty-tag>
+    <ty-tag size="small">Small</ty-tag>
   </div>
 </template>

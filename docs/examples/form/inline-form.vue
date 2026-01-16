@@ -1,30 +1,30 @@
-<template>
-  <el-form :inline="true" :model="formInline" class="demo-form-inline">
-    <el-form-item label="Approved by">
-      <el-input v-model="formInline.user" placeholder="Approved by" clearable />
-    </el-form-item>
-    <el-form-item label="Activity zone">
-      <el-select
+﻿<template>
+  <ty-form :inline="true" :model="formInline" class="demo-form-inline">
+    <ty-form-item label="Approved by">
+      <ty-input v-model="formInline.user" placeholder="Approved by" clearable />
+    </ty-form-item>
+    <ty-form-item label="Activity zone">
+      <ty-select
         v-model="formInline.region"
         placeholder="Activity zone"
         clearable
       >
-        <el-option label="Zone one" value="shanghai" />
-        <el-option label="Zone two" value="beijing" />
-      </el-select>
-    </el-form-item>
-    <el-form-item label="Activity time">
-      <el-date-picker
+        <ty-option label="Zone one" value="shanghai" />
+        <ty-option label="Zone two" value="beijing" />
+      </ty-select>
+    </ty-form-item>
+    <ty-form-item label="Activity time">
+      <ty-date-picker
         v-model="formInline.date"
         type="date"
         placeholder="Pick a date"
         clearable
       />
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="onSubmit">Query</el-button>
-    </el-form-item>
-  </el-form>
+    </ty-form-item>
+    <ty-form-item>
+      <ty-button type="primary" @click="onSubmit">Query</ty-button>
+    </ty-form-item>
+  </ty-form>
 </template>
 
 <script lang="ts" setup>
@@ -42,11 +42,11 @@ const onSubmit = () => {
 </script>
 
 <style>
-.demo-form-inline .el-input {
+.demo-form-inline .ty-input {
   --ty-input-width: 220px;
 }
 
-.demo-form-inline .el-select {
+.demo-form-inline .ty-select {
   --ty-select-width: 220px;
 }
 </style>

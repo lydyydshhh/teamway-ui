@@ -1,7 +1,7 @@
-<template>
-  <el-button type="primary" loading>Loading</el-button>
-  <el-button type="primary" :loading-icon="Eleme" loading>Loading</el-button>
-  <el-button type="primary" loading>
+﻿<template>
+  <ty-button type="primary" loading>Loading</ty-button>
+  <ty-button type="primary" :loading-icon="Eleme" loading>Loading</ty-button>
+  <ty-button type="primary" loading>
     <template #loading>
       <div class="custom-loading">
         <svg class="circular" viewBox="-10, -10, 50, 50">
@@ -21,7 +21,7 @@
       </div>
     </template>
     Loading
-  </el-button>
+  </ty-button>
 </template>
 
 <script lang="ts" setup>
@@ -29,13 +29,13 @@ import { Eleme } from '@element-plus/icons-vue'
 </script>
 
 <style scoped>
-.el-button .custom-loading .circular {
+.ty-button .custom-loading .circular {
   margin-right: 6px;
   width: 18px;
   height: 18px;
   animation: loading-rotate 2s linear infinite;
 }
-.el-button .custom-loading .circular .path {
+.ty-button .custom-loading .circular .path {
   animation: loading-dash 1.5s ease-in-out infinite;
   stroke-dasharray: 90, 150;
   stroke-dashoffset: 0;
