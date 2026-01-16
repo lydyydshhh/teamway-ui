@@ -4,7 +4,7 @@ import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, test, vi } from 'vitest'
 import { rAF } from '@element-plus/test-utils/tick'
 import { EVENT_CODE } from '@element-plus/constants'
-import { ElTooltip } from '@element-plus/components/tooltip'
+import { TyTooltip } from '@element-plus/components/tooltip'
 import Button from '@element-plus/components/button'
 import { usePopperContainerId } from '@element-plus/hooks'
 import Dropdown from '../src/dropdown.vue'
@@ -54,8 +54,8 @@ describe('Dropdown', () => {
       () => ({})
     )
     await nextTick()
-    const content = wrapper.findComponent(ElTooltip).vm as InstanceType<
-      typeof ElTooltip
+    const content = wrapper.findComponent(TyTooltip).vm as InstanceType<
+      typeof TyTooltip
     >
 
     vi.useFakeTimers()
@@ -139,8 +139,8 @@ describe('Dropdown', () => {
       })
     )
     await nextTick()
-    const content = wrapper.findComponent(ElTooltip).vm as InstanceType<
-      typeof ElTooltip
+    const content = wrapper.findComponent(TyTooltip).vm as InstanceType<
+      typeof TyTooltip
     >
     const triggerElm = wrapper.find('.ty-dropdown-link')
     expect(content.open).toBe(false)
@@ -177,8 +177,8 @@ describe('Dropdown', () => {
       })
     )
     await nextTick()
-    const content = wrapper.findComponent(ElTooltip).vm as InstanceType<
-      typeof ElTooltip
+    const content = wrapper.findComponent(TyTooltip).vm as InstanceType<
+      typeof TyTooltip
     >
     const triggerElm = wrapper.find('.ty-dropdown-link')
     expect(content.open).toBe(false)
@@ -258,8 +258,8 @@ describe('Dropdown', () => {
     )
 
     await nextTick()
-    const content = wrapper.findComponent(ElTooltip).vm as InstanceType<
-      typeof ElTooltip
+    const content = wrapper.findComponent(TyTooltip).vm as InstanceType<
+      typeof TyTooltip
     >
     const triggerElm = wrapper.find('.ty-button')
 
@@ -306,8 +306,8 @@ describe('Dropdown', () => {
     )
     await nextTick()
     const dropdown = wrapper.vm
-    const content = wrapper.findComponent(ElTooltip).vm as InstanceType<
-      typeof ElTooltip
+    const content = wrapper.findComponent(TyTooltip).vm as InstanceType<
+      typeof TyTooltip
     >
     expect(content.open).toBe(false)
     await dropdown.$refs.refDropdown.handleOpen()
@@ -346,8 +346,8 @@ describe('Dropdown', () => {
       }
     )
     await nextTick()
-    const content = wrapper.findComponent(ElTooltip).vm as InstanceType<
-      typeof ElTooltip
+    const content = wrapper.findComponent(TyTooltip).vm as InstanceType<
+      typeof TyTooltip
     >
     const triggerElm = wrapper.find('.ty-dropdown__caret-button')
     const button = wrapper.find('.ty-button')
@@ -382,8 +382,8 @@ describe('Dropdown', () => {
       () => ({})
     )
     await nextTick()
-    const content = wrapper.findComponent(ElTooltip).vm as InstanceType<
-      typeof ElTooltip
+    const content = wrapper.findComponent(TyTooltip).vm as InstanceType<
+      typeof TyTooltip
     >
     expect(content.open).toBe(false)
     const triggerElm = wrapper.find('.ty-tooltip__trigger')
@@ -423,8 +423,8 @@ describe('Dropdown', () => {
       () => ({})
     )
     await nextTick()
-    const content = wrapper.findComponent(ElTooltip).vm as InstanceType<
-      typeof ElTooltip
+    const content = wrapper.findComponent(TyTooltip).vm as InstanceType<
+      typeof TyTooltip
     >
     const triggerElm = wrapper.find('.ty-tooltip__trigger')
 
@@ -498,8 +498,8 @@ describe('Dropdown', () => {
       `,
       () => ({})
     )
-    const content = wrapper.findComponent(ElTooltip).vm as InstanceType<
-      typeof ElTooltip
+    const content = wrapper.findComponent(TyTooltip).vm as InstanceType<
+      typeof TyTooltip
     >
     const triggerElm = wrapper.find('.ty-tooltip__trigger')
     expect(content.open).toBe(false)
@@ -535,7 +535,7 @@ describe('Dropdown', () => {
     )
 
     const popperElement = wrapper.findComponent({
-      name: 'ElPopperContent',
+      name: 'TyPopperContent',
     }).element
 
     expect(popperElement.classList.contains('custom-popper-class')).toBe(true)
@@ -587,7 +587,7 @@ describe('Dropdown', () => {
     expect(
       wrapper
         .findComponent({
-          name: 'ElDropdown',
+          name: 'TyDropdown',
         })
         .classes()
     ).toContain('is-disabled')
@@ -612,14 +612,14 @@ describe('Dropdown', () => {
     expect(
       wrapper
         .findAllComponents({
-          name: 'ElButton',
+          name: 'TyButton',
         })[0]
         .classes()
     ).toContain('is-disabled')
     expect(
       wrapper
         .findAllComponents({
-          name: 'ElButton',
+          name: 'TyButton',
         })[1]
         .classes()
     ).toContain('is-disabled')
@@ -642,7 +642,7 @@ describe('Dropdown', () => {
       () => ({})
     )
     const tooltipElement = wrapper.getComponent({
-      name: 'ElTooltip',
+      name: 'TyTooltip',
     })
     expect(tooltipElement.vm.showAfter).toBe(200)
     expect(tooltipElement.vm.hideAfter).toBe(300)
@@ -665,7 +665,7 @@ describe('Dropdown', () => {
       () => ({})
     )
     const tooltipElement = wrapper.getComponent({
-      name: 'ElTooltip',
+      name: 'TyTooltip',
     })
     expect(tooltipElement.vm.showAfter).toBe(0)
     expect(tooltipElement.vm.hideAfter).toBe(0)
@@ -702,7 +702,7 @@ describe('Dropdown', () => {
       )
     })
 
-    test('ElButton trigger has proper attributes', async () => {
+    test('TyButton trigger has proper attributes', async () => {
       const wrapper = _mount(
         `
         <ty-dropdown>
@@ -1023,8 +1023,8 @@ describe('Dropdown', () => {
     )
 
     await nextTick()
-    const content = wrapper.findComponent(ElTooltip).vm as InstanceType<
-      typeof ElTooltip
+    const content = wrapper.findComponent(TyTooltip).vm as InstanceType<
+      typeof TyTooltip
     >
     vi.useFakeTimers()
     const triggerElm = wrapper.find('.ty-tooltip__trigger')

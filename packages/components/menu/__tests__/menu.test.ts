@@ -494,8 +494,8 @@ describe('other', () => {
       </ty-menu>`
     )
 
-    const menu = wrapper.findComponent({ name: 'ElMenu' })
-    const menuItems = wrapper.findAllComponents({ name: 'ElMenuItem' })
+    const menu = wrapper.findComponent({ name: 'TyMenu' })
+    const menuItems = wrapper.findAllComponents({ name: 'TyMenuItem' })
     expect(menu.exists()).toBeTruthy()
 
     // mock size
@@ -521,7 +521,7 @@ describe('other', () => {
     await rAF()
     await nextTick()
 
-    expect(wrapper.findComponent({ name: 'ElSubMenu' }).exists()).toBeFalsy()
+    expect(wrapper.findComponent({ name: 'TySubMenu' }).exists()).toBeFalsy()
     expect(menuItems.length).toBe(2)
 
     wrapper.unmount()
@@ -548,8 +548,8 @@ describe('other', () => {
       </ty-menu>`
     )
 
-    const menu = wrapper.findComponent({ name: 'ElMenu' })
-    const menuItems = wrapper.findAllComponents({ name: 'ElMenuItem' })
+    const menu = wrapper.findComponent({ name: 'TyMenu' })
+    const menuItems = wrapper.findAllComponents({ name: 'TyMenuItem' })
     expect(menu.exists()).toBeTruthy()
 
     // mock size
@@ -576,7 +576,7 @@ describe('other', () => {
     await nextTick()
 
     expect(menu.element.querySelectorAll('.ty-menu-item').length).toBe(1)
-    expect(wrapper.findComponent({ name: 'ElSubMenu' }).exists()).toBeTruthy()
+    expect(wrapper.findComponent({ name: 'TySubMenu' }).exists()).toBeTruthy()
 
     menuItemSpy.mockReturnValue(itemWidth * 6)
     menu.vm.$.exposed.handleResize()
@@ -584,7 +584,7 @@ describe('other', () => {
     await rAF()
     await nextTick()
     expect(menu.element.querySelectorAll('.ty-menu-item').length).toBe(5)
-    expect(wrapper.findComponent({ name: 'ElSubMenu' }).exists()).toBeFalsy()
+    expect(wrapper.findComponent({ name: 'TySubMenu' }).exists()).toBeFalsy()
 
     wrapper.unmount()
     menuItemsCleanups.forEach((fn) => fn())

@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
-import { ElSplitter, ElSplitterPanel } from '../index'
+import { TySplitter, TySplitterPanel } from '../index'
 import { useElementSize } from './__mocks__/vueuse'
 
 // jsdom does not support useElementSize and useResizeObserver so mock
@@ -26,10 +26,10 @@ describe('Splitter', () => {
 
   it('should render correctly', () => {
     const wrapper = mount(() => (
-      <ElSplitter>
-        <ElSplitterPanel>Left Panel</ElSplitterPanel>
-        <ElSplitterPanel>Right Panel</ElSplitterPanel>
-      </ElSplitter>
+      <TySplitter>
+        <TySplitterPanel>Left Panel</TySplitterPanel>
+        <TySplitterPanel>Right Panel</TySplitterPanel>
+      </TySplitter>
     ))
 
     expect(wrapper.find('.ty-splitter').exists()).toBe(true)
@@ -38,10 +38,10 @@ describe('Splitter', () => {
 
   it('should render with vertical layout', () => {
     const wrapper = mount(() => (
-      <ElSplitter layout="vertical">
-        <ElSplitterPanel>Top Panel</ElSplitterPanel>
-        <ElSplitterPanel>Bottom Panel</ElSplitterPanel>
-      </ElSplitter>
+      <TySplitter layout="vertical">
+        <TySplitterPanel>Top Panel</TySplitterPanel>
+        <TySplitterPanel>Bottom Panel</TySplitterPanel>
+      </TySplitter>
     ))
 
     expect(wrapper.find('.ty-splitter__vertical').exists()).toBe(true)
@@ -57,14 +57,14 @@ describe('Splitter', () => {
 
     const wrapper = mount(() => (
       <div style={{ width: splitterWidth.value, height: '400px' }}>
-        <ElSplitter>
-          <ElSplitterPanel>
+        <TySplitter>
+          <TySplitterPanel>
             <div class="demo-panel">1</div>
-          </ElSplitterPanel>
-          <ElSplitterPanel size={size.value}>
+          </TySplitterPanel>
+          <TySplitterPanel size={size.value}>
             <div class="demo-panel">2</div>
-          </ElSplitterPanel>
-        </ElSplitter>
+          </TySplitterPanel>
+        </TySplitter>
       </div>
     ))
 
@@ -84,7 +84,7 @@ describe('Splitter', () => {
     expect(panels[0].attributes('style')).toContain('flex-basis: 0px;')
     expect(panels[1].attributes('style')).toContain('flex-basis: 0px;')
 
-    const panelComps = wrapper.findComponent({ name: 'ElSplitter' }).vm.panels
+    const panelComps = wrapper.findComponent({ name: 'TySplitter' }).vm.panels
 
     expect(panelComps[0].size).toBeUndefined()
     expect(panelComps[1].size).toBe('80%')
@@ -95,12 +95,12 @@ describe('Splitter', () => {
   it('should respect min and max size constraints', async () => {
     const wrapper = mount(() => (
       <div style={{ width: '400px', height: '400px' }}>
-        <ElSplitter>
-          <ElSplitterPanel size={150} min={100} max={200}>
+        <TySplitter>
+          <TySplitterPanel size={150} min={100} max={200}>
             Left Panel
-          </ElSplitterPanel>
-          <ElSplitterPanel>Right Panel</ElSplitterPanel>
-        </ElSplitter>
+          </TySplitterPanel>
+          <TySplitterPanel>Right Panel</TySplitterPanel>
+        </TySplitter>
       </div>
     ))
     await nextTick()
@@ -143,12 +143,12 @@ describe('Splitter', () => {
   it('should handle collapse', async () => {
     const wrapper = mount(() => (
       <div style={{ width: '400px', height: '400px' }}>
-        <ElSplitter>
-          <ElSplitterPanel size={150} collapsible>
+        <TySplitter>
+          <TySplitterPanel size={150} collapsible>
             Left Panel
-          </ElSplitterPanel>
-          <ElSplitterPanel collapsible>Right Panel</ElSplitterPanel>
-        </ElSplitter>
+          </TySplitterPanel>
+          <TySplitterPanel collapsible>Right Panel</TySplitterPanel>
+        </TySplitter>
       </div>
     ))
     await nextTick()
@@ -186,14 +186,14 @@ describe('Splitter', () => {
 
     const wrapper = mount(() => (
       <div style={{ width: '400px', height: '400px' }}>
-        <ElSplitter
+        <TySplitter
           onResizeStart={onResizeStart}
           onResize={onResize}
           onResizeEnd={onResizeEnd}
         >
-          <ElSplitterPanel>Left Panel</ElSplitterPanel>
-          <ElSplitterPanel>Right Panel</ElSplitterPanel>
-        </ElSplitter>
+          <TySplitterPanel>Left Panel</TySplitterPanel>
+          <TySplitterPanel>Right Panel</TySplitterPanel>
+        </TySplitter>
       </div>
     ))
     await nextTick()
@@ -238,10 +238,10 @@ describe('Splitter', () => {
     const onCollapse = vi.fn()
     const wrapper = mount(() => (
       <div style={{ width: '400px', height: '400px' }}>
-        <ElSplitter onCollapse={onCollapse}>
-          <ElSplitterPanel collapsible>Left Panel</ElSplitterPanel>
-          <ElSplitterPanel collapsible>Right Panel</ElSplitterPanel>
-        </ElSplitter>
+        <TySplitter onCollapse={onCollapse}>
+          <TySplitterPanel collapsible>Left Panel</TySplitterPanel>
+          <TySplitterPanel collapsible>Right Panel</TySplitterPanel>
+        </TySplitter>
       </div>
     ))
     await nextTick()
@@ -268,17 +268,17 @@ describe('Splitter', () => {
     const size = ref(150)
     const wrapper = mount(() => (
       <div style={{ width: '400px', height: '400px' }}>
-        <ElSplitter>
-          <ElSplitterPanel
+        <TySplitter>
+          <TySplitterPanel
             v-model:size={size.value}
             collapsible
             min={50}
             max={200}
           >
             Left Panel
-          </ElSplitterPanel>
-          <ElSplitterPanel collapsible>Right Panel</ElSplitterPanel>
-        </ElSplitter>
+          </TySplitterPanel>
+          <TySplitterPanel collapsible>Right Panel</TySplitterPanel>
+        </TySplitter>
       </div>
     ))
     await nextTick()
@@ -319,10 +319,10 @@ describe('Splitter', () => {
   it('should not update panel size until drag ends when lazy is true', async () => {
     const wrapper = mount(() => (
       <div style={{ width: '400px', height: '400px' }}>
-        <ElSplitter lazy>
-          <ElSplitterPanel>Left Panel</ElSplitterPanel>
-          <ElSplitterPanel>Right Panel</ElSplitterPanel>
-        </ElSplitter>
+        <TySplitter lazy>
+          <TySplitterPanel>Left Panel</TySplitterPanel>
+          <TySplitterPanel>Right Panel</TySplitterPanel>
+        </TySplitter>
       </div>
     ))
     await nextTick()
@@ -349,10 +349,10 @@ describe('Splitter', () => {
   it('should update panel size immediately when lazy is false', async () => {
     const wrapper = mount(() => (
       <div style={{ width: '400px', height: '400px' }}>
-        <ElSplitter>
-          <ElSplitterPanel>Left Panel</ElSplitterPanel>
-          <ElSplitterPanel>Right Panel</ElSplitterPanel>
-        </ElSplitter>
+        <TySplitter>
+          <TySplitterPanel>Left Panel</TySplitterPanel>
+          <TySplitterPanel>Right Panel</TySplitterPanel>
+        </TySplitter>
       </div>
     ))
     await nextTick()
@@ -380,10 +380,10 @@ describe('Splitter', () => {
     const onResizeEnd = vi.fn()
     const wrapper = mount(() => (
       <div style={{ width: '400px', height: '400px' }}>
-        <ElSplitter lazy onResizeEnd={onResizeEnd}>
-          <ElSplitterPanel>Left Panel</ElSplitterPanel>
-          <ElSplitterPanel>Right Panel</ElSplitterPanel>
-        </ElSplitter>
+        <TySplitter lazy onResizeEnd={onResizeEnd}>
+          <TySplitterPanel>Left Panel</TySplitterPanel>
+          <TySplitterPanel>Right Panel</TySplitterPanel>
+        </TySplitter>
       </div>
     ))
     await nextTick()
@@ -415,12 +415,12 @@ describe('Splitter', () => {
   it('should not still display the mask after the panel updates', async () => {
     const show = ref(true)
     const wrapper = mount(() => (
-      <ElSplitter onResizeStart={() => (show.value = false)}>
+      <TySplitter onResizeStart={() => (show.value = false)}>
         {show.value ? (
-          <ElSplitterPanel v-if={show.value}>Left Panel</ElSplitterPanel>
+          <TySplitterPanel v-if={show.value}>Left Panel</TySplitterPanel>
         ) : null}
-        <ElSplitterPanel>Right Panel</ElSplitterPanel>
-      </ElSplitter>
+        <TySplitterPanel>Right Panel</TySplitterPanel>
+      </TySplitter>
     ))
     await nextTick()
 

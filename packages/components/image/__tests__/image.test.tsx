@@ -15,7 +15,7 @@ import type { AnchorHTMLAttributes, ImgHTMLAttributes } from 'vue'
 import type { VueWrapper } from '@vue/test-utils'
 import type { ImageInstance, ImageProps } from '../src/image'
 
-type ElImageProps = ImgHTMLAttributes &
+type TyImageProps = ImgHTMLAttributes &
   AnchorHTMLAttributes &
   Partial<ImageProps>
 
@@ -53,7 +53,7 @@ describe('Image.vue', () => {
   })
 
   test('preview classname test', async () => {
-    const props: ElImageProps = {
+    const props: TyImageProps = {
       fit: 'cover',
       src: IMAGE_SUCCESS,
       previewSrcList: Array.from<string>({ length: 3 }).fill(IMAGE_SUCCESS),
@@ -64,7 +64,7 @@ describe('Image.vue', () => {
   })
 
   test('preview initial index test', async () => {
-    const props: ElImageProps = {
+    const props: TyImageProps = {
       src: IMAGE_SUCCESS,
       previewSrcList: Array.from<string>({ length: 3 }).map(
         (_, idx) => IMAGE_FAIL + idx
@@ -84,7 +84,7 @@ describe('Image.vue', () => {
       props: {
         src: IMAGE_SUCCESS,
         loading: 'eager',
-      } as ElImageProps,
+      } as TyImageProps,
     })
 
     await doubleWait()
@@ -97,7 +97,7 @@ describe('Image.vue', () => {
 
   test('$attrs', async () => {
     const alt = 'this ia alt'
-    const props: ElImageProps = {
+    const props: TyImageProps = {
       alt,
       src: IMAGE_SUCCESS,
       referrerpolicy: 'origin',
@@ -110,7 +110,7 @@ describe('Image.vue', () => {
 
   test('pass event listeners', async () => {
     let result = false
-    const props: ElImageProps = {
+    const props: TyImageProps = {
       src: IMAGE_SUCCESS,
       onClick: () => (result = true),
     }
@@ -270,7 +270,7 @@ describe('Image.vue', () => {
       const alt = 'this ia alt'
       const wrapper = mount({
         setup() {
-          const props: ElImageProps = {
+          const props: TyImageProps = {
             alt,
             src: IMAGE_SUCCESS,
           }
@@ -329,7 +329,7 @@ describe('Image.vue', () => {
 
     test('emit load event', async () => {
       const handleLoad = vi.fn()
-      const props: ElImageProps = {
+      const props: TyImageProps = {
         src: IMAGE_SUCCESS,
         onLoad: handleLoad,
       }

@@ -7,7 +7,7 @@ import { makeMountFunc } from '@element-plus/test-utils/make-mount'
 import { rAF } from '@element-plus/test-utils/tick'
 import { ArrowDown, CircleClose } from '@element-plus/icons-vue'
 import { usePopperContainerId } from '@element-plus/hooks'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
 import Select from '../src/select.vue'
 
 import type { Props } from '../useProps'
@@ -35,8 +35,8 @@ vi.mock('@vueuse/core', async () => {
 const _mount = makeMountFunc({
   components: {
     'ty-select': Select,
-    'ty-form-item': ElFormItem,
-    'ty-form': ElForm,
+    'ty-form-item': TyFormItem,
+    'ty-form': TyForm,
   },
 })
 
@@ -1334,7 +1334,7 @@ describe('Select', () => {
     expect(
       wrapper
         .findComponent({
-          name: 'ElPopperContent',
+          name: 'TyPopperContent',
         })
         .find('.empty-slot')
         .exists()
@@ -1646,7 +1646,7 @@ describe('Select', () => {
     expect(
       wrapper
         .findComponent({
-          name: 'ElPopperContent',
+          name: 'TyPopperContent',
         })
         .findAll('.custom-renderer').length
     ).toBeGreaterThan(0)
@@ -1888,7 +1888,7 @@ describe('Select', () => {
           }
         },
       })
-      const select = wrapper.findComponent({ name: 'ElSelectV2' })
+      const select = wrapper.findComponent({ name: 'TySelectV2' })
       const input = wrapper.find('input')
       await input.trigger('click')
       expect((select.vm as any).expanded).toBe(true)
@@ -2443,7 +2443,7 @@ describe('Select', () => {
         },
       })
 
-      const dropdown = wrapper.findComponent({ name: 'ElSelectDropdown' })
+      const dropdown = wrapper.findComponent({ name: 'TySelectDropdown' })
       const input = wrapper.find('input')
       const list = dropdown.find('.ty-select-dropdown__list > ul')
       const option = dropdown.find('.ty-select-dropdown__item')
@@ -2767,7 +2767,7 @@ describe('Select', () => {
       }
     )
 
-    const select = wrapper.findComponent({ name: 'ElSelectV2' })
+    const select = wrapper.findComponent({ name: 'TySelectV2' })
     const input = wrapper.find('input')
     const vm = select.vm as any
 

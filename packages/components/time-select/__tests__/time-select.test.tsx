@@ -5,7 +5,7 @@ import dayjs from 'dayjs'
 import { CircleClose } from '@element-plus/icons-vue'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
 import Select from '@element-plus/components/select'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
 import TimeSelect from '../src/time-select.vue'
 
 dayjs.extend(customParseFormat)
@@ -86,7 +86,7 @@ describe('TimeSelect', () => {
     value.value = '10:30'
     await nextTick()
 
-    expect(wrapper.findComponent({ name: 'ElTimeSelect' }).vm.value).toBe(
+    expect(wrapper.findComponent({ name: 'TyTimeSelect' }).vm.value).toBe(
       '10:30'
     )
     expect(wrapper.find(`.${PLACEHOLDER_CLASS_NAME}`).text()).toBe('10:30')
@@ -97,7 +97,7 @@ describe('TimeSelect', () => {
     const wrapper = mount(() => <TimeSelect v-model={value.value} />)
 
     await nextTick()
-    const vm = wrapper.findComponent({ name: 'ElTimeSelect' }).vm
+    const vm = wrapper.findComponent({ name: 'TyTimeSelect' }).vm
     expect(vm.value).toBe('10:00')
     expect(wrapper.find(`.${PLACEHOLDER_CLASS_NAME}`).text()).toBe('10:00')
 
@@ -119,7 +119,7 @@ describe('TimeSelect', () => {
       <TimeSelect v-model={value.value} disabled={disabled.value} />
     ))
 
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     expect(select.props().disabled).toBe(false)
 
     disabled.value = true
@@ -134,7 +134,7 @@ describe('TimeSelect', () => {
       <TimeSelect v-model={value.value} editable={editable.value} />
     ))
 
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     expect(select.props().filterable).toBe(false)
 
     editable.value = true
@@ -151,7 +151,7 @@ describe('TimeSelect', () => {
         includeEndTime={true}
       />
     ))
-    const select = wrapper.findComponent({ name: 'ElTimeSelect' })
+    const select = wrapper.findComponent({ name: 'TyTimeSelect' })
     const input = wrapper.find('input')
     await input.trigger('click')
     const items = document.querySelectorAll('.ty-select-dropdown__item>span')
@@ -165,7 +165,7 @@ describe('TimeSelect', () => {
     const wrapper = mount(() => (
       <TimeSelect start="00:00" step="00:05" end="23:59" />
     ))
-    const select = wrapper.findComponent({ name: 'ElTimeSelect' })
+    const select = wrapper.findComponent({ name: 'TyTimeSelect' })
     const input = wrapper.find('input')
     await input.trigger('click')
     const items = document.querySelectorAll('.ty-select-dropdown__item>span')
@@ -179,7 +179,7 @@ describe('TimeSelect', () => {
     const wrapper = mount(() => (
       <TimeSelect start="00:10" end="00:20" step="00:02" />
     ))
-    const select = wrapper.findComponent({ name: 'ElTimeSelect' })
+    const select = wrapper.findComponent({ name: 'TyTimeSelect' })
     const input = wrapper.find('input')
     await input.trigger('click')
     const items = document.querySelectorAll('.ty-select-dropdown__item>span')
@@ -246,9 +246,9 @@ describe('TimeSelect', () => {
   describe('form item accessibility integration', () => {
     it('automatic id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <TimeSelect />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -263,13 +263,13 @@ describe('TimeSelect', () => {
 
     it('specified id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <TimeSelect
             // type checking failed as `id` is a fallthrough attribute
             // @ts-ignore
             id="foobar"
           />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -285,10 +285,10 @@ describe('TimeSelect', () => {
 
     it('form item role is group when multiple inputs', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <TimeSelect />
           <TimeSelect />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -298,9 +298,9 @@ describe('TimeSelect', () => {
 
     it('The disabled state of a component has higher priority than that of a form', async () => {
       const wrapper = mount(() => (
-        <ElForm disabled>
+        <TyForm disabled>
           <TimeSelect disabled={false} />
-        </ElForm>
+        </TyForm>
       ))
 
       await nextTick()

@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, test, vi } from 'vitest'
 import { debugWarn } from '@element-plus/utils'
 import { Checked, CircleClose, Hide, View } from '@element-plus/icons-vue'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
 import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import Switch from '../src/switch.vue'
 
@@ -317,9 +317,9 @@ describe('Switch.vue', () => {
   describe('form item accessibility integration', () => {
     test('automatic id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <Switch />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -332,9 +332,9 @@ describe('Switch.vue', () => {
 
     test('specified id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <Switch id="foobar" />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -348,10 +348,10 @@ describe('Switch.vue', () => {
 
     test('form item role is group when multiple inputs', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <Switch />
           <Switch />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -433,9 +433,9 @@ describe('Switch.vue', () => {
     })
     test('The disabled state of a component has higher priority than that of a form', async () => {
       const wrapper = mount(() => (
-        <ElForm disabled>
+        <TyForm disabled>
           <Switch disabled={false} />
-        </ElForm>
+        </TyForm>
       ))
 
       await nextTick()

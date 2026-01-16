@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { ElMessageBox } from '@element-plus/components/message-box'
+import { TyMessageBox } from '@element-plus/components/message-box'
 import ConfigProvider from '@element-plus/components/config-provider'
 import Overlay from '../src/overlay'
 
@@ -48,7 +48,7 @@ describe('Overlay.vue', () => {
   test('global', async () => {
     const testNamespace = 'test'
     const callout = () => {
-      ElMessageBox.prompt('Title', 'Description')
+      TyMessageBox.prompt('Title', 'Description')
     }
     const wrapper = mount(() => {
       return (

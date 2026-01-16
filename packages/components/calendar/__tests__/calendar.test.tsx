@@ -261,12 +261,12 @@ describe('Calendar.vue', () => {
     )
 
     await nextTick()
-    const selects = wrapper.findAllComponents({ name: 'ElSelect' })
+    const selects = wrapper.findAllComponents({ name: 'TySelect' })
     const btn = wrapper.find('.ty-button')
     const yearSelect = selects[0]
-    const yearOptions = yearSelect.findAllComponents({ name: 'ElOption' })
+    const yearOptions = yearSelect.findAllComponents({ name: 'TyOption' })
     const monthSelect = selects[1]
-    const monthOptions = monthSelect.findAllComponents({ name: 'ElOption' })
+    const monthOptions = monthSelect.findAllComponents({ name: 'TyOption' })
     const yearVm = yearSelect.vm as any
     const monthVm = monthSelect.vm as any
     const firstRow = wrapper.element.querySelector('.ty-calendar-table__row')
@@ -321,11 +321,11 @@ describe('Calendar.vue', () => {
     )
 
     await nextTick()
-    const selects = wrapper.findAllComponents({ name: 'ElSelect' })
+    const selects = wrapper.findAllComponents({ name: 'TySelect' })
     const yearSelect = selects[0]
-    const yearOptions = yearSelect.findAllComponents({ name: 'ElOption' })
+    const yearOptions = yearSelect.findAllComponents({ name: 'TyOption' })
     const monthSelect = selects[1]
-    const monthOptions = monthSelect.findAllComponents({ name: 'ElOption' })
+    const monthOptions = monthSelect.findAllComponents({ name: 'TyOption' })
 
     expect(yearOptions[0].text()).toBe('2015年')
     expect(monthOptions[0].text()).toBe('1月')

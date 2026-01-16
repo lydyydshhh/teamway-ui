@@ -12,8 +12,8 @@ import {
   ROVING_FOCUS_GROUP_INJECTION_KEY,
   ROVING_FOCUS_GROUP_ITEM_INJECTION_KEY,
 } from '../src/tokens'
-import ElRovingFocusItem from '../src/roving-focus-item.vue'
-import ElRovingFocusGroupImpl from '../src/roving-focus-group-impl.vue'
+import TyRovingFocusItem from '../src/roving-focus-item.vue'
+import TyRovingFocusGroupImpl from '../src/roving-focus-group-impl.vue'
 
 const AXIOM = 'rem is the best girl'
 const focusItemKls = 'item-kls'
@@ -51,7 +51,7 @@ const FocusItem = defineComponent({
     </div>`,
 })
 
-describe('<ElRovingFocusItem />', () => {
+describe('<TyRovingFocusItem />', () => {
   const currentTabbedId = ref('test_id')
   const loop = ref(false)
   const onItemFocus = vi.fn()
@@ -87,7 +87,7 @@ describe('<ElRovingFocusItem />', () => {
         </ty-roving-focus-item>
       </div>`,
         components: {
-          ElRovingFocusItem,
+          TyRovingFocusItem,
           FocusItem,
         },
       },
@@ -100,7 +100,7 @@ describe('<ElRovingFocusItem />', () => {
       }
     )
   let wrapper: ReturnType<typeof createComponent>
-  const findItems = () => wrapper.findAllComponents(ElRovingFocusItem)
+  const findItems = () => wrapper.findAllComponents(TyRovingFocusItem)
   const findDOMItems = () => wrapper.findAll(`.${focusItemKls}`)
   beforeEach(async () => {
     wrapper = createComponent()
@@ -166,7 +166,7 @@ describe('<ElRovingFocusItem />', () => {
     })
   })
 
-  describe('with <ElRovingFocusGroupImpl />', () => {
+  describe('with <TyRovingFocusGroupImpl />', () => {
     it('should be able to handle keyboard navigation', async () => {
       const itemMap = new Map()
       const getItems = () => [...itemMap.values()]
@@ -184,8 +184,8 @@ describe('<ElRovingFocusItem />', () => {
         </ty-roving-focus-item>
       </ty-roving-focus-group-impl>`,
           components: {
-            ElRovingFocusGroupImpl,
-            ElRovingFocusItem,
+            TyRovingFocusGroupImpl,
+            TyRovingFocusItem,
             FocusItem,
           },
         },

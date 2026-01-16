@@ -24,7 +24,7 @@ type FormItemInstance = InstanceType<typeof FormItem>
 
 const AXIOM = 'Rem is the best girl'
 
-describe('ElFormItem', () => {
+describe('TyFormItem', () => {
   let wrapper: VueWrapper<InstanceType<typeof DynamicFormItem>>
   const formItemRef = ref<FormItemInstance>()
   const inputRef = ref<InputInstance>()

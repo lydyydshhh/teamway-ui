@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { usePopperContainerId, useZIndex } from '@element-plus/hooks'
 import { rAF } from '@element-plus/test-utils/tick'
-import { ElPopperTrigger } from '@element-plus/components/popper'
+import { TyPopperTrigger } from '@element-plus/components/popper'
 import Popover from '../src/popover.vue'
 
 import type { VueWrapper } from '@vue/test-utils'
@@ -31,7 +31,7 @@ describe('Popover.vue', () => {
   let wrapper: VueWrapper<any>
   const findContentComp = () =>
     wrapper.findComponent({
-      name: 'ElPopperContent',
+      name: 'TyPopperContent',
     })
 
   afterEach(() => {
@@ -107,7 +107,7 @@ describe('Popover.vue', () => {
     const wrapper = _mount({ trigger: 'click' })
 
     await nextTick()
-    const trigger$ = wrapper.findComponent(ElPopperTrigger)
+    const trigger$ = wrapper.findComponent(TyPopperTrigger)
     const triggerEl = trigger$.find('.ty-tooltip__trigger')
     vi.useFakeTimers()
     await triggerEl.trigger('click')
@@ -131,7 +131,7 @@ describe('Popover.vue', () => {
   it('test visible controlled mode trigger invalid', async () => {
     const wrapper = _mount({ visible: false, trigger: 'click' })
     await nextTick()
-    const trigger$ = wrapper.findComponent(ElPopperTrigger)
+    const trigger$ = wrapper.findComponent(TyPopperTrigger)
     const triggerEl = trigger$.find('.ty-tooltip__trigger')
     const popoverDom: HTMLElement = document.querySelector('.ty-popper')!
 
@@ -177,7 +177,7 @@ describe('Popover.vue', () => {
       }
     )
     await nextTick()
-    const trigger$ = wrapper.findComponent(ElPopperTrigger)
+    const trigger$ = wrapper.findComponent(TyPopperTrigger)
     const triggerEl = trigger$.find('.ty-tooltip__trigger')
     const popoverDom: HTMLElement = document.querySelector('.ty-popper')!
 

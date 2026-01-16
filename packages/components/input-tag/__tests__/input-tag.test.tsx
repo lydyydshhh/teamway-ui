@@ -521,7 +521,7 @@ describe('InputTag.vue', () => {
       await tags[1].trigger('mouseenter')
       await nextTick()
 
-      const tooltip = wrapper.findComponent({ name: 'ElTooltip' })
+      const tooltip = wrapper.findComponent({ name: 'TyTooltip' })
       expect(tooltip.exists()).toBe(true)
     })
 

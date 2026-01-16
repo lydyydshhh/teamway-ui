@@ -113,9 +113,9 @@ const createComponent = ({
         nextTick(() => resolve(wrapperRef.value!))
       ),
     select: wrapper.findComponent({
-      name: 'ElSelect',
+      name: 'TySelect',
     }) as VueWrapper<SelectInstance>,
-    tree: wrapper.findComponent({ name: 'ElTree' }) as VueWrapper<TreeInstance>,
+    tree: wrapper.findComponent({ name: 'TyTree' }) as VueWrapper<TreeInstance>,
   }
 }
 
@@ -1021,7 +1021,7 @@ describe('TreeSelect.vue', () => {
     mountedWrappers.push(wrapper)
 
     const select = wrapper.findComponent({
-      name: 'ElSelect',
+      name: 'TySelect',
     })
 
     select.vm.handleOptionSelect(select.vm.states.options.get(1))

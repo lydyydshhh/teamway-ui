@@ -9,7 +9,7 @@ import { BORDER_HORIZONTAL_WIDTH, EVENT_CODE } from '@element-plus/constants'
 import { ArrowDown, CaretTop, CircleClose } from '@element-plus/icons-vue'
 import { usePopperContainerId } from '@element-plus/hooks'
 import { hasClass } from '@element-plus/utils'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
 import Select from '../src/select.vue'
 import Group from '../src/option-group.vue'
 import Option from '../src/option.vue'
@@ -60,8 +60,8 @@ const _mount = (template: string, data: any = () => ({}), otherObj?) =>
         'ty-select': Select,
         'ty-option': Option,
         'ty-group-option': Group,
-        'ty-form-item': ElFormItem,
-        'ty-form': ElForm,
+        'ty-form-item': TyFormItem,
+        'ty-form': TyForm,
       },
       template,
       data,
@@ -340,7 +340,7 @@ describe('Select', () => {
     expect(wrapper.find(`.${PLACEHOLDER_CLASS_NAME}`).text()).toBe(
       DEFAULT_PLACEHOLDER
     )
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const trigger = wrapper.find(`.${WRAPPER_CLASS_NAME}`)
     await trigger.trigger('mouseenter')
     await trigger.trigger('click')
@@ -363,7 +363,7 @@ describe('Select', () => {
 
   test('custom dropdown class', () => {
     wrapper = getSelectVm({ popperClass: 'custom-dropdown' })
-    const dropdown = wrapper.findComponent({ name: 'ElSelectDropdown' })
+    const dropdown = wrapper.findComponent({ name: 'TySelectDropdown' })
     expect(dropdown.classes()).toContain('custom-dropdown')
   })
 
@@ -549,7 +549,7 @@ describe('Select', () => {
       })
     )
     await nextTick()
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const selectVm = select.vm as any
     expect(selectVm.selectedLabel).toStrictEqual([])
     await wrapper.find(`.${WRAPPER_CLASS_NAME}`).trigger('click')
@@ -656,7 +656,7 @@ describe('Select', () => {
       })
     )
     await nextTick()
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const vm = wrapper.vm as any
     const selectVm = select.vm as any
 
@@ -1029,7 +1029,7 @@ describe('Select', () => {
       },
     ]
     wrapper = getGroupSelectVm({}, optionGroupData)
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const vm = select.vm as any
     let i = 8
     while (i--) {
@@ -1068,7 +1068,7 @@ describe('Select', () => {
         },
       }
     )
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const vm = wrapper.vm as any
     const selectVm = select.vm as any
     selectVm.expanded = true
@@ -1079,7 +1079,7 @@ describe('Select', () => {
   test('keyboard operations', async () => {
     vi.useFakeTimers()
     wrapper = getSelectVm()
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const vm = select.vm as any
     let i = 8
     while (i--) {
@@ -1144,7 +1144,7 @@ describe('Select', () => {
         value: 'Option1',
       })
     )
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const selectVm = select.vm as any
     const input = wrapper.find('input')
     await input.trigger('click')
@@ -1162,7 +1162,7 @@ describe('Select', () => {
   // #19136
   test('keyboard operations when options are disabled due to multiple-limit', async () => {
     wrapper = getSelectVm({ multiple: true, multipleLimit: 2 })
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     await wrapper.setProps({
       modelValue: ['选项1', '选项2'],
     })
@@ -1178,7 +1178,7 @@ describe('Select', () => {
 
   test('clearable', async () => {
     wrapper = getSelectVm({ clearable: true })
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const vm = wrapper.vm as any
     const selectVm = select.vm as any
     vm.value = '选项1'
@@ -1214,7 +1214,7 @@ describe('Select', () => {
 
   test('fitInputWidth', async () => {
     wrapper = getSelectVm({ fitInputWidth: true })
-    const selectRef = wrapper.findComponent({ name: 'ElSelect' })
+    const selectRef = wrapper.findComponent({ name: 'TySelect' })
     const selectDom = selectRef.element
     const selectRect = {
       height: 40,
@@ -1226,7 +1226,7 @@ describe('Select', () => {
     const mockSelectWidth = vi
       .spyOn(selectDom, 'getBoundingClientRect')
       .mockReturnValue(selectRect as DOMRect)
-    const dropdown = wrapper.findComponent({ name: 'ElSelectDropdown' })
+    const dropdown = wrapper.findComponent({ name: 'TySelectDropdown' })
     dropdown.vm.minWidth = `${
       selectRef.element.getBoundingClientRect().width - BORDER_HORIZONTAL_WIDTH
     }px`
@@ -1240,7 +1240,7 @@ describe('Select', () => {
       filterable: true,
       defaultFirstOption: true,
     })
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const selectVm = select.vm as any
     const input = wrapper.find('input')
     await input.trigger('click')
@@ -1274,7 +1274,7 @@ describe('Select', () => {
       },
       demoOptions
     )
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const selectVm = select.vm as any
     const input = wrapper.find('input')
     await input.trigger('click')
@@ -1288,7 +1288,7 @@ describe('Select', () => {
 
   test('allow create', async () => {
     wrapper = getSelectVm({ filterable: true, allowCreate: true })
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const selectVm = select.vm as any
     const input = wrapper.find('input')
     await input.trigger('click')
@@ -1323,7 +1323,7 @@ describe('Select', () => {
         },
       ]
     )
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const selectVm = select.vm as any
     const input = wrapper.find('input')
     await input.trigger('click')
@@ -1710,7 +1710,7 @@ describe('Select', () => {
     wrapper = _mount(`<ty-select @focus="handleFocus" />`, () => ({
       handleFocus,
     }))
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const input = select.find('input')
 
     expect(input.exists()).toBe(true)
@@ -1743,7 +1743,7 @@ describe('Select', () => {
     wrapper = _mount(`<ty-select @blur="handleBlur" />`, () => ({
       handleBlur,
     }))
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const input = select.find('input')
 
     expect(input.exists()).toBe(true)
@@ -1782,7 +1782,7 @@ describe('Select', () => {
       })
     )
 
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const vm = wrapper.vm as any
     const selectVm = select.vm as any
     selectVm.states.inputHovering = true
@@ -1825,7 +1825,7 @@ describe('Select', () => {
         handleBlur,
       })
     )
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const input = select.find('input')
 
     expect(input.exists()).toBe(true)
@@ -1887,7 +1887,7 @@ describe('Select', () => {
       })
     )
 
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const input = select.find('input')
 
     await input.trigger('focus')
@@ -1910,7 +1910,7 @@ describe('Select', () => {
       `,
       () => ({ handleBlur })
     )
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const input = select.find('input')
     await input.trigger('focus')
 
@@ -1932,7 +1932,7 @@ describe('Select', () => {
 
   test('should not open popper when automatic-dropdown not set', async () => {
     wrapper = getSelectVm()
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const input = select.find('input')
     await input.trigger('focus')
     expect((select.vm as any).expanded).toBe(false)
@@ -1940,7 +1940,7 @@ describe('Select', () => {
 
   test('should open popper when automatic-dropdown is set', async () => {
     wrapper = getSelectVm({ automaticDropdown: true })
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const input = select.find('input')
     await input.trigger('focus')
     expect((select.vm as any).expanded).toBe(true)
@@ -1948,7 +1948,7 @@ describe('Select', () => {
 
   test('automatic dropdown should cooperate with click to open the dropdown', async () => {
     wrapper = getSelectVm({ automaticDropdown: true })
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const input = select.find('input')
     await input.trigger('focus')
     expect((select.vm as any).expanded).toBe(true)
@@ -2011,7 +2011,7 @@ describe('Select', () => {
     const trigger = wrapper.find(`.${WRAPPER_CLASS_NAME}`)
     await trigger.trigger('mouseenter')
     await trigger.trigger('click')
-    const selectVm = wrapper.findComponent({ name: 'ElSelect' }).vm as any
+    const selectVm = wrapper.findComponent({ name: 'TySelect' }).vm as any
     expect(selectVm.expanded).toBe(true)
     expect(wrapper.find(`.${PLACEHOLDER_CLASS_NAME}`).text()).toBe('test')
     expect(vm.value).toBe('test')
@@ -2122,7 +2122,7 @@ describe('Select', () => {
           :value="item"
         />
       </ty-select>`,
-      components: { ElSelect: Select, ElOption: Option },
+      components: { TySelect: Select, TyOption: Option },
       data() {
         return {
           options: [],
@@ -2205,7 +2205,7 @@ describe('Select', () => {
       },
     })
 
-    const select = wrapper.findComponent({ name: 'ElSelect' }).vm
+    const select = wrapper.findComponent({ name: 'TySelect' }).vm
     select.onInput({
       target: {
         value: '',
@@ -2456,7 +2456,7 @@ describe('Select', () => {
     )
     const vm = wrapper.vm as any
     await nextTick()
-    const selectVm = wrapper.findComponent({ name: 'ElSelect' }).vm as any
+    const selectVm = wrapper.findComponent({ name: 'TySelect' }).vm as any
     expect(wrapper.findAll('.ty-tag').length).toBe(3)
     const tagCloseIcons = wrapper.findAll('.ty-tag__close')
     expect(tagCloseIcons.length).toBe(1)
@@ -2612,7 +2612,7 @@ describe('Select', () => {
       filterable: true,
       clearable: true,
     })
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const trigger = wrapper.find('.ty-select__suffix')
     await trigger.trigger('click')
     expect((select.vm as any).expanded).toBe(true)
@@ -2625,7 +2625,7 @@ describe('Select', () => {
       filterable: false,
       clearable: true,
     })
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const trigger = wrapper.find(`.${WRAPPER_CLASS_NAME}`)
     await trigger.trigger('click')
     expect((select.vm as any).expanded).toBe(true)
@@ -2639,7 +2639,7 @@ describe('Select', () => {
       filterable: true,
       clearable: true,
     })
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const trigger = wrapper.find(`.${WRAPPER_CLASS_NAME}`)
     await trigger.trigger('click')
     expect((select.vm as any).expanded).toBe(true)
@@ -2651,7 +2651,7 @@ describe('Select', () => {
   describe('should show all options when open select dropdown', () => {
     async function testShowOptions({ filterable, multiple }: SelectProps = {}) {
       wrapper = getSelectVm({ filterable, multiple })
-      const options = wrapper.findAllComponents({ name: 'ElOption' })
+      const options = wrapper.findAllComponents({ name: 'TyOption' })
 
       await wrapper.find(`.${WRAPPER_CLASS_NAME}`).trigger('click')
       expect(options.every((option) => option.vm.visible)).toBe(true)
@@ -2828,13 +2828,13 @@ describe('Select', () => {
         options,
       })
     )
-    const select = wrapper.findComponent({ name: 'ElSelect' }).vm
+    const select = wrapper.findComponent({ name: 'TySelect' }).vm
     expect(select.states.selected[0].currentLabel).toBe(options[0].label)
   })
 
   test('should reset selectedLabel when toggle multiple', async () => {
     wrapper = getSelectVm({ multiple: false })
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const vm = wrapper.vm as any
     const selectVm = select.vm as any
     vm.value = '选项1'
@@ -3154,7 +3154,7 @@ describe('Select', () => {
       })
     )
     disabled.value = true
-    const selectVm = wrapper.findComponent({ name: 'ElSelect' }).vm
+    const selectVm = wrapper.findComponent({ name: 'TySelect' }).vm
     selectVm.states.inputHovering = true
     await nextTick()
     const iconClear = wrapper.findComponent(CircleClose)
@@ -3252,7 +3252,7 @@ describe('Select', () => {
       () => ({ value: '1' })
     )
 
-    const dropdown = wrapper.findComponent({ name: 'ElSelectDropdown' })
+    const dropdown = wrapper.findComponent({ name: 'TySelectDropdown' })
     const input = wrapper.find('input')
     const list = dropdown.find('.ty-select-dropdown__list')
     const option = dropdown.find('.ty-select-dropdown__item')
@@ -3347,7 +3347,7 @@ describe('Select', () => {
         defaultFirstOption: true,
       })
 
-      const select = wrapper.findComponent({ name: 'ElSelect' })
+      const select = wrapper.findComponent({ name: 'TySelect' })
       const selectVm = select.vm as any
       const input = wrapper.find('input')
       input.element.focus()
@@ -3373,7 +3373,7 @@ describe('Select', () => {
         defaultFirstOption: true,
       })
 
-      const select = wrapper.findComponent({ name: 'ElSelect' })
+      const select = wrapper.findComponent({ name: 'TySelect' })
       const selectVm = select.vm as any
       const input = wrapper.find('input')
       input.element.focus()
@@ -3399,7 +3399,7 @@ describe('Select', () => {
         valueKey: 'label',
       })
 
-      const select = wrapper.findComponent({ name: 'ElSelect' })
+      const select = wrapper.findComponent({ name: 'TySelect' })
       const selectVm = select.vm as any
       const input = wrapper.find('input')
       input.element.focus()
@@ -3449,7 +3449,7 @@ describe('Select', () => {
         })
       )
 
-      const select = wrapper.findComponent({ name: 'ElSelect' })
+      const select = wrapper.findComponent({ name: 'TySelect' })
       const selectVm = select.vm as any
       const input = wrapper.find('input')
       input.element.focus()
@@ -3507,7 +3507,7 @@ describe('Select', () => {
         }
       )
 
-      const select = wrapper.findComponent({ name: 'ElSelect' })
+      const select = wrapper.findComponent({ name: 'TySelect' })
       const selectVm = select.vm as any
       const input = wrapper.find('input')
       input.element.focus()
@@ -3853,7 +3853,7 @@ describe('Select', () => {
       }
     )
 
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const selectVm = select.vm as any
     const input = wrapper.find('input')
     await input.trigger('click')
@@ -3880,7 +3880,7 @@ describe('Select', () => {
       })
     )
 
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const selectVm = select.vm as any
     const wrapEl = wrapper.find('.ty-select-dropdown__wrap').element
     const optionEls = wrapper.findAll('.ty-select-dropdown__item')
@@ -4040,7 +4040,7 @@ describe('Select', () => {
       })
     )
 
-    const select = wrapper.findComponent({ name: 'ElSelect' })
+    const select = wrapper.findComponent({ name: 'TySelect' })
     const selectVm = select.vm as any
     const input = wrapper.find('input')
 
@@ -4179,10 +4179,10 @@ describe('Select', () => {
       })
     )
 
-    const selectVm = wrapper.findComponent({ name: 'ElSelect' }).vm as any
+    const selectVm = wrapper.findComponent({ name: 'TySelect' }).vm as any
     await wrapper.find('.ty-select__wrapper').trigger('click')
     await nextTick()
-    const optionCmps = wrapper.findAllComponents({ name: 'ElOption' })
+    const optionCmps = wrapper.findAllComponents({ name: 'TyOption' })
     await optionCmps[0].trigger('click')
     await nextTick()
     selectVm.states.hoveringIndex = 0
@@ -4211,7 +4211,7 @@ describe('Select', () => {
           :value="item"
         />
       </ty-select>`,
-      components: { ElSelect: Select, ElOption: Option },
+      components: { TySelect: Select, TyOption: Option },
       data() {
         return {
           options: [],

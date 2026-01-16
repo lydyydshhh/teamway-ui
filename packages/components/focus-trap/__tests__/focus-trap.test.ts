@@ -2,12 +2,12 @@ import { h, inject, nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { EVENT_CODE } from '@element-plus/constants'
-import ElFocusTrap from '../src/focus-trap.vue'
+import TyFocusTrap from '../src/focus-trap.vue'
 import { FOCUS_TRAP_INJECTION_KEY } from '../src/tokens'
 
 const AXIOM = 'rem is the best girl'
 
-describe('<ElFocusTrap', () => {
+describe('<TyFocusTrap', () => {
   const childKls = 'child-class'
   const TrapChild = {
     props: {
@@ -36,7 +36,7 @@ describe('<ElFocusTrap', () => {
   }
 
   const createComponent = (props = {}, items = 0) =>
-    mount(ElFocusTrap, {
+    mount(TyFocusTrap, {
       props: {
         trapped: true,
         ...props,

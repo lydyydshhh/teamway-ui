@@ -13,8 +13,8 @@ import {
 import { rAF } from '@element-plus/test-utils/tick'
 import installStyle from '@element-plus/test-utils/style-plugin'
 import {
-  ElCheckbox as Checkbox,
-  ElCheckboxGroup as CheckboxGroup,
+  TyCheckbox as Checkbox,
+  TyCheckboxGroup as CheckboxGroup,
 } from '@element-plus/components/checkbox'
 import Button from '@element-plus/components/button/src/button.vue'
 import Input from '@element-plus/components/input'

@@ -17,7 +17,7 @@ const _mount = (render: () => VNode) =>
     attachTo: document.body,
     global: {
       provide: {
-        ElSteps: {},
+        TySteps: {},
       },
     },
   }) as unknown as VueWrapper<StepsInstance>

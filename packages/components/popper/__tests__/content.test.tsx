@@ -2,7 +2,7 @@ import { computed, defineComponent, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { POPPER_INJECTION_KEY } from '@element-plus/components/popper'
-import ElContent from '../src/content.vue'
+import TyContent from '../src/content.vue'
 
 import type { VueWrapper } from '@vue/test-utils'
 import type { PopperContentInstance } from '../src/content'
@@ -23,15 +23,15 @@ const TestComponent = defineComponent({
   },
   render() {
     return (
-      <ElContent ref="contentRef" {...this.$attrs}>
+      <TyContent ref="contentRef" {...this.$attrs}>
         {AXIOM}
-      </ElContent>
+      </TyContent>
     )
   },
 })
 
 const mountContent = (props = {}) =>
-  mount(<ElContent {...props}>{AXIOM}</ElContent>, {
+  mount(<TyContent {...props}>{AXIOM}</TyContent>, {
     global: {
       provide: {
         [POPPER_INJECTION_KEY as symbol]: popperInjection,
@@ -48,7 +48,7 @@ const mountWrappedContent = (props = {}) =>
     },
   }) as unknown as VueWrapper<InstanceType<typeof TestComponent>>
 
-describe('<ElPopperContent />', () => {
+describe('<TyPopperContent />', () => {
   describe('with triggerRef provided', () => {
     const triggerKls = 'ty-popper__trigger'
     let wrapper: VueWrapper<PopperContentInstance>

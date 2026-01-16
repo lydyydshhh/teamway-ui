@@ -1436,7 +1436,7 @@ describe('Tree.vue', () => {
         </div>
       `,
     })
-    const tree = wrapper.findComponent({ name: 'ElTree' })
+    const tree = wrapper.findComponent({ name: 'TyTree' })
     expect(
       Object.values(
         (tree.vm as InstanceType<typeof Tree>).store.nodesMap
@@ -1457,7 +1457,7 @@ describe('Tree.vue', () => {
       return () => (flag = true)
     }
     await nextTick()
-    const tree = wrapper.findComponent({ name: 'ElTree' })
+    const tree = wrapper.findComponent({ name: 'TyTree' })
     const targetElement = wrapper.find('div[data-key="3"]').element
     const fromElement = wrapper.find('div[data-key="1"]').element
     defineGetter(targetElement, 'focus', handleFocus)
@@ -1486,7 +1486,7 @@ describe('Tree.vue', () => {
       return () => (flag = true)
     }
     await nextTick()
-    const tree = wrapper.findComponent({ name: 'ElTree' })
+    const tree = wrapper.findComponent({ name: 'TyTree' })
     const targetElement = wrapper.find('div[data-key="2"]').element
     const fromElement = wrapper.find('div[data-key="1"]').element
     defineGetter(targetElement, 'focus', handleFocus)
@@ -1515,7 +1515,7 @@ describe('Tree.vue', () => {
     function handleFocus() {
       return () => (flag = true)
     }
-    const tree = wrapper.findComponent({ name: 'ElTree' })
+    const tree = wrapper.findComponent({ name: 'TyTree' })
     const targetElement = wrapper.find('div[data-key="2"]').element
     const fromElement = wrapper.find('div[data-key="1"]')
     await fromElement.trigger('click')
@@ -1573,7 +1573,7 @@ describe('Tree.vue', () => {
     ;(treeWrapper.vm as InstanceType<typeof Tree>).filter('-1')
 
     await sleep()
-    const tree = wrapper.findComponent({ name: 'ElTree' })
+    const tree = wrapper.findComponent({ name: 'TyTree' })
     ;(tree.vm as InstanceType<typeof Tree>).setCurrentKey(1)
 
     const allNodes = treeWrapper.findAll('.ty-tree-node')
@@ -1676,7 +1676,7 @@ describe('Tree.vue', () => {
     const treeWrapper = wrapper.findComponent(Tree)
 
     await sleep()
-    const tree = wrapper.findComponent({ name: 'ElTree' })
+    const tree = wrapper.findComponent({ name: 'TyTree' })
     ;(tree.vm as InstanceType<typeof Tree>).setCurrentKey(2)
 
     const allNodes = treeWrapper.findAll('.ty-tree-node')
@@ -1776,7 +1776,7 @@ describe('Tree.vue', () => {
       return () => (flag = true)
     }
     await nextTick()
-    const tree = wrapper.findComponent({ name: 'ElTree' })
+    const tree = wrapper.findComponent({ name: 'TyTree' })
     const targetElement = wrapper.find('div[data-key="3"]').element
     const fromElement = wrapper.find('div[data-key="1"]').element
     defineGetter(targetElement, 'focus', handleFocus)
@@ -1867,8 +1867,8 @@ describe('Tree.vue', () => {
         },
       },
     })
-    const tree = wrapper.findComponent({ name: 'ElTree' })
-    const button = wrapper.findComponent({ name: 'ElButton' })
+    const tree = wrapper.findComponent({ name: 'TyTree' })
+    const button = wrapper.findComponent({ name: 'TyButton' })
     const firstNode = wrapper.find('.ty-tree-node')
 
     expect(tree.vm.getNode(1).data.l).toEqual('一级 1')
@@ -1953,7 +1953,7 @@ describe('Tree.vue', () => {
       return () => (flag = !flag)
     }
     await nextTick()
-    const tree = wrapper.findComponent({ name: 'ElTree' })
+    const tree = wrapper.findComponent({ name: 'TyTree' })
     const originElements = wrapper.findAll('div[data-key]')
     const region1 = originElements[0].element
     const region2 = originElements[1].element
@@ -2148,7 +2148,7 @@ describe('Tree.vue', () => {
     })
 
     await nextTick()
-    const treeRef = wrapper.findComponent({ name: 'ElTree' }).vm as TreeInstance
+    const treeRef = wrapper.findComponent({ name: 'TyTree' }).vm as TreeInstance
 
     expect(treeRef.getCheckedKeys()).toHaveLength(0)
 
@@ -2266,7 +2266,7 @@ describe('Tree.vue', () => {
     })
 
     await nextTick()
-    const treeRef = wrapper.findComponent({ name: 'ElTree' }).vm as TreeInstance
+    const treeRef = wrapper.findComponent({ name: 'TyTree' }).vm as TreeInstance
     const keys = ['1', '1-1', '1-2', '1-2-1']
 
     expect(treeRef.getCheckedKeys()).toHaveLength(0)
@@ -2313,7 +2313,7 @@ describe('Tree.vue', () => {
 
     await nextTick()
     const nodeWrappers = wrapper.findAll('.ty-tree-node__content')
-    const treeRef = wrapper.findComponent({ name: 'ElTree' }).vm as TreeInstance
+    const treeRef = wrapper.findComponent({ name: 'TyTree' }).vm as TreeInstance
 
     expect(treeRef.getCheckedKeys()).toHaveLength(0)
 
@@ -2370,7 +2370,7 @@ describe('Tree.vue', () => {
     })
 
     await nextTick()
-    const treeRef = wrapper.findComponent({ name: 'ElTree' }).vm as TreeInstance
+    const treeRef = wrapper.findComponent({ name: 'TyTree' }).vm as TreeInstance
     const keys = ['1-1', '1-2']
 
     expect(treeRef.getCheckedKeys()).toEqual(keys)

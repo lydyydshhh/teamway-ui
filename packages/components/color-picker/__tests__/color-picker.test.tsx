@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
 import { EVENT_CODE } from '@element-plus/constants'
 import { rAF } from '@element-plus/test-utils/tick'
 import ColorPicker from '../src/color-picker.vue'
@@ -499,9 +499,9 @@ describe('Color-picker', () => {
   describe('form item accessibility integration', () => {
     it('automatic id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <ColorPicker />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -516,9 +516,9 @@ describe('Color-picker', () => {
 
     it('specified id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <ColorPicker id="foobar" />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -534,10 +534,10 @@ describe('Color-picker', () => {
 
     it('form item role is group when multiple inputs', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <ColorPicker />
           <ColorPicker />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -547,11 +547,11 @@ describe('Color-picker', () => {
 
     it('The disabled state of a component has higher priority than that of a form', async () => {
       const wrapper = mount(() => (
-        <ElForm disabled>
-          <ElFormItem label="Foobar" data-test-ref="item">
+        <TyForm disabled>
+          <TyFormItem label="Foobar" data-test-ref="item">
             <ColorPicker disabled={false} />
-          </ElFormItem>
-        </ElForm>
+          </TyFormItem>
+        </TyForm>
       ))
 
       await nextTick()

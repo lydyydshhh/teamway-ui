@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, test, vi } from 'vitest'
 import Loading from '../src/service'
 import vLoading from '../src/directive'
-import ElInput from '../../input'
+import TyInput from '../../input'
 
 import type { VNode } from 'vue'
 import type { LoadingInstance } from '../src/loading'
@@ -259,7 +259,7 @@ describe('Loading', () => {
   test("parent's display is not block", async () => {
     const loading = ref(true)
     const wrapper = _mount(() => (
-      <ElInput
+      <TyInput
         v-loading={loading.value}
         v-slots={{
           append: () => 'Loading Text',

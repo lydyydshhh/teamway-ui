@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, test } from 'vitest'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
 import Radio from '../src/radio.vue'
 import RadioGroup from '../src/radio-group.vue'
 import RadioButton from '../src/radio-button.vue'
@@ -450,15 +450,15 @@ describe('Radio Button', () => {
   describe('form item accessibility integration', () => {
     test('single radio group in form item', async () => {
       const wrapper = mount(() => (
-        <ElFormItem ref="item" label="Test">
+        <TyFormItem ref="item" label="Test">
           <RadioGroup ref="radioGroup">
             <Radio label="Foo" value="Foo" />
             <Radio label="Bar" value="Bar" />
           </RadioGroup>
-        </ElFormItem>
+        </TyFormItem>
       ))
       await nextTick()
-      const formItem = await wrapper.findComponent(ElFormItem)
+      const formItem = await wrapper.findComponent(TyFormItem)
       const radioGroup = await wrapper.findComponent(RadioGroup)
       const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItem.attributes().role).toBeFalsy()
@@ -471,15 +471,15 @@ describe('Radio Button', () => {
 
     test('single radio group in form item, override label', async () => {
       const wrapper = mount(() => (
-        <ElFormItem ref="item" label="Test">
+        <TyFormItem ref="item" label="Test">
           <RadioGroup aria-label="Foo" ref="radioGroup">
             <Radio label="Foo" value="Foo" />
             <Radio label="Bar" value="Bar" />
           </RadioGroup>
-        </ElFormItem>
+        </TyFormItem>
       ))
       await nextTick()
-      const formItem = await wrapper.findComponent(ElFormItem)
+      const formItem = await wrapper.findComponent(TyFormItem)
       const radioGroup = await wrapper.findComponent(RadioGroup)
       const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItemLabel.attributes().for).toBe(radioGroup.attributes().id)
@@ -490,7 +490,7 @@ describe('Radio Button', () => {
 
     test('multiple radio groups in form item', async () => {
       const wrapper = mount(() => (
-        <ElFormItem ref="item" label="Test">
+        <TyFormItem ref="item" label="Test">
           <RadioGroup aria-label="Foo" ref="radioGroup1">
             <Radio label="Foo" value="Foo" />
             <Radio label="Bar" value="Bar" />
@@ -499,10 +499,10 @@ describe('Radio Button', () => {
             <Radio label="Foo" value="Foo" />
             <Radio label="Bar" value="Bar" />
           </RadioGroup>
-        </ElFormItem>
+        </TyFormItem>
       ))
       await nextTick()
-      const formItem = await wrapper.findComponent(ElFormItem)
+      const formItem = await wrapper.findComponent(TyFormItem)
       const [radioGroup1, radioGroup2] =
         await wrapper.findAllComponents(RadioGroup)
       const formItemLabel = formItem.find('.ty-form-item__label')
@@ -528,12 +528,12 @@ describe('Radio Button', () => {
 
     test('The disabled state of a component has higher priority than that of a form', async () => {
       const wrapper = mount(() => (
-        <ElForm disabled>
+        <TyForm disabled>
           <RadioGroup disabled={false}>
             <Radio label="Foo" value="Foo" />
             <Radio label="Bar" value="Bar" />
           </RadioGroup>
-        </ElForm>
+        </TyForm>
       ))
       await nextTick()
 

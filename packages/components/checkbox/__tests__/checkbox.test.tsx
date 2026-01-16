@@ -1,7 +1,7 @@
 import { nextTick, reactive, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
 import Checkbox from '../src/checkbox.vue'
 import CheckboxButton from '../src/checkbox-button.vue'
 import CheckboxGroup from '../src/checkbox-group.vue'
@@ -48,9 +48,9 @@ describe('Checkbox', () => {
     test('checkbox without label', async () => {
       const checked = ref(false)
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <Checkbox v-model={checked.value} disabled />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       const checkbox = wrapper.findComponent(Checkbox)
@@ -79,9 +79,9 @@ describe('Checkbox', () => {
     test('The disabled state of a component has higher priority than that of a form', async () => {
       const checked = ref(false)
       const wrapper = mount(() => (
-        <ElForm disabled>
+        <TyForm disabled>
           <Checkbox v-model={checked.value} disabled={false} />
-        </ElForm>
+        </TyForm>
       ))
 
       const checkbox = wrapper.findComponent(Checkbox)
@@ -100,9 +100,9 @@ describe('Checkbox', () => {
       const data = ref()
       const onChange = (val: CheckboxValueType) => (data.value = val)
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <Checkbox v-model={checked.value} onChange={onChange} />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await wrapper.findComponent(Checkbox).trigger('click')
@@ -140,11 +140,11 @@ describe('Checkbox', () => {
       const data = ref()
       const onChange = (val: CheckboxValueType) => (data.value = val)
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <label>
             <Checkbox v-model={checked.value} onChange={onChange} />
           </label>
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await wrapper.findComponent(Checkbox).trigger('click')
@@ -251,8 +251,8 @@ describe('Checkbox', () => {
     const wrapper = mount({
       setup() {
         return () => (
-          <ElForm model={form}>
-            <ElFormItem
+          <TyForm model={form}>
+            <TyFormItem
               prop="check"
               rules={[
                 { required: true, message: 'Must has one check box checked' },
@@ -267,8 +267,8 @@ describe('Checkbox', () => {
                 <Checkbox label="a" value="a" ref="a"></Checkbox>
                 <Checkbox label="b" value="b" ref="b"></Checkbox>
               </CheckboxGroup>
-            </ElFormItem>
-          </ElForm>
+            </TyFormItem>
+          </TyForm>
         )
       },
     })
@@ -348,9 +348,9 @@ describe('Checkbox', () => {
     test('without label', async () => {
       const checked = ref('a')
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <Checkbox true-value="a" false-value={3} v-model={checked.value} />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       const checkbox = wrapper.findComponent(Checkbox)
@@ -403,9 +403,9 @@ describe('Checkbox', () => {
       const checked = ref(true)
 
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <Checkbox v-model={checked.value} />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       const checkbox = wrapper.findComponent(Checkbox)
@@ -421,9 +421,9 @@ describe('Checkbox', () => {
       const checked = ref(true)
 
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <Checkbox v-model={checked.value} falseValue={'a'} />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       const checkbox = wrapper.findComponent(Checkbox)
@@ -439,9 +439,9 @@ describe('Checkbox', () => {
       const checked = ref(true)
 
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <Checkbox v-model={checked.value} trueValue={'a'} />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       const checkbox = wrapper.findComponent(Checkbox)
@@ -457,9 +457,9 @@ describe('Checkbox', () => {
       const checked = ref(true)
 
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <Checkbox v-model={checked.value} trueValue={'a'} falseValue={1} />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       const checkbox = wrapper.findComponent(Checkbox)
@@ -771,12 +771,12 @@ describe('check-button', () => {
   describe('form item accessibility integration', () => {
     test('checkbox, no label, automatic label attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <Checkbox />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
-      const formItem = await wrapper.findComponent(ElFormItem)
+      const formItem = await wrapper.findComponent(TyFormItem)
       const checkbox = await wrapper.findComponent(Checkbox)
       const formItemLabel = formItem.find('.ty-form-item__label')
       const checkboxInput = checkbox.find('.ty-checkbox__original')
@@ -787,12 +787,12 @@ describe('check-button', () => {
 
     test('checkbox with label, form item is group', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <Checkbox label="Foo" value="Foo" />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
-      const formItem = await wrapper.findComponent(ElFormItem)
+      const formItem = await wrapper.findComponent(TyFormItem)
       const checkbox = await wrapper.findComponent(Checkbox)
       const checkboxLabel = checkbox.find('.ty-checkbox__label')
       const checkboxInput = checkbox.find('.ty-checkbox__original')
@@ -803,15 +803,15 @@ describe('check-button', () => {
 
     test('single checkbox group in form item', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <CheckboxGroup>
             <Checkbox label="Foo" value="Foo" />
             <Checkbox label="Bar" value="Bar" />
           </CheckboxGroup>
-        </ElFormItem>
+        </TyFormItem>
       ))
 
-      const formItem = await wrapper.findComponent(ElFormItem)
+      const formItem = await wrapper.findComponent(TyFormItem)
       const checkboxGroup = await wrapper.findComponent(CheckboxGroup)
       const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItem.attributes('role')).toBeFalsy()
@@ -826,15 +826,15 @@ describe('check-button', () => {
 
     test('single checkbox group in form item, override label', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="test">
+        <TyFormItem label="test">
           <CheckboxGroup aria-label="Foo">
             <Checkbox label="Foo" value="Foo" />
             <Checkbox label="Bar" value="Bar" />
           </CheckboxGroup>
-        </ElFormItem>
+        </TyFormItem>
       ))
 
-      const formItem = await wrapper.findComponent(ElFormItem)
+      const formItem = await wrapper.findComponent(TyFormItem)
       const checkboxGroup = await wrapper.findComponent(CheckboxGroup)
       const formItemLabel = formItem.find('.ty-form-item__label')
       expect(formItemLabel.attributes('for')).toBe(
@@ -849,7 +849,7 @@ describe('check-button', () => {
       const wrapper = mount({
         setup() {
           return () => (
-            <ElFormItem label="test">
+            <TyFormItem label="test">
               <CheckboxGroup aria-label="Foo" ref="checkboxGroup1">
                 <Checkbox label="Foo" value="Foo" />
                 <Checkbox label="Bar" value="Bar" />
@@ -858,12 +858,12 @@ describe('check-button', () => {
                 <Checkbox label="Foo" value="Foo" />
                 <Checkbox label="Bar" value="Bar" />
               </CheckboxGroup>
-            </ElFormItem>
+            </TyFormItem>
           )
         },
       })
 
-      const formItem = await wrapper.findComponent(ElFormItem)
+      const formItem = await wrapper.findComponent(TyFormItem)
       const checkboxGroup1 = await wrapper.findComponent({
         ref: 'checkboxGroup1',
       })

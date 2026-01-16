@@ -2,7 +2,7 @@ import { defineComponent, inject, nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 import { POPPER_INJECTION_KEY } from '../src/constants'
-import ElPopper from '../src/popper.vue'
+import TyPopper from '../src/popper.vue'
 
 import type { VueWrapper } from '@vue/test-utils'
 import type { PopperInstance } from '../src/popper'
@@ -16,12 +16,12 @@ const TestChild = defineComponent({
   },
 })
 
-describe('<ElPopper />', () => {
+describe('<TyPopper />', () => {
   it('should be able to provide instance to its children', async () => {
     const wrapper = mount(
-      <ElPopper>
+      <TyPopper>
         <TestChild />
-      </ElPopper>
+      </TyPopper>
     ) as unknown as VueWrapper<PopperInstance>
 
     await nextTick()

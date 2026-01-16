@@ -6,7 +6,7 @@ import dayjs from 'dayjs'
 import { CircleClose } from '@element-plus/icons-vue'
 import triggerEvent from '@element-plus/test-utils/trigger-event'
 import { rAF } from '@element-plus/test-utils/tick'
-import { ElFormItem } from '@element-plus/components/form'
+import { TyFormItem } from '@element-plus/components/form'
 import { EVENT_CODE } from '@element-plus/constants'
 import TimePicker from '../src/time-picker'
 import Picker from '../src/common/picker.vue'
@@ -808,11 +808,11 @@ describe('TimePicker(range)', () => {
   })
 
   it('should be able to inherit options from parent injection', async () => {
-    const ElPopperOptions = {
+    const TyPopperOptions = {
       strategy: 'fixed',
     }
     const value = ref(new Date(2016, 9, 10, 18, 40))
-    const options = ref(ElPopperOptions)
+    const options = ref(TyPopperOptions)
     const wrapper = mount(
       () => (
         <TimePicker
@@ -825,7 +825,7 @@ describe('TimePicker(range)', () => {
         global: {
           provide() {
             return {
-              ElPopperOptions,
+              TyPopperOptions,
             }
           },
         },
@@ -835,7 +835,7 @@ describe('TimePicker(range)', () => {
     await nextTick()
 
     expect((wrapper.findComponent(Picker).vm as any).elPopperOptions).toEqual(
-      ElPopperOptions
+      TyPopperOptions
     )
   })
 
@@ -886,9 +886,9 @@ describe('TimePicker(range)', () => {
   describe('form item accessibility integration', () => {
     it('automatic id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <TimePicker />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -903,9 +903,9 @@ describe('TimePicker(range)', () => {
 
     it('specified id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <TimePicker id="foobar" />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -921,10 +921,10 @@ describe('TimePicker(range)', () => {
 
     it('form item role is group when multiple inputs', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <TimePicker />
           <TimePicker />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -938,7 +938,7 @@ describe('TimePicker(range)', () => {
 
     const findInput = () =>
       wrapper.findComponent({
-        name: 'ElInput',
+        name: 'TyInput',
       })
     const findClear = () => wrapper.find('.clear-icon')
     const findPicker = () =>

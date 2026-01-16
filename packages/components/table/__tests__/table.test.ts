@@ -1,12 +1,12 @@
 // @ts-nocheck
 import { h, nextTick } from 'vue'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import ElCheckbox from '@element-plus/components/checkbox'
+import TyCheckbox from '@element-plus/components/checkbox'
 import triggerEvent from '@element-plus/test-utils/trigger-event'
 import { rAF } from '@element-plus/test-utils/tick'
 import { CaretBottom, CaretTop } from '@element-plus/icons-vue'
-import ElTable from '../src/table.vue'
-import ElTableColumn from '../src/table-column'
+import TyTable from '../src/table.vue'
+import TyTableColumn from '../src/table-column'
 import {
   doubleWait,
   getMultiRowTestData,
@@ -17,7 +17,7 @@ import {
 import type { VueWrapper } from '@vue/test-utils'
 import type { ComponentPublicInstance } from 'vue'
 
-const { CheckboxGroup: ElCheckboxGroup } = ElCheckbox
+const { CheckboxGroup: TyCheckboxGroup } = TyCheckbox
 
 vi.mock('lodash-unified', async () => {
   return {
@@ -44,8 +44,8 @@ describe('Table.vue', () => {
   describe('rendering data is correct', () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
       <ty-table :data="testData">
@@ -89,10 +89,10 @@ describe('Table.vue', () => {
   it('custom template', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
-        ElCheckboxGroup,
-        ElCheckbox,
+        TyTable,
+        TyTableColumn,
+        TyCheckboxGroup,
+        TyCheckbox,
       },
       template: `
       <ty-table :data="tableData">
@@ -143,8 +143,8 @@ describe('Table.vue', () => {
         Object.assign(
           {
             components: {
-              ElTable,
-              ElTableColumn,
+              TyTable,
+              TyTableColumn,
             },
             template: `
           <ty-table :data="testData" ${props}>
@@ -245,8 +245,8 @@ describe('Table.vue', () => {
       ]
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table
@@ -354,8 +354,8 @@ describe('Table.vue', () => {
     it('current-row-key', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
         <ty-table :data="testData" row-key="id" highlight-current-row :current-row-key="currentRowKey">
@@ -390,8 +390,8 @@ describe('Table.vue', () => {
       const currentChangeCalls: Array<[any, any]> = []
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
         <ty-table
@@ -479,8 +479,8 @@ describe('Table.vue', () => {
     beforeEach(async () => {
       wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table ref="table" :data="testData" @filter-change="handleFilterChange">
@@ -623,8 +623,8 @@ describe('Table.vue', () => {
     beforeEach(async () => {
       wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
           CaretBottom,
           CaretTop,
         },
@@ -699,8 +699,8 @@ describe('Table.vue', () => {
     const createTable = function (prop = '') {
       return mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" @${prop}="handleEvent">
@@ -756,8 +756,8 @@ describe('Table.vue', () => {
     it('cell mouse enter on cell of which rowSpan > 2', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
          <ty-table
@@ -867,8 +867,8 @@ describe('Table.vue', () => {
     it('should render', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" show-summary>
@@ -895,8 +895,8 @@ describe('Table.vue', () => {
     it('custom sum text', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" show-summary sum-text="Time">
@@ -921,8 +921,8 @@ describe('Table.vue', () => {
     it('custom summary method', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" show-summary :summary-method="getSummary">
@@ -972,8 +972,8 @@ describe('Table.vue', () => {
     const createTable = function (prop = '') {
       return mount({
         components: {
-          ElTableColumn,
-          ElTable,
+          TyTableColumn,
+          TyTable,
         },
         template: `
           <ty-table ref="table" :data="testData" @${prop}="handleEvent">
@@ -1066,8 +1066,8 @@ describe('Table.vue', () => {
     it('selection reference', async () => {
       const wrapper = mount({
         components: {
-          ElTableColumn,
-          ElTable,
+          TyTableColumn,
+          TyTable,
         },
         template: `
           <ty-table ref="table" :data="testData" @select-all="handleSelectAll">
@@ -1105,8 +1105,8 @@ describe('Table.vue', () => {
     it('sort', async () => {
       const wrapper = mount({
         components: {
-          ElTableColumn,
-          ElTable,
+          TyTableColumn,
+          TyTable,
         },
         template: `
           <ty-table ref="table" :data="testData" :default-sort = "{prop: 'runtime', order: 'ascending'}">
@@ -1159,8 +1159,8 @@ describe('Table.vue', () => {
 
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table ref="table" :data="testData" >
@@ -1209,8 +1209,8 @@ describe('Table.vue', () => {
       const handleSortChange = vi.fn()
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" @sort-change="handleSortChange">
@@ -1255,8 +1255,8 @@ describe('Table.vue', () => {
     it('setCurrentRow', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
         <div>
@@ -1295,8 +1295,8 @@ describe('Table.vue', () => {
     it('get table columns', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
         <div>
@@ -1320,8 +1320,8 @@ describe('Table.vue', () => {
   it('hover', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
         <ty-table :data="testData">
@@ -1356,8 +1356,8 @@ describe('Table.vue', () => {
   it('hover on which rowSpan > 1', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
          <ty-table
@@ -1419,8 +1419,8 @@ describe('Table.vue', () => {
   it('hover on which contains nested rowSpan > 1', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
         <ty-table
@@ -1477,8 +1477,8 @@ describe('Table.vue', () => {
   it('highlight-current-row', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
         <ty-table :data="testData" highlight-current-row>
@@ -1520,8 +1520,8 @@ describe('Table.vue', () => {
   it('keep highlight row when data change', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
         <ty-table :data="testData" highlight-current-row row-key="release">
@@ -1563,8 +1563,8 @@ describe('Table.vue', () => {
   it('keep highlight row after sort', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
         <ty-table :data="testData" row-key="release" highlight-current-row >
@@ -1595,8 +1595,8 @@ describe('Table.vue', () => {
   it('table append is visible in viewport if height is 100%', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
       <ty-table :data="[]" height="100%">
@@ -1622,8 +1622,8 @@ describe('Table.vue', () => {
     it('key type is string', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" row-key="release" highlight-current-row >
@@ -1650,8 +1650,8 @@ describe('Table.vue', () => {
     it('with expand row', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" row-key="release" highlight-current-row >
@@ -1700,8 +1700,8 @@ describe('Table.vue', () => {
     it('render tree structural data', async () => {
       wrapper = mount({
         components: {
-          ElTableColumn,
-          ElTable,
+          TyTableColumn,
+          TyTable,
         },
         template: `
           <ty-table :data="testData" row-key="release">
@@ -1753,8 +1753,8 @@ describe('Table.vue', () => {
     it('load substree row data & updateKeyChildren', async () => {
       wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" row-key="release" lazy :load="load" ref="table">
@@ -1825,8 +1825,8 @@ describe('Table.vue', () => {
       const spy = vi.fn()
       wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table
@@ -1900,8 +1900,8 @@ describe('Table.vue', () => {
     it('tree-props & default-expand-all with dynamic data', async () => {
       wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table
@@ -1986,8 +1986,8 @@ describe('Table.vue', () => {
     it('tree-props & update expandRowKeys', async () => {
       wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" row-key="release" :expand-row-keys="expandRowKeys">
@@ -2061,8 +2061,8 @@ describe('Table.vue', () => {
     it('expand-row-keys & toggleRowExpansion', async () => {
       wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" row-key="release" lazy :load="load" :expand-row-keys="['2003-5-30']" ref="table">
@@ -2124,8 +2124,8 @@ describe('Table.vue', () => {
     it('v-if on ty-table-column should patch correctly', async () => {
       wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <div>
@@ -2164,8 +2164,8 @@ describe('Table.vue', () => {
     it('selectable tree', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
               <ty-table :data="testData" :tree-props="treeProps" row-key="id" @selection-change="change">
@@ -2248,8 +2248,8 @@ describe('Table.vue', () => {
     it('a11y', async () => {
       wrapper = mount({
         components: {
-          ElTableColumn,
-          ElTable,
+          TyTableColumn,
+          TyTable,
         },
         template: `
           <ty-table :data="testData" row-key="release">
@@ -2295,8 +2295,8 @@ describe('Table.vue', () => {
   it('when tableLayout is auto', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
       <ty-table :data="testData" table-layout="auto">
@@ -2320,8 +2320,8 @@ describe('Table.vue', () => {
   it('automatic minimum size of flex-items', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
         <div class="right">
@@ -2347,8 +2347,8 @@ describe('Table.vue', () => {
   it('change columns order when use v-for & key to render table', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
             <button class="change-column" @click="changeColumnData"></button>
@@ -2397,8 +2397,8 @@ describe('Table.vue', () => {
   it('show-overflow-tooltip', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
 
       template: `
@@ -2426,8 +2426,8 @@ describe('Table.vue', () => {
   it('add show-overflow-tooltip to table and table-column', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
 
       template: `
@@ -2460,8 +2460,8 @@ describe('Table.vue', () => {
       } as DOMRect)
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
 
       template: `
@@ -2600,8 +2600,8 @@ describe('Table.vue', () => {
 
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
            <ty-table
@@ -2669,8 +2669,8 @@ describe('Table.vue', () => {
 
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
       template: `
         <ty-table :data="testData">
@@ -2719,8 +2719,8 @@ describe('Table.vue', () => {
       } as DOMRect)
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
 
       template: `
@@ -2810,8 +2810,8 @@ describe('Table.vue', () => {
   it('should dynamically update show-overflow-tooltip via root table level', async () => {
     const wrapper = mount({
       components: {
-        ElTable,
-        ElTableColumn,
+        TyTable,
+        TyTableColumn,
       },
 
       template: `
