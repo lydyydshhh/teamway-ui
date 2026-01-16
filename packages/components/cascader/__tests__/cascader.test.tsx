@@ -6,14 +6,14 @@ import triggerEvent from '@element-plus/test-utils/trigger-event'
 import { ArrowDown, Check, CircleClose } from '@element-plus/icons-vue'
 import { usePopperContainerId } from '@element-plus/hooks'
 import { hasClass } from '@element-plus/utils'
-import ElForm, { ElFormItem } from '@element-plus/components/form'
-import ElScrollbar from '@element-plus/components/scrollbar'
-import ElTag from '@element-plus/components/tag'
-import ElTooltip from '@element-plus/components/tooltip'
+import TyForm, { TyFormItem } from '@element-plus/components/form'
+import TyScrollbar from '@element-plus/components/scrollbar'
+import TyTag from '@element-plus/components/tag'
+import TyTooltip from '@element-plus/components/tooltip'
 import Cascader from '../src/cascader.vue'
 
 import type { VNode } from 'vue'
-import type ElCascader from '@element-plus/components/cascader'
+import type TyCascader from '@element-plus/components/cascader'
 
 vi.mock('lodash-unified', async () => {
   return {
@@ -461,21 +461,21 @@ describe('Cascader.vue', () => {
       />
     ))
     await nextTick()
-    const tagTriggers = wrapper.findAllComponents(ElTag)
+    const tagTriggers = wrapper.findAllComponents(TyTag)
     const collapseTags = tagTriggers.filter((item) => {
       return !hasClass(item.element, 'is-closable')
     })
     expect(collapseTags.length).toBe(1)
     const collapseTag = collapseTags[0]
     await collapseTag.trigger('hover')
-    const scrollbars = wrapper.findAllComponents(ElScrollbar).filter((item) => {
+    const scrollbars = wrapper.findAllComponents(TyScrollbar).filter((item) => {
       return !hasClass(item.element, 'ty-cascader-menu')
     })
     expect(scrollbars.length).toBe(1)
     const scrollbar = scrollbars[0]
     expect(scrollbar).toBeDefined()
     expect(scrollbar?.vm.maxHeight).toBe(200)
-    const tooltip = wrapper.findComponent(ElTooltip)
+    const tooltip = wrapper.findComponent(TyTooltip)
     expect(tooltip).toBeDefined()
     await tooltip.trigger('hover')
     expect(
@@ -695,23 +695,23 @@ describe('Cascader.vue', () => {
     })
 
     const wrapper = _mount(() => (
-      <ElForm model={model}>
-        <ElFormItem label="Activity name" prop="name">
+      <TyForm model={model}>
+        <TyFormItem label="Activity name" prop="name">
           <Cascader
             v-model={model.name}
             options={OPTIONS}
             filterable
             placeholder={AXIOM}
           />
-        </ElFormItem>
-      </ElForm>
+        </TyFormItem>
+      </TyForm>
     ))
 
     model.name = ['zhejiang', 'hangzhou']
     await nextTick()
     expect(wrapper.find('input').element.placeholder).toBe('')
 
-    wrapper.findComponent(ElForm).vm.$.exposed!.resetFields()
+    wrapper.findComponent(TyForm).vm.$.exposed!.resetFields()
     await nextTick()
     expect(wrapper.find('input').element.placeholder).toBe(AXIOM)
   })
@@ -722,11 +722,11 @@ describe('Cascader.vue', () => {
     })
 
     const wrapper = _mount(() => (
-      <ElForm model={model} disabled>
-        <ElFormItem>
+      <TyForm model={model} disabled>
+        <TyFormItem>
           <Cascader disabled={false} v-model={model.name} options={OPTIONS} />
-        </ElFormItem>
-      </ElForm>
+        </TyFormItem>
+      </TyForm>
     ))
 
     model.name = ['zhejiang', 'hangzhou']
@@ -735,7 +735,7 @@ describe('Cascader.vue', () => {
   })
 
   test('should be able to trigger togglePopperVisible outside the component', async () => {
-    let cascader: InstanceType<typeof ElCascader>
+    let cascader: InstanceType<typeof TyCascader>
     const clickFn = () => {
       cascader.togglePopperVisible()
     }
@@ -1043,7 +1043,7 @@ describe('Cascader.vue', () => {
             tag: ({ data }: any) => {
               const list = getTopLevelTags(data)
               return list.map((item: string) => (
-                <ElTag key={item}>{item}</ElTag>
+                <TyTag key={item}>{item}</TyTag>
               ))
             },
           }}

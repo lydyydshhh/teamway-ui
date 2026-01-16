@@ -5,13 +5,13 @@ import { useLocale, useNamespace } from '@element-plus/hooks'
 import Chinese from '@element-plus/locale/lang/zh-cn'
 import English from '@element-plus/locale/lang/en'
 import {
-  ElButton,
-  ElCard,
-  ElDialog,
-  ElLink,
-  ElMessage,
-  ElPagination,
   MessageConfigContext,
+  TyButton,
+  TyCard,
+  TyDialog,
+  TyLink,
+  TyMessage,
+  TyPagination,
 } from '@element-plus/components'
 import { rAF } from '@element-plus/test-utils/tick'
 import { getStyle } from '@element-plus/utils'
@@ -113,7 +113,7 @@ describe('config-provider', () => {
       const wrapper = mount(() => (
         <>
           <ConfigProvider button={config}>
-            <ElButton>中文</ElButton>
+            <TyButton>中文</TyButton>
           </ConfigProvider>
           <button
             class="toggle"
@@ -144,7 +144,7 @@ describe('config-provider', () => {
 
       const wrapper = mount(() => (
         <ConfigProvider button={config}>
-          <ElButton>中文</ElButton>
+          <TyButton>中文</TyButton>
         </ConfigProvider>
       ))
       await nextTick()
@@ -167,7 +167,7 @@ describe('config-provider', () => {
 
       const wrapper = mount(() => (
         <ConfigProvider card={config}>
-          <ElCard shadow={overrideShadow.value as any}>I love rem!</ElCard>
+          <TyCard shadow={overrideShadow.value as any}>I love rem!</TyCard>
         </ConfigProvider>
       ))
       await nextTick()
@@ -187,7 +187,7 @@ describe('config-provider', () => {
 
       const wrapper = mount(() => (
         <ConfigProvider link={config}>
-          <ElLink>中文</ElLink>
+          <TyLink>中文</TyLink>
         </ConfigProvider>
       ))
       await nextTick()
@@ -203,9 +203,9 @@ describe('config-provider', () => {
 
       const wrapper = mount(() => (
         <ConfigProvider dialog={config}>
-          <ElDialog modelValue={true} title="Hello">
+          <TyDialog modelValue={true} title="Hello">
             test
-          </ElDialog>
+          </TyDialog>
         </ConfigProvider>
       ))
 
@@ -222,9 +222,9 @@ describe('config-provider', () => {
 
       const wrapper = mount(() => (
         <ConfigProvider dialog={config}>
-          <ElDialog modelValue={true} title="Hello">
+          <TyDialog modelValue={true} title="Hello">
             test
-          </ElDialog>
+          </TyDialog>
         </ConfigProvider>
       ))
 
@@ -253,9 +253,9 @@ describe('config-provider', () => {
                 },
               }}
             >
-              <ElDialog modelValue={visible.value} title="Hello">
+              <TyDialog modelValue={visible.value} title="Hello">
                 content
-              </ElDialog>
+              </TyDialog>
             </ConfigProvider>
           )
         },
@@ -284,7 +284,7 @@ describe('config-provider', () => {
 
       const wrapper = mount(() => (
         <ConfigProvider namespace={namespace.value}>
-          <ElButton>test str</ElButton>
+          <TyButton>test str</TyButton>
         </ConfigProvider>
       ))
 
@@ -298,7 +298,7 @@ describe('config-provider', () => {
 
   describe('message-config', () => {
     afterEach(() => {
-      ElMessage.closeAll()
+      TyMessage.closeAll()
       Object.keys(messageConfig).forEach(
         (key) => (messageConfig[key as keyof MessageConfigContext] = undefined)
       )
@@ -309,12 +309,12 @@ describe('config-provider', () => {
         max: 3,
       })
       const open = () => {
-        ElMessage('this is a message.')
+        TyMessage('this is a message.')
       }
 
       const wrapper = mount(() => (
         <ConfigProvider message={config}>
-          <ElButton onClick={open}>open</ElButton>
+          <TyButton onClick={open}>open</TyButton>
         </ConfigProvider>
       ))
 
@@ -344,12 +344,12 @@ describe('config-provider', () => {
         plain: true,
       })
       const open = () => {
-        ElMessage('this is a message.')
+        TyMessage('this is a message.')
       }
 
       const wrapper = mount(() => (
         <ConfigProvider message={config}>
-          <ElButton onClick={open}>open</ElButton>
+          <TyButton onClick={open}>open</TyButton>
         </ConfigProvider>
       ))
 
@@ -371,7 +371,7 @@ describe('config-provider', () => {
     it('provide global config', async () => {
       const open = () => {
         for (let i = 0; i < 20; i++) {
-          ElMessage('this is a message.')
+          TyMessage('this is a message.')
         }
       }
       const TestComponent = defineComponent({
@@ -384,7 +384,7 @@ describe('config-provider', () => {
         },
         render: () => (
           <ConfigProvider>
-            <ElButton onClick={open}>open</ElButton>
+            <TyButton onClick={open}>open</TyButton>
           </ConfigProvider>
         ),
       })
@@ -405,13 +405,13 @@ describe('config-provider', () => {
         placement: 'bottom-left',
       })
       const open = () => {
-        ElMessage('this is a message.')
+        TyMessage('this is a message.')
       }
 
       const wrapper = mount(() => (
         <ConfigProvider message={config}>
           <ConfigProvider message={overrideConfig}>
-            <ElButton onClick={open}>open</ElButton>
+            <TyButton onClick={open}>open</TyButton>
           </ConfigProvider>
         </ConfigProvider>
       ))
@@ -511,12 +511,12 @@ describe('config-provider', () => {
       const size = ref<ComponentSize>('small')
       const wrapper = mount(() => (
         <ConfigProvider size={size.value}>
-          <ElButton />
-          <ElPagination total={100} background={true} />
+          <TyButton />
+          <TyPagination total={100} background={true} />
         </ConfigProvider>
       ))
-      const button = wrapper.findComponent(ElButton)
-      const pagination = wrapper.findComponent(ElPagination)
+      const button = wrapper.findComponent(TyButton)
+      const pagination = wrapper.findComponent(TyPagination)
       expect(button.vm.$el.className.includes('small')).toBe(true)
       expect(pagination.vm.$el.className.includes('small')).toBe(true)
 

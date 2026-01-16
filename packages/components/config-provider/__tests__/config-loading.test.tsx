@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import { ElButton, ElLoading } from '@element-plus/components'
+import { TyButton, TyLoading } from '@element-plus/components'
 import ConfigProvider from '../src/config-provider'
 
 import type { LoadingInstance } from '@element-plus/components/loading/src/loading'
@@ -9,11 +9,11 @@ describe('loading config', () => {
   it('should render loading component', async () => {
     let instance: LoadingInstance
     const startLoading = () => {
-      instance = ElLoading.service()
+      instance = TyLoading.service()
     }
     const wrapper = mount(() => (
       <ConfigProvider namespace="ep" zIndex={10000}>
-        <ElButton onClick={startLoading}>test</ElButton>
+        <TyButton onClick={startLoading}>test</TyButton>
       </ConfigProvider>
     ))
     const btn = wrapper.find('.ep-button')

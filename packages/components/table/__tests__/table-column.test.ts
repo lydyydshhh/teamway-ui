@@ -1,8 +1,8 @@
 // @ts-nocheck
 import { describe, expect, it, vi } from 'vitest'
 import triggerEvent from '@element-plus/test-utils/trigger-event'
-import ElTable from '../src/table.vue'
-import ElTableColumn from '../src/table-column'
+import TyTable from '../src/table.vue'
+import TyTableColumn from '../src/table-column'
 import {
   doubleWait,
   getMultiRowTestData,
@@ -35,8 +35,8 @@ describe('table column', () => {
         Object.assign(
           {
             components: {
-              ElTable,
-              ElTableColumn,
+              TyTable,
+              TyTableColumn,
             },
             template: `
           <ty-table :data="testData" ${tableProps || ''}>
@@ -196,8 +196,8 @@ describe('table column', () => {
     it('selectable === false & check selectAll status', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" @selection-change="change">
@@ -235,8 +235,8 @@ describe('table column', () => {
       const createTable = function (type) {
         return mount({
           components: {
-            ElTable,
-            ElTableColumn,
+            TyTable,
+            TyTableColumn,
           },
           template: `
             <ty-table :data="testData" @selection-change="change">
@@ -300,8 +300,8 @@ describe('table column', () => {
           const actualIndexes = []
           const wrapper = mount({
             components: {
-              ElTable,
-              ElTableColumn,
+              TyTable,
+              TyTableColumn,
             },
             template: `
           <ty-table :data="testData" @selection-change="change">
@@ -348,8 +348,8 @@ describe('table column', () => {
         it('Maintain child selection states during data updates', async () => {
           const wrapper = mount({
             components: {
-              ElTable,
-              ElTableColumn,
+              TyTable,
+              TyTableColumn,
             },
             template: `
               <ty-table ref="tableRef" :data="testData" row-key="id" default-expand-all>
@@ -433,8 +433,8 @@ describe('table column', () => {
         it('reserve selection', async () => {
           const wrapper = mount({
             components: {
-              ElTable,
-              ElTableColumn,
+              TyTable,
+              TyTableColumn,
             },
             template: `
               <ty-table
@@ -576,8 +576,8 @@ describe('table column', () => {
           extra = extra || ''
           return mount({
             components: {
-              ElTableColumn,
-              ElTable,
+              TyTableColumn,
+              TyTable,
             },
             template: `
             <ty-table row-key="id" :data="testData" @expand-change="handleExpand" ${extra}>
@@ -815,8 +815,8 @@ describe('table column', () => {
     it('change column configuration', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <template>
@@ -876,8 +876,8 @@ describe('table column', () => {
       extra = extra || ''
       return mount({
         components: {
-          ElTableColumn,
-          ElTable,
+          TyTableColumn,
+          TyTable,
         },
         template: `
           <ty-table row-key="id" :data="testData" @expand-change="handleExpand" ${extra}>
@@ -1019,8 +1019,8 @@ describe('table column', () => {
     it('should works', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData">
@@ -1054,8 +1054,8 @@ describe('table column', () => {
     it('should works', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData">
@@ -1097,8 +1097,8 @@ describe('table column', () => {
     it('should work in one column', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData">
@@ -1129,8 +1129,8 @@ describe('table column', () => {
     it('should work with fixed', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData">
@@ -1192,7 +1192,7 @@ describe('table column', () => {
       const TableColumn = {
         name: 'TableColumn',
         components: {
-          ElTableColumn,
+          TyTableColumn,
         },
         props: {
           item: Object,
@@ -1212,8 +1212,8 @@ describe('table column', () => {
           </ty-table>
         `,
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
           TableColumn,
         },
         setup() {
@@ -1270,8 +1270,8 @@ describe('table column', () => {
       }
       const wrapper = mount({
         components: {
-          ElTableColumn,
-          ElTable,
+          TyTableColumn,
+          TyTable,
           Comp,
         },
         template: `
@@ -1297,7 +1297,7 @@ describe('table column', () => {
       const TableColumn = {
         name: 'TableColumn',
         components: {
-          ElTableColumn,
+          TyTableColumn,
         },
         template: `
           <ty-table-column>
@@ -1309,8 +1309,8 @@ describe('table column', () => {
       }
       const wrapper = mount({
         components: {
-          ElTableColumn,
-          ElTable,
+          TyTableColumn,
+          TyTable,
           TableColumn,
         },
         template: `
@@ -1337,8 +1337,8 @@ describe('table column', () => {
     it('label', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData">
@@ -1373,8 +1373,8 @@ describe('table column', () => {
     it('align', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData">
@@ -1406,8 +1406,8 @@ describe('table column', () => {
     it('header-align', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData">
@@ -1465,8 +1465,8 @@ describe('table column', () => {
     it('width', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" :fit="false">
@@ -1507,8 +1507,8 @@ describe('table column', () => {
     it('min-width', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData" :fit="false">
@@ -1549,8 +1549,8 @@ describe('table column', () => {
     it('fixed', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData">
@@ -1630,8 +1630,8 @@ describe('table column', () => {
     it('correct render selection column when it is not in the first', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="data">
@@ -1677,8 +1677,8 @@ describe('table column', () => {
     it('prop', async () => {
       const wrapper = mount({
         components: {
-          ElTable,
-          ElTableColumn,
+          TyTable,
+          TyTableColumn,
         },
         template: `
           <ty-table :data="testData">
@@ -1795,8 +1795,8 @@ describe('table column', () => {
       return mount(
         Object.assign({
           components: {
-            ElTable,
-            ElTableColumn,
+            TyTable,
+            TyTableColumn,
           },
           template: `
               <ty-table

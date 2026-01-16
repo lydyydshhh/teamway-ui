@@ -10,7 +10,7 @@ import type { VueWrapper } from '@vue/test-utils'
 describe('options', () => {
   let wrapper: ReturnType<typeof mount>
 
-  const ElOptionStub = defineComponent({
+  const TyOptionStub = defineComponent({
     name: 'TyOption',
     props: {
       label: String,
@@ -23,7 +23,7 @@ describe('options', () => {
 
   const getLabel = (i: number | string) => `label-${i}`
 
-  const ElOptionGroupStub = defineComponent({
+  const TyOptionGroupStub = defineComponent({
     name: 'TyOptionGroup',
     props: {
       label: String,
@@ -43,8 +43,8 @@ describe('options', () => {
       {
         global: {
           components: {
-            ElOption: ElOptionStub,
-            ElOptionGroup: ElOptionGroupStub,
+            TyOption: TyOptionStub,
+            TyOptionGroup: TyOptionGroupStub,
           },
         },
         slots,
@@ -59,7 +59,7 @@ describe('options', () => {
   it('renders emit correct options', async () => {
     createWrapper({
       default: () =>
-        samples.map((_, i) => <ElOptionStub label={getLabel(i)} />),
+        samples.map((_, i) => <TyOptionStub label={getLabel(i)} />),
     })
 
     await nextTick()
@@ -69,17 +69,17 @@ describe('options', () => {
     createWrapper({
       default: () =>
         samples.map((_, i) => (
-          <ElOptionGroupStub label={getLabel(i)}>
+          <TyOptionGroupStub label={getLabel(i)}>
             {{
               default: () =>
                 samples.map((_, j) => (
-                  <ElOptionStub
+                  <TyOptionStub
                     label={getLabel(`${i}-${j}`)}
                     value={j}
-                  ></ElOptionStub>
+                  ></TyOptionStub>
                 )),
             }}
-          </ElOptionGroupStub>
+          </TyOptionGroupStub>
         )),
     })
   })

@@ -308,8 +308,8 @@ describe('Dialog.vue', () => {
         </>
       ))
 
-      const overlay = wrapper.findComponent({ name: 'ElOverlay' })
-      const dialog = wrapper.findComponent({ name: 'ElDialog' })
+      const overlay = wrapper.findComponent({ name: 'TyOverlay' })
+      const dialog = wrapper.findComponent({ name: 'TyDialog' })
       expect(overlay.exists()).toBe(true)
       expect(overlay.classes()).toContain('is-penetrable')
 

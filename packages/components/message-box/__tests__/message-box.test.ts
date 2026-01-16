@@ -6,7 +6,7 @@ import { rAF } from '@element-plus/test-utils/tick'
 import { triggerNativeCompositeClick } from '@element-plus/test-utils/composite-click'
 import { QuestionFilled as QuestionFilledIcon } from '@element-plus/icons-vue'
 import MessageBox from '../src/messageBox'
-import { ElMessageBox } from '..'
+import { TyMessageBox } from '..'
 
 const selector = '.ty-overlay'
 const QuestionFilled = markRaw(QuestionFilledIcon)
@@ -265,18 +265,18 @@ describe('MessageBox', () => {
   })
   describe('context inheritance', () => {
     it('should globally inherit context correctly', () => {
-      expect(ElMessageBox._context).toBe(null)
+      expect(TyMessageBox._context).toBe(null)
       const testContext = {
         config: {
           globalProperties: {},
         },
         _context: {},
       }
-      ElMessageBox.install?.(testContext as any)
-      expect(ElMessageBox._context).not.toBe(null)
-      expect(ElMessageBox._context).toBe(testContext._context)
+      TyMessageBox.install?.(testContext as any)
+      expect(TyMessageBox._context).not.toBe(null)
+      expect(TyMessageBox._context).toBe(testContext._context)
       // clean up
-      ElMessageBox._context = null
+      TyMessageBox._context = null
     })
   })
 

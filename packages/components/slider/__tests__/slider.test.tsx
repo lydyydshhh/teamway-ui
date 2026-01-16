@@ -2,7 +2,7 @@ import { h, nextTick, onMounted, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { EVENT_CODE } from '@element-plus/constants'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
 import Slider from '../src/slider.vue'
 
 import type { SliderProps } from '../src/slider'
@@ -74,7 +74,7 @@ describe('Slider', () => {
     const value = ref(0)
     const wrapper = mount(() => <Slider v-model={value.value} />)
 
-    const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+    const slider = wrapper.findComponent({ name: 'TySliderButton' })
     slider.vm.handleMouseEnter()
     expect(slider.vm.tooltipVisible).toBeTruthy()
     slider.vm.handleMouseLeave()
@@ -91,7 +91,7 @@ describe('Slider', () => {
       },
     })
 
-    const tooltip = wrapper.findComponent({ name: 'ElTooltip' }).vm
+    const tooltip = wrapper.findComponent({ name: 'TyTooltip' }).vm
     expect(tooltip.disabled).toBe(true)
   })
 
@@ -102,7 +102,7 @@ describe('Slider', () => {
       <Slider v-model={value.value} format-tooltip={formatTooltip} />
     ))
 
-    const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+    const slider = wrapper.findComponent({ name: 'TySliderButton' })
     await nextTick()
     expect(slider.vm.formatValue).toBe('$0')
   })
@@ -137,7 +137,7 @@ describe('Slider', () => {
         }
       )
 
-      const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+      const slider = wrapper.findComponent({ name: 'TySliderButton' })
 
       const mockRect = mockBoundingClientRect(
         wrapper.find('.ty-slider__runway').element,
@@ -180,7 +180,7 @@ describe('Slider', () => {
         }
       )
 
-      const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+      const slider = wrapper.findComponent({ name: 'TySliderButton' })
       const mockRect = mockBoundingClientRect(
         wrapper.find('.ty-slider__runway').element,
         { height: 200 }
@@ -227,7 +227,7 @@ describe('Slider', () => {
         }
       )
 
-      const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+      const slider = wrapper.findComponent({ name: 'TySliderButton' })
       const mockRect = mockBoundingClientRect(
         wrapper.find('.ty-slider__runway').element,
         { width: 100 }
@@ -275,7 +275,7 @@ describe('Slider', () => {
       const value = ref(0)
       const wrapper = mount(() => <Slider v-model={value.value} />)
 
-      const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+      const slider = wrapper.findComponent({ name: 'TySliderButton' })
 
       slider.vm.onKeyDown(
         new KeyboardEvent('keydown', { code: EVENT_CODE.right })
@@ -294,7 +294,7 @@ describe('Slider', () => {
       const value = ref(0.1)
       const wrapper = mount(() => <Slider v-model={value.value} />)
 
-      const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+      const slider = wrapper.findComponent({ name: 'TySliderButton' })
 
       slider.vm.onKeyDown(new KeyboardEvent('keydown', { code: EVENT_CODE.up }))
       await nextTick()
@@ -313,7 +313,7 @@ describe('Slider', () => {
         <Slider v-model={value.value} min={-5} max={10} />
       ))
 
-      const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+      const slider = wrapper.findComponent({ name: 'TySliderButton' })
       slider.vm.onKeyDown(
         new KeyboardEvent('keydown', { code: EVENT_CODE.pageUp })
       )
@@ -333,7 +333,7 @@ describe('Slider', () => {
         <Slider v-model={value.value} min={-5} max={10} />
       ))
 
-      const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+      const slider = wrapper.findComponent({ name: 'TySliderButton' })
       slider.vm.onKeyDown(
         new KeyboardEvent('keydown', { code: EVENT_CODE.home })
       )
@@ -360,7 +360,7 @@ describe('Slider', () => {
         />
       ))
 
-      const sliderButton = wrapper.findComponent({ name: 'ElSliderButton' })
+      const sliderButton = wrapper.findComponent({ name: 'TySliderButton' })
       expect(sliderButton.attributes('tabindex')).toBe('0')
       expect(sliderButton.attributes('role')).toBe('slider')
       expect(sliderButton.attributes('aria-valuemin')).toBe('0')
@@ -394,7 +394,7 @@ describe('Slider', () => {
       wrapper.find('.ty-slider__runway').element,
       { width: 200 }
     )
-    const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+    const slider = wrapper.findComponent({ name: 'TySliderButton' })
     await nextTick()
 
     slider.trigger('mousedown', { clientX: 0 })
@@ -429,7 +429,7 @@ describe('Slider', () => {
       wrapper.find('.ty-slider__runway').element,
       { width: 200 }
     )
-    const slider = wrapper.findComponent({ name: 'ElSlider' })
+    const slider = wrapper.findComponent({ name: 'TySlider' })
     slider.vm.onSliderClick(new MouseEvent('mousedown', { clientX: 100 }))
     await nextTick()
     expect(value.value > 0).toBeTruthy()
@@ -447,7 +447,7 @@ describe('Slider', () => {
       </div>
     ))
 
-    const slider = wrapper.findComponent({ name: 'ElSlider' })
+    const slider = wrapper.findComponent({ name: 'TySlider' })
     const mockRect = mockBoundingClientRect(
       wrapper.find('.ty-slider__runway').element,
       { width: 200, left: 0 }
@@ -470,7 +470,7 @@ describe('Slider', () => {
       </div>
     ))
 
-    const slider = wrapper.findComponent({ name: 'ElSlider' })
+    const slider = wrapper.findComponent({ name: 'TySlider' })
     const mockRect = mockBoundingClientRect(
       wrapper.find('.ty-slider__runway').element,
       { width: 200, left: 0 }
@@ -491,7 +491,7 @@ describe('Slider', () => {
     const mockClientWidth = vi
       .spyOn(wrapper.find('.ty-slider__runway').element, 'clientWidth', 'get')
       .mockImplementation(() => 200)
-    const slider = wrapper.findComponent({ name: 'ElSliderButton' })
+    const slider = wrapper.findComponent({ name: 'TySliderButton' })
     slider.vm.onButtonDown({ clientX: 0 })
 
     const mousemove = new MouseEvent('mousemove', {
@@ -570,7 +570,7 @@ describe('Slider', () => {
       wrapper.find('.ty-slider__runway').element,
       { height: 200, bottom: 200 }
     )
-    const slider = wrapper.getComponent({ name: 'ElSlider' })
+    const slider = wrapper.getComponent({ name: 'TySlider' })
     slider.vm.onSliderClick(new MouseEvent('mousedown', { clientX: 100 }))
     await nextTick()
     expect(value.value > 0).toBeTruthy()
@@ -602,7 +602,7 @@ describe('Slider', () => {
       const value = ref([10, 20])
       const wrapper = mount(() => <Slider v-model={value.value} range />)
 
-      const sliders = wrapper.findAllComponents({ name: 'ElSliderButton' })
+      const sliders = wrapper.findAllComponents({ name: 'TySliderButton' })
       expect(sliders.length).toBe(2)
     })
 
@@ -639,7 +639,7 @@ describe('Slider', () => {
         wrapper.find('.ty-slider__runway').element,
         { width: 200, left: 0 }
       )
-      const slider = wrapper.getComponent({ name: 'ElSlider' })
+      const slider = wrapper.getComponent({ name: 'TySlider' })
       slider.vm.onSliderClick(new MouseEvent('mousedown', { clientX: 100 }))
       await nextTick()
       // Because mock the clientWidth, so the targetValue is 50.
@@ -718,9 +718,9 @@ describe('Slider', () => {
   describe('form item accessibility integration', () => {
     it('automatic id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <Slider />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -733,9 +733,9 @@ describe('Slider', () => {
 
     it('range with automatic id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <Slider range />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -748,9 +748,9 @@ describe('Slider', () => {
 
     it('specified id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <Slider id="foobar" />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -764,9 +764,9 @@ describe('Slider', () => {
 
     it('range with specified id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <Slider id="foobar" range />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -780,10 +780,10 @@ describe('Slider', () => {
 
     it('form item role is group when multiple inputs', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <Slider />
           <Slider />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -793,9 +793,9 @@ describe('Slider', () => {
 
     it('The disabled state of a component has higher priority than that of a form', async () => {
       const wrapper = mount(() => (
-        <ElForm disabled>
+        <TyForm disabled>
           <Slider disabled={false} />
-        </ElForm>
+        </TyForm>
       ))
 
       await nextTick()

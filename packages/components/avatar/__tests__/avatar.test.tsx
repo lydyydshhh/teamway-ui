@@ -154,7 +154,7 @@ describe('Avatar Group', () => {
     await collapseAvatar.trigger('mouseenter')
     await nextTick()
 
-    const tooltip = wrapper.findComponent({ name: 'ElTooltip' })
+    const tooltip = wrapper.findComponent({ name: 'TyTooltip' })
     expect(tooltip.exists()).toBe(true)
     expect(tooltip.html()).toContain('ty-avatar')
   })

@@ -4,7 +4,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import dayjs from 'dayjs'
 import { CircleClose } from '@element-plus/icons-vue'
 import triggerEvent from '@element-plus/test-utils/trigger-event'
-import { ElFormItem } from '@element-plus/components/form'
+import { TyFormItem } from '@element-plus/components/form'
 import DatePicker from '../src/date-picker'
 import DatePickerRange from '../../date-picker-panel/src/date-picker-com/panel-date-range.vue'
 
@@ -512,7 +512,7 @@ describe('Datetime Picker', () => {
       <DatePicker v-model={value.value} editable={false} type="datetime" />
     ))
 
-    const inputs = wrapper.findAllComponents({ name: 'ElInput' })
+    const inputs = wrapper.findAllComponents({ name: 'TyInput' })
     inputs.forEach((input) => {
       expect(input.props().readonly).toBe(true)
     })
@@ -914,9 +914,9 @@ describe('Datetimerange', () => {
   describe('form item accessibility integration', () => {
     it('automatic id attachment', async () => {
       const wrapper = _mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <DatePicker type="datetime" />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -931,9 +931,9 @@ describe('Datetimerange', () => {
 
     it('specified id attachment', async () => {
       const wrapper = _mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <DatePicker type="datetime" id="foobar" />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -949,10 +949,10 @@ describe('Datetimerange', () => {
 
     it('form item role is group when multiple inputs', async () => {
       const wrapper = _mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <DatePicker type="datetime" />
           <DatePicker type="datetime" />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()

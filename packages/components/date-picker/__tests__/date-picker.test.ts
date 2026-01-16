@@ -16,7 +16,7 @@ import zhCn from '@element-plus/locale/lang/zh-cn'
 import enUs from '@element-plus/locale/lang/en'
 import 'dayjs/locale/zh-cn'
 import { EVENT_CODE } from '@element-plus/constants'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
 import DatePicker from '../src/date-picker'
 import DatePickerRange from '@element-plus/components/date-picker-panel/src/date-picker-com/panel-date-range.vue'
 
@@ -25,8 +25,8 @@ const _mount = (template: string, data = () => ({}), otherObj?) =>
     {
       components: {
         'ty-date-picker': DatePicker,
-        'ty-form': ElForm,
-        'ty-form-item': ElFormItem,
+        'ty-form': TyForm,
+        'ty-form-item': TyFormItem,
         'ty-config-provider': ConfigProvider,
       },
       template,
@@ -2573,7 +2573,7 @@ describe('MonthRange', () => {
   })
 
   it('should accept popper options and pass down', async () => {
-    const ElPopperOptions = {
+    const TyPopperOptions = {
       strategy: 'fixed',
     }
     const wrapper = _mount(
@@ -2585,12 +2585,12 @@ describe('MonthRange', () => {
       />`,
       () => ({
         value: [new Date(2016, 6), new Date(2016, 12)],
-        options: ElPopperOptions,
+        options: TyPopperOptions,
       }),
       {
         provide() {
           return {
-            [PICKER_POPPER_OPTIONS_INJECTION_KEY]: ElPopperOptions,
+            [PICKER_POPPER_OPTIONS_INJECTION_KEY]: TyPopperOptions,
           }
         },
       }
@@ -2600,7 +2600,7 @@ describe('MonthRange', () => {
 
     expect(
       (wrapper.findComponent(CommonPicker).vm as any).elPopperOptions
-    ).toEqual(ElPopperOptions)
+    ).toEqual(TyPopperOptions)
   })
 
   it('user input', async () => {
@@ -2926,7 +2926,7 @@ describe('YearRange', () => {
   })
 
   it('should accept popper options and pass down', async () => {
-    const ElPopperOptions = {
+    const TyPopperOptions = {
       strategy: 'fixed',
     }
     const wrapper = _mount(
@@ -2938,12 +2938,12 @@ describe('YearRange', () => {
       />`,
       () => ({
         value: [new Date(2024, 0), new Date(2036, 0)],
-        options: ElPopperOptions,
+        options: TyPopperOptions,
       }),
       {
         provide() {
           return {
-            [PICKER_POPPER_OPTIONS_INJECTION_KEY]: ElPopperOptions,
+            [PICKER_POPPER_OPTIONS_INJECTION_KEY]: TyPopperOptions,
           }
         },
       }
@@ -2953,7 +2953,7 @@ describe('YearRange', () => {
 
     expect(
       (wrapper.findComponent(CommonPicker).vm as any).elPopperOptions
-    ).toEqual(ElPopperOptions)
+    ).toEqual(TyPopperOptions)
   })
 
   describe('should show default value when persistent is false', () => {

@@ -1,18 +1,18 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import ElTag from '@element-plus/components/tag'
-import ElDescriptions from '../src/description.vue'
-import ElDescriptionsItem from '../src/description-item'
+import TyTag from '@element-plus/components/tag'
+import TyDescriptions from '../src/description.vue'
+import TyDescriptionsItem from '../src/description-item'
 
 describe('Descriptions.vue', () => {
   test('render test', () => {
     const wrapper = mount(() => (
-      <ElDescriptions title="title" extra="extra">
+      <TyDescriptions title="title" extra="extra">
         {Array.from({ length: 4 }).map((_, index) => (
-          <ElDescriptionsItem label={String(index)} />
+          <TyDescriptionsItem label={String(index)} />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(wrapper.find('.ty-descriptions__title').text()).toEqual('title')
@@ -23,11 +23,11 @@ describe('Descriptions.vue', () => {
 
   test('render empty label', () => {
     const wrapper = mount(() => (
-      <ElDescriptions>
+      <TyDescriptions>
         {Array.from({ length: 3 }).map(() => (
-          <ElDescriptionsItem />
+          <TyDescriptionsItem />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(wrapper.findAll('.ty-descriptions__label').length).toEqual(0)
@@ -36,9 +36,9 @@ describe('Descriptions.vue', () => {
 
   test('should render border props', () => {
     const wrapper = mount(() => (
-      <ElDescriptions border>
-        <ElDescriptionsItem />
-      </ElDescriptions>
+      <TyDescriptions border>
+        <TyDescriptionsItem />
+      </TyDescriptions>
     ))
 
     expect(wrapper.find('table').classes()).toContain('is-bordered')
@@ -46,11 +46,11 @@ describe('Descriptions.vue', () => {
 
   test('should render align props', () => {
     const wrapper = mount(() => (
-      <ElDescriptions border>
+      <TyDescriptions border>
         {Array.from({ length: 3 }).map(() => (
-          <ElDescriptionsItem align="right" labelAlign="center" />
+          <TyDescriptionsItem align="right" labelAlign="center" />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(wrapper.find('.ty-descriptions__label').classes()).toContain(
@@ -63,11 +63,11 @@ describe('Descriptions.vue', () => {
 
   test('should render width props', () => {
     const wrapper = mount(() => (
-      <ElDescriptions border>
+      <TyDescriptions border>
         {Array.from({ length: 3 }).map(() => (
-          <ElDescriptionsItem width="50px" min-width="60px" />
+          <TyDescriptionsItem width="50px" min-width="60px" />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(
@@ -80,14 +80,14 @@ describe('Descriptions.vue', () => {
 
   test('should render class props', () => {
     const wrapper = mount(() => (
-      <ElDescriptions border>
+      <TyDescriptions border>
         {Array.from({ length: 3 }).map(() => (
-          <ElDescriptionsItem
+          <TyDescriptionsItem
             class-name="class-name"
             label-class-name="label-class-name"
           />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(wrapper.find('.ty-descriptions__label').classes()).toContain(
@@ -102,11 +102,11 @@ describe('Descriptions.vue', () => {
     const border = ref(false)
 
     const wrapper = mount(() => (
-      <ElDescriptions column={5} border={border.value}>
+      <TyDescriptions column={5} border={border.value}>
         {Array.from({ length: 10 }).map(() => (
-          <ElDescriptionsItem />
+          <TyDescriptionsItem />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(wrapper.find('tr').element.children.length).toEqual(5)
@@ -122,13 +122,13 @@ describe('Descriptions.vue', () => {
     const direction = ref<'horizontal' | 'vertical'>('horizontal')
 
     const wrapper = mount(() => (
-      <ElDescriptions column={5} direction={direction.value} border>
+      <TyDescriptions column={5} direction={direction.value} border>
         {Array.from({ length: 10 }).map((item) => (
-          <ElDescriptionsItem label={String(item)}>
+          <TyDescriptionsItem label={String(item)}>
             {String(item)}
-          </ElDescriptionsItem>
+          </TyDescriptionsItem>
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(wrapper.find('tr').element.children.length).toEqual(10)
@@ -147,13 +147,13 @@ describe('Descriptions.vue', () => {
 
   test('should render title slots', async () => {
     const wrapper = mount(() => (
-      <ElDescriptions
+      <TyDescriptions
         v-slots={{
           title: () => 'title',
           default: () =>
-            Array.from({ length: 10 }).map(() => <ElDescriptionsItem />),
+            Array.from({ length: 10 }).map(() => <TyDescriptionsItem />),
         }}
-      ></ElDescriptions>
+      ></TyDescriptions>
     ))
 
     expect(wrapper.find('.ty-descriptions__title').text()).toEqual('title')
@@ -161,14 +161,14 @@ describe('Descriptions.vue', () => {
 
   test('should render span props', async () => {
     const wrapper = mount(() => (
-      <ElDescriptions>
-        <ElDescriptionsItem label="1">1</ElDescriptionsItem>
-        <ElDescriptionsItem label="2" span={2}>
+      <TyDescriptions>
+        <TyDescriptionsItem label="1">1</TyDescriptionsItem>
+        <TyDescriptionsItem label="2" span={2}>
           2
-        </ElDescriptionsItem>
-        <ElDescriptionsItem label="3">3</ElDescriptionsItem>
-        <ElDescriptionsItem label="4">4</ElDescriptionsItem>
-      </ElDescriptions>
+        </TyDescriptionsItem>
+        <TyDescriptionsItem label="3">3</TyDescriptionsItem>
+        <TyDescriptionsItem label="4">4</TyDescriptionsItem>
+      </TyDescriptions>
     ))
 
     expect(wrapper.findAll('td')[1].element.getAttribute('colSpan')).toEqual(
@@ -190,11 +190,11 @@ describe('Descriptions.vue', () => {
     const wrapper = mount(() => (
       <>
         {remarks.value.map((remark, index) => (
-          <ElDescriptions key={index} title={remark}>
-            <ElDescriptionsItem label={remark}>
-              <ElTag size="small">{remark}</ElTag>
-            </ElDescriptionsItem>
-          </ElDescriptions>
+          <TyDescriptions key={index} title={remark}>
+            <TyDescriptionsItem label={remark}>
+              <TyTag size="small">{remark}</TyTag>
+            </TyDescriptionsItem>
+          </TyDescriptions>
         ))}
         <button onClick={onClick}>click</button>
       </>
@@ -202,16 +202,16 @@ describe('Descriptions.vue', () => {
 
     wrapper.find('button').trigger('click')
     await nextTick()
-    expect(wrapper.findComponent(ElTag).text()).toBe(CHANGE_VALUE)
+    expect(wrapper.findComponent(TyTag).text()).toBe(CHANGE_VALUE)
   })
 
   test('should render labelWidth prop of DescriptionsItem', () => {
     const wrapper = mount(() => (
-      <ElDescriptions border>
+      <TyDescriptions border>
         {Array.from({ length: 3 }).map(() => (
-          <ElDescriptionsItem label="测试标签" labelWidth="150px" />
+          <TyDescriptionsItem label="测试标签" labelWidth="150px" />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(
@@ -221,11 +221,11 @@ describe('Descriptions.vue', () => {
 
   test('should render labelWidth prop of Descriptions', () => {
     const wrapper = mount(() => (
-      <ElDescriptions label-width="150px" border>
+      <TyDescriptions label-width="150px" border>
         {Array.from({ length: 3 }).map(() => (
-          <ElDescriptionsItem label="测试标签" />
+          <TyDescriptionsItem label="测试标签" />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(
@@ -235,12 +235,12 @@ describe('Descriptions.vue', () => {
 
   test('should render labelWidth prop of Descriptions and DescriptionsItem with higher priority', () => {
     const wrapper = mount(() => (
-      <ElDescriptions label-width="100px" border>
-        <ElDescriptionsItem label="测试标签" />
+      <TyDescriptions label-width="100px" border>
+        <TyDescriptionsItem label="测试标签" />
         {Array.from({ length: 2 }).map(() => (
-          <ElDescriptionsItem label="测试标签" label-width="150px" />
+          <TyDescriptionsItem label="测试标签" label-width="150px" />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(
@@ -253,11 +253,11 @@ describe('Descriptions.vue', () => {
 
   test('should render labelWidth prop of DescriptionsItem with no border', () => {
     const wrapper = mount(() => (
-      <ElDescriptions>
+      <TyDescriptions>
         {Array.from({ length: 3 }).map(() => (
-          <ElDescriptionsItem label="测试标签" labelWidth="150px" />
+          <TyDescriptionsItem label="测试标签" labelWidth="150px" />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(
@@ -267,11 +267,11 @@ describe('Descriptions.vue', () => {
 
   test('should render labelWidth prop of Descriptions with no border', () => {
     const wrapper = mount(() => (
-      <ElDescriptions label-width="150px">
+      <TyDescriptions label-width="150px">
         {Array.from({ length: 3 }).map(() => (
-          <ElDescriptionsItem label="测试标签" />
+          <TyDescriptionsItem label="测试标签" />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(
@@ -281,12 +281,12 @@ describe('Descriptions.vue', () => {
 
   test('should render labelWidth prop of Descriptions and DescriptionsItem with higher priority with no border', () => {
     const wrapper = mount(() => (
-      <ElDescriptions label-width="100px">
-        <ElDescriptionsItem label="测试标签" />
+      <TyDescriptions label-width="100px">
+        <TyDescriptionsItem label="测试标签" />
         {Array.from({ length: 2 }).map(() => (
-          <ElDescriptionsItem label="测试标签" label-width="150px" />
+          <TyDescriptionsItem label="测试标签" label-width="150px" />
         ))}
-      </ElDescriptions>
+      </TyDescriptions>
     ))
 
     expect(
@@ -299,14 +299,14 @@ describe('Descriptions.vue', () => {
 
   test('render customize functional components', () => {
     const CustomComponent = () => {
-      return <ElDescriptionsItem label="label">123</ElDescriptionsItem>
+      return <TyDescriptionsItem label="label">123</TyDescriptionsItem>
     }
     const wrapper = mount(() => (
-      <ElDescriptions title="title" extra="extra">
+      <TyDescriptions title="title" extra="extra">
         <CustomComponent />
         <CustomComponent />
-        <ElDescriptionsItem label="label">123</ElDescriptionsItem>
-      </ElDescriptions>
+        <TyDescriptionsItem label="label">123</TyDescriptionsItem>
+      </TyDescriptions>
     ))
 
     expect(wrapper.find('.ty-descriptions__title').text()).toEqual('title')

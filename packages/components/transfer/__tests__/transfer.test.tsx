@@ -20,7 +20,7 @@ describe('Transfer', () => {
 
   it('create', () => {
     const wrapper = mount(() => <Transfer data={getTestData()} />)
-    expect(wrapper.findComponent({ name: 'ElTransfer' })).toBeTruthy()
+    expect(wrapper.findComponent({ name: 'TyTransfer' })).toBeTruthy()
   })
 
   it('default target list', () => {
@@ -28,8 +28,8 @@ describe('Transfer', () => {
     const wrapper = mount(() => (
       <Transfer v-model={value.value} data={getTestData()} />
     ))
-    const ElTransfer: any = wrapper.findComponent({ name: 'ElTransfer' })
-    expect(ElTransfer.vm.sourceData.length).toBe(13)
+    const TyTransfer: any = wrapper.findComponent({ name: 'TyTransfer' })
+    expect(TyTransfer.vm.sourceData.length).toBe(13)
   })
 
   it('filterable', async () => {
@@ -46,7 +46,7 @@ describe('Transfer', () => {
         filter-method={method}
       />
     ))
-    const leftList: any = wrapper.findComponent({ name: 'ElTransferPanel' })
+    const leftList: any = wrapper.findComponent({ name: 'TyTransferPanel' })
     leftList.vm.query = '1'
     await leftList.find('input').setValue('1')
     expect(leftList.vm.filteredData.length).toBe(1)
@@ -63,14 +63,14 @@ describe('Transfer', () => {
       />
     ))
 
-    const ElTransfer: any = wrapper.findComponent({ name: 'ElTransfer' })
+    const TyTransfer: any = wrapper.findComponent({ name: 'TyTransfer' })
 
-    ElTransfer.vm.addToLeft()
+    TyTransfer.vm.addToLeft()
     await nextTick()
-    expect(ElTransfer.vm.sourceData.length).toBe(14)
-    ElTransfer.vm.addToRight()
+    expect(TyTransfer.vm.sourceData.length).toBe(14)
+    TyTransfer.vm.addToRight()
     await nextTick()
-    expect(ElTransfer.vm.sourceData.length).toBe(12)
+    expect(TyTransfer.vm.sourceData.length).toBe(12)
   })
 
   it('customize', () => {
@@ -106,7 +106,7 @@ describe('Transfer', () => {
       <Transfer v-model={value.value} data={getTestData()} />
     ))
 
-    const leftList: any = wrapper.findComponent({ name: 'ElTransferPanel' })
+    const leftList: any = wrapper.findComponent({ name: 'TyTransferPanel' })
     leftList.vm.handleAllCheckedChange({ target: { checked: true } })
     expect(leftList.vm.checked.length).toBe(12)
   })
@@ -122,8 +122,8 @@ describe('Transfer', () => {
         />
       ))
 
-      const ElTransfer: any = wrapper.findComponent({ name: 'ElTransfer' })
-      ElTransfer.vm.addToRight()
+      const TyTransfer: any = wrapper.findComponent({ name: 'TyTransfer' })
+      TyTransfer.vm.addToRight()
       await nextTick()
       const targetItems = wrapper.findAll(
         '.ty-transfer__buttons + .ty-transfer-panel .ty-transfer-panel__body .ty-checkbox__label span'
@@ -147,8 +147,8 @@ describe('Transfer', () => {
         />
       ))
 
-      const ElTransfer: any = wrapper.findComponent({ name: 'ElTransfer' })
-      ElTransfer.vm.addToRight()
+      const TyTransfer: any = wrapper.findComponent({ name: 'TyTransfer' })
+      TyTransfer.vm.addToRight()
       await nextTick()
       const targetItems = wrapper.findAll(
         '.ty-transfer__buttons + .ty-transfer-panel .ty-transfer-panel__body .ty-checkbox__label span'
@@ -172,8 +172,8 @@ describe('Transfer', () => {
         />
       ))
 
-      const ElTransfer: any = wrapper.findComponent({ name: 'ElTransfer' })
-      ElTransfer.vm.addToRight()
+      const TyTransfer: any = wrapper.findComponent({ name: 'TyTransfer' })
+      TyTransfer.vm.addToRight()
       await nextTick()
       const targetItems = wrapper.findAll(
         '.ty-transfer__buttons + .ty-transfer-panel .ty-transfer-panel__body .ty-checkbox__label span'
@@ -198,8 +198,8 @@ describe('Transfer', () => {
         />
       ))
 
-      const ElTransfer: any = wrapper.findComponent({ name: 'ElTransfer' })
-      const app = ElTransfer.vm
+      const TyTransfer: any = wrapper.findComponent({ name: 'TyTransfer' })
+      const app = TyTransfer.vm
       app.leftPanel.query = '11'
       app.rightPanel.query = '22'
       await nextTick()
@@ -372,7 +372,7 @@ describe('Transfer', () => {
         />
       ))
 
-      const leftPanel: any = wrapper.findComponent({ name: 'ElTransferPanel' })
+      const leftPanel: any = wrapper.findComponent({ name: 'TyTransferPanel' })
       leftPanel.vm.query = 'non-existing-data'
       await nextTick()
 

@@ -107,7 +107,7 @@ function useRender<T extends DefaultRow>(
       check(children)
     }
     function check(item: any) {
-      if (item?.type?.name === 'ElTableColumn') {
+      if (item?.type?.name === 'TyTableColumn') {
         item.vParent = instance
       }
     }

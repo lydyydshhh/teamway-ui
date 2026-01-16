@@ -116,7 +116,7 @@ describe('Mention.vue', () => {
     wrapper.find('input').trigger('input')
     vi.advanceTimersByTime(150)
     await nextTick()
-    const dropdown = wrapper.findComponent({ name: 'ElMentionDropdown' })
+    const dropdown = wrapper.findComponent({ name: 'TyMentionDropdown' })
     const list = dropdown.find('.ty-mention-dropdown__list')
     const option = dropdown.find('.ty-mention-dropdown__item')
 
@@ -138,7 +138,7 @@ describe('Mention.vue', () => {
       ),
     })
 
-    const dropdown = wrapper.findComponent({ name: 'ElMentionDropdown' })
+    const dropdown = wrapper.findComponent({ name: 'TyMentionDropdown' })
     const option = dropdown.find('.ty-mention-dropdown__item')
 
     expect(wrapper.find('.ty-input').classes()).toContain('is-disabled')

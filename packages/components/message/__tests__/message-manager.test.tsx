@@ -2,7 +2,7 @@ import { h, nextTick, ref } from 'vue'
 import { describe, expect, it, test, vi } from 'vitest'
 import { getStyle } from '@element-plus/utils'
 import { rAF } from '@element-plus/test-utils/tick'
-import { ElMessage } from '..'
+import { TyMessage } from '..'
 import Message from '../src/method'
 import { messageTypes } from '../src/message'
 
@@ -251,18 +251,18 @@ describe('Message on command', () => {
 
   describe('context inheritance', () => {
     it('should globally inherit context correctly', () => {
-      expect(ElMessage._context).toBe(null)
+      expect(TyMessage._context).toBe(null)
       const testContext = {
         config: {
           globalProperties: {},
         },
         _context: {},
       }
-      ElMessage.install?.(testContext as any)
-      expect(ElMessage._context).not.toBe(null)
-      expect(ElMessage._context).toBe(testContext._context)
+      TyMessage.install?.(testContext as any)
+      expect(TyMessage._context).not.toBe(null)
+      expect(TyMessage._context).toBe(testContext._context)
       // clean up
-      ElMessage._context = null
+      TyMessage._context = null
     })
   })
 

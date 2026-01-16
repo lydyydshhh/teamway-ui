@@ -2,7 +2,7 @@ import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, test, vi } from 'vitest'
 import { ArrowDown, ArrowUp } from '@element-plus/icons-vue'
-import { ElForm, ElFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@element-plus/components/form'
 import { TyIcon } from '@element-plus/components/icon'
 import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import InputNumber from '../src/input-number.vue'
@@ -169,7 +169,7 @@ describe('InputNumber.vue', () => {
     const wrapper = mount(() => (
       <InputNumber step-strictly={true} step={0.1} v-model={num.value} />
     ))
-    const elInputNumber = wrapper.findComponent({ name: 'ElInputNumber' }).vm
+    const elInputNumber = wrapper.findComponent({ name: 'TyInputNumber' }).vm
     elInputNumber.increase()
     await nextTick()
     expect(wrapper.find('input').element.value).toEqual('0.3')
@@ -394,7 +394,7 @@ describe('InputNumber.vue', () => {
     const wrapper = mount(() => (
       <InputNumber v-model={num.value} min={1} max={10} />
     ))
-    const elInput = wrapper.findComponent({ name: 'ElInputNumber' }).vm
+    const elInput = wrapper.findComponent({ name: 'TyInputNumber' }).vm
     elInput.handleInputChange('')
     await nextTick()
     expect(num.value).toBe(null)
@@ -420,7 +420,7 @@ describe('InputNumber.vue', () => {
     const wrapper = mount(() => (
       <InputNumber value-on-clear="min" v-model={num.value} min={1} max={10} />
     ))
-    const elInput = wrapper.findComponent({ name: 'ElInputNumber' }).vm
+    const elInput = wrapper.findComponent({ name: 'TyInputNumber' }).vm
     elInput.handleInputChange('')
     await nextTick()
     expect(num.value).toBe(1)
@@ -440,7 +440,7 @@ describe('InputNumber.vue', () => {
     const wrapper = mount(() => (
       <InputNumber value-on-clear="max" v-model={num.value} min={1} max={10} />
     ))
-    const elInput = wrapper.findComponent({ name: 'ElInputNumber' }).vm
+    const elInput = wrapper.findComponent({ name: 'TyInputNumber' }).vm
     elInput.handleInputChange('')
     await nextTick()
     expect(num.value).toBe(10)
@@ -460,7 +460,7 @@ describe('InputNumber.vue', () => {
     const wrapper = mount(() => (
       <InputNumber value-on-clear={5} v-model={num.value} min={1} max={10} />
     ))
-    const elInput = wrapper.findComponent({ name: 'ElInputNumber' }).vm
+    const elInput = wrapper.findComponent({ name: 'TyInputNumber' }).vm
     elInput.handleInputChange('')
     await nextTick()
     expect(num.value).toBe(5)
@@ -531,9 +531,9 @@ describe('InputNumber.vue', () => {
   describe('form item accessibility integration', () => {
     test('automatic id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <InputNumber />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -546,9 +546,9 @@ describe('InputNumber.vue', () => {
 
     test('specified id attachment', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <InputNumber id="foobar" />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -562,10 +562,10 @@ describe('InputNumber.vue', () => {
 
     test('form item role is group when multiple inputs', async () => {
       const wrapper = mount(() => (
-        <ElFormItem label="Foobar" data-test-ref="item">
+        <TyFormItem label="Foobar" data-test-ref="item">
           <InputNumber />
           <InputNumber />
-        </ElFormItem>
+        </TyFormItem>
       ))
 
       await nextTick()
@@ -575,9 +575,9 @@ describe('InputNumber.vue', () => {
 
     test('The disabled state of a component has higher priority than that of a form', async () => {
       const wrapper = mount(() => (
-        <ElForm disabled>
+        <TyForm disabled>
           <InputNumber disabled={false} />
-        </ElForm>
+        </TyForm>
       ))
 
       await nextTick()
@@ -591,7 +591,7 @@ describe('InputNumber.vue', () => {
     const wrapper = mount(() => (
       <InputNumber modelValue={num.value} min={1} max={10} />
     ))
-    const elInput = wrapper.findComponent({ name: 'ElInputNumber' }).vm
+    const elInput = wrapper.findComponent({ name: 'TyInputNumber' }).vm
     elInput.handleInputChange('')
     expect(wrapper.getComponent(InputNumber).emitted('change')).toHaveLength(1)
     expect(elInput.modelValue).toBe(2)

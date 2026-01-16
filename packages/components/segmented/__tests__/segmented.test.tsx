@@ -2,7 +2,7 @@ import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
 import Segmented from '../src/segmented.vue'
-import { ElForm } from '@element-plus/components/form'
+import { TyForm } from '@element-plus/components/form'
 
 describe('Segmented.vue', () => {
   test('render test', async () => {
@@ -238,13 +238,13 @@ describe('Segmented.vue', () => {
     const value = ref('Mon')
     const options = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
     const wrapper = mount(() => (
-      <ElForm disabled>
+      <TyForm disabled>
         <Segmented
           disabled={false}
           modelValue={value.value}
           options={options}
         />
-      </ElForm>
+      </TyForm>
     ))
     await nextTick()
 

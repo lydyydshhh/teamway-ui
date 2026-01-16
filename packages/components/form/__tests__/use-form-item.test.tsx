@@ -3,7 +3,7 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 import { NOOP } from '@element-plus/utils'
 import {
-  ElButton,
+  TyButton,
   buttonGroupContextKey,
 } from '@element-plus/components/button'
 import { formContextKey, formItemContextKey } from '../src/constants'
@@ -17,7 +17,7 @@ const mountComponent = (setup = NOOP, options = {}) =>
     defineComponent({
       setup,
       render() {
-        return <ElButton {...this.$attrs}>{AXIOM}</ElButton>
+        return <TyButton {...this.$attrs}>{AXIOM}</TyButton>
       },
     }),
     options

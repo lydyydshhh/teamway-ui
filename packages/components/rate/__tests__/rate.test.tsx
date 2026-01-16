@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import { ElForm, ElFormItem as FormItem } from '@element-plus/components/form'
+import { TyFormItem as FormItem, TyForm } from '@element-plus/components/form'
 import Rate from '../src/rate.vue'
 
 import type { RateInstance } from '../src/rate'
@@ -219,9 +219,9 @@ describe('Rate.vue', () => {
 
     it('The disabled state of a component has higher priority than that of a form', async () => {
       const wrapper = mount(() => (
-        <ElForm disabled>
+        <TyForm disabled>
           <Rate disabled={false} />
-        </ElForm>
+        </TyForm>
       ))
 
       await nextTick()

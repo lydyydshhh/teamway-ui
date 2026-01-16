@@ -477,8 +477,8 @@ describe('Drawer', () => {
       await rAF()
       await nextTick()
 
-      const overlayEl = wrapper.findComponent({ name: 'ElOverlay' })
-      const drawerEl = wrapper.findComponent({ name: 'ElDrawer' })
+      const overlayEl = wrapper.findComponent({ name: 'TyOverlay' })
+      const drawerEl = wrapper.findComponent({ name: 'TyDrawer' })
       const buttonEl = wrapper.find('.ty-button')
 
       expect(overlayEl.exists()).toBe(true)
