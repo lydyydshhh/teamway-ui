@@ -9,7 +9,7 @@ import {
   onMounted,
   ref,
 } from 'vue'
-import ElCheckbox from '@element-plus/components/checkbox'
+import TyCheckbox from '@element-plus/components/checkbox'
 import { isArray, isString, isUndefined } from '@element-plus/utils'
 import { cellStarts } from '../config'
 import { compose, mergeOptions } from '../util'
@@ -27,7 +27,7 @@ let columnIdSeed = 1
 export default defineComponent({
   name: 'TyTableColumn',
   components: {
-    ElCheckbox,
+    TyCheckbox,
   },
   props: defaultProps,
   setup(props, { slots }) {
@@ -191,7 +191,7 @@ export default defineComponent({
       if (isArray(renderDefault)) {
         for (const childNode of renderDefault) {
           if (
-            (childNode.type as any)?.name === 'ElTableColumn' ||
+            (childNode.type as any)?.name === 'TyTableColumn' ||
             childNode.shapeFlag & 2
           ) {
             children.push(childNode)

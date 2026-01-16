@@ -129,7 +129,7 @@ const Tabs = defineComponent({
       addChild: registerPane,
       removeChild: unregisterPane,
       ChildrenSorter: PanesSorter,
-    } = useOrderedChildren<TabsPaneContext>(getCurrentInstance()!, 'ElTabPane')
+    } = useOrderedChildren<TabsPaneContext>(getCurrentInstance()!, 'TyTabPane')
 
     const nav$ = ref<TabNavInstance>()
     const currentName = ref<TabPaneName>(

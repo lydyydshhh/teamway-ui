@@ -24,7 +24,7 @@ import {
   useSizeProp,
 } from '@element-plus/hooks'
 import { CHANGE_EVENT } from '@element-plus/constants'
-import { elPaginationKey } from './constants'
+import { tyPaginationKey } from './constants'
 import Prev from './components/prev.vue'
 import Next from './components/next.vue'
 import Sizes from './components/sizes.vue'
@@ -371,7 +371,7 @@ export default defineComponent({
       }
     }
 
-    provide(elPaginationKey, {
+    provide(tyPaginationKey, {
       pageCount: pageCountBridge,
       disabled: computed(() => props.disabled),
       currentPage: currentPageBridge,

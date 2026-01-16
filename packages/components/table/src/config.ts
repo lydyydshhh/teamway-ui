@@ -1,5 +1,5 @@
 import { h } from 'vue'
-import ElCheckbox from '@element-plus/components/checkbox'
+import TyCheckbox from '@element-plus/components/checkbox'
 import { TyIcon } from '@element-plus/components/icon'
 import { ArrowRight, Loading } from '@element-plus/icons-vue'
 import { getProp, isBoolean, isFunction, isNumber } from '@element-plus/utils'
@@ -49,7 +49,7 @@ export const cellForced = {
       function isDisabled() {
         return store.states.data.value && store.states.data.value.length === 0
       }
-      return h(ElCheckbox, {
+      return h(TyCheckbox, {
         disabled: isDisabled(),
         size: store.states.tableSize.value,
         indeterminate:
@@ -71,7 +71,7 @@ export const cellForced = {
       store: Store<T>
       $index: number
     }) {
-      return h(ElCheckbox, {
+      return h(TyCheckbox, {
         disabled: column.selectable
           ? !column.selectable.call(null, row, $index)
           : false,

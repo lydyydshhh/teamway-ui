@@ -1,13 +1,13 @@
 import type { InjectionKey, Ref, StyleValue } from 'vue'
-import type { ElRovingFocusGroupProps } from './roving-focus-group'
+import type { TyRovingFocusGroupProps } from './roving-focus-group'
 
 type EventHandler<T = Event> = (e: T) => void
 
 export type RovingGroupInjectionContext = {
   currentTabbedId: Ref<string | null>
-  dir: Ref<ElRovingFocusGroupProps['dir']>
-  loop: Ref<ElRovingFocusGroupProps['loop']>
-  orientation: Ref<ElRovingFocusGroupProps['orientation']>
+  dir: Ref<TyRovingFocusGroupProps['dir']>
+  loop: Ref<TyRovingFocusGroupProps['loop']>
+  orientation: Ref<TyRovingFocusGroupProps['orientation']>
   tabIndex: Ref<number>
   rovingFocusGroupRef: Ref<HTMLElement | undefined>
   rovingFocusGroupRootStyle: Ref<StyleValue>

@@ -33,10 +33,10 @@ export const useTooltipTriggerProps = buildProps({
   focusOnTarget: Boolean,
 } as const)
 
-export type ElTooltipTriggerProps = ExtractPropTypes<
+export type TyTooltipTriggerProps = ExtractPropTypes<
   typeof useTooltipTriggerProps
 >
 
-export type ElTooltipTriggerPropsPublic = ExtractPublicPropTypes<
+export type TyTooltipTriggerPropsPublic = ExtractPublicPropTypes<
   typeof useTooltipTriggerProps
 >

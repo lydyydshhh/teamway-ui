@@ -974,7 +974,7 @@ const useSelect = (props: SelectV2Props, emit: SelectV2EmitFn) => {
       }
       if (duplicateValue.get(v)) {
         debugWarn(
-          'ElSelectV2',
+          'TySelectV2',
           `The option values you provided seem to be duplicated, which may cause some problems, please check.`
         )
         break

@@ -112,7 +112,7 @@ export const popoverProps = buildProps({
     default: 0,
   },
   /**
-   * @description whether a tooltip arrow is displayed or not. For more info, please refer to [ElPopper](https://github.com/element-plus/element-plus/tree/dev/packages/components/popper)
+   * @description whether a tooltip arrow is displayed or not. For more info, please refer to [TyPopper](https://github.com/element-plus/element-plus/tree/dev/packages/components/popper)
    */
   showArrow: {
     type: Boolean,

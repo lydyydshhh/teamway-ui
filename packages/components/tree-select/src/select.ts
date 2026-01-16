@@ -2,7 +2,7 @@
 import { computed, nextTick, onMounted, toRefs, watch } from 'vue'
 import { useEventListener } from '@vueuse/core'
 import { pick } from 'lodash-unified'
-import ElSelect from '@element-plus/components/select'
+import TySelect from '@element-plus/components/select'
 import { useNamespace } from '@element-plus/hooks'
 import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus/constants'
 import { getEventCode } from '@element-plus/utils'
@@ -86,7 +86,7 @@ export const useSelect = (
   })
 
   const result = {
-    ...pick(toRefs(props), Object.keys(ElSelect.props)),
+    ...pick(toRefs(props), Object.keys(TySelect.props)),
     ...attrs,
     class: computed(() => attrs.class),
     style: computed(() => attrs.style),
