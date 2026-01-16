@@ -4,7 +4,7 @@ import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
 import defineGetter from '@element-plus/test-utils/define-getter'
 import sleep from '@element-plus/test-utils/sleep'
-import ElIcon from '@element-plus/components/icon'
+import TyIcon from '@element-plus/components/icon'
 import Tree from '../src/tree.vue'
 import Button from '../../button/src/button.vue'
 
@@ -598,7 +598,7 @@ describe('Tree.vue', () => {
 
     expect(
       secondNodeContentWrapper
-        .findComponent(ElIcon)
+        .findComponent(TyIcon)
         .classes()
         .includes('is-leaf')
     ).toBe(true)

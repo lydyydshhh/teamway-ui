@@ -33,7 +33,7 @@ const removeTag = (str: string) => {
 }
 
 const reComponentName: ReComponentName = (title) => {
-  return `el-${hyphenate(removeTag(title)).replace(/[ ]+/g, '-')}`
+  return `ty-${hyphenate(removeTag(title)).replace(/[ ]+/g, '-')}`
 }
 
 const reDocUrl: ReDocUrl = (fileName, header) => {
@@ -46,7 +46,7 @@ const reDocUrl: ReDocUrl = (fileName, header) => {
 }
 
 const reWebTypesSource: ReWebTypesSource = (title) => {
-  const symbol = `El${removeTag(title)
+  const symbol = `Ty${removeTag(title)
     .replaceAll(/-/g, ' ')
     .replaceAll(/^\w|\s+\w/g, (item) => {
       return item.trim().toUpperCase()
@@ -94,8 +94,8 @@ const reAttribute: ReAttribute = (value, key) => {
       : str.replaceAll(/`/g, '').replaceAll(/\([^)]*\)(?!\s*=>)/g, '')
   } else if (key === 'Subtags') {
     return str
-      ? `el-${str
-          .replaceAll(/\s*\/\s*/g, '/el-')
+      ? `ty-${str
+          .replaceAll(/\s*\/\s*/g, '/ty-')
           .replaceAll(/\B([A-Z])/g, '-$1')
           .replaceAll(/\s+/g, '-')
           .toLowerCase()}`

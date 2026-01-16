@@ -1,11 +1,11 @@
 <template>
-  <el-form
+  <ty-form
     ref="formRef"
     :model="dynamicValidateForm"
     label-width="120px"
     class="demo-dynamic"
   >
-    <el-form-item
+    <ty-form-item
       prop="email"
       label="Email"
       :rules="[
@@ -21,9 +21,9 @@
         },
       ]"
     >
-      <el-input v-model="dynamicValidateForm.email" />
-    </el-form-item>
-    <el-form-item
+      <ty-input v-model="dynamicValidateForm.email" />
+    </ty-form-item>
+    <ty-form-item
       v-for="(domain, index) in dynamicValidateForm.domains"
       :key="domain.key"
       :label="'Domain' + index"
@@ -34,17 +34,17 @@
         trigger: 'blur',
       }"
     >
-      <el-input v-model="domain.value" />
-      <el-button style="margin-top: 8px" @click.prevent="removeDomain(domain)"
-        >Delete</el-button
+      <ty-input v-model="domain.value" />
+      <ty-button style="margin-top: 8px" @click.prevent="removeDomain(domain)"
+        >Delete</ty-button
       >
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="submitForm(formRef)">Submit</el-button>
-      <el-button @click="addDomain">New domain</el-button>
-      <el-button @click="resetForm(formRef)">Reset</el-button>
-    </el-form-item>
-  </el-form>
+    </ty-form-item>
+    <ty-form-item>
+      <ty-button type="primary" @click="submitForm(formRef)">Submit</ty-button>
+      <ty-button @click="addDomain">New domain</ty-button>
+      <ty-button @click="resetForm(formRef)">Reset</ty-button>
+    </ty-form-item>
+  </ty-form>
 </template>
 
 <script lang="ts" setup>
