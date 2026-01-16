@@ -1,6 +1,6 @@
 import type { ComputedRef, InjectionKey, WritableComputedRef } from 'vue'
 
-export interface ElPaginationContext {
+export interface TyPaginationContext {
   currentPage?: WritableComputedRef<number>
   pageCount?: ComputedRef<number>
   disabled?: ComputedRef<boolean>
@@ -8,5 +8,5 @@ export interface ElPaginationContext {
   handleSizeChange?: (val: number) => void
 }
 
-export const elPaginationKey: InjectionKey<ElPaginationContext> =
-  Symbol('elPaginationKey')
+export const tyPaginationKey: InjectionKey<TyPaginationContext> =
+  Symbol('tyPaginationKey')

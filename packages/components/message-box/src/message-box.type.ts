@@ -71,7 +71,7 @@ export type Callback =
   | ((action: Action) => any)
 
 /** Options used in MessageBox */
-export interface ElMessageBoxOptions {
+export interface TyMessageBoxOptions {
   /**
    * auto focus when open message-box
    */
@@ -136,7 +136,7 @@ export interface ElMessageBoxOptions {
   message?: string | VNode | (() => VNode)
 
   /** Title of the MessageBox */
-  title?: string | ElMessageBoxOptions
+  title?: string | TyMessageBoxOptions
 
   /** Message type, used for icon display */
   type?: MessageType
@@ -208,15 +208,15 @@ export interface ElMessageBoxOptions {
   appendTo?: HTMLElement | string
 }
 
-export type ElMessageBoxShortcutMethod = ((
-  message: ElMessageBoxOptions['message'],
-  options?: ElMessageBoxOptions,
+export type TyMessageBoxShortcutMethod = ((
+  message: TyMessageBoxOptions['message'],
+  options?: TyMessageBoxOptions,
   appContext?: AppContext | null
 ) => Promise<MessageBoxData>) &
   ((
-    message: ElMessageBoxOptions['message'],
-    title: ElMessageBoxOptions['title'],
-    options?: ElMessageBoxOptions,
+    message: TyMessageBoxOptions['message'],
+    title: TyMessageBoxOptions['title'],
+    options?: TyMessageBoxOptions,
     appContext?: AppContext | null
   ) => Promise<MessageBoxData>)
 
@@ -228,18 +228,18 @@ export interface IElMessageBox {
 
   /** Show a message box */
   (
-    options: ElMessageBoxOptions,
+    options: TyMessageBoxOptions,
     appContext?: AppContext | null
   ): Promise<MessageBoxData>
 
   /** Show an alert message box */
-  alert: ElMessageBoxShortcutMethod
+  alert: TyMessageBoxShortcutMethod
 
   /** Show a confirm message box */
-  confirm: ElMessageBoxShortcutMethod
+  confirm: TyMessageBoxShortcutMethod
 
   /** Show a prompt message box */
-  prompt: ElMessageBoxShortcutMethod
+  prompt: TyMessageBoxShortcutMethod
 
   /** Close current message box */
   close(): void

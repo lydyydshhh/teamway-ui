@@ -30,8 +30,8 @@ import {
 import { useNamespace } from '@element-plus/hooks'
 import { ClickOutside as vClickoutside } from '@element-plus/directives'
 import Menubar from './utils/menu-bar'
-import ElMenuCollapseTransition from './menu-collapse-transition.vue'
-import ElSubMenu from './sub-menu'
+import TyMenuCollapseTransition from './menu-collapse-transition.vue'
+import TySubMenu from './sub-menu'
 import { useMenuCssVar } from './use-menu-css-var'
 import { MENU_INJECTION_KEY, SUB_MENU_INJECTION_KEY } from './tokens'
 
@@ -509,7 +509,7 @@ export default defineComponent({
           slot = slotDefault
           vShowMore.push(
             h(
-              ElSubMenu,
+              TySubMenu,
               {
                 ref: subMenu,
                 index: 'sub-menu-more',
@@ -573,7 +573,7 @@ export default defineComponent({
       )
 
       if (props.collapseTransition && props.mode === 'vertical') {
-        return h(ElMenuCollapseTransition, () => vMenu)
+        return h(TyMenuCollapseTransition, () => vMenu)
       }
 
       return vMenu

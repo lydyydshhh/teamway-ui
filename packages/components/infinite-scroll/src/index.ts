@@ -11,7 +11,7 @@ import { useDeprecated } from '@element-plus/hooks'
 
 import type { ComponentPublicInstance, ObjectDirective } from 'vue'
 
-export const SCOPE = 'ElInfiniteScroll'
+export const SCOPE = 'TyInfiniteScroll'
 export const CHECK_INTERVAL = 50
 export const DEFAULT_DELAY = 200
 export const DEFAULT_DISTANCE = 0

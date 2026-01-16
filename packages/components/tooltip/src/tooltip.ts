@@ -38,8 +38,8 @@ export const tooltipEmits = [
   'close',
 ]
 
-export type ElTooltipProps = ExtractPropTypes<typeof useTooltipProps>
-export type ElTooltipPropsPublic = ExtractPublicPropTypes<
+export type TyTooltipProps = ExtractPropTypes<typeof useTooltipProps>
+export type TyTooltipPropsPublic = ExtractPublicPropTypes<
   typeof useTooltipProps
 >
 

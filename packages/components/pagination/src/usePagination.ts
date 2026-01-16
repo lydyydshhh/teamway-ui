@@ -1,4 +1,4 @@
 import { inject } from 'vue'
-import { elPaginationKey } from './constants'
+import { tyPaginationKey } from './constants'
 
-export const usePagination = () => inject(elPaginationKey, {})
+export const usePagination = () => inject(tyPaginationKey, {})

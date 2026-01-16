@@ -15,11 +15,11 @@ import type { AppContext, ComponentPublicInstance, VNode } from 'vue'
 import type {
   Action,
   Callback,
-  ElMessageBoxOptions,
-  ElMessageBoxShortcutMethod,
   IElMessageBox,
   MessageBoxData,
   MessageBoxState,
+  TyMessageBoxOptions,
+  TyMessageBoxShortcutMethod,
 } from './message-box.type'
 
 // component default merge props & data
@@ -146,11 +146,11 @@ const showMessage = (options: any, appContext?: AppContext | null) => {
 }
 
 async function MessageBox(
-  options: ElMessageBoxOptions,
+  options: TyMessageBoxOptions,
   appContext?: AppContext | null
 ): Promise<MessageBoxData>
 function MessageBox(
-  options: ElMessageBoxOptions | string | VNode,
+  options: TyMessageBoxOptions | string | VNode,
   appContext: AppContext | null = null
 ): Promise<{ value: string; action: Action } | Action> {
   if (!isClient) return Promise.reject()
@@ -181,7 +181,7 @@ function MessageBox(
 const MESSAGE_BOX_VARIANTS = ['alert', 'confirm', 'prompt'] as const
 const MESSAGE_BOX_DEFAULT_OPTS: Record<
   (typeof MESSAGE_BOX_VARIANTS)[number],
-  Partial<ElMessageBoxOptions>
+  Partial<TyMessageBoxOptions>
 > = {
   alert: { closeOnPressEscape: false, closeOnClickModal: false },
   confirm: { showCancelButton: true },
@@ -191,19 +191,19 @@ const MESSAGE_BOX_DEFAULT_OPTS: Record<
 MESSAGE_BOX_VARIANTS.forEach((boxType) => {
   ;(MessageBox as IElMessageBox)[boxType] = messageBoxFactory(
     boxType
-  ) as ElMessageBoxShortcutMethod
+  ) as TyMessageBoxShortcutMethod
 })
 
 function messageBoxFactory(boxType: (typeof MESSAGE_BOX_VARIANTS)[number]) {
   return (
     message: string | VNode,
-    title: string | ElMessageBoxOptions,
-    options?: ElMessageBoxOptions,
+    title: string | TyMessageBoxOptions,
+    options?: TyMessageBoxOptions,
     appContext?: AppContext | null
   ) => {
     let titleOrOpts = ''
     if (isObject(title)) {
-      options = title as ElMessageBoxOptions
+      options = title as TyMessageBoxOptions
       titleOrOpts = ''
     } else if (isUndefined(title)) {
       titleOrOpts = ''

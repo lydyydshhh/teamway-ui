@@ -122,7 +122,7 @@ declare module 'vue' {
     $alert: typeof import('element-plus')['TyMessageBox']['alert']
     $confirm: typeof import('element-plus')['TyMessageBox']['confirm']
     $prompt: typeof import('element-plus')['TyMessageBox']['prompt']
-    $loading: typeof import('element-plus')['ElLoadingService']
+    $loading: typeof import('element-plus')['TyLoadingService']
   }
 }
 

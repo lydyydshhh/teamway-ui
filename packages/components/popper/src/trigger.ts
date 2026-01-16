@@ -43,4 +43,4 @@ export type PopperTriggerInstance = InstanceType<typeof Trigger> & unknown
 export const usePopperTriggerProps = popperTriggerProps
 
 /** @deprecated use `PopperTriggerInstance` instead, and it will be deprecated in the next major version */
-export type ElPopperArrowTrigger = PopperTriggerInstance
+export type TyPopperArrowTrigger = PopperTriggerInstance

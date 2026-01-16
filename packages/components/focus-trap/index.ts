@@ -1,7 +1,7 @@
-import ElFocusTrap from './src/focus-trap.vue'
+import TyFocusTrap from './src/focus-trap.vue'
 
-export { ElFocusTrap }
+export { TyFocusTrap }
 
-export default ElFocusTrap
+export default TyFocusTrap
 export * from './src/tokens'
 export * from './src/utils'

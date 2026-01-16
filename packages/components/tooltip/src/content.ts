@@ -59,10 +59,10 @@ export const useTooltipContentProps = buildProps({
   ...useAriaProps(['ariaLabel']),
 } as const)
 
-export type ElTooltipContentProps = ExtractPropTypes<
+export type TyTooltipContentProps = ExtractPropTypes<
   typeof useTooltipContentProps
 >
-export type ElTooltipContentPropsPublic = ExtractPublicPropTypes<
+export type TyTooltipContentPropsPublic = ExtractPublicPropTypes<
   typeof useTooltipContentProps
 >
 

@@ -16,8 +16,8 @@ import {
   withDirectives,
 } from 'vue'
 import { useTimeoutFn } from '@vueuse/core'
-import ElCollapseTransition from '@element-plus/components/collapse-transition'
-import ElTooltip from '@element-plus/components/tooltip'
+import TyCollapseTransition from '@element-plus/components/collapse-transition'
+import TyTooltip from '@element-plus/components/tooltip'
 import {
   buildProps,
   definePropType,
@@ -386,7 +386,7 @@ export default defineComponent({
       // this render function is only used for bypass `Vue`'s compiler caused patching issue.
       const child = rootMenu.isMenuPopup
         ? h(
-            ElTooltip,
+            TyTooltip,
             {
               ref: vPopper,
               visible: opened.value,
@@ -455,7 +455,7 @@ export default defineComponent({
               titleTag
             ),
             h(
-              ElCollapseTransition,
+              TyCollapseTransition,
               {},
               {
                 default: () =>

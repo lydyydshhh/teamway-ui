@@ -10,7 +10,7 @@ import {
   ref,
   watch,
 } from 'vue'
-import ElCheckbox from '@element-plus/components/checkbox'
+import TyCheckbox from '@element-plus/components/checkbox'
 import { useNamespace } from '@element-plus/hooks'
 import { useLocale } from '@element-plus/hooks/use-locale'
 import FilterPanel from '../filter-panel.vue'
@@ -43,7 +43,7 @@ export interface TableHeaderProps<T extends DefaultRow> {
 export default defineComponent({
   name: 'TyTableHeader',
   components: {
-    ElCheckbox,
+    TyCheckbox,
   },
   props: {
     fixed: {

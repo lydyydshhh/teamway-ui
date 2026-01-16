@@ -26,7 +26,7 @@ export default defineComponent({
         ;(children as VNode[]).forEach((item) => {
           const name = ((item?.type || {}) as Component)?.name
 
-          if (name === 'ElTourStep') {
+          if (name === 'TyTourStep') {
             result.push(item)
             total += 1
           }

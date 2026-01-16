@@ -21,7 +21,7 @@ export const TyLoading = {
 }
 
 export default TyLoading
-export { vLoading, vLoading as ElLoadingDirective, Loading as ElLoadingService }
+export { vLoading, vLoading as TyLoadingDirective, Loading as TyLoadingService }
 
 export * from './src/types'
 export type { LoadingInstance } from './src/loading'
