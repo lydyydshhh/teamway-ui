@@ -112,4 +112,4 @@ perl -0777 -pi -e "s/\n\n/\nexport * from '.\/$INPUT_NAME'\n\n/" $FILE_PATH/comp
 
 TYPE_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")/../typings" && pwd)
 
-perl -0777 -pi -e "s/\n\s+}/\n    Ty$NAME: typeof import('element-plus')['Ty$NAME']\n  }/" $TYPE_PATH/global.d.ts
+perl -0777 -pi -e "s/\n\s+}/\n    Ty$NAME: typeof import('teamway-ui')['Ty$NAME']\n  }/" $TYPE_PATH/global.d.ts

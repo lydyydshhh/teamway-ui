@@ -400,8 +400,8 @@ export default defineConfig([
             { name: 'lodash', message: 'Use lodash-unified instead.' },
             { name: 'lodash-es', message: 'Use lodash-unified instead.' },
             {
-              name: 'element-plus',
-              message: 'Use @element-plus/* instead.',
+              name: 'teamway-ui',
+              message: 'Use @teamway-ui/* instead.',
             },
           ],
           patterns: [
@@ -410,8 +410,8 @@ export default defineConfig([
               message: 'Use lodash-unified instead.',
             },
             {
-              group: ['element-plus/*'],
-              message: 'Use @element-plus/* instead.',
+              group: ['teamway-ui/*'],
+              message: 'Use @teamway-ui/* instead.',
             },
             {
               group: [

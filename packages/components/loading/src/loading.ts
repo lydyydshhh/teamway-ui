@@ -52,10 +52,10 @@ export function createLoadingComponent(
       }
       removeClass(target, ns.bm('parent', 'hidden'))
     }
-    removeElLoadingChild()
+    removeTyLoadingChild()
     loadingInstance.unmount()
   }
-  function removeElLoadingChild(): void {
+  function removeTyLoadingChild(): void {
     vm.$el?.parentNode?.removeChild(vm.$el)
   }
   function close() {
@@ -159,7 +159,7 @@ export function createLoadingComponent(
   return {
     ...toRefs(data),
     setText,
-    removeElLoadingChild,
+    removeTyLoadingChild,
     close,
     handleAfterLeave,
     vm,
