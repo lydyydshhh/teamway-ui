@@ -2,9 +2,9 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import defineGetter from '@element-plus/test-utils/define-getter'
-import sleep from '@element-plus/test-utils/sleep'
-import TyIcon from '@element-plus/components/icon'
+import defineGetter from '@teamway-ui/test-utils/define-getter'
+import sleep from '@teamway-ui/test-utils/sleep'
+import TyIcon from '@teamway-ui/components/icon'
 import Tree from '../src/tree.vue'
 import Button from '../../button/src/button.vue'
 

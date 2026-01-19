@@ -1,8 +1,8 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@teamway-ui/utils'
 import TableV2 from './src/table-v2'
 import AutoResizer from './src/components/auto-resizer'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export {
   Alignment as TableV2Alignment,

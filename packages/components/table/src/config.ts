@@ -1,8 +1,8 @@
 import { h } from 'vue'
-import TyCheckbox from '@element-plus/components/checkbox'
-import { TyIcon } from '@element-plus/components/icon'
+import TyCheckbox from '@teamway-ui/components/checkbox'
+import { TyIcon } from '@teamway-ui/components/icon'
 import { ArrowRight, Loading } from '@element-plus/icons-vue'
-import { getProp, isBoolean, isFunction, isNumber } from '@element-plus/utils'
+import { getProp, isBoolean, isFunction, isNumber } from '@teamway-ui/utils'
 
 import type { VNode } from 'vue'
 import type { TableColumnCtx } from './table-column/defaults'

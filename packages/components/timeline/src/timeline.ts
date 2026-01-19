@@ -1,9 +1,9 @@
 import { computed, defineComponent, h, provide } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 import { TIMELINE_INJECTION_KEY } from './tokens'
-import { buildProps, flattedChildren } from '@element-plus/utils'
+import { buildProps, flattedChildren } from '@teamway-ui/utils'
 
-import type { VNodeChildAtom } from '@element-plus/utils'
+import type { VNodeChildAtom } from '@teamway-ui/utils'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { TimelineProvider } from './tokens'
 

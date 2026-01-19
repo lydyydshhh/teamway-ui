@@ -1,11 +1,13 @@
 {
-  "name": "@element-plus/metadata",
+  "name": "@teamway-ui/metadata",
   "version": "0.0.1",
-  "description": "Metadata for Element Plus",
+  "description": "Metadata for Teamway UI",
   "keywords": [
-    "element-plus"
+    "teamway-ui"
   ],
   "license": "MIT",
+  "main": "./dist/contributors.json",
+  "types": "./dist/contributors.json",
   "files": [
     "dist"
   ],
@@ -22,9 +24,9 @@
     "url": "git+https://github.com/element-plus/element-plus.git"
   },
   "devDependencies": {
-    "@element-plus/build": "workspace:*",
-    "@element-plus/build-constants": "workspace:*",
-    "@element-plus/build-utils": "workspace:*",
+    "@teamway-ui/build": "workspace:*",
+    "@teamway-ui/build-constants": "workspace:*",
+    "@teamway-ui/build-utils": "workspace:*",
     "@types/lodash-es": "^4.17.12",
     "chalk": "^5.3.0",
     "consola": "^2.15.3",

@@ -1,6 +1,6 @@
 import { computed } from 'vue'
-import { NOOP, buildProps, definePropType } from '@element-plus/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { NOOP, buildProps, definePropType } from '@teamway-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 
 import type { PropType } from 'vue'
 import type {

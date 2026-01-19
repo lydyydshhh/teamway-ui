@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { EVENT_CODE } from 'element-plus'
+import { EVENT_CODE } from 'teamway-ui'
 
 const trigger = ref<'Enter' | 'Space'>('Space')
 const input = ref<string[]>()

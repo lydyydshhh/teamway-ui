@@ -12,8 +12,8 @@ import {
 import {
   DynamicSizeGrid,
   FixedSizeGrid,
-} from '@element-plus/components/virtual-list'
-import { isNumber, isObject } from '@element-plus/utils'
+} from '@teamway-ui/components/virtual-list'
+import { isNumber, isObject } from '@teamway-ui/utils'
 import { Header } from './components'
 import { TABLE_V2_GRID_INJECTION_KEY, TableV2InjectionKey } from './tokens'
 import { tableV2GridProps } from './grid'
@@ -28,7 +28,7 @@ import type {
   GridScrollOptions,
   ResetAfterIndex,
   Alignment as ScrollStrategy,
-} from '@element-plus/components/virtual-list'
+} from '@teamway-ui/components/virtual-list'
 import type { TableV2HeaderInstance } from './components'
 import type { TableV2GridProps } from './grid'
 

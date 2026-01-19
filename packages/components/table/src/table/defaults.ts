@@ -1,4 +1,4 @@
-import { useSizeProp } from '@element-plus/hooks'
+import { useSizeProp } from '@teamway-ui/hooks'
 
 import type {
   CSSProperties,
@@ -8,8 +8,8 @@ import type {
   StyleValue,
   VNode,
 } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
-import type { Nullable } from '@element-plus/utils'
+import type { ComponentSize } from '@teamway-ui/constants'
+import type { Nullable } from '@teamway-ui/utils'
 import type { Store } from '../store'
 import type { TableColumnCtx } from '../table-column/defaults'
 import type TableLayout from '../table-layout'

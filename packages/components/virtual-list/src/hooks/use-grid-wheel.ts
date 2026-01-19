@@ -1,4 +1,4 @@
-import { cAF, rAF } from '@element-plus/utils'
+import { cAF, rAF } from '@teamway-ui/utils'
 
 import type { ComputedRef } from 'vue'
 

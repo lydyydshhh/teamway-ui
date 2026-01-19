@@ -37,7 +37,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TyIcon } from 'element-plus'
+import { TyIcon } from 'teamway-ui'
 import {
   Back,
   DArrowRight,

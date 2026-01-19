@@ -16,9 +16,9 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { ClickOutside as vClickOutside } from 'element-plus'
+import { ClickOutside as vClickOutside } from 'teamway-ui'
 
-import type { PopoverInstance } from 'element-plus'
+import type { PopoverInstance } from 'teamway-ui'
 
 const popoverRef = ref<PopoverInstance>()
 const onClickOutside = () => {

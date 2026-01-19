@@ -1,5 +1,5 @@
-import { buildProps } from '@element-plus/utils'
-import { dialogEmits, dialogProps } from '@element-plus/components/dialog'
+import { buildProps } from '@teamway-ui/utils'
+import { dialogEmits, dialogProps } from '@teamway-ui/components/dialog'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 

@@ -3,7 +3,7 @@ import {
   definePropType,
   isNumber,
   mutable,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 
 import type { Component, ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type ImageViewer from './image-viewer.vue'

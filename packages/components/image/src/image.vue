@@ -69,8 +69,8 @@ import {
 } from 'vue'
 import { useIntersectionObserver, useThrottleFn } from '@vueuse/core'
 import { fromPairs } from 'lodash-unified'
-import { useAttrs, useLocale, useNamespace } from '@element-plus/hooks'
-import ImageViewer from '@element-plus/components/image-viewer'
+import { useAttrs, useLocale, useNamespace } from '@teamway-ui/hooks'
+import ImageViewer from '@teamway-ui/components/image-viewer'
 import {
   getScrollContainer,
   isArray,
@@ -78,7 +78,7 @@ import {
   isElement,
   isString,
   isWindow,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import { imageEmits, imageProps } from './image'
 
 import type { CSSProperties } from 'vue'

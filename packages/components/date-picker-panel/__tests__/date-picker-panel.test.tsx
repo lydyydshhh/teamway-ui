@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import dayjs from 'dayjs'
-import triggerEvent from '@element-plus/test-utils/trigger-event'
+import triggerEvent from '@teamway-ui/test-utils/trigger-event'
 import { describe, expect, it, vi } from 'vitest'
 import DatePickerPanel from '../src/date-picker-panel'
 import DatePickerRange from '../src/date-picker-com/panel-date-range.vue'

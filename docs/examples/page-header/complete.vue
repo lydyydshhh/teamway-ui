@@ -61,7 +61,7 @@
 </template>
 
 <script setup lang="ts">
-import { TyNotification as notify } from 'element-plus'
+import { TyNotification as notify } from 'teamway-ui'
 
 const onBack = () => {
   notify('Back')

@@ -1,5 +1,5 @@
-import { buildProps, definePropType, isNumber } from '@element-plus/utils'
-import { useAriaProps } from '@element-plus/hooks'
+import { buildProps, definePropType, isNumber } from '@teamway-ui/utils'
+import { useAriaProps } from '@teamway-ui/hooks'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes, StyleValue } from 'vue'
 import type Scrollbar from './scrollbar.vue'

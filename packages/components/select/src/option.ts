@@ -1,4 +1,4 @@
-import { buildProps } from '@element-plus/utils'
+import { buildProps } from '@teamway-ui/utils'
 
 export const COMPONENT_NAME = 'TyOption'
 export const optionProps = buildProps({

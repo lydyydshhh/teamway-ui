@@ -1,9 +1,9 @@
 import { getCurrentInstance, useAttrs, useSlots } from 'vue'
 import dayjs from 'dayjs'
-import { isFunction } from '@element-plus/utils'
+import { isFunction } from '@teamway-ui/utils'
 
 import type { SetupContext } from 'vue'
-import type { useLocale } from '@element-plus/hooks'
+import type { useLocale } from '@teamway-ui/hooks'
 import type { RangePickerSharedEmits } from '../props/shared'
 
 // FIXME: extract this to `date-picker.ts`

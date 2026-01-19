@@ -24,7 +24,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { buttonTypes } from 'element-plus'
+import { buttonTypes } from 'teamway-ui'
 
 const config = reactive({
   autoInsertSpace: true,

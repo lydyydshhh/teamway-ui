@@ -14,9 +14,9 @@ import {
   watch,
 } from 'vue'
 import { isNil } from 'lodash-unified'
-import { EVENT_CODE } from '@element-plus/constants'
-import { useEscapeKeydown } from '@element-plus/hooks'
-import { getEventCode, isString } from '@element-plus/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import { useEscapeKeydown } from '@teamway-ui/hooks'
+import { getEventCode, isString } from '@teamway-ui/utils'
 import {
   createFocusOutPreventedEvent,
   focusFirstDescendant,

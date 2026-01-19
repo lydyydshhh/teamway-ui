@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TyMessage, TyMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'teamway-ui'
 
 const open = () => {
   TyMessageBox.confirm(

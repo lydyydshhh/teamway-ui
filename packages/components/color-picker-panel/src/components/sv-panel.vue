@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useLocale } from '@element-plus/hooks/use-locale'
+import { useLocale } from '@teamway-ui/hooks/use-locale'
 import { svPanelProps } from '../props/sv-panel'
 import { useSvPanel, useSvPanelDOM } from '../composables/use-sv-panel'
 

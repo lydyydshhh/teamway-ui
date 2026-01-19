@@ -89,21 +89,21 @@ import {
   isBoolean,
   isPromise,
   throwError,
-} from '@element-plus/utils'
-import TyIcon from '@element-plus/components/icon'
+} from '@teamway-ui/utils'
+import TyIcon from '@teamway-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@teamway-ui/components/form'
 import { Loading } from '@element-plus/icons-vue'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useNamespace } from '@element-plus/hooks'
+} from '@teamway-ui/constants'
+import { useNamespace } from '@teamway-ui/hooks'
 import { switchEmits, switchProps } from './switch'
 
 import type { CSSProperties } from 'vue'

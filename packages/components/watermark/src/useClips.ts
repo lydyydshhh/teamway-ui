@@ -1,4 +1,4 @@
-import { isArray } from '@element-plus/utils'
+import { isArray } from '@teamway-ui/utils'
 
 import type { WatermarkProps } from './watermark'
 

@@ -174,33 +174,33 @@ import {
 } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
 import { isNil } from 'lodash-unified'
-import { TyIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@teamway-ui/components/icon'
 import { Hide as IconHide, View as IconView } from '@element-plus/icons-vue'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@teamway-ui/components/form'
 import {
   NOOP,
   ValidateComponentsMap,
   debugWarn,
   isClient,
   isObject,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import {
   useAttrs,
   useComposition,
   useCursor,
   useFocusController,
   useNamespace,
-} from '@element-plus/hooks'
+} from '@teamway-ui/hooks'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@teamway-ui/constants'
 import { calcTextareaHeight, looseToNumber } from './utils'
 import { inputEmits, inputProps } from './input'
 

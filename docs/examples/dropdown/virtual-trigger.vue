@@ -39,7 +39,7 @@ import {
   Plus,
 } from '@element-plus/icons-vue'
 
-import type { DropdownInstance } from 'element-plus'
+import type { DropdownInstance } from 'teamway-ui'
 
 const dropdownRef = ref<DropdownInstance>()
 const position = ref({

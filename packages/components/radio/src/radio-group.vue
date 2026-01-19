@@ -29,10 +29,10 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import { useFormItem, useFormItemInputId } from '@element-plus/components/form'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { useId, useNamespace } from '@element-plus/hooks'
-import { debugWarn } from '@element-plus/utils'
+import { useFormItem, useFormItemInputId } from '@teamway-ui/components/form'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import { useId, useNamespace } from '@teamway-ui/hooks'
+import { debugWarn } from '@teamway-ui/utils'
 import {
   radioDefaultProps,
   radioGroupEmits,

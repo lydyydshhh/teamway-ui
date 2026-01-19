@@ -16,8 +16,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useLocale } from '@element-plus/hooks'
-import { TyIcon } from '@element-plus/components/icon'
+import { useLocale } from '@teamway-ui/hooks'
+import { TyIcon } from '@teamway-ui/components/icon'
 import { paginationNextProps } from './next'
 
 defineOptions({

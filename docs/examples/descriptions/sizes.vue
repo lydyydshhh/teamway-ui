@@ -104,7 +104,7 @@ import {
   User,
 } from '@element-plus/icons-vue'
 
-import type { ComponentSize } from 'element-plus'
+import type { ComponentSize } from 'teamway-ui'
 
 const size = ref<ComponentSize>('default')
 

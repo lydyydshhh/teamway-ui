@@ -1,4 +1,4 @@
-import TyIcon from '@element-plus/components/icon'
+import TyIcon from '@teamway-ui/components/icon'
 import { ArrowRight } from '@element-plus/icons-vue'
 
 import type { StyleValue } from 'vue'

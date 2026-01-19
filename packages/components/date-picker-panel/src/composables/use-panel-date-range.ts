@@ -1,6 +1,6 @@
 import { computed, inject, nextTick, ref } from 'vue'
-import { useLocale } from '@element-plus/hooks'
-import { PICKER_BASE_INJECTION_KEY } from '@element-plus/components/time-picker'
+import { useLocale } from '@teamway-ui/hooks'
+import { PICKER_BASE_INJECTION_KEY } from '@teamway-ui/components/time-picker'
 import { getValidDateOfMonth, getValidDateOfYear } from '../utils'
 
 import type { PanelDateRangeProps } from '../props/panel-date-range'

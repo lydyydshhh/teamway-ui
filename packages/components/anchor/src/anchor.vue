@@ -23,7 +23,7 @@ import {
   watch,
 } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 import {
   animateScrollTo,
   getElement,
@@ -33,8 +33,8 @@ import {
   isUndefined,
   isWindow,
   throttleByRaf,
-} from '@element-plus/utils'
-import { CHANGE_EVENT } from '@element-plus/constants'
+} from '@teamway-ui/utils'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
 import { anchorEmits, anchorProps } from './anchor'
 import { anchorKey } from './constants'
 

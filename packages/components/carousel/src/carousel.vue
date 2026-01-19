@@ -90,9 +90,9 @@
 
 <script lang="ts" setup>
 import { computed, unref } from 'vue'
-import { TyIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@teamway-ui/components/icon'
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
 import { carouselEmits, carouselProps } from './carousel'
 import { useCarousel } from './use-carousel'
 

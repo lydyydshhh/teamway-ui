@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import { isArray, isDate, isEmpty } from '@element-plus/utils'
+import { isArray, isDate, isEmpty } from '@teamway-ui/utils'
 
 import type { Dayjs } from 'dayjs'
 import type { DateOrDates, DayOrDays } from './common/props'

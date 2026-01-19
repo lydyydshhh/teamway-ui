@@ -1,16 +1,16 @@
 import { markRaw, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, test, vi } from 'vitest'
-import { debugWarn } from '@element-plus/utils'
+import { debugWarn } from '@teamway-ui/utils'
 import { Checked, CircleClose, Hide, View } from '@element-plus/icons-vue'
-import { TyForm, TyFormItem } from '@element-plus/components/form'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { TyForm, TyFormItem } from '@teamway-ui/components/form'
+import { UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 import Switch from '../src/switch.vue'
 
 import type { VueWrapper } from '@vue/test-utils'
 import type { SwitchInstance } from '../src/switch'
 
-vi.mock('@element-plus/utils/error', () => ({
+vi.mock('@teamway-ui/utils/error', () => ({
   debugWarn: vi.fn(),
 }))
 

@@ -1,9 +1,9 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@teamway-ui/utils'
 import Select from './src/select.vue'
 import Option from './src/option.vue'
 import OptionGroup from './src/option-group.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TySelect: SFCWithInstall<typeof Select> & {
   Option: typeof Option

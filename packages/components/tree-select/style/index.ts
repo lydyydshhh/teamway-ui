@@ -1,3 +1,3 @@
-import '@element-plus/components/select/style'
-import '@element-plus/components/tree/style'
-import '@element-plus/theme-chalk/src/tree-select.scss'
+import '@teamway-ui/components/select/style'
+import '@teamway-ui/components/tree/style'
+import '@teamway-ui/theme-chalk/src/tree-select.scss'

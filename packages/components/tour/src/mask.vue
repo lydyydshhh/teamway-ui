@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { computed, inject, toRef } from 'vue'
-import { useLockscreen } from '@element-plus/hooks'
+import { useLockscreen } from '@teamway-ui/hooks'
 import { useWindowSize } from '@vueuse/core'
 import { maskProps } from './mask'
 import { tourKey } from './helper'

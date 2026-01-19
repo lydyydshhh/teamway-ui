@@ -21,7 +21,7 @@ Because the different IDs are prone to hydrate errors in SSR, in order to ensure
 ```ts [main.ts]
 // irrelevant code omitted
 import { createApp } from 'vue'
-import { ID_INJECTION_KEY } from 'element-plus'
+import { ID_INJECTION_KEY } from 'teamway-ui'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -38,7 +38,7 @@ When you using SSR for development, you may encounter hydration errors caused by
 ```ts [main.ts]
 // irrelevant code omitted
 import { createApp } from 'vue'
-import { ZINDEX_INJECTION_KEY } from 'element-plus'
+import { ZINDEX_INJECTION_KEY } from 'teamway-ui'
 import App from './App.vue'
 
 const app = createApp(App)

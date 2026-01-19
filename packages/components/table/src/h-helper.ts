@@ -1,5 +1,5 @@
 import { h } from 'vue'
-import { isUndefined } from '@element-plus/utils'
+import { isUndefined } from '@teamway-ui/utils'
 
 import type { TableColumnCtx } from './table-column/defaults'
 import type { DefaultRow } from './table/defaults'

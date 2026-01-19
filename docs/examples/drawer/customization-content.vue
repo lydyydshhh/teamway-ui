@@ -52,7 +52,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from 'vue'
-import { TyMessageBox } from 'element-plus'
+import { TyMessageBox } from 'teamway-ui'
 
 const formLabelWidth = '80px'
 let timer

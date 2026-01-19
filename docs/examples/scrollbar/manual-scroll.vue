@@ -18,13 +18,13 @@
 <script lang="ts" setup>
 import { onMounted, ref } from 'vue'
 
-import type { ScrollbarInstance } from 'element-plus'
+import type { ScrollbarInstance } from 'teamway-ui'
 
 type Arrayable<T> = T | T[]
 
 const max = ref(0)
 const value = ref(0)
-const innerRef = ref<HTMLDivTyement>()
+const innerRef = ref<HTMLDivElement>()
 const scrollbarRef = ref<ScrollbarInstance>()
 
 onMounted(() => {

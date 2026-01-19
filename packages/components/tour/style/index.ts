@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/components/button/style'
-import '@element-plus/theme-chalk/src/tour.scss'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/components/button/style'
+import '@teamway-ui/theme-chalk/src/tour.scss'

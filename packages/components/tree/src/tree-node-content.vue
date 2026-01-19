@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent, h, inject, renderSlot } from 'vue'
-import TyText from '@element-plus/components/text'
-import { useNamespace } from '@element-plus/hooks'
+import TyText from '@teamway-ui/components/text'
+import { useNamespace } from '@teamway-ui/hooks'
 import { NODE_INSTANCE_INJECTION_KEY, ROOT_TREE_INJECTION_KEY } from './tokens'
 
 import type { ComponentInternalInstance } from 'vue'

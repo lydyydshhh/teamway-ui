@@ -1,9 +1,9 @@
 import { computed, defineComponent, nextTick, reactive, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import Chinese from '@element-plus/locale/lang/zh-cn'
-import English from '@element-plus/locale/lang/en'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import Chinese from '@teamway-ui/locale/lang/zh-cn'
+import English from '@teamway-ui/locale/lang/en'
 import {
   MessageConfigContext,
   TyButton,
@@ -12,9 +12,9 @@ import {
   TyLink,
   TyMessage,
   TyPagination,
-} from '@element-plus/components'
-import { rAF } from '@element-plus/test-utils/tick'
-import { getStyle } from '@element-plus/utils'
+} from '@teamway-ui/components'
+import { rAF } from '@teamway-ui/test-utils/tick'
+import { getStyle } from '@teamway-ui/utils'
 import {
   provideGlobalConfig,
   useGlobalComponentSettings,
@@ -24,8 +24,8 @@ import ConfigProvider, { messageConfig } from '../src/config-provider'
 
 import type { ComponentPublicInstance, PropType } from 'vue'
 import type { VueWrapper } from '@vue/test-utils'
-import type { Language } from '@element-plus/locale'
-import type { ComponentSize } from '@element-plus/constants'
+import type { Language } from '@teamway-ui/locale'
+import type { ComponentSize } from '@teamway-ui/constants'
 import type { ConfigProviderProps } from '../src/config-provider-props'
 
 const TestComp = defineComponent({

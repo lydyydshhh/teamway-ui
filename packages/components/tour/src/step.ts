@@ -1,4 +1,4 @@
-import { buildProps, definePropType, iconPropType } from '@element-plus/utils'
+import { buildProps, definePropType, iconPropType } from '@teamway-ui/utils'
 import { tourContentProps } from './content'
 
 import type {

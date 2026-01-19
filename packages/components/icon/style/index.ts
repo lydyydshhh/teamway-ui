@@ -1,1 +1,1 @@
-import '@element-plus/components/base/style'
+import '@teamway-ui/components/base/style'

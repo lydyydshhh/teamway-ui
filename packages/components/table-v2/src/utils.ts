@@ -1,5 +1,5 @@
 import { h, isVNode } from 'vue'
-import { addUnit, isArray, isFunction } from '@element-plus/utils'
+import { addUnit, isArray, isFunction } from '@teamway-ui/utils'
 
 import type { CSSProperties, Component, Slot } from 'vue'
 import type { JSX } from 'vue/jsx-runtime'

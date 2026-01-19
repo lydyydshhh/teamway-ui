@@ -16,8 +16,8 @@ import {
   withDirectives,
 } from 'vue'
 import { useTimeoutFn } from '@vueuse/core'
-import TyCollapseTransition from '@element-plus/components/collapse-transition'
-import TyTooltip from '@element-plus/components/tooltip'
+import TyCollapseTransition from '@teamway-ui/components/collapse-transition'
+import TyTooltip from '@teamway-ui/components/tooltip'
 import {
   buildProps,
   definePropType,
@@ -26,16 +26,16 @@ import {
   isString,
   isUndefined,
   throwError,
-} from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+} from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import { ArrowDown, ArrowRight } from '@element-plus/icons-vue'
-import { TyIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@teamway-ui/components/icon'
 import useMenu from './use-menu'
 import { useMenuCssVar } from './use-menu-css-var'
 import { MENU_INJECTION_KEY, SUB_MENU_INJECTION_KEY } from './tokens'
 
-import type { Placement } from '@element-plus/components/popper'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { Placement } from '@teamway-ui/components/popper'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
 import type {
   CSSProperties,
   ExtractPropTypes,

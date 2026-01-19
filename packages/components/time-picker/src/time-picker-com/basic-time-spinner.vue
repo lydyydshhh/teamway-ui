@@ -81,13 +81,13 @@
 <script lang="ts" setup>
 import { computed, inject, nextTick, onMounted, ref, unref, watch } from 'vue'
 import { debounce } from 'lodash-unified'
-import { vRepeatClick } from '@element-plus/directives'
-import TyScrollbar from '@element-plus/components/scrollbar'
-import TyIcon from '@element-plus/components/icon'
+import { vRepeatClick } from '@teamway-ui/directives'
+import TyScrollbar from '@teamway-ui/components/scrollbar'
+import TyIcon from '@teamway-ui/components/icon'
 import { ArrowDown, ArrowUp } from '@element-plus/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
-import { getStyle, isNumber } from '@element-plus/utils'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import { useNamespace } from '@teamway-ui/hooks'
+import { getStyle, isNumber } from '@teamway-ui/utils'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
 import {
   DEFAULT_FORMATS_TIME,
   PICKER_BASE_INJECTION_KEY,
@@ -98,7 +98,7 @@ import { basicTimeSpinnerProps } from '../props/basic-time-spinner'
 import { getTimeLists } from '../composables/use-time-picker'
 
 import type { Ref } from 'vue'
-import type { ScrollbarInstance } from '@element-plus/components/scrollbar'
+import type { ScrollbarInstance } from '@teamway-ui/components/scrollbar'
 import type { TimeUnit } from '../constants'
 import type { TimeList } from '../utils'
 

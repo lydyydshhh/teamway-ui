@@ -179,9 +179,9 @@ import {
   provide,
 } from 'vue'
 import { debounce } from 'lodash-unified'
-import { Mousewheel } from '@element-plus/directives'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import TyScrollbar from '@element-plus/components/scrollbar'
+import { Mousewheel } from '@teamway-ui/directives'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import TyScrollbar from '@teamway-ui/components/scrollbar'
 import { createStore } from './store/helper'
 import TableLayout from './table-layout'
 import TableHeader from './table-header'

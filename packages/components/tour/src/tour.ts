@@ -4,9 +4,9 @@ import {
   iconPropType,
   isBoolean,
   isNumber,
-} from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { teleportProps } from '@element-plus/components/teleport'
+} from '@teamway-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import { teleportProps } from '@teamway-ui/components/teleport'
 import { tourContentProps } from './content'
 
 import type {

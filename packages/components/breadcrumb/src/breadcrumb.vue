@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import { onMounted, provide, ref } from 'vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
 import { breadcrumbKey } from './constants'
 import { breadcrumbProps } from './breadcrumb'
 
@@ -23,7 +23,7 @@ const { t } = useLocale()
 const props = defineProps(breadcrumbProps)
 
 const ns = useNamespace('breadcrumb')
-const breadcrumb = ref<HTMLDivTyement>()
+const breadcrumb = ref<HTMLDivElement>()
 
 provide(breadcrumbKey, props)
 

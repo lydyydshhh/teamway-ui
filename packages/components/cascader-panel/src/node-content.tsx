@@ -1,6 +1,6 @@
 import { Comment, defineComponent, inject } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { isArray } from '@element-plus/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { isArray } from '@teamway-ui/utils'
 import { CASCADER_PANEL_INJECTION_KEY } from './types'
 
 import type { PropType, VNode } from 'vue'

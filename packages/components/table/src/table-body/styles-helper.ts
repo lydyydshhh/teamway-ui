@@ -1,6 +1,6 @@
 import { inject } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { isArray, isFunction, isObject, isString } from '@element-plus/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { isArray, isFunction, isObject, isString } from '@teamway-ui/utils'
 import {
   ensurePosition,
   getFixedColumnOffset,

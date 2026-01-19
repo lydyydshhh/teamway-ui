@@ -12,7 +12,7 @@
     "skipLibCheck": true,
     "lib": ["ESNext", "DOM"],
     "paths": {
-      "element-plus": ["../packages/element-plus"],
+      "teamway-ui": ["../packages/teamway-ui"],
       "~/*": ["./.vitepress/vitepress/*"],
       "vue": ["./node_modules/vue"]
     },

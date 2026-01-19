@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type { CheckboxValueType } from 'element-plus'
+import type { CheckboxValueType } from 'teamway-ui'
 
 const checkAll = ref(false)
 const isIndeterminate = ref(true)

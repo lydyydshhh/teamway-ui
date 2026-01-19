@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { h } from 'vue'
-import { TyMessage } from 'element-plus'
+import { TyMessage } from 'teamway-ui'
 
 const open = () => {
   TyMessage('This is a message.')

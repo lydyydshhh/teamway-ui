@@ -7,8 +7,8 @@ import {
   ref,
   unref,
 } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { ensureArray } from '@element-plus/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { ensureArray } from '@teamway-ui/utils'
 import { tableV2HeaderProps } from '../header'
 import { enforceUnit } from '../utils'
 import { TABLE_V2_GRID_INJECTION_KEY } from '../tokens'

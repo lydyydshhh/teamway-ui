@@ -1,9 +1,9 @@
 // @ts-nocheck
 import { computed, nextTick, toRefs, watch } from 'vue'
 import { isEqual, isNil, pick } from 'lodash-unified'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { escapeStringRegexp, isEmpty, isFunction } from '@element-plus/utils'
-import TyTree from '@element-plus/components/tree'
+import { UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import { escapeStringRegexp, isEmpty, isFunction } from '@teamway-ui/utils'
+import TyTree from '@teamway-ui/components/tree'
 import TreeSelectOption from './tree-select-option'
 import {
   isValidArray,
@@ -15,10 +15,10 @@ import {
 
 import type { CacheOption } from './cache-options'
 import type { Ref } from 'vue'
-import type { SelectInstance } from '@element-plus/components/select'
-import type Node from '@element-plus/components/tree/src/model/node'
-import type { TreeNodeData } from '@element-plus/components/tree/src/tree.type'
-import type { TreeInstance } from '@element-plus/components/tree'
+import type { SelectInstance } from '@teamway-ui/components/select'
+import type Node from '@teamway-ui/components/tree/src/model/node'
+import type { TreeNodeData } from '@teamway-ui/components/tree/src/tree.type'
+import type { TreeInstance } from '@teamway-ui/components/tree'
 
 export const useTree = (
   props,

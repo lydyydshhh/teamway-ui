@@ -2,14 +2,14 @@
 import { computed, nextTick, onMounted, toRefs, watch } from 'vue'
 import { useEventListener } from '@vueuse/core'
 import { pick } from 'lodash-unified'
-import TySelect from '@element-plus/components/select'
-import { useNamespace } from '@element-plus/hooks'
-import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { getEventCode } from '@element-plus/utils'
+import TySelect from '@teamway-ui/components/select'
+import { useNamespace } from '@teamway-ui/hooks'
+import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import { getEventCode } from '@teamway-ui/utils'
 
 import type { Ref } from 'vue'
-import type { SelectInstance } from '@element-plus/components/select'
-import type { TreeInstance } from '@element-plus/components/tree'
+import type { SelectInstance } from '@teamway-ui/components/select'
+import type { TreeInstance } from '@teamway-ui/components/tree'
 
 export const useSelect = (
   props,

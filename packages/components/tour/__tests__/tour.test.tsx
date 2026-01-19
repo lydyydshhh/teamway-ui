@@ -3,8 +3,8 @@ import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, test, vi } from 'vitest'
 import Tour from '../src/tour.vue'
 import TourStep from '../src/step.vue'
-import { EVENT_CODE } from '@element-plus/constants'
-import triggerEvent from '@element-plus/test-utils/trigger-event'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import triggerEvent from '@teamway-ui/test-utils/trigger-event'
 
 import type { TourPropsPublic } from '../src/tour'
 

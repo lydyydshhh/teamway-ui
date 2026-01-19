@@ -1,22 +1,22 @@
 import { placements } from '@popperjs/core'
-import { CommonProps } from '@element-plus/components/cascader-panel'
+import { CommonProps } from '@teamway-ui/components/cascader-panel'
 import {
   buildProps,
   definePropType,
   iconPropType,
   isBoolean,
-} from '@element-plus/utils'
-import { useEmptyValuesProps, useSizeProp } from '@element-plus/hooks'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
-import { tagProps } from '@element-plus/components/tag'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@teamway-ui/utils'
+import { useEmptyValuesProps, useSizeProp } from '@teamway-ui/hooks'
+import { useTooltipContentProps } from '@teamway-ui/components/tooltip'
+import { tagProps } from '@teamway-ui/components/tag'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 import { CircleClose } from '@element-plus/icons-vue'
 
 import type {
   CascaderNode,
   CascaderValue,
-} from '@element-plus/components/cascader-panel'
-import type { Placement, PopperEffect } from '@element-plus/components/popper'
+} from '@teamway-ui/components/cascader-panel'
+import type { Placement, PopperEffect } from '@teamway-ui/components/popper'
 
 export const cascaderProps = buildProps({
   ...CommonProps,

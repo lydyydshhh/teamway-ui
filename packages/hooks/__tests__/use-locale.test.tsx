@@ -1,11 +1,11 @@
 import { computed, defineComponent, nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import Chinese from '@element-plus/locale/lang/zh-cn'
-import English from '@element-plus/locale/lang/en'
+import Chinese from '@teamway-ui/locale/lang/zh-cn'
+import English from '@teamway-ui/locale/lang/en'
 import { buildTranslator, useLocale } from '../use-locale'
 
-import type { Language } from '@element-plus/locale'
+import type { Language } from '@teamway-ui/locale'
 import type { ComponentPublicInstance, DefineComponent, PropType } from 'vue'
 import type { VueWrapper } from '@vue/test-utils'
 

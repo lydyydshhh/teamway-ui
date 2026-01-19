@@ -1,7 +1,7 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { popperContentProps } from '@element-plus/components/popper'
-import { useAriaProps, useDelayedToggleProps } from '@element-plus/hooks'
-import { teleportProps } from '@element-plus/components/teleport'
+import { buildProps, definePropType } from '@teamway-ui/utils'
+import { popperContentProps } from '@teamway-ui/components/popper'
+import { useAriaProps, useDelayedToggleProps } from '@teamway-ui/hooks'
+import { teleportProps } from '@teamway-ui/components/teleport'
 
 import type TooltipContent from './content.vue'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'

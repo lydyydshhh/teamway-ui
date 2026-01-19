@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterAll, describe, expect, it, vi } from 'vitest'
-import { EVENT_CODE } from '@element-plus/constants'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import ColorPickerPanel from '../color-picker-panel.vue'
 import HueSlider from '../components/hue-slider.vue'
 import AlphaSlider from '../components/alpha-slider.vue'

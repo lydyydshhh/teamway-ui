@@ -24,12 +24,12 @@ import {
   mutable,
   rAF,
   throwError,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import { TyIcon } from '@element-plus/components/icon'
+} from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import { TyIcon } from '@teamway-ui/components/icon'
 import { ArrowLeft, ArrowRight, Close } from '@element-plus/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
-import useWheel from '@element-plus/components/virtual-list/src/hooks/use-wheel'
+import { useNamespace } from '@teamway-ui/hooks'
+import useWheel from '@teamway-ui/components/virtual-list/src/hooks/use-wheel'
 import { clamp } from 'lodash-unified'
 import TabBar from './tab-bar.vue'
 import { tabsRootContextKey } from './constants'

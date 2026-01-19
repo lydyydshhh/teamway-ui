@@ -1,9 +1,9 @@
 import { computed, inject, ref, unref } from 'vue'
-import { useGlobalSize } from '@element-plus/hooks/use-size'
-import { useProp } from '@element-plus/hooks/use-prop'
+import { useGlobalSize } from '@teamway-ui/hooks/use-size'
+import { useProp } from '@teamway-ui/hooks/use-prop'
 import { formContextKey, formItemContextKey } from '../constants'
 
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@teamway-ui/constants'
 import type { MaybeRef } from '@vueuse/core'
 
 export const useFormSize = (

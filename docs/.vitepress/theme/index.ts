@@ -1,7 +1,4 @@
-import ElementPlus, {
-  ID_INJECTION_KEY,
-  ZINDEX_INJECTION_KEY,
-} from 'element-plus'
+import ElementPlus, { ID_INJECTION_KEY, ZINDEX_INJECTION_KEY } from 'teamway-ui'
 import { isClient } from '@vueuse/core'
 import VPApp, { NotFound, globals } from '../vitepress'
 import { define } from '../utils/types'

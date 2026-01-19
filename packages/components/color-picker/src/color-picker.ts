@@ -1,12 +1,12 @@
 import { isNil } from 'lodash-unified'
-import { buildProps, definePropType, isString } from '@element-plus/utils'
+import { buildProps, definePropType, isString } from '@teamway-ui/utils'
 import {
   useAriaProps,
   useEmptyValuesProps,
   useSizeProp,
-} from '@element-plus/hooks'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@teamway-ui/hooks'
+import { useTooltipContentProps } from '@teamway-ui/components/tooltip'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type ColorPicker from './color-picker.vue'

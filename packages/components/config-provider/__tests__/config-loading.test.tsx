@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import { TyButton, TyLoading } from '@element-plus/components'
+import { TyButton, TyLoading } from '@teamway-ui/components'
 import ConfigProvider from '../src/config-provider'
 
-import type { LoadingInstance } from '@element-plus/components/loading/src/loading'
+import type { LoadingInstance } from '@teamway-ui/components/loading/src/loading'
 
 describe('loading config', () => {
   it('should render loading component', async () => {

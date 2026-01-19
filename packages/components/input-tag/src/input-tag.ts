@@ -6,19 +6,19 @@ import {
   isNumber,
   isString,
   isUndefined,
-} from '@element-plus/utils'
-import { useSizeProp } from '@element-plus/hooks'
+} from '@teamway-ui/utils'
+import { useSizeProp } from '@teamway-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { tagProps } from '@element-plus/components/tag/src/tag'
+} from '@teamway-ui/constants'
+import { tagProps } from '@teamway-ui/components/tag/src/tag'
 import { CircleClose } from '@element-plus/icons-vue'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
-import type { PopperEffect } from '@element-plus/components/popper'
+import type { PopperEffect } from '@teamway-ui/components/popper'
 
 export const inputTagProps = buildProps({
   /**

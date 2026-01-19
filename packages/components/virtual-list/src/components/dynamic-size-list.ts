@@ -1,4 +1,4 @@
-import { throwError } from '@element-plus/utils'
+import { throwError } from '@teamway-ui/utils'
 import createList from '../builders/build-list'
 import { isHorizontal } from '../utils'
 import {

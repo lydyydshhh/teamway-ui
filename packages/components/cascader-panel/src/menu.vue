@@ -37,10 +37,10 @@
 
 <script lang="ts" setup>
 import { computed, getCurrentInstance, inject, ref } from 'vue'
-import TyScrollbar from '@element-plus/components/scrollbar'
-import { useId, useLocale, useNamespace } from '@element-plus/hooks'
+import TyScrollbar from '@teamway-ui/components/scrollbar'
+import { useId, useLocale, useNamespace } from '@teamway-ui/hooks'
 import { Loading } from '@element-plus/icons-vue'
-import TyIcon from '@element-plus/components/icon'
+import TyIcon from '@teamway-ui/components/icon'
 import TyCascaderNode from './node.vue'
 import { CASCADER_PANEL_INJECTION_KEY } from './types'
 

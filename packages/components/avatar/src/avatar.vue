@@ -17,9 +17,9 @@
 
 <script lang="ts" setup>
 import { computed, inject, ref, watch } from 'vue'
-import { TyIcon } from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
-import { addUnit, isNumber, isString } from '@element-plus/utils'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { useNamespace } from '@teamway-ui/hooks'
+import { addUnit, isNumber, isString } from '@teamway-ui/utils'
 import { avatarEmits, avatarProps } from './avatar'
 import { avatarGroupContextKey } from './constants'
 

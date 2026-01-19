@@ -1,8 +1,8 @@
 import { defineComponent, inject, watch } from 'vue'
-import { selectKey } from '@element-plus/components/select'
-import { isClient } from '@element-plus/utils'
+import { selectKey } from '@teamway-ui/components/select'
+import { isClient } from '@teamway-ui/utils'
 
-import type { SelectContext } from '@element-plus/components/select'
+import type { SelectContext } from '@teamway-ui/components/select'
 import type { PropType } from 'vue'
 
 // same as ty-option instance,

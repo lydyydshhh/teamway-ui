@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/components/popper/style'
-import '@element-plus/theme-chalk/src/popover.scss'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/components/popper/style'
+import '@teamway-ui/theme-chalk/src/popover.scss'

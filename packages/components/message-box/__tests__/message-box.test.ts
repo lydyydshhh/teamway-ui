@@ -2,8 +2,8 @@
 import { markRaw } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, test, vi } from 'vitest'
-import { rAF } from '@element-plus/test-utils/tick'
-import { triggerNativeCompositeClick } from '@element-plus/test-utils/composite-click'
+import { rAF } from '@teamway-ui/test-utils/tick'
+import { triggerNativeCompositeClick } from '@teamway-ui/test-utils/composite-click'
 import { QuestionFilled as QuestionFilledIcon } from '@element-plus/icons-vue'
 import MessageBox from '../src/messageBox'
 import { TyMessageBox } from '..'
@@ -11,7 +11,7 @@ import { TyMessageBox } from '..'
 const selector = '.ty-overlay'
 const QuestionFilled = markRaw(QuestionFilledIcon)
 
-vi.mock('@element-plus/utils/error', () => ({
+vi.mock('@teamway-ui/utils/error', () => ({
   debugWarn: vi.fn(),
 }))
 

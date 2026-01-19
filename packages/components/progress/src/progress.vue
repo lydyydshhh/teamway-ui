@@ -83,7 +83,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { TyIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@teamway-ui/components/icon'
 import {
   Check,
   CircleCheck,
@@ -91,8 +91,8 @@ import {
   Close,
   WarningFilled,
 } from '@element-plus/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
-import { isFunction, isString } from '@element-plus/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { isFunction, isString } from '@teamway-ui/utils'
 import { progressProps } from './progress'
 
 import type { CSSProperties } from 'vue'

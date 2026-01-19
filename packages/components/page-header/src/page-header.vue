@@ -53,9 +53,9 @@
 </template>
 
 <script lang="ts" setup>
-import { TyIcon } from '@element-plus/components/icon'
-import { TyDivider } from '@element-plus/components/divider'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { TyDivider } from '@teamway-ui/components/divider'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
 import { pageHeaderEmits, pageHeaderProps } from './page-header'
 
 defineOptions({

@@ -18,8 +18,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@element-plus/hooks'
-import { useGlobalConfig } from '@element-plus/components/config-provider'
+import { useNamespace } from '@teamway-ui/hooks'
+import { useGlobalConfig } from '@teamway-ui/components/config-provider'
 import { cardProps } from './card'
 
 const globalConfig = useGlobalConfig('card')

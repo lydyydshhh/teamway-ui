@@ -3,9 +3,9 @@
 </template>
 
 <script lang="ts" setup>
-import { TyMessage, TyMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'teamway-ui'
 
-import type { Action } from 'element-plus'
+import type { Action } from 'teamway-ui'
 
 const open = () => {
   TyMessageBox.confirm(

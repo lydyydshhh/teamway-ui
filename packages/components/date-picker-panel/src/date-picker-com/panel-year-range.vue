@@ -102,9 +102,9 @@
 import { computed, inject, ref, toRef, unref, useSlots, watch } from 'vue'
 import dayjs from 'dayjs'
 import { DArrowLeft, DArrowRight } from '@element-plus/icons-vue'
-import TyIcon from '@element-plus/components/icon'
-import { useLocale } from '@element-plus/hooks'
-import { PICKER_BASE_INJECTION_KEY } from '@element-plus/components/time-picker'
+import TyIcon from '@teamway-ui/components/icon'
+import { useLocale } from '@teamway-ui/hooks'
+import { PICKER_BASE_INJECTION_KEY } from '@teamway-ui/components/time-picker'
 import {
   panelYearRangeEmits,
   panelYearRangeProps,
@@ -118,7 +118,7 @@ import {
 } from '../utils'
 import { ROOT_PICKER_IS_DEFAULT_FORMAT_INJECTION_KEY } from '../constants'
 import YearTable from './basic-year-table.vue'
-import { useFormDisabled } from '@element-plus/components/form'
+import { useFormDisabled } from '@teamway-ui/components/form'
 
 import type { Dayjs } from 'dayjs'
 

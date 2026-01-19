@@ -4,8 +4,8 @@ import { afterEach, describe, expect, it } from 'vitest'
 import dayjs from 'dayjs'
 import { CircleClose } from '@element-plus/icons-vue'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
-import Select from '@element-plus/components/select'
-import { TyForm, TyFormItem } from '@element-plus/components/form'
+import Select from '@teamway-ui/components/select'
+import { TyForm, TyFormItem } from '@teamway-ui/components/form'
 import TimeSelect from '../src/time-select.vue'
 
 dayjs.extend(customParseFormat)

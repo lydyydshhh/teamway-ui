@@ -1,6 +1,6 @@
 import { ref, shallowRef } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { getStyle, isUndefined, setStyle } from '@element-plus/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { getStyle, isUndefined, setStyle } from '@teamway-ui/utils'
 
 import type { ShallowRef } from 'vue'
 

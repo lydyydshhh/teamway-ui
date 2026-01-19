@@ -1,4 +1,4 @@
-import { definePropType } from '@element-plus/utils'
+import { definePropType } from '@teamway-ui/utils'
 import { buttonProps } from './button'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'

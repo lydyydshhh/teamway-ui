@@ -27,7 +27,7 @@
 import { h } from 'vue'
 
 import type { VNode } from 'vue'
-import type { TableColumnCtx } from 'element-plus'
+import type { TableColumnCtx } from 'teamway-ui'
 
 interface Product {
   id: string

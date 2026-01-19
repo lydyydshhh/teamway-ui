@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/ty-image.css'
-import '@element-plus/components/image-viewer/style/css'
+import '@teamway-ui/components/base/style/css'
+import '@teamway-ui/theme-chalk/ty-image.css'
+import '@teamway-ui/components/image-viewer/style/css'

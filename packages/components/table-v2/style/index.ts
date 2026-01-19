@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style'
-import '@element-plus/components/empty/style'
-import '@element-plus/components/virtual-list/style'
-import '@element-plus/theme-chalk/src/table-v2.scss'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/components/empty/style'
+import '@teamway-ui/components/virtual-list/style'
+import '@teamway-ui/theme-chalk/src/table-v2.scss'

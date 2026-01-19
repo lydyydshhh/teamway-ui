@@ -1,5 +1,5 @@
-import { buildProps, definePropType, isObject } from '@element-plus/utils'
-import { rangeArr } from '@element-plus/components/time-picker'
+import { buildProps, definePropType, isObject } from '@teamway-ui/utils'
+import { rangeArr } from '@teamway-ui/components/time-picker'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { Dayjs } from 'dayjs'

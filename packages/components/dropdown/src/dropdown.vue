@@ -99,23 +99,23 @@ import {
   toRef,
   unref,
 } from 'vue'
-import TyButton from '@element-plus/components/button'
-import TyTooltip from '@element-plus/components/tooltip'
-import TyScrollbar from '@element-plus/components/scrollbar'
-import TyIcon from '@element-plus/components/icon'
-import TyRovingFocusGroup from '@element-plus/components/roving-focus-group'
-import { TyOnlyChild } from '@element-plus/components/slot'
-import { useFormSize } from '@element-plus/components/form'
-import { addUnit, ensureArray } from '@element-plus/utils'
+import TyButton from '@teamway-ui/components/button'
+import TyTooltip from '@teamway-ui/components/tooltip'
+import TyScrollbar from '@teamway-ui/components/scrollbar'
+import TyIcon from '@teamway-ui/components/icon'
+import TyRovingFocusGroup from '@teamway-ui/components/roving-focus-group'
+import { TyOnlyChild } from '@teamway-ui/components/slot'
+import { useFormSize } from '@teamway-ui/components/form'
+import { addUnit, ensureArray } from '@teamway-ui/utils'
 import { ArrowDown } from '@element-plus/icons-vue'
-import { useId, useLocale, useNamespace } from '@element-plus/hooks'
+import { useId, useLocale, useNamespace } from '@teamway-ui/hooks'
 import { dropdownProps } from './dropdown'
 import {
   DROPDOWN_INJECTION_KEY,
   DROPDOWN_INSTANCE_INJECTION_KEY,
 } from './tokens'
 
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
 import type { CSSProperties } from 'vue'
 
 const { ButtonGroup: TyButtonGroup } = TyButton

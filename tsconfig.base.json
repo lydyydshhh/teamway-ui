@@ -16,16 +16,16 @@
     "rootDir": ".",
     "types": [],
     "paths": {
-      "@element-plus/components": ["packages/components"],
-      "@element-plus/components/*": ["packages/components/*"],
-      "@element-plus/utils": ["packages/utils"],
-      "@element-plus/utils/*": ["packages/utils/*"],
-      "@element-plus/hooks": ["packages/hooks"],
-      "@element-plus/directives": ["packages/directives"],
-      "@element-plus/constants": ["packages/constants"],
-      "@element-plus/locale": ["packages/locale"],
-      "@element-plus/locale/*": ["packages/locale/*"],
-      "element-plus": ["packages/element-plus"]
+      "@teamway-ui/components": ["packages/components"],
+      "@teamway-ui/components/*": ["packages/components/*"],
+      "@teamway-ui/utils": ["packages/utils"],
+      "@teamway-ui/utils/*": ["packages/utils/*"],
+      "@teamway-ui/hooks": ["packages/hooks"],
+      "@teamway-ui/directives": ["packages/directives"],
+      "@teamway-ui/constants": ["packages/constants"],
+      "@teamway-ui/locale": ["packages/locale"],
+      "@teamway-ui/locale/*": ["packages/locale/*"],
+      "teamway-ui": ["packages/teamway-ui"]
     },
     "preserveSymlinks": true
   }

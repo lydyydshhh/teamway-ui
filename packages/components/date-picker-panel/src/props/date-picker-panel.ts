@@ -1,11 +1,11 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { disabledTimeListsProps } from '@element-plus/components/time-picker/src/props/shared'
+import { buildProps, definePropType } from '@teamway-ui/utils'
+import { disabledTimeListsProps } from '@teamway-ui/components/time-picker/src/props/shared'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type {
   ModelValueType,
   SingleOrRange,
-} from '@element-plus/components/time-picker'
+} from '@teamway-ui/components/time-picker'
 import type { DatePickerType } from '../types'
 
 export const datePickerPanelProps = buildProps({

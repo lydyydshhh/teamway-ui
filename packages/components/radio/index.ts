@@ -1,9 +1,9 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@teamway-ui/utils'
 import Radio from './src/radio.vue'
 import RadioButton from './src/radio-button.vue'
 import RadioGroup from './src/radio-group.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyRadio: SFCWithInstall<typeof Radio> & {
   RadioButton: typeof RadioButton

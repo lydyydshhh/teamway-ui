@@ -10,9 +10,9 @@ import {
   ref,
   watch,
 } from 'vue'
-import TyCheckbox from '@element-plus/components/checkbox'
-import { useNamespace } from '@element-plus/hooks'
-import { useLocale } from '@element-plus/hooks/use-locale'
+import TyCheckbox from '@teamway-ui/components/checkbox'
+import { useNamespace } from '@teamway-ui/hooks'
+import { useLocale } from '@teamway-ui/hooks/use-locale'
 import FilterPanel from '../filter-panel.vue'
 import useLayoutObserver from '../layout-observer'
 import { TABLE_INJECTION_KEY } from '../tokens'

@@ -7,7 +7,7 @@ import { globSync } from 'tinyglobby'
 import ElementPlus, {
   ID_INJECTION_KEY,
   ZINDEX_INJECTION_KEY,
-} from '../dist/element-plus'
+} from '../dist/teamway-ui'
 
 import type { Browser } from 'puppeteer'
 
@@ -37,13 +37,7 @@ describe('Cypress Button', () => {
       const page = await browser.newPage()
       await page.goto(`file://${projectRoot}/ssr-testing/index.html`)
       await page.addStyleTag({
-        path: path.join(
-          projectRoot,
-          'dist',
-          'element-plus',
-          'dist',
-          'index.css'
-        ),
+        path: path.join(projectRoot, 'dist', 'teamway-ui', 'dist', 'index.css'),
       })
 
       const { default: Demo } = await import(path.join(demoRoot, demoPath))

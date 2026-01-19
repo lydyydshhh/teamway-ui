@@ -1,8 +1,8 @@
-import { buildProps, definePropType } from '@element-plus/utils'
+import { buildProps, definePropType } from '@teamway-ui/utils'
 
 import type Skeleton from './skeleton.vue'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
-import type { ThrottleType } from '@element-plus/hooks'
+import type { ThrottleType } from '@teamway-ui/hooks'
 
 export const skeletonProps = buildProps({
   /**

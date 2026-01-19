@@ -1,6 +1,6 @@
-import { isArray } from '@element-plus/utils'
+import { isArray } from '@teamway-ui/utils'
 
-import type { TreeNodeData } from '@element-plus/components/tree/src/tree.type'
+import type { TreeNodeData } from '@teamway-ui/components/tree/src/tree.type'
 
 export function isValidValue(val: any) {
   return val || val === 0

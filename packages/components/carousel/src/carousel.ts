@@ -1,4 +1,4 @@
-import { buildProps, isNumber } from '@element-plus/utils'
+import { buildProps, isNumber } from '@teamway-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 

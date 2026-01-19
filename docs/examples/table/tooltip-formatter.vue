@@ -38,7 +38,7 @@
 
 <script lang="ts" setup>
 import { h } from 'vue'
-import { type TableTooltipData, TyLink } from 'element-plus'
+import { type TableTooltipData, TyLink } from 'teamway-ui'
 
 type TableData = {
   address: string

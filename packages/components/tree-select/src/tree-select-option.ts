@@ -1,5 +1,5 @@
 import { defineComponent, getCurrentInstance, nextTick, watch } from 'vue'
-import { TyOption } from '@element-plus/components/select'
+import { TyOption } from '@teamway-ui/components/select'
 
 const component = defineComponent({
   extends: TyOption,

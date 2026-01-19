@@ -1,11 +1,11 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@teamway-ui/utils'
 import Container from './src/container.vue'
 import Aside from './src/aside.vue'
 import Footer from './src/footer.vue'
 import Header from './src/header.vue'
 import Main from './src/main.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyContainer: SFCWithInstall<typeof Container> & {
   Aside: typeof Aside

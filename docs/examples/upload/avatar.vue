@@ -13,10 +13,10 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { TyMessage } from 'element-plus'
+import { TyMessage } from 'teamway-ui'
 import { Plus } from '@element-plus/icons-vue'
 
-import type { UploadProps } from 'element-plus'
+import type { UploadProps } from 'teamway-ui'
 
 const imageUrl = ref('')
 

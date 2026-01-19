@@ -6,15 +6,15 @@ import {
   isNumber,
   isString,
   isValidComponentSize,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useAriaProps } from '@element-plus/hooks'
+} from '@teamway-ui/constants'
+import { useAriaProps } from '@teamway-ui/hooks'
 
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@teamway-ui/constants'
 import type Switch from './switch.vue'
 import type { ExtractPropTypes, ExtractPublicPropTypes, PropType } from 'vue'
 

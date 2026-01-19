@@ -13,14 +13,9 @@
 
 <script lang="tsx" setup>
 import { ref } from 'vue'
-import {
-  TableV2FixedDir,
-  TableV2SortOrder,
-  TyButton,
-  TyTag,
-} from 'element-plus'
+import { TableV2FixedDir, TableV2SortOrder, TyButton, TyTag } from 'teamway-ui'
 
-import type { Column, SortBy } from 'element-plus'
+import type { Column, SortBy } from 'teamway-ui'
 
 const longText =
   'Quaerat ipsam necessitatibus eum quibusdam est id voluptatem cumque mollitia.'

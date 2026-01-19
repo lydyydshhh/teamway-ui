@@ -1,5 +1,5 @@
 import { computed, getCurrentInstance, ref, toRefs, unref, watch } from 'vue'
-import { ensureArray, hasOwn, isArray, isString } from '@element-plus/utils'
+import { ensureArray, hasOwn, isArray, isString } from '@teamway-ui/utils'
 import {
   getColumnById,
   getColumnByKey,

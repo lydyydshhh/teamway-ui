@@ -1,7 +1,7 @@
 import { defineComponent, h, inject, withDirectives } from 'vue'
 import { isNil } from 'lodash-unified'
-import { addUnit, getNormalizedProps } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { addUnit, getNormalizedProps } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import { descriptionsKey } from './token'
 
 import type { DirectiveArguments, PropType, VNode } from 'vue'

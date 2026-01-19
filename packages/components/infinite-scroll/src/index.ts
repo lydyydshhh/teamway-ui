@@ -6,8 +6,8 @@ import {
   getScrollContainer,
   isFunction,
   throwError,
-} from '@element-plus/utils'
-import { useDeprecated } from '@element-plus/hooks'
+} from '@teamway-ui/utils'
+import { useDeprecated } from '@teamway-ui/hooks'
 
 import type { ComponentPublicInstance, ObjectDirective } from 'vue'
 

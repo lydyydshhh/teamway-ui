@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/components/divider/style'
-import '@element-plus/theme-chalk/src/page-header.scss'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/components/divider/style'
+import '@teamway-ui/theme-chalk/src/page-header.scss'

@@ -43,9 +43,9 @@
 <script lang="ts" setup>
 import { computed, inject, nextTick, ref } from 'vue'
 import dayjs from 'dayjs'
-import { EVENT_CODE } from '@element-plus/constants'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { getEventCode, isUndefined } from '@element-plus/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import { getEventCode, isUndefined } from '@teamway-ui/utils'
 import { PICKER_BASE_INJECTION_KEY } from '../constants'
 import { panelTimePickerProps } from '../props/panel-time-picker'
 import { useTimePanel } from '../composables/use-time-panel'

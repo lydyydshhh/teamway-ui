@@ -23,14 +23,14 @@
 <script lang="ts" setup>
 import { computed, nextTick, provide, toRefs, watch } from 'vue'
 import { isEqual, omit, pick } from 'lodash-unified'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { debugWarn } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import { debugWarn } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
-} from '@element-plus/components/form'
+} from '@teamway-ui/components/form'
 import {
   checkboxDefaultProps,
   checkboxGroupEmits,

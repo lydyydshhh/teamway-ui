@@ -61,11 +61,11 @@
 
 <script lang="ts" setup>
 import { Comment, computed, h, reactive, ref, useSlots, watch } from 'vue'
-import { debugWarn, isEmpty, isUndefined } from '@element-plus/utils'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { TyButton } from '@element-plus/components/button'
-import { TyIcon } from '@element-plus/components/icon'
-import { useFormItem } from '@element-plus/components/form'
+import { debugWarn, isEmpty, isUndefined } from '@teamway-ui/utils'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import { TyButton } from '@teamway-ui/components/button'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { useFormItem } from '@teamway-ui/components/form'
 import { ArrowLeft, ArrowRight } from '@element-plus/icons-vue'
 import { transferEmits, transferProps } from './transfer'
 import {

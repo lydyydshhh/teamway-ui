@@ -1,9 +1,9 @@
 import installer from './defaults'
 
-export * from '@element-plus/components'
-export * from '@element-plus/constants'
-export * from '@element-plus/directives'
-export * from '@element-plus/hooks'
+export * from '@teamway-ui/components'
+export * from '@teamway-ui/constants'
+export * from '@teamway-ui/directives'
+export * from '@teamway-ui/hooks'
 export * from './make-installer'
 
 export const install = installer.install

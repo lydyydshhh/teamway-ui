@@ -196,21 +196,21 @@ import {
   useEmptyValues,
   useFocusController,
   useNamespace,
-} from '@element-plus/hooks'
+} from '@teamway-ui/hooks'
 import {
   useFormDisabled,
   useFormItem,
   useFormSize,
-} from '@element-plus/components/form'
-import TyInput from '@element-plus/components/input'
-import TyIcon from '@element-plus/components/icon'
-import TyTooltip from '@element-plus/components/tooltip'
-import { NOOP, debugWarn, getEventCode, isArray } from '@element-plus/utils'
+} from '@teamway-ui/components/form'
+import TyInput from '@teamway-ui/components/input'
+import TyIcon from '@teamway-ui/components/icon'
+import TyTooltip from '@teamway-ui/components/tooltip'
+import { NOOP, debugWarn, getEventCode, isArray } from '@teamway-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@teamway-ui/constants'
 import { Calendar, Clock } from '@element-plus/icons-vue'
 import { dayOrDaysToDate, valueEquals } from '../utils'
 import {
@@ -222,12 +222,12 @@ import { useCommonPicker } from '../composables/use-common-picker'
 import { timePickerDefaultProps } from './props'
 import PickerRangeTrigger from './picker-range-trigger.vue'
 
-import type { InputInstance } from '@element-plus/components/input'
+import type { InputInstance } from '@teamway-ui/components/input'
 import type { Dayjs } from 'dayjs'
 import type { ComponentPublicInstance, Ref } from 'vue'
 import type { Options } from '@popperjs/core'
 import type { DayOrDays, TimePickerDefaultProps, UserInput } from './props'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
 
 defineOptions({
   name: 'Picker',

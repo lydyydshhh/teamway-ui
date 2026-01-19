@@ -1,6 +1,6 @@
 import { nextTick } from 'vue'
 import { isNil } from 'lodash-unified'
-import { NOOP, hasOwn, isObject, isPropAbsent } from '@element-plus/utils'
+import { NOOP, hasOwn, isObject, isPropAbsent } from '@teamway-ui/utils'
 import Node from './node'
 import { getNodeKey } from './util'
 

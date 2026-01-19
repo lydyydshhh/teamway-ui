@@ -1,8 +1,8 @@
 import { createApp, nextTick } from 'vue'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { rAF } from '@element-plus/test-utils/tick'
+import { rAF } from '@teamway-ui/test-utils/tick'
 import Notification, { closeAll, updateOffsets } from '../src/notify'
-import defineGetter from '@element-plus/test-utils/define-getter'
+import defineGetter from '@teamway-ui/test-utils/define-getter'
 
 import type { NotificationHandle } from '../src/notification'
 import type { VNode } from 'vue'

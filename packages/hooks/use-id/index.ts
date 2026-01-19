@@ -1,6 +1,6 @@
 import { getCurrentInstance, inject, unref } from 'vue'
 import { computedEager } from '@vueuse/core'
-import { debugWarn, isClient } from '@element-plus/utils'
+import { debugWarn, isClient } from '@teamway-ui/utils'
 import { useGetDerivedNamespace } from '../use-namespace'
 
 import type { MaybeRef } from '@vueuse/core'

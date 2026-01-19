@@ -6,8 +6,8 @@ import {
   IMAGE_FAIL,
   IMAGE_SUCCESS,
   mockImageEvent,
-} from '@element-plus/test-utils/mock'
-import { stableLoad } from '@element-plus/test-utils/stable-load'
+} from '@teamway-ui/test-utils/mock'
+import { stableLoad } from '@teamway-ui/test-utils/stable-load'
 import Avatar from '../src/avatar.vue'
 import AvatarGroup from '../src/avatar-group'
 

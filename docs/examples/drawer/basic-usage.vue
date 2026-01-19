@@ -46,9 +46,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { TyMessageBox } from 'element-plus'
+import { TyMessageBox } from 'teamway-ui'
 
-import type { DrawerProps } from 'element-plus'
+import type { DrawerProps } from 'teamway-ui'
 
 const drawer = ref(false)
 const drawer2 = ref(false)

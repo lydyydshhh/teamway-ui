@@ -1,10 +1,10 @@
-import { buildProps, definePropType, isArray } from '@element-plus/utils'
-import { datePickTypes } from '@element-plus/constants'
+import { buildProps, definePropType, isArray } from '@teamway-ui/utils'
+import { datePickTypes } from '@teamway-ui/constants'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { Dayjs } from 'dayjs'
-import type { DatePickType } from '@element-plus/constants'
-import type { DayOrDays } from '@element-plus/components/time-picker'
+import type { DatePickType } from '@teamway-ui/constants'
+import type { DayOrDays } from '@teamway-ui/components/time-picker'
 
 const selectionModes = [
   'date',

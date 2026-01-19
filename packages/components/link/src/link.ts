@@ -1,4 +1,4 @@
-import { buildProps, iconPropType } from '@element-plus/utils'
+import { buildProps, iconPropType } from '@teamway-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes, PropType } from 'vue'
 import type Link from './link.vue'

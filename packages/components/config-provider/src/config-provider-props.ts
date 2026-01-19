@@ -1,13 +1,13 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { useEmptyValuesProps, useSizeProp } from '@element-plus/hooks'
+import { buildProps, definePropType } from '@teamway-ui/utils'
+import { useEmptyValuesProps, useSizeProp } from '@teamway-ui/hooks'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
-import type { Language } from '@element-plus/locale'
-import type { ButtonConfigContext } from '@element-plus/components/button'
-import type { CardConfigContext } from '@element-plus/components/card'
-import type { DialogConfigContext } from '@element-plus/components/dialog'
-import type { MessageConfigContext } from '@element-plus/components/message'
-import type { LinkConfigContext } from '@element-plus/components/link'
+import type { Language } from '@teamway-ui/locale'
+import type { ButtonConfigContext } from '@teamway-ui/components/button'
+import type { CardConfigContext } from '@teamway-ui/components/card'
+import type { DialogConfigContext } from '@teamway-ui/components/dialog'
+import type { MessageConfigContext } from '@teamway-ui/components/message'
+import type { LinkConfigContext } from '@teamway-ui/components/link'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export type ExperimentalFeatures = {

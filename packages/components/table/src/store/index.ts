@@ -1,6 +1,6 @@
 import { getCurrentInstance, nextTick, unref } from 'vue'
 import { isNull } from 'lodash-unified'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
 import useWatcher from './watcher'
 
 import type { Ref } from 'vue'

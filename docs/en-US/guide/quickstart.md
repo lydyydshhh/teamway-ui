@@ -15,7 +15,7 @@ If you don’t care about the bundle size so much, it’s more convenient to use
 
 ```ts [main.ts]
 import { createApp } from 'vue'
-import ElementPlus from 'element-plus'
+import ElementPlus from 'teamway-ui'
 import 'element-plus/dist/index.css'
 import App from './App.vue'
 
@@ -152,7 +152,7 @@ And refer to the [docs](https://github.com/element-plus/unplugin-element-plus#re
 </template>
 
 <script>
-import { ElButton } from 'element-plus'
+import { ElButton } from 'teamway-ui'
 
 export default {
   // components: { ElButton },
@@ -188,7 +188,7 @@ Full import:
 
 ```ts [main.ts]
 import { createApp } from 'vue'
-import ElementPlus from 'element-plus'
+import ElementPlus from 'teamway-ui'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -206,7 +206,7 @@ On-demand:
 
 <script>
 import { defineComponent } from 'vue'
-import { ElConfigProvider } from 'element-plus'
+import { ElConfigProvider } from 'teamway-ui'
 
 export default defineComponent({
   components: {

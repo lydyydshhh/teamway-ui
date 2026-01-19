@@ -5,9 +5,9 @@ import {
   isBoolean,
   isPromise,
   throwError,
-} from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 import { collapseContextKey } from './constants'
 
 import type { SetupContext } from 'vue'

@@ -21,9 +21,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { TyMessage, TyMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'teamway-ui'
 
-import type { UploadProps, UploadUserFile } from 'element-plus'
+import type { UploadProps, UploadUserFile } from 'teamway-ui'
 
 const fileList = ref<UploadUserFile[]>([
   {

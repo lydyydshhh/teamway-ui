@@ -26,9 +26,9 @@
 
 <script lang="ts" setup>
 import { computed, provide, useSlots } from 'vue'
-import { flattedChildren } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
-import { useFormSize } from '@element-plus/components/form'
+import { flattedChildren } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { useFormSize } from '@teamway-ui/components/form'
 import TyDescriptionsRow from './descriptions-row.vue'
 import { descriptionsKey } from './token'
 import { descriptionProps } from './description'

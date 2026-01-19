@@ -1,5 +1,5 @@
 import { getCurrentInstance, watch } from 'vue'
-import { hasOwn, isUndefined } from '@element-plus/utils'
+import { hasOwn, isUndefined } from '@teamway-ui/utils'
 import { parseMinWidth, parseWidth } from '../util'
 
 import type { ComputedRef } from 'vue'

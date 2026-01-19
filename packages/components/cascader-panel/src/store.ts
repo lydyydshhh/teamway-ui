@@ -1,8 +1,8 @@
 import { isEqual } from 'lodash-unified'
-import { isPropAbsent } from '@element-plus/utils'
+import { isPropAbsent } from '@teamway-ui/utils'
 import Node from './node'
 
-import type { Nullable } from '@element-plus/utils'
+import type { Nullable } from '@teamway-ui/utils'
 import type {
   CascaderConfig,
   CascaderNodePathValue,

@@ -20,9 +20,9 @@
 </template>
 
 <script lang="ts" setup>
-import { TyMessage } from 'element-plus'
+import { TyMessage } from 'teamway-ui'
 
-import type { MessagePlacement, MessageType } from 'element-plus'
+import type { MessagePlacement, MessageType } from 'teamway-ui'
 
 let topCount = 0
 let bottomCount = 0

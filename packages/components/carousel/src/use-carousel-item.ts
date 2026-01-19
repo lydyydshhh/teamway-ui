@@ -6,7 +6,7 @@ import {
   ref,
   unref,
 } from 'vue'
-import { debugWarn, isUndefined } from '@element-plus/utils'
+import { debugWarn, isUndefined } from '@teamway-ui/utils'
 import { CAROUSEL_ITEM_NAME, carouselContextKey } from './constants'
 
 import type { CarouselItemProps } from './carousel-item'

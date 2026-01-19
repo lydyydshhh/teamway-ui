@@ -109,7 +109,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { TyIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@teamway-ui/components/icon'
 import {
   Check,
   CircleCheck,
@@ -118,9 +118,9 @@ import {
   Document,
   ZoomIn,
 } from '@element-plus/icons-vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import TyProgress from '@element-plus/components/progress'
-import { useFormDisabled } from '@element-plus/components/form'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import TyProgress from '@teamway-ui/components/progress'
+import { useFormDisabled } from '@teamway-ui/components/form'
 import { uploadListEmits, uploadListProps } from './upload-list'
 
 import type { UploadFile } from './upload'

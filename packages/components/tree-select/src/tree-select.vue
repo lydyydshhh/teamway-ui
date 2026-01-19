@@ -1,14 +1,14 @@
 <script lang="ts">
 import { computed, defineComponent, h, onMounted, reactive, ref } from 'vue'
 import { pick } from 'lodash-unified'
-import { TySelect, selectProps } from '@element-plus/components/select'
-import { TyTree, treeProps } from '@element-plus/components/tree'
+import { TySelect, selectProps } from '@teamway-ui/components/select'
+import { TyTree, treeProps } from '@teamway-ui/components/tree'
 import { useSelect } from './select'
 import { useTree } from './tree'
 import CacheOptions from './cache-options'
 
-import type { TreeInstance } from '@element-plus/components/tree'
-import type { SelectInstance } from '@element-plus/components/select'
+import type { TreeInstance } from '@teamway-ui/components/tree'
+import type { SelectInstance } from '@teamway-ui/components/select'
 
 export default defineComponent({
   name: 'TyTreeSelect',

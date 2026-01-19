@@ -1,5 +1,5 @@
 import { renderSlot } from 'vue'
-import TyEmpty from '@element-plus/components/empty'
+import TyEmpty from '@teamway-ui/components/empty'
 
 import type { CSSProperties, FunctionalComponent } from 'vue'
 

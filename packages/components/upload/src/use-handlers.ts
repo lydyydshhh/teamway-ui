@@ -1,7 +1,7 @@
 import { nextTick, watch } from 'vue'
 import { isNil } from 'lodash-unified'
 import { useVModel } from '@vueuse/core'
-import { debugWarn, throwError } from '@element-plus/utils'
+import { debugWarn, throwError } from '@teamway-ui/utils'
 import { genFileId } from './upload'
 
 import type { ShallowRef } from 'vue'

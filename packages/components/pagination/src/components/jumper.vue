@@ -22,8 +22,8 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import TyInput from '@element-plus/components/input'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import TyInput from '@teamway-ui/components/input'
 import { usePagination } from '../usePagination'
 import { paginationJumperProps } from './jumper'
 

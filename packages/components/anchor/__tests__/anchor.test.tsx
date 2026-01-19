@@ -1,7 +1,7 @@
 import { defineComponent, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
 import Anchor from '../src/anchor.vue'
 import AnchorLink from '../src/anchor-link.vue'
 

@@ -4,20 +4,20 @@ import {
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@teamway-ui/constants'
 import {
   debugWarn,
   ensureArray,
   getEventCode,
   isAndroid,
   isUndefined,
-} from '@element-plus/utils'
-import { useComposition, useFocusController } from '@element-plus/hooks'
-import { useFormDisabled, useFormSize } from '@element-plus/components/form'
+} from '@teamway-ui/utils'
+import { useComposition, useFocusController } from '@teamway-ui/hooks'
+import { useFormDisabled, useFormSize } from '@teamway-ui/components/form'
 
-import type { TooltipInstance } from '@element-plus/components/tooltip'
-import type { EmitFn } from '@element-plus/utils'
-import type { FormItemContext } from '@element-plus/components/form'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
+import type { EmitFn } from '@teamway-ui/utils'
+import type { FormItemContext } from '@teamway-ui/components/form'
 import type { InputTagEmits, InputTagProps } from '../input-tag'
 
 interface UseInputTagOptions {

@@ -226,45 +226,45 @@ import {
   getSibling,
   isClient,
   isPromise,
-} from '@element-plus/utils'
-import TyCascaderPanel from '@element-plus/components/cascader-panel'
-import TyInput from '@element-plus/components/input'
-import TyTooltip from '@element-plus/components/tooltip'
-import TyScrollbar from '@element-plus/components/scrollbar'
-import TyTag from '@element-plus/components/tag'
-import TyIcon from '@element-plus/components/icon'
+} from '@teamway-ui/utils'
+import TyCascaderPanel from '@teamway-ui/components/cascader-panel'
+import TyInput from '@teamway-ui/components/input'
+import TyTooltip from '@teamway-ui/components/tooltip'
+import TyScrollbar from '@teamway-ui/components/scrollbar'
+import TyTag from '@teamway-ui/components/tag'
+import TyIcon from '@teamway-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormSize,
-} from '@element-plus/components/form'
-import { ClickOutside as vClickoutside } from '@element-plus/directives'
+} from '@teamway-ui/components/form'
+import { ClickOutside as vClickoutside } from '@teamway-ui/directives'
 import {
   useComposition,
   useEmptyValues,
   useFocusController,
   useLocale,
   useNamespace,
-} from '@element-plus/hooks'
+} from '@teamway-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@teamway-ui/constants'
 import { ArrowDown, Check } from '@element-plus/icons-vue'
 import { cascaderEmits, cascaderProps } from './cascader'
 
-import type { Options } from '@element-plus/components/popper'
+import type { Options } from '@teamway-ui/components/popper'
 import type { ComputedRef, StyleValue } from 'vue'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
-import type { InputInstance } from '@element-plus/components/input'
-import type { ScrollbarInstance } from '@element-plus/components/scrollbar'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
+import type { InputInstance } from '@teamway-ui/components/input'
+import type { ScrollbarInstance } from '@teamway-ui/components/scrollbar'
 import type {
   CascaderNode,
   CascaderPanelInstance,
   CascaderValue,
   Tag,
-} from '@element-plus/components/cascader-panel'
+} from '@teamway-ui/components/cascader-panel'
 
 const popperOptions: Partial<Options> = {
   modifiers: [

@@ -1,10 +1,10 @@
 import { computed, getCurrentInstance, inject, nextTick, watch } from 'vue'
-import { useFormItem } from '@element-plus/components/form'
-import { debugWarn } from '@element-plus/utils'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import { useFormItem } from '@teamway-ui/components/form'
+import { debugWarn } from '@teamway-ui/utils'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
 import { checkboxGroupContextKey } from '../constants'
 
-import type { useFormItemInputId } from '@element-plus/components/form'
+import type { useFormItemInputId } from '@teamway-ui/components/form'
 import type { CheckboxProps } from '../checkbox'
 import type {
   CheckboxDisabled,

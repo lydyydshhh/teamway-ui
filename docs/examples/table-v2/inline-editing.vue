@@ -16,10 +16,10 @@
 
 <script lang="tsx" setup>
 import { ref, withKeys } from 'vue'
-import { TyInput } from 'element-plus'
+import { TyInput } from 'teamway-ui'
 
 import type { FunctionalComponent } from 'vue'
-import type { Column, InputInstance } from 'element-plus'
+import type { Column, InputInstance } from 'teamway-ui'
 
 type SelectionCellProps = {
   value: string

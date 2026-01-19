@@ -303,17 +303,17 @@
 
 <script lang="ts">
 import { computed, defineComponent, provide, reactive, toRefs } from 'vue'
-import { isArray } from '@element-plus/utils'
-import { ClickOutside } from '@element-plus/directives'
-import TyTooltip from '@element-plus/components/tooltip'
-import TyTag from '@element-plus/components/tag'
-import TyIcon from '@element-plus/components/icon'
-import { useCalcInputWidth, useId } from '@element-plus/hooks'
+import { isArray } from '@teamway-ui/utils'
+import { ClickOutside } from '@teamway-ui/directives'
+import TyTooltip from '@teamway-ui/components/tooltip'
+import TyTag from '@teamway-ui/components/tag'
+import TyIcon from '@teamway-ui/components/icon'
+import { useCalcInputWidth, useId } from '@teamway-ui/hooks'
 import TySelectMenu from './select-dropdown'
 import useSelect from './useSelect'
 import { selectV2Emits, selectV2Props } from './defaults'
 import { selectV2InjectionKey } from './token'
-import { BORDER_HORIZONTAL_WIDTH } from '@element-plus/constants'
+import { BORDER_HORIZONTAL_WIDTH } from '@teamway-ui/constants'
 
 export default defineComponent({
   name: 'TySelectV2',

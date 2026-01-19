@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/ty-date-picker.css'
-import '@element-plus/components/date-picker-panel/style/css'
-import '@element-plus/components/popper/style/css'
+import '@teamway-ui/components/base/style/css'
+import '@teamway-ui/theme-chalk/ty-date-picker.css'
+import '@teamway-ui/components/date-picker-panel/style/css'
+import '@teamway-ui/components/popper/style/css'

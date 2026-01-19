@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/ty-skeleton.css'
-import '@element-plus/components/skeleton-item/style/css'
+import '@teamway-ui/components/base/style/css'
+import '@teamway-ui/theme-chalk/ty-skeleton.css'
+import '@teamway-ui/components/skeleton-item/style/css'

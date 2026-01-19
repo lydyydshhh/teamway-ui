@@ -1,5 +1,5 @@
 import type { CSSProperties, VNode } from 'vue'
-import type { ButtonProps } from '@element-plus/components/button'
+import type { ButtonProps } from '@teamway-ui/components/button'
 
 export type TourMask =
   | boolean

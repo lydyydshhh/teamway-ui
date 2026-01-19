@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus/docs",
+  "name": "@teamway-ui/docs",
   "private": true,
   "scripts": {
     "dev": "pnpm gen-locale && vitepress dev .",
@@ -12,19 +12,19 @@
   "dependencies": {
     "@docsearch/js": "^3.1.0",
     "@element-plus/icons-vue": "^2.3.2",
-    "@element-plus/metadata": "workspace:*",
+    "@teamway-ui/metadata": "workspace:*",
     "@vue/shared": "catalog:",
     "@vueuse/core": "catalog:",
     "clipboard-copy": "^4.0.1",
-    "element-plus": "npm:element-plus@latest",
+    "teamway-ui": "workspace:*",
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0"
   },
   "devDependencies": {
     "@crowdin/cli": "^4.5.0",
-    "@element-plus/build": "workspace:*",
-    "@element-plus/build-constants": "workspace:*",
-    "@element-plus/build-utils": "workspace:*",
+    "@teamway-ui/build": "workspace:*",
+    "@teamway-ui/build-constants": "workspace:*",
+    "@teamway-ui/build-utils": "workspace:*",
     "@iconify-json/ri": "^1.1.3",
     "@mdit-vue/shared": "^2.1.3",
     "@vitejs/plugin-vue-jsx": "catalog:",

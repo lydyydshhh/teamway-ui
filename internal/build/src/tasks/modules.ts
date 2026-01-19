@@ -7,16 +7,16 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import esbuild from 'rollup-plugin-esbuild'
 import { glob } from 'tinyglobby'
-import { epRoot, excludeFiles, pkgRoot } from '@element-plus/build-utils'
+import { epRoot, excludeFiles, pkgRoot } from '@teamway-ui/build-utils'
 import { generateExternal, withTaskName, writeBundles } from '../utils'
-import { ElementPlusAlias } from '../plugins/element-plus-alias'
+import { TeamWayUIAlias } from '../plugins/teamway-ui-alias'
 import { buildConfigEntries, target } from '../build-info'
 
 import type { TaskFunction } from 'gulp'
 import type { OutputOptions, Plugin } from 'rollup'
 
 const plugins: Plugin[] = [
-  ElementPlusAlias(),
+  TeamWayUIAlias(),
   vue() as Plugin,
   vueJsx() as Plugin,
   nodeResolve({

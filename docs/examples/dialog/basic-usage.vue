@@ -23,7 +23,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { TyMessageBox } from 'element-plus'
+import { TyMessageBox } from 'teamway-ui'
 
 const dialogVisible = ref(false)
 

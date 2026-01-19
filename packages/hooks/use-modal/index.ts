@@ -1,7 +1,7 @@
 import { watch } from 'vue'
 import { isClient, useEventListener } from '@vueuse/core'
-import { EVENT_CODE } from '@element-plus/constants'
-import { getEventCode } from '@element-plus/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import { getEventCode } from '@teamway-ui/utils'
 
 import type { Ref } from 'vue'
 

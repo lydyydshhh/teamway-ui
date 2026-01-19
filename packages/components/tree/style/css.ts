@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/ty-tree.css'
-import '@element-plus/components/checkbox/style/css'
-import '@element-plus/components/text/style/css'
+import '@teamway-ui/components/base/style/css'
+import '@teamway-ui/theme-chalk/ty-tree.css'
+import '@teamway-ui/components/checkbox/style/css'
+import '@teamway-ui/components/text/style/css'

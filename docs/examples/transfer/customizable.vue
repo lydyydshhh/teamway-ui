@@ -62,11 +62,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-import type {
-  TransferDirection,
-  TransferKey,
-  renderContent,
-} from 'element-plus'
+import type { TransferDirection, TransferKey, renderContent } from 'teamway-ui'
 
 interface Option {
   key: number

@@ -15,13 +15,13 @@
 </template>
 
 <script lang="tsx" setup>
-import { TableV2FixedDir, TableV2Placeholder } from 'element-plus'
+import { TableV2FixedDir, TableV2Placeholder } from 'teamway-ui'
 
 import type { FunctionalComponent } from 'vue'
 import type {
   HeaderClassNameGetter,
   TableV2CustomizedHeaderSlotParam,
-} from 'element-plus'
+} from 'teamway-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({

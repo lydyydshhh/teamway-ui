@@ -23,10 +23,10 @@ import {
   useEventListener,
   useWindowSize,
 } from '@vueuse/core'
-import TyTeleport from '@element-plus/components/teleport'
-import { addUnit, getScrollContainer, throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import TyTeleport from '@teamway-ui/components/teleport'
+import { addUnit, getScrollContainer, throwError } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
 import { affixEmits, affixProps } from './affix'
 
 import type { CSSProperties } from 'vue'

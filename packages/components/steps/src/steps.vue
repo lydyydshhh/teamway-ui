@@ -7,8 +7,8 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, provide, watch } from 'vue'
-import { CHANGE_EVENT } from '@element-plus/constants'
-import { useNamespace, useOrderedChildren } from '@element-plus/hooks'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
+import { useNamespace, useOrderedChildren } from '@teamway-ui/hooks'
 import { stepsEmits, stepsProps } from './steps'
 import { STEPS_INJECTION_KEY } from './tokens'
 

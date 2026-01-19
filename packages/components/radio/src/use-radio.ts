@@ -1,8 +1,8 @@
 import { computed, inject, ref } from 'vue'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { useFormDisabled, useFormSize } from '@element-plus/components/form'
-import { useDeprecated } from '@element-plus/hooks'
-import { isPropAbsent } from '@element-plus/utils'
+import { UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import { useFormDisabled, useFormSize } from '@teamway-ui/components/form'
+import { useDeprecated } from '@teamway-ui/hooks'
+import { isPropAbsent } from '@teamway-ui/utils'
 import { radioGroupKey } from './constants'
 
 import type { RadioButtonProps } from './radio-button'

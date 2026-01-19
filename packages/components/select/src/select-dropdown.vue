@@ -16,9 +16,9 @@
 <script lang="ts">
 import { computed, defineComponent, inject, onMounted, ref } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 import { selectKey } from './token'
-import { BORDER_HORIZONTAL_WIDTH } from '@element-plus/constants'
+import { BORDER_HORIZONTAL_WIDTH } from '@teamway-ui/constants'
 
 export default defineComponent({
   name: 'TySelectDropdown',

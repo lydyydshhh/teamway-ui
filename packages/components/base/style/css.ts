@@ -1,1 +1,1 @@
-import '@element-plus/theme-chalk/base.css'
+import '@teamway-ui/theme-chalk/base.css'

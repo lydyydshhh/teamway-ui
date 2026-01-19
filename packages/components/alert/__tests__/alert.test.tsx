@@ -1,7 +1,7 @@
 import { Comment, h } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { TypeComponentsMap } from '@element-plus/utils'
+import { TypeComponentsMap } from '@teamway-ui/utils'
 import Alert from '../src/alert.vue'
 
 const AXIOM = 'Rem is the best girl'

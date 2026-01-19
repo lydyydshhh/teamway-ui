@@ -1,18 +1,18 @@
 import { placements } from '@popperjs/core'
-import { scrollbarEmits } from '@element-plus/components/scrollbar'
+import { scrollbarEmits } from '@teamway-ui/components/scrollbar'
 import {
   useAriaProps,
   useEmptyValuesProps,
   useSizeProp,
-} from '@element-plus/hooks'
-import { buildProps, definePropType, iconPropType } from '@element-plus/utils'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
+} from '@teamway-ui/hooks'
+import { buildProps, definePropType, iconPropType } from '@teamway-ui/utils'
+import { useTooltipContentProps } from '@teamway-ui/components/tooltip'
 import { ArrowDown, CircleClose } from '@element-plus/icons-vue'
-import { tagProps } from '@element-plus/components/tag'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { defaultProps } from '@element-plus/components/select-v2/src/useProps'
+import { tagProps } from '@teamway-ui/components/tag'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import { defaultProps } from '@teamway-ui/components/select-v2/src/useProps'
 
-import type { EmitFn } from '@element-plus/utils'
+import type { EmitFn } from '@teamway-ui/utils'
 import type {
   CSSProperties,
   ExtractPropTypes,
@@ -23,9 +23,9 @@ import type {
   Options,
   Placement,
   PopperEffect,
-} from '@element-plus/components/popper'
+} from '@teamway-ui/components/popper'
 import type { OptionValue } from './type'
-import type { Props } from '@element-plus/components/select-v2/src/useProps'
+import type { Props } from '@teamway-ui/components/select-v2/src/useProps'
 
 export const selectProps = buildProps({
   /**

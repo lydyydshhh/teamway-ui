@@ -7,11 +7,11 @@ import {
   isFunction,
   isString,
   isUndefined,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import { NODE_KEY, markNodeData } from './util'
 
 import type TreeStore from './tree-store'
-import type { Nullable } from '@element-plus/utils'
+import type { Nullable } from '@teamway-ui/utils'
 import type {
   FakeNode,
   TreeKey,

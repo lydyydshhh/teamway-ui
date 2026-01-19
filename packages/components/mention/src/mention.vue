@@ -59,24 +59,24 @@
 <script lang="ts" setup>
 import { computed, mergeProps, nextTick, ref } from 'vue'
 import { pick } from 'lodash-unified'
-import { useFocusController, useId, useNamespace } from '@element-plus/hooks'
-import TyInput, { inputProps } from '@element-plus/components/input'
-import TyTooltip from '@element-plus/components/tooltip'
+import { useFocusController, useId, useNamespace } from '@teamway-ui/hooks'
+import TyInput, { inputProps } from '@teamway-ui/components/input'
+import TyTooltip from '@teamway-ui/components/tooltip'
 import {
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useFormDisabled } from '@element-plus/components/form'
-import { getEventCode, isFunction } from '@element-plus/utils'
+} from '@teamway-ui/constants'
+import { useFormDisabled } from '@teamway-ui/components/form'
+import { getEventCode, isFunction } from '@teamway-ui/utils'
 import { mentionDefaultProps, mentionEmits, mentionProps } from './mention'
 import { getCursorPosition, getMentionCtx } from './helper'
 import TyMentionDropdown from './mention-dropdown.vue'
 
 import type { Placement } from '@popperjs/core'
 import type { CSSProperties } from 'vue'
-import type { InputInstance } from '@element-plus/components/input'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { InputInstance } from '@teamway-ui/components/input'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
 import type { MentionCtx, MentionOption } from './types'
 
 defineOptions({

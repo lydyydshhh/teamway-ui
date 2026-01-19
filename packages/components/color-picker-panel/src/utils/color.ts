@@ -1,5 +1,5 @@
 import { TinyColor } from '@ctrl/tinycolor'
-import { hasOwn } from '@element-plus/utils'
+import { hasOwn } from '@teamway-ui/utils'
 
 import type { ColorFormats } from '@ctrl/tinycolor'
 

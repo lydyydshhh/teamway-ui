@@ -415,15 +415,15 @@ export default defineConfig([
             },
             {
               group: [
-                '@element-plus/components',
-                '@element-plus/constants',
-                '@element-plus/directives',
-                '@element-plus/element-plus',
-                '@element-plus/hooks',
-                '@element-plus/locale',
-                '@element-plus/test-utils',
-                '@element-plus/theme-chalk',
-                '@element-plus/utils',
+                '@teamway-ui/components',
+                '@teamway-ui/constants',
+                '@teamway-ui/directives',
+                '@teamway-ui/teamway-ui',
+                '@teamway-ui/hooks',
+                '@teamway-ui/locale',
+                '@teamway-ui/test-utils',
+                '@teamway-ui/theme-chalk',
+                '@teamway-ui/utils',
               ],
               message: 'Please do not use this dependency in the current file.',
             },
@@ -446,8 +446,8 @@ export default defineConfig([
             { name: 'lodash', message: 'Use lodash-unified instead.' },
             { name: 'lodash-es', message: 'Use lodash-unified instead.' },
             {
-              name: 'element-plus',
-              message: 'Use @element-plus/* instead.',
+              name: 'teamway-ui',
+              message: 'Use @teamway-ui/* instead.',
             },
           ],
           patterns: [
@@ -456,19 +456,19 @@ export default defineConfig([
               message: 'Use lodash-unified instead.',
             },
             {
-              group: ['element-plus/*'],
-              message: 'Use @element-plus/* instead.',
+              group: ['teamway-ui/*'],
+              message: 'Use @teamway-ui/* instead.',
             },
             {
               group: [
-                '@element-plus/components',
-                '@element-plus/element-plus',
-                '@element-plus/theme-chalk',
-                '@element-plus/build',
-                '@element-plus/build-constants',
-                '@element-plus/build-utils',
-                '@element-plus/eslint-config',
-                '@element-plus/metadata',
+                '@teamway-ui/components',
+                '@teamway-ui/teamway-ui',
+                '@teamway-ui/theme-chalk',
+                '@teamway-ui/build',
+                '@teamway-ui/build-constants',
+                '@teamway-ui/build-utils',
+                '@teamway-ui/eslint-config',
+                '@teamway-ui/metadata',
               ],
               message: 'Please do not use this dependency in the current file.',
             },
@@ -480,7 +480,7 @@ export default defineConfig([
   {
     files: [
       'packages/components/**/*.{js,jsx,ts,tsx,vue}',
-      'packages/element-plus/**/*.{js,jsx,ts,tsx,vue}',
+      'packages/teamway-ui/**/*.{js,jsx,ts,tsx,vue}',
     ],
     rules: {
       'no-restricted-imports': [
@@ -490,8 +490,8 @@ export default defineConfig([
             { name: 'lodash', message: 'Use lodash-unified instead.' },
             { name: 'lodash-es', message: 'Use lodash-unified instead.' },
             {
-              name: 'element-plus',
-              message: 'Use @element-plus/* instead.',
+              name: 'teamway-ui',
+              message: 'Use @teamway-ui/* instead.',
             },
           ],
           patterns: [
@@ -500,32 +500,32 @@ export default defineConfig([
               message: 'Use lodash-unified instead.',
             },
             {
-              group: ['element-plus/*'],
-              message: 'Use @element-plus/* instead.',
+              group: ['teamway-ui/*'],
+              message: 'Use @teamway-ui/* instead.',
             },
             {
               group: [
-                '@element-plus/theme-chalk/**/*.scss',
-                '!@element-plus/theme-chalk/src/*.scss',
-                '@element-plus/theme-chalk/src/ty-*.scss',
+                '@teamway-ui/theme-chalk/**/*.scss',
+                '!@teamway-ui/theme-chalk/src/*.scss',
+                '@teamway-ui/theme-chalk/src/ty-*.scss',
               ],
-              message: 'Use @element-plus/theme-chalk/src/*.scss instead.',
+              message: 'Use @teamway-ui/theme-chalk/src/*.scss instead.',
             },
             {
               group: [
-                '@element-plus/theme-chalk/**/*.css',
-                '!@element-plus/theme-chalk/ty-*.css',
-                '!@element-plus/theme-chalk/base.css',
+                '@teamway-ui/theme-chalk/**/*.css',
+                '!@teamway-ui/theme-chalk/ty-*.css',
+                '!@teamway-ui/theme-chalk/base.css',
               ],
-              message: 'Use @element-plus/theme-chalk/ty-*.css instead.',
+              message: 'Use @teamway-ui/theme-chalk/ty-*.css instead.',
             },
             {
               group: [
-                '@element-plus/build',
-                '@element-plus/build-constants',
-                '@element-plus/build-utils',
-                '@element-plus/eslint-config',
-                '@element-plus/metadata',
+                '@teamway-ui/build',
+                '@teamway-ui/build-constants',
+                '@teamway-ui/build-utils',
+                '@teamway-ui/eslint-config',
+                '@teamway-ui/metadata',
               ],
               message: 'Please do not use this dependency in the current file.',
             },

@@ -1,8 +1,8 @@
-import { withInstall, withInstallDirective } from '@element-plus/utils'
+import { withInstall, withInstallDirective } from '@teamway-ui/utils'
 import Popover from './src/popover.vue'
 import PopoverDirective, { VPopover } from './src/directive'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyPopoverDirective: SFCWithInstall<typeof PopoverDirective> =
   withInstallDirective(PopoverDirective, VPopover)

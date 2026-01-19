@@ -12,10 +12,8 @@ import {
   isString,
   isUndefined,
   throwError,
-} from '@element-plus/utils'
-import TyTooltip, {
-  type TyTooltipProps,
-} from '@element-plus/components/tooltip'
+} from '@teamway-ui/utils'
+import TyTooltip, { type TyTooltipProps } from '@teamway-ui/components/tooltip'
 
 import type { DefaultRow, Table, TreeProps } from './table/defaults'
 import type { TableColumnCtx } from './table-column/defaults'

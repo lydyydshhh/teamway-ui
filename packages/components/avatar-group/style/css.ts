@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/ty-avatar-group.css'
-import '@element-plus/components/tooltip/style/css'
+import '@teamway-ui/components/base/style/css'
+import '@teamway-ui/theme-chalk/ty-avatar-group.css'
+import '@teamway-ui/components/tooltip/style/css'

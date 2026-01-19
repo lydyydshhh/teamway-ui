@@ -4,7 +4,7 @@
 
 <script lang="ts" setup>
 import { markRaw } from 'vue'
-import { TyMessage, TyMessageBox } from 'element-plus'
+import { TyMessage, TyMessageBox } from 'teamway-ui'
 import { Delete } from '@element-plus/icons-vue'
 
 const open = () => {

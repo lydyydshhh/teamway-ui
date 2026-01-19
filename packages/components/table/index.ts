@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@teamway-ui/utils'
 import Table from './src/table.vue'
 import TableColumn from './src/tableColumn'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyTable: SFCWithInstall<typeof Table> & {
   TableColumn: typeof TableColumn

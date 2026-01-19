@@ -6,7 +6,7 @@ import {
   hasClass,
   removeClass,
   throwError,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import { useNamespace } from '../use-namespace'
 
 import type { Ref } from 'vue'

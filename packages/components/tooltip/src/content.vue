@@ -48,19 +48,19 @@
 <script lang="ts" setup>
 import { computed, inject, onBeforeUnmount, ref, unref, watch } from 'vue'
 import { computedEager, onClickOutside } from '@vueuse/core'
-import { useNamespace, usePopperContainerId } from '@element-plus/hooks'
+import { useNamespace, usePopperContainerId } from '@teamway-ui/hooks'
 import {
   castArray,
   composeEventHandlers,
   focusElement,
-} from '@element-plus/utils'
-import { TyPopperContent } from '@element-plus/components/popper'
-import TyTeleport from '@element-plus/components/teleport'
+} from '@teamway-ui/utils'
+import { TyPopperContent } from '@teamway-ui/components/popper'
+import TyTeleport from '@teamway-ui/components/teleport'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { useTooltipContentProps } from './content'
 import { isTriggerType } from './utils'
 
-import type { PopperContentInstance } from '@element-plus/components/popper'
+import type { PopperContentInstance } from '@teamway-ui/components/popper'
 
 defineOptions({
   name: 'TyTooltipContent',

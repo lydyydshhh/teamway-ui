@@ -34,7 +34,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 import { useRadio } from './use-radio'
 import { radioButtonProps } from './radio-button'
 

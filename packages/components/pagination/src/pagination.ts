@@ -15,15 +15,15 @@ import {
   iconPropType,
   isNumber,
   mutable,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import {
   useDeprecated,
   useGlobalSize,
   useLocale,
   useNamespace,
   useSizeProp,
-} from '@element-plus/hooks'
-import { CHANGE_EVENT } from '@element-plus/constants'
+} from '@teamway-ui/hooks'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
 import { tyPaginationKey } from './constants'
 import Prev from './components/prev.vue'
 import Next from './components/next.vue'

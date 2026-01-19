@@ -1,6 +1,6 @@
 import consola from 'consola'
-import { REPO_BRANCH, REPO_PATH } from '@element-plus/build-constants'
-import { docsDirName } from '@element-plus/build-utils'
+import { REPO_BRANCH, REPO_PATH } from '@teamway-ui/build-constants'
+import { docsDirName } from '@teamway-ui/build-utils'
 import { languages } from '../utils/lang'
 import { features } from './features'
 import { head } from './head'
@@ -49,7 +49,7 @@ languages.forEach((lang) => {
 
 const setupConfig = (configEnv) => {
   const config: UserConfig<any> = {
-    title: 'Element Plus',
+    title: 'Teamway UI',
     description: 'A Vue 3 based component library for designers and developers',
     lastUpdated: true,
     head,

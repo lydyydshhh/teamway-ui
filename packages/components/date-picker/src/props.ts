@@ -1,8 +1,8 @@
-import { timePickerDefaultProps } from '@element-plus/components/time-picker'
-import { buildProps, definePropType } from '@element-plus/utils'
+import { timePickerDefaultProps } from '@teamway-ui/components/time-picker'
+import { buildProps, definePropType } from '@teamway-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
-import type { DatePickerType } from '@element-plus/components/date-picker-panel/src/types'
+import type { DatePickerType } from '@teamway-ui/components/date-picker-panel/src/types'
 
 export const datePickerProps = buildProps({
   ...timePickerDefaultProps,

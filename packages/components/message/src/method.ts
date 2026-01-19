@@ -8,8 +8,8 @@ import {
   isFunction,
   isNumber,
   isString,
-} from '@element-plus/utils'
-import { messageConfig } from '@element-plus/components/config-provider'
+} from '@teamway-ui/utils'
+import { messageConfig } from '@teamway-ui/components/config-provider'
 import MessageConstructor from './message.vue'
 import {
   MESSAGE_DEFAULT_PLACEMENT,

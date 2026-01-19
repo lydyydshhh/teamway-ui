@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import { predefineProps } from '../props/predefine'
 import { usePredefine, usePredefineDOM } from '../composables/use-predefine'
-import { useLocale } from '@element-plus/hooks/use-locale'
+import { useLocale } from '@teamway-ui/hooks/use-locale'
 
 defineOptions({
   name: 'TyColorPredefine',

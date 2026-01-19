@@ -45,14 +45,14 @@
 
 <script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
-import { TyIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@teamway-ui/components/icon'
 import {
   TypeComponents,
   TypeComponentsMap,
   flattedChildren,
   isComment,
-} from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+} from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import { alertEmits, alertProps } from './alert'
 
 const { Close } = TypeComponents

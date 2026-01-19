@@ -30,7 +30,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { TyMessage } from 'element-plus'
+import { TyMessage } from 'teamway-ui'
 
 const value1 = ref('')
 const value2 = ref('')

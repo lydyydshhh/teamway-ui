@@ -46,8 +46,8 @@ import {
   watch,
 } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { formItemContextKey } from '@element-plus/components/form'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import { formItemContextKey } from '@teamway-ui/components/form'
 import TreeStore from './model/tree-store'
 import { getNodeKey as getNodeKeyUtil, handleCurrentChange } from './model/util'
 import TyTreeNode from './tree-node.vue'
@@ -59,7 +59,7 @@ import { treeEmits, treeProps } from './tree'
 
 import type Node from './model/node'
 import type { ComponentInternalInstance } from 'vue'
-import type { Nullable } from '@element-plus/utils'
+import type { Nullable } from '@teamway-ui/utils'
 import type { FilterValue, TreeData, TreeKey, TreeNodeData } from './tree.type'
 
 export default defineComponent({

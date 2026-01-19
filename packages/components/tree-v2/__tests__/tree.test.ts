@@ -1,8 +1,8 @@
 // @ts-nocheck
 import { nextTick, ref } from 'vue'
 import { describe, expect, test, vi } from 'vitest'
-import { NOOP } from '@element-plus/utils'
-import { makeMountFunc } from '@element-plus/test-utils/make-mount'
+import { NOOP } from '@teamway-ui/utils'
+import { makeMountFunc } from '@teamway-ui/test-utils/make-mount'
 import Tree from '../src/tree.vue'
 
 import type {

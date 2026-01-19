@@ -5,9 +5,9 @@ import {
   isBoolean,
   isClient,
   isFunction,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 
-import type { ExtractPropType } from '@element-plus/utils'
+import type { ExtractPropType } from '@teamway-ui/utils'
 import type { RouteLocationNormalizedLoaded } from 'vue-router'
 import type {
   ComponentPublicInstance,

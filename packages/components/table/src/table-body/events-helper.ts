@@ -1,6 +1,6 @@
 import { h, inject, ref } from 'vue'
 import { debounce } from 'lodash-unified'
-import { addClass, hasClass, removeClass } from '@element-plus/utils'
+import { addClass, hasClass, removeClass } from '@teamway-ui/utils'
 import {
   createTablePopper,
   getCell,

@@ -105,21 +105,21 @@
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, ref } from 'vue'
-import { TyCheckbox, TyCheckboxGroup } from '@element-plus/components/checkbox'
-import { TyIcon } from '@element-plus/components/icon'
+import { TyCheckbox, TyCheckboxGroup } from '@teamway-ui/components/checkbox'
+import { TyIcon } from '@teamway-ui/components/icon'
 import { ArrowDown, ArrowUp } from '@element-plus/icons-vue'
-import { EVENT_CODE } from '@element-plus/constants'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
 import {
   TyTooltip,
   useTooltipContentProps,
-} from '@element-plus/components/tooltip'
-import TyScrollbar from '@element-plus/components/scrollbar'
-import { getEventCode, isPropAbsent } from '@element-plus/utils'
+} from '@teamway-ui/components/tooltip'
+import TyScrollbar from '@teamway-ui/components/scrollbar'
+import { getEventCode, isPropAbsent } from '@teamway-ui/utils'
 
 import type { DefaultRow } from './table/defaults'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
-import type { Placement } from '@element-plus/components/popper'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
+import type { Placement } from '@teamway-ui/components/popper'
 import type { PropType, WritableComputedRef } from 'vue'
 import type { TableColumnCtx } from './table-column/defaults'
 import type { TableHeader } from './table-header'

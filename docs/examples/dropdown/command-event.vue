@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TyMessage } from 'element-plus'
+import { TyMessage } from 'teamway-ui'
 import { ArrowDown } from '@element-plus/icons-vue'
 
 const handleCommand = (command: string | number | object) => {

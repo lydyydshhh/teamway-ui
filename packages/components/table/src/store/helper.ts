@@ -1,6 +1,6 @@
 import { watch } from 'vue'
 import { debounce } from 'lodash-unified'
-import { isObject } from '@element-plus/utils'
+import { isObject } from '@teamway-ui/utils'
 import useStore from '.'
 
 import type { Store } from '.'

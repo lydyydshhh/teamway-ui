@@ -1,7 +1,7 @@
 import { defineComponent, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, test, vi } from 'vitest'
-import { debugWarn } from '@element-plus/utils'
+import { debugWarn } from '@teamway-ui/utils'
 import Input from '../../input/src/input.vue'
 import Collapse from '../src/collapse.vue'
 import CollapseItem from '../src/collapse-item.vue'
@@ -11,7 +11,7 @@ import type { CollapseItemInstance } from '../src/instance'
 
 const AXIOM = 'Rem is the best girl'
 
-vi.mock('@element-plus/utils/error', () => ({
+vi.mock('@teamway-ui/utils/error', () => ({
   debugWarn: vi.fn(),
 }))
 

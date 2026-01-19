@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TyMessage } from 'element-plus'
+import { TyMessage } from 'teamway-ui'
 
 const open = () => {
   TyMessage({

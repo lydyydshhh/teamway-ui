@@ -1,5 +1,5 @@
-import { buildProps } from '@element-plus/utils'
-import { useSizeProp } from '@element-plus/hooks'
+import { buildProps } from '@teamway-ui/utils'
+import { useSizeProp } from '@teamway-ui/hooks'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type Description from './description.vue'

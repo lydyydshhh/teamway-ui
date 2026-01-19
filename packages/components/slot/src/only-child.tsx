@@ -7,12 +7,12 @@ import {
   inject,
   withDirectives,
 } from 'vue'
-import { NOOP, debugWarn, isObject } from '@element-plus/utils'
+import { NOOP, debugWarn, isObject } from '@teamway-ui/utils'
 import {
   FORWARD_REF_INJECTION_KEY,
   useForwardRefDirective,
   useNamespace,
-} from '@element-plus/hooks'
+} from '@teamway-ui/hooks'
 
 import type { Ref, VNode } from 'vue'
 

@@ -71,20 +71,20 @@ import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { getEventCode, isArray, isObject, isString } from '@element-plus/utils'
+} from '@teamway-ui/constants'
+import { getEventCode, isArray, isObject, isString } from '@teamway-ui/utils'
 import {
   formItemContextKey,
   useFormDisabled,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
-import { TyIcon } from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
+} from '@teamway-ui/components/form'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { useNamespace } from '@teamway-ui/hooks'
 import { rateEmits, rateProps } from './rate'
 
 import type { CSSProperties, Component } from 'vue'
-import type { IconInstance } from '@element-plus/components/icon'
+import type { IconInstance } from '@teamway-ui/components/icon'
 
 function getValueFromMap<T>(
   value: number,

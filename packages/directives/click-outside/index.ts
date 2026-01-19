@@ -1,4 +1,4 @@
-import { isArray, isClient, isElement } from '@element-plus/utils'
+import { isArray, isClient, isElement } from '@teamway-ui/utils'
 
 import type {
   ComponentPublicInstance,

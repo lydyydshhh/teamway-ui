@@ -1,7 +1,7 @@
 import { computed, provide } from 'vue'
 import { flushPromises, mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import { uploadContextKey } from '@element-plus/components/upload'
+import { uploadContextKey } from '@teamway-ui/components/upload'
 import UploadDragger from '../src/upload-dragger.vue'
 
 const AXIOM = 'Rem is the best girl'

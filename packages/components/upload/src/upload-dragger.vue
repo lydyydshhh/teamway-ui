@@ -11,9 +11,9 @@
 
 <script lang="ts" setup>
 import { inject, ref } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { useFormDisabled } from '@element-plus/components/form'
-import { throwError } from '@element-plus/utils/error'
+import { useNamespace } from '@teamway-ui/hooks'
+import { useFormDisabled } from '@teamway-ui/components/form'
+import { throwError } from '@teamway-ui/utils/error'
 import { flatten } from 'lodash-unified'
 import { uploadContextKey } from './constants'
 import { uploadDraggerEmits, uploadDraggerProps } from './upload-dragger'

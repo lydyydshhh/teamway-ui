@@ -1,5 +1,5 @@
 import { computed, getCurrentInstance, inject, ref, unref } from 'vue'
-import { debugWarn, isClient, isNumber } from '@element-plus/utils'
+import { debugWarn, isClient, isNumber } from '@teamway-ui/utils'
 
 import type { InjectionKey, Ref } from 'vue'
 

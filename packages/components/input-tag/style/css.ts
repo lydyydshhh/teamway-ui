@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/components/tag/style/css'
-import '@element-plus/components/tooltip/style/css'
-import '@element-plus/theme-chalk/ty-input-tag.css'
+import '@teamway-ui/components/base/style/css'
+import '@teamway-ui/components/tag/style/css'
+import '@teamway-ui/components/tooltip/style/css'
+import '@teamway-ui/theme-chalk/ty-input-tag.css'

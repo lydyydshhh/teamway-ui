@@ -1,6 +1,6 @@
 import { computed, defineComponent, h, renderSlot } from 'vue'
-import { buildProps } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { buildProps } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 

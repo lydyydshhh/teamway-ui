@@ -3,7 +3,7 @@ import {
   definePropType,
   isObject,
   isString,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { Dayjs } from 'dayjs'

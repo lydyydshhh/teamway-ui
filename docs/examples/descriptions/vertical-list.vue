@@ -45,7 +45,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 
-import type { ComponentSize } from 'element-plus'
+import type { ComponentSize } from 'teamway-ui'
 
 const size = ref<ComponentSize>('default')
 

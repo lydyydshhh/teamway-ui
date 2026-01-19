@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus/play",
+  "name": "@teamway-ui/play",
   "private": true,
   "scripts": {
     "dev": "vite",

@@ -6,10 +6,10 @@ import {
   isClient,
   isElement,
   removeClass,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import { TABLE_INJECTION_KEY } from '../tokens'
 
-import type { EmitFn } from '@element-plus/utils'
+import type { EmitFn } from '@teamway-ui/utils'
 import type { TableHeaderProps } from '.'
 import type { TableColumnCtx } from '../table-column/defaults'
 import type { DefaultRow, TableSortOrder } from '../table/defaults'

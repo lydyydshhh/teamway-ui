@@ -48,9 +48,9 @@ import {
   reactive,
   toRef,
 } from 'vue'
-import TyTooltip from '@element-plus/components/tooltip'
-import { debugWarn, isPropAbsent, throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import TyTooltip from '@teamway-ui/components/tooltip'
+import { debugWarn, isPropAbsent, throwError } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import useMenu from './use-menu'
 import { menuItemEmits, menuItemProps } from './menu-item'
 import { MENU_INJECTION_KEY, SUB_MENU_INJECTION_KEY } from './tokens'

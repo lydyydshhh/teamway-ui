@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@teamway-ui/utils'
 import DatePickerPanel from './src/date-picker-panel'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyDatePickerPanel: SFCWithInstall<typeof DatePickerPanel> =
   withInstall(DatePickerPanel)
