@@ -16,10 +16,10 @@
 
 <script lang="tsx" setup>
 import { ref, unref } from 'vue'
-import { TyCheckbox, useLocale } from 'element-plus'
+import { TyCheckbox, useLocale } from 'teamway-ui'
 
 import type { FunctionalComponent } from 'vue'
-import type { CheckboxValueType, Column } from 'element-plus'
+import type { CheckboxValueType, Column } from 'teamway-ui'
 
 type SelectionCellProps = {
   value: boolean

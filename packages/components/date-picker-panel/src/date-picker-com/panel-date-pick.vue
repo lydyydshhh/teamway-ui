@@ -227,10 +227,10 @@ import {
   watch,
 } from 'vue'
 import dayjs from 'dayjs'
-import TyButton from '@element-plus/components/button'
-import { ClickOutside as vClickOutside } from '@element-plus/directives'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import TyInput from '@element-plus/components/input'
+import TyButton from '@teamway-ui/components/button'
+import { ClickOutside as vClickOutside } from '@teamway-ui/directives'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import TyInput from '@teamway-ui/components/input'
 import {
   DEFAULT_FORMATS_DATE,
   DEFAULT_FORMATS_TIME,
@@ -238,15 +238,15 @@ import {
   TimePickPanel,
   extractDateFormat,
   extractTimeFormat,
-} from '@element-plus/components/time-picker'
-import { TyIcon } from '@element-plus/components/icon'
+} from '@teamway-ui/components/time-picker'
+import { TyIcon } from '@teamway-ui/components/icon'
 import {
   extractFirst,
   getEventCode,
   isArray,
   isFunction,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+} from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import {
   ArrowLeft,
   ArrowRight,
@@ -263,7 +263,7 @@ import { ROOT_PICKER_IS_DEFAULT_FORMAT_INJECTION_KEY } from '../constants'
 import DateTable from './basic-date-table.vue'
 import MonthTable from './basic-month-table.vue'
 import YearTable from './basic-year-table.vue'
-import { useFormDisabled } from '@element-plus/components/form'
+import { useFormDisabled } from '@teamway-ui/components/form'
 
 import type { SetupContext } from 'vue'
 import type { ConfigType, Dayjs } from 'dayjs'

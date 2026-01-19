@@ -1,11 +1,8 @@
 import { defineComponent, provide } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import { NOOP } from '@element-plus/utils'
-import {
-  TyButton,
-  buttonGroupContextKey,
-} from '@element-plus/components/button'
+import { NOOP } from '@teamway-ui/utils'
+import { TyButton, buttonGroupContextKey } from '@teamway-ui/components/button'
 import { formContextKey, formItemContextKey } from '../src/constants'
 
 import type { FormContext, FormItemContext } from '../src/types'

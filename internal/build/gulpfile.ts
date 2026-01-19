@@ -7,7 +7,7 @@ import {
   epOutput,
   epPackage,
   projRoot,
-} from '@element-plus/build-utils'
+} from '@teamway-ui/build-utils'
 import { buildConfig, run, runTask, withTaskName } from './src'
 
 import type { TaskFunction } from 'gulp'

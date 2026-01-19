@@ -1,4 +1,4 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@teamway-ui/utils'
 import Segmented from './src/segmented.vue'
 
 export const TySegmented = withInstall(Segmented)

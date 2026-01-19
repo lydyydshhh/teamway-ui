@@ -1,8 +1,8 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { TyMessageBox } from '@element-plus/components/message-box'
-import ConfigProvider from '@element-plus/components/config-provider'
+import { TyMessageBox } from '@teamway-ui/components/message-box'
+import ConfigProvider from '@teamway-ui/components/config-provider'
 import Overlay from '../src/overlay'
 
 const AXIOM = 'Rem is the best girl'

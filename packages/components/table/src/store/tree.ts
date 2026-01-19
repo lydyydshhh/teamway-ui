@@ -1,5 +1,5 @@
 import { computed, getCurrentInstance, ref, unref, watch } from 'vue'
-import { isArray, isUndefined } from '@element-plus/utils'
+import { isArray, isUndefined } from '@teamway-ui/utils'
 import { getRowIdentity, walkTreeNode } from '../util'
 
 import type { WatcherPropsData } from '.'

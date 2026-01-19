@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@teamway-ui/utils'
 import Space from './src/space'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TySpace: SFCWithInstall<typeof Space> = withInstall(Space)
 export default TySpace

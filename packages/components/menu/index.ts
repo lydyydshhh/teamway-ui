@@ -1,10 +1,10 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@teamway-ui/utils'
 import Menu from './src/menu'
 import MenuItem from './src/menu-item.vue'
 import MenuItemGroup from './src/menu-item-group.vue'
 import SubMenu from './src/sub-menu'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyMenu: SFCWithInstall<typeof Menu> & {
   MenuItem: typeof MenuItem

@@ -6,8 +6,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { addUnit } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { addUnit } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import { iconProps } from './icon'
 
 import type { CSSProperties } from 'vue'

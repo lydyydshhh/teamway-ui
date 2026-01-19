@@ -1,5 +1,5 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { createCollectionWithScope } from '@element-plus/components/collection'
+import { buildProps, definePropType } from '@teamway-ui/utils'
+import { createCollectionWithScope } from '@teamway-ui/components/collection'
 
 import type {
   ExtractPropTypes,

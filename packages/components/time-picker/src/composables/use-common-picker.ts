@@ -1,8 +1,8 @@
 import { computed, ref } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { useLocale } from '@element-plus/hooks/use-locale'
-import { isArray } from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { useLocale } from '@teamway-ui/hooks/use-locale'
+import { isArray } from '@teamway-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 import { dayOrDaysToDate, formatter, parseDate, valueEquals } from '../utils'
 
 import type { Dayjs } from 'dayjs'

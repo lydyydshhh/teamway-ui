@@ -49,7 +49,7 @@ const emit = defineEmits(${PROP_NAME}Emits)
 EOF
 
 cat > $DIRNAME/src/$INPUT_NAME.ts <<EOF
-import { buildProps } from '@element-plus/utils'
+import { buildProps } from '@teamway-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 
@@ -68,9 +68,9 @@ export type ${NAME}Instance = InstanceType<typeof $NAME> & unknown
 EOF
 
 cat <<EOF >"$DIRNAME/index.ts"
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@teamway-ui/utils'
 import $NAME from './src/$INPUT_NAME.vue'
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const Ty$NAME: SFCWithInstall<typeof $NAME> = withInstall($NAME)
 export default Ty$NAME
@@ -96,13 +96,13 @@ describe('$NAME.vue', () => {
 EOF
 
 cat > $DIRNAME/style/index.ts <<EOF
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/$INPUT_NAME.scss'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/theme-chalk/src/$INPUT_NAME.scss'
 EOF
 
 cat > $DIRNAME/style/css.ts <<EOF
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/ty-$INPUT_NAME.css'
+import '@teamway-ui/components/base/style/css'
+import '@teamway-ui/theme-chalk/ty-$INPUT_NAME.css'
 EOF
 
 cat > $FILE_PATH/theme-chalk/src/$INPUT_NAME.scss <<EOF

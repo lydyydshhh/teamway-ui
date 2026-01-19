@@ -2,10 +2,10 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
-import { rAF } from '@element-plus/test-utils/tick'
+import { rAF } from '@teamway-ui/test-utils/tick'
 import Drawer from '../src/drawer.vue'
 import Button from '../../button/src/button.vue'
-import defineGetter from '@element-plus/test-utils/define-getter'
+import defineGetter from '@teamway-ui/test-utils/define-getter'
 
 const _mount = (template: string, data, otherObj?) =>
   mount({

@@ -1,7 +1,7 @@
 import { computed, inject, ref, toRaw } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { useFormSize } from '@element-plus/components/form'
-import { isArray, isBoolean, isObject, isPropAbsent } from '@element-plus/utils'
+import { useFormSize } from '@teamway-ui/components/form'
+import { isArray, isBoolean, isObject, isPropAbsent } from '@teamway-ui/utils'
 import { checkboxGroupContextKey } from '../constants'
 
 import type { ComponentInternalInstance } from 'vue'

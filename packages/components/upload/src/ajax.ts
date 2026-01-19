@@ -1,5 +1,5 @@
 import { isNil } from 'lodash-unified'
-import { isArray, throwError } from '@element-plus/utils'
+import { isArray, throwError } from '@teamway-ui/utils'
 
 import type {
   UploadProgressEvent,

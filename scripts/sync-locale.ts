@@ -3,7 +3,7 @@ import { basename, resolve } from 'node:path'
 import { globSync } from 'tinyglobby'
 import consola from 'consola'
 import { isArray, isObject, isString } from 'lodash-unified'
-import { localeRoot, normalizePath } from '@element-plus/build-utils'
+import { localeRoot, normalizePath } from '@teamway-ui/build-utils'
 
 type TranslatePair = {
   [key: string]: string | string[] | TranslatePair

@@ -1,11 +1,6 @@
 import { isNil } from 'lodash-unified'
-import {
-  buildProps,
-  definePropType,
-  isArray,
-  mutable,
-} from '@element-plus/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { buildProps, definePropType, isArray, mutable } from '@teamway-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 
 import type {
   ExtractPropTypes,

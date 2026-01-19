@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import TyTag from '@element-plus/components/tag'
+import TyTag from '@teamway-ui/components/tag'
 import TyDescriptions from '../src/description.vue'
 import TyDescriptionsItem from '../src/description-item'
 

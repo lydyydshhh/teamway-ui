@@ -1,7 +1,7 @@
 import type { OptionV2Props, SelectV2Instance, SelectV2Props } from './defaults'
 import type { InjectionKey, Ref } from 'vue'
 import type { Option } from './select.types'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
 
 export interface SelectV2Context {
   props: SelectV2Props

@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus/components",
+  "name": "@teamway-ui/components",
   "version": "0.0.5",
   "description": "all components are settled here",
   "main": "index.ts",
@@ -11,17 +11,17 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "catalog:",
-    "@element-plus/constants": "workspace:^",
-    "@element-plus/directives": "workspace:^",
-    "@element-plus/hooks": "workspace:^",
+    "@teamway-ui/constants": "workspace:^",
+    "@teamway-ui/directives": "workspace:^",
+    "@teamway-ui/hooks": "workspace:^",
     "@element-plus/icons-vue": "catalog:",
-    "@element-plus/utils": "workspace:^",
+    "@teamway-ui/utils": "workspace:^",
     "@popperjs/core": "catalog:",
     "@vueuse/core": "catalog:",
     "lodash-unified": "catalog:"
   },
   "devDependencies": {
-    "@element-plus/test-utils": "workspace:^",
+    "@teamway-ui/test-utils": "workspace:^",
     "@vue/test-utils": "catalog:",
     "vue": "catalog:"
   },

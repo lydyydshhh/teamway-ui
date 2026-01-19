@@ -102,41 +102,41 @@
 <script lang="ts" setup>
 import { computed, nextTick, provide, ref, watch } from 'vue'
 import { debounce, pick } from 'lodash-unified'
-import { TyIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@teamway-ui/components/icon'
 import { reactiveComputed } from '@vueuse/core'
-import { ClickOutside as vClickOutside } from '@element-plus/directives'
-import { TyTooltip } from '@element-plus/components/tooltip'
-import { TyButton } from '@element-plus/components/button'
+import { ClickOutside as vClickOutside } from '@teamway-ui/directives'
+import { TyTooltip } from '@teamway-ui/components/tooltip'
+import { TyButton } from '@teamway-ui/components/button'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@teamway-ui/components/form'
 import {
   useEmptyValues,
   useFocusController,
   useLocale,
   useNamespace,
-} from '@element-plus/hooks'
+} from '@teamway-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { debugWarn, getEventCode } from '@element-plus/utils'
+} from '@teamway-ui/constants'
+import { debugWarn, getEventCode } from '@teamway-ui/utils'
 import { ArrowDown, Close } from '@element-plus/icons-vue'
 import { colorPickerEmits, colorPickerProps } from './color-picker'
 import {
   ROOT_COMMON_COLOR_INJECTION_KEY,
   TyColorPickerPanel,
   colorPickerPanelProps,
-} from '@element-plus/components/color-picker-panel'
-import Color from '@element-plus/components/color-picker-panel/src/utils/color'
-import { useCommonColor } from '@element-plus/components/color-picker-panel/src/composables/use-common-color'
+} from '@teamway-ui/components/color-picker-panel'
+import Color from '@teamway-ui/components/color-picker-panel/src/utils/color'
+import { useCommonColor } from '@teamway-ui/components/color-picker-panel/src/composables/use-common-color'
 
-import type { ColorPickerPanelInstance } from '@element-plus/components/color-picker-panel'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { ColorPickerPanelInstance } from '@teamway-ui/components/color-picker-panel'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
 
 defineOptions({
   name: 'TyColorPicker',

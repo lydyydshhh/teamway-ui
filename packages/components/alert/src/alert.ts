@@ -1,4 +1,4 @@
-import { TypeComponentsMap, buildProps, keysOf } from '@element-plus/utils'
+import { TypeComponentsMap, buildProps, keysOf } from '@teamway-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 

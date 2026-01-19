@@ -1,7 +1,7 @@
 import { h, inject, nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { EVENT_CODE } from '@element-plus/constants'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import TyFocusTrap from '../src/focus-trap.vue'
 import { FOCUS_TRAP_INJECTION_KEY } from '../src/tokens'
 

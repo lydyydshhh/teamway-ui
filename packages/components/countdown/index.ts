@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@teamway-ui/utils'
 import Countdown from './src/countdown.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyCountdown: SFCWithInstall<typeof Countdown> =
   withInstall(Countdown)

@@ -1,8 +1,8 @@
-import { buttonTypes } from '@element-plus/components/button'
+import { buttonTypes } from '@teamway-ui/components/button'
 
 import type { AppContext, CSSProperties, Component, VNode } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
-import type { InputType } from '@element-plus/components/input/src/input'
+import type { ComponentSize } from '@teamway-ui/constants'
+import type { InputType } from '@teamway-ui/components/input/src/input'
 
 type MessageType = '' | 'primary' | 'success' | 'warning' | 'info' | 'error'
 type MessageBoxButtonType = (typeof buttonTypes)[number]

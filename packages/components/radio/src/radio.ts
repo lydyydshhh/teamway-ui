@@ -1,6 +1,6 @@
-import { buildProps, isBoolean, isNumber, isString } from '@element-plus/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { useSizeProp } from '@element-plus/hooks'
+import { buildProps, isBoolean, isNumber, isString } from '@teamway-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import { useSizeProp } from '@teamway-ui/hooks'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type Radio from './radio.vue'

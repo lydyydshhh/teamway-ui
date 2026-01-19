@@ -1,6 +1,6 @@
 import { placements } from '@popperjs/core'
-import { buildProps, definePropType } from '@element-plus/utils'
-import { useAriaProps } from '@element-plus/hooks'
+import { buildProps, definePropType } from '@teamway-ui/utils'
+import { useAriaProps } from '@teamway-ui/hooks'
 import { popperArrowProps } from './arrow'
 
 import type { PopperEffect } from './popper'

@@ -1,6 +1,6 @@
 import { defineComponent, h, inject } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import TyText from '@element-plus/components/text'
+import { useNamespace } from '@teamway-ui/hooks'
+import TyText from '@teamway-ui/components/text'
 import { ROOT_TREE_INJECTION_KEY, treeNodeContentProps } from './virtual-tree'
 
 export default defineComponent({

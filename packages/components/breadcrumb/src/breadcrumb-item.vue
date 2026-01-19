@@ -18,8 +18,8 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, inject } from 'vue'
-import TyIcon from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
+import TyIcon from '@teamway-ui/components/icon'
+import { useNamespace } from '@teamway-ui/hooks'
 import { breadcrumbKey } from './constants'
 import { breadcrumbItemProps } from './breadcrumb-item'
 

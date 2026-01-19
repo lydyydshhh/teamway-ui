@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import { TyFormItem as FormItem, TyForm } from '@element-plus/components/form'
+import { TyFormItem as FormItem, TyForm } from '@teamway-ui/components/form'
 import Rate from '../src/rate.vue'
 
 import type { RateInstance } from '../src/rate'

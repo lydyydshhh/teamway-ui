@@ -1,7 +1,7 @@
-import { NOOP, buildProps, definePropType, mutable } from '@element-plus/utils'
+import { NOOP, buildProps, definePropType, mutable } from '@teamway-ui/utils'
 import { ajaxUpload } from './ajax'
 
-import type { Awaitable, Mutable } from '@element-plus/utils'
+import type { Awaitable, Mutable } from '@teamway-ui/utils'
 import type { UploadAjaxError } from './ajax'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type Upload from './upload.vue'

@@ -5,19 +5,19 @@ import {
   isNumber,
   isObject,
   isString,
-} from '@element-plus/utils'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
+} from '@teamway-ui/utils'
+import { useTooltipContentProps } from '@teamway-ui/components/tooltip'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { inputProps } from '@element-plus/components/input'
+} from '@teamway-ui/constants'
+import { inputProps } from '@teamway-ui/components/input'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type Autocomplete from './autocomplete.vue'
-import type { Placement } from '@element-plus/components/popper'
-import type { Awaitable } from '@element-plus/utils'
+import type { Placement } from '@teamway-ui/components/popper'
+import type { Awaitable } from '@teamway-ui/utils'
 
 export type AutocompleteData = Record<string, any>[]
 export type AutocompleteFetchSuggestionsCallback = (

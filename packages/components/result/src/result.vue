@@ -27,7 +27,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 import { IconComponentMap, IconMap, resultProps } from './result'
 
 defineOptions({

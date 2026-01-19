@@ -1,9 +1,9 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@teamway-ui/utils'
 import Checkbox from './src/checkbox.vue'
 import CheckboxButton from './src/checkbox-button.vue'
 import CheckboxGroup from './src/checkbox-group.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyCheckbox: SFCWithInstall<typeof Checkbox> & {
   CheckboxButton: typeof CheckboxButton

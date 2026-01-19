@@ -6,9 +6,9 @@ import {
   shallowRef,
   watch,
 } from 'vue'
-import { addUnit, getClientXY, getEventCode } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
-import { EVENT_CODE } from '@element-plus/constants'
+import { addUnit, getClientXY, getEventCode } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import { draggable } from '../utils/draggable'
 
 import type { AlphaSliderProps } from '../props/slider'

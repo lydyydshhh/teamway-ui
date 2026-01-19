@@ -21,7 +21,7 @@ import type {
   AllowDropType,
   NodeDropType,
   RenderContentContext,
-} from 'element-plus'
+} from 'teamway-ui'
 
 type Node = RenderContentContext['node']
 

@@ -1,6 +1,6 @@
 import { provide, ref } from 'vue'
-import { addClass, isFunction, removeClass } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { addClass, isFunction, removeClass } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 
 import type { InjectionKey, Ref, SetupContext } from 'vue'
 import type {

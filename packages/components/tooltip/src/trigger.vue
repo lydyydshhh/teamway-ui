@@ -19,18 +19,18 @@
 
 <script lang="ts" setup>
 import { inject, nextTick, ref, toRef, unref } from 'vue'
-import { TyPopperTrigger } from '@element-plus/components/popper'
+import { TyPopperTrigger } from '@teamway-ui/components/popper'
 import {
   composeEventHandlers,
   focusElement,
   getEventCode,
-} from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+} from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { useTooltipTriggerProps } from './trigger'
 import { whenTrigger } from './utils'
 
-import type { OnlyChildExpose } from '@element-plus/components/slot'
+import type { OnlyChildExpose } from '@teamway-ui/components/slot'
 
 defineOptions({
   name: 'TyTooltipTrigger',

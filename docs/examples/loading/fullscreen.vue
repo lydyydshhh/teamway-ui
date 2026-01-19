@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { TyLoading } from 'element-plus'
+import { TyLoading } from 'teamway-ui'
 
 const fullscreenLoading = ref(false)
 const openFullScreen1 = () => {

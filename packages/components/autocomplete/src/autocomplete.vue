@@ -124,25 +124,25 @@ import {
 import { pick } from 'lodash-unified'
 import { onClickOutside, useDebounceFn } from '@vueuse/core'
 import { Loading } from '@element-plus/icons-vue'
-import { useId, useNamespace } from '@element-plus/hooks'
-import { getEventCode, isArray, throwError } from '@element-plus/utils'
+import { useId, useNamespace } from '@teamway-ui/hooks'
+import { getEventCode, isArray, throwError } from '@teamway-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import TyInput, { inputProps } from '@element-plus/components/input'
-import TyScrollbar from '@element-plus/components/scrollbar'
-import TyTooltip from '@element-plus/components/tooltip'
-import TyIcon from '@element-plus/components/icon'
-import { useFormDisabled } from '@element-plus/components/form'
+} from '@teamway-ui/constants'
+import TyInput, { inputProps } from '@teamway-ui/components/input'
+import TyScrollbar from '@teamway-ui/components/scrollbar'
+import TyTooltip from '@teamway-ui/components/tooltip'
+import TyIcon from '@teamway-ui/components/icon'
+import { useFormDisabled } from '@teamway-ui/components/form'
 import { autocompleteEmits, autocompleteProps } from './autocomplete'
 
 import type { AutocompleteData } from './autocomplete'
 import type { StyleValue } from 'vue'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
-import type { InputInstance } from '@element-plus/components/input'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
+import type { InputInstance } from '@teamway-ui/components/input'
 
 const COMPONENT_NAME = 'TyAutocomplete'
 defineOptions({

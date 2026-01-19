@@ -15,9 +15,9 @@
 
 <script lang="ts" setup>
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { TyStatistic } from '@element-plus/components/statistic'
-import { cAF, rAF } from '@element-plus/utils'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import { TyStatistic } from '@teamway-ui/components/statistic'
+import { cAF, rAF } from '@teamway-ui/utils'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
 import { countdownEmits, countdownProps } from './countdown'
 import { formatTime, getTime } from './utils'
 

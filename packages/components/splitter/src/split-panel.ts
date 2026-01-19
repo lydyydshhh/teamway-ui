@@ -1,4 +1,4 @@
-import { buildProps } from '@element-plus/utils'
+import { buildProps } from '@teamway-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type SplitterPanel from './split-panel.vue'

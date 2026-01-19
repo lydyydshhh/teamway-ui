@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { LoadFunction } from 'element-plus'
+import type { LoadFunction } from 'teamway-ui'
 
 interface Tree {
   name: string

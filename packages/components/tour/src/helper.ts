@@ -22,7 +22,7 @@ import {
   isFunction,
   isString,
   keysOf,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 
 import type {
   CSSProperties,
@@ -31,7 +31,7 @@ import type {
   Ref,
   SetupContext,
 } from 'vue'
-import type { UseNamespaceReturn } from '@element-plus/hooks'
+import type { UseNamespaceReturn } from '@teamway-ui/hooks'
 import type { PosInfo, TourGap, TourMask } from './types'
 import type {
   ComputePositionReturn,

@@ -1,4 +1,4 @@
-import { buildProps, isArray } from '@element-plus/utils'
+import { buildProps, isArray } from '@teamway-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type UploadDragger from './upload-dragger.vue'

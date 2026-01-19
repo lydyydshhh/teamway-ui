@@ -66,12 +66,12 @@
 
 <script lang="ts" setup>
 import { computed, inject, onBeforeUnmount, onMounted, watch } from 'vue'
-import { EVENT_CODE } from '@element-plus/constants'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import { omit } from 'lodash-unified'
-import { TyButton } from '@element-plus/components/button'
-import { TyIcon } from '@element-plus/components/icon'
-import { CloseComponents, getEventCode } from '@element-plus/utils'
-import { useLocale } from '@element-plus/hooks'
+import { TyButton } from '@teamway-ui/components/button'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { CloseComponents, getEventCode } from '@teamway-ui/utils'
+import { useLocale } from '@teamway-ui/hooks'
 import { tourStepEmits, tourStepProps } from './step'
 import { tourKey } from './helper'
 
@@ -155,7 +155,7 @@ const onClose = () => {
 }
 
 const handleKeydown = (e: KeyboardEvent) => {
-  const target = e.target as HTMLTyement | null
+  const target = e.target as HTMLElement | null
   if (target?.isContentEditable) return
   const code = getEventCode(e)
 

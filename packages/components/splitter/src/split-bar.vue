@@ -6,7 +6,7 @@ import {
   ArrowRight,
   ArrowUp,
 } from '@element-plus/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 
 const ns = useNamespace('splitter-bar')
 

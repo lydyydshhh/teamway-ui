@@ -10,9 +10,9 @@
 
 <script lang="ts">
 import { computed, defineComponent, inject, provide, ref, unref } from 'vue'
-import { useId } from '@element-plus/hooks'
-import { composeEventHandlers, getEventCode } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { useId } from '@teamway-ui/hooks'
+import { composeEventHandlers, getEventCode } from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import { TyCollectionItem as TyRovingFocusCollectionItem } from './roving-focus-group'
 import {
   ROVING_FOCUS_GROUP_INJECTION_KEY,

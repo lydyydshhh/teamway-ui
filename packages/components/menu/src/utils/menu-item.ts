@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { getEventCode, triggerEvent } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { getEventCode, triggerEvent } from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import SubMenu from './submenu'
 
 class MenuItem {

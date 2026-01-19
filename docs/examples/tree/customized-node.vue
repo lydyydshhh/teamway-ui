@@ -45,13 +45,13 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { TyButton } from 'element-plus'
+import { TyButton } from 'teamway-ui'
 
 import type {
   RenderContentContext,
   RenderContentFunction,
   TreeInstance,
-} from 'element-plus'
+} from 'teamway-ui'
 
 interface Tree {
   id: number

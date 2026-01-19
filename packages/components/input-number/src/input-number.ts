@@ -1,11 +1,11 @@
 import { isNil } from 'lodash-unified'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
-import { buildProps, definePropType, isNumber } from '@element-plus/utils'
+import { useAriaProps, useSizeProp } from '@teamway-ui/hooks'
+import { buildProps, definePropType, isNumber } from '@teamway-ui/utils'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@teamway-ui/constants'
 
 import type {
   ExtractPropTypes,

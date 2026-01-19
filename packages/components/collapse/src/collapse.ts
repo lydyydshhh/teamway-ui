@@ -5,11 +5,11 @@ import {
   isNumber,
   isString,
   mutable,
-} from '@element-plus/utils'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@teamway-ui/utils'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
-import type { Arrayable, Awaitable } from '@element-plus/utils'
+import type { Arrayable, Awaitable } from '@teamway-ui/utils'
 
 export type CollapseActiveName = string | number
 export type CollapseModelValue = Arrayable<CollapseActiveName>

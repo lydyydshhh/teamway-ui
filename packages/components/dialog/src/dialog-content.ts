@@ -1,4 +1,4 @@
-import { buildProps, iconPropType } from '@element-plus/utils'
+import { buildProps, iconPropType } from '@teamway-ui/utils'
 
 export const dialogContentProps = buildProps({
   /**

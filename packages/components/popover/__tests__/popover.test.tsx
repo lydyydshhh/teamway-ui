@@ -1,9 +1,9 @@
 import { defineComponent, nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { usePopperContainerId, useZIndex } from '@element-plus/hooks'
-import { rAF } from '@element-plus/test-utils/tick'
-import { TyPopperTrigger } from '@element-plus/components/popper'
+import { usePopperContainerId, useZIndex } from '@teamway-ui/hooks'
+import { rAF } from '@teamway-ui/test-utils/tick'
+import { TyPopperTrigger } from '@teamway-ui/components/popper'
 import Popover from '../src/popover.vue'
 
 import type { VueWrapper } from '@vue/test-utils'

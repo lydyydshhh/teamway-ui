@@ -1,4 +1,4 @@
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 import {
   ensurePosition,
   getFixedColumnOffset,

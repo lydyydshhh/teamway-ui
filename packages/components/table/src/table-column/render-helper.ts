@@ -10,8 +10,8 @@ import {
   unref,
   watchEffect,
 } from 'vue'
-import { debugWarn, isArray, isUndefined } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { debugWarn, isArray, isUndefined } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import {
   cellForced,
   defaultRenderCell,

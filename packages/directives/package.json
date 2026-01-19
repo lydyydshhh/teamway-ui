@@ -1,5 +1,5 @@
 {
-  "name": "@element-plus/directives",
+  "name": "@teamway-ui/directives",
   "version": "0.0.5",
   "description": "Element Plus directives",
   "license": "MIT",
@@ -11,8 +11,8 @@
     "vue": "catalog:"
   },
   "dependencies": {
-    "@element-plus/constants": "workspace:^",
-    "@element-plus/utils": "workspace:^",
+    "@teamway-ui/constants": "workspace:^",
+    "@teamway-ui/utils": "workspace:^",
     "normalize-wheel-es": "catalog:"
   },
   "devDependencies": {

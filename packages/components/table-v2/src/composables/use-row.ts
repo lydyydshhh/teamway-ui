@@ -7,7 +7,7 @@ import {
   unref,
 } from 'vue'
 import { debounce } from 'lodash-unified'
-import { isNumber } from '@element-plus/utils'
+import { isNumber } from '@teamway-ui/utils'
 import { FixedDir } from '../constants'
 
 import type { ComponentInternalInstance, Ref, ShallowRef } from 'vue'
@@ -20,7 +20,7 @@ import type {
 import type { FixedDirection, KeyType } from '../types'
 import type { onRowRenderedParams } from '../grid'
 import type { TableGridInstance } from '../table-grid'
-import type { UseNamespaceReturn } from '@element-plus/hooks'
+import type { UseNamespaceReturn } from '@teamway-ui/hooks'
 
 type Heights = Record<KeyType, number>
 type GridInstanceRef = Ref<TableGridInstance | undefined>

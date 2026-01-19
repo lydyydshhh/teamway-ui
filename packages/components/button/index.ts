@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@teamway-ui/utils'
 import Button from './src/button.vue'
 import ButtonGroup from './src/button-group.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyButton: SFCWithInstall<typeof Button> & {
   ButtonGroup: typeof ButtonGroup

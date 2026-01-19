@@ -40,8 +40,8 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import { TyIcon } from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { useNamespace } from '@teamway-ui/hooks'
 import { timelineItemProps } from './timeline-item'
 import { TIMELINE_INJECTION_KEY } from './tokens'
 

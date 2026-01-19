@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { describe, expect, it, vi } from 'vitest'
-import triggerEvent from '@element-plus/test-utils/trigger-event'
+import triggerEvent from '@teamway-ui/test-utils/trigger-event'
 import TyTable from '../src/table.vue'
 import TyTableColumn from '../src/table-column'
 import {

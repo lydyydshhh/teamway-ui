@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
 import { provide, reactive, toRef } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 import { buttonGroupProps } from './button-group'
 import { buttonGroupContextKey } from './constants'
 

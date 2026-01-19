@@ -1,10 +1,10 @@
 import { placements } from '@popperjs/core'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
-import { buildProps, definePropType } from '@element-plus/utils'
+import { useTooltipContentProps } from '@teamway-ui/components/tooltip'
+import { buildProps, definePropType } from '@teamway-ui/utils'
 import { avatarProps } from './avatar'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes, StyleValue } from 'vue'
-import type { Placement, PopperEffect } from '@element-plus/components/popper'
+import type { Placement, PopperEffect } from '@teamway-ui/components/popper'
 
 export const avatarGroupProps = buildProps({
   /**

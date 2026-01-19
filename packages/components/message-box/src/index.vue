@@ -165,30 +165,30 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import TyButton from '@element-plus/components/button'
-import { TrapFocus } from '@element-plus/directives'
+import TyButton from '@teamway-ui/components/button'
+import { TrapFocus } from '@teamway-ui/directives'
 import {
   useDraggable,
   useId,
   useLockscreen,
   useSameTarget,
-} from '@element-plus/hooks'
-import TyInput from '@element-plus/components/input'
-import { TyOverlay } from '@element-plus/components/overlay'
+} from '@teamway-ui/hooks'
+import TyInput from '@teamway-ui/components/input'
+import { TyOverlay } from '@teamway-ui/components/overlay'
 import {
   TypeComponents,
   TypeComponentsMap,
   isFunction,
   isString,
   isValidComponentSize,
-} from '@element-plus/utils'
-import { TyIcon } from '@element-plus/components/icon'
+} from '@teamway-ui/utils'
+import { TyIcon } from '@teamway-ui/components/icon'
 import { Loading } from '@element-plus/icons-vue'
-import TyFocusTrap from '@element-plus/components/focus-trap'
-import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
+import TyFocusTrap from '@teamway-ui/components/focus-trap'
+import { useGlobalComponentSettings } from '@teamway-ui/components/config-provider'
 
 import type { ComponentPublicInstance, PropType } from 'vue'
-import type { ComponentSize } from '@element-plus/constants'
+import type { ComponentSize } from '@teamway-ui/constants'
 import type {
   Action,
   MessageBoxState,

@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 import { menuItemGroupProps } from './menu-item-group'
 
 defineOptions({

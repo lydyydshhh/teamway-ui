@@ -110,7 +110,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useId, useNamespace } from '@element-plus/hooks'
+import { useId, useNamespace } from '@teamway-ui/hooks'
 
 defineOptions({
   name: 'TyImgEmpty',

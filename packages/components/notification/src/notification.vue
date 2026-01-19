@@ -41,10 +41,10 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref } from 'vue'
 import { useEventListener, useTimeoutFn } from '@vueuse/core'
-import { TypeComponentsMap, getEventCode } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import { TyIcon } from '@element-plus/components/icon'
-import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
+import { TypeComponentsMap, getEventCode } from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { useGlobalComponentSettings } from '@teamway-ui/components/config-provider'
 import { notificationEmits, notificationProps } from './notification'
 
 import type { CSSProperties } from 'vue'

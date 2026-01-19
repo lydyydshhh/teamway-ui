@@ -60,8 +60,8 @@ import {
   isArray,
   isBoolean,
   isFunction,
-} from '@element-plus/utils'
-import { useId, useNamespace } from '@element-plus/hooks'
+} from '@teamway-ui/utils'
+import { useId, useNamespace } from '@teamway-ui/hooks'
 import { useFormSize } from './hooks'
 import { formItemProps } from './form-item'
 import FormLabelWrap from './form-label-wrap'
@@ -69,7 +69,7 @@ import { formContextKey, formItemContextKey } from './constants'
 
 import type { CSSProperties } from 'vue'
 import type { RuleItem } from 'async-validator'
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@teamway-ui/utils'
 import type {
   FormItemContext,
   FormItemRule,

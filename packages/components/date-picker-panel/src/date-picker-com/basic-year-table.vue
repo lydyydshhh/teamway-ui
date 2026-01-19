@@ -30,9 +30,9 @@
 <script lang="ts" setup>
 import { computed, nextTick, ref, watch } from 'vue'
 import dayjs from 'dayjs'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { rangeArr } from '@element-plus/components/time-picker'
-import { castArray, hasClass } from '@element-plus/utils'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import { rangeArr } from '@teamway-ui/components/time-picker'
+import { castArray, hasClass } from '@teamway-ui/utils'
 import { basicYearTableProps } from '../props/basic-year-table'
 import { getValidDateOfYear } from '../utils'
 import TyDatePickerCell from './basic-cell-render'

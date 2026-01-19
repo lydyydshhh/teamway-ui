@@ -6,10 +6,10 @@ import {
   isClient,
   isString,
   removeClass,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import { createLoadingComponent } from './loading'
 
-import type { UseNamespaceReturn, UseZIndexReturn } from '@element-plus/hooks'
+import type { UseNamespaceReturn, UseZIndexReturn } from '@teamway-ui/hooks'
 import type { LoadingInstance } from './loading'
 import type { LoadingOptionsResolved } from '..'
 import type { LoadingOptions } from './types'

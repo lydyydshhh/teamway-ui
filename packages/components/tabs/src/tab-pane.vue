@@ -25,8 +25,8 @@ import {
   useSlots,
   watch,
 } from 'vue'
-import { throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { throwError } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import { tabsRootContextKey } from './constants'
 import { tabPaneProps } from './tab-pane'
 

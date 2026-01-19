@@ -1,18 +1,18 @@
 import { placements } from '@popperjs/core'
-import { buildProps, definePropType } from '@element-plus/utils'
+import { buildProps, definePropType } from '@teamway-ui/utils'
 import {
   useAriaProps,
   useEmptyValuesProps,
   useSizeProp,
-} from '@element-plus/hooks'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
+} from '@teamway-ui/hooks'
+import { useTooltipContentProps } from '@teamway-ui/components/tooltip'
 import { CircleClose } from '@element-plus/icons-vue'
 import { disabledTimeListsProps } from '../props/shared'
 
 import type { Component, ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { Options } from '@popperjs/core'
 import type { Dayjs } from 'dayjs'
-import type { Placement } from '@element-plus/components/popper'
+import type { Placement } from '@teamway-ui/components/popper'
 
 export type SingleOrRange<T> = T | [T, T]
 export type DateModelType = number | string | Date

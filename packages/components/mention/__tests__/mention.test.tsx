@@ -1,7 +1,7 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, test, vi } from 'vitest'
-import Form from '@element-plus/components/form'
+import Form from '@teamway-ui/components/form'
 import Mention from '../src/mention.vue'
 import * as helper from '../src/helper'
 

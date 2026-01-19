@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/theme-chalk/ty-tooltip.css'
-import '@element-plus/components/popper/style/css'
+import '@teamway-ui/components/base/style/css'
+import '@teamway-ui/theme-chalk/ty-tooltip.css'
+import '@teamway-ui/components/popper/style/css'

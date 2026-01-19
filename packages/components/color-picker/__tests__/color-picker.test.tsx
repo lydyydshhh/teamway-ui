@@ -1,11 +1,11 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it, vi } from 'vitest'
-import { TyForm, TyFormItem } from '@element-plus/components/form'
-import { EVENT_CODE } from '@element-plus/constants'
-import { rAF } from '@element-plus/test-utils/tick'
+import { TyForm, TyFormItem } from '@teamway-ui/components/form'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import { rAF } from '@teamway-ui/test-utils/tick'
 import ColorPicker from '../src/color-picker.vue'
-import ColorPickerPanel from '@element-plus/components/color-picker-panel'
+import ColorPickerPanel from '@teamway-ui/components/color-picker-panel'
 
 import type { ComponentPublicInstance } from 'vue'
 

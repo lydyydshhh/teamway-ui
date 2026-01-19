@@ -34,7 +34,7 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
 
-import type { CascaderOption, CheckboxValueType } from 'element-plus'
+import type { CascaderOption, CheckboxValueType } from 'teamway-ui'
 
 const props = { multiple: true }
 const checkAll = ref(false)

@@ -8,7 +8,7 @@ import {
   toRef,
   watch,
 } from 'vue'
-import { useNamespace, useOrderedChildren } from '@element-plus/hooks'
+import { useNamespace, useOrderedChildren } from '@teamway-ui/hooks'
 import { useContainer, useResize, useSize } from './hooks'
 import { splitterEmits, splitterProps } from './splitter'
 import { splitterRootContextKey } from './type'

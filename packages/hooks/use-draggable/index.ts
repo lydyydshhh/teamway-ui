@@ -1,5 +1,5 @@
 import { onBeforeUnmount, onMounted, ref, watchEffect } from 'vue'
-import { addUnit } from '@element-plus/utils'
+import { addUnit } from '@teamway-ui/utils'
 
 import type { ComputedRef, Ref } from 'vue'
 

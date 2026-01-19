@@ -32,16 +32,16 @@ import { computed, defineComponent, inject } from 'vue'
 import {
   ROVING_FOCUS_GROUP_ITEM_INJECTION_KEY,
   ROVING_FOCUS_ITEM_COLLECTION_INJECTION_KEY,
-} from '@element-plus/components/roving-focus-group'
-import { COLLECTION_ITEM_SIGN } from '@element-plus/components/collection'
-import { TyIcon } from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
+} from '@teamway-ui/components/roving-focus-group'
+import { COLLECTION_ITEM_SIGN } from '@teamway-ui/components/collection'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { useNamespace } from '@teamway-ui/hooks'
 import {
   composeEventHandlers,
   composeRefs,
   getEventCode,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+} from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import { dropdownItemProps } from './dropdown'
 import { DROPDOWN_INJECTION_KEY } from './tokens'
 

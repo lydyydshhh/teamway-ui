@@ -1,7 +1,7 @@
 import { defineComponent, provide, ref } from 'vue'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat.js'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 import {
   DEFAULT_FORMATS_TIME,
   PICKER_POPPER_OPTIONS_INJECTION_KEY,

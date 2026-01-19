@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/components/radio/style'
-import '@element-plus/theme-chalk/src/radio-group.scss'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/components/radio/style'
+import '@teamway-ui/theme-chalk/src/radio-group.scss'

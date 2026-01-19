@@ -1,4 +1,4 @@
-import { isFunction } from '@element-plus/utils'
+import { isFunction } from '@teamway-ui/utils'
 
 import type { ObjectDirective } from 'vue'
 

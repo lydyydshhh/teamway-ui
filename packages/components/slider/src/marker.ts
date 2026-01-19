@@ -1,6 +1,6 @@
 import { computed, defineComponent, h } from 'vue'
-import { buildProps, definePropType, isString } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { buildProps, definePropType, isString } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 
 import type {
   CSSProperties,

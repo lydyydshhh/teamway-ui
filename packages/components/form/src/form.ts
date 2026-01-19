@@ -1,11 +1,11 @@
-import { componentSizes } from '@element-plus/constants'
+import { componentSizes } from '@teamway-ui/constants'
 import {
   buildProps,
   definePropType,
   isArray,
   isBoolean,
   isString,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { FormItemProp } from './form-item'

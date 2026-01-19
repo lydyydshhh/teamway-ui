@@ -1,13 +1,13 @@
 import { onUnmounted } from 'vue'
 import { isClient } from '@vueuse/core'
-import { defaultNamespace } from '@element-plus/hooks/use-namespace'
+import { defaultNamespace } from '@teamway-ui/hooks/use-namespace'
 import {
   addClass,
   getScrollBarWidth,
   getStyle,
   hasClass,
   removeClass,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 
 export const useLockScreen = () => {
   let scrollBarWidth = 0

@@ -128,12 +128,12 @@ import {
   useLockscreen,
   useNamespace,
   useZIndex,
-} from '@element-plus/hooks'
-import { EVENT_CODE } from '@element-plus/constants'
-import { getEventCode, keysOf } from '@element-plus/utils'
-import TyFocusTrap from '@element-plus/components/focus-trap'
-import TyTeleport from '@element-plus/components/teleport'
-import TyIcon from '@element-plus/components/icon'
+} from '@teamway-ui/hooks'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import { getEventCode, keysOf } from '@teamway-ui/utils'
+import TyFocusTrap from '@teamway-ui/components/focus-trap'
+import TyTeleport from '@teamway-ui/components/teleport'
+import TyIcon from '@teamway-ui/components/icon'
 import {
   ArrowLeft,
   ArrowRight,

@@ -57,11 +57,11 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import TyIcon from '@element-plus/components/icon'
+import TyIcon from '@teamway-ui/components/icon'
 import { CaretRight } from '@element-plus/icons-vue'
-import TyCheckbox from '@element-plus/components/checkbox'
-import { useNamespace } from '@element-plus/hooks'
-import { isFunction, isString } from '@element-plus/utils'
+import TyCheckbox from '@teamway-ui/components/checkbox'
+import { useNamespace } from '@teamway-ui/hooks'
+import { isFunction, isString } from '@teamway-ui/utils'
 import TyNodeContent from './tree-node-content'
 import {
   NODE_CONTEXTMENU,
@@ -70,7 +70,7 @@ import {
   treeNodeProps,
 } from './virtual-tree'
 
-import type { CheckboxValueType } from '@element-plus/components/checkbox'
+import type { CheckboxValueType } from '@teamway-ui/components/checkbox'
 import type { TreeNode } from './types'
 
 defineOptions({

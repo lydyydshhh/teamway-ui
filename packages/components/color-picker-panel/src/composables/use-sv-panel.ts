@@ -1,7 +1,7 @@
 import { computed, getCurrentInstance, onMounted, ref, watch } from 'vue'
-import { EVENT_CODE } from '@element-plus/constants'
-import { useNamespace } from '@element-plus/hooks'
-import { addUnit, getClientXY, getEventCode } from '@element-plus/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import { useNamespace } from '@teamway-ui/hooks'
+import { addUnit, getClientXY, getEventCode } from '@teamway-ui/utils'
 import { draggable } from '../utils/draggable'
 
 import type { SvPanelProps } from '../props/sv-panel'

@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/table-column.scss'
-import '@element-plus/components/checkbox/style'
-import '@element-plus/components/tag/style'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/theme-chalk/src/table-column.scss'
+import '@teamway-ui/components/checkbox/style'
+import '@teamway-ui/components/tag/style'

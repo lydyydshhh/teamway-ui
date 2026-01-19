@@ -39,13 +39,13 @@ import {
   isEmpty,
   scrollIntoView,
   unique,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useNamespace } from '@element-plus/hooks'
+} from '@teamway-ui/constants'
+import { useNamespace } from '@teamway-ui/hooks'
 import TyCascaderMenu from './menu.vue'
 import Store from './store'
 import Node from './node'

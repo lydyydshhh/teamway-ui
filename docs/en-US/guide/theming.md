@@ -115,7 +115,7 @@ If they are mixed together, each hot update of `element-plus` needs to compile a
 ```ts [main.ts]
 import { createApp } from 'vue'
 import './styles/element/index.scss'
-import ElementPlus from 'element-plus'
+import ElementPlus from 'teamway-ui'
 import App from './App.vue'
 
 const app = createApp(App)

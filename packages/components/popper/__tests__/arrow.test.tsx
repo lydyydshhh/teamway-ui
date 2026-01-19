@@ -1,7 +1,7 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it } from 'vitest'
-import { POPPER_CONTENT_INJECTION_KEY } from '@element-plus/components/popper'
+import { POPPER_CONTENT_INJECTION_KEY } from '@teamway-ui/components/popper'
 import TyArrow from '../src/arrow.vue'
 
 import type { VueWrapper } from '@vue/test-utils'

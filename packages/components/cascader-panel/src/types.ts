@@ -1,5 +1,5 @@
 import type { InjectionKey, VNode } from 'vue'
-import type { Nullable } from '@element-plus/utils'
+import type { Nullable } from '@teamway-ui/utils'
 import type { default as CascaderNode } from './node'
 
 export type { CascaderNode, Nullable }

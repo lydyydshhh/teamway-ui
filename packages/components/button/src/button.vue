@@ -28,8 +28,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { TyIcon } from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { useNamespace } from '@teamway-ui/hooks'
 import { useButton } from './use-button'
 import { buttonEmits, buttonProps } from './button'
 import { useButtonCustomStyle } from './button-custom'

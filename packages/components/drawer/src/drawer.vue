@@ -108,12 +108,12 @@
 <script lang="ts" setup>
 import { computed, ref, useSlots } from 'vue'
 import { Close } from '@element-plus/icons-vue'
-import { TyOverlay } from '@element-plus/components/overlay'
-import TyFocusTrap from '@element-plus/components/focus-trap'
-import TyTeleport from '@element-plus/components/teleport'
-import { useDialog } from '@element-plus/components/dialog'
-import TyIcon from '@element-plus/components/icon'
-import { useDeprecated, useLocale, useNamespace } from '@element-plus/hooks'
+import { TyOverlay } from '@teamway-ui/components/overlay'
+import TyFocusTrap from '@teamway-ui/components/focus-trap'
+import TyTeleport from '@teamway-ui/components/teleport'
+import { useDialog } from '@teamway-ui/components/dialog'
+import TyIcon from '@teamway-ui/components/icon'
+import { useDeprecated, useLocale, useNamespace } from '@teamway-ui/hooks'
 import { drawerEmits, drawerProps } from './drawer'
 import { useResizable } from './composables/useResizable'
 

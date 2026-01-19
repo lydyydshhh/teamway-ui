@@ -1,6 +1,6 @@
 import { computed, ref, shallowRef } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
-import { MINIMUM_INPUT_WIDTH } from '@element-plus/constants'
+import { MINIMUM_INPUT_WIDTH } from '@teamway-ui/constants'
 
 export function useCalcInputWidth() {
   const calculatorRef = shallowRef<HTMLElement>()

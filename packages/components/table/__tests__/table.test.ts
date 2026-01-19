@@ -1,9 +1,9 @@
 // @ts-nocheck
 import { h, nextTick } from 'vue'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import TyCheckbox from '@element-plus/components/checkbox'
-import triggerEvent from '@element-plus/test-utils/trigger-event'
-import { rAF } from '@element-plus/test-utils/tick'
+import TyCheckbox from '@teamway-ui/components/checkbox'
+import triggerEvent from '@teamway-ui/test-utils/trigger-event'
+import { rAF } from '@teamway-ui/test-utils/tick'
 import { CaretBottom, CaretTop } from '@element-plus/icons-vue'
 import TyTable from '../src/table.vue'
 import TyTableColumn from '../src/table-column'

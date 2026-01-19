@@ -1,5 +1,5 @@
 import { Close } from '@element-plus/icons-vue'
-import { buildProps, definePropType, iconPropType } from '@element-plus/utils'
+import { buildProps, definePropType, iconPropType } from '@teamway-ui/utils'
 
 import type {
   AppContext,

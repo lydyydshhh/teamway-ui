@@ -1331,7 +1331,7 @@ _2024-09-06_
 
 #### Refactors
 
-- Import shared utilities from @element-plus/utils (#18048 by @makedopamine)
+- Import shared utilities from @teamway-ui/utils (#18048 by @makedopamine)
 
 ### 2.8.1
 

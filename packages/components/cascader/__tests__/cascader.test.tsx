@@ -1,19 +1,19 @@
 import { Comment, h, nextTick, reactive, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, test, vi } from 'vitest'
-import { EVENT_CODE } from '@element-plus/constants'
-import triggerEvent from '@element-plus/test-utils/trigger-event'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import triggerEvent from '@teamway-ui/test-utils/trigger-event'
 import { ArrowDown, Check, CircleClose } from '@element-plus/icons-vue'
-import { usePopperContainerId } from '@element-plus/hooks'
-import { hasClass } from '@element-plus/utils'
-import TyForm, { TyFormItem } from '@element-plus/components/form'
-import TyScrollbar from '@element-plus/components/scrollbar'
-import TyTag from '@element-plus/components/tag'
-import TyTooltip from '@element-plus/components/tooltip'
+import { usePopperContainerId } from '@teamway-ui/hooks'
+import { hasClass } from '@teamway-ui/utils'
+import TyForm, { TyFormItem } from '@teamway-ui/components/form'
+import TyScrollbar from '@teamway-ui/components/scrollbar'
+import TyTag from '@teamway-ui/components/tag'
+import TyTooltip from '@teamway-ui/components/tooltip'
 import Cascader from '../src/cascader.vue'
 
 import type { VNode } from 'vue'
-import type TyCascader from '@element-plus/components/cascader'
+import type TyCascader from '@teamway-ui/components/cascader'
 
 vi.mock('lodash-unified', async () => {
   return {

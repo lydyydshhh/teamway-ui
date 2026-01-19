@@ -54,10 +54,10 @@ import {
   ref,
   watch,
 } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { TyIcon } from '@element-plus/components/icon'
+import { useNamespace } from '@teamway-ui/hooks'
+import { TyIcon } from '@teamway-ui/components/icon'
 import { Check, Close } from '@element-plus/icons-vue'
-import { isNumber } from '@element-plus/utils'
+import { isNumber } from '@teamway-ui/utils'
 import { stepProps } from './item'
 import { STEPS_INJECTION_KEY } from './tokens'
 

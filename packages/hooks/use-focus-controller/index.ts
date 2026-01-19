@@ -7,7 +7,7 @@ import {
   watch,
 } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { isElement, isFocusable, isFunction } from '@element-plus/utils'
+import { isElement, isFocusable, isFunction } from '@teamway-ui/utils'
 
 import type { ShallowRef } from 'vue'
 import type { MaybeRef } from '@vueuse/core'

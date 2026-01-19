@@ -1,4 +1,4 @@
-import { isObject } from '@element-plus/utils'
+import { isObject } from '@teamway-ui/utils'
 
 import type { PanelItemState } from '../type'
 

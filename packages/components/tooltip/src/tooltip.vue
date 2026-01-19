@@ -62,21 +62,21 @@ import {
   unref,
   watch,
 } from 'vue'
-import { TyPopper, TyPopperArrow } from '@element-plus/components/popper'
-import { isBoolean } from '@element-plus/utils'
+import { TyPopper, TyPopperArrow } from '@teamway-ui/components/popper'
+import { isBoolean } from '@teamway-ui/utils'
 import {
   useDelayedToggle,
   useId,
   useNamespace,
   usePopperContainer,
-} from '@element-plus/hooks'
+} from '@teamway-ui/hooks'
 import { TOOLTIP_INJECTION_KEY } from './constants'
 import { tooltipEmits, useTooltipModelToggle, useTooltipProps } from './tooltip'
 import TyTooltipTrigger from './trigger.vue'
 import TyTooltipContent from './content.vue'
 
 import type { TooltipContentInstance } from './content'
-import type { PopperInstance } from '@element-plus/components/popper'
+import type { PopperInstance } from '@teamway-ui/components/popper'
 
 defineOptions({
   name: 'TyTooltip',

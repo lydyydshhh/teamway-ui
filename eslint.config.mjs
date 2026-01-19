@@ -1,1 +1,1 @@
-export { default } from '@element-plus/eslint-config'
+export { default } from '@teamway-ui/eslint-config'

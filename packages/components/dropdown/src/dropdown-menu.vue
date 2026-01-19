@@ -21,13 +21,13 @@ import {
   composeEventHandlers,
   composeRefs,
   getEventCode,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+} from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import {
   ROVING_FOCUS_COLLECTION_INJECTION_KEY,
   ROVING_FOCUS_GROUP_INJECTION_KEY,
-} from '@element-plus/components/roving-focus-group'
-import { useNamespace } from '@element-plus/hooks'
+} from '@teamway-ui/components/roving-focus-group'
+import { useNamespace } from '@teamway-ui/hooks'
 import { DROPDOWN_INJECTION_KEY } from './tokens'
 import { dropdownMenuProps } from './dropdown'
 import { useDropdown } from './useDropdown'

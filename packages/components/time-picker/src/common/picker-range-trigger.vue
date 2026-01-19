@@ -43,9 +43,9 @@
 
 <script lang="ts" setup>
 import { computed, reactive, ref } from 'vue'
-import { useAttrs, useFocusController, useNamespace } from '@element-plus/hooks'
+import { useAttrs, useFocusController, useNamespace } from '@teamway-ui/hooks'
 import { timePickerRangeTriggerProps } from './props'
-import { useFormItem, useFormItemInputId } from '@element-plus/components/form'
+import { useFormItem, useFormItemInputId } from '@teamway-ui/components/form'
 
 import type { CSSProperties } from 'vue'
 

@@ -1,4 +1,4 @@
-import { buildProps, definePropType } from '@element-plus/utils'
+import { buildProps, definePropType } from '@teamway-ui/utils'
 import { column } from './common'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes, StyleValue } from 'vue'

@@ -1,16 +1,16 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { rAF } from '@element-plus/test-utils/tick'
-import { TyPopperTrigger } from '@element-plus/components/popper'
-import { TyInput } from '@element-plus/components/input'
+import { rAF } from '@teamway-ui/test-utils/tick'
+import { TyPopperTrigger } from '@teamway-ui/components/popper'
+import { TyInput } from '@teamway-ui/components/input'
 import Tooltip from '../src/tooltip.vue'
 
 import type { VNode } from 'vue'
 import type { VueWrapper } from '@vue/test-utils'
 import type { TooltipInstance } from '../src/tooltip'
 
-vi.mock('@element-plus/utils/error', () => ({
+vi.mock('@teamway-ui/utils/error', () => ({
   debugWarn: vi.fn(),
 }))
 

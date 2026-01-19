@@ -1,8 +1,8 @@
 import { nextTick } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, it } from 'vitest'
-import { EVENT_CODE } from '@element-plus/constants'
-import { TOOLTIP_INJECTION_KEY } from '@element-plus/components/tooltip'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import { TOOLTIP_INJECTION_KEY } from '@teamway-ui/components/tooltip'
 import TyTooltipTrigger from '../src/trigger.vue'
 import { genTooltipProvides } from '../test-helper/provides'
 

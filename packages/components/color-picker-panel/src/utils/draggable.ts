@@ -1,4 +1,4 @@
-import { isClient } from '@element-plus/utils'
+import { isClient } from '@teamway-ui/utils'
 
 let isDragging = false
 

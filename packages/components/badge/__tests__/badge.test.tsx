@@ -2,7 +2,7 @@ import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
 import { InfoFilled } from '@element-plus/icons-vue'
-import { TyIcon } from '@element-plus/components/icon'
+import { TyIcon } from '@teamway-ui/components/icon'
 import Badge from '../src/badge.vue'
 
 const AXIOM = 'Rem is the best girl'

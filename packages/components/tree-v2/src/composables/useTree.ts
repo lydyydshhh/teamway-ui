@@ -1,5 +1,5 @@
 import { computed, ref, shallowRef, watch } from 'vue'
-import { isObject } from '@element-plus/utils'
+import { isObject } from '@teamway-ui/utils'
 import {
   CURRENT_CHANGE,
   NODE_CLICK,
@@ -14,10 +14,10 @@ import { useFilter } from './useFilter'
 import type {
   FixedSizeList,
   Alignment as ScrollStrategy,
-} from '@element-plus/components/virtual-list'
+} from '@teamway-ui/components/virtual-list'
 import type { SetupContext } from 'vue'
 import type { treeEmits } from '../virtual-tree'
-import type { CheckboxValueType } from '@element-plus/components/checkbox'
+import type { CheckboxValueType } from '@teamway-ui/components/checkbox'
 import type {
   Tree,
   TreeData,

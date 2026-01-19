@@ -1,6 +1,6 @@
-import { buildProps } from '@element-plus/utils'
-import { createModelToggleComposable } from '@element-plus/hooks'
-import { popperArrowProps, popperProps } from '@element-plus/components/popper'
+import { buildProps } from '@teamway-ui/utils'
+import { createModelToggleComposable } from '@teamway-ui/hooks'
+import { popperArrowProps, popperProps } from '@teamway-ui/components/popper'
 import { useTooltipContentProps } from './content'
 import { useTooltipTriggerProps } from './trigger'
 

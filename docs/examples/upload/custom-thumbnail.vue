@@ -40,7 +40,7 @@
 import { ref } from 'vue'
 import { Delete, Download, Plus, ZoomIn } from '@element-plus/icons-vue'
 
-import type { UploadFile } from 'element-plus'
+import type { UploadFile } from 'teamway-ui'
 
 const dialogImageUrl = ref('')
 const dialogVisible = ref(false)

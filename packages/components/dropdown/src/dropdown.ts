@@ -1,17 +1,17 @@
-import { buildProps, definePropType, iconPropType } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { buildProps, definePropType, iconPropType } from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import {
   useTooltipContentProps,
   useTooltipTriggerProps,
-} from '@element-plus/components/tooltip'
-import { roleTypes } from '@element-plus/components/popper'
+} from '@teamway-ui/components/tooltip'
+import { roleTypes } from '@teamway-ui/components/popper'
 
-import type { TooltipTriggerType } from '@element-plus/components/tooltip'
-import type { Placement } from '@element-plus/components/popper'
+import type { TooltipTriggerType } from '@teamway-ui/components/tooltip'
+import type { Placement } from '@teamway-ui/components/popper'
 import type { Options } from '@popperjs/core'
-import type { ButtonProps, ButtonType } from '@element-plus/components/button'
+import type { ButtonProps, ButtonType } from '@teamway-ui/components/button'
 import type { ComponentInternalInstance, ComputedRef } from 'vue'
-import type { Arrayable, Nullable } from '@element-plus/utils'
+import type { Arrayable, Nullable } from '@teamway-ui/utils'
 
 export interface IElDropdownInstance {
   instance?: ComponentInternalInstance

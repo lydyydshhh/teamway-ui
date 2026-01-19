@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@teamway-ui/utils'
 import TreeV2 from './src/tree.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyTreeV2: SFCWithInstall<typeof TreeV2> = withInstall(TreeV2)
 export default TyTreeV2

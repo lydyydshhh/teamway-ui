@@ -81,10 +81,10 @@
 
 <script lang="ts" setup>
 import { computed, provide, ref, useSlots } from 'vue'
-import { TyOverlay } from '@element-plus/components/overlay'
-import { useDeprecated, useNamespace, useSameTarget } from '@element-plus/hooks'
-import TyFocusTrap from '@element-plus/components/focus-trap'
-import TyTeleport from '@element-plus/components/teleport'
+import { TyOverlay } from '@teamway-ui/components/overlay'
+import { useDeprecated, useNamespace, useSameTarget } from '@teamway-ui/hooks'
+import TyFocusTrap from '@teamway-ui/components/focus-trap'
+import TyTeleport from '@teamway-ui/components/teleport'
 import TyDialogContent from './dialog-content.vue'
 import { dialogInjectionKey } from './constants'
 import { dialogEmits, dialogProps } from './dialog'

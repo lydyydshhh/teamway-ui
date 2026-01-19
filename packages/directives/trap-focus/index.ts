@@ -1,6 +1,6 @@
 import { nextTick } from 'vue'
-import { getEventCode, obtainAllFocusableElements } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { getEventCode, obtainAllFocusableElements } from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
 
 import type { ObjectDirective } from 'vue'
 

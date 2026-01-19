@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/slider.scss'
-import '@element-plus/components/input-number/style'
-import '@element-plus/components/tooltip/style'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/theme-chalk/src/slider.scss'
+import '@teamway-ui/components/input-number/style'
+import '@teamway-ui/components/tooltip/style'

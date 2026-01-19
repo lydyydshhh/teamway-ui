@@ -61,17 +61,17 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import TyCheckbox from '@element-plus/components/checkbox'
-import TyRadio from '@element-plus/components/radio'
-import TyIcon from '@element-plus/components/icon'
-import { useNamespace } from '@element-plus/hooks'
+import TyCheckbox from '@teamway-ui/components/checkbox'
+import TyRadio from '@teamway-ui/components/radio'
+import TyIcon from '@teamway-ui/components/icon'
+import { useNamespace } from '@teamway-ui/hooks'
 import { ArrowRight, Check, Loading } from '@element-plus/icons-vue'
 import NodeContent from './node-content'
 import { CASCADER_PANEL_INJECTION_KEY } from './types'
 
 import type { CascaderNode } from './types'
 import type { PropType } from 'vue'
-import type { CheckboxValueType } from '@element-plus/components/checkbox'
+import type { CheckboxValueType } from '@teamway-ui/components/checkbox'
 
 defineOptions({
   name: 'TyCascaderNode',

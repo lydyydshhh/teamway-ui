@@ -1,8 +1,8 @@
-import { buildProps, definePropType } from '@element-plus/utils'
+import { buildProps, definePropType } from '@teamway-ui/utils'
 import {
   virtualizedGridProps,
   virtualizedScrollbarProps,
-} from '@element-plus/components/virtual-list'
+} from '@teamway-ui/components/virtual-list'
 import {
   classType,
   columns,

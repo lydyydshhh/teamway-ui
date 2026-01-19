@@ -6,8 +6,8 @@
 
 <script lang="ts" setup>
 import { computed, useSlots } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { buildProps } from '@element-plus/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { buildProps } from '@teamway-ui/utils'
 
 import type { Component, VNode } from 'vue'
 

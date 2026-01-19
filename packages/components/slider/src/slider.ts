@@ -4,15 +4,15 @@ import {
   definePropType,
   isArray,
   isNumber,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import {
   CHANGE_EVENT,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
+} from '@teamway-ui/constants'
+import { useAriaProps, useSizeProp } from '@teamway-ui/hooks'
 
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@teamway-ui/utils'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type { SliderMarkerProps } from './marker'
 import type Slider from './slider.vue'

@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style/css'
-import '@element-plus/components/empty/style/css'
-import '@element-plus/components/virtual-list/style/css'
-import '@element-plus/theme-chalk/ty-table-v2.css'
+import '@teamway-ui/components/base/style/css'
+import '@teamway-ui/components/empty/style/css'
+import '@teamway-ui/components/virtual-list/style/css'
+import '@teamway-ui/theme-chalk/ty-table-v2.css'

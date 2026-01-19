@@ -17,16 +17,16 @@ import {
   isNumber,
   isString,
   isUndefined,
-} from '@element-plus/utils'
-import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import TyIcon from '@element-plus/components/icon'
+} from '@teamway-ui/utils'
+import { EVENT_CODE, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import TyIcon from '@teamway-ui/components/icon'
 import { Plus } from '@element-plus/icons-vue'
-import { useNamespace, useOrderedChildren } from '@element-plus/hooks'
+import { useNamespace, useOrderedChildren } from '@teamway-ui/hooks'
 import { tabsRootContextKey } from './constants'
 import TabNav from './tab-nav'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes, VNode } from 'vue'
-import type { Awaitable } from '@element-plus/utils'
+import type { Awaitable } from '@teamway-ui/utils'
 import type { TabNavInstance } from './tab-nav'
 import type { TabPaneName, TabsPaneContext } from './constants'
 

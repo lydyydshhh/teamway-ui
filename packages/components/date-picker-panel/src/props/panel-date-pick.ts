@@ -1,8 +1,8 @@
-import { buildProps, definePropType } from '@element-plus/utils'
+import { buildProps, definePropType } from '@teamway-ui/utils'
 import { panelSharedProps } from './shared'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
-import type { DayOrDays } from '@element-plus/components/time-picker'
+import type { DayOrDays } from '@teamway-ui/components/time-picker'
 
 export const panelDatePickProps = buildProps({
   ...panelSharedProps,

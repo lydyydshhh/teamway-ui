@@ -1,6 +1,6 @@
 import { nextTick, onMounted, ref } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { isArray, isNumber } from '@element-plus/utils'
+import { isArray, isNumber } from '@teamway-ui/utils'
 
 import type { SliderInitData, SliderProps } from '../slider'
 

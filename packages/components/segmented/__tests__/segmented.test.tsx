@@ -2,7 +2,7 @@ import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test, vi } from 'vitest'
 import Segmented from '../src/segmented.vue'
-import { TyForm } from '@element-plus/components/form'
+import { TyForm } from '@teamway-ui/components/form'
 
 describe('Segmented.vue', () => {
   test('render test', async () => {

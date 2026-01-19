@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue'
-import { TyNotification, TySwitch } from 'element-plus'
+import { TyNotification, TySwitch } from 'teamway-ui'
 
 const open = () => {
   TyNotification({

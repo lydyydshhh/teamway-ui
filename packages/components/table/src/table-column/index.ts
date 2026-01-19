@@ -9,8 +9,8 @@ import {
   onMounted,
   ref,
 } from 'vue'
-import TyCheckbox from '@element-plus/components/checkbox'
-import { isArray, isString, isUndefined } from '@element-plus/utils'
+import TyCheckbox from '@teamway-ui/components/checkbox'
+import { isArray, isString, isUndefined } from '@teamway-ui/utils'
 import { cellStarts } from '../config'
 import { compose, mergeOptions } from '../util'
 import useWatcher from './watcher-helper'

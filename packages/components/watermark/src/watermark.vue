@@ -14,7 +14,7 @@ import {
   watch,
 } from 'vue'
 import { useMutationObserver } from '@vueuse/core'
-import { isArray, isUndefined } from '@element-plus/utils'
+import { isArray, isUndefined } from '@teamway-ui/utils'
 import { watermarkProps } from './watermark'
 import { getPixelRatio, getStyleStr, reRendering } from './utils'
 import useClips from './useClips'

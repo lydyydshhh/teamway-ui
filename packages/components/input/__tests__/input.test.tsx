@@ -1,8 +1,8 @@
 import { nextTick, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { afterEach, describe, expect, test, vi } from 'vitest'
-import defineGetter from '@element-plus/test-utils/define-getter'
-import { TyFormItem as FormItem, TyForm } from '@element-plus/components/form'
+import defineGetter from '@teamway-ui/test-utils/define-getter'
+import { TyFormItem as FormItem, TyForm } from '@teamway-ui/components/form'
 import Input from '../src/input.vue'
 
 import type { CSSProperties } from 'vue'

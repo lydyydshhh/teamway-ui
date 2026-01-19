@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@teamway-ui/utils'
 import ConfigProvider from './src/config-provider'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyConfigProvider: SFCWithInstall<typeof ConfigProvider> =
   withInstall(ConfigProvider)

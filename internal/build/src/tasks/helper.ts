@@ -13,7 +13,7 @@ import {
   getPackageManifest,
   normalizePath,
   projRoot,
-} from '@element-plus/build-utils'
+} from '@teamway-ui/build-utils'
 
 import type { TaskFunction } from 'gulp'
 import type {

@@ -5,7 +5,7 @@ import {
   definePropType,
   isArray,
   isFunction,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import { isEqual } from 'lodash-unified'
 
 import type { ExtractPropTypes, InjectionKey, Ref } from 'vue'

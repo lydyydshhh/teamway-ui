@@ -5,15 +5,15 @@
 import { DefineComponent, defineComponent, nextTick, reactive } from 'vue'
 import { mount } from '@vue/test-utils'
 import { beforeEach, describe, expect, it, test, vi } from 'vitest'
-import { NOOP } from '@element-plus/utils'
-import { usePopperContainerId } from '@element-plus/hooks'
-import { TyFormItem as FormItem } from '@element-plus/components/form'
+import { NOOP } from '@teamway-ui/utils'
+import { usePopperContainerId } from '@teamway-ui/hooks'
+import { TyFormItem as FormItem } from '@teamway-ui/components/form'
 import Autocomplete from '../src/autocomplete.vue'
 import {
   AutocompleteFetchSuggestionsCallback,
   AutocompletePropsPublic,
 } from '../src/autocomplete'
-import { EVENT_CODE } from '@element-plus/constants'
+import { EVENT_CODE } from '@teamway-ui/constants'
 
 vi.unmock('lodash')
 

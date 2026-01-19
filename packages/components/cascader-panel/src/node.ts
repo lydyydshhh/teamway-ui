@@ -1,4 +1,4 @@
-import { isArray, isEmpty, isFunction, isUndefined } from '@element-plus/utils'
+import { isArray, isEmpty, isFunction, isUndefined } from '@teamway-ui/utils'
 
 import type {
   CascaderConfig,

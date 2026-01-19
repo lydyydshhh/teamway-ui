@@ -6,7 +6,7 @@ import {
   shallowRef,
   triggerRef,
 } from 'vue'
-import { flattedChildren } from '@element-plus/utils'
+import { flattedChildren } from '@teamway-ui/utils'
 
 import type { Component, ComponentInternalInstance, VNode } from 'vue'
 

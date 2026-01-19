@@ -42,9 +42,9 @@
 
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { scrollIntoView } from '@element-plus/utils'
-import TyScrollbar from '@element-plus/components/scrollbar'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import { scrollIntoView } from '@teamway-ui/utils'
+import TyScrollbar from '@teamway-ui/components/scrollbar'
 import { mentionDropdownEmits, mentionDropdownProps } from './mention-dropdown'
 
 import type { MentionOption } from './types'

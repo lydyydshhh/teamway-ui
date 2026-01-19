@@ -1,5 +1,5 @@
 import type { InjectionKey, Ref } from 'vue'
-import type { UseNamespaceReturn } from '@element-plus/hooks'
+import type { UseNamespaceReturn } from '@teamway-ui/hooks'
 
 export type TableV2Context = {
   isScrolling: Ref<boolean>

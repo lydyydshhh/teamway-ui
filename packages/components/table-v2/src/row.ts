@@ -1,5 +1,5 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { virtualizedGridProps } from '@element-plus/components/virtual-list'
+import { buildProps, definePropType } from '@teamway-ui/utils'
+import { virtualizedGridProps } from '@teamway-ui/components/virtual-list'
 import { columns, expandColumnKey, rowKey } from './common'
 
 import type {

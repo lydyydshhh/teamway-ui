@@ -17,10 +17,10 @@ import {
   TyIcon,
   TyPopover,
   useLocale,
-} from 'element-plus'
+} from 'teamway-ui'
 import { Filter } from '@element-plus/icons-vue'
 
-import type { HeaderCellSlotProps } from 'element-plus'
+import type { HeaderCellSlotProps } from 'teamway-ui'
 
 const generateColumns = (length = 10, prefix = 'column-', props?: any) =>
   Array.from({ length }).map((_, columnIndex) => ({

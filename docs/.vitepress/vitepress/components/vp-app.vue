@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-// import { TyMessageBox } from 'element-plus'
+// import { TyMessageBox } from 'teamway-ui'
 // import dayjs from 'dayjs'
 import { isClient, useEventListener, useToggle } from '@vueuse/core'
-import { EVENT_CODE } from 'element-plus'
+import { EVENT_CODE } from 'teamway-ui'
 import { useSidebar } from '../composables/sidebar'
 import { useToggleWidgets } from '../composables/toggle-widgets'
 // import { useLang } from '../composables/lang'

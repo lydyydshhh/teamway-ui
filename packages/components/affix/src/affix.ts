@@ -3,9 +3,9 @@ import {
   definePropType,
   isBoolean,
   isNumber,
-} from '@element-plus/utils'
-import { CHANGE_EVENT } from '@element-plus/constants'
-import { teleportProps } from '@element-plus/components/teleport'
+} from '@teamway-ui/utils'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
+import { teleportProps } from '@teamway-ui/components/teleport'
 
 import type {
   CSSProperties,

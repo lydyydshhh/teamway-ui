@@ -17,8 +17,8 @@
 
 <script lang="ts">
 import { computed, defineComponent, getCurrentInstance, inject } from 'vue'
-import { TyRovingFocusItem } from '@element-plus/components/roving-focus-group'
-import { composeEventHandlers, whenMouse } from '@element-plus/utils'
+import { TyRovingFocusItem } from '@teamway-ui/components/roving-focus-group'
+import { composeEventHandlers, whenMouse } from '@teamway-ui/utils'
 import TyDropdownItemImpl from './dropdown-item-impl.vue'
 import { useDropdown } from './useDropdown'
 import { dropdownItemProps } from './dropdown'

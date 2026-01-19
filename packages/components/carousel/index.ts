@@ -1,8 +1,8 @@
-import { withInstall, withNoopInstall } from '@element-plus/utils'
+import { withInstall, withNoopInstall } from '@teamway-ui/utils'
 import Carousel from './src/carousel.vue'
 import CarouselItem from './src/carousel-item.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyCarousel: SFCWithInstall<typeof Carousel> & {
   CarouselItem: typeof CarouselItem

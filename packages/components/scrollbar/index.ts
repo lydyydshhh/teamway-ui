@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@teamway-ui/utils'
 import Scrollbar from './src/scrollbar.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyScrollbar: SFCWithInstall<typeof Scrollbar> =
   withInstall(Scrollbar)

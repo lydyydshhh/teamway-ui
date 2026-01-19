@@ -1,10 +1,10 @@
-import { buttonTypes } from '@element-plus/components/button'
+import { buttonTypes } from '@teamway-ui/components/button'
 import { QuestionFilled } from '@element-plus/icons-vue'
-import { buildProps, iconPropType } from '@element-plus/utils'
+import { buildProps, iconPropType } from '@teamway-ui/utils'
 import {
   useTooltipContentProps,
   useTooltipTriggerProps,
-} from '@element-plus/components/tooltip'
+} from '@teamway-ui/components/tooltip'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type Popconfirm from './popconfirm.vue'

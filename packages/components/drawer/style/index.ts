@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/drawer.scss'
-import '@element-plus/components/overlay/style'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/theme-chalk/src/drawer.scss'
+import '@teamway-ui/components/overlay/style'

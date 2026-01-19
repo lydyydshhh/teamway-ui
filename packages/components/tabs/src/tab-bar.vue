@@ -10,8 +10,8 @@
 <script lang="ts" setup>
 import { computed, inject, nextTick, onBeforeUnmount, ref, watch } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
-import { capitalize, isUndefined, throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { capitalize, isUndefined, throwError } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import { tabsRootContextKey } from './constants'
 import { tabBarProps } from './tab-bar'
 

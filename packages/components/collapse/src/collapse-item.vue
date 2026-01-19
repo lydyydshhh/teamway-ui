@@ -42,8 +42,8 @@
 </template>
 
 <script lang="ts" setup>
-import TyCollapseTransition from '@element-plus/components/collapse-transition'
-import TyIcon from '@element-plus/components/icon'
+import TyCollapseTransition from '@teamway-ui/components/collapse-transition'
+import TyIcon from '@teamway-ui/components/icon'
 import { collapseItemProps } from './collapse-item'
 import { useCollapseItem, useCollapseItemDOM } from './use-collapse-item'
 

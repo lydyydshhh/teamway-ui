@@ -22,8 +22,8 @@ import {
   toRefs,
 } from 'vue'
 import { useMutationObserver } from '@vueuse/core'
-import { ensureArray, isArray } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { ensureArray, isArray } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import { selectGroupKey } from './token'
 
 import type { Component, VNode, VNodeArrayChildren } from 'vue'

@@ -10,8 +10,8 @@ import {
   toRefs,
   watch,
 } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { throwError } from '@element-plus/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { throwError } from '@teamway-ui/utils'
 import { getCollapsible, isCollapsible } from './hooks/usePanel'
 import SplitBar from './split-bar.vue'
 import { splitterPanelEmits, splitterPanelProps } from './split-panel'

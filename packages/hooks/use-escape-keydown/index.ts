@@ -1,6 +1,6 @@
 import { onBeforeUnmount, onMounted } from 'vue'
-import { getEventCode, isClient } from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
+import { getEventCode, isClient } from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
 
 let registeredEscapeHandlers: ((e: KeyboardEvent) => void)[] = []
 

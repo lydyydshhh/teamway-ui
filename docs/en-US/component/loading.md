@@ -48,7 +48,7 @@ loading/fullscreen
 You can also invoke Loading with a service. Import Loading service:
 
 ```ts
-import { ElLoading } from 'element-plus'
+import { ElLoading } from 'teamway-ui'
 ```
 
 Invoke it:
@@ -93,7 +93,7 @@ If you globally registered ElLoading component, it will automatically inherit yo
 
 ```ts
 import { getCurrentInstance } from 'vue'
-import { ElLoading } from 'element-plus'
+import { ElLoading } from 'teamway-ui'
 
 // in your setup method
 const { appContext } = getCurrentInstance()!

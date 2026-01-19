@@ -45,7 +45,7 @@ will start the local development environment.
 </template>
 
 <script setup lang="ts">
-// make sure this component is registered in @element-plus/components
+// make sure this component is registered in @teamway-ui/components
 </script>
 ```
 

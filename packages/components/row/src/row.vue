@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { computed, provide } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 import { rowContextKey } from './constants'
 import { rowProps } from './row'
 

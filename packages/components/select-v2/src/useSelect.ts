@@ -21,33 +21,33 @@ import {
   isNumber,
   isObject,
   isUndefined,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import {
   useComposition,
   useEmptyValues,
   useFocusController,
   useLocale,
   useNamespace,
-} from '@element-plus/hooks'
+} from '@teamway-ui/hooks'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   MINIMUM_INPUT_WIDTH,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@teamway-ui/constants'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@teamway-ui/components/form'
 import { useAllowCreate } from './useAllowCreate'
 import { useProps } from './useProps'
 
 import type { Option, OptionType, SelectStates } from './select.types'
 import type { SelectV2Props } from './token'
 import type { SelectV2EmitFn } from './defaults'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
 import type { SelectDropdownInstance } from './select-dropdown'
 
 const useSelect = (props: SelectV2Props, emit: SelectV2EmitFn) => {

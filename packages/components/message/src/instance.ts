@@ -1,7 +1,7 @@
 import { shallowReactive } from 'vue'
 
 import type { ComponentInternalInstance, VNode } from 'vue'
-import type { Mutable } from '@element-plus/utils'
+import type { Mutable } from '@teamway-ui/utils'
 import type { MessageHandler, MessagePlacement, MessageProps } from './message'
 
 export type MessageContext = {

@@ -1,7 +1,7 @@
 import { nextTick, unref } from 'vue'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
-import makeMount from '@element-plus/test-utils/make-mount'
-import makeScroll from '@element-plus/test-utils/make-scroll'
+import makeMount from '@teamway-ui/test-utils/make-mount'
+import makeScroll from '@teamway-ui/test-utils/make-scroll'
 import {
   CENTERED_ALIGNMENT,
   END_ALIGNMENT,

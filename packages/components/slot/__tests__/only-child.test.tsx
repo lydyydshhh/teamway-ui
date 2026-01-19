@@ -1,13 +1,13 @@
 import { Comment, Fragment, h, nextTick, ref } from 'vue'
 import { shallowMount } from '@vue/test-utils'
 import { afterEach, describe, expect, it, vi } from 'vitest'
-import { debugWarn } from '@element-plus/utils'
-import { FORWARD_REF_INJECTION_KEY } from '@element-plus/hooks'
+import { debugWarn } from '@teamway-ui/utils'
+import { FORWARD_REF_INJECTION_KEY } from '@teamway-ui/hooks'
 import { OnlyChild } from '../src/only-child'
 
 import type { VNodeArrayChildren } from 'vue'
 
-vi.mock('@element-plus/utils/error', () => ({
+vi.mock('@teamway-ui/utils/error', () => ({
   debugWarn: vi.fn(),
 }))
 

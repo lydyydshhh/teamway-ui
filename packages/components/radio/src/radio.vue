@@ -42,8 +42,8 @@
 
 <script lang="ts" setup>
 import { nextTick } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import { useNamespace } from '@teamway-ui/hooks'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
 import { radioEmits, radioProps } from './radio'
 import { useRadio } from './use-radio'
 

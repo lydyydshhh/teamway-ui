@@ -11,16 +11,10 @@
 <script lang="tsx" setup>
 import { ref } from 'vue'
 import dayjs from 'dayjs'
-import {
-  TableV2FixedDir,
-  TyButton,
-  TyIcon,
-  TyTag,
-  TyTooltip,
-} from 'element-plus'
+import { TableV2FixedDir, TyButton, TyIcon, TyTag, TyTooltip } from 'teamway-ui'
 import { Timer } from '@element-plus/icons-vue'
 
-import type { Column } from 'element-plus'
+import type { Column } from 'teamway-ui'
 
 let id = 0
 

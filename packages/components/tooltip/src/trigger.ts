@@ -1,8 +1,8 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { popperTriggerProps } from '@element-plus/components/popper'
-import { EVENT_CODE } from '@element-plus/constants'
+import { buildProps, definePropType } from '@teamway-ui/utils'
+import { popperTriggerProps } from '@teamway-ui/components/popper'
+import { EVENT_CODE } from '@teamway-ui/constants'
 
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@teamway-ui/utils'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 
 export type TooltipTriggerType = 'hover' | 'focus' | 'click' | 'contextmenu'

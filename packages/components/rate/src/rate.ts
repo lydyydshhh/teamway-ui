@@ -1,13 +1,13 @@
 import { Star, StarFilled } from '@element-plus/icons-vue'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 import {
   buildProps,
   definePropType,
   iconPropType,
   isNumber,
   mutable,
-} from '@element-plus/utils'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
+} from '@teamway-ui/utils'
+import { useAriaProps, useSizeProp } from '@teamway-ui/hooks'
 
 import type { Component, ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type Rate from './rate.vue'

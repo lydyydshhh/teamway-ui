@@ -1,5 +1,5 @@
-import type { SelectInstance } from '@element-plus/components/select'
-import type { TreeInstance } from '@element-plus/components/tree'
+import type { SelectInstance } from '@teamway-ui/components/select'
+import type { TreeInstance } from '@teamway-ui/components/tree'
 
 export type TreeSelectInstance = {
   treeRef: TreeInstance

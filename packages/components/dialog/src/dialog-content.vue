@@ -32,10 +32,10 @@
 
 <script lang="ts" setup>
 import { computed, inject } from 'vue'
-import { TyIcon } from '@element-plus/components/icon'
-import { FOCUS_TRAP_INJECTION_KEY } from '@element-plus/components/focus-trap'
-import { useDraggable, useLocale } from '@element-plus/hooks'
-import { CloseComponents, composeRefs } from '@element-plus/utils'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { FOCUS_TRAP_INJECTION_KEY } from '@teamway-ui/components/focus-trap'
+import { useDraggable, useLocale } from '@teamway-ui/hooks'
+import { CloseComponents, composeRefs } from '@teamway-ui/utils'
 import { dialogInjectionKey } from './constants'
 import { dialogContentEmits, dialogContentProps } from './dialog-content'
 

@@ -21,7 +21,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useLocale } from '@element-plus/hooks'
+import { useLocale } from '@teamway-ui/hooks'
 import { hueSliderProps } from '../props/slider'
 import { useSlider, useSliderDOM } from '../composables/use-slider'
 

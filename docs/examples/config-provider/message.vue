@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 import { reactive } from 'vue'
-import { TyMessage } from 'element-plus'
+import { TyMessage } from 'teamway-ui'
 
 const config = reactive({
   max: 3,

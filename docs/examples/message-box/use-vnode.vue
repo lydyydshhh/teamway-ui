@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue'
-import { TyMessageBox, TySwitch } from 'element-plus'
+import { TyMessageBox, TySwitch } from 'teamway-ui'
 
 const open = () => {
   TyMessageBox({

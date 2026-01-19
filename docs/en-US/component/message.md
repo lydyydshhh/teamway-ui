@@ -90,7 +90,7 @@ Element Plus has added a global method `$message` for `app.config.globalProperti
 ## Local import
 
 ```ts
-import { ElMessage } from 'element-plus'
+import { ElMessage } from 'teamway-ui'
 ```
 
 In this case you should call `ElMessage(options)`. We have also registered methods for different types, e.g. `ElMessage.success(options)`. You can call `ElMessage.closeAll()` to manually close all the instances.
@@ -109,7 +109,7 @@ If you globally registered ElMessage component, it will automatically inherit yo
 
 ```ts
 import { getCurrentInstance } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage } from 'teamway-ui'
 
 // in your setup method
 const { appContext } = getCurrentInstance()!

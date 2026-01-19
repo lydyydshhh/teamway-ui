@@ -24,9 +24,9 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
 import { isEqual } from 'lodash-unified'
-import { TyOption, TySelect } from '@element-plus/components/select'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { isArray } from '@element-plus/utils'
+import { TyOption, TySelect } from '@teamway-ui/components/select'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import { isArray } from '@teamway-ui/utils'
 import { usePagination } from '../usePagination'
 import { paginationSizesProps } from './sizes'
 

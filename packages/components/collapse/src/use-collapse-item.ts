@@ -1,5 +1,5 @@
 import { computed, inject, ref, unref } from 'vue'
-import { useIdInjection, useNamespace } from '@element-plus/hooks'
+import { useIdInjection, useNamespace } from '@teamway-ui/hooks'
 import { collapseContextKey } from './constants'
 
 import type { CollapseItemProps } from './collapse-item'

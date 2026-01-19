@@ -1,6 +1,6 @@
 import { ref, unref } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { cAF, rAF } from '@element-plus/utils'
+import { cAF, rAF } from '@teamway-ui/utils'
 
 import type { ComputedRef, Ref } from 'vue'
 import type { GridScrollOptions, GridStates } from '../types'

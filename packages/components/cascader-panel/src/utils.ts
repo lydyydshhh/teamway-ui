@@ -1,4 +1,4 @@
-import { isLeaf } from '@element-plus/utils'
+import { isLeaf } from '@teamway-ui/utils'
 
 import type { CascaderNode } from './types'
 

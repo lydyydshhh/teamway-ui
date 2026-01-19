@@ -1,5 +1,5 @@
-import { buildProps, definePropType } from '@element-plus/utils'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
+import { buildProps, definePropType } from '@teamway-ui/utils'
+import { useAriaProps, useSizeProp } from '@teamway-ui/hooks'
 import { radioEmits } from './radio'
 
 import type { RadioPropsPublic } from './radio'

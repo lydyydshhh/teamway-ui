@@ -84,7 +84,7 @@ import { useRouter, withBase } from 'vitepress'
 import { Search } from '@element-plus/icons-vue'
 import overviewLocale from '../../../i18n/component/overview.json'
 
-import type { InputInstance } from 'element-plus'
+import type { InputInstance } from 'teamway-ui'
 
 import { useSidebar } from '~/composables/sidebar'
 import { useLang } from '~/composables/lang'

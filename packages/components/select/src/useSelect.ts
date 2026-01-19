@@ -25,13 +25,13 @@ import {
   isPlainObject,
   isUndefined,
   scrollIntoView,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   MINIMUM_INPUT_WIDTH,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@teamway-ui/constants'
 import {
   useComposition,
   useEmptyValues,
@@ -39,17 +39,17 @@ import {
   useId,
   useLocale,
   useNamespace,
-} from '@element-plus/hooks'
+} from '@teamway-ui/hooks'
 import {
   useFormDisabled,
   useFormItem,
   useFormItemInputId,
   useFormSize,
-} from '@element-plus/components/form'
+} from '@teamway-ui/components/form'
 
 import type { Component } from 'vue'
-import type { TooltipInstance } from '@element-plus/components/tooltip'
-import type { ScrollbarInstance } from '@element-plus/components/scrollbar'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
+import type { ScrollbarInstance } from '@teamway-ui/components/scrollbar'
 import type { SelectEmits, SelectProps } from './select'
 import type {
   OptionBasic,

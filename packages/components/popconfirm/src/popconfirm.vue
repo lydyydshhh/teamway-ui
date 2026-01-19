@@ -57,14 +57,14 @@
 
 <script lang="ts" setup>
 import { computed, ref, unref } from 'vue'
-import TyButton from '@element-plus/components/button'
-import TyIcon from '@element-plus/components/icon'
-import TyTooltip from '@element-plus/components/tooltip'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { addUnit } from '@element-plus/utils'
+import TyButton from '@teamway-ui/components/button'
+import TyIcon from '@teamway-ui/components/icon'
+import TyTooltip from '@teamway-ui/components/tooltip'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import { addUnit } from '@teamway-ui/utils'
 import { popconfirmEmits, popconfirmProps } from './popconfirm'
 
-import type { TooltipInstance } from '@element-plus/components/tooltip'
+import type { TooltipInstance } from '@teamway-ui/components/tooltip'
 
 defineOptions({
   name: 'TyPopconfirm',

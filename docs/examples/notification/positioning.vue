@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import { TyNotification } from 'element-plus'
+import { TyNotification } from 'teamway-ui'
 
 const open1 = () => {
   TyNotification({

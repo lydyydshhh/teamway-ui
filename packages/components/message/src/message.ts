@@ -4,7 +4,7 @@ import {
   iconPropType,
   isClient,
   mutable,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 
 import type {
   AppContext,
@@ -12,7 +12,7 @@ import type {
   ExtractPublicPropTypes,
   VNode,
 } from 'vue'
-import type { Mutable } from '@element-plus/utils'
+import type { Mutable } from '@teamway-ui/utils'
 import type MessageConstructor from './message.vue'
 
 export const messageTypes = [

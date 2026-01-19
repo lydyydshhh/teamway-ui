@@ -53,11 +53,11 @@ import {
   TypeComponents,
   TypeComponentsMap,
   getEventCode,
-} from '@element-plus/utils'
-import { EVENT_CODE } from '@element-plus/constants'
-import TyBadge from '@element-plus/components/badge'
-import { useGlobalComponentSettings } from '@element-plus/components/config-provider'
-import { TyIcon } from '@element-plus/components/icon'
+} from '@teamway-ui/utils'
+import { EVENT_CODE } from '@teamway-ui/constants'
+import TyBadge from '@teamway-ui/components/badge'
+import { useGlobalComponentSettings } from '@teamway-ui/components/config-provider'
+import { TyIcon } from '@teamway-ui/components/icon'
 import {
   MESSAGE_DEFAULT_PLACEMENT,
   messageEmits,
@@ -65,7 +65,7 @@ import {
 } from './message'
 import { getLastOffset, getOffsetOrSpace } from './instance'
 
-import type { BadgeProps } from '@element-plus/components/badge'
+import type { BadgeProps } from '@teamway-ui/components/badge'
 import type { CSSProperties } from 'vue'
 
 const { Close } = TypeComponents

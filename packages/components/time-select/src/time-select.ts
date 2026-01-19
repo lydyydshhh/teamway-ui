@@ -1,8 +1,8 @@
-import { buildProps, definePropType } from '@element-plus/utils'
+import { buildProps, definePropType } from '@teamway-ui/utils'
 import { CircleClose, Clock } from '@element-plus/icons-vue'
-import { useEmptyValuesProps, useSizeProp } from '@element-plus/hooks'
+import { useEmptyValuesProps, useSizeProp } from '@teamway-ui/hooks'
 
-import type { PopperEffect } from '@element-plus/components/popper'
+import type { PopperEffect } from '@teamway-ui/components/popper'
 import type TimeSelect from './time-select.vue'
 import type {
   CSSProperties,

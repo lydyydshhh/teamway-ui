@@ -19,15 +19,15 @@ pnpm i
 ```shell
 # get dist
 pnpm build
-cd dist/element-plus
-# set cur element-plus to global `node_modules`
+cd dist/teamway-ui
+# set cur teamway-ui to global `node_modules`
 pnpm link --global
-# for esm we also need link element-plus for dist
-pnpm link --global element-plus
+# for esm we also need link teamway-ui for dist
+pnpm link --global teamway-ui
 
-# go to your project, link to `element-plus`
+# go to your project, link to `teamway-ui`
 cd your-project
-pnpm link --global element-plus
+pnpm link --global teamway-ui
 ```
 
 > More info see [pnpm link](https://pnpm.io/cli/link).

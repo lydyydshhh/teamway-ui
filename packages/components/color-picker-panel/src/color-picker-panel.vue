@@ -43,11 +43,11 @@
 
 <script lang="ts" setup>
 import { computed, inject, nextTick, onMounted, provide, ref, watch } from 'vue'
-import { TyInput } from '@element-plus/components/input'
-import { useFormDisabled, useFormItem } from '@element-plus/components/form'
-import { useNamespace } from '@element-plus/hooks'
-import { debugWarn } from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { TyInput } from '@teamway-ui/components/input'
+import { useFormDisabled, useFormItem } from '@teamway-ui/components/form'
+import { useNamespace } from '@teamway-ui/hooks'
+import { debugWarn } from '@teamway-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 import AlphaSlider from './components/alpha-slider.vue'
 import HueSlider from './components/hue-slider.vue'
 import Predefine from './components/predefine.vue'
@@ -60,7 +60,7 @@ import {
 } from './color-picker-panel'
 import { useCommonColor } from './composables/use-common-color'
 
-import type { InputInstance } from '@element-plus/components/input'
+import type { InputInstance } from '@teamway-ui/components/input'
 
 defineOptions({
   name: 'TyColorPickerPanel',

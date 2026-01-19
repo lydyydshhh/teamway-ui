@@ -57,10 +57,10 @@
 
 <script lang="ts" setup>
 import { computed, reactive, toRefs, useSlots } from 'vue'
-import { isEmpty } from '@element-plus/utils'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import { TyCheckbox, TyCheckboxGroup } from '@element-plus/components/checkbox'
-import { TyInput } from '@element-plus/components/input'
+import { isEmpty } from '@teamway-ui/utils'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import { TyCheckbox, TyCheckboxGroup } from '@teamway-ui/components/checkbox'
+import { TyInput } from '@teamway-ui/components/input'
 import { Search } from '@element-plus/icons-vue'
 import { transferPanelEmits, transferPanelProps } from './transfer-panel'
 import { useCheck, usePropsAlias } from './composables'

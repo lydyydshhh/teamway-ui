@@ -1,7 +1,7 @@
 import { nextTick, reactive, ref } from 'vue'
 import { mount } from '@vue/test-utils'
 import { describe, expect, test } from 'vitest'
-import { TyForm, TyFormItem } from '@element-plus/components/form'
+import { TyForm, TyFormItem } from '@teamway-ui/components/form'
 import Checkbox from '../src/checkbox.vue'
 import CheckboxButton from '../src/checkbox-button.vue'
 import CheckboxGroup from '../src/checkbox-group.vue'

@@ -26,7 +26,7 @@ import {
   toRefs,
   unref,
 } from 'vue'
-import { useId, useNamespace } from '@element-plus/hooks'
+import { useId, useNamespace } from '@teamway-ui/hooks'
 import { useOption } from './useOption'
 import { COMPONENT_NAME, optionProps } from './option'
 

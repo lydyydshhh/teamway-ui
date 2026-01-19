@@ -109,9 +109,9 @@
 <script lang="ts" setup>
 import { computed, provide, reactive, toRefs } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import TyInputNumber from '@element-plus/components/input-number'
-import { useFormItemInputId, useFormSize } from '@element-plus/components/form'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+import TyInputNumber from '@teamway-ui/components/input-number'
+import { useFormItemInputId, useFormSize } from '@teamway-ui/components/form'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
 import { sliderContextKey } from './constants'
 import { sliderEmits, sliderProps } from './slider'
 import SliderButton from './button.vue'

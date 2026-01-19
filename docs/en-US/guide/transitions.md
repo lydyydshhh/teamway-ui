@@ -38,7 +38,7 @@ transitions/collapse
 
 ```ts [main.ts]
 // collapse
-import { ElCollapseTransition } from 'element-plus'
+import { ElCollapseTransition } from 'teamway-ui'
 // fade/zoom
 import 'element-plus/theme-chalk/base.css'
 import App from './App.vue'

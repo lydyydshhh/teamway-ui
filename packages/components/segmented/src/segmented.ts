@@ -4,9 +4,9 @@ import {
   isBoolean,
   isNumber,
   isString,
-} from '@element-plus/utils'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
-import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+} from '@teamway-ui/utils'
+import { useAriaProps, useSizeProp } from '@teamway-ui/hooks'
+import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 
 import type { Option } from './types'
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'

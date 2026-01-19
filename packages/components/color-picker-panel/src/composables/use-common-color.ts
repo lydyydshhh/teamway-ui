@@ -1,6 +1,6 @@
 import { reactive, watch } from 'vue'
 import Color from '../utils/color'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 
 type CommonColorProps = {
   modelValue?: string | null

@@ -121,10 +121,10 @@
 <script lang="ts" setup>
 import { computed, inject, ref, toRef, unref, watch } from 'vue'
 import dayjs from 'dayjs'
-import TyIcon from '@element-plus/components/icon'
-import { useLocale } from '@element-plus/hooks'
+import TyIcon from '@teamway-ui/components/icon'
+import { useLocale } from '@teamway-ui/hooks'
 import { DArrowLeft, DArrowRight } from '@element-plus/icons-vue'
-import { PICKER_BASE_INJECTION_KEY } from '@element-plus/components/time-picker'
+import { PICKER_BASE_INJECTION_KEY } from '@teamway-ui/components/time-picker'
 import {
   correctlyParseUserInput,
   getDefaultValue,
@@ -138,7 +138,7 @@ import { useMonthRangeHeader } from '../composables/use-month-range-header'
 import { useRangePicker } from '../composables/use-range-picker'
 import { ROOT_PICKER_IS_DEFAULT_FORMAT_INJECTION_KEY } from '../constants'
 import MonthTable from './basic-month-table.vue'
-import { useFormDisabled } from '@element-plus/components/form'
+import { useFormDisabled } from '@teamway-ui/components/form'
 
 import type { Dayjs } from 'dayjs'
 

@@ -15,8 +15,8 @@ import {
   isNumber,
   isString,
   isValidElementNode,
-} from '@element-plus/utils'
-import { componentSizes } from '@element-plus/constants'
+} from '@teamway-ui/utils'
+import { componentSizes } from '@teamway-ui/constants'
 import Item from './item'
 import { useSpace } from './use-space'
 
@@ -29,7 +29,7 @@ import type {
   VNodeArrayChildren,
   VNodeChild,
 } from 'vue'
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@teamway-ui/utils'
 
 export const spaceProps = buildProps({
   /**

@@ -4,16 +4,16 @@ import {
   isFunction,
   isObject,
   isString,
-} from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { inputProps } from '@element-plus/components/input'
+} from '@teamway-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import { inputProps } from '@teamway-ui/components/input'
 import { filterOption } from './helper'
-import { useTooltipContentProps } from '@element-plus/components/tooltip'
+import { useTooltipContentProps } from '@teamway-ui/components/tooltip'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 import type Mention from './mention.vue'
 import type { MentionOption } from './types'
-import type { Options } from '@element-plus/components/popper'
+import type { Options } from '@teamway-ui/components/popper'
 
 export const mentionProps = buildProps({
   ...inputProps,

@@ -20,8 +20,8 @@
 <script lang="ts" setup>
 import { computed, inject, onBeforeUnmount, ref, toRef } from 'vue'
 import { useEventListener } from '@vueuse/core'
-import { isClient, throwError } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { isClient, throwError } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import { scrollbarContextKey } from './constants'
 import { BAR_MAP, renderThumbStyle } from './util'
 import { thumbProps } from './thumb'

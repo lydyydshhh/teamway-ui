@@ -23,10 +23,10 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import dayjs from 'dayjs'
-import { useLocale, useNamespace } from '@element-plus/hooks'
-import TySelect from '@element-plus/components/select'
-import { TyButton } from '@element-plus/components/button'
-import { isFunction } from '@element-plus/utils'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
+import TySelect from '@teamway-ui/components/select'
+import { TyButton } from '@teamway-ui/components/button'
+import { isFunction } from '@teamway-ui/utils'
 import {
   selectControllerEmits,
   selectControllerProps,

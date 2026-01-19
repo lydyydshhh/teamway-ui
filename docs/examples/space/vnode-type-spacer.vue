@@ -8,7 +8,7 @@
 
 <script lang="ts" setup>
 import { h, ref } from 'vue'
-import { TyDivider } from 'element-plus'
+import { TyDivider } from 'teamway-ui'
 
 const size = ref(10)
 const spacer = h(TyDivider, { direction: 'vertical' })

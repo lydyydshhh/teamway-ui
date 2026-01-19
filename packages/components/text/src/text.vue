@@ -11,9 +11,9 @@
 
 <script lang="ts" setup>
 import { computed, onMounted, onUpdated, ref, useAttrs } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { useFormSize } from '@element-plus/components/form'
-import { isUndefined } from '@element-plus/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { useFormSize } from '@teamway-ui/components/form'
+import { isUndefined } from '@teamway-ui/utils'
 import { textProps } from './text'
 
 defineOptions({

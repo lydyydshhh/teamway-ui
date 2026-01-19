@@ -134,12 +134,12 @@
 
 <script lang="ts" setup>
 import { computed, useSlots } from 'vue'
-import { useAttrs, useCalcInputWidth } from '@element-plus/hooks'
-import { NOOP, ValidateComponentsMap } from '@element-plus/utils'
-import TyTooltip from '@element-plus/components/tooltip'
-import TyIcon from '@element-plus/components/icon'
-import TyTag from '@element-plus/components/tag'
-import { useFormItem, useFormItemInputId } from '@element-plus/components/form'
+import { useAttrs, useCalcInputWidth } from '@teamway-ui/hooks'
+import { NOOP, ValidateComponentsMap } from '@teamway-ui/utils'
+import TyTooltip from '@teamway-ui/components/tooltip'
+import TyIcon from '@teamway-ui/components/icon'
+import TyTag from '@teamway-ui/components/tag'
+import { useFormItem, useFormItemInputId } from '@teamway-ui/components/form'
 import { inputTagEmits, inputTagProps } from './input-tag'
 import {
   useDragTag,

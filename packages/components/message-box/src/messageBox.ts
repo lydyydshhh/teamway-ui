@@ -8,7 +8,7 @@ import {
   isObject,
   isString,
   isUndefined,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import MessageBoxConstructor from './index.vue'
 
 import type { AppContext, ComponentPublicInstance, VNode } from 'vue'

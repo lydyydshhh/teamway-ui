@@ -6,9 +6,9 @@ import {
   reactive,
   toRef,
 } from 'vue'
-import { flattedChildren } from '@element-plus/utils'
-import TyTooltip from '@element-plus/components/tooltip'
-import { useNamespace } from '@element-plus/hooks'
+import { flattedChildren } from '@teamway-ui/utils'
+import TyTooltip from '@teamway-ui/components/tooltip'
+import { useNamespace } from '@teamway-ui/hooks'
 import TyAvatar from './avatar.vue'
 import { avatarGroupContextKey } from './constants'
 import { avatarGroupProps } from './avatar-group-props'

@@ -93,12 +93,12 @@ import {
   ref,
   watch,
 } from 'vue'
-import { debugWarn, isFunction, isString } from '@element-plus/utils'
-import TyCollapseTransition from '@element-plus/components/collapse-transition'
-import TyCheckbox from '@element-plus/components/checkbox'
-import { TyIcon } from '@element-plus/components/icon'
+import { debugWarn, isFunction, isString } from '@teamway-ui/utils'
+import TyCollapseTransition from '@teamway-ui/components/collapse-transition'
+import TyCheckbox from '@teamway-ui/components/checkbox'
+import { TyIcon } from '@teamway-ui/components/icon'
 import { CaretRight, Loading } from '@element-plus/icons-vue'
-import { useNamespace } from '@element-plus/hooks'
+import { useNamespace } from '@teamway-ui/hooks'
 import NodeContent from './tree-node-content.vue'
 import { getNodeKey as getNodeKeyUtil, handleCurrentChange } from './model/util'
 import { useNodeExpandEventBroadcast } from './model/useNodeExpandEventBroadcast'
@@ -108,7 +108,7 @@ import { NODE_INSTANCE_INJECTION_KEY, ROOT_TREE_INJECTION_KEY } from './tokens'
 
 import type { ComponentInternalInstance, PropType } from 'vue'
 import type { RootTreeType, TreeNodeData, TreeOptionProps } from './tree.type'
-import type { CheckboxValueType } from '@element-plus/components/checkbox'
+import type { CheckboxValueType } from '@teamway-ui/components/checkbox'
 
 export default defineComponent({
   name: 'TyTreeNode',

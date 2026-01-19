@@ -75,15 +75,15 @@
 <script lang="ts" setup>
 import { computed, onMounted, onUpdated, reactive, ref, watch } from 'vue'
 import { isNil } from 'lodash-unified'
-import { TyInput } from '@element-plus/components/input'
-import { TyIcon } from '@element-plus/components/icon'
+import { TyInput } from '@teamway-ui/components/input'
+import { TyIcon } from '@teamway-ui/components/icon'
 import {
   useFormDisabled,
   useFormItem,
   useFormSize,
-} from '@element-plus/components/form'
-import { vRepeatClick } from '@element-plus/directives'
-import { useLocale, useNamespace } from '@element-plus/hooks'
+} from '@teamway-ui/components/form'
+import { vRepeatClick } from '@teamway-ui/directives'
+import { useLocale, useNamespace } from '@teamway-ui/hooks'
 import {
   debugWarn,
   getEventCode,
@@ -92,17 +92,17 @@ import {
   isString,
   isUndefined,
   throwError,
-} from '@element-plus/utils'
+} from '@teamway-ui/utils'
 import { ArrowDown, ArrowUp, Minus, Plus } from '@element-plus/icons-vue'
 import {
   CHANGE_EVENT,
   EVENT_CODE,
   INPUT_EVENT,
   UPDATE_MODEL_EVENT,
-} from '@element-plus/constants'
+} from '@teamway-ui/constants'
 import { inputNumberEmits, inputNumberProps } from './input-number'
 
-import type { InputInstance } from '@element-plus/components/input'
+import type { InputInstance } from '@teamway-ui/components/input'
 
 defineOptions({
   name: 'TyInputNumber',

@@ -90,7 +90,7 @@ Element Plus has added a global method `$notify` for `app.config.globalPropertie
 ## Local import
 
 ```javascript
-import { ElNotification } from 'element-plus'
+import { ElNotification } from 'teamway-ui'
 import { CloseBold } from '@element-plus/icons-vue'
 
 ElNotification({
@@ -116,7 +116,7 @@ If you globally registered ElNotification component, it will automatically inher
 
 ```ts
 import { getCurrentInstance } from 'vue'
-import { ElNotification } from 'element-plus'
+import { ElNotification } from 'teamway-ui'
 
 // in your setup method
 const { appContext } = getCurrentInstance()!

@@ -25,8 +25,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { useNamespace } from '@element-plus/hooks'
-import { isFunction, isNumber } from '@element-plus/utils'
+import { useNamespace } from '@teamway-ui/hooks'
+import { isFunction, isNumber } from '@teamway-ui/utils'
 import { statisticProps } from './statistic'
 
 defineOptions({

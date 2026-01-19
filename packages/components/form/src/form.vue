@@ -7,15 +7,15 @@
 <script lang="ts" setup>
 import { computed, provide, reactive, ref, toRefs, watch } from 'vue'
 import { has } from 'lodash-unified'
-import { debugWarn, getProp, isFunction } from '@element-plus/utils'
-import { useNamespace } from '@element-plus/hooks'
+import { debugWarn, getProp, isFunction } from '@teamway-ui/utils'
+import { useNamespace } from '@teamway-ui/hooks'
 import { useFormSize } from './hooks'
 import { formContextKey } from './constants'
 import { formEmits, formProps } from './form'
 import { filterFields, useFormLabelWidth } from './utils'
 
 import type { ValidateFieldsError } from 'async-validator'
-import type { Arrayable } from '@element-plus/utils'
+import type { Arrayable } from '@teamway-ui/utils'
 import type {
   FormContext,
   FormItemContext,

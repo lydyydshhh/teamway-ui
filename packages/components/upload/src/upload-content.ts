@@ -1,4 +1,4 @@
-import { NOOP, buildProps, definePropType } from '@element-plus/utils'
+import { NOOP, buildProps, definePropType } from '@teamway-ui/utils'
 import { uploadBaseProps } from './upload'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'

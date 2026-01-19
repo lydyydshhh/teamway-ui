@@ -1,4 +1,4 @@
-import { withInstallFunction } from '@element-plus/utils'
+import { withInstallFunction } from '@teamway-ui/utils'
 import Message from './src/method'
 
 export const TyMessage = withInstallFunction(Message, '$message')

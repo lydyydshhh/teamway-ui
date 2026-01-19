@@ -1,5 +1,5 @@
-import { buildProps, definePropType, isNumber } from '@element-plus/utils'
-import { CHANGE_EVENT } from '@element-plus/constants'
+import { buildProps, definePropType, isNumber } from '@teamway-ui/utils'
+import { CHANGE_EVENT } from '@teamway-ui/constants'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes, StyleValue } from 'vue'
 import type { Dayjs } from 'dayjs'

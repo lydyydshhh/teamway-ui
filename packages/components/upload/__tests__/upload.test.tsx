@@ -1,7 +1,7 @@
 import { h, nextTick, ref } from 'vue'
 import { flushPromises, mount } from '@vue/test-utils'
 import { afterEach, describe, expect, test, vi } from 'vitest'
-import { EVENT_CODE } from '@element-plus/constants'
+import { EVENT_CODE } from '@teamway-ui/constants'
 import Upload from '../src/upload.vue'
 import UploadContent from '../src/upload-content.vue'
 

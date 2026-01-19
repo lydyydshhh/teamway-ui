@@ -16,10 +16,10 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { TyIcon } from '@element-plus/components/icon'
-import { useGlobalConfig } from '@element-plus/components/config-provider'
-import { useDeprecated, useNamespace } from '@element-plus/hooks'
-import { isBoolean } from '@element-plus/utils'
+import { TyIcon } from '@teamway-ui/components/icon'
+import { useGlobalConfig } from '@teamway-ui/components/config-provider'
+import { useDeprecated, useNamespace } from '@teamway-ui/hooks'
+import { isBoolean } from '@teamway-ui/utils'
 import { linkEmits, linkProps } from './link'
 
 defineOptions({

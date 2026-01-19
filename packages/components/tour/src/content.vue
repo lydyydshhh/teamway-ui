@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 import { computed, inject, ref, toRef, watch } from 'vue'
-import TyFocusTrap from '@element-plus/components/focus-trap'
+import TyFocusTrap from '@teamway-ui/components/focus-trap'
 import { tourContentEmits, tourContentProps } from './content'
 import { tourKey, useFloating } from './helper'
 

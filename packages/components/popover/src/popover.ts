@@ -1,9 +1,9 @@
-import { buildProps, isBoolean } from '@element-plus/utils'
+import { buildProps, isBoolean } from '@teamway-ui/utils'
 import {
   useTooltipContentProps,
   useTooltipTriggerProps,
-} from '@element-plus/components/tooltip'
-import { dropdownProps } from '@element-plus/components/dropdown'
+} from '@teamway-ui/components/tooltip'
+import { dropdownProps } from '@teamway-ui/components/dropdown'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes, PropType } from 'vue'
 import type Popover from './popover.vue'

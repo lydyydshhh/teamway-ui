@@ -1,10 +1,5 @@
-import {
-  buildProps,
-  definePropType,
-  isArray,
-  isDate,
-} from '@element-plus/utils'
-import { INPUT_EVENT, UPDATE_MODEL_EVENT } from '@element-plus/constants'
+import { buildProps, definePropType, isArray, isDate } from '@teamway-ui/utils'
+import { INPUT_EVENT, UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
 
 import type { ExtractPropTypes, ExtractPublicPropTypes } from 'vue'
 

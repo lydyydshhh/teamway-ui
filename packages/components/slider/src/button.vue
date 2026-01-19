@@ -31,8 +31,8 @@
 
 <script lang="ts" setup>
 import { computed, reactive, toRefs } from 'vue'
-import { TyTooltip } from '@element-plus/components/tooltip'
-import { useNamespace } from '@element-plus/hooks'
+import { TyTooltip } from '@teamway-ui/components/tooltip'
+import { useNamespace } from '@teamway-ui/hooks'
 import { useSliderButton } from './composables'
 import { sliderButtonEmits, sliderButtonProps } from './button'
 

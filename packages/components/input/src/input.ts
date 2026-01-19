@@ -4,9 +4,9 @@ import {
   iconPropType,
   isString,
   mutable,
-} from '@element-plus/utils'
-import { UPDATE_MODEL_EVENT } from '@element-plus/constants'
-import { useAriaProps, useSizeProp } from '@element-plus/hooks'
+} from '@teamway-ui/utils'
+import { UPDATE_MODEL_EVENT } from '@teamway-ui/constants'
+import { useAriaProps, useSizeProp } from '@teamway-ui/hooks'
 import { CircleClose } from '@element-plus/icons-vue'
 
 import type {

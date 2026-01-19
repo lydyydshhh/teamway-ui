@@ -1,4 +1,4 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/pagination.scss'
-import '@element-plus/components/select/style'
-import '@element-plus/components/input/style'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/theme-chalk/src/pagination.scss'
+import '@teamway-ui/components/select/style'
+import '@teamway-ui/components/input/style'

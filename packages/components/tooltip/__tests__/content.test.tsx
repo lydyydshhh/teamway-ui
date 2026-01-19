@@ -9,8 +9,8 @@ import {
   expect,
   it,
 } from 'vitest'
-import { usePopperContainer } from '@element-plus/hooks'
-import { TOOLTIP_INJECTION_KEY } from '@element-plus/components/tooltip'
+import { usePopperContainer } from '@teamway-ui/hooks'
+import { TOOLTIP_INJECTION_KEY } from '@teamway-ui/components/tooltip'
 import { genTooltipProvides } from '../test-helper/provides'
 import TyTooltipContent from '../src/content.vue'
 

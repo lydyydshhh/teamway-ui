@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { TreeNodeData } from 'element-plus'
+import type { TreeNodeData } from 'teamway-ui'
 
 interface Tree {
   id: number

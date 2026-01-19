@@ -1,3 +1,3 @@
-import '@element-plus/components/base/style'
-import '@element-plus/theme-chalk/src/upload.scss'
-import '@element-plus/components/progress/style'
+import '@teamway-ui/components/base/style'
+import '@teamway-ui/theme-chalk/src/upload.scss'
+import '@teamway-ui/components/progress/style'

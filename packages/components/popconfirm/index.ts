@@ -1,7 +1,7 @@
-import { withInstall } from '@element-plus/utils'
+import { withInstall } from '@teamway-ui/utils'
 import Popconfirm from './src/popconfirm.vue'
 
-import type { SFCWithInstall } from '@element-plus/utils'
+import type { SFCWithInstall } from '@teamway-ui/utils'
 
 export const TyPopconfirm: SFCWithInstall<typeof Popconfirm> =
   withInstall(Popconfirm)

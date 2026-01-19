@@ -5,7 +5,7 @@ import type {
   RendererNode,
   VNode,
 } from 'vue'
-import type { ColumnAlignment } from '@element-plus/constants'
+import type { ColumnAlignment } from '@teamway-ui/constants'
 import type { FixedDir, SortOrder } from './constants'
 
 export type Alignment = ColumnAlignment
