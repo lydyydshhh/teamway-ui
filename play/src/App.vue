@@ -1,13 +1,16 @@
 <template>
-  <!-- If you want to apply a custom namespace, uncomment the following and apply the css configuration in `vite.config.ts`. -->
-  <!-- <ty-config-provider namespace="ep"> -->
-  <div class="play-container">
-    <ty-button>test</ty-button>
-  </div>
-  <!-- </ty-config-provider> -->
+  <ty-config-provider namespace="ty">
+    <div class="play-container">
+      <ty-icon color="red">
+        <Edit />
+      </ty-icon>
+      <ty-button>test</ty-button>
+    </div>
+  </ty-config-provider>
 </template>
 
 <script setup lang="ts">
+import { Edit } from '@element-plus/icons-vue'
 // code here
 </script>
 

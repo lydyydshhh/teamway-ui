@@ -3,7 +3,6 @@ import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import Inspect from 'vite-plugin-inspect'
 import mkcert from 'vite-plugin-mkcert'
 import { glob } from 'tinyglobby'
@@ -27,21 +26,13 @@ export default defineConfig(async ({ mode }) => {
     css: {
       preprocessorOptions: {
         scss: {
-          // additionalData: `@use "/styles/custom.scss" as *;`,
+          additionalData: `@use "/styles/custom.scss" as *;`,
           silenceDeprecations: ['legacy-js-api'],
         },
       },
     },
     resolve: {
       alias: [
-        {
-          find: /^element-plus(\/(es|lib))?$/,
-          replacement: path.resolve(epRoot, 'index.ts'),
-        },
-        {
-          find: /^element-plus\/(es|lib)\/(.*)$/,
-          replacement: `${pkgRoot}/$2`,
-        },
         {
           find: /^teamway-ui(\/(es|lib))?$/,
           replacement: path.resolve(epRoot, 'index.ts'),
@@ -65,10 +56,14 @@ export default defineConfig(async ({ mode }) => {
       vueJsx(),
       Components({
         include: `${__dirname}/**`,
-        resolvers: ElementPlusResolver({
-          version: '2.0.0-dev.1',
-          importStyle: 'sass',
-        }),
+        resolvers: [
+          (name) => {
+            // 处理 Ty 前缀组件：TyButton / TySelect ...
+            if (name.startsWith('Ty')) {
+              return { name, from: 'teamway-ui' }
+            }
+          },
+        ],
         dts: false,
       }),
       mkcert(),
