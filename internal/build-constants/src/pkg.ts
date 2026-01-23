@@ -1,5 +1,5 @@
 export const PKG_PREFIX = '@teamway-ui'
 export const PKG_NAME = 'teamway-ui'
 export const PKG_CAMELCASE_NAME = 'TeamwayUI'
-export const PKG_CAMELCASE_LOCAL_NAME = 'TeamWayUILocale'
+export const PKG_CAMELCASE_LOCAL_NAME = 'TeamwayUILocale'
 export const PKG_BRAND_NAME = 'Teamway UI'
