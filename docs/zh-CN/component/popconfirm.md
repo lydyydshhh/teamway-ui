@@ -86,5 +86,5 @@ popconfirm/trigger-event
 
 | 方法名              | 详情               | Type                                        |
 | ------------------- | ------------------ | ------------------------------------------- |
-| popperRef ^(2.10.7) | el-popper 组件实例 | ^[object]`Ref<PopperInstance \| undefined>` |
+| popperRef ^(2.10.7) | ty-popper 组件实例 | ^[object]`Ref<PopperInstance \| undefined>` |
 | hide ^(2.10.7)      | hide popconfirm    | ^[Function]`() => void`                     |

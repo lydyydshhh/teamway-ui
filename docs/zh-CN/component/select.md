@@ -9,13 +9,13 @@ lang: zh-CN
 
 :::tip
 
-在版本 `2.5.0`之后， `el-select` 的默认宽度更改为 `100%` 当使用内联形式时，宽度将显示异常。 为了保持显示正常, 您需要手动配置 `el-select` 的宽度 (如: [例子](https://github.com/element-plus/element-plus/issues/15834#issuecomment-1936919229)).
+在版本 `2.5.0`之后， `ty-select` 的默认宽度更改为 `100%` 当使用内联形式时，宽度将显示异常。 为了保持显示正常, 您需要手动配置 `ty-select` 的宽度 (如: [例子](https://github.com/element-plus/element-plus/issues/15834#issuecomment-1936919229)).
 
 :::
 
 ## 基础用法
 
-:::demo 适用广泛的基础单选 `v-model` 的值为当前被选中的 `el-option` 的 value 属性值
+:::demo 适用广泛的基础单选 `v-model` 的值为当前被选中的 `ty-option` 的 value 属性值
 
 select/basic-usage
 
@@ -23,7 +23,7 @@ select/basic-usage
 
 ## Options 属性 ^(2.10.5)
 
-:::demo `el-option` 基本用法。 您可以通过 `props` 属性自定义 `options` 的别名。
+:::demo `ty-option` 基本用法。 您可以通过 `props` 属性自定义 `options` 的别名。
 
 select/options
 
@@ -31,7 +31,7 @@ select/options
 
 ## 有禁用选项
 
-:::demo 在 `el-option` 中，设定 `disabled` 值为 true，即可禁用该选项
+:::demo 在 `ty-option` 中，设定 `disabled` 值为 true，即可禁用该选项
 
 select/disabled-option
 
@@ -41,7 +41,7 @@ select/disabled-option
 
 禁用整个选择器组件
 
-:::demo 为 `el-select` 设置 `disabled`属性，则整个选择器不可用。
+:::demo 为 `ty-select` 设置 `disabled`属性，则整个选择器不可用。
 
 select/disabled
 
@@ -51,7 +51,7 @@ select/disabled
 
 您可以使用清除图标来清除选择。
 
-:::demo 为 `el-select` 设置 `clearable` 属性，则可将选择器清空。
+:::demo 为 `ty-select` 设置 `clearable` 属性，则可将选择器清空。
 
 select/clearable
 
@@ -69,7 +69,7 @@ select/size
 
 多选选择器使用 tag 组件来展示已选中的选项。
 
-:::demo 为 `el-select` 设置 `multiple` 属性即可启用多选， 此时 `v-model` 的值为当前选中值所组成的数组。 默认情况下选中值会以 Tag 组件的形式展现， 你也可以设置 `collapse-tags` 属性将它们合并为一段文字。 您可以使用 `collapse-tags-tooltip` 属性来启用鼠标悬停折叠文字以显示具体所选值的行为。
+:::demo 为 `ty-select` 设置 `multiple` 属性即可启用多选， 此时 `v-model` 的值为当前选中值所组成的数组。 默认情况下选中值会以 Tag 组件的形式展现， 你也可以设置 `collapse-tags` 属性将它们合并为一段文字。 您可以使用 `collapse-tags-tooltip` 属性来启用鼠标悬停折叠文字以显示具体所选值的行为。
 
 select/multiple
 
@@ -79,7 +79,7 @@ select/multiple
 
 你可以自定义如何来渲染每一个选项。
 
-:::demo 将自定义的 HTML 模板插入 `el-option` 的 slot 中即可。
+:::demo 将自定义的 HTML 模板插入 `ty-option` 的 slot 中即可。
 
 select/custom-template
 
@@ -109,7 +109,7 @@ select/custom-footer
 
 你可以为选项进行分组来区分不同的选项
 
-:::demo 使用 `el-option-group` 对备选项进行分组，它的 `label` 属性为分组名
+:::demo 使用 `ty-option-group` 对备选项进行分组，它的 `label` 属性为分组名
 
 select/grouping
 
@@ -119,7 +119,7 @@ select/grouping
 
 可以利用筛选功能快速查找选项。
 
-:::demo 为`el-select`添加`filterable`属性即可启用搜索功能。 默认情况下，Select 会找出所有 `label` 属性包含输入值的选项。 如果希望使用其他的搜索逻辑，可以通过传入一个 `filter-method` 来实现。 `filter-method` 为一个 `Function`，它会在输入值发生变化时调用，参数为当前输入值。
+:::demo 为`ty-select`添加`filterable`属性即可启用搜索功能。 默认情况下，Select 会找出所有 `label` 属性包含输入值的选项。 如果希望使用其他的搜索逻辑，可以通过传入一个 `filter-method` 来实现。 `filter-method` 为一个 `Function`，它会在输入值发生变化时调用，参数为当前输入值。
 
 select/filterable
 
@@ -129,7 +129,7 @@ select/filterable
 
 输入关键字以从远程服务器中查找数据。
 
-:::demo 从服务器搜索数据，输入关键字进行查找。为了启用远程搜索，需要将`filterable`和`remote`设置为`true`，同时传入一个`remote-method`。 `remote-method`为一个`Function`，它会在输入值发生变化时调用，参数为当前输入值。 需要注意的是，如果 `el-option` 是通过 `v-for` 指令渲染出来的，此时需要为 `el-option` 添加 `key` 属性， 且其值需具有唯一性，比如这个例子中的 `item.value`。
+:::demo 从服务器搜索数据，输入关键字进行查找。为了启用远程搜索，需要将`filterable`和`remote`设置为`true`，同时传入一个`remote-method`。 `remote-method`为一个`Function`，它会在输入值发生变化时调用，参数为当前输入值。 需要注意的是，如果 `ty-option` 是通过 `v-for` 指令渲染出来的，此时需要为 `ty-option` 添加 `key` 属性， 且其值需具有唯一性，比如这个例子中的 `item.value`。
 
 select/remote-search
 
@@ -159,7 +159,7 @@ select/value-key
 
 您可以自定义标签。
 
-:::demo 将自定义的标签插入 `el-select` 的 slot 中即可。 `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` 在此模式下不生效.
+:::demo 将自定义的标签插入 `ty-select` 的 slot 中即可。 `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` 在此模式下不生效.
 
 select/custom-tag
 

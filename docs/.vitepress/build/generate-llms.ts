@@ -109,9 +109,9 @@ async function generateLLms() {
   }
 
   const docsIndexContent = [
-    '# Element Plus - A Vue 3 based component library',
+    '# Teamway UI - A Vue 3 based component library',
     '',
-    '- Element Plus is a Vue 3 based component library for developers, designers and product managers, with a set of high-quality components and rich features for building modern web applications.',
+    '- Teamway UI is a Vue 3 based component library for developers, designers and product managers, with a set of high-quality components and rich features for building modern web applications.',
     '',
     '## Documentation',
     '',

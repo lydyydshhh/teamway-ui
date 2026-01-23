@@ -20,7 +20,7 @@ watch(
 </script>
 
 <template>
-  <ty-watermark :font="font" :content="['Element+', 'Element Plus']">
+  <ty-watermark :font="font" :content="['Element+', 'Teamway UI']">
     <div style="height: 500px" />
   </ty-watermark>
 </template>

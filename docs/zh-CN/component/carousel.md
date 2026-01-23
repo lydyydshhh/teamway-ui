@@ -9,7 +9,7 @@ lang: zh-CN
 
 ## 基础用法
 
-:::demo 结合使用 `el-carousel` 和 `el-carousel-item` 标签就得到了一个走马灯。 每一个页面的内容是完全可定制的，把你想要展示的内容放在 `el-carousel-item` 标签内。 默认情况下，在鼠标 hover 底部的指示器时就会触发切换。 通过设置 `trigger` 属性为 `click`，可以达到点击触发的效果。
+:::demo 结合使用 `ty-carousel` 和 `ty-carousel-item` 标签就得到了一个走马灯。 每一个页面的内容是完全可定制的，把你想要展示的内容放在 `ty-carousel-item` 标签内。 默认情况下，在鼠标 hover 底部的指示器时就会触发切换。 通过设置 `trigger` 属性为 `click`，可以达到点击触发的效果。
 
 carousel/basic
 
@@ -112,7 +112,7 @@ carousel/vertical
 | 方法名               | 说明                                                                                              | 类型                                           |
 | -------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | activeIndex ^(2.7.8) | 当前幻灯片的索引                                                                                  | ^[number]                                      |
-| setActiveItem        | 手动切换幻灯片，传入需要切换的幻灯片的索引，从 0 开始；或相应 `el-carousel-item` 的 `name` 属性值 | ^[Function]`(index: string \| number) => void` |
+| setActiveItem        | 手动切换幻灯片，传入需要切换的幻灯片的索引，从 0 开始；或相应 `ty-carousel-item` 的 `name` 属性值 | ^[Function]`(index: string \| number) => void` |
 | prev                 | 切换至上一张幻灯片                                                                                | ^[Function]`() => void`                        |
 | next                 | 切换至下一张幻灯片                                                                                | ^[Function]`() => void`                        |
 

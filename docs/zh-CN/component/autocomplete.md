@@ -122,8 +122,8 @@ autocomplete/custom-header-footer
 | handleKeyEnter   | 手动触发键盘回车事件             | ^[Function]`() => promise<void>`                    |
 | highlightedIndex | 当前高亮显示选项的索引           | ^[object]`Ref<number>`                              |
 | highlight        | 在建议中高亮显示一个项目         | ^[Function]`(itemIndex: number) => void`            |
-| inputRef         | el-input 组件实例                | ^[object]`Ref<ElInputInstance>`                     |
+| inputRef         | ty-input 组件实例                | ^[object]`Ref<TyInputInstance>`                     |
 | loading          | 远程获取提示内容的加载状态指示器 | ^[object]`Ref<boolean>`                             |
-| popperRef        | el-tooltip 组件实例              | ^[object]`Ref<ElTooltipInstance>`                   |
+| popperRef        | ty-tooltip 组件实例              | ^[object]`Ref<TyTooltipInstance>`                   |
 | suggestions      | 获取自动补全结果                 | ^[object]`Ref<record<string, any>[]>`               |
 | getData ^(2.8.4) | 加载建议列表                     | ^[Function]`(queryString: string) => promise<void>` |

@@ -5,7 +5,7 @@ lang: zh-CN
 
 # Color 色彩
 
-Element Plus 为了避免视觉传达差异，使用一套特定的调色板来规定颜色，为你所搭建的产品提供一致的外观视觉感受。
+TeamwayUI 为了避免视觉传达差异，使用一套特定的调色板来规定颜色，为你所搭建的产品提供一致的外观视觉感受。
 
 <style lang="scss">
 .demo-color-box {
@@ -15,7 +15,7 @@ Element Plus 为了避免视觉传达差异，使用一套特定的调色板来�
   margin: 8px 0;
   height: 112px;
   box-sizing: border-box;
-  color: var(--el-color-white);
+  color: var(--ty-color-white);
   font-size: 14px;
 
   .bg-color-sub {
@@ -30,7 +30,7 @@ Element Plus 为了避免视觉传达差异，使用一套特定的调色板来�
       display: inline-block;
 
       &:first-child {
-        border-radius: 0 0 0 var(--el-border-radius-base);
+        border-radius: 0 0 0 var(--ty-border-radius-base);
       }
     }
 
@@ -38,7 +38,7 @@ Element Plus 为了避免视觉传达差异，使用一套特定的调色板来�
       height: 100%;
       display: inline-block;
       &:first-child {
-        border-radius: 0 0 0 var(--el-border-radius-base);
+        border-radius: 0 0 0 var(--ty-border-radius-base);
       }
     }
   }
@@ -49,13 +49,13 @@ Element Plus 为了避免视觉传达差异，使用一套特定的调色板来�
 }
 
 .demo-color-box-lite {
-  color: var(--el-text-color-primary);
+  color: var(--ty-text-color-primary);
 }
 </style>
 
 ## 主色
 
-Element Plus 默认的主题色是明亮、友好的蓝色。
+TeamwayUI 默认的主题色是明亮、友好的蓝色。
 
 <!-- Do not touch -->
 <ClientOnly>

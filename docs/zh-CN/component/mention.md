@@ -79,7 +79,7 @@ mention/whole
 
 ## 在表单里使用
 
-与 `el-form` 一起使用
+与 `ty-form` 一起使用
 
 :::demo
 
@@ -88,7 +88,7 @@ mention/form
 :::
 
 :::tip
-由于这个组件是基于[`el-input`](./input.md#attributes)派生的，他们的原始属性未被更改，故不在此重复。请跳转查看原组件的相应文档。
+由于这个组件是基于[`ty-input`](./input.md#attributes)派生的，他们的原始属性未被更改，故不在此重复。请跳转查看原组件的相应文档。
 :::
 
 ## API
@@ -137,8 +137,8 @@ mention/form
 
 | 名称                     | 说明                | 类型                             |
 | ------------------------ | ------------------- | -------------------------------- | ------ |
-| input                    | el-input 组件实例   | ^[object]`Ref<InputInstance \\   | null>` |
-| tooltip                  | el-tooltip 组件实例 | ^[object]`Ref<TooltipInstance \\ | null>` |
+| input                    | ty-input 组件实例   | ^[object]`Ref<InputInstance \\   | null>` |
+| tooltip                  | ty-tooltip 组件实例 | ^[object]`Ref<TooltipInstance \\ | null>` |
 | dropdownVisible ^(2.8.5) | tooltip 显示状态    | ^[object]`ComputedRef<boolean>`  |
 
 ## 类型声明

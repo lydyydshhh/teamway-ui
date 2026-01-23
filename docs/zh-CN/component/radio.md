@@ -21,12 +21,12 @@ lang: zh-CN
 
 ```vue
 <template>
-  <el-radio-group v-model="radio1">
+  <ty-radio-group v-model="radio1">
     <!-- works when >=2.6.0, recommended ✔️ not work when <2.6.0 ❌ -->
-    <el-radio value="Value 1">Option 1</el-radio>
+    <ty-radio value="Value 1">Option 1</ty-radio>
     <!-- works when <2.6.0, deprecated act as value when >=3.0.0 -->
-    <el-radio label="Label 2 & Value 2">Option 2</el-radio>
-  </el-radio-group>
+    <ty-radio label="Label 2 & Value 2">Option 2</ty-radio>
+  </ty-radio-group>
 </template>
 ```
 
@@ -54,7 +54,7 @@ radio/disabled
 
 适用于在多个互斥的选项中选择的场景
 
-:::demo 结合`el-radio-group`元素和子元素`el-radio`可以实现单选组， 为 `el-radio-group` 绑定 `v-model`，再为 每一个 `el-radio` 设置好 `label` 属性即可， 另外，还可以通过 `change` 事件来响应变化，它会传入一个参数 `value` 来表示改变之后的值。
+:::demo 结合`ty-radio-group`元素和子元素`ty-radio`可以实现单选组， 为 `ty-radio-group` 绑定 `v-model`，再为 每一个 `ty-radio` 设置好 `label` 属性即可， 另外，还可以通过 `change` 事件来响应变化，它会传入一个参数 `value` 来表示改变之后的值。
 
 radio/radio-group
 
@@ -70,7 +70,7 @@ radio/with-borders
 
 ## Options 属性 ^(2.11.2)
 
-:::demo 基础用法 `el-radio-group` 的快捷示例。 您可以通过 `props` 属性自定义 `options` 的别名。
+:::demo 基础用法 `ty-radio-group` 的快捷示例。 您可以通过 `props` 属性自定义 `options` 的别名。
 
 radio/options
 
@@ -80,7 +80,7 @@ radio/options
 
 带有按钮组视觉效果的单选框
 
-:::demo 只需要把 `el-radio` 元素换成 `el-radio-button` 元素即可， :::demo 您可以使用 `填充` 和 `文本颜色` 设置按钮的样式。
+:::demo 只需要把 `ty-radio` 元素换成 `ty-radio-button` 元素即可， :::demo 您可以使用 `填充` 和 `文本颜色` 设置按钮的样式。
 
 radio/radio-button
 

@@ -5,7 +5,7 @@ lang: zh-CN
 
 # 自定义主题
 
-Element Plus 默认提供一套主题，CSS 命名采用 BEM 的风格，方便使用者覆盖样式。 但是如果需要大规模替换样式，例如： 将主题颜色从蓝色改为橙色或绿色，也许一个个将其覆盖起来不是一个好主意。
+TeamwayUI 默认提供一套主题，CSS 命名采用 BEM 的风格，方便使用者覆盖样式。 但是如果需要大规模替换样式，例如： 将主题颜色从蓝色改为橙色或绿色，也许一个个将其覆盖起来不是一个好主意。
 
 我们提供四种方法来改变样式变量。
 
@@ -65,7 +65,7 @@ $colors: map.deep-merge(
 
 ### 如何覆盖它？
 
-如果您的项目也使用了 SCSS，可以直接修改 Element Plus 的样式变量。 新建一个样式文件，例如 `styles/element/index.scss`：
+如果您的项目也使用了 SCSS，可以直接修改 TeamwayUI 的样式变量。 新建一个样式文件，例如 `styles/element/index.scss`：
 
 :::warning
 
@@ -79,7 +79,7 @@ $colors: map.deep-merge(
 
 ```scss [styles/element/index.scss]
 /* just override what you need */
-@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+@forward 'teamway-ui/theme-chalk/src/common/var.scss' with (
   $colors: (
     'primary': (
       'base': green,
@@ -92,7 +92,7 @@ $colors: map.deep-merge(
 // @use "element-plus/theme-chalk/src/index.scss" as *;
 ```
 
-然后在你的项目入口文件中，导入这个样式文件以替换 Element Plus 内置的 CSS：
+然后在你的项目入口文件中，导入这个样式文件以替换 TeamwayUI 内置的 CSS：
 
 :::tip
 
@@ -111,11 +111,11 @@ $colors: map.deep-merge(
 ```ts [main.ts]
 import { createApp } from 'vue'
 import './styles/element/index.scss'
-import ElementPlus from 'element-plus'
+import TeamwayUI from 'teamway-ui'
 import App from './App.vue'
 
 const app = createApp(App)
-app.use(ElementPlus)
+app.use(TeamwayUI)
 ```
 
 如果你正在使用vite，并且你想在按需导入时自定义主题。
@@ -130,7 +130,7 @@ import vue from '@vitejs/plugin-vue'
 // import Components from 'unplugin-vue-components/vite'
 // import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // 或使用 unplugin-element-plus
-import ElementPlus from 'unplugin-element-plus/vite'
+import TeamwayUI from 'unplugin-element-plus/vite'
 
 export default defineConfig({
   resolve: {
@@ -158,7 +158,7 @@ export default defineConfig({
     //   ],
     // }),
     // 或使用 unplugin-element-plus
-    ElementPlus({
+    TeamwayUI({
       useSource: true,
     }),
   ],
@@ -170,7 +170,7 @@ export default defineConfig({
 ```js [webpack.config.js]
 // 使用 unplugin-element-plus
 
-import ElementPlus from 'unplugin-element-plus/webpack'
+import TeamwayUI from 'unplugin-element-plus/webpack'
 
 export default defineConfig({
   css: {
@@ -181,7 +181,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    ElementPlus({
+    TeamwayUI({
       useSource: true,
     }),
   ],
@@ -210,21 +210,21 @@ CSS 变量是一个非常有用的功能，几乎所有浏览器都支持。 （
 
 ```css
 :root {
-  --el-color-primary: green;
+  --ty-color-primary: green;
 }
 ```
 
 如果你只想自定义一个特定的组件，只需为某些组件单独添加内联样式。
 
 ```html
-<el-tag style="--el-tag-bg-color: red">Tag</el-tag>
+<ty-tag style="--ty-tag-bg-color: red">Tag</ty-tag>
 ```
 
 出于性能原因，更加推荐你在类名下添加自定义 css 变量，而不是在全局的 `:root` 下。
 
 ```css
 .custom-class {
-  --el-tag-bg-color: red;
+  --ty-tag-bg-color: red;
 }
 ```
 
@@ -236,10 +236,10 @@ const el = document.documentElement
 // const el = document.getElementById('xxx')
 
 // 获取 css 变量
-getComputedStyle(el).getPropertyValue(`--el-color-primary`)
+getComputedStyle(el).getPropertyValue(`--ty-color-primary`)
 
 // 设置 css 变量
-el.style.setProperty('--el-color-primary', 'red')
+el.style.setProperty('--ty-color-primary', 'red')
 ```
 
 如果你想要更优雅的方式，请看这里。 [useCssVar | VueUse](https://vueuse.org/core/usecssvar/)

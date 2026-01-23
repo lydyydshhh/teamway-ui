@@ -2,7 +2,7 @@
 import { reactive } from 'vue'
 
 const config = reactive({
-  content: 'Element Plus',
+  content: 'Teamway UI',
   font: {
     fontSize: 16,
     color: 'rgba(0, 0, 0, 0.15)',
@@ -26,7 +26,7 @@ const config = reactive({
       :offset="config.offset"
     >
       <div class="watermark-container">
-        <h1>Element Plus</h1>
+        <h1>Teamway UI</h1>
         <h2>A Vue 3 based component library for designers and developers</h2>
         <img src="/images/hamburger.png" alt="示例图片" />
       </div>

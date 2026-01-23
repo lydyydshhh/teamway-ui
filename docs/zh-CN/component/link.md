@@ -69,9 +69,9 @@ link/disabled
 ```vue
 <template>
   <!-- works before 2.9.9, use 'hover' after, removed in 3.0.0 -->
-  <el-link underline>link</el-link>
+  <ty-link underline>link</ty-link>
   <!-- works before 2.9.9, use 'never' after, removed in 3.0.0 -->
-  <el-link :underline="false">link</el-link>
+  <ty-link :underline="false">link</ty-link>
 </template>
 ```
 
@@ -87,7 +87,7 @@ link/underline
 
 :::tip
 
-使用 `icon` 属性来为按钮添加图标。 您可以传递组件名称的字符串（提前注册）或组件本身是一个 SVG Vue 组件。 Element Plus 提供了一组图标，您可以在 [icon component](/zh-CN/component/icon)
+使用 `icon` 属性来为按钮添加图标。 您可以传递组件名称的字符串（提前注册）或组件本身是一个 SVG Vue 组件。 TeamwayUI 提供了一组图标，您可以在 [icon component](/zh-CN/component/icon)
 
 :::
 

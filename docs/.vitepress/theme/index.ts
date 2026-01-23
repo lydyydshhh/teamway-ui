@@ -1,4 +1,4 @@
-import ElementPlus, { ID_INJECTION_KEY, ZINDEX_INJECTION_KEY } from 'teamway-ui'
+import TeamwayUI, { ID_INJECTION_KEY, ZINDEX_INJECTION_KEY } from 'teamway-ui'
 import { isClient } from '@vueuse/core'
 import VPApp, { NotFound, globals } from '../vitepress'
 import { define } from '../utils/types'
@@ -12,7 +12,7 @@ export default define<Theme>({
   NotFound,
   Layout: VPApp,
   enhanceApp: async ({ app, router }) => {
-    app.use(ElementPlus as any)
+    app.use(TeamwayUI as any)
     app.provide(ID_INJECTION_KEY, { prefix: 1024, current: 0 })
     app.provide(ZINDEX_INJECTION_KEY, { current: 0 })
     Object.entries(globals).forEach(([name, Comp]) => {

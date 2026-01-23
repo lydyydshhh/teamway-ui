@@ -53,7 +53,7 @@ space/customized-size
 
 :::tip
 
-不要让 `ElSpace` 与使用依赖父元素百分比宽度（或高度）的元素一起使用（例如 `ElSlider`），这样会造成光标不同步。
+不要让 `TySpace` 与使用依赖父元素百分比宽度（或高度）的元素一起使用（例如 `TySlider`），这样会造成光标不同步。
 
 :::
 

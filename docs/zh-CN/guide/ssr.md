@@ -5,7 +5,7 @@ lang: zh-CN
 
 # 服务端渲染 (SSR)
 
-当使用 Element Plus 在 SSR 场景下开发时，您需要在 SSR 期间进行特殊处理，以避免水合错误。
+当使用 TeamwayUI 在 SSR 场景下开发时，您需要在 SSR 期间进行特殊处理，以避免水合错误。
 
 :::tip
 
@@ -15,12 +15,12 @@ lang: zh-CN
 
 ## 提供一个ID
 
-提供的值用于生成 ElementPlus 中的唯一ID。 因为不同的 IDs 容易发生SSR中的水合率错误， 为了确保服务器端和客户端生成相同的ID， 我们需要将 `ID_injection_key` 注入到 Vue。
+提供的值用于生成 TeamwayUI 中的唯一ID。 因为不同的 IDs 容易发生SSR中的水合率错误， 为了确保服务器端和客户端生成相同的ID， 我们需要将 `ID_injection_key` 注入到 Vue。
 
 ```ts [main.ts]
 // irrelevant code omitted
 import { createApp } from 'vue'
-import { ID_INJECTION_KEY } from 'element-plus'
+import { ID_INJECTION_KEY } from 'teamway-ui'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -37,7 +37,7 @@ app.provide(ID_INJECTION_KEY, {
 ```ts [main.ts]
 // irrelevant code omitted
 import { createApp } from 'vue'
-import { ZINDEX_INJECTION_KEY } from 'element-plus'
+import { ZINDEX_INJECTION_KEY } from 'teamway-ui'
 import App from './App.vue'
 
 const app = createApp(App)
@@ -46,7 +46,7 @@ app.provide(ZINDEX_INJECTION_KEY, { current: 0 })
 
 ## Teleports
 
-[Teleport](https://vuejs.org/guide/scaling-up/ssr.html#teleports) 被元素加元件中的多个组件内部使用 (例如) ElDialog, ElDrawer, ElTooltip, ElDropdown, ElSelect, ElDatePicker ...)，所以在SSR期间需要特殊处理。
+[Teleport](https://vuejs.org/guide/scaling-up/ssr.html#teleports) 被元素加元件中的多个组件内部使用 (例如) Dialog, TyDrawer, TyTooltip, TyDropdown, TySelect, TyDatePicker ...)，所以在SSR期间需要特殊处理。
 
 ### 在挂载时渲染 Teleport
 
@@ -56,9 +56,9 @@ app.provide(ZINDEX_INJECTION_KEY, { current: 0 })
 
 ```html
 <client-only>
-  <el-tooltip content="the tooltip content">
-    <el-button>tooltip</el-button>
-  </el-tooltip>
+  <ty-tooltip content="the tooltip content">
+    <ty-button>tooltip</ty-button>
+  </ty-tooltip>
 </client-only>
 ```
 
@@ -76,9 +76,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <el-tooltip v-if="isClient" content="the tooltip content">
-    <el-button>tooltip</el-button>
-  </el-tooltip>
+  <ty-tooltip v-if="isClient" content="the tooltip content">
+    <ty-button>tooltip</ty-button>
+  </ty-tooltip>
 </template>
 ```
 
@@ -92,7 +92,7 @@ onMounted(() => {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Element Plus</title>
+    <title>TeamwayUI</title>
     <!--preload-links-->
   </head>
   <body>
@@ -105,7 +105,7 @@ onMounted(() => {
 
 :::tip
 
-如果您修改了 [Namespace](./namespace.md) 或 `append-to` 属性，您需要调整 `#el-popper-container-` 值。
+如果您修改了 [Namespace](./namespace.md) 或 `append-to` 属性，您需要调整 `#ty-popper-container-` 值。
 
 :::
 
@@ -127,7 +127,7 @@ export async function render(url, manifest) {
 function renderTeleports(teleports) {
   if (!teleports) return ''
   return Object.entries(teleports).reduce((all, [key, value]) => {
-    if (key.startsWith('#el-popper-container-')) {
+    if (key.startsWith('#ty-popper-container-')) {
       return `${all}<div id="${key.slice(1)}">${value}</div>`
     }
     return all

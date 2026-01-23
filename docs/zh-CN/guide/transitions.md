@@ -5,11 +5,11 @@ lang: zh-CN
 
 # 内置过渡动画
 
-Element Plus 内应用在部分组件的过渡动画，你也可以直接使用。 在使用之前，请阅读 [官方的过渡组件文档](https://vuejs.org/guide/built-ins/transition.html)。
+TeamwayUI 内应用在部分组件的过渡动画，你也可以直接使用。 在使用之前，请阅读 [官方的过渡组件文档](https://vuejs.org/guide/built-ins/transition.html)。
 
 ## Fade 淡入淡出
 
-:::demo 提供 `el-fade-in-linear` 和 `el-fade-in` 两种效果。
+:::demo 提供 `ty-fade-in-linear` 和 `ty-fade-in` 两种效果。
 
 transitions/fade
 
@@ -17,7 +17,7 @@ transitions/fade
 
 ## Zoom 缩放
 
-:::demo `el-zoom-in-left`, `el-zoom-in-center`, `el-zoom-in-top` and `el-zoom-in-bottom` are provided.
+:::demo `ty-zoom-in-left`, `ty-zoom-in-center`, `ty-zoom-in-top` and `ty-zoom-in-bottom` are provided.
 
 transitions/zoom
 
@@ -25,7 +25,7 @@ transitions/zoom
 
 ## Collapse 折叠面板
 
-使用 `el-collapse-transition` 组件实现折叠展开效果。
+使用 `ty-collapse-transition` 组件实现折叠展开效果。
 
 :::demo
 
@@ -37,11 +37,11 @@ transitions/collapse
 
 ```ts [main.ts]
 // collapse
-import { ElCollapseTransition } from 'element-plus'
+import { TyCollapseTransition } from 'teamway-ui'
 // fade/zoom
-import 'element-plus/theme-chalk/base.css'
+import 'teamway-ui/theme-chalk/base.css'
 import App from './App.vue'
 
 const app = createApp(App)
-app.component(ElCollapseTransition.name, ElCollapseTransition)
+app.component(TyCollapseTransition.name, TyCollapseTransition)
 ```

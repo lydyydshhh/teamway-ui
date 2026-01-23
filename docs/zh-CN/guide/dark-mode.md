@@ -5,7 +5,7 @@ lang: zh-CN
 
 # 暗黑模式 ^(2.2.0)
 
-现在，Element Plus 终于支持了暗黑模式！
+现在，TeamwayUI 终于支持了暗黑模式！
 
 我们提取并整理了所有的设计变量，并通过 CSS Vars 技术实现动态更新主题。
 
@@ -28,7 +28,7 @@ lang: zh-CN
 
 ```ts [main.ts]
 // if you just want to import css
-import 'element-plus/theme-chalk/dark/css-vars.css'
+import 'teamway-ui/theme-chalk/dark/css-vars.css'
 ```
 
 > 也可以参考我们提供的 [element-plus-vite-starter 模版](https://github.com/element-plus/element-plus-vite-starter) 例子。
@@ -44,14 +44,14 @@ import 'element-plus/theme-chalk/dark/css-vars.css'
 ```css
 html.dark {
   /* 自定义深色背景颜色 */
-  --el-bg-color: #626aef;
+  --ty-bg-color: #626aef;
 }
 ```
 
-在 Element Plus 的样式之后导入它
+在 TeamwayUI 的样式之后导入它
 
 ```ts [main.ts]
-import 'element-plus/theme-chalk/dark/css-vars.css'
+import 'teamway-ui/theme-chalk/dark/css-vars.css'
 import './styles/dark/css-vars.css'
 ```
 
@@ -63,7 +63,7 @@ import './styles/dark/css-vars.css'
 
 ```scss [styles/element/index.scss]
 /*just override what you need*/
-@forward 'element-plus/theme-chalk/src/dark/var.scss' with (
+@forward 'teamway-ui/theme-chalk/src/dark/var.scss' with (
   $bg-color: (
     'page': #0a0a0a,
     '': #626aef,
@@ -76,5 +76,5 @@ import './styles/dark/css-vars.css'
 import './styles/element/index.scss'
 
 // or just want to import scss?
-// import 'element-plus/theme-chalk/src/dark/css-vars.scss'
+// import 'teamway-ui/theme-chalk/src/dark/css-vars.scss'
 ```

@@ -25,7 +25,7 @@ dialog/basic-usage
 
 ## 自定义内容
 
-对话框的内容可以是任何东西，甚至是一个表格或表单。 此示例显示如何在 Dialog 中使用 Element Plus 的表格和表单。
+对话框的内容可以是任何东西，甚至是一个表格或表单。 此示例显示如何在 Dialog 中使用 TeamwayUI 的表格和表单。
 
 :::demo
 

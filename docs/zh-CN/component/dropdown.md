@@ -132,8 +132,8 @@ dropdown/virtual-trigger
 
 | 插槽名   | 说明                                                                                                               | 子标签        |
 | -------- | ------------------------------------------------------------------------------------------------------------------ | ------------- |
-| default  | 下拉菜单的内容。 注意：必须是有效的 html DOM 元素（例如 `<span>、<button>` 等）或 `el-component`，以附加监听触发器 | :::           |
-| dropdown | 下拉列表，通常是 `<el-dropdown-menu>` 组件                                                                         | Dropdown-Menu |
+| default  | 下拉菜单的内容。 注意：必须是有效的 html DOM 元素（例如 `<span>、<button>` 等）或 `ty-component`，以附加监听触发器 | :::           |
+| dropdown | 下拉列表，通常是 `<ty-dropdown-menu>` 组件                                                                         | Dropdown-Menu |
 
 ### Dropdown Events
 

@@ -5,7 +5,7 @@ lang: zh-CN
 
 # Icon 图标
 
-Element Plus 提供了一套常用的图标集合。
+TeamwayUI 提供了一套常用的图标集合。
 
 ## 使用图标
 
@@ -55,7 +55,7 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 
 ### 浏览器直接引入
 
-直接通过浏览器的 HTML 标签导入 Element Plus，然后就可以使用全局变量 `ElementPlusIconsVue`了。
+直接通过浏览器的 HTML 标签导入 TeamwayUI，然后就可以使用全局变量 `ElementPlusIconsVue`了。
 
 根据不同的 CDN 提供商有不同的引入方式， 根据不同的 CDN 提供商有不同的引入方式， 我们在这里以 [unpkg](https://unpkg.com) 和 [jsDelivr](https://jsdelivr.com) 举例。 你也可以使用其它的 CDN 供应商。
 
@@ -73,7 +73,7 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 
 :::tip
 
-我们建议使用 CDN 引入 Element Plus 的用户在链接地址上锁定版本，以免将来 Element Plus 升级时受到非兼容性更新的影响。 锁定版本的方法请查看 [unpkg.com](https://unpkg.com)。
+我们建议使用 CDN 引入 TeamwayUI 的用户在链接地址上锁定版本，以免将来 TeamwayUI 升级时受到非兼容性更新的影响。 锁定版本的方法请查看 [unpkg.com](https://unpkg.com)。
 
 :::
 
@@ -90,12 +90,12 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 :::
 
 ```vue
-<!-- 使用 el-icon 为 SVG 图标提供属性 -->
+<!-- 使用 ty-icon 为 SVG 图标提供属性 -->
 <template>
   <div>
-    <el-icon :size="size" :color="color">
+    <ty-icon :size="size" :color="color">
       <Edit />
-    </el-icon>
+    </ty-icon>
     <!-- 或者独立使用它，不从父级获取属性 -->
     <Edit />
   </div>
@@ -106,18 +106,18 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
 import { Edit, Share, Delete, Search, Loading } from '@element-plus/icons-vue'
 </vp-script>
 
-<ElRow>
+<TyRow>
   <div>
-    <ElIcon :size="30">
+    <TyIcon :size="30">
       <Edit />
-    </ElIcon>
+    </TyIcon>
     <Edit />
   </div>
-</ElRow>
+</TyRow>
 
-## 结合 el-icon 使用
+## 结合 ty-icon 使用
 
-`el-icon` 为 raw SVG 图标提供额外的属性, 提供的详细属性请继续阅读。
+`ty-icon` 为 raw SVG 图标提供额外的属性, 提供的详细属性请继续阅读。
 
 ```vue
 <template>
@@ -125,52 +125,52 @@ import { Edit, Share, Delete, Search, Loading } from '@element-plus/icons-vue'
     with extra class <b>is-loading</b>, your icon is able to rotate 360 deg in 2
     seconds, you can also override this
   </p>
-  <el-icon :size="20">
+  <ty-icon :size="20">
     <Edit />
-  </el-icon>
-  <el-icon color="#409efc" class="no-inherit">
+  </ty-icon>
+  <ty-icon color="#409efc" class="no-inherit">
     <Share />
-  </el-icon>
-  <el-icon>
+  </ty-icon>
+  <ty-icon>
     <Delete />
-  </el-icon>
-  <el-icon class="is-loading">
+  </ty-icon>
+  <ty-icon class="is-loading">
     <Loading />
-  </el-icon>
-  <el-button type="primary">
-    <el-icon style="vertical-align: middle">
+  </ty-icon>
+  <ty-button type="primary">
+    <ty-icon style="vertical-align: middle">
       <Search />
-    </el-icon>
+    </ty-icon>
     <span style="vertical-align: middle"> Search </span>
-  </el-button>
+  </ty-button>
 </template>
 ```
 
-<ElRow>
+<TyRow>
   <p>
     通过添加额外的类名 <b>is-loading</b>，你的图标就可以在 2 秒内旋转 360 度，当然你也可以自己改写想要的动画。
   </p>
   <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-    <ElIcon :size="20">
+    <TyIcon :size="20">
       <Edit />
-    </ElIcon>
-    <ElIcon color="#409efc" class="no-inherit">
+    </TyIcon>
+    <TyIcon color="#409efc" class="no-inherit">
       <Share />
-    </ElIcon>
-    <ElIcon>
+    </TyIcon>
+    <TyIcon>
       <Delete />
-    </ElIcon>
-    <ElIcon class="is-loading">
+    </TyIcon>
+    <TyIcon class="is-loading">
       <Loading />
-    </ElIcon>
-    <ElButton type="primary">
-      <ElIcon style="vertical-align: middle; color: #fff;">
+    </TyIcon>
+    <TyButton type="primary">
+      <TyIcon style="vertical-align: middle; color: #fff;">
         <Search />
-      </ElIcon>
+      </TyIcon>
       <span style="vertical-align: middle;"> 搜索 </span>
-    </ElButton>
+    </TyButton>
   </div>
-</ElRow>
+</TyRow>
 
 ## 直接使用 SVG 图标
 
@@ -187,7 +187,7 @@ import { Edit, Share, Delete, Search, Loading } from '@element-plus/icons-vue'
 </template>
 ```
 
-<ElRow>
+<TyRow>
   <div style="font-size: 20px;">
     <!-- Since svg icons do not carry any attributes by default -->
     <!-- You need to provide attributes directly -->
@@ -196,7 +196,7 @@ import { Edit, Share, Delete, Search, Loading } from '@element-plus/icons-vue'
     <Delete style="width: 1em; height: 1em; margin-right: 8px;" />
     <Search style="width: 1em; height: 1em; margin-right: 8px;" />
   </div>
-</ElRow>
+</TyRow>
 
 ## 图标集合{#icon-collection}
 

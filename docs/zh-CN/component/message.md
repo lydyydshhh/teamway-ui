@@ -11,7 +11,7 @@ lang: zh-CN
 
 默认情况下在顶部显示并在 3 秒后消失。 您可以使用 `placement` 属性控制位置。
 
-:::demo Message 在配置上与 Notification 非常类似，所以部分 options 在此不做详尽解释。 文末有 options 列表，可以结合 Notification 的文档理解它们。 Element Plus 注册了一个全局的 `$message`方法用于调用。 Message 可以接收一个字符串或一个 VNode 作为参数，它会被显示为正文内容。
+:::demo Message 在配置上与 Notification 非常类似，所以部分 options 在此不做详尽解释。 文末有 options 列表，可以结合 Notification 的文档理解它们。 TeamwayUI 注册了一个全局的 `$message`方法用于调用。 Message 可以接收一个字符串或一个 VNode 作为参数，它会被显示为正文内容。
 
 message/basic
 
@@ -85,15 +85,15 @@ message/placement
 
 ## 全局方法
 
-Element Plus 为 `app.config.globalProperties` 添加了全局方法 `$message`。 因此在 vue 实例中你可以使用当前页面中的调用方式调用 `Message`
+TeamwayUI 为 `app.config.globalProperties` 添加了全局方法 `$message`。 因此在 vue 实例中你可以使用当前页面中的调用方式调用 `Message`
 
 ## 单独引用
 
 ```ts
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'teamway-ui'
 ```
 
-此时调用方法为 `ElMessage(options)`。 我们也为每个 type 定义了各自的方法，如 `ElMessage.success(options)`。 并且可以调用 `ElMessage.closeAll()` 手动关闭所有实例。
+此时调用方法为 `TyMessage(options)`。 我们也为每个 type 定义了各自的方法，如 `TyMessage.success(options)`。 并且可以调用 `TyMessage.closeAll()` 手动关闭所有实例。
 
 ## 应用程序上下文继承 ^(2.0.3)
 
@@ -103,17 +103,17 @@ import { ElMessage } from 'element-plus'
 
 :::tip
 
-如果您全局注册了 ElMessage 组件，它将自动继承应用的上下文环境。
+如果您全局注册了 TyMessage 组件，它将自动继承应用的上下文环境。
 
 :::
 
 ```ts
 import { getCurrentInstance } from 'vue'
-import { ElMessage } from 'element-plus'
+import { TyMessage } from 'teamway-ui'
 
 // 在你的 setup 方法中
 const { appContext } = getCurrentInstance()!
-ElMessage({}, appContext)
+TyMessage({}, appContext)
 ```
 
 ## API

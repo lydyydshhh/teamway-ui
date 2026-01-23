@@ -65,7 +65,7 @@ cascader/last-level
 
 ```vue
 <template>
-  <el-cascader :props="props" />
+  <ty-cascader :props="props" />
 </template>
 
 <script lang="ts" setup>
@@ -78,7 +78,7 @@ const props = { multiple: true }
 ```vue
 <template>
   <!--  Object literal binging here is invalid syntax for cascader  -->
-  <el-cascader :props="{ multiple: true }" />
+  <ty-cascader :props="{ multiple: true }" />
 </template>
 ```
 
@@ -152,7 +152,7 @@ cascader/panel
 
 您可以自定义标签。
 
-:::demo 将自定义的标签插入 `el-cascader` 的 slot 中即可。 `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` 在此模式下不生效.
+:::demo 将自定义的标签插入 `ty-cascader` 的 slot 中即可。 `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` 在此模式下不生效.
 
 cascader/custom-tag
 

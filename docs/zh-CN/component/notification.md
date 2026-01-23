@@ -9,7 +9,7 @@ lang: zh-CN
 
 ## 基础用法
 
-:::demo Element Plus 注册了 `$notify` 方法并且它接受一个 Object 作为其参数。 在最简单的情况下，你可以通过设置 `title` 和 `message` 属性来设置通知的标题和正文内容。 默认情况下，通知在4500毫秒后自动关闭，但你可以通过设置 `duration` 属性来自定义通知的展示时间。 如果你将它设置为 `0`，那么通知将不会自动关闭。 需要注意的是 `duration` 接收一个 `Number`，单位为毫秒。
+:::demo TeamwayUI 注册了 `$notify` 方法并且它接受一个 Object 作为其参数。 在最简单的情况下，你可以通过设置 `title` 和 `message` 属性来设置通知的标题和正文内容。 默认情况下，通知在4500毫秒后自动关闭，但你可以通过设置 `duration` 属性来自定义通知的展示时间。 如果你将它设置为 `0`，那么通知将不会自动关闭。 需要注意的是 `duration` 接收一个 `Number`，单位为毫秒。
 
 notification/basic
 
@@ -19,7 +19,7 @@ notification/basic
 
 我们提供了四种不同类型的提醒框：success、warning、info 和error。
 
-:::demo Element Plus 为 Notification 组件准备了5种通知类型：`primary`,`success`, `warning`, `info`, `error`。 他们可以设置 `type` 字段来修改，除上述的四个值之外的值会被忽略。 同时，我们也为 Notification 的各种 type 注册了单独的方法，可以在不传入 `type` 字段的情况下像 `open3` 和 `open4` 那样直接调用。 `primary` 已被添加到^(2.9.11)。
+:::demo TeamwayUI 为 Notification 组件准备了5种通知类型：`primary`,`success`, `warning`, `info`, `error`。 他们可以设置 `type` 字段来修改，除上述的四个值之外的值会被忽略。 同时，我们也为 Notification 的各种 type 注册了单独的方法，可以在不传入 `type` 字段的情况下像 `open3` 和 `open4` 那样直接调用。 `primary` 已被添加到^(2.9.11)。
 
 notification/different-types
 
@@ -85,24 +85,24 @@ notification/no-close
 
 ## 全局方法
 
-Element Plus 为 `app.config.globalProperties` 添加了全局方法 `$notify`。 因此在 Vue instance 中可以采用本页面中的方式调用 `Notification`。
+TeamwayUI 为 `app.config.globalProperties` 添加了全局方法 `$notify`。 因此在 Vue instance 中可以采用本页面中的方式调用 `Notification`。
 
 ## 单独引用
 
 ```javascript
-import { ElNotification } from 'element-plus'
+import { TyNotification } from 'teamway-ui'
 import { CloseBold } from '@element-plus/icons-vue'
 
-ElNotification({
+TyNotification({
   title: 'Title',
   message: 'This is a message',
   closeIcon: CloseBold,
 })
 ```
 
-你可以在对应的处理函数内调用 `ElNotification(options)` 来呼出通知栏。 我们也提前定义了多个 type 的单独调用方法，如 `ElNotification.success(options)`。 当你需要关闭页面上所有的通知栏的时候，可以调用 `ElNotification.closeAll()` 来关闭所有的实例。 在 ^(2.10.5) 版本中，你可以通过调用 `ElNotification.updateOffsets(position)` 手动更新所有通知实例在特定方向上的偏移量。
+你可以在对应的处理函数内调用 `TyNotification(options)` 来呼出通知栏。 我们也提前定义了多个 type 的单独调用方法，如 `TyNotification.success(options)`。 当你需要关闭页面上所有的通知栏的时候，可以调用 `TyNotification.closeAll()` 来关闭所有的实例。 在 ^(2.10.5) 版本中，你可以通过调用 `TyNotification.updateOffsets(position)` 手动更新所有通知实例在特定方向上的偏移量。
 
-## 应用程序上下文继承 <el-tag>> 2.0.4</el-tag>
+## 应用程序上下文继承 <ty-tag>> 2.0.4</ty-tag>
 
 现在 Notification 接受一条 `context` 作为消息构造器的第二个参数，允许你将当前应用的上下文注入到 Notification 中，这将允许你继承应用程序的所有属性。
 
@@ -110,17 +110,17 @@ ElNotification({
 
 :::tip
 
-如果您全局注册了 ElNotification 组件，它将自动继承应用的上下文环境。
+如果您全局注册了 TyNotification 组件，它将自动继承应用的上下文环境。
 
 :::
 
 ```ts
 import { getCurrentInstance } from 'vue'
-import { ElNotification } from 'element-plus'
+import { TyNotification } from 'teamway-ui'
 
 // 在你的 setup 方法中
 const { appContext } = getCurrentInstance()!
-ElNotification({}, appContext)
+TyNotification({}, appContext)
 ```
 
 ## API

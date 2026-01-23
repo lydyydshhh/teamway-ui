@@ -45,7 +45,7 @@ button/link
 
 :::tip
 
-文字按钮在现在有了全新的设计样式。 <el-tag round effect="plain" size="small">2.2.0</el-tag> 如果您想要使用老版样式的按钮，可以考虑使用 [Link](./link.md#basic) 组件。
+文字按钮在现在有了全新的设计样式。 <ty-tag round effect="plain" size="small">2.2.0</ty-tag> 如果您想要使用老版样式的按钮，可以考虑使用 [Link](./link.md#basic) 组件。
 
 API也已更新，由于 `type` 属性会同时控制按钮的样式， 因此我们通过一个新的 API `text: boolean` 来控制文字按钮。
 
@@ -75,7 +75,7 @@ button/icon
 
 在 ^(2.11.9) 中，您可以使用 `direction` 属性。
 
-:::demo 使用 `<el-button-group>` 对多个按钮分组。
+:::demo 使用 `<ty-button-group>` 对多个按钮分组。
 
 button/group
 

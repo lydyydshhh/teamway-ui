@@ -9,7 +9,7 @@ lang: zh-CN
 
 ## 基础用法
 
-:::demo 绑定 `v-model` 到一个 `Boolean` 类型的变量。 可以使用 `--el-switch-on-color` 属性与 `--el-switch-off-color` 属性来设置开关的背景色。
+:::demo 绑定 `v-model` 到一个 `Boolean` 类型的变量。 可以使用 `--ty-switch-on-color` 属性与 `--ty-switch-off-color` 属性来设置开关的背景色。
 
 switch/basic
 
@@ -37,7 +37,7 @@ switch/text-description
 
 :::tip
 
-使用 `inactive-icon` 和 `active-icon` 属性来添加图标。 您可以传递组件名称的字符串（提前注册）或组件本身是一个 SVG Vue 组件。 Element Plus 提供了一组图标，您可以在 [icon component](/zh-CN/component/icon) 查看。
+使用 `inactive-icon` 和 `active-icon` 属性来添加图标。 您可以传递组件名称的字符串（提前注册）或组件本身是一个 SVG Vue 组件。 TeamwayUI 提供了一组图标，您可以在 [icon component](/zh-CN/component/icon) 查看。
 
 :::
 
@@ -121,9 +121,9 @@ switch/custom-action-slot
 | id                            | input 的 id                                                                      | ^[string]                                      | —       |
 | tabindex                      | input 的 tabindex                                                                | ^[string] / ^[number]                          | —       |
 | aria-label ^(a11y) ^(2.7.2)   | 等价于原生 input `aria-label` 属性                                               | ^[string]                                      | —       |
-| active-color ^(deprecated)    | 当在 `on` 状态时的背景颜色(推荐使用 CSS var `--el-switch-on-color` )             | ^[string]                                      | ''      |
-| inactive-color ^(deprecated)  | `off` 状态时的背景颜色(推荐使用 CSS var `--el-switch-off-color` )                | ^[string]                                      | ''      |
-| border-color ^(deprecated)    | 开关的边框颜色 ( 推荐使用 CSS var `--el-switch-border-color` )                   | ^[string]                                      | ''      |
+| active-color ^(deprecated)    | 当在 `on` 状态时的背景颜色(推荐使用 CSS var `--ty-switch-on-color` )             | ^[string]                                      | ''      |
+| inactive-color ^(deprecated)  | `off` 状态时的背景颜色(推荐使用 CSS var `--ty-switch-off-color` )                | ^[string]                                      | ''      |
+| border-color ^(deprecated)    | 开关的边框颜色 ( 推荐使用 CSS var `--ty-switch-border-color` )                   | ^[string]                                      | ''      |
 | label ^(a11y) ^(deprecated)   | 等价于原生 input `aria-label` 属性                                               | ^[string]                                      | —       |
 
 ### 事件

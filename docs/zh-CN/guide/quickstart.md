@@ -5,7 +5,7 @@ lang: zh-CN
 
 # 快速开始
 
-本节将介绍如何在项目中使用 Element Plus。
+本节将介绍如何在项目中使用 TeamwayUI。
 
 ## 用法
 
@@ -15,13 +15,13 @@ lang: zh-CN
 
 ```ts [main.ts]
 import { createApp } from 'vue'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
+import TeamwayUI from 'teamway-ui'
+import 'teamway-ui/dist/index.css'
 import App from './App.vue'
 
 const app = createApp(App)
 
-app.use(ElementPlus)
+app.use(TeamwayUI)
 app.mount('#app')
 ```
 
@@ -42,7 +42,7 @@ app.mount('#app')
 
 您需要使用额外的插件来导入要使用的组件。
 
-#### 自动导入 <el-tag type="primary" style="vertical-align: middle;" effect="dark" size="small">推荐</el-tag>
+#### 自动导入 <ty-tag type="primary" style="vertical-align: middle;" effect="dark" size="small">推荐</ty-tag>
 
 首先你需要安装`unplugin-vue-components` 和 `unplugin-auto-import`这两款插件
 
@@ -140,31 +140,31 @@ export default defineNuxtConfig({
 
 ### 手动导入
 
-Element Plus 提供了基于 ES Module 的开箱即用的 [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) 功能。
+TeamwayUI 提供了基于 ES Module 的开箱即用的 [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) 功能。
 
 但你需要安装 [unplugin-element-plus](https://github.com/element-plus/unplugin-element-plus) 来导入样式。 配置文档参考 [docs](https://github.com/element-plus/unplugin-element-plus#readme).
 
 ```vue [App.vue]
 <template>
-  <el-button>I am ElButton</el-button>
+  <ty-button>I am TyButton</ty-button>
 </template>
 
 <script>
-import { ElButton } from 'element-plus'
+import { TyButton } from 'teamway-ui'
 
 export default {
-  components: { ElButton },
+  components: { TyButton },
 }
 </script>
 ```
 
 ```ts [vite.config.ts]
 import { defineConfig } from 'vite'
-import ElementPlus from 'unplugin-element-plus/vite'
+import TeamwayUI from 'unplugin-element-plus/vite'
 
 export default defineConfig({
   // ...
-  plugins: [ElementPlus()],
+  plugins: [TeamwayUI()],
 })
 ```
 
@@ -178,35 +178,35 @@ export default defineConfig({
 
 ## 全局配置
 
-在引入 ElementPlus 时，可以传入一个包含 `size` 和 `zIndex` 属性的全局配置对象。 `size` 用于设置表单组件的默认尺寸，`zIndex` 用于设置弹出组件的层级，`zIndex` 的默认值为 `2000`。
+在引入 TeamwayUI 时，可以传入一个包含 `size` 和 `zIndex` 属性的全局配置对象。 `size` 用于设置表单组件的默认尺寸，`zIndex` 用于设置弹出组件的层级，`zIndex` 的默认值为 `2000`。
 
 完整引入：
 
 ```ts [main.ts]
 import { createApp } from 'vue'
-import ElementPlus from 'element-plus'
+import TeamwayUI from 'teamway-ui'
 import App from './App.vue'
 
 const app = createApp(App)
-app.use(ElementPlus, { size: 'small', zIndex: 3000 })
+app.use(TeamwayUI, { size: 'small', zIndex: 3000 })
 ```
 
 按需引入:
 
 ```vue [App.vue]
 <template>
-  <el-config-provider :size="size" :z-index="zIndex">
+  <ty-config-provider :size="size" :z-index="zIndex">
     <app />
-  </el-config-provider>
+  </ty-config-provider>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
-import { ElConfigProvider } from 'element-plus'
+import { TyConfigProvider } from 'teamway-ui'
 
 export default defineComponent({
   components: {
-    ElConfigProvider,
+    TyConfigProvider,
   },
   setup() {
     return {
@@ -220,7 +220,7 @@ export default defineComponent({
 
 ## 使用 Nuxt.js
 
-您也可以使用 [Nuxt.js](https://nuxt.com): 更多详情请参考 [Element Plus Nuxt.js 初始化模板](https://github.com/element-plus/element-plus-nuxt-starter)。
+您也可以使用 [Nuxt.js](https://nuxt.com): 更多详情请参考 [TeamwayUI Nuxt.js 初始化模板](https://github.com/element-plus/element-plus-nuxt-starter)。
 
 ## 开始使用
 

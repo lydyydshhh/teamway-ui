@@ -181,7 +181,7 @@ select-v2/props
 
 您可以自定义标签。
 
-:::demo 将自定义的标签插入 `el-select` 的 slot 中即可。 `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` 在此模式下不生效.
+:::demo 将自定义的标签插入 `ty-select` 的 slot 中即可。 `collapse-tags`, `collapse-tags-tooltip`, `max-collapse-tags` 在此模式下不生效.
 
 select-v2/custom-tag
 

@@ -50,7 +50,7 @@ date-picker-panel/all-types
 
 ## 本地化
 
-由于 Element Plus 的默认语言为英语，如果你需要设置其它的语言，请参考<a href="/zh-CN/guide/i18n">国际化</a>文档。
+由于 TeamwayUI 的默认语言为英语，如果你需要设置其它的语言，请参考<a href="/zh-CN/guide/i18n">国际化</a>文档。
 
 要注意的是：日期相关的文字（月份，每一周的第一天等等） 也都进行了本地化配置。
 

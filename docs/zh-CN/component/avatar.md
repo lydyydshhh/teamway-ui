@@ -51,7 +51,7 @@ avatar/fit
 
 显示为头像组
 
-:::demo 使用标签 `<el-avatar-group>` 来分组您的头像。
+:::demo 使用标签 `<ty-avatar-group>` 来分组您的头像。
 
 avatar/group
 

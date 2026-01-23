@@ -53,7 +53,7 @@ tooltip/rich-content
 
 如果需要关闭 `tooltip` 功能，`disabled` 属性可以满足这个需求， 你只需要将其设置为 `true`。
 
-事实上，Tooltip 是一个基于 [ElPopper](https://github.com/element-plus/element-plus/tree/dev/packages/components/popper) 的扩展，您可以使用 ElPopper 中允许的任何属性。
+事实上，Tooltip 是一个基于 [TyPopper](https://github.com/element-plus/element-plus/tree/dev/packages/components/popper) 的扩展，您可以使用 TyPopper 中允许的任何属性。
 
 :::demo
 
@@ -207,12 +207,12 @@ tooltip/append-to
 
 | 方法名               | 详情                                             | Type                                                |
 | -------------------- | ------------------------------------------------ | --------------------------------------------------- |
-| popperRef            | el-popper 组件实例                               | ^[object]`Ref<PopperInstance \| undefined>`         |
-| contentRef           | el-tooltip-content 组件实例                      | ^[object]`Ref<TooltipContentInstance \| undefined>` |
-| isFocusInsideContent | 验证当前焦点事件是否在 el-tooltip-content 中触发 | ^[Function]`() => boolean \| undefined`             |
-| updatePopper         | 更新 el-popper组件实例                           | ^[Function]`() => void`                             |
-| onOpen               | onOpen 方法控制 el-tooltip 显示状态              | ^[Function]`(event?: Event \| undefined) => void`   |
-| onClose              | onClose 方法控制 el-tooltip 显示状态             | ^[Function]`(event?: Event \| undefined) => void`   |
+| popperRef            | ty-popper 组件实例                               | ^[object]`Ref<PopperInstance \| undefined>`         |
+| contentRef           | ty-tooltip-content 组件实例                      | ^[object]`Ref<TooltipContentInstance \| undefined>` |
+| isFocusInsideContent | 验证当前焦点事件是否在 ty-tooltip-content 中触发 | ^[Function]`() => boolean \| undefined`             |
+| updatePopper         | 更新 ty-popper组件实例                           | ^[Function]`() => void`                             |
+| onOpen               | onOpen 方法控制 ty-tooltip 显示状态              | ^[Function]`(event?: Event \| undefined) => void`   |
+| onClose              | onClose 方法控制 ty-tooltip 显示状态             | ^[Function]`(event?: Event \| undefined) => void`   |
 | hide                 | 提供 hide 方法                                   | ^[Function]`(event?: Event \| undefined) => void`   |
 
 ## FAQ
@@ -223,8 +223,8 @@ tooltip/append-to
 
 ```vue
 <template>
-  <el-tooltip content="tooltip content" placement="top" :trigger-keys="[]">
-    <el-input v-model="value" placeholder="" />
-  </el-tooltip>
+  <ty-tooltip content="tooltip content" placement="top" :trigger-keys="[]">
+    <ty-input v-model="value" placeholder="" />
+  </ty-tooltip>
 </template>
 ```

@@ -11,7 +11,7 @@ lang: zh-CN
 
 基础的表格展示用法。
 
-:::demo 当 `el-table` 元素中注入 `data` 对象数组后，在 `el-table-column` 中用 `prop` 属性来对应对象中的键名即可填入数据，用 `label` 属性来定义表格的列名。 可以使用 `width` 属性来定义列宽。
+:::demo 当 `ty-table` 元素中注入 `data` 对象数组后，在 `ty-table-column` 中用 `prop` 属性来对应对象中的键名即可填入数据，用 `label` 属性来定义表格的列名。 可以使用 `width` 属性来定义列宽。
 
 table/basic
 
@@ -59,7 +59,7 @@ table/show-overflow-tooltip
 
 纵向内容过多时，可选择固定表头。
 
-:::demo 只要在 `el-table` 元素中定义了 `height` 属性，即可实现固定表头的表格，而不需要额外的代码。
+:::demo 只要在 `ty-table` 元素中定义了 `height` 属性，即可实现固定表头的表格，而不需要额外的代码。
 
 table/fixed-header
 
@@ -89,7 +89,7 @@ table/fixed-column-and-header
 
 当数据量动态变化时，可以为 Table 设置一个最大高度。
 
-:::demo 通过设置 `max-height` 属性为 `el-table` 指定最大高度。 此时若表格所需的高度大于最大高度，则会显示一个滚动条。
+:::demo 通过设置 `max-height` 属性为 `ty-table` 指定最大高度。 此时若表格所需的高度大于最大高度，则会显示一个滚动条。
 
 table/fixed-header-with-fluid-header
 
@@ -109,7 +109,7 @@ table/grouping-header
 
 支持固定群组头
 
-:::demo 组头的属性 `fixed` 由最外层 `el-table-column`决定
+:::demo 组头的属性 `fixed` 由最外层 `ty-table-column`决定
 
 table/fixed-column-and-header
 
@@ -119,7 +119,7 @@ table/fixed-column-and-header
 
 选择单行数据时使用色块表示。
 
-:::demo Table 组件提供了单选的支持， 只需要配置 `highlight-current-row` 属性即可实现单选。 之后由 `current-change` 事件来管理选中时触发的事件，它会传入 `currentRow`，`oldCurrentRow`。 如果需要显示索引，可以增加一列 `el-table-column`，设置 `type` 属性为 `index` 即可显示从 1 开始的索引号。
+:::demo Table 组件提供了单选的支持， 只需要配置 `highlight-current-row` 属性即可实现单选。 之后由 `current-change` 事件来管理选中时触发的事件，它会传入 `currentRow`，`oldCurrentRow`。 如果需要显示索引，可以增加一列 `ty-table-column`，设置 `type` 属性为 `index` 即可显示从 1 开始的索引号。
 
 table/single-select
 
@@ -131,7 +131,7 @@ table/single-select
 
 在^(2.8.3) 之后， `toggleRowSelection` 支持第三个参数 `ignoreSelectable` 以确定是否忽略可选属性。
 
-:::demo 实现多选非常简单: 手动添加一个 `el-table-column`，设 `type` 属性为 `selection` 即可；
+:::demo 实现多选非常简单: 手动添加一个 `ty-table-column`，设 `type` 属性为 `selection` 即可；
 
 table/multi-select
 
@@ -183,7 +183,7 @@ table/custom-header
 
 在 ^(2.9.7) 版本后，新增了 `preserve-expanded-content` 属性，用于控制折叠时是否在 DOM 中保留已展开的行内容。
 
-:::demo 通过设置 type="expand" 和 slot 可以开启展开行功能， el-table-column 的模板会被渲染成为展开行的内容，展开行可访问的属性与使用自定义列模板时的 slot 相同。
+:::demo 通过设置 type="expand" 和 slot 可以开启展开行功能， ty-table-column 的模板会被渲染成为展开行的内容，展开行可访问的属性与使用自定义列模板时的 slot 相同。
 
 table/expandable-row
 
@@ -377,7 +377,7 @@ table/tooltip-formatter
 | sort-method                | 指定数据按照哪个属性进行排序，仅当`sortable`设置为`true`的时候有效。 应该如同 Array.sort 那样返回一个 Number                                                                           | ^[Function]`<T = any>(a: T, b: T) => number`                                                                                                                                | —                                 |
 | sort-by                    | 指定数据按照哪个属性进行排序，仅当 sortable 设置为 true 且没有设置 sort-method 的时候有效。 如果 sort-by 为数组，则先按照第 1 个属性排序，如果第 1 个相等，再按照第 2 个排序，以此类推 | ^[Function]`(row: any, index: number) => string` / ^[string] / ^[array]`string[]`                                                                                           | —                                 |
 | sort-orders                | 数据在排序时所使用排序策略的轮转顺序，仅当 sortable 为 true 时有效。 需传入一个数组，随着用户点击表头，该列依次按照数组中元素的顺序进行排序                                            | ^[object]`('ascending' \| 'descending' \| null)[]`                                                                                                                          | ['ascending', 'descending', null] |
-| resizable                  | 对应列是否可以通过拖动改变宽度（需要在 el-table 上设置 border 属性为真）                                                                                                               | ^[boolean]                                                                                                                                                                  | true                              |
+| resizable                  | 对应列是否可以通过拖动改变宽度（需要在 ty-table 上设置 border 属性为真）                                                                                                               | ^[boolean]                                                                                                                                                                  | true                              |
 | formatter                  | 用来格式化内容                                                                                                                                                                         | ^[function]`(row: any, column: TableColumnCtx<T>, cellValue: any, index: number) => VNode \| string`                                                                        | —                                 |
 | show-overflow-tooltip      | 当内容过长被隐藏时显示 tooltip                                                                                                                                                         | ^[boolean] / [`object`](#table-attributes) ^(2.2.28)                                                                                                                        | undefined                         |
 | align                      | 对齐方式                                                                                                                                                                               | ^[enum]`'left' \| 'center' \| 'right'`                                                                                                                                      | left                              |
@@ -492,11 +492,11 @@ type TableColumnCtx<T extends DefaultRow = DefaultRow> = {
 
 ```vue{4}
 <template>
-  <el-table-column width="180">
+  <ty-table-column width="180">
     <template #default="scope">
-      <el-image preview-teleported :preview-src-list="srcList" />
+      <ty-image preview-teleported :preview-src-list="srcList" />
     </template>
-  </el-table-column>
+  </ty-table-column>
 </template>
 ```
 

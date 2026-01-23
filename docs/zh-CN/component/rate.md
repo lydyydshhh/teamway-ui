@@ -71,16 +71,16 @@ rate/readonly
 
 ## 自定义样式
 
-您可以为 rate 组件设定自定义样式。 使用 `css` 或 `scss` 改变全局或局部的颜色。 我们设置了一些全局颜色变量：`--el-rate-void-color`、`--el-rate-fill-color`、`--el-rate-disabled-void-color` 和 `--el-rate-text-color`。 您可以像这样使用：`:root { --el-rate-void-color: red; --el-rate-fill-color: blue; }`。
+您可以为 rate 组件设定自定义样式。 使用 `css` 或 `scss` 改变全局或局部的颜色。 我们设置了一些全局颜色变量：`--ty-rate-void-color`、`--ty-rate-fill-color`、`--ty-rate-disabled-void-color` 和 `--ty-rate-text-color`。 您可以像这样使用：`:root { --ty-rate-void-color: red; --ty-rate-fill-color: blue; }`。
 
 ### 默认变量
 
 | 变量                          | 默认颜色                      |
 | ----------------------------- | ----------------------------- |
-| --el-rate-void-color          | var(--el-border-color-darker) |
-| --el-rate-fill-color          | #f7ba2a                       |
-| --el-rate-disabled-void-color | var(--el-fill-color)          |
-| --el-rate-text-color          | var(--el-text-color-primary)  |
+| --ty-rate-void-color          | var(--ty-border-color-darker) |
+| --ty-rate-fill-color          | #f7ba2a                       |
+| --ty-rate-disabled-void-color | var(--ty-fill-color)          |
+| --ty-rate-text-color          | var(--ty-text-color-primary)  |
 
 ## API
 

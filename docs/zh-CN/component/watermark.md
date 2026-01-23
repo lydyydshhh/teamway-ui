@@ -58,7 +58,7 @@ watermark/custom
 | rotate  | 水印的旋转角度, 单位 `°`                      | ^[number]                    | -22                        |
 | z-index | 水印元素的z-index值                           | ^[number]                    | 9                          |
 | image   | 水印图片，建议使用 2x 或 3x 图像              | ^[string]                    | —                          |
-| content | 水印文本内容                                  | ^[string]/^[array]`string[]` | Element Plus               |
+| content | 水印文本内容                                  | ^[string]/^[array]`string[]` | TeamwayUI                  |
 | font    | 文字样式                                      | [Font](#font)                | [字体](#font)              |
 | gap     | 水印之间的间距                                | ^[array]`[number, number]`   | \[100, 100\]               |
 | offset  | 水印从容器左上角的偏移 默认值为 `gap/2`       | ^[array]`[number, number]`   | \[gap\[0\]/2, gap\[1\]/2\] |
