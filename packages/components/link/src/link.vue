@@ -35,7 +35,7 @@ useDeprecated(
     from: 'The underline option (boolean)',
     replacement: "'always' | 'hover' | 'never'",
     version: '3.0.0',
-    ref: 'https://element-plus.org/en-US/component/link.html#underline',
+    ref: 'https://element-plus.org/zh-CN/component/link.html#underline',
   },
   computed(() => isBoolean(props.underline))
 )

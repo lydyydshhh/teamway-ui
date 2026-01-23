@@ -54,7 +54,7 @@ export const useRadio = (
       replacement: 'value',
       version: '3.0.0',
       scope: 'ty-radio',
-      ref: 'https://element-plus.org/en-US/component/radio.html',
+      ref: 'https://element-plus.org/zh-CN/component/radio.html',
     },
     computed(() => isGroup.value && isPropAbsent(props.value))
   )

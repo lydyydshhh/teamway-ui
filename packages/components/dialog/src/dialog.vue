@@ -105,7 +105,7 @@ useDeprecated(
     from: 'the title slot',
     replacement: 'the header slot',
     version: '3.0.0',
-    ref: 'https://element-plus.org/en-US/component/dialog.html#slots',
+    ref: 'https://element-plus.org/zh-CN/component/dialog.html#slots',
   },
   computed(() => !!slots.title)
 )

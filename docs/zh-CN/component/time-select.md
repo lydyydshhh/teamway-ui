@@ -70,8 +70,8 @@ time-select/time-range
 | min-time                  | 最早时间点，早于该时间的时间段将被禁用                                                             | ^[string]                                                                                        | —           |
 | max-time                  | 最晚时间点，晚于该时间的时间段将被禁用                                                             | ^[string]                                                                                        | —           |
 | format                    | 设置时间格式                                                                                       | ^[string] see [formats](https://day.js.org/docs/en/display/format#list-of-all-available-formats) | HH:mm       |
-| empty-values ^(2.7.0)     | 组件的空值配置 [参考config-provider](/en-US/component/config-provider#empty-values-configurations) | ^[array]                                                                                         | —           |
-| value-on-clear ^(2.7.0)   | 清空选项的值 [参考 config-provider](/en-US/component/config-provider#empty-values-configurations)  | ^[string] / ^[number] / ^[boolean] / ^[Function]                                                 | —           |
+| empty-values ^(2.7.0)     | 组件的空值配置 [参考config-provider](/zh-CN/component/config-provider#empty-values-configurations) | ^[array]                                                                                         | —           |
+| value-on-clear ^(2.7.0)   | 清空选项的值 [参考 config-provider](/zh-CN/component/config-provider#empty-values-configurations)  | ^[string] / ^[number] / ^[boolean] / ^[Function]                                                 | —           |
 | popper-class ^(2.11.4)    | 为 TimeSelect 下拉面板设置自定义类名                                                               | ^[string]                                                                                        | ''          |
 | popper-style ^(2.11.4)    | 为 TimeSelect 下拉面板设置自定义样式                                                               | ^[string] / ^[object]                                                                            | :::         |
 

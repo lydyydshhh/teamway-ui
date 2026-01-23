@@ -5,7 +5,7 @@ import { glob } from 'tinyglobby'
 async function generateLLms() {
   const cwd = process.cwd()
   const siteDir = path.resolve(cwd, 'public')
-  const docsDir = ['en-US', 'examples']
+  const docsDir = ['zh-CN', 'examples']
 
   const matchSuffixes = ['.md', '.vue']
 
