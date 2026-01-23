@@ -5,7 +5,7 @@ import { glob } from 'tinyglobby'
 async function generateLLms() {
   const cwd = process.cwd()
   const siteDir = path.resolve(cwd, 'public')
-  const docsDir = ['en-US', 'examples']
+  const docsDir = ['zh-CN', 'examples']
 
   const matchSuffixes = ['.md', '.vue']
 
@@ -109,9 +109,9 @@ async function generateLLms() {
   }
 
   const docsIndexContent = [
-    '# Element Plus - A Vue 3 based component library',
+    '# Teamway UI - A Vue 3 based component library',
     '',
-    '- Element Plus is a Vue 3 based component library for developers, designers and product managers, with a set of high-quality components and rich features for building modern web applications.',
+    '- Teamway UI is a Vue 3 based component library for developers, designers and product managers, with a set of high-quality components and rich features for building modern web applications.',
     '',
     '## Documentation',
     '',

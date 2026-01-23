@@ -57,7 +57,7 @@ export const useCheckbox = (
       replacement: 'value',
       version: '3.0.0',
       scope: 'ty-checkbox',
-      ref: 'https://element-plus.org/en-US/component/checkbox.html',
+      ref: 'https://element-plus.org/zh-CN/component/checkbox.html',
     },
     computed(() => isGroup.value && isPropAbsent(props.value))
   )
@@ -68,7 +68,7 @@ export const useCheckbox = (
       replacement: 'true-value',
       version: '3.0.0',
       scope: 'ty-checkbox',
-      ref: 'https://element-plus.org/en-US/component/checkbox.html',
+      ref: 'https://element-plus.org/zh-CN/component/checkbox.html',
     },
     computed(() => !!props.trueLabel)
   )
@@ -79,7 +79,7 @@ export const useCheckbox = (
       replacement: 'false-value',
       version: '3.0.0',
       scope: 'ty-checkbox',
-      ref: 'https://element-plus.org/en-US/component/checkbox.html',
+      ref: 'https://element-plus.org/zh-CN/component/checkbox.html',
     },
     computed(() => !!props.falseLabel)
   )

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { inBrowser, useData, withBase } from 'vitepress'
-import { version as epVersion } from 'teamway-ui'
 import VPNavbarSearch from './navbar/vp-search.vue'
 import VPNavbarMenu from './navbar/vp-menu.vue'
 import VPNavbarThemeToggler from './navbar/vp-theme-toggler.vue'
@@ -41,9 +40,6 @@ const currentLink = computed(() => {
           />
           <span>TeamwayUI</span>
         </a>
-        <ty-tag round size="small" title="latest version">{{
-          epVersion.replace('0.0.0-staging.', '')
-        }}</ty-tag>
       </div>
       <div class="content">
         <VPNavbarSearch class="search" :options="theme.agolia" multilang />

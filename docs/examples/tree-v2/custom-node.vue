@@ -12,7 +12,7 @@
         <FolderOpened v-else />
       </ty-icon>
       <span class="prefix" :class="{ 'is-leaf': node.isLeaf }"
-        >[ElementPlus]</span
+        >[TeamwayUI]</span
       >
       <span>{{ node.label }}</span>
     </template>

@@ -13,11 +13,7 @@ export const useTranslation = () => {
   const { site } = useData()
 
   const languageMap = {
-    'en-US': 'English',
     'zh-CN': '中文',
-    'es-ES': 'Español',
-    'fr-FR': 'Français',
-    'ja-JP': '日本語',
   }
 
   const locale = computed(() => translationLocale[lang.value])
@@ -38,7 +34,7 @@ export const useTranslation = () => {
     return currentLang === 'zh-CN' ? langsCopy : ['zh-CN'].concat(langsCopy)
   })
 
-  const language = useStorage(PREFERRED_LANG_KEY, 'en-US')
+  const language = useStorage(PREFERRED_LANG_KEY, 'zh-CN')
 
   const getTargetUrl = (lang: string) => {
     const firstSlash = route.path.indexOf('/', site.value.base.length)

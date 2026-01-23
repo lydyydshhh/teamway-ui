@@ -66,7 +66,7 @@ pnpm docs:dev
 pnpm dev
 ```
 
-You can follow the [LOCAL DEVELOPMENT GUIDE](https://element-plus.org/en-US/guide/dev-guide.html) to do development more quickly.
+You can follow the [LOCAL DEVELOPMENT GUIDE](https://element-plus.org/zh-CN/guide/dev-guide.html) to do development more quickly.
 
 ### Compile the Source Code
 
@@ -110,7 +110,7 @@ pnpm cz
 2. You can also write the commit message manually, but make sure your
    commit message follows the rules.
 
-We have a [commit template](https://element-plus.org/en-US/guide/commit-examples.html)
+We have a [commit template](https://element-plus.org/zh-CN/guide/commit-examples.html)
 
 NOTE:
 **PRs with unformatted commit messages WILL NOT BE ACCEPTED.**

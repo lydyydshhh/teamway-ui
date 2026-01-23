@@ -37,7 +37,7 @@ const reComponentName: ReComponentName = (title) => {
 }
 
 const reDocUrl: ReDocUrl = (fileName, header) => {
-  const docs = 'https://element-plus.org/en-US/component/'
+  const docs = 'https://element-plus.org/zh-CN/component/'
   const _header = header
     ? removeTag(header).replaceAll(/\s+/g, '-').toLowerCase()
     : ''
@@ -200,7 +200,7 @@ export const buildHelper: TaskFunction = (done) => {
     : version!
   const entry = `${path.resolve(
     projRoot,
-    'docs/en-US/component'
+    'docs/zh-CN/component'
   )}/!(datetime-picker|message-box|message).md`
 
   main({

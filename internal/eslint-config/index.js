@@ -354,7 +354,7 @@ export default defineConfig([
   {
     files: [
       'docs/examples/**/*.{js,jsx,ts,tsx,vue}',
-      'docs/en-US/**/*.md/*.{js,jsx,ts,tsx,vue}',
+      'docs/zh-CN/**/*.md/*.{js,jsx,ts,tsx,vue}',
     ],
     rules: {
       'no-console': 'off',
@@ -540,7 +540,6 @@ export default defineConfig([
       'node_modules',
       'dist',
       'pnpm-lock.yaml',
-      'CHANGELOG.en-US.md',
       'docs/components.d.ts',
       'coverage',
       'play',
@@ -548,7 +547,7 @@ export default defineConfig([
       'docs/.vitepress/i18n/*',
       'docs/.vitepress/cache/*',
       'docs/.vitepress/crowdin/*',
-      '!docs/.vitepress/crowdin/en-US',
+      '!docs/.vitepress/crowdin/zh-CN',
       'docs/.vitepress/dist/*',
       '!.*',
     ],
