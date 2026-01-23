@@ -8,14 +8,5 @@
     "text": "组件",
     "link": "/component/overview",
     "activeMatch": "/component/"
-  },
-  {
-    "text": "资源",
-    "link": "/resource/index",
-    "activeMatch": "/resource/"
-  },
-  {
-    "text": "Playground",
-    "link": "https://element-plus.run"
   }
 ]

@@ -28,10 +28,6 @@
         "link": "/guide/i18n"
       },
       {
-        "text": "从 Element UI 升级",
-        "link": "/guide/migration"
-      },
-      {
         "text": "主题",
         "link": "/guide/theming"
       },
@@ -73,10 +69,6 @@
       {
         "text": "提交示例",
         "link": "/guide/commit-examples"
-      },
-      {
-        "text": "翻译",
-        "link": "/guide/translation"
       }
     ]
   }
