@@ -3,6 +3,7 @@ import { readFile, writeFile } from 'fs/promises'
 import { glob } from 'tinyglobby'
 import { copy, remove } from 'fs-extra'
 import { buildOutput } from '@teamway-ui/build-utils'
+import { PKG_NAME } from '@teamway-ui/build-constants'
 import { pathRewriter, run } from '../utils'
 
 export const generateTypesDefinitions = async () => {
@@ -19,7 +20,7 @@ export const generateTypesDefinitions = async () => {
     await writeFile(filePath, pathRewriter('esm')(content), 'utf8')
   })
   await Promise.all(rewriteTasks)
-  const sourceDir = path.join(typesDir, 'element-plus')
+  const sourceDir = path.join(typesDir, PKG_NAME)
   await copy(sourceDir, typesDir)
   await remove(sourceDir)
 }
