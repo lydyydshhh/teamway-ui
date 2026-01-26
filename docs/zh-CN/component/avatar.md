@@ -47,7 +47,7 @@ avatar/fit
 
 :::
 
-## 头像组 ^(2.13.1)
+## 头像组
 
 显示为头像组
 
@@ -83,7 +83,7 @@ avatar/group
 | ------- | ------------------ |
 | default | 自定义头像展示内容 |
 
-## AvatarGroup API ^(2.13.1)
+## AvatarGroup API
 
 ### AvatarGroup Attributes
 

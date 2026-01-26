@@ -65,16 +65,16 @@ watermark/custom
 
 ### Font
 
-| 名称              | 详情     | 类型                                                                                 | 默认            |
-| ----------------- | -------- | ------------------------------------------------------------------------------------ | --------------- |
-| color             | 字体颜色 | ^[string]                                                                            | rgba(0,0,0,.15) |
-| fontSize          | 字体大小 | ^[number] / ^[string]                                                                | 16              |
-| fontWeight        | 字重     | ^[enum]`'normal' \| 'light' \| 'weight' \| number`                                   | normal          |
-| fontFamily        | 字体     | ^[string]                                                                            | sans-serif      |
-| fontGap ^(2.11.5) | 字体间隙 | ^[number]                                                                            | 3               |
-| fontStyle         | 字体样式 | ^[enum]`'none' \| 'normal' \| 'italic' \| 'oblique'`                                 | normal          |
-| textAlign         | 文本对齐 | ^[enum]`'left' \| 'right' \| 'center' \| 'start' \| 'end'`                           | center          |
-| textBaseline      | 文本基线 | ^[enum]`'top' \| 'hanging' \| 'middle' \| 'alphabetic' \| 'ideographic' \| 'bottom'` | hanging         |
+| 名称         | 详情     | 类型                                                                                 | 默认            |
+| ------------ | -------- | ------------------------------------------------------------------------------------ | --------------- |
+| color        | 字体颜色 | ^[string]                                                                            | rgba(0,0,0,.15) |
+| fontSize     | 字体大小 | ^[number] / ^[string]                                                                | 16              |
+| fontWeight   | 字重     | ^[enum]`'normal' \| 'light' \| 'weight' \| number`                                   | normal          |
+| fontFamily   | 字体     | ^[string]                                                                            | sans-serif      |
+| fontGap      | 字体间隙 | ^[number]                                                                            | 3               |
+| fontStyle    | 字体样式 | ^[enum]`'none' \| 'normal' \| 'italic' \| 'oblique'`                                 | normal          |
+| textAlign    | 文本对齐 | ^[enum]`'left' \| 'right' \| 'center' \| 'start' \| 'end'`                           | center          |
+| textBaseline | 文本基线 | ^[enum]`'top' \| 'hanging' \| 'middle' \| 'alphabetic' \| 'ideographic' \| 'bottom'` | hanging         |
 
 ### Slots
 

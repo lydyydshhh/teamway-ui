@@ -103,7 +103,7 @@ select-v2/customized-option
 
 :::
 
-## 自定义下拉菜单的头部 ^(2.5.2)
+## 自定义下拉菜单的头部
 
 您可以自定义下拉菜单的头部。
 
@@ -113,7 +113,7 @@ select-v2/custom-header
 
 :::
 
-## 自定义下拉菜单的底部 ^(2.5.2)
+## 自定义下拉菜单的底部
 
 您可以自定义下拉菜单的底部。
 
@@ -157,7 +157,7 @@ select-v2/remote-search
 
 ::: tip
 
-在 ^(2.4.0) 之前，`value-key`既用作所选对象的唯一值，也用作`options`中表示值的对应 key。 现在 `value-key` 仅作为所选对象的唯一值使用，选项中值的 key 是 `props.value`.
+`value-key` 仅作为所选对象的唯一值使用，选项中值的 key 是 `props.value`.
 
 :::
 
@@ -167,7 +167,7 @@ select-v2/use-valueKey
 
 :::
 
-## 自定义选项 ^(2.4.2)
+## 自定义选项
 
 当您的 `options` 格式不同于默认格式 您可以通过 `props` 属性自定义 `options`
 
@@ -177,7 +177,7 @@ select-v2/props
 
 :::
 
-## 自定义标签 ^(2.5.0)
+## 自定义标签
 
 您可以自定义标签。
 
@@ -187,7 +187,7 @@ select-v2/custom-tag
 
 :::
 
-## 自定义加载 ^(2.5.2)
+## 自定义加载
 
 修改加载区域内容
 
@@ -197,7 +197,7 @@ select-v2/custom-loading
 
 :::
 
-## 空值配置^(2.7.0)
+## 空值配置
 
 若想配置如空字符串为有效值而不是空值，可以配置 `empty-values` 为 `[null, undefined]`.
 
@@ -209,7 +209,7 @@ select-v2/empty-values
 
 :::
 
-## 自定义标签 ^(2.7.4)
+## 自定义标签
 
 您可以自定义标签
 
@@ -219,7 +219,7 @@ select-v2/custom-label
 
 :::
 
-## 自定义宽度 ^(2.9.2)
+## 自定义宽度
 
 下拉框的宽度默认根据`label`的值计算。 如果通过`default slot`自定义下拉框选项，选项中显示的文本可能与`label`的值不相等，从而导致计算错误。 在这种情况下，可以通过设置`fit-input-width`属性为一个数字来固定其宽度。
 
@@ -237,7 +237,7 @@ select-v2/custom-width
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | model-value / v-model               | 选中项绑定值                                                                                                       | ^[string] / ^[number] / ^[boolean] / ^[object] / ^[array]                                                                                                                   | —                                              |
 | options                             | 选项的数据源， `value` 的 key 和 `label` 可以通过 `props`自定义.                                                   | ^[array]                                                                                                                                                                    | —                                              |
-| [props](#props) ^(2.4.2)            | 配置选项，具体看下表                                                                                               | ^[object]                                                                                                                                                                   | —                                              |
+| [props](#props)                     | 配置选项，具体看下表                                                                                               | ^[object]                                                                                                                                                                   | —                                              |
 | multiple                            | 是否多选                                                                                                           | ^[boolean]                                                                                                                                                                  | false                                          |
 | disabled                            | 是否禁用                                                                                                           | ^[boolean]                                                                                                                                                                  | false                                          |
 | value-key                           | 作为 value 唯一标识的键名，绑定值为对象类型时必填                                                                  | ^[string]                                                                                                                                                                   | value                                          |
@@ -261,35 +261,35 @@ select-v2/custom-width
 | no-match-text                       | 搜索条件无匹配时显示的文字，也可以使用 `empty` 插槽设置，默认是 “No matching data'”                                | ^[string]                                                                                                                                                                   | —                                              |
 | no-data-text                        | 当在没有数据时显示的文字，你同时可以使用empty插槽进行设置。                                                        | ^[string]                                                                                                                                                                   | No Data                                        |
 | popper-class                        | Select 下拉菜单和标签提示的自定义类名                                                                              | ^[string] / ^[object]                                                                                                                                                       | ''                                             |
-| popper-style ^(2.11.0)              | Select 下拉菜单和标签提示的自定义样式                                                                              | ^[string] / ^[object]                                                                                                                                                       | —                                              |
+| popper-style                        | Select 下拉菜单和标签提示的自定义样式                                                                              | ^[string] / ^[object]                                                                                                                                                       | —                                              |
 | teleported                          | 是否使用 teleport。设置成 `true`则会被追加到 `append-to` 的位置                                                    | ^[boolean]                                                                                                                                                                  | true                                           |
-| append-to ^(2.8.8)                  | 下拉框挂载到哪个 DOM 元素                                                                                          | ^[CSSSelector] / ^[HTMLElement]                                                                                                                                             | —                                              |
+| append-to                           | 下拉框挂载到哪个 DOM 元素                                                                                          | ^[CSSSelector] / ^[HTMLElement]                                                                                                                                             | —                                              |
 | persistent                          | 当下拉选择器未被激活并且`persistent`设置为`false`，选择器会被删除。                                                | ^[boolean]                                                                                                                                                                  | true                                           |
 | popper-options                      | [popper.js](https://popper.js.org/docs/v2/) parameters                                                             | ^[object]refer to [popper.js](https://popper.js.org/docs/v2/) doc                                                                                                           | {}                                             |
 | automatic-dropdown                  | 对于不可搜索的 Select，是否在输入框获得焦点后自动弹出选项菜单                                                      | ^[boolean]                                                                                                                                                                  | false                                          |
-| fit-input-width ^(2.9.2)            | 无论下拉框的宽度是否与输入框相同，如果值为`number`，则宽度是固定的。                                               | ^[boolean] / ^[number]                                                                                                                                                      | true                                           |
-| suffix-icon ^(2.9.8)                | 自定义后缀图标组件                                                                                                 | ^[string] / ^[object]`Component`                                                                                                                                            | ArrowDown                                      |
+| fit-input-width                     | 无论下拉框的宽度是否与输入框相同，如果值为`number`，则宽度是固定的。                                               | ^[boolean] / ^[number]                                                                                                                                                      | true                                           |
+| suffix-icon                         | 自定义后缀图标组件                                                                                                 | ^[string] / ^[object]`Component`                                                                                                                                            | ArrowDown                                      |
 | height                              | 下拉菜单的高度，每一个选项为34px                                                                                   | ^[number]                                                                                                                                                                   | 274                                            |
 | item-height                         | 下拉项的高度                                                                                                       | ^[number]                                                                                                                                                                   | 34                                             |
 | scrollbar-always-on                 | 是否总是展示滚动条                                                                                                 | ^[boolean]                                                                                                                                                                  | false                                          |
 | remote                              | 是否从服务器获取数据                                                                                               | ^[boolean]                                                                                                                                                                  | false                                          |
-| debounce ^(2.11.7)                  | 远程搜索时的防抖延迟（以毫秒为单位）                                                                               | ^[number]                                                                                                                                                                   | 300                                            |
+| debounce                            | 远程搜索时的防抖延迟（以毫秒为单位）                                                                               | ^[number]                                                                                                                                                                   | 300                                            |
 | remote-method                       | 当输入值发生变化时触发的函数。 它的参数就是当前的输入值。 当`filterable`设置为 true 时才会生效                     | ^[Function]`(query: string) => void`                                                                                                                                        | —                                              |
 |                                     | 远程搜索方法显示后缀图标                                                                                           | ^[boolean]                                                                                                                                                                  | false                                          |
 | validate-event                      | 是否触发表单验证                                                                                                   | ^[boolean]                                                                                                                                                                  | true                                           |
-| offset ^(2.8.8)                     | 下拉面板偏移量                                                                                                     | ^[number]                                                                                                                                                                   | 12                                             |
-| show-arrow ^(2.8.8)                 | 下拉菜单的内容是否有箭头                                                                                           | ^[boolean]                                                                                                                                                                  | true                                           |
+| offset                              | 下拉面板偏移量                                                                                                     | ^[number]                                                                                                                                                                   | 12                                             |
+| show-arrow                          | 下拉菜单的内容是否有箭头                                                                                           | ^[boolean]                                                                                                                                                                  | true                                           |
 | placement                           | 下拉框出现的位置                                                                                                   | ^[enum]`'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end' \| 'left' \| 'left-start' \| 'left-end' \| 'right' \| 'right-start' \| 'right-end'` | bottom-start                                   |
-| fallback-placements ^(2.5.6)        | dropdown 可用的 positions 请查看[popper.js 文档](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) | ^[array]`Placement[]`                                                                                                                                                       | ['bottom-start', 'top-start', 'right', 'left'] |
-| collapse-tags-tooltip ^(2.3.0)      | 当鼠标悬停于折叠标签的文本时，是否显示所有选中的标签。 要使用此功能，`collapse-tags`的值必须为true                 | ^[boolean]                                                                                                                                                                  | false                                          |
-| max-collapse-tags ^(2.3.0)          | 需要显示的 Tag 的最大数量。 只有当 `collapse-tags` 设置为 true 时才会生效。                                        | ^[number]                                                                                                                                                                   | 1                                              |
-| tag-type ^(2.5.0)                   | 标签类型                                                                                                           | ^[enum]`'' \| 'success' \| 'info' \| 'warning' \| 'danger'`                                                                                                                 | info                                           |
-| tag-effect ^(2.7.7)                 | 标签效果                                                                                                           | ^[enum]`'' \| 'light' \| 'dark' \| 'plain'`                                                                                                                                 | light                                          |
-| aria-label ^(a11y) ^(2.5.0)         | 等价于原生 input `aria-label` 属性                                                                                 | ^[string]                                                                                                                                                                   | —                                              |
-| empty-values ^(2.7.0)               | 组件的空值配置 [参考config-provider](/zh-CN/component/config-provider#empty-values-configurations)                 | ^[array]                                                                                                                                                                    | —                                              |
-| value-on-clear ^(2.7.0)             | 清空选项的值 [参考 config-provider](/zh-CN/component/config-provider#empty-values-configurations)                  | ^[string] / ^[number] / ^[boolean] / ^[Function]                                                                                                                            | —                                              |
+| fallback-placements                 | dropdown 可用的 positions 请查看[popper.js 文档](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements) | ^[array]`Placement[]`                                                                                                                                                       | ['bottom-start', 'top-start', 'right', 'left'] |
+| collapse-tags-tooltip               | 当鼠标悬停于折叠标签的文本时，是否显示所有选中的标签。 要使用此功能，`collapse-tags`的值必须为true                 | ^[boolean]                                                                                                                                                                  | false                                          |
+| max-collapse-tags                   | 需要显示的 Tag 的最大数量。 只有当 `collapse-tags` 设置为 true 时才会生效。                                        | ^[number]                                                                                                                                                                   | 1                                              |
+| tag-type                            | 标签类型                                                                                                           | ^[enum]`'' \| 'success' \| 'info' \| 'warning' \| 'danger'`                                                                                                                 | info                                           |
+| tag-effect                          | 标签效果                                                                                                           | ^[enum]`'' \| 'light' \| 'dark' \| 'plain'`                                                                                                                                 | light                                          |
+| aria-label ^(a11y)                  | 等价于原生 input `aria-label` 属性                                                                                 | ^[string]                                                                                                                                                                   | —                                              |
+| empty-values                        | 组件的空值配置 [参考config-provider](/zh-CN/component/config-provider#empty-values-configurations)                 | ^[array]                                                                                                                                                                    | —                                              |
+| value-on-clear                      | 清空选项的值 [参考 config-provider](/zh-CN/component/config-provider#empty-values-configurations)                  | ^[string] / ^[number] / ^[boolean] / ^[Function]                                                                                                                            | —                                              |
 | popper-append-to-body ^(deprecated) | 是否将弹出框插入至 body 元素 当弹出框的位置出现问题时，你可以尝试将该属性设置为false。                             |                                                                                                                                                                             |                                                |
-| tabindex ^(2.9.0)                   | input 的 tabindex                                                                                                  | ^[string] / ^[number]                                                                                                                                                       | —                                              |
+| tabindex                            | input 的 tabindex                                                                                                  | ^[string] / ^[number]                                                                                                                                                       | —                                              |
 
 ### props
 
@@ -313,21 +313,21 @@ select-v2/custom-width
 
 ### Slots
 
-| 名称             | 详情                                                                                                   | Type                                                                                                           |
-| ---------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| default          | 自定义 Option 模板                                                                                     | —                                                                                                              |
-| header ^(2.5.2)  | 下拉列表顶部的内容                                                                                     | —                                                                                                              |
-| footer ^(2.5.2)  | 下拉列表底部的内容                                                                                     | —                                                                                                              |
-| empty            | 自定义当选项为空时的内容                                                                               | —                                                                                                              |
-| prefix           | 输入框的前缀                                                                                           | —                                                                                                              |
-| tag ^(2.5.0)     | 作为 Select 组件的内容时，子标签 `data`、`selectDisabled` 和 `deleteTag` 是在版本 ^(2.10.3) 中新增的。 | ^[object]`{ data: Option[], selectDisabled: boolean, deleteTag: (event: MouseEvent, option: Option) => void }` |
-| loading ^(2.5.2) | select 组件自定义 loading内容                                                                          | —                                                                                                              |
-| label ^(2.7.4)   | select 组件自定义标签内容 `index` 引入于^(2.11.2)                                                      | ^[object]`{ index: number, label: string \| any, value: string \| any }`                                       |
+| 名称    | 详情                                     | Type                                                                                                           |
+| ------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| default | 自定义 Option 模板                       | —                                                                                                              |
+| header  | 下拉列表顶部的内容                       | —                                                                                                              |
+| footer  | 下拉列表底部的内容                       | —                                                                                                              |
+| empty   | 自定义当选项为空时的内容                 | —                                                                                                              |
+| prefix  | 输入框的前缀                             | —                                                                                                              |
+| tag     | -                                        | ^[object]`{ data: Option[], selectDisabled: boolean, deleteTag: (event: MouseEvent, option: Option) => void }` |
+| loading | select 组件自定义 loading内容            | —                                                                                                              |
+| label   | select 组件自定义标签内容 `index` 引入于 | ^[object]`{ index: number, label: string \| any, value: string \| any }`                                       |
 
 ### Exposes
 
-| 名称                   | 描述                                   | 类型                                       |
-| ---------------------- | -------------------------------------- | ------------------------------------------ |
-| focus                  | 使选择器的输入框获取焦点               | ^[Function]`() => void`                    |
-| blur                   | 使选择器的输入框失去焦点，并隐藏下拉框 | ^[Function]`() => void`                    |
-| selectedLabel ^(2.8.5) | 获取当前选中的标签                     | ^[object]`ComputedRef<string \| string[]>` |
+| 名称          | 描述                                   | 类型                                       |
+| ------------- | -------------------------------------- | ------------------------------------------ |
+| focus         | 使选择器的输入框获取焦点               | ^[Function]`() => void`                    |
+| blur          | 使选择器的输入框失去焦点，并隐藏下拉框 | ^[Function]`() => void`                    |
+| selectedLabel | 获取当前选中的标签                     | ^[object]`ComputedRef<string \| string[]>` |

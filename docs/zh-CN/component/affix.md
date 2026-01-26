@@ -41,14 +41,14 @@ affix/fixed
 
 ### 属性
 
-| 名称                 | 说明                                                                                          | 类型                            | 默认值 |
-| -------------------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ------ |
-| offset               | 偏移距离                                                                                      | ^[number]                       | 0      |
-| position             | 固钉位置                                                                                      | ^[enum]`'top' \| 'bottom'`      | top    |
-| target               | 指定容器（CSS 选择器）                                                                        | ^[string]                       | —      |
-| z-index              | `z-index`                                                                                     | ^[number]                       | 100    |
-| teleported ^(2.13.0) | Affix 元素是否使用 teleport 特性，设置为 `true` 将会使得该元素“传送”至 `append-to` 设置的位置 | ^[boolean]                      | false  |
-| append-to ^(2.13.0)  | Affix 元素将被挂载至哪个元素                                                                  | ^[CSSSelector] / ^[HTMLElement] | body   |
+| 名称       | 说明                                                                                          | 类型                            | 默认值 |
+| ---------- | --------------------------------------------------------------------------------------------- | ------------------------------- | ------ |
+| offset     | 偏移距离                                                                                      | ^[number]                       | 0      |
+| position   | 固钉位置                                                                                      | ^[enum]`'top' \| 'bottom'`      | top    |
+| target     | 指定容器（CSS 选择器）                                                                        | ^[string]                       | —      |
+| z-index    | `z-index`                                                                                     | ^[number]                       | 100    |
+| teleported | Affix 元素是否使用 teleport 特性，设置为 `true` 将会使得该元素“传送”至 `append-to` 设置的位置 | ^[boolean]                      | false  |
+| append-to  | Affix 元素将被挂载至哪个元素                                                                  | ^[CSSSelector] / ^[HTMLElement] | body   |
 
 ### 事件
 

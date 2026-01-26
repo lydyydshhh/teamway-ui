@@ -3,12 +3,6 @@ title: Infinite Scroll 无限滚动
 lang: zh-CN
 ---
 
-:::warning 废弃的 directive
-
-我们将不再维护这个 directive。 会在 ^(3.0.0) **被移除**，请使用 [ty-scrollbar infinite scroll](./scrollbar#infinite-scroll) 作为代替。
-
-:::
-
 # Infinite Scroll 无限滚动
 
 滚动至底部时，加载更多数据。

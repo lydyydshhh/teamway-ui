@@ -46,7 +46,7 @@ form/inline-form
 
 根据你们的设计情况，来选择最佳的标签对齐方式。
 
-您可以分别设置 `ty-form-item` 的`label-position` ^(2.7.7). 如果值为空, 则会使用 `ty-form`的`label-position`。
+您可以分别设置 `ty-form-item` 的`label-position` . 如果值为空, 则会使用 `ty-form`的`label-position`。
 
 :::demo 通过设置 `label-position` 属性可以改变表单域标签的位置，可选值为 `top`、`left`, 当设为 `top` 时标签会置于表单域的顶部
 
@@ -126,24 +126,24 @@ form/accessibility
 
 ### Form Attributes
 
-| 属性名                            | 说明                                                                                                                                                 | 类型                                           | 默认值 |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------ |
-| model                             | 表单数据对象                                                                                                                                         | ^[object]`Record<string, any>`                 | —      |
-| rules                             | 表单验证规则                                                                                                                                         | ^[object]`FormRules`                           | —      |
-| inline                            | 行内表单模式                                                                                                                                         | ^[boolean]                                     | false  |
-| label-position                    | 表单域标签的位置， 当设置为 `left` 或 `right` 时，则也需要设置 `label-width` 属性                                                                    | ^[enum]`'left' \| 'right' \| 'top'`            | right  |
-| label-width                       | 标签的长度，例如 `'50px'`。 作为 Form 直接子元素的 form-item 会继承该值。 可以使用 `auto`。                                                          | ^[string] / ^[number]                          | ''     |
-| label-suffix                      | 表单域标签的后缀                                                                                                                                     | ^[string]                                      | ''     |
-| hide-required-asterisk            | 是否隐藏必填字段标签旁边的红色星号。                                                                                                                 | ^[boolean]                                     | false  |
-| require-asterisk-position         | 星号的位置。                                                                                                                                         | ^[enum]`'left' \| 'right'`                     | left   |
-| show-message                      | 是否显示校验错误信息                                                                                                                                 | ^[boolean]                                     | true   |
-| inline-message                    | 是否以行内形式展示校验信息                                                                                                                           | ^[boolean]                                     | false  |
-| status-icon                       | 是否在输入框中显示校验结果反馈图标                                                                                                                   | ^[boolean]                                     | false  |
-| validate-on-rule-change           | 是否在 `rules` 属性改变后立即触发一次验证                                                                                                            | ^[boolean]                                     | true   |
-| size                              | 用于控制该表单内组件的尺寸                                                                                                                           | ^[enum]`'' \| 'large' \| 'default' \| 'small'` | —      |
-| disabled                          | 是否禁用该表单内的所有组件。 在 ^(2.12.0) 以前，如果设置为 `true`，它将覆盖内部组件的 `disabled` 属性。 在 ^(2.12.0) 之后，内部组件的配置优先。      | ^[boolean]                                     | false  |
-| scroll-to-error                   | 当校验失败时，滚动到第一个错误表单项                                                                                                                 | ^[boolean]                                     | false  |
-| scroll-into-view-options ^(2.3.2) | 当校验有失败结果时，滚动到第一个失败的表单项目 可通过 [scrollIntoView](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) 配置 | ^[object]`ScrollIntoViewOptions` / ^[boolean]  | true   |
+| 属性名                    | 说明                                                                                                                                                 | 类型                                           | 默认值 |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ------ |
+| model                     | 表单数据对象                                                                                                                                         | ^[object]`Record<string, any>`                 | —      |
+| rules                     | 表单验证规则                                                                                                                                         | ^[object]`FormRules`                           | —      |
+| inline                    | 行内表单模式                                                                                                                                         | ^[boolean]                                     | false  |
+| label-position            | 表单域标签的位置， 当设置为 `left` 或 `right` 时，则也需要设置 `label-width` 属性                                                                    | ^[enum]`'left' \| 'right' \| 'top'`            | right  |
+| label-width               | 标签的长度，例如 `'50px'`。 作为 Form 直接子元素的 form-item 会继承该值。 可以使用 `auto`。                                                          | ^[string] / ^[number]                          | ''     |
+| label-suffix              | 表单域标签的后缀                                                                                                                                     | ^[string]                                      | ''     |
+| hide-required-asterisk    | 是否隐藏必填字段标签旁边的红色星号。                                                                                                                 | ^[boolean]                                     | false  |
+| require-asterisk-position | 星号的位置。                                                                                                                                         | ^[enum]`'left' \| 'right'`                     | left   |
+| show-message              | 是否显示校验错误信息                                                                                                                                 | ^[boolean]                                     | true   |
+| inline-message            | 是否以行内形式展示校验信息                                                                                                                           | ^[boolean]                                     | false  |
+| status-icon               | 是否在输入框中显示校验结果反馈图标                                                                                                                   | ^[boolean]                                     | false  |
+| validate-on-rule-change   | 是否在 `rules` 属性改变后立即触发一次验证                                                                                                            | ^[boolean]                                     | true   |
+| size                      | 用于控制该表单内组件的尺寸                                                                                                                           | ^[enum]`'' \| 'large' \| 'default' \| 'small'` | —      |
+| disabled                  | 是否禁用该表单内的所有组件。                                                                                                                         | ^[boolean]                                     | false  |
+| scroll-to-error           | 当校验失败时，滚动到第一个错误表单项                                                                                                                 | ^[boolean]                                     | false  |
+| scroll-into-view-options  | 当校验有失败结果时，滚动到第一个失败的表单项目 可通过 [scrollIntoView](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView) 配置 | ^[object]`ScrollIntoViewOptions` / ^[boolean]  | true   |
 
 ### Form Events
 
@@ -159,35 +159,35 @@ form/accessibility
 
 ### Form Exposes
 
-| 名称                       | 说明                                                                                                             | 类型                                                                                                                              |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| validate                   | 对整个表单的内容进行验证。 接收一个回调函数，或返回 `Promise`。                                                  | ^[Function]`(callback?: FormValidateCallback) => Promise<void>`                                                                   |
-| validateField              | 验证具体的某个字段。                                                                                             | ^[Function]`(props?: Arrayable<FormItemProp> \| undefined, callback?: FormValidateCallback \| undefined) => FormValidationResult` |
-| resetFields                | 重置该表单项，将其值重置为初始值，并移除校验结果                                                                 | ^[Function]`(props?: Arrayable<FormItemProp> \| undefined) => void`                                                               |
-| scrollToField              | 滚动到指定的字段                                                                                                 | ^[Function]`(prop: FormItemProp) => void`                                                                                         |
-| clearValidate              | 清理某个字段的表单验证信息。                                                                                     | ^[Function]`(props?: Arrayable<FormItemProp> \| undefined) => void`                                                               |
-| fields ^(2.7.3)            | 获取所有字段的 context                                                                                           | ^[array]`FormItemContext[]`                                                                                                       |
-| getField ^(2.10.2)         | 获取字段的 context                                                                                               | ^[Function]`(prop: FormItemProp) => FormItemContext \| undefined`                                                                 |
-| setInitialValues ^(2.13.1) | 设置表单字段的初始值。 当调用 `resetFields` 时，字段将重置为这些值。 只有存在于 `initModel` 中的字段才会被更新。 | ^[Function]`(initModel: Record<string, any>) => void`                                                                             |
+| 名称             | 说明                                                                                                             | 类型                                                                                                                              |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| validate         | 对整个表单的内容进行验证。 接收一个回调函数，或返回 `Promise`。                                                  | ^[Function]`(callback?: FormValidateCallback) => Promise<void>`                                                                   |
+| validateField    | 验证具体的某个字段。                                                                                             | ^[Function]`(props?: Arrayable<FormItemProp> \| undefined, callback?: FormValidateCallback \| undefined) => FormValidationResult` |
+| resetFields      | 重置该表单项，将其值重置为初始值，并移除校验结果                                                                 | ^[Function]`(props?: Arrayable<FormItemProp> \| undefined) => void`                                                               |
+| scrollToField    | 滚动到指定的字段                                                                                                 | ^[Function]`(prop: FormItemProp) => void`                                                                                         |
+| clearValidate    | 清理某个字段的表单验证信息。                                                                                     | ^[Function]`(props?: Arrayable<FormItemProp> \| undefined) => void`                                                               |
+| fields           | 获取所有字段的 context                                                                                           | ^[array]`FormItemContext[]`                                                                                                       |
+| getField         | 获取字段的 context                                                                                               | ^[Function]`(prop: FormItemProp) => FormItemContext \| undefined`                                                                 |
+| setInitialValues | 设置表单字段的初始值。 当调用 `resetFields` 时，字段将重置为这些值。 只有存在于 `initModel` 中的字段才会被更新。 | ^[Function]`(initModel: Record<string, any>) => void`                                                                             |
 
 ## FormItem API
 
 ### FormItem Attributes
 
-| 属性名                  | 说明                                                                                                                                   | 类型                                                | Default |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ------- |
-| prop                    | `model` 的键名。 它可以是属性的路径（如 `a.b.0` 或 `['a', 'b', '0']`）。 在使用了 `validate`、`resetFields` 的方法时，该属性是必填的。 | ^[string] / ^[string&#91;&#93;]                     | —       |
-| label                   | 标签文本                                                                                                                               | ^[string]                                           | —       |
-| label-position ^(2.7.7) | 表单域标签的位置， 当设置为 `left` 或 `right` 时，则也需要设置 `label-width` 属性 默认会继承 `Form`的`label-position`                  | ^[enum]`'left' \| 'right' \| 'top'`                 | ''      |
-| label-width             | 标签宽度，例如 `'50px'`。 可以使用 `auto`。                                                                                            | ^[string] / ^[number]                               | —       |
-| required                | 是否为必填项，如不设置，则会根据校验规则确认                                                                                           | ^[boolean]                                          | —       |
-| rules                   | 表单验证规则, 具体配置见[下表](#formitemrule), 更多内容可以参考[async-validator](https://github.com/yiminghe/async-validator)          | ^[object]`Arrayable<FormItemRule>`                  | —       |
-| error                   | 表单域验证错误时的提示信息。设置该值会导致表单验证状态变为 error，并显示该错误信息。                                                   | ^[string]                                           | —       |
-| show-message            | 是否显示校验错误信息                                                                                                                   | ^[boolean]                                          | true    |
-| inline-message          | 是否在行内显示校验信息                                                                                                                 | ^[boolean]                                          | false   |
-| size                    | 用于控制该表单域下组件的默认尺寸                                                                                                       | ^[enum]`'' \| 'large' \| 'default' \| 'small'`      | —       |
-| for                     | 和原生标签相同能力                                                                                                                     | ^[string]                                           | —       |
-| validate-status         | formitem 校验的状态                                                                                                                    | ^[enum]`'' \| 'error' \| 'validating' \| 'success'` | —       |
+| 属性名          | 说明                                                                                                                                   | 类型                                                | Default |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ------- |
+| prop            | `model` 的键名。 它可以是属性的路径（如 `a.b.0` 或 `['a', 'b', '0']`）。 在使用了 `validate`、`resetFields` 的方法时，该属性是必填的。 | ^[string] / ^[string&#91;&#93;]                     | —       |
+| label           | 标签文本                                                                                                                               | ^[string]                                           | —       |
+| label-position  | 表单域标签的位置， 当设置为 `left` 或 `right` 时，则也需要设置 `label-width` 属性 默认会继承 `Form`的`label-position`                  | ^[enum]`'left' \| 'right' \| 'top'`                 | ''      |
+| label-width     | 标签宽度，例如 `'50px'`。 可以使用 `auto`。                                                                                            | ^[string] / ^[number]                               | —       |
+| required        | 是否为必填项，如不设置，则会根据校验规则确认                                                                                           | ^[boolean]                                          | —       |
+| rules           | 表单验证规则, 具体配置见[下表](#formitemrule), 更多内容可以参考[async-validator](https://github.com/yiminghe/async-validator)          | ^[object]`Arrayable<FormItemRule>`                  | —       |
+| error           | 表单域验证错误时的提示信息。设置该值会导致表单验证状态变为 error，并显示该错误信息。                                                   | ^[string]                                           | —       |
+| show-message    | 是否显示校验错误信息                                                                                                                   | ^[boolean]                                          | true    |
+| inline-message  | 是否在行内显示校验信息                                                                                                                 | ^[boolean]                                          | false   |
+| size            | 用于控制该表单域下组件的默认尺寸                                                                                                       | ^[enum]`'' \| 'large' \| 'default' \| 'small'`      | —       |
+| for             | 和原生标签相同能力                                                                                                                     | ^[string]                                           | —       |
+| validate-status | formitem 校验的状态                                                                                                                    | ^[enum]`'' \| 'error' \| 'validating' \| 'success'` | —       |
 
 #### FormItemRule
 
@@ -211,15 +211,15 @@ form/accessibility
 
 ### FormItem Exposes
 
-| 名称                      | 说明                                                                 | 类型                                                                                                 |
-| ------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| size                      | 表单项大小                                                           | ^[object]`ComputedRef<'' \| 'large' \| 'default' \| 'small'>`                                        |
-| validateMessage           | 校验消息                                                             | ^[object]`Ref<string>`                                                                               |
-| validateState             | 校验状态                                                             | ^[object]`Ref<'' \| 'error' \| 'validating' \| 'success'>`                                           |
-| validate                  | 验证表单项                                                           | ^[Function]`(trigger: string, callback?: FormValidateCallback \| undefined) => FormValidationResult` |
-| resetField                | 对该表单项进行重置，将其值重置为初始值并移除校验结果                 | ^[Function]`() => void`                                                                              |
-| clearValidate             | 移除该表单项的校验结果                                               | ^[Function]`() => void`                                                                              |
-| setInitialValue ^(2.13.1) | 设置表单字段的初始值。 当调用 `resetFields` 时，字段将重置为这些值。 | ^[Function]`(value: any) => void`                                                                    |
+| 名称            | 说明                                                                 | 类型                                                                                                 |
+| --------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| size            | 表单项大小                                                           | ^[object]`ComputedRef<'' \| 'large' \| 'default' \| 'small'>`                                        |
+| validateMessage | 校验消息                                                             | ^[object]`Ref<string>`                                                                               |
+| validateState   | 校验状态                                                             | ^[object]`Ref<'' \| 'error' \| 'validating' \| 'success'>`                                           |
+| validate        | 验证表单项                                                           | ^[Function]`(trigger: string, callback?: FormValidateCallback \| undefined) => FormValidationResult` |
+| resetField      | 对该表单项进行重置，将其值重置为初始值并移除校验结果                 | ^[Function]`() => void`                                                                              |
+| clearValidate   | 移除该表单项的校验结果                                               | ^[Function]`() => void`                                                                              |
+| setInitialValue | 设置表单字段的初始值。 当调用 `resetFields` 时，字段将重置为这些值。 | ^[Function]`(value: any) => void`                                                                    |
 
 ## 类型声明
 

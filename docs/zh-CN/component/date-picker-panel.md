@@ -3,7 +3,7 @@ title: DatePickerPane 日期选择器面板
 lang: zh-CN
 ---
 
-# DatePickerPane 日期选择器面板 ^(beta)
+# DatePickerPane 日期选择器面板
 
 `DatePickerPanel`是`DatePicker`的核心组件。
 
@@ -64,7 +64,7 @@ date-picker-panel/all-types
 | border                | 日期选择器是否有边框                                                                       | ^[boolean]                                                              | true          |
 | disabled              | 禁用                                                                                       | ^[boolean]                                                              | false         |
 | clearable             | 是否显示清除按钮                                                                           | ^[boolean]                                                              | true          |
-| editable ^(2.13.0)    | 文本框可输入                                                                               | ^[boolean]                                                              | true          |
+| editable              | 文本框可输入                                                                               | ^[boolean]                                                              | true          |
 | type                  | 选择器类型，默认是普通选择器                                                               | ^[enum]`'year' \\                                                       | 'years' \\    | 'month' \\    | 'months' \\      | 'date' \\  | 'dates' \\ | 'datetime' \\ | 'week' \\ | 'datetimerange' \\ | 'daterange' \\ | 'monthrange' \\ | 'yearrange'` | date |
 | default-value         | 可选，选择器打开时默认显示的时间                                                           | ^[object]`Date \\                                                       | [Date, Date]` | —             |
 | default-time          | 范围选择时选中日期所使用的当日内具体时刻                                                   | ^[object]`Date \\                                                       | [Date, Date]` | —             |
@@ -85,7 +85,7 @@ date-picker-panel/all-types
 | --------------- | ------------------------------------------ | -------------------------------- | ------------------------------ | ------------------------------- |
 | calendar-change | 在日历所选日期更改时触发 仅限“range”类型。 | ^[Function]`(val: [Date, null \\ | Date]) => void`                |
 | panel-change    | 当日期面板改变时触发。                     | ^[Function]`(date: Date \\       | [Date, Date], mode: 'month' \\ | 'year', view?: string) => void` |
-| clear ^(2.13.1) | 当点击清除按钮时触发                       | ^[Function]`() => void`          |
+| clear           | 当点击清除按钮时触发                       | ^[Function]`() => void`          |
 
 ### 插槽
 

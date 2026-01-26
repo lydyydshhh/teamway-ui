@@ -93,7 +93,7 @@ dialog/destroy-on-close
 
 试着拖动一下`header`部分吧
 
-:::demo 设置`draggable`属性为`true`以做到拖拽 设置 `overflow` ^(2.5.4) 为 `true` 可以让拖拽范围超出可视区。
+:::demo 设置`draggable`属性为`true`以做到拖拽 设置 `overflow` 为 `true` 可以让拖拽范围超出可视区。
 
 dialog/draggable-dialog
 
@@ -125,7 +125,7 @@ dialog/fullscreen
 
 将 `modal` 设置为 `false` 会隐藏对话框的模态（覆盖层）。
 
-从版本 ^(2.10.5) 起，新增了 `modal-penetrable`属性，该属性可设置为“可穿透”（即允许穿透）。
+`modal-penetrable`属性，该属性可设置为“可穿透”（即允许穿透）。
 
 :::demo
 
@@ -133,7 +133,7 @@ dialog/modal
 
 :::
 
-## 自定义动画 ^(2.10.5)
+## 自定义动画
 
 通过 `transition` 属性自定义对话框动画，该属性可以接受以下任意一种值：
 
@@ -175,13 +175,13 @@ dialog/events
 | fullscreen                 | 是否为全屏 Dialog                                                                                | ^[boolean]                             | false       |
 | top                        | dialog CSS 中的 margin-top 值，默认为 15vh                                                       | ^[string]                              | ''          |
 | modal                      | 是否需要遮罩层                                                                                   | ^[boolean]                             | true        |
-| modal-penetrable ^(2.10.5) | 是否允许穿透遮罩层。 modal 属性必须为 `false`。                                                  | ^[boolean]                             | false       |
+| modal-penetrable           | 是否允许穿透遮罩层。 modal 属性必须为 `false`。                                                  | ^[boolean]                             | false       |
 | modal-class                | 遮罩的自定义类名                                                                                 | ^[string]                              | —           |
-| header-class ^(2.9.3)      | header 部分的自定义 class 名                                                                     | ^[string]                              | —           |
-| body-class ^(2.9.3)        | body 部分的自定义 class 名                                                                       | ^[string]                              | —           |
-| footer-class ^(2.9.3)      | footer 部分的自定义 class 名                                                                     | ^[string]                              | —           |
+| header-class               | header 部分的自定义 class 名                                                                     | ^[string]                              | —           |
+| body-class                 | body 部分的自定义 class 名                                                                       | ^[string]                              | —           |
+| footer-class               | footer 部分的自定义 class 名                                                                     | ^[string]                              | —           |
 | append-to-body             | Dialog 自身是否插入至 body 元素上。 嵌套的 Dialog 必须指定该属性并赋值为 `true`                  | ^[boolean]                             | false       |
-| append-to ^(2.4.3)         | Dialog 挂载到哪个 DOM 元素 将覆盖 `append-to-body`                                               | ^[CSSSelector] / ^[HTMLElement]        | body        |
+| append-to                  | Dialog 挂载到哪个 DOM 元素 将覆盖 `append-to-body`                                               | ^[CSSSelector] / ^[HTMLElement]        | body        |
 | lock-scroll                | 是否在 Dialog 出现时将 body 滚动锁定                                                             | ^[boolean]                             | true        |
 | open-delay                 | dialog 打开的延时时间，单位毫秒                                                                  | ^[number]                              | 0           |
 | close-delay                | dialog 关闭的延时时间，单位毫秒                                                                  | ^[number]                              | 0           |
@@ -190,19 +190,19 @@ dialog/events
 | show-close                 | 是否显示关闭按钮                                                                                 | ^[boolean]                             | true        |
 | before-close               | 关闭前的回调，会暂停 Dialog 的关闭. 回调函数内执行 done 参数方法的时候才是真正关闭对话框的时候.  | ^[Function]`(done: DoneFn) => void`    | —           |
 | draggable                  | 为 Dialog 启用可拖拽功能                                                                         | ^[boolean]                             | false       |
-| overflow ^(2.5.4)          | 拖动范围可以超出可视区                                                                           | ^[boolean]                             | false       |
+| overflow                   | 拖动范围可以超出可视区                                                                           | ^[boolean]                             | false       |
 | center                     | 是否让 Dialog 的 header 和 footer 部分居中排列                                                   | ^[boolean]                             | false       |
-| align-center ^(2.2.16)     | 是否水平垂直对齐对话框                                                                           | ^[boolean]                             | false       |
+| align-center               | 是否水平垂直对齐对话框                                                                           | ^[boolean]                             | false       |
 | destroy-on-close           | 当关闭 Dialog 时，销毁其中的元素                                                                 | ^[boolean]                             | false       |
 | close-icon                 | 自定义关闭图标，默认 Close                                                                       | ^[string] / ^[Component]               | —           |
 | z-index                    | 和原生的 CSS 的 z-index 相同，改变 z 轴的顺序                                                    | ^[number]                              | —           |
 | header-aria-level ^(a11y)  | header 的 `aria-level` 属性                                                                      | ^[string]                              | 2           |
-| transition ^(2.10.5)       | 对话框动画的自定义过渡配置。 可以是一个字符串（过渡名称），也可以是一个包含 Vue 过渡属性的对象。 | ^[string] / ^[object]`TransitionProps` | dialog-fade |
+| transition                 | 对话框动画的自定义过渡配置。 可以是一个字符串（过渡名称），也可以是一个包含 Vue 过渡属性的对象。 | ^[string] / ^[object]`TransitionProps` | dialog-fade |
 | custom-class ^(deprecated) | Dialog 的自定义类名                                                                              | ^[string]                              | ''          |
 
 :::warning
 
-`custom-class` 已被 **弃用**, 之后将会在 <VersionTag version="2.4.0" /> **移除**, 请使用 `class`.
+`custom-class` 已被 **弃用**, 请使用 `class`.
 
 :::
 
@@ -214,12 +214,6 @@ dialog/events
 | header              | 对话框标题的内容；会替换标题部分，但不会移除关闭按钮。 |
 | footer              | Dialog 按钮操作区的内容                                |
 | title ^(deprecated) | 与 header 作用相同 请使用 header                       |
-
-:::warning
-
-`title` 已被**弃用**，并将在 ^(3.0.0) 版本中**移除**，请使用 `header` 代替。
-
-:::
 
 ### 事件
 
@@ -234,10 +228,10 @@ dialog/events
 
 ### Exposes
 
-| 名称                   | 详情       | 类型                    |
-| ---------------------- | ---------- | ----------------------- |
-| resetPosition ^(2.8.1) | 重置位置   | ^[Function]`() => void` |
-| handleClose ^(2.9.8)   | 关闭对话框 | ^[Function]`() => void` |
+| 名称          | 详情       | 类型                    |
+| ------------- | ---------- | ----------------------- |
+| resetPosition | 重置位置   | ^[Function]`() => void` |
+| handleClose   | 关闭对话框 | ^[Function]`() => void` |
 
 ## FAQ
 

@@ -37,7 +37,7 @@ cascader/clearable
 
 :::
 
-## 自定义清除图标^(2.11.0)
+## 自定义清除图标
 
 你可以通过`clear-icon`属性自定义清除图标
 
@@ -128,7 +128,7 @@ cascader/custom-content
 
 :::
 
-## 自定义建议项^(2.9.5)
+## 自定义建议项
 
 你可以通过 `suggestion-item` 插槽自定义建议项。 你可以在作用域中访问 `item`，它代表建议项。
 
@@ -148,7 +148,7 @@ cascader/panel
 
 :::
 
-## 自定义标签 ^(2.10.3)
+## 自定义标签
 
 您可以自定义标签。
 
@@ -158,7 +158,7 @@ cascader/custom-tag
 
 :::
 
-## 已勾选项显示策略 ^(2.10.5)
+## 已勾选项显示策略
 
 控制在多选模式下已选值的显示方式。
 
@@ -168,7 +168,7 @@ cascader/show-checked-strategy
 
 :::
 
-## 点击选中节点 ^(2.10.5)
+## 点击选中节点
 
 只使用 `multiple` 或 `checkStrictly` 属性。
 
@@ -180,7 +180,7 @@ cascader/check-on-click-node
 
 :::
 
-## 自定义头部与底部 ^(2.10.5)
+## 自定义头部与底部
 
 你可以通过插槽来自定义下拉菜单的头部和底部。
 
@@ -194,40 +194,40 @@ cascader/custom-header-footer
 
 ### Cascader Attributes
 
-| 属性名                                     | 说明                                                                                                                                                           | 类型                                                                                                                                                                        | 默认值       |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| model-value / v-model                      | 选中项绑定值                                                                                                                                                   | ^[string] / ^[number] /^[array]`string[] \| number[] \| any`                                                                                                                | —            |
-| options                                    | 选项的数据源， `value` 和 `label` 可以通过 `CascaderProps` 自定义.                                                                                             | ^[array]`CascaderOption[]`                                                                                                                                                  | —            |
-| [props](#cascaderprops)                    | 配置选项, 请参阅下面 `CascaderProps` 表。                                                                                                                      | ^[object]`CascaderProps`                                                                                                                                                    | —            |
-| size                                       | 尺寸                                                                                                                                                           | ^[enum]`'large' \| 'default' \| 'small'`                                                                                                                                    | —            |
-| placeholder                                | 输入框占位文本                                                                                                                                                 | ^[string]                                                                                                                                                                   | —            |
-| disabled                                   | 是否禁用                                                                                                                                                       | ^[boolean]                                                                                                                                                                  | —            |
-| clearable                                  | 是否支持清空选项                                                                                                                                               | ^[boolean]                                                                                                                                                                  | —            |
-| clear-icon ^(2.11.0)                       | 自定义清除图标                                                                                                                                                 | ^[string] / ^[object]`Component`                                                                                                                                            | CircleClose  |
-| show-all-levels                            | 输入框中是否显示选中值的完整路径                                                                                                                               | ^[boolean]                                                                                                                                                                  | true         |
-| collapse-tags                              | 多选模式下是否折叠Tag                                                                                                                                          | ^[boolean]                                                                                                                                                                  | —            |
-| collapse-tags-tooltip                      | 当鼠标悬停于折叠标签的文本时，是否显示所有选中的标签。 要使用此属性，`collapse-tags`属性必须设定为 true                                                        | ^[boolean]                                                                                                                                                                  | false        |
-| max-collapse-tags-tooltip-height ^(2.10.2) | collapse tags 的最大高度                                                                                                                                       | ^[string] / ^[number]                                                                                                                                                       | —            |
-| separator                                  | 用于分隔选项的字符                                                                                                                                             | ^[string]                                                                                                                                                                   | ' / '        |
-| filterable                                 | 该选项是否可以被搜索                                                                                                                                           | ^[boolean]                                                                                                                                                                  | —            |
-| filter-method                              | 自定义搜索逻辑，第一个参数是`node`，第二个参数是`keyword`，返回的布尔值表示是否保留该选项                                                                      | ^[Function]`(node: CascaderNode, keyword: string) => boolean`                                                                                                               | —            |
-| debounce                                   | 搜索关键词正在输入时的去抖延迟，单位为毫秒                                                                                                                     | ^[number]                                                                                                                                                                   | 300          |
-| before-filter                              | 过滤函数调用前，所要调用的钩子函数，该函数接收要过滤的值作为参数。 如果该函数的返回值是 `false` 或者是一个被拒绝的 `Promise`，那么接下来的过滤逻辑便不会执行。 | ^[Function]`(value: string) => boolean`                                                                                                                                     | —            |
-| popper-class                               | Cascader 下拉菜单和标签提示的自定义类名                                                                                                                        | ^[string]                                                                                                                                                                   | ''           |
-| popper-style                               | Cascader 下拉菜单和标签提示的自定义样式                                                                                                                        | ^[string] / ^[object]                                                                                                                                                       | —            |
-| teleported                                 | 弹层是否使用 teleport                                                                                                                                          | ^[boolean]                                                                                                                                                                  | true         |
-| effect ^(2.10.5)                           | tooltip 主题，内置了 `dark` / `light` 两种                                                                                                                     | ^[enum]`'dark' \| 'light'` / ^[string]                                                                                                                                      | light        |
-| tag-type                                   | 标签类型                                                                                                                                                       | ^[enum]`'success' \| 'info' \| 'warning' \| 'danger'`                                                                                                                       | info         |
-| tag-effect ^(2.7.8)                        | tag effect                                                                                                                                                     | ^[enum]`'light' \| 'dark' \| 'plain'`                                                                                                                                       | light        |
-| validate-event                             | 输入时是否触发表单的校验                                                                                                                                       | ^[boolean]                                                                                                                                                                  | true         |
-| max-collapse-tags ^(2.3.10)                | 需要显示的 Tag 的最大数量 要使用此功能，`collapse-tags`的值必须为true                                                                                          | ^[number]                                                                                                                                                                   | 1            |
-| empty-values ^(2.7.0)                      | 组件的空值配置 [参考config-provider](/zh-CN/component/config-provider#empty-values-configurations)                                                             | ^[array]                                                                                                                                                                    | —            |
-| value-on-clear ^(2.7.0)                    | 清空选项的值 [参考 config-provider](/zh-CN/component/config-provider#empty-values-configurations)                                                              | ^[string] / ^[number] / ^[boolean] / ^[Function]                                                                                                                            | —            |
-| persistent ^(2.7.8)                        | 当下拉框未被激活并且`persistent`设置为`false`，下拉框容器会被删除。                                                                                            | ^[boolean]                                                                                                                                                                  | true         |
-| fallback-placements ^(2.8.1)               | Tooltip 可用的 positions 请查看[popper.js 文档](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements)                                              | ^[array]`Placement[]`                                                                                                                                                       | —            |
-| placement ^(2.8.1)                         | 下拉框出现的位置                                                                                                                                               | ^[enum]`'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end' \| 'left' \| 'left-start' \| 'left-end' \| 'right' \| 'right-start' \| 'right-end'` | bottom-start |
-| popper-append-to-body ^(deprecated)        | 是否将弹出的内容直接插入到 body 元素。 在弹出内容的边框定位出现问题时，可将该属性设置为 false                                                                  | ^[boolean]                                                                                                                                                                  | true         |
-| show-checked-strategy ^(2.10.5)            | 多选模式下已选节点的展示策略。 当你想让显示更简洁时，使用 `parent`。 当你想显示每个子项时，使用 `child`。                                                      | ^[enum]`'parent' \| 'child'`                                                                                                                                                | child        |
+| 属性名                              | 说明                                                                                                                                                           | 类型                                                                                                                                                                        | 默认值       |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| model-value / v-model               | 选中项绑定值                                                                                                                                                   | ^[string] / ^[number] /^[array]`string[] \| number[] \| any`                                                                                                                | —            |
+| options                             | 选项的数据源， `value` 和 `label` 可以通过 `CascaderProps` 自定义.                                                                                             | ^[array]`CascaderOption[]`                                                                                                                                                  | —            |
+| [props](#cascaderprops)             | 配置选项, 请参阅下面 `CascaderProps` 表。                                                                                                                      | ^[object]`CascaderProps`                                                                                                                                                    | —            |
+| size                                | 尺寸                                                                                                                                                           | ^[enum]`'large' \| 'default' \| 'small'`                                                                                                                                    | —            |
+| placeholder                         | 输入框占位文本                                                                                                                                                 | ^[string]                                                                                                                                                                   | —            |
+| disabled                            | 是否禁用                                                                                                                                                       | ^[boolean]                                                                                                                                                                  | —            |
+| clearable                           | 是否支持清空选项                                                                                                                                               | ^[boolean]                                                                                                                                                                  | —            |
+| clear-icon                          | 自定义清除图标                                                                                                                                                 | ^[string] / ^[object]`Component`                                                                                                                                            | CircleClose  |
+| show-all-levels                     | 输入框中是否显示选中值的完整路径                                                                                                                               | ^[boolean]                                                                                                                                                                  | true         |
+| collapse-tags                       | 多选模式下是否折叠Tag                                                                                                                                          | ^[boolean]                                                                                                                                                                  | —            |
+| collapse-tags-tooltip               | 当鼠标悬停于折叠标签的文本时，是否显示所有选中的标签。 要使用此属性，`collapse-tags`属性必须设定为 true                                                        | ^[boolean]                                                                                                                                                                  | false        |
+| max-collapse-tags-tooltip-height    | collapse tags 的最大高度                                                                                                                                       | ^[string] / ^[number]                                                                                                                                                       | —            |
+| separator                           | 用于分隔选项的字符                                                                                                                                             | ^[string]                                                                                                                                                                   | ' / '        |
+| filterable                          | 该选项是否可以被搜索                                                                                                                                           | ^[boolean]                                                                                                                                                                  | —            |
+| filter-method                       | 自定义搜索逻辑，第一个参数是`node`，第二个参数是`keyword`，返回的布尔值表示是否保留该选项                                                                      | ^[Function]`(node: CascaderNode, keyword: string) => boolean`                                                                                                               | —            |
+| debounce                            | 搜索关键词正在输入时的去抖延迟，单位为毫秒                                                                                                                     | ^[number]                                                                                                                                                                   | 300          |
+| before-filter                       | 过滤函数调用前，所要调用的钩子函数，该函数接收要过滤的值作为参数。 如果该函数的返回值是 `false` 或者是一个被拒绝的 `Promise`，那么接下来的过滤逻辑便不会执行。 | ^[Function]`(value: string) => boolean`                                                                                                                                     | —            |
+| popper-class                        | Cascader 下拉菜单和标签提示的自定义类名                                                                                                                        | ^[string]                                                                                                                                                                   | ''           |
+| popper-style                        | Cascader 下拉菜单和标签提示的自定义样式                                                                                                                        | ^[string] / ^[object]                                                                                                                                                       | —            |
+| teleported                          | 弹层是否使用 teleport                                                                                                                                          | ^[boolean]                                                                                                                                                                  | true         |
+| effect                              | tooltip 主题，内置了 `dark` / `light` 两种                                                                                                                     | ^[enum]`'dark' \| 'light'` / ^[string]                                                                                                                                      | light        |
+| tag-type                            | 标签类型                                                                                                                                                       | ^[enum]`'success' \| 'info' \| 'warning' \| 'danger'`                                                                                                                       | info         |
+| tag-effect                          | tag effect                                                                                                                                                     | ^[enum]`'light' \| 'dark' \| 'plain'`                                                                                                                                       | light        |
+| validate-event                      | 输入时是否触发表单的校验                                                                                                                                       | ^[boolean]                                                                                                                                                                  | true         |
+| max-collapse-tags                   | 需要显示的 Tag 的最大数量 要使用此功能，`collapse-tags`的值必须为true                                                                                          | ^[number]                                                                                                                                                                   | 1            |
+| empty-values                        | 组件的空值配置 [参考config-provider](/zh-CN/component/config-provider#empty-values-configurations)                                                             | ^[array]                                                                                                                                                                    | —            |
+| value-on-clear                      | 清空选项的值 [参考 config-provider](/zh-CN/component/config-provider#empty-values-configurations)                                                              | ^[string] / ^[number] / ^[boolean] / ^[Function]                                                                                                                            | —            |
+| persistent                          | 当下拉框未被激活并且`persistent`设置为`false`，下拉框容器会被删除。                                                                                            | ^[boolean]                                                                                                                                                                  | true         |
+| fallback-placements                 | Tooltip 可用的 positions 请查看[popper.js 文档](https://popper.js.org/docs/v2/modifiers/flip/#fallbackplacements)                                              | ^[array]`Placement[]`                                                                                                                                                       | —            |
+| placement                           | 下拉框出现的位置                                                                                                                                               | ^[enum]`'top' \| 'top-start' \| 'top-end' \| 'bottom' \| 'bottom-start' \| 'bottom-end' \| 'left' \| 'left-start' \| 'left-end' \| 'right' \| 'right-start' \| 'right-end'` | bottom-start |
+| popper-append-to-body ^(deprecated) | 是否将弹出的内容直接插入到 body 元素。 在弹出内容的边框定位出现问题时，可将该属性设置为 false                                                                  | ^[boolean]                                                                                                                                                                  | true         |
+| show-checked-strategy               | 多选模式下已选节点的展示策略。 当你想让显示更简洁时，使用 `parent`。 当你想显示每个子项时，使用 `child`。                                                      | ^[enum]`'parent' \| 'child'`                                                                                                                                                | child        |
 
 ### Cascader Events
 
@@ -237,33 +237,33 @@ cascader/custom-header-footer
 | expand-change  | 当展开节点发生变化时触发                 | ^[Function]`(value: CascaderValue) => void`                 |
 | blur           | 当失去焦点时触发                         | ^[Function]`(event: FocusEvent) => void`                    |
 | focus          | 当获得焦点时触发                         | ^[Function]`(event: FocusEvent) => void`                    |
-| clear ^(2.7.7) | 可清空的单选模式下用户点击清空按钮时触发 | ^[Function]`() => void`                                     |
+| clear          | 可清空的单选模式下用户点击清空按钮时触发 | ^[Function]`() => void`                                     |
 | visible-change | 下拉框出现/隐藏时触发                    | ^[Function]`(value: boolean) => void`                       |
 | remove-tag     | 在多选模式下，移除Tag时触发              | ^[Function]`(value: CascaderNode['valueByOption']) => void` |
 
 ### Cascader Slots
 
-| 插槽名                   | 说明                                                     | Type                                                      |
-| ------------------------ | -------------------------------------------------------- | --------------------------------------------------------- |
-| default                  | 自定义备选项的节点内容，分别为当前节点的 Node 对象和数据 | ^[object]`{ node: any, data: any }`                       |
-| empty                    | 无匹配选项时的内容                                       | —                                                         |
-| prefix ^(2.9.4)          | 输入框头部内容                                           | —                                                         |
-| suggestion-item ^(2.9.5) | 搜索时自定义建议项内容                                   | ^[object]`{ item: CascaderNode }`                         |
-| tag ^(2.10.3)            | 自定义tag样式                                            | ^[object]`{ data: Tag[], deleteTag: (tag: Tag) => void }` |
-| header ^(2.10.5)         | 下拉列表顶部的内容                                       | —                                                         |
-| footer ^(2.10.5)         | 下拉列表底部的内容                                       | —                                                         |
+| 插槽名          | 说明                                                     | Type                                                      |
+| --------------- | -------------------------------------------------------- | --------------------------------------------------------- |
+| default         | 自定义备选项的节点内容，分别为当前节点的 Node 对象和数据 | ^[object]`{ node: any, data: any }`                       |
+| empty           | 无匹配选项时的内容                                       | —                                                         |
+| prefix          | 输入框头部内容                                           | —                                                         |
+| suggestion-item | 搜索时自定义建议项内容                                   | ^[object]`{ item: CascaderNode }`                         |
+| tag             | 自定义tag样式                                            | ^[object]`{ data: Tag[], deleteTag: (tag: Tag) => void }` |
+| header          | 下拉列表顶部的内容                                       | —                                                         |
+| footer          | 下拉列表底部的内容                                       | —                                                         |
 
 ### Cascader Exposes
 
-| 方法名                        | 说明                                                                            | 类型                                                            |
-| ----------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| getCheckedNodes               | 获取一个当前选中节点的数组。(仅仅是传单) 是否只返回叶选中的节点，默认是 `false` | ^[Function]`(leafOnly: boolean) => CascaderNode[] \| undefined` |
-| cascaderPanelRef              | cascader 面板的 ref                                                             | ^[object]`ComputedRef<any>`                                     |
-| togglePopperVisible ^(2.2.31) | 切换 popper 可见状态                                                            | ^[Function]`(visible?: boolean) => void`                        |
-| contentRef                    | cascader 内容的 ref                                                             | ^[object]`ComputedRef<any>`                                     |
-| presentText ^(2.8.4)          | 选中的内容文本                                                                  | ^[object]`ComputedRef<string>`                                  |
-| focus ^(2.11.8)               | 使 input 获取焦点                                                               | ^[Function]`() => void`                                         |
-| blur ^(2.11.8)                | 使 input 失去焦点                                                               | ^[Function]`() => void`                                         |
+| 方法名              | 说明                                                                            | 类型                                                            |
+| ------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| getCheckedNodes     | 获取一个当前选中节点的数组。(仅仅是传单) 是否只返回叶选中的节点，默认是 `false` | ^[Function]`(leafOnly: boolean) => CascaderNode[] \| undefined` |
+| cascaderPanelRef    | cascader 面板的 ref                                                             | ^[object]`ComputedRef<any>`                                     |
+| togglePopperVisible | 切换 popper 可见状态                                                            | ^[Function]`(visible?: boolean) => void`                        |
+| contentRef          | cascader 内容的 ref                                                             | ^[object]`ComputedRef<any>`                                     |
+| presentText         | 选中的内容文本                                                                  | ^[object]`ComputedRef<string>`                                  |
+| focus               | 使 input 获取焦点                                                               | ^[Function]`() => void`                                         |
+| blur                | 使 input 失去焦点                                                               | ^[Function]`() => void`                                         |
 
 ## CascaderPanel API
 
@@ -286,10 +286,10 @@ cascader/custom-header-footer
 
 ### CascaderPanel Slots
 
-| 插槽名         | 说明                                                     | Type                                |
-| -------------- | -------------------------------------------------------- | ----------------------------------- |
-| default        | 下级节点的自定义内容，它们分别是当前节点对象和节点数据。 | ^[object]`{ node: any, data: any }` |
-| empty ^(2.8.3) | 没有数据时面板的内容。                                   | —                                   |
+| 插槽名  | 说明                                                     | Type                                |
+| ------- | -------------------------------------------------------- | ----------------------------------- |
+| default | 下级节点的自定义内容，它们分别是当前节点对象和节点数据。 | ^[object]`{ node: any, data: any }` |
+| empty   | 没有数据时面板的内容。                                   | —                                   |
 
 ### CascaderPanel Exposes
 
@@ -300,23 +300,23 @@ cascader/custom-header-footer
 
 ## CascaderProps
 
-| 属性                       | 说明                                                                                               | 类型                                                                    | 默认值   |
-| -------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | -------- |
-| expandTrigger              | 次级菜单的展开方式                                                                                 | ^[enum]`'click' \| 'hover'`                                             | click    |
-| multiple                   | 是否多选                                                                                           | ^[boolean]                                                              | false    |
-| checkStrictly              | 是否严格的遵守父子节点不互相关联                                                                   | ^[boolean]                                                              | false    |
-| emitPath                   | 在选中节点改变时，是否返回由该节点所在的各级菜单的值所组成的数组，若设置 false，则只返回该节点的值 | ^[boolean]                                                              | true     |
-| lazy                       | 是否动态加载子节点，需与 lazyLoad 方法结合使用                                                     | ^[boolean]                                                              | false    |
-| lazyLoad                   | 加载动态数据的方法，仅在 lazy 为 true 时有效 reject 参数在 ^(2.11.5) 版本及以上支持。              | ^[Function]`(node: Node, resolve: Resolve, reject: () => void) => void` | —        |
-| value                      | 指定选项的值为选项对象的某个属性值                                                                 | ^[string]                                                               | value    |
-| label                      | 指定选项标签为选项对象的某个属性值                                                                 | ^[string]                                                               | label    |
-| children                   | 指定选项的子选项为选项对象的某个属性值                                                             | ^[string]                                                               | children |
-| disabled                   | 指定选项的禁用为选项对象的某个属性值                                                               | ^[string]                                                               | disabled |
-| leaf                       | 指定选项的叶子节点的标志位为选项对象的某个属性值                                                   | ^[string]                                                               | leaf     |
-| hoverThreshold             | hover 时展开菜单的灵敏度阈值                                                                       | ^[number]                                                               | 500      |
-| checkOnClickNode ^(2.10.5) | 点击节点时是否选中或取消选中该节点                                                                 | ^[boolean]                                                              | false    |
-| checkOnClickLeaf ^(2.10.5) | 点击叶子节点（最后一级子节点）时，是否选中或取消选中该节点                                         | ^[boolean]                                                              | true     |
-| showPrefix ^(2.10.5)       | 是否显示单选框或复选框的前缀（图标）                                                               | ^[boolean]                                                              | true     |
+| 属性             | 说明                                                                                               | 类型                                                                    | 默认值   |
+| ---------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | -------- |
+| expandTrigger    | 次级菜单的展开方式                                                                                 | ^[enum]`'click' \| 'hover'`                                             | click    |
+| multiple         | 是否多选                                                                                           | ^[boolean]                                                              | false    |
+| checkStrictly    | 是否严格的遵守父子节点不互相关联                                                                   | ^[boolean]                                                              | false    |
+| emitPath         | 在选中节点改变时，是否返回由该节点所在的各级菜单的值所组成的数组，若设置 false，则只返回该节点的值 | ^[boolean]                                                              | true     |
+| lazy             | 是否动态加载子节点，需与 lazyLoad 方法结合使用                                                     | ^[boolean]                                                              | false    |
+| lazyLoad         | 加载动态数据的方法，仅在 lazy 为 true 时有效                                                       | ^[Function]`(node: Node, resolve: Resolve, reject: () => void) => void` | —        |
+| value            | 指定选项的值为选项对象的某个属性值                                                                 | ^[string]                                                               | value    |
+| label            | 指定选项标签为选项对象的某个属性值                                                                 | ^[string]                                                               | label    |
+| children         | 指定选项的子选项为选项对象的某个属性值                                                             | ^[string]                                                               | children |
+| disabled         | 指定选项的禁用为选项对象的某个属性值                                                               | ^[string]                                                               | disabled |
+| leaf             | 指定选项的叶子节点的标志位为选项对象的某个属性值                                                   | ^[string]                                                               | leaf     |
+| hoverThreshold   | hover 时展开菜单的灵敏度阈值                                                                       | ^[number]                                                               | 500      |
+| checkOnClickNode | 点击节点时是否选中或取消选中该节点                                                                 | ^[boolean]                                                              | false    |
+| checkOnClickLeaf | 点击叶子节点（最后一级子节点）时，是否选中或取消选中该节点                                         | ^[boolean]                                                              | true     |
+| showPrefix       | 是否显示单选框或复选框的前缀（图标）                                                               | ^[boolean]                                                              | true     |
 
 ## 类型声明
 

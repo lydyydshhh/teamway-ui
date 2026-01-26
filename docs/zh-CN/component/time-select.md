@@ -51,38 +51,38 @@ time-select/time-range
 
 ### Attributes
 
-| 属性名                    | 说明                                                                                               | 类型                                                                                             | 默认值      |
-| ------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ----------- |
-| model-value / v-model     | 选中项绑定值                                                                                       | ^[string]                                                                                        | —           |
-| disabled                  | 禁用状态                                                                                           | ^[boolean]                                                                                       | false       |
-| editable                  | 文本框可输入                                                                                       | ^[boolean]                                                                                       | true        |
-| clearable                 | 是否显示清除按钮                                                                                   | ^[boolean]                                                                                       | true        |
-| include-end-time ^(2.9.3) | 是否在选项中包含`end`                                                                              | ^[boolean]                                                                                       | false       |
-| size                      | 输入框尺寸                                                                                         | ^[enum]`'large' \| 'default' \| 'small'`                                                         | default     |
-| placeholder               | 非范围选择时的占位内容                                                                             | ^[string]                                                                                        | —           |
-| name                      | 原生属性                                                                                           | ^[string]                                                                                        | —           |
-| effect                    | Tooltip 主题，内置了 `dark` / `light` 两种主题                                                     | ^[string] / ^[enum]`'dark' \| 'light'`                                                           | light       |
-| prefix-icon               | 自定义前缀图标                                                                                     | ^[string] / ^[Component]                                                                         | Clock       |
-| clear-icon                | 自定义清除图标                                                                                     | ^[string] / ^[Component]                                                                         | CircleClose |
-| start                     | 开始时间                                                                                           | ^[string]                                                                                        | 09:00       |
-| end                       | 结束时间                                                                                           | ^[string]                                                                                        | 18:00       |
-| step                      | 间隔时间                                                                                           | ^[string]                                                                                        | 00:30       |
-| min-time                  | 最早时间点，早于该时间的时间段将被禁用                                                             | ^[string]                                                                                        | —           |
-| max-time                  | 最晚时间点，晚于该时间的时间段将被禁用                                                             | ^[string]                                                                                        | —           |
-| format                    | 设置时间格式                                                                                       | ^[string] see [formats](https://day.js.org/docs/en/display/format#list-of-all-available-formats) | HH:mm       |
-| empty-values ^(2.7.0)     | 组件的空值配置 [参考config-provider](/zh-CN/component/config-provider#empty-values-configurations) | ^[array]                                                                                         | —           |
-| value-on-clear ^(2.7.0)   | 清空选项的值 [参考 config-provider](/zh-CN/component/config-provider#empty-values-configurations)  | ^[string] / ^[number] / ^[boolean] / ^[Function]                                                 | —           |
-| popper-class ^(2.11.4)    | 为 TimeSelect 下拉面板设置自定义类名                                                               | ^[string]                                                                                        | ''          |
-| popper-style ^(2.11.4)    | 为 TimeSelect 下拉面板设置自定义样式                                                               | ^[string] / ^[object]                                                                            | :::         |
+| 属性名                | 说明                                                                                               | 类型                                                                                             | 默认值      |
+| --------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ----------- |
+| model-value / v-model | 选中项绑定值                                                                                       | ^[string]                                                                                        | —           |
+| disabled              | 禁用状态                                                                                           | ^[boolean]                                                                                       | false       |
+| editable              | 文本框可输入                                                                                       | ^[boolean]                                                                                       | true        |
+| clearable             | 是否显示清除按钮                                                                                   | ^[boolean]                                                                                       | true        |
+| include-end-time      | 是否在选项中包含`end`                                                                              | ^[boolean]                                                                                       | false       |
+| size                  | 输入框尺寸                                                                                         | ^[enum]`'large' \| 'default' \| 'small'`                                                         | default     |
+| placeholder           | 非范围选择时的占位内容                                                                             | ^[string]                                                                                        | —           |
+| name                  | 原生属性                                                                                           | ^[string]                                                                                        | —           |
+| effect                | Tooltip 主题，内置了 `dark` / `light` 两种主题                                                     | ^[string] / ^[enum]`'dark' \| 'light'`                                                           | light       |
+| prefix-icon           | 自定义前缀图标                                                                                     | ^[string] / ^[Component]                                                                         | Clock       |
+| clear-icon            | 自定义清除图标                                                                                     | ^[string] / ^[Component]                                                                         | CircleClose |
+| start                 | 开始时间                                                                                           | ^[string]                                                                                        | 09:00       |
+| end                   | 结束时间                                                                                           | ^[string]                                                                                        | 18:00       |
+| step                  | 间隔时间                                                                                           | ^[string]                                                                                        | 00:30       |
+| min-time              | 最早时间点，早于该时间的时间段将被禁用                                                             | ^[string]                                                                                        | —           |
+| max-time              | 最晚时间点，晚于该时间的时间段将被禁用                                                             | ^[string]                                                                                        | —           |
+| format                | 设置时间格式                                                                                       | ^[string] see [formats](https://day.js.org/docs/en/display/format#list-of-all-available-formats) | HH:mm       |
+| empty-values          | 组件的空值配置 [参考config-provider](/zh-CN/component/config-provider#empty-values-configurations) | ^[array]                                                                                         | —           |
+| value-on-clear        | 清空选项的值 [参考 config-provider](/zh-CN/component/config-provider#empty-values-configurations)  | ^[string] / ^[number] / ^[boolean] / ^[Function]                                                 | —           |
+| popper-class          | 为 TimeSelect 下拉面板设置自定义类名                                                               | ^[string]                                                                                        | ''          |
+| popper-style          | 为 TimeSelect 下拉面板设置自定义样式                                                               | ^[string] / ^[object]                                                                            | :::         |
 
 ### Events
 
-| 事件名         | 说明                                     | 类型                                     |
-| -------------- | ---------------------------------------- | ---------------------------------------- |
-| change         | 用户确认选定的值时触发                   | ^[Function]`(value: string) => void`     |
-| blur           | 在组件 Input 失去焦点时触发              | ^[Function]`(event: FocusEvent) => void` |
-| focus          | 在组件 Input 获得焦点时触发              | ^[Function]`(event: FocusEvent) => void` |
-| clear ^(2.7.7) | 可清空的单选模式下用户点击清空按钮时触发 | ^[Function]`() => void`                  |
+| 事件名 | 说明                                     | 类型                                     |
+| ------ | ---------------------------------------- | ---------------------------------------- |
+| change | 用户确认选定的值时触发                   | ^[Function]`(value: string) => void`     |
+| blur   | 在组件 Input 失去焦点时触发              | ^[Function]`(event: FocusEvent) => void` |
+| focus  | 在组件 Input 获得焦点时触发              | ^[Function]`(event: FocusEvent) => void` |
+| clear  | 可清空的单选模式下用户点击清空按钮时触发 | ^[Function]`() => void`                  |
 
 ### Exposes
 

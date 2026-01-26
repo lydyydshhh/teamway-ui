@@ -11,7 +11,7 @@ lang: zh-CN
 
 Alert 组件不属于浮层元素，不会自动消失或关闭。
 
-:::demo Alert 组件提供5种类型，由 `type` 属性指定，默认值为 `info`。 `primary` 已被添加到^(2.9.11)。
+:::demo Alert 组件提供5种类型，由 `type` 属性指定，默认值为 `info`。
 
 alert/basic
 
@@ -98,8 +98,8 @@ alert/icon-description
 
 ### Slots
 
-| 名称          | 描述           |
-| ------------- | -------------- |
-| default       | Alert 内容描述 |
-| title         | 标题的内容     |
-| icon ^(2.9.7) | icon 的内容    |
+| 名称    | 描述           |
+| ------- | -------------- |
+| default | Alert 内容描述 |
+| title   | 标题的内容     |
+| icon    | icon 的内容    |

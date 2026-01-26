@@ -15,7 +15,7 @@ carousel/basic
 
 :::
 
-## 动态模糊 ^(2.6.0)
+## 动态模糊
 
 添加动态模糊以给走马灯注入活力和流畅性。
 
@@ -79,21 +79,21 @@ carousel/vertical
 
 ### Carousel Attributes
 
-| 属性名               | 说明                                     | 类型                                    | Default    |
-| -------------------- | ---------------------------------------- | --------------------------------------- | ---------- |
-| height               | carousel 的高度                          | ^[string]                               | ''         |
-| initial-index        | 初始状态激活的幻灯片的索引，从 0 开始    | ^[number]                               | 0          |
-| trigger              | 指示器的触发方式                         | ^[enum]`'hover' \| 'click'`             | hover      |
-| autoplay             | 是否自动切换                             | ^[boolean]                              | true       |
-| interval             | 自动切换的时间间隔，单位为毫秒           | ^[number]                               | 3000       |
-| indicator-position   | 指示器的位置                             | ^[enum]`'' \| 'none' \| 'outside'`      | ''         |
-| arrow                | 切换箭头的显示时机                       | ^[enum]`'always' \| 'hover' \| 'never'` | hover      |
-| type                 | carousel 的类型                          | ^[enum]`'' \| 'card'`                   | ''         |
-| card-scale ^(2.7.8)  | 当 type 为 card时，二级卡的缩放大小      | ^[number]                               | 0.83       |
-| loop                 | 是否循环显示                             | ^[boolean]                              | true       |
-| direction            | 展示的方向                               | ^[enum]`'horizontal' \| 'vertical'`     | horizontal |
-| pause-on-hover       | 鼠标悬浮时暂停自动切换                   | ^[boolean]                              | true       |
-| motion-blur ^(2.6.0) | 添加动态模糊以给走马灯注入活力和流畅性。 | ^[boolean]                              | false      |
+| 属性名             | 说明                                     | 类型                                    | Default    |
+| ------------------ | ---------------------------------------- | --------------------------------------- | ---------- |
+| height             | carousel 的高度                          | ^[string]                               | ''         |
+| initial-index      | 初始状态激活的幻灯片的索引，从 0 开始    | ^[number]                               | 0          |
+| trigger            | 指示器的触发方式                         | ^[enum]`'hover' \| 'click'`             | hover      |
+| autoplay           | 是否自动切换                             | ^[boolean]                              | true       |
+| interval           | 自动切换的时间间隔，单位为毫秒           | ^[number]                               | 3000       |
+| indicator-position | 指示器的位置                             | ^[enum]`'' \| 'none' \| 'outside'`      | ''         |
+| arrow              | 切换箭头的显示时机                       | ^[enum]`'always' \| 'hover' \| 'never'` | hover      |
+| type               | carousel 的类型                          | ^[enum]`'' \| 'card'`                   | ''         |
+| card-scale         | 当 type 为 card时，二级卡的缩放大小      | ^[number]                               | 0.83       |
+| loop               | 是否循环显示                             | ^[boolean]                              | true       |
+| direction          | 展示的方向                               | ^[enum]`'horizontal' \| 'vertical'`     | horizontal |
+| pause-on-hover     | 鼠标悬浮时暂停自动切换                   | ^[boolean]                              | true       |
+| motion-blur        | 添加动态模糊以给走马灯注入活力和流畅性。 | ^[boolean]                              | false      |
 
 ### Carousel Events
 
@@ -109,12 +109,12 @@ carousel/vertical
 
 ### Carousel Exposes
 
-| 方法名               | 说明                                                                                              | 类型                                           |
-| -------------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| activeIndex ^(2.7.8) | 当前幻灯片的索引                                                                                  | ^[number]                                      |
-| setActiveItem        | 手动切换幻灯片，传入需要切换的幻灯片的索引，从 0 开始；或相应 `ty-carousel-item` 的 `name` 属性值 | ^[Function]`(index: string \| number) => void` |
-| prev                 | 切换至上一张幻灯片                                                                                | ^[Function]`() => void`                        |
-| next                 | 切换至下一张幻灯片                                                                                | ^[Function]`() => void`                        |
+| 方法名        | 说明                                                                                              | 类型                                           |
+| ------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| activeIndex   | 当前幻灯片的索引                                                                                  | ^[number]                                      |
+| setActiveItem | 手动切换幻灯片，传入需要切换的幻灯片的索引，从 0 开始；或相应 `ty-carousel-item` 的 `name` 属性值 | ^[Function]`(index: string \| number) => void` |
+| prev          | 切换至上一张幻灯片                                                                                | ^[Function]`() => void`                        |
+| next          | 切换至下一张幻灯片                                                                                | ^[Function]`() => void`                        |
 
 ## Carousel-Item API
 

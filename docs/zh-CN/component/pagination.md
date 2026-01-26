@@ -67,7 +67,7 @@ pagination/more-elements
 
 | 属性名                              | 说明                                                                                                                           | 类型                                                                              | 默认值                               |
 | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------ |
-| size ^(2.7.6)                       | 分页大小                                                                                                                       | ^[enum]`'large' \| 'default' \| 'small'`                                          | 'default'                            |
+| size                                | 分页大小                                                                                                                       | ^[enum]`'large' \| 'default' \| 'small'`                                          | 'default'                            |
 | background                          | 是否为分页按钮添加背景色                                                                                                       | ^[boolean]                                                                        | false                                |
 | page-size / v-model:page-size       | 每页显示条目个数                                                                                                               | ^[number]                                                                         | —                                    |
 | default-page-size                   | 每页默认的条目个数，不设置时默认为10                                                                                           | ^[number]                                                                         | —                                    |
@@ -78,15 +78,15 @@ pagination/more-elements
 | default-current-page                | 当前页数的默认初始值，不设置时默认为 1                                                                                         | ^[number]                                                                         | —                                    |
 | layout                              | 组件布局，子组件名用逗号分隔                                                                                                   | ^[string]`string (consists of sizes, prev, pager, next, jumper, ->, total, slot)` | prev, pager, next, jumper, ->, total |
 | page-sizes                          | 每页显示个数选择器的选项设置                                                                                                   | ^[array]`number[]`                                                                | [10, 20, 30, 40, 50, 100]            |
-| append-size-to ^(2.8.4)             | 下拉框挂载到哪个 DOM 元素                                                                                                      | ^[string]                                                                         | —                                    |
+| append-size-to                      | 下拉框挂载到哪个 DOM 元素                                                                                                      | ^[string]                                                                         | —                                    |
 | popper-class                        | 每页显示个数选择器的下拉框类名                                                                                                 | ^[string]                                                                         | ''                                   |
-| popper-style ^(2.11.5)              | 每页显示个数选择器的下拉框样式                                                                                                 | ^[string] / ^[object]                                                             | aaa                                  |
+| popper-style                        | 每页显示个数选择器的下拉框样式                                                                                                 | ^[string] / ^[object]                                                             | aaa                                  |
 | prev-text                           | 替代图标显示的上一页文字                                                                                                       | ^[string]                                                                         | ''                                   |
 | prev-icon                           | 上一页的图标， 比 `prev-text` 优先级更高                                                                                       | ^[string] / ^[Component]                                                          | ArrowLeft                            |
 | next-text                           | 替代图标显示的下一页文字                                                                                                       | ^[string]                                                                         | ''                                   |
 | next-icon                           | 下一页的图标， 比 `next-text` 优先级更低                                                                                       | ^[string] / ^[Component]                                                          | ArrowRight                           |
 | disabled                            | 是否禁用分页                                                                                                                   | ^[boolean]                                                                        | false                                |
-| teleported ^(2.3.13)                | 是否将下拉菜单teleport至 body                                                                                                  | ^[boolean]                                                                        | true                                 |
+| teleported                          | 是否将下拉菜单teleport至 body                                                                                                  | ^[boolean]                                                                        | true                                 |
 | hide-on-single-page                 | 只有一页时是否隐藏                                                                                                             | ^[boolean]                                                                        | false                                |
 | small ^(deprecated)                 | 是否使用小型分页样式                                                                                                           | ^[boolean]                                                                        | false                                |
 
@@ -102,13 +102,13 @@ pagination/more-elements
 
 ### 事件
 
-| 名称            | 说明                                     | 类型                                                         |
-| --------------- | ---------------------------------------- | ------------------------------------------------------------ |
-| size-change     | `page-size` 改变时触发                   | ^[Function]`(value: number) => void`                         |
-| current-change  | `current-page` 改变时触发                | ^[Function]`(value: number) => void`                         |
-| change ^(2.4.4) | `current-page` 或 `page-size` 更改时触发 | ^[Function]`(currentPage: number, pageSize: number) => void` |
-| prev-click      | 用户点击上一页按钮改变当前页时触发       | ^[Function]`(value: number) => void`                         |
-| next-click      | 用户点击下一页按钮改变当前页时触发       | ^[Function]`(value: number) => void`                         |
+| 名称           | 说明                                     | 类型                                                         |
+| -------------- | ---------------------------------------- | ------------------------------------------------------------ |
+| size-change    | `page-size` 改变时触发                   | ^[Function]`(value: number) => void`                         |
+| current-change | `current-page` 改变时触发                | ^[Function]`(value: number) => void`                         |
+| change         | `current-page` 或 `page-size` 更改时触发 | ^[Function]`(currentPage: number, pageSize: number) => void` |
+| prev-click     | 用户点击上一页按钮改变当前页时触发       | ^[Function]`(value: number) => void`                         |
+| next-click     | 用户点击下一页按钮改变当前页时触发       | ^[Function]`(value: number) => void`                         |
 
 :::warning
 

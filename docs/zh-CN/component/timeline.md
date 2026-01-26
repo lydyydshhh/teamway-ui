@@ -17,7 +17,7 @@ timeline/basic
 
 :::
 
-## Mode ^(2.13.1)
+## Mode
 
 使用 `mode` 来控制时间线与内容的相对位置。
 
@@ -57,7 +57,7 @@ timeline/center
 
 :::
 
-## 反向 ^(2.11.9)
+## 反向
 
 使用 reverse 属性来控制节点的顺序。
 
@@ -71,10 +71,10 @@ timeline/reverse
 
 ### Timeline Attributes
 
-| 插槽名            | 说明                   | 类型                                                            | 默认值 |
-| ----------------- | ---------------------- | --------------------------------------------------------------- | ------ |
-| reverse ^(2.11.9) | 是否逆序排序           | ^[boolean]                                                      | false  |
-| mode ^(2.13.1)    | 时间线与内容的相对位置 | ^[enum]`'start' \| 'alternate' \| 'alternate-reverse' \| 'end'` | start  |
+| 插槽名  | 说明                   | 类型                                                            | 默认值 |
+| ------- | ---------------------- | --------------------------------------------------------------- | ------ |
+| reverse | 是否逆序排序           | ^[boolean]                                                      | false  |
+| mode    | 时间线与内容的相对位置 | ^[enum]`'start' \| 'alternate' \| 'alternate-reverse' \| 'end'` | start  |
 
 ### Timeline Slots
 

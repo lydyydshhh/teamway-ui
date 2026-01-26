@@ -17,7 +17,7 @@ segmented/basic
 
 :::
 
-## 配置方向^(2.8.7)
+## 配置方向
 
 设置 `vertical` 来改变方向。
 
@@ -37,7 +37,7 @@ segmented/disabled
 
 :::
 
-## 自定义选项 ^(2.9.8)
+## 自定义选项
 
 当您的 `options` 格式不同于默认格式时，可通过 `props` 属性自定义 `options`
 
@@ -81,19 +81,19 @@ segmented/custom-style
 
 ### 属性
 
-| 名称                     | 说明                   | 类型                               | 默认值      |
-| ------------------------ | ---------------------- | ---------------------------------- | ----------- | ------------ | -------- | --- |
-| model-value / v-model    | 绑定值                 | ^[string] / ^[number] / ^[boolean] | —           |
-| options                  | 选项的数据             | ^[array]`Option[]`                 | []          |
-| [props](#props) ^(2.9.8) | 配置选项，详见下表     | ^[object]                          | —           |
-| size                     | 组件大小               | ^[enum]`'' \\                      | 'large' \\  | 'default' \\ | 'small'` | ''  |
-| block                    | 撑满父元素宽度         | ^[boolean]                         | false       |
-| disabled                 | 是否禁用               | ^[boolean]                         | false       |
-| validate-event           | 是否触发表单验证       | ^[boolean]                         | true        |
-| name                     | 原生 name 属性         | ^[string]                          | —           |
-| id                       | 原生 `id` 属性         | ^[string]                          | —           |
-| aria-label ^(a11y)       | 原生 `aria-label` 属性 | ^[string]                          | —           |
-| direction ^(2.8.7)       | 展示的方向             | ^[enum]`'horizontal' \\            | 'vertical'` | horizontal   |
+| 名称                  | 说明                   | 类型                               | 默认值      |
+| --------------------- | ---------------------- | ---------------------------------- | ----------- | ------------ | -------- | --- |
+| model-value / v-model | 绑定值                 | ^[string] / ^[number] / ^[boolean] | —           |
+| options               | 选项的数据             | ^[array]`Option[]`                 | []          |
+| [props](#props)       | 配置选项，详见下表     | ^[object]                          | —           |
+| size                  | 组件大小               | ^[enum]`'' \\                      | 'large' \\  | 'default' \\ | 'small'` | ''  |
+| block                 | 撑满父元素宽度         | ^[boolean]                         | false       |
+| disabled              | 是否禁用               | ^[boolean]                         | false       |
+| validate-event        | 是否触发表单验证       | ^[boolean]                         | true        |
+| name                  | 原生 name 属性         | ^[string]                          | —           |
+| id                    | 原生 `id` 属性         | ^[string]                          | —           |
+| aria-label ^(a11y)    | 原生 `aria-label` 属性 | ^[string]                          | —           |
+| direction             | 展示的方向             | ^[enum]`'horizontal' \\            | 'vertical'` | horizontal   |
 
 ### props
 

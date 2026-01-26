@@ -9,7 +9,7 @@ lang: zh-CN
 
 ## 基础用法
 
-:::demo `primary` 已被添加到^(2.9.11)。
+:::demo
 
 result/basic-usage
 

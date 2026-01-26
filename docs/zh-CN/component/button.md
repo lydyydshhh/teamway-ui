@@ -27,14 +27,6 @@ button/disabled
 
 ## 链接按钮
 
-:::warning
-
-`type="text"` 已被 **废弃**，将于版本 ^(3.0.0) 时 **移除**，请考虑切换至新的 API。
-
-新的 API `link` 于 ^(2.2.1) 版本时添加，你可以使用 `type` API 设置链接按钮的主题样式
-
-:::
-
 :::demo
 
 button/link
@@ -42,14 +34,6 @@ button/link
 :::
 
 ## 文字按钮
-
-:::tip
-
-文字按钮在现在有了全新的设计样式。 <ty-tag round effect="plain" size="small">2.2.0</ty-tag> 如果您想要使用老版样式的按钮，可以考虑使用 [Link](./link.md#basic) 组件。
-
-API也已更新，由于 `type` 属性会同时控制按钮的样式， 因此我们通过一个新的 API `text: boolean` 来控制文字按钮。
-
-:::
 
 没有边框和背景色的按钮。
 
@@ -73,7 +57,7 @@ button/icon
 
 以按钮组的方式出现，常用于多项类似操作。
 
-在 ^(2.11.9) 中，您可以使用 `direction` 属性。
+您可以使用 `direction` 属性。
 
 :::demo 使用 `<ty-button-group>` 对多个按钮分组。
 
@@ -111,7 +95,7 @@ button/size
 
 :::
 
-## Tag ^(2.3.4)
+## Tag
 
 您可以自定义元素标签。例如，按钮，div，路由链接，nuxt链接。
 
@@ -121,7 +105,7 @@ button/tag
 
 :::
 
-## 自定义颜色 ^(beta)
+## 自定义颜色
 
 您可以自定义按钮的颜色。
 
@@ -142,9 +126,9 @@ button/custom
 | size              | 尺寸                                                                      | ^[enum]`'large' \| 'default' \| 'small'`                                                                     | —       |
 | type              | 按钮类型，在设置`color`时，后者优先。                                     | ^[enum]`'default' \| 'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| '' \| 'text' (deprecated)` | —       |
 | plain             | 是否为朴素按钮                                                            | ^[boolean]                                                                                                   | false   |
-| text ^(2.2.0)     | 是否为文字按钮                                                            | ^[boolean]                                                                                                   | false   |
-| bg ^(2.2.0)       | 是否显示文字按钮背景颜色                                                  | ^[boolean]                                                                                                   | false   |
-| link ^(2.2.1)     | 是否为链接按钮                                                            | ^[boolean]                                                                                                   | false   |
+| text              | 是否为文字按钮                                                            | ^[boolean]                                                                                                   | false   |
+| bg                | 是否显示文字按钮背景颜色                                                  | ^[boolean]                                                                                                   | false   |
+| link              | 是否为链接按钮                                                            | ^[boolean]                                                                                                   | false   |
 | round             | 是否为圆角按钮                                                            | ^[boolean]                                                                                                   | false   |
 | circle            | 是否为圆形按钮                                                            | ^[boolean]                                                                                                   | false   |
 | loading           | 是否为加载中状态                                                          | ^[boolean]                                                                                                   | false   |
@@ -156,7 +140,7 @@ button/custom
 | auto-insert-space | 两个中文字符之间自动插入空格(仅当文本长度为 2 且所有字符均为中文时才生效) | ^[boolean]                                                                                                   | false   |
 | color             | 自定义按钮颜色, 并自动计算 `hover` 和 `active` 触发后的颜色               | ^[string]                                                                                                    | —       |
 | dark              | dark 模式, 意味着自动设置 `color` 为 dark 模式的颜色                      | ^[boolean]                                                                                                   | false   |
-| tag ^(2.3.4)      | 自定义元素标签                                                            | ^[string] / ^[Component]                                                                                     | button  |
+| tag               | 自定义元素标签                                                            | ^[string] / ^[Component]                                                                                     | button  |
 
 ### Button Slots
 
@@ -180,11 +164,11 @@ button/custom
 
 ### ButtonGroup Attributes
 
-| 属性名              | 说明                         | 类型                                                               | 默认值     |
-| ------------------- | ---------------------------- | ------------------------------------------------------------------ | ---------- |
-| size                | 用于控制该按钮组内按钮的大小 | ^[enum]`'large' \| 'default' \| 'small'`                           | —          |
-| type                | 用于控制该按钮组内按钮的类型 | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | —          |
-| direction ^(2.11.9) | 展示的方向                   | ^[enum]`'horizontal' \| 'vertical'`                                | horizontal |
+| 属性名    | 说明                         | 类型                                                               | 默认值     |
+| --------- | ---------------------------- | ------------------------------------------------------------------ | ---------- |
+| size      | 用于控制该按钮组内按钮的大小 | ^[enum]`'large' \| 'default' \| 'small'`                           | —          |
+| type      | 用于控制该按钮组内按钮的类型 | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | —          |
+| direction | 展示的方向                   | ^[enum]`'horizontal' \| 'vertical'`                                | horizontal |
 
 ### ButtonGroup Slots
 

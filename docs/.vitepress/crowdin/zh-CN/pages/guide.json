@@ -33,13 +33,11 @@
       },
       {
         "text": "暗黑模式",
-        "link": "/guide/dark-mode",
-        "promotion": "2.2.0"
+        "link": "/guide/dark-mode"
       },
       {
         "text": "自定义命名空间",
-        "link": "/guide/namespace",
-        "promotion": "2.2.0"
+        "link": "/guide/namespace"
       },
       {
         "text": "SSR",

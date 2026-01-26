@@ -7,29 +7,6 @@ lang: zh-CN
 
 在一组备选项中进行单选
 
-:::warning
-
-`label` 作为 `value` 来使用已经被 **废弃**, 建议`label` 只用来表示展示的文字，这个被废弃的用法**将会在** ^(3.0.0) 版本被移除，请考虑使用新 API 替换.
-
-:::
-
-:::tip
-
-新的 API `value` 已在 ^(2.6.0) 版本添加，文档中的示例都将使用 `value`。 如果您使用的版本 **低于** ^(2.6.0)，请参考：
-
-:::
-
-```vue
-<template>
-  <ty-radio-group v-model="radio1">
-    <!-- works when >=2.6.0, recommended ✔️ not work when <2.6.0 ❌ -->
-    <ty-radio value="Value 1">Option 1</ty-radio>
-    <!-- works when <2.6.0, deprecated act as value when >=3.0.0 -->
-    <ty-radio label="Label 2 & Value 2">Option 2</ty-radio>
-  </ty-radio-group>
-</template>
-```
-
 ## 基础用法
 
 单选框不应该有太多的可选项， 如果你有很多的可选项你应该使用选择框而不是单选框。
@@ -68,7 +45,7 @@ radio/with-borders
 
 :::
 
-## Options 属性 ^(2.11.2)
+## Options 属性
 
 :::demo 基础用法 `ty-radio-group` 的快捷示例。 您可以通过 `props` 属性自定义 `options` 的别名。
 
@@ -93,7 +70,7 @@ radio/radio-button
 | 属性名                | 说明                                                        | 类型                                     | 默认值 |
 | --------------------- | ----------------------------------------------------------- | ---------------------------------------- | ------ |
 | model-value / v-model | 选中项绑定值                                                | ^[string] / ^[number] / ^[boolean]       | —      |
-| value ^(2.6.0)        | 单选框的值                                                  | ^[string] / ^[number] / ^[boolean]       | :::    |
+| value                 | 单选框的值                                                  | ^[string] / ^[number] / ^[boolean]       | :::    |
 | label                 | 单选框的 label 如果`value`没有值， `label`则作为`value`使用 | ^[string] / ^[number] / ^[boolean]       | :::    |
 | disabled              | 是否禁用单选框                                              | ^[boolean]                               | false  |
 | border                | 是否显示边框                                                | ^[boolean]                               | false  |
@@ -124,13 +101,13 @@ radio/radio-button
 | validate-event              | 输入时是否触发表单的校验                                                       | ^[boolean]                                                       | true                                                     |
 | text-color                  | 按钮形式的 Radio 激活时的文本颜色                                              | ^[string]                                                        | #ffffff                                                  |
 | fill                        | 按钮形式的 Radio 激活时的填充色和边框色                                        | ^[string]                                                        | #409eff                                                  |
-| aria-label ^(a11y) ^(2.7.2) | 与 RadioGroup 中的 `aria-label` 属性相同                                       | ^[string]                                                        | —                                                        |
+| aria-label ^(a11y)          | 与 RadioGroup 中的 `aria-label` 属性相同                                       | ^[string]                                                        | —                                                        |
 | name                        | 原生 `name` 属性                                                               | ^[string]                                                        | —                                                        |
 | id                          | 原生 `id` 属性                                                                 | ^[string]                                                        | —                                                        |
 | label ^(a11y) ^(deprecated) | 与 RadioGroup 中的 `aria-label` 属性相同                                       | ^[string]                                                        | —                                                        |
-| options ^(2.11.2)           | 选项的数据源， `value` 的 key 和 `label` 和 ` disabled`可以通过 `props`自定义. | ^[array]`Array<{[key: string]: any}>`                            | —                                                        |
-| props ^(2.11.2)             | options 的配置                                                                 | ^[object]`{ value?: string, label?: string, disabled?: boolean}` | `{value: 'value', label: 'label', disabled: 'disabled'}` |
-| type ^(2.11.5)              | 用于渲染选项的组件类型（例如 `'button'`）                                      | ^[enum]`'radio' \| 'button'`                                     | 'radio'                                                  |
+| options                     | 选项的数据源， `value` 的 key 和 `label` 和 ` disabled`可以通过 `props`自定义. | ^[array]`Array<{[key: string]: any}>`                            | —                                                        |
+| props                       | options 的配置                                                                 | ^[object]`{ value?: string, label?: string, disabled?: boolean}` | `{value: 'value', label: 'label', disabled: 'disabled'}` |
+| type                        | 用于渲染选项的组件类型（例如 `'button'`）                                      | ^[enum]`'radio' \| 'button'`                                     | 'radio'                                                  |
 
 ### RadioGroup Events
 
@@ -148,12 +125,12 @@ radio/radio-button
 
 ### RadioButton Attributes
 
-| 名称           | 详情                                                     | 类型                               | 默认  |
-| -------------- | -------------------------------------------------------- | ---------------------------------- | ----- |
-| value ^(2.6.0) | 单选框的值                                               | ^[string] / ^[number] / ^[boolean] | —     |
-| label          | 单选框的 label 如果没有 value， `label`则作为`value`使用 | ^[string] / ^[number] / ^[boolean] | :::   |
-| disabled       | 是否禁用单选框                                           | ^[boolean]                         | false |
-| name           | 原生 name 属性                                           | ^[string]                          | :::   |
+| 名称     | 详情                                                     | 类型                               | 默认  |
+| -------- | -------------------------------------------------------- | ---------------------------------- | ----- |
+| value    | 单选框的值                                               | ^[string] / ^[number] / ^[boolean] | —     |
+| label    | 单选框的 label 如果没有 value， `label`则作为`value`使用 | ^[string] / ^[number] / ^[boolean] | :::   |
+| disabled | 是否禁用单选框                                           | ^[boolean]                         | false |
+| name     | 原生 name 属性                                           | ^[string]                          | :::   |
 
 ### RadioButton Slots
 
