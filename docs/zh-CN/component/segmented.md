@@ -81,19 +81,19 @@ segmented/custom-style
 
 ### 属性
 
-| 名称                  | 说明                   | 类型                               | 默认值      |
-| --------------------- | ---------------------- | ---------------------------------- | ----------- | ------------ | -------- | --- |
-| model-value / v-model | 绑定值                 | ^[string] / ^[number] / ^[boolean] | —           |
-| options               | 选项的数据             | ^[array]`Option[]`                 | []          |
-| [props](#props)       | 配置选项，详见下表     | ^[object]                          | —           |
-| size                  | 组件大小               | ^[enum]`'' \\                      | 'large' \\  | 'default' \\ | 'small'` | ''  |
-| block                 | 撑满父元素宽度         | ^[boolean]                         | false       |
-| disabled              | 是否禁用               | ^[boolean]                         | false       |
-| validate-event        | 是否触发表单验证       | ^[boolean]                         | true        |
-| name                  | 原生 name 属性         | ^[string]                          | —           |
-| id                    | 原生 `id` 属性         | ^[string]                          | —           |
-| aria-label ^(a11y)    | 原生 `aria-label` 属性 | ^[string]                          | —           |
-| direction             | 展示的方向             | ^[enum]`'horizontal' \\            | 'vertical'` | horizontal   |
+| 名称                  | 说明                   | 类型                                           | 默认值     |
+| --------------------- | ---------------------- | ---------------------------------------------- | ---------- |
+| model-value / v-model | 绑定值                 | ^[string] / ^[number] / ^[boolean]             | —          |
+| options               | 选项的数据             | ^[array]`Option[]`                             | []         |
+| [props](#props)       | 配置选项，详见下表     | ^[object]                                      | —          |
+| size                  | 组件大小               | ^[enum]`'' \| 'large' \| 'default' \| 'small'` | ''         |
+| block                 | 撑满父元素宽度         | ^[boolean]                                     | false      |
+| disabled              | 是否禁用               | ^[boolean]                                     | false      |
+| validate-event        | 是否触发表单验证       | ^[boolean]                                     | true       |
+| name                  | 原生 name 属性         | ^[string]                                      | —          |
+| id                    | 原生 `id` 属性         | ^[string]                                      | —          |
+| aria-label ^(a11y)    | 原生 `aria-label` 属性 | ^[string]                                      | —          |
+| direction             | 展示的方向             | ^[enum]`'horizontal' \| 'vertical'`            | horizontal |
 
 ### props
 

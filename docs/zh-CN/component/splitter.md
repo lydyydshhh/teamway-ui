@@ -71,19 +71,19 @@ splitter/lazy
 
 ### Splitter Attributes
 
-| 名称   | 详情               | 类型                    | 默认值      |
-| ------ | ------------------ | ----------------------- | ----------- | ---------- |
-| layout | 分隔面板的布局方向 | ^[enum]`'horizontal' \\ | 'vertical'` | horizontal |
-| lazy   | 是否使用懒加载     | ^[boolean]              | false       |
+| 名称   | 详情               | 类型                                | 默认值     |
+| ------ | ------------------ | ----------------------------------- | ---------- |
+| layout | 分隔面板的布局方向 | ^[enum]`'horizontal' \| 'vertical'` | horizontal |
+| lazy   | 是否使用懒加载     | ^[boolean]                          | false      |
 
 ### Splitter Events
 
-| 名称         | 详情                                             | 类型                                                  |
-| ------------ | ------------------------------------------------ | ----------------------------------------------------- | -------------------------------- |
-| resize-start | 开始调整面板大小时触发，`index` 是拖拽条的索引。 | ^[Function]`(index: number, sizes: number[]) => void` |
-| resize       | 调整面板大小时触发，`index` 是拖拽条的索引。     | ^[Function]`(index: number, sizes: number[]) => void` |
-| resize-end   | 面板调整大小结束时触发，`index` 是拖拽条的索引。 | ^[Function]`(index: number, sizes: number[]) => void` |
-| collapse     | 当面板折叠时触发，`index` 是拖拽条的索引。       | ^[Function]`(index: number, type: 'start' \\          | 'end', sizes: number[]) => void` |
+| 名称         | 详情                                             | 类型                                                                           |
+| ------------ | ------------------------------------------------ | ------------------------------------------------------------------------------ |
+| resize-start | 开始调整面板大小时触发，`index` 是拖拽条的索引。 | ^[Function]`(index: number, sizes: number[]) => void`                          |
+| resize       | 调整面板大小时触发，`index` 是拖拽条的索引。     | ^[Function]`(index: number, sizes: number[]) => void`                          |
+| resize-end   | 面板调整大小结束时触发，`index` 是拖拽条的索引。 | ^[Function]`(index: number, sizes: number[]) => void`                          |
+| collapse     | 当面板折叠时触发，`index` 是拖拽条的索引。       | ^[Function]`(index: number, type: 'start'  \| 'end', sizes: number[]) => void` |
 
 ## SplitterPanel API
 

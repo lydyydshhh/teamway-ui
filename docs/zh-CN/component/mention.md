@@ -95,24 +95,24 @@ mention/form
 
 ### 属性
 
-| 名称                                 | 说明                                                       | 类型                                                               | 默认值                                                           |
-| ------------------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- | ---------- |
-| options                              | 提及选项列表                                               | ^[array]`MentionOption[]`                                          | `[]`                                                             |
-| props                                | options 的配置                                             | ^[object]`MentionOptionProps`                                      | `{value: 'value', label: 'label', disabled: 'disabled'}`         |
-| prefix                               | 触发字段的前缀。 字符串长度必须且只能为 1                  | ^[string] \\                                                       | ^[array]`string[]`                                               | `'@'`      |
-| split                                | 用于拆分提及的字符。 字符串长度必须且只能为 1              | ^[string]                                                          | `' '`                                                            |
-| filter-option                        | 定制筛选器选项逻辑                                         | ^[false] \\                                                        | ^[Function]`(pattern: string, option: MentionOption) => boolean` | —          |
-| placement                            | 设置弹出位置                                               | ^[string]`'bottom' \\                                              | 'top'`                                                           | `'bottom'` |
-| show-arrow                           | 下拉菜单的内容是否有箭头                                   | ^[boolean]                                                         | `false`                                                          |
-| offset                               | 下拉面板偏移量                                             | ^[number]                                                          | `0`                                                              |
-| whole                                | 当退格键被按下做删除操作时，是否将提及部分作为整体删除     | ^[boolean]                                                         | `false`                                                          |
-| check-is-whole                       | 当退格键被按下做删除操作时，检查是否将提及部分作为整体删除 | ^[Function]`(pattern: string, prefix: string) => boolean`          | —                                                                |
-| loading                              | 提及的下拉面板是否处于加载状态                             | ^[boolean]                                                         | `false`                                                          |
-| model-value / v-model                | 输入值                                                     | ^[string]                                                          | —                                                                |
-| popper-class                         | 自定义浮层类名                                             | ^[string] / ^[object]                                              | ^[string]                                                        |
-| popper-style                         | 自定义浮层类名                                             | ^[string] / ^[object]                                              | :::                                                              |
-| popper-options                       | [popper.js](https://popper.js.org/docs/v2/) 参数           | ^[object] refer to [popper.js doc](https://popper.js.org/docs/v2/) | —                                                                |
-| [input props](./input.md#attributes) | —                                                          | —                                                                  | —                                                                |
+| 名称                                 | 说明                                                       | 类型                                                                         | 默认值                                                   |
+| ------------------------------------ | ---------------------------------------------------------- | ---------------------------------------------------------------------------- | -------------------------------------------------------- |
+| options                              | 提及选项列表                                               | ^[array]`MentionOption[]`                                                    | `[]`                                                     |
+| props                                | options 的配置                                             | ^[object]`MentionOptionProps`                                                | `{value: 'value', label: 'label', disabled: 'disabled'}` |
+| prefix                               | 触发字段的前缀。 字符串长度必须且只能为 1                  | ^[string] \| ^[array]`string[]`                                              | `'@'`                                                    |
+| split                                | 用于拆分提及的字符。 字符串长度必须且只能为 1              | ^[string]                                                                    | `' '`                                                    |
+| filter-option                        | 定制筛选器选项逻辑                                         | ^[false] \| ^[Function]`(pattern: string, option: MentionOption) => boolean` | —                                                        |
+| placement                            | 设置弹出位置                                               | ^[string]`'bottom'                                               \| 'top'`   | `'bottom'`                                               |
+| show-arrow                           | 下拉菜单的内容是否有箭头                                   | ^[boolean]                                                                   | `false`                                                  |
+| offset                               | 下拉面板偏移量                                             | ^[number]                                                                    | `0`                                                      |
+| whole                                | 当退格键被按下做删除操作时，是否将提及部分作为整体删除     | ^[boolean]                                                                   | `false`                                                  |
+| check-is-whole                       | 当退格键被按下做删除操作时，检查是否将提及部分作为整体删除 | ^[Function]`(pattern: string, prefix: string) => boolean`                    | —                                                        |
+| loading                              | 提及的下拉面板是否处于加载状态                             | ^[boolean]                                                                   | `false`                                                  |
+| model-value / v-model                | 输入值                                                     | ^[string]                                                                    | —                                                        |
+| popper-class                         | 自定义浮层类名                                             | ^[string] / ^[object]                                                        | ^[string]                                                |
+| popper-style                         | 自定义浮层类名                                             | ^[string] / ^[object]                                                        | :::                                                      |
+| popper-options                       | [popper.js](https://popper.js.org/docs/v2/) 参数           | ^[object] refer to [popper.js doc](https://popper.js.org/docs/v2/)           | —                                                        |
+| [input props](./input.md#attributes) | —                                                          | —                                                                            | —                                                        |
 
 ### 事件
 
@@ -135,11 +135,11 @@ mention/form
 
 ### Exposes
 
-| 名称            | 说明                | 类型                             |
-| --------------- | ------------------- | -------------------------------- | ------ |
-| input           | ty-input 组件实例   | ^[object]`Ref<InputInstance \\   | null>` |
-| tooltip         | ty-tooltip 组件实例 | ^[object]`Ref<TooltipInstance \\ | null>` |
-| dropdownVisible | tooltip 显示状态    | ^[object]`ComputedRef<boolean>`  |
+| 名称            | 说明                | 类型                                     |
+| --------------- | ------------------- | ---------------------------------------- |
+| input           | ty-input 组件实例   | ^[object]`Ref<InputInstance    \| null>` |
+| tooltip         | ty-tooltip 组件实例 | ^[object]`Ref<TooltipInstance  \| null>` |
+| dropdownVisible | tooltip 显示状态    | ^[object]`ComputedRef<boolean>`          |
 
 ## 类型声明
 
