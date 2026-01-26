@@ -5,7 +5,7 @@ export const head: HeadConfig[] = [
     'link',
     {
       rel: 'icon',
-      href: '/images/teamway-ui-logo-small.svg',
+      href: '/images/teamway-ui-logo-small.png',
       type: 'image/svg+xm',
     },
   ],

@@ -9,7 +9,7 @@
     <ty-menu-item index="0">
       <img
         style="width: 100px"
-        src="/images/teamway-ui-logo.svg"
+        src="/images/teamway-ui-logo.png"
         alt="Element logo"
       />
     </ty-menu-item>

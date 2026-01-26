@@ -13,7 +13,7 @@
     <ty-tour-step :target="ref1?.$el" title="Upload File">
       <img
         style="width: 240px"
-        src="https://element-plus.org/images/teamway-ui-logo.svg"
+        src="/images/teamway-ui-logo.png"
         alt="tour.png"
       />
       <div>Put you files here.</div>
