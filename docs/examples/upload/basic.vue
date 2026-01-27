@@ -27,12 +27,12 @@ import type { UploadProps, UploadUserFile } from 'teamway-ui'
 
 const fileList = ref<UploadUserFile[]>([
   {
-    name: 'teamway-ui-logo.svg',
-    url: 'https://element-plus.org/images/teamway-ui-logo.svg',
+    name: 'teamway-ui-logo.png',
+    url: '/images/teamway-ui-logo.png',
   },
   {
     name: 'element-plus-logo2.svg',
-    url: 'https://element-plus.org/images/teamway-ui-logo.svg',
+    url: '/images/teamway-ui-logo.png',
   },
 ])
 

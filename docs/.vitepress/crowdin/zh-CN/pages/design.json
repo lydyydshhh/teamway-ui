@@ -1,0 +1,11 @@
+{
+  "overview": {
+    "text": "设计规范总览",
+    "children": [
+      {
+        "text": "内置过渡动画",
+        "link": "/transitions"
+      }
+    ]
+  }
+}

@@ -3,13 +3,7 @@ title: 自定义命名空间
 lang: zh-CN
 ---
 
-## 自定义命名空间 ^(2.2.0)
-
-:::tip
-
-我们提供了 [element-plus-vite-starter 模版](https://github.com/element-plus/element-plus-vite-starter)。 查看代码了解使用方法。
-
-:::
+## 自定义命名空间
 
 TeamwayUI 提供的默认命名空间为 `ty`。 在特殊情况下，我们需要自定义命名空间。
 

@@ -77,16 +77,16 @@ anchor/affix
 
 ### 属性
 
-| 属性                       | 说明                               | 类型                  | 默认值           |
-| -------------------------- | ---------------------------------- | --------------------- | ---------------- | ---------- | --- |
-| container                  | 滚动的容器                         | `string` \\           | `HTMLElement` \\ | `Window `  | —   |
-| offset                     | 设置锚点滚动的偏移量               | `number`              | 0                |
-| bound                      | 触发锚点的元素的位置偏移量         | `number`              | 15               |
-| duration                   | 设置容器滚动持续时间，单位为毫秒。 | `number`              | 300              |
-| marker                     | 是否显示标记                       | ^[boolean]            | true             |
-| type                       | 设置锚点类型                       | ^[enum]`'default' \\  | 'underline'`     | `default`  |
-| direction                  | 设置锚点方向                       | ^[enum]`'vertical' \\ | 'horizontal'`    | `vertical` |
-| select-scroll-top ^(2.9.2) | 滚动时，链接是否选中位于顶部       | ^[boolean]            | false            |
+| 属性              | 说明                               | 类型                                  | 默认值     |
+| ----------------- | ---------------------------------- | ------------------------------------- | ---------- |
+| container         | 滚动的容器                         | `string` \| `HTMLElement` \| `Window` | —          |
+| offset            | 设置锚点滚动的偏移量               | `number`                              | 0          |
+| bound             | 触发锚点的元素的位置偏移量         | `number`                              | 15         |
+| duration          | 设置容器滚动持续时间，单位为毫秒。 | `number`                              | 300        |
+| marker            | 是否显示标记                       | ^[boolean]                            | true       |
+| type              | 设置锚点类型                       | ^[enum]`'default' \| 'underline'`     | `default`  |
+| direction         | 设置锚点方向                       | ^[enum]`'vertical' \| 'horizontal'`   | `vertical` |
+| select-scroll-top | 滚动时，链接是否选中位于顶部       | ^[boolean]                            | false      |
 
 ### Anchor Events
 

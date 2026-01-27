@@ -3,7 +3,7 @@ title: ColorPickerPanel 颜色选择器面板
 lang: zh-CN
 ---
 
-# ColorPickerPanel 颜色选择器面板 ^(beta)
+# ColorPickerPanel 颜色选择器面板
 
 `ColorPickerPanel`是`ColorPicker`的核心组件。
 
@@ -55,15 +55,15 @@ color-picker-panel/disabled
 
 ### 属性
 
-| 方法名                   | 详情                      | 事件参数           | 默认值   |
-| ------------------------ | ------------------------- | ------------------ | -------- | -------- | -------- | ----------------------------------- | -------------------------------- | --- |
-| model-value / v-model    | 绑定值                    | ^[string]          | —        |
-| border                   | 颜色选择器面板是否有边框  | ^[boolean]         | true     |
-| disabled                 | 是否禁用                  | ^[boolean]         | false    |
-| show-alpha               | 是否显示 alpha 滑块       | ^[boolean]         | false    |
-| color-format             | 写入 v-model 的颜色的格式 | ^[enum]`'hsl' \\   | 'hsv' \\ | 'hex' \\ | 'rgb' \\ | 'hex' (when show-alpha is false) \\ | 'rgb' (when show-alpha is true)` | —   |
-| predefine                | 预定义颜色                | ^[array]`string[]` | —        |
-| validate-event ^(2.11.7) | 是否触发表单验证          | ^[boolean]         | true     |
+| 方法名                | 详情                      | 事件参数                                  | 默认值                                                                  |
+| --------------------- | ------------------------- | ----------------------------------------- | ----------------------------------------------------------------------- |
+| model-value / v-model | 绑定值                    | ^[string]                                 | —                                                                       |
+| border                | 颜色选择器面板是否有边框  | ^[boolean]                                | true                                                                    |
+| disabled              | 是否禁用                  | ^[boolean]                                | false                                                                   |
+| show-alpha            | 是否显示 alpha 滑块       | ^[boolean]                                | false                                                                   |
+| color-format          | 写入 v-model 的颜色的格式 | ^[enum]`'hsl' \| 'hsv' \| 'hex' \| 'rgb'` | `'hex'` (when show-alpha is false) \| `'rgb'` (when show-alpha is true) |
+| predefine             | 预定义颜色                | ^[array]`string[]`                        | —                                                                       |
+| validate-event        | 是否触发表单验证          | ^[boolean]                                | true                                                                    |
 
 ### Slots
 
@@ -73,8 +73,8 @@ color-picker-panel/disabled
 
 ### 对外暴露的方法
 
-| Name             | Description      | 事件参数                 |
-| ---------------- | ---------------- | ------------------------ |
-| color            | 当前色彩对象     | ^[object]`Color`         |
-| inputRef         | 自定义 input ref | ^[object]`InputInstance` |
-| update ^(2.11.4) | 更新子组件       | ^[Function]`() => void`  |
+| Name     | Description      | 事件参数                 |
+| -------- | ---------------- | ------------------------ |
+| color    | 当前色彩对象     | ^[object]`Color`         |
+| inputRef | 自定义 input ref | ^[object]`InputInstance` |
+| update   | 更新子组件       | ^[Function]`() => void`  |

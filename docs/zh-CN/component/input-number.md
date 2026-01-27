@@ -79,7 +79,7 @@ input-number/controlled
 
 :::
 
-## 自定义图标 ^(2.6.3)
+## 自定义图标
 
 :::demo 使用 `decrease-icon` 和 `increase-icon` 设置自定义图标。
 
@@ -87,7 +87,7 @@ input-number/custom
 
 :::
 
-## 带前缀和后缀^(2.8.4)
+## 带前缀和后缀
 
 :::demo 使用前缀和标名后缀。
 
@@ -105,38 +105,38 @@ input-number/with-prefix-suffix
 
 ### Attributes
 
-| 属性名                        | 说明                                 | 类型                                          | 默认值                  |
-| ----------------------------- | ------------------------------------ | --------------------------------------------- | ----------------------- |
-| model-value / v-model         | 选中项绑定值                         | ^[number] / ^[null]                           | —                       |
-| min                           | 设置计数器允许的最小值               | ^[number]                                     | Number.MIN_SAFE_INTEGER |
-| max                           | 设置计数器允许的最大值               | ^[number]                                     | Number.MAX_SAFE_INTEGER |
-| step                          | 计数器步长                           | ^[number]                                     | 1                       |
-| step-strictly                 | 是否只能输入 step 的倍数             | ^[boolean]                                    | false                   |
-| precision                     | 数值精度                             | ^[number]                                     | —                       |
-| size                          | 计数器尺寸                           | ^[enum]`'large' \| 'default' \| 'small'`      | default                 |
-| readonly ^(2.2.16)            | 原生 `readonly` 属性，是否只读       | ^[boolean]                                    | false                   |
-| disabled                      | 是否禁用状态                         | ^[boolean]                                    | false                   |
-| controls                      | 是否使用控制按钮                     | ^[boolean]                                    | true                    |
-| controls-position             | 控制按钮位置                         | ^[enum]`'' \| 'right'`                        | —                       |
-| name                          | 等价于原生 input `name` 属性         | ^[string]                                     | —                       |
-| aria-label ^(a11y) ^(2.7.2)   | 等价于原生 input `aria-label` 属性   | ^[string]                                     | —                       |
-| placeholder                   | 等价于原生 input `placeholder` 属性  | ^[string]                                     | —                       |
-| id                            | 等价于原生 input `id` 属性           | ^[string]                                     | —                       |
-| value-on-clear ^(2.2.0)       | 当输入框被清空时显示的值             | ^[number] / ^[null] / ^[enum]`'min' \| 'max'` | —                       |
-| validate-event                | 是否触发表单验证                     | ^[boolean]                                    | true                    |
-| label ^(a11y) ^(deprecated)   | 等价于原生 input `aria-label` 属性   | ^[string]                                     | —                       |
-| inputmode ^(2.10.3)           | 等价于原生 input `inputmode` 属性    | ^[string]                                     | —                       |
-| align ^(2.10.5)               | 内部输入文本对齐                     | ^[enum]`'left' \| 'center' \| 'right'`        | 'center'                |
-| disabled-scientific ^(2.10.5) | 禁用科学计数法的输入（例如输入 'e'） | ^[boolean]                                    | false                   |
+| 属性名                      | 说明                                 | 类型                                          | 默认值                  |
+| --------------------------- | ------------------------------------ | --------------------------------------------- | ----------------------- |
+| model-value / v-model       | 选中项绑定值                         | ^[number] / ^[null]                           | —                       |
+| min                         | 设置计数器允许的最小值               | ^[number]                                     | Number.MIN_SAFE_INTEGER |
+| max                         | 设置计数器允许的最大值               | ^[number]                                     | Number.MAX_SAFE_INTEGER |
+| step                        | 计数器步长                           | ^[number]                                     | 1                       |
+| step-strictly               | 是否只能输入 step 的倍数             | ^[boolean]                                    | false                   |
+| precision                   | 数值精度                             | ^[number]                                     | —                       |
+| size                        | 计数器尺寸                           | ^[enum]`'large' \| 'default' \| 'small'`      | default                 |
+| readonly                    | 原生 `readonly` 属性，是否只读       | ^[boolean]                                    | false                   |
+| disabled                    | 是否禁用状态                         | ^[boolean]                                    | false                   |
+| controls                    | 是否使用控制按钮                     | ^[boolean]                                    | true                    |
+| controls-position           | 控制按钮位置                         | ^[enum]`'' \| 'right'`                        | —                       |
+| name                        | 等价于原生 input `name` 属性         | ^[string]                                     | —                       |
+| aria-label ^(a11y)          | 等价于原生 input `aria-label` 属性   | ^[string]                                     | —                       |
+| placeholder                 | 等价于原生 input `placeholder` 属性  | ^[string]                                     | —                       |
+| id                          | 等价于原生 input `id` 属性           | ^[string]                                     | —                       |
+| value-on-clear              | 当输入框被清空时显示的值             | ^[number] / ^[null] / ^[enum]`'min' \| 'max'` | —                       |
+| validate-event              | 是否触发表单验证                     | ^[boolean]                                    | true                    |
+| label ^(a11y) ^(deprecated) | 等价于原生 input `aria-label` 属性   | ^[string]                                     | —                       |
+| inputmode                   | 等价于原生 input `inputmode` 属性    | ^[string]                                     | —                       |
+| align ^                     | 内部输入文本对齐                     | ^[enum]`'left' \| 'center' \| 'right'`        | 'center'                |
+| disabled-scientific         | 禁用科学计数法的输入（例如输入 'e'） | ^[boolean]                                    | false                   |
 
 ### Slots
 
-| 插槽名                 | 说明                     |
-| ---------------------- | ------------------------ |
-| decrease-icon ^(2.6.3) | 自定义输入框按钮减少图标 |
-| increase-icon ^(2.6.3) | 自定义输入框按钮增加图标 |
-| prefix ^(2.8.4)        | 输入框头部内容           |
-| suffix ^(2.8.4)        | 输入框尾部内容           |
+| 插槽名        | 说明                     |
+| ------------- | ------------------------ |
+| decrease-icon | 自定义输入框按钮减少图标 |
+| increase-icon | 自定义输入框按钮增加图标 |
+| prefix        | 输入框头部内容           |
+| suffix        | 输入框尾部内容           |
 
 ### Events
 

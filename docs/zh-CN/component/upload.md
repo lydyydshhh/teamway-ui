@@ -81,7 +81,7 @@ upload/drag-and-drop
 
 :::
 
-## 上传目录 ^(2.13.1)
+## 上传目录
 
 通过 `directory` 属性启用文件夹上传。
 
@@ -131,7 +131,7 @@ upload/manual
 | http-request                  | 覆盖默认的 Xhr 行为，允许自行实现上传文件的请求                                                                                      | ^[Function]`(options: UploadRequestOptions) => XMLHttpRequest \| Promise<unknown>`                                                         | [请参考ajaxUpload](https://github.com/element-plus/element-plus/blob/dev/packages/components/upload/src/ajax.ts#L55) |
 | disabled                      | 是否禁用上传                                                                                                                         | ^[boolean]                                                                                                                                 | false                                                                                                                |
 | limit                         | 允许上传文件的最大数量                                                                                                               | ^[number]                                                                                                                                  | —                                                                                                                    |
-| directory ^(2.13.1)           | 是否支持上传文件夹。 启用后，只能选择文件夹；选择文件夹后，文件夹内的文件将被扁平化处理。                                            | ^[boolean]                                                                                                                                 | false                                                                                                                |
+| directory                     | 是否支持上传文件夹。 启用后，只能选择文件夹；选择文件夹后，文件夹内的文件将被扁平化处理。                                            | ^[boolean]                                                                                                                                 | false                                                                                                                |
 
 ### 插槽
 

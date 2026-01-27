@@ -23,6 +23,7 @@ export default defineConfig(async ({ mode }) => {
   })
 
   return {
+    publicDir: path.resolve(projRoot, 'docs/public'),
     css: {
       preprocessorOptions: {
         scss: {

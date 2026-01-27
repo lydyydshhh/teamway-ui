@@ -25,42 +25,35 @@ app.use(TeamwayUI)
 app.mount('#app')
 ```
 
-#### Volar 支持
-
-如果您使用 Volar，请在 `tsconfig.json` 中通过 `compilerOptions.type` 指定全局组件类型。
-
-```json [tsconfig.json]
-{
-  "compilerOptions": {
-    // ...
-    "types": ["element-plus/global"]
-  }
-}
-```
-
 ### 按需导入
 
 您需要使用额外的插件来导入要使用的组件。
 
 #### 自动导入 <ty-tag type="primary" style="vertical-align: middle;" effect="dark" size="small">推荐</ty-tag>
 
-首先你需要安装`unplugin-vue-components` 和 `unplugin-auto-import`这两款插件
+首先你需要安装`unplugin-vue-components` 插件
 
 ::: code-group
 
 ```shell [npm]
-$ npm install -D unplugin-vue-components unplugin-auto-import
+$ npm install -D unplugin-vue-components
 ```
 
 ```shell [yarn]
-$ yarn add -D unplugin-vue-components unplugin-auto-import
+$ yarn add -D unplugin-vue-components
 ```
 
 ```shell [pnpm]
-$ pnpm install -D unplugin-vue-components unplugin-auto-import
+$ pnpm install -D unplugin-vue-components
 ```
 
 :::
+
+导入样式
+
+```ts [main.ts]
+import 'teamway-ui/dist/index.css'
+```
 
 然后把下列代码插入到你的 `Vite` 或 `Webpack` 的配置文件中
 
@@ -68,19 +61,21 @@ $ pnpm install -D unplugin-vue-components unplugin-auto-import
 
 ```ts [vite.config.ts]
 import { defineConfig } from 'vite'
-import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
   // ...
   plugins: [
     // ...
-    AutoImport({
-      resolvers: [ElementPlusResolver()],
-    }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [
+        (name) => {
+          // 处理 Ty 前缀组件：TyButton / TySelect ...
+          if (name.startsWith('Ty')) {
+            return { name, from: 'teamway-ui' }
+          }
+        },
+      ],
     }),
   ],
 })
@@ -89,60 +84,32 @@ export default defineConfig({
 ##### Webpack
 
 ```js [webpack.config.js]
-const AutoImport = require('unplugin-auto-import/webpack')
 const Components = require('unplugin-vue-components/webpack')
-const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 
 module.exports = {
   // ...
   plugins: [
-    AutoImport({
-      resolvers: [ElementPlusResolver()],
-    }),
     Components({
-      resolvers: [ElementPlusResolver()],
+      resolvers: [
+        (name) => {
+          // 处理 Ty 前缀组件：TyButton / TySelect ...
+          if (name.startsWith('Ty')) {
+            return { name, from: 'teamway-ui' }
+          }
+        },
+      ],
     }),
   ],
 }
 ```
 
-想了解更多打包 ([Rollup](https://rollupjs.org/), [Vue CLI](https://cli.vuejs.org/)) 和配置工具，请参考 [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components#installation) 和 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import#install)。
+### 按需导入
 
-#### Nuxt
+导入样式
 
-对于 Nuxt 用户，只需要安装 `@element-plus/nuxt` 即可。
-
-::: code-group
-
-```shell [npm]
-$ npm install -D @element-plus/nuxt
+```ts [main.ts]
+import 'teamway-ui/dist/index.css'
 ```
-
-```shell [yarn]
-$ yarn add -D @element-plus/nuxt
-```
-
-```shell [pnpm]
-$ pnpm install -D @element-plus/nuxt
-```
-
-:::
-
-然后将下面的代码写入你的配置文件.
-
-```ts [nuxt.config.ts]
-export default defineNuxtConfig({
-  modules: ['@element-plus/nuxt'],
-})
-```
-
-配置文档参考 [docs](https://github.com/element-plus/element-plus-nuxt#readme).
-
-### 手动导入
-
-TeamwayUI 提供了基于 ES Module 的开箱即用的 [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) 功能。
-
-但你需要安装 [unplugin-element-plus](https://github.com/element-plus/unplugin-element-plus) 来导入样式。 配置文档参考 [docs](https://github.com/element-plus/unplugin-element-plus#readme).
 
 ```vue [App.vue]
 <template>
@@ -157,24 +124,6 @@ export default {
 }
 </script>
 ```
-
-```ts [vite.config.ts]
-import { defineConfig } from 'vite'
-import TeamwayUI from 'unplugin-element-plus/vite'
-
-export default defineConfig({
-  // ...
-  plugins: [TeamwayUI()],
-})
-```
-
-## 快捷搭建项目模板
-
-我们提供了 [Vite 模板](https://github.com/element-plus/element-plus-vite-starter)。
-
-对于Nuxt 用户，我们有一个 [Nuxt 模板](https://github.com/element-plus/element-plus-nuxt-starter)。
-
-对于 Laravel 用户，我们也准备了 [ Laravel 模板](https://github.com/element-plus/element-plus-in-laravel-starter)。
 
 ## 全局配置
 
@@ -217,11 +166,3 @@ export default defineComponent({
 })
 </script>
 ```
-
-## 使用 Nuxt.js
-
-您也可以使用 [Nuxt.js](https://nuxt.com): 更多详情请参考 [TeamwayUI Nuxt.js 初始化模板](https://github.com/element-plus/element-plus-nuxt-starter)。
-
-## 开始使用
-
-现在你可以启动项目了。 对于每个组件的用法，请查阅 [对应的独立文档](https://element-plus.org/en-US/component/button.html)。

@@ -3,7 +3,7 @@ title: Splitter 分隔面板
 lang: zh-CN
 ---
 
-# Splitter 分隔面板 ^(beta)
+# Splitter 分隔面板
 
 可将区域水平或垂直分隔，并可自由拖动以调整各个区域的大小。
 
@@ -57,7 +57,7 @@ splitter/size
 
 :::
 
-## 延迟^(2.11.0)
+## 延迟
 
 当启用`lazy`时，面板大小将不会在拖动时实时更新，只能在拖动结束后更新。
 
@@ -71,19 +71,19 @@ splitter/lazy
 
 ### Splitter Attributes
 
-| 名称           | 详情               | 类型                    | 默认值      |
-| -------------- | ------------------ | ----------------------- | ----------- | ---------- |
-| layout         | 分隔面板的布局方向 | ^[enum]`'horizontal' \\ | 'vertical'` | horizontal |
-| lazy ^(2.11.0) | 是否使用懒加载     | ^[boolean]              | false       |
+| 名称   | 详情               | 类型                                | 默认值     |
+| ------ | ------------------ | ----------------------------------- | ---------- |
+| layout | 分隔面板的布局方向 | ^[enum]`'horizontal' \| 'vertical'` | horizontal |
+| lazy   | 是否使用懒加载     | ^[boolean]                          | false      |
 
 ### Splitter Events
 
-| 名称               | 详情                                             | 类型                                                  |
-| ------------------ | ------------------------------------------------ | ----------------------------------------------------- | -------------------------------- |
-| resize-start       | 开始调整面板大小时触发，`index` 是拖拽条的索引。 | ^[Function]`(index: number, sizes: number[]) => void` |
-| resize             | 调整面板大小时触发，`index` 是拖拽条的索引。     | ^[Function]`(index: number, sizes: number[]) => void` |
-| resize-end         | 面板调整大小结束时触发，`index` 是拖拽条的索引。 | ^[Function]`(index: number, sizes: number[]) => void` |
-| collapse ^(2.10.3) | 当面板折叠时触发，`index` 是拖拽条的索引。       | ^[Function]`(index: number, type: 'start' \\          | 'end', sizes: number[]) => void` |
+| 名称         | 详情                                             | 类型                                                                           |
+| ------------ | ------------------------------------------------ | ------------------------------------------------------------------------------ |
+| resize-start | 开始调整面板大小时触发，`index` 是拖拽条的索引。 | ^[Function]`(index: number, sizes: number[]) => void`                          |
+| resize       | 调整面板大小时触发，`index` 是拖拽条的索引。     | ^[Function]`(index: number, sizes: number[]) => void`                          |
+| resize-end   | 面板调整大小结束时触发，`index` 是拖拽条的索引。 | ^[Function]`(index: number, sizes: number[]) => void`                          |
+| collapse     | 当面板折叠时触发，`index` 是拖拽条的索引。       | ^[Function]`(index: number, type: 'start'  \| 'end', sizes: number[]) => void` |
 
 ## SplitterPanel API
 
@@ -113,6 +113,6 @@ splitter/lazy
 
 ### SplitterPanel Exposes
 
-| 方法名                     | 说明                    | 类型                           |
-| -------------------------- | ----------------------- | ------------------------------ |
-| splitterPanelRef ^(2.11.9) | splitter-面板 html 元素 | ^[object]`Ref<HTMLDivElement>` |
+| 方法名           | 说明                    | 类型                           |
+| ---------------- | ----------------------- | ------------------------------ |
+| splitterPanelRef | splitter-面板 html 元素 | ^[object]`Ref<HTMLDivElement>` |

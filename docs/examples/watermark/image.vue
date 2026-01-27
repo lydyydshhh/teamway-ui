@@ -1,9 +1,5 @@
 ﻿<template>
-  <ty-watermark
-    :width="130"
-    :height="30"
-    image="https://element-plus.org/images/teamway-ui-logo.svg"
-  >
+  <ty-watermark :width="130" :height="30" image="/images/teamway-ui-logo.png">
     <div style="height: 500px" />
   </ty-watermark>
 </template>

@@ -65,7 +65,7 @@ tag/rounded
 
 ## 可选中的标签
 
-有时候因为业务需求，我们可能会需要用到类似复选框的标签，但是**按钮式的复选框**的样式又不满足需求，此时我们就可以用到 `check-tag`组件。 您可以在^(2.5.4)中使用 `type` 属性。
+有时候因为业务需求，我们可能会需要用到类似复选框的标签，但是**按钮式的复选框**的样式又不满足需求，此时我们就可以用到 `check-tag`组件。 您可以使用 `type` 属性。
 
 :::demo check-tag 的基础使用方法，check-tag 提供的 API 非常简单。
 
@@ -108,8 +108,8 @@ tag/checkable
 | 属性名                    | 说明          | 类型                                                               | 默认    |
 | ------------------------- | ------------- | ------------------------------------------------------------------ | ------- |
 | checked / v-model:checked | 是否选中      | ^[boolean]                                                         | false   |
-| disabled ^(2.8.2)         | 是否禁用      | ^[boolean]                                                         | false   |
-| type ^(2.5.4)             | CheckTag 类型 | ^[enum]`'primary' \| 'success' \| 'info' \| 'warning' \| 'danger'` | primary |
+| disabled                  | 是否禁用      | ^[boolean]                                                         | false   |
+| type                      | CheckTag 类型 | ^[enum]`'primary' \| 'success' \| 'info' \| 'warning' \| 'danger'` | primary |
 
 ### CheckTag Events
 

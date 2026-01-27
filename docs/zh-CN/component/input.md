@@ -31,7 +31,7 @@ input/clearable
 
 :::
 
-## 自定义清除图标^(2.11.0)
+## 自定义清除图标
 
 你可以通过`clear-icon`属性自定义清除图标
 
@@ -107,7 +107,7 @@ input/various-size
 
 ## 输入长度限制
 
-:::demo 使用 `maxlength` 和 `minlength` 属性, 来控制输入内容的最大字数和最小字数。 "字符数"使用JavaScript字符串长度来衡量。 为文本或文本输入类型设置 `maxlength` prop可以限制输入值的长度。 允许你通过设置 `show-word-limit` 到 `true` 来显示剩余字数。 从 ^(2.11.5) 版本开始，你可以将 `word-limit-position` 设置为 `outside`，以在输入框外显示字数统计。
+:::demo 使用 `maxlength` 和 `minlength` 属性, 来控制输入内容的最大字数和最小字数。 "字符数"使用JavaScript字符串长度来衡量。 为文本或文本输入类型设置 `maxlength` prop可以限制输入值的长度。 允许你通过设置 `show-word-limit` 到 `true` 来显示剩余字数。 你可以将 `word-limit-position` 设置为 `outside`，以在输入框外显示字数统计。
 
 input/length-limiting
 
@@ -117,42 +117,42 @@ input/length-limiting
 
 ### Attributes
 
-| 属性名                        | 说明                                                                                                                   | 类型                                                                                                | 默认值      |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------- |
-| type                          | 输入类型，更多信息请参见 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types) | ^[string]`'text' \| 'textarea' \| 'number' \| 'password' \| 'email' \| 'search' \| 'tel' \|  'url'` | text        |
-| model-value / v-model         | 绑定值                                                                                                                 | ^[string] / ^[number]                                                                               | —           |
-| model-modifiers ^(2.11.5)     | v-model 修饰符，参考 [Vue 修饰符](https://vuejs.org/guide/essentials/forms.html#modifiers)                             | ^[object]`{ lazy?: true, number?: true, trim?: true }`                                              | —           |
-| maxlength                     | 同原生 `maxlength` 属性                                                                                                | ^[string] / ^[number]                                                                               | —           |
-| minlength                     | 原生属性，最小输入长度                                                                                                 | ^[string] / ^[number]                                                                               | —           |
-| show-word-limit               | 是否显示统计字数, 只在 `type` 为 'text' 或 'textarea' 的时候生效                                                       | ^[boolean]                                                                                          | false       |
-| word-limit-position ^(2.11.5) | 字数统计的位置，仅当 `show-word-limit` 为 `true` 时生效。                                                              | ^[enum]`'inside' \| 'outside'`                                                                      | "inside"    |
-| placeholder                   | 输入框占位文本                                                                                                         | ^[string]                                                                                           | —           |
-| clearable                     | 是否显示清除按钮，只有当 `type` 不是 textarea时生效                                                                    | ^[boolean]                                                                                          | false       |
-| clear-icon ^(2.11.0)          | 自定义清除图标                                                                                                         | ^[string] / ^[object]`Component`                                                                    | CircleClose |
-| formatter                     | 指定输入值的格式。(只有当 `type` 是"text"时才能工作)                                                                   | ^[Function]`(value: string \| number) => string`                                                    | —           |
-| parser                        | 指定从格式化器输入中提取的值。(仅当 `type` 是"text"时才起作用)                                                         | ^[Function]`(value: string) => string`                                                              | —           |
-| show-password                 | 是否显示切换密码图标                                                                                                   | ^[boolean]                                                                                          | false       |
-| disabled                      | 是否禁用                                                                                                               | ^[boolean]                                                                                          | false       |
-| size                          | 输入框尺寸，只在 `type` 不为 'textarea' 时有效                                                                         | ^[enum]`'large' \| 'default' \| 'small'`                                                            | —           |
-| prefix-icon                   | 自定义前缀图标                                                                                                         | ^[string] / ^[Component]                                                                            | —           |
-| suffix-icon                   | 自定义后缀图标                                                                                                         | ^[string] / ^[Component]                                                                            | —           |
-| rows                          | 输入框行数，仅 `type` 为 'textarea' 时有效                                                                             | ^[number]                                                                                           | 2           |
-| autosize                      | textarea 高度是否自适应，仅 `type` 为 'textarea' 时生效。 可以接受一个对象，比如: `{ minRows: 2, maxRows: 6 }`         | ^[boolean] / ^[object]`{ minRows?: number, maxRows?: number }`                                      | false       |
-| autocomplete                  | 原生 `autocomplete` 属性                                                                                               | ^[string]                                                                                           | off         |
-| name                          | 等价于原生 input `name` 属性                                                                                           | ^[string]                                                                                           | —           |
-| readonly                      | 原生 `readonly` 属性，是否只读                                                                                         | ^[boolean]                                                                                          | false       |
-| max                           | 原生 `max` 属性，设置最大值                                                                                            | —                                                                                                   | —           |
-| min                           | 原生属性，设置最小值                                                                                                   | —                                                                                                   | —           |
-| step                          | 原生属性，设置输入字段的合法数字间隔                                                                                   | :::                                                                                                 | —           |
-| resize                        | 控制是否能被用户缩放                                                                                                   | ^[enum]`'none' \| 'both' \| 'horizontal' \| 'vertical'`                                             | —           |
-| autofocus                     | 原生属性，自动获取焦点                                                                                                 | ^[boolean]                                                                                          | false       |
-| form                          | 原生属性                                                                                                               | `string`                                                                                            | —           |
-| aria-label ^(a11y) ^(2.7.2)   | 等价于原生 input `aria-label` 属性                                                                                     | ^[string]                                                                                           | —           |
-| tabindex                      | 输入框的 tabindex                                                                                                      | ^[string] / ^[number]                                                                               | —           |
-| validate-event                | 输入时是否触发表单的校验                                                                                               | ^[boolean]                                                                                          | true        |
-| input-style                   | input 元素或 textarea 元素的 style                                                                                     | ^[string] / ^[object]`CSSProperties \| CSSProperties[] \| string[]`                                 | {}          |
-| label ^(a11y) ^(deprecated)   | 等价于原生 input `aria-label` 属性                                                                                     | ^[string]                                                                                           | —           |
-| inputmode ^(2.10.3)           | 等价于原生 input `inputmode` 属性                                                                                      | ^[string]                                                                                           | —           |
+| 属性名                      | 说明                                                                                                                   | 类型                                                                                                | 默认值      |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------- |
+| type                        | 输入类型，更多信息请参见 [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types) | ^[string]`'text' \| 'textarea' \| 'number' \| 'password' \| 'email' \| 'search' \| 'tel' \|  'url'` | text        |
+| model-value / v-model       | 绑定值                                                                                                                 | ^[string] / ^[number]                                                                               | —           |
+| model-modifiers             | v-model 修饰符，参考 [Vue 修饰符](https://vuejs.org/guide/essentials/forms.html#modifiers)                             | ^[object]`{ lazy?: true, number?: true, trim?: true }`                                              | —           |
+| maxlength                   | 同原生 `maxlength` 属性                                                                                                | ^[string] / ^[number]                                                                               | —           |
+| minlength                   | 原生属性，最小输入长度                                                                                                 | ^[string] / ^[number]                                                                               | —           |
+| show-word-limit             | 是否显示统计字数, 只在 `type` 为 'text' 或 'textarea' 的时候生效                                                       | ^[boolean]                                                                                          | false       |
+| word-limit-position         | 字数统计的位置，仅当 `show-word-limit` 为 `true` 时生效。                                                              | ^[enum]`'inside' \| 'outside'`                                                                      | "inside"    |
+| placeholder                 | 输入框占位文本                                                                                                         | ^[string]                                                                                           | —           |
+| clearable                   | 是否显示清除按钮，只有当 `type` 不是 textarea时生效                                                                    | ^[boolean]                                                                                          | false       |
+| clear-icon                  | 自定义清除图标                                                                                                         | ^[string] / ^[object]`Component`                                                                    | CircleClose |
+| formatter                   | 指定输入值的格式。(只有当 `type` 是"text"时才能工作)                                                                   | ^[Function]`(value: string \| number) => string`                                                    | —           |
+| parser                      | 指定从格式化器输入中提取的值。(仅当 `type` 是"text"时才起作用)                                                         | ^[Function]`(value: string) => string`                                                              | —           |
+| show-password               | 是否显示切换密码图标                                                                                                   | ^[boolean]                                                                                          | false       |
+| disabled                    | 是否禁用                                                                                                               | ^[boolean]                                                                                          | false       |
+| size                        | 输入框尺寸，只在 `type` 不为 'textarea' 时有效                                                                         | ^[enum]`'large' \| 'default' \| 'small'`                                                            | —           |
+| prefix-icon                 | 自定义前缀图标                                                                                                         | ^[string] / ^[Component]                                                                            | —           |
+| suffix-icon                 | 自定义后缀图标                                                                                                         | ^[string] / ^[Component]                                                                            | —           |
+| rows                        | 输入框行数，仅 `type` 为 'textarea' 时有效                                                                             | ^[number]                                                                                           | 2           |
+| autosize                    | textarea 高度是否自适应，仅 `type` 为 'textarea' 时生效。 可以接受一个对象，比如: `{ minRows: 2, maxRows: 6 }`         | ^[boolean] / ^[object]`{ minRows?: number, maxRows?: number }`                                      | false       |
+| autocomplete                | 原生 `autocomplete` 属性                                                                                               | ^[string]                                                                                           | off         |
+| name                        | 等价于原生 input `name` 属性                                                                                           | ^[string]                                                                                           | —           |
+| readonly                    | 原生 `readonly` 属性，是否只读                                                                                         | ^[boolean]                                                                                          | false       |
+| max                         | 原生 `max` 属性，设置最大值                                                                                            | —                                                                                                   | —           |
+| min                         | 原生属性，设置最小值                                                                                                   | —                                                                                                   | —           |
+| step                        | 原生属性，设置输入字段的合法数字间隔                                                                                   | :::                                                                                                 | —           |
+| resize                      | 控制是否能被用户缩放                                                                                                   | ^[enum]`'none' \| 'both' \| 'horizontal' \| 'vertical'`                                             | —           |
+| autofocus                   | 原生属性，自动获取焦点                                                                                                 | ^[boolean]                                                                                          | false       |
+| form                        | 原生属性                                                                                                               | `string`                                                                                            | —           |
+| aria-label ^(a11y)          | 等价于原生 input `aria-label` 属性                                                                                     | ^[string]                                                                                           | —           |
+| tabindex                    | 输入框的 tabindex                                                                                                      | ^[string] / ^[number]                                                                               | —           |
+| validate-event              | 输入时是否触发表单的校验                                                                                               | ^[boolean]                                                                                          | true        |
+| input-style                 | input 元素或 textarea 元素的 style                                                                                     | ^[string] / ^[object]`CSSProperties \| CSSProperties[] \| string[]`                                 | {}          |
+| label ^(a11y) ^(deprecated) | 等价于原生 input `aria-label` 属性                                                                                     | ^[string]                                                                                           | —           |
+| inputmode                   | 等价于原生 input `inputmode` 属性                                                                                      | ^[string]                                                                                           | —           |
 
 ### Events
 
@@ -181,18 +181,18 @@ input/length-limiting
 
 ### Exposes
 
-| 名称                 | 说明                       | 类型                                                    |
-| -------------------- | -------------------------- | ------------------------------------------------------- |
-| blur                 | 使 input 失去焦点          | ^[Function]`() => void`                                 |
-| clear                | 清除 input 值              | ^[Function]`() => void`                                 |
-| focus                | 使 input 获取焦点          | ^[Function]`() => void`                                 |
-| input                | Input HTML 元素            | ^[object]`Ref<HTMLInputElement>`                        |
-| ref                  | HTML元素 input 或 textarea | ^[object]`Ref<HTMLInputElement \| HTMLTextAreaElement>` |
-| resizeTextarea       | 改变 textarea 大小         | ^[Function]`() => void`                                 |
-| select               | 选中 input 中的文字        | ^[Function]`() => void`                                 |
-| textarea             | HTML textarea 元素         | ^[object]`Ref<HTMLTextAreaElement>`                     |
-| textareaStyle        | textarea 的样式            | ^[object]`Ref<StyleValue>`                              |
-| isComposing ^(2.8.0) | 是否是输入 composing 状态  | ^[object]`Ref<boolean>`                                 |
+| 名称           | 说明                       | 类型                                                    |
+| -------------- | -------------------------- | ------------------------------------------------------- |
+| blur           | 使 input 失去焦点          | ^[Function]`() => void`                                 |
+| clear          | 清除 input 值              | ^[Function]`() => void`                                 |
+| focus          | 使 input 获取焦点          | ^[Function]`() => void`                                 |
+| input          | Input HTML 元素            | ^[object]`Ref<HTMLInputElement>`                        |
+| ref            | HTML元素 input 或 textarea | ^[object]`Ref<HTMLInputElement \| HTMLTextAreaElement>` |
+| resizeTextarea | 改变 textarea 大小         | ^[Function]`() => void`                                 |
+| select         | 选中 input 中的文字        | ^[Function]`() => void`                                 |
+| textarea       | HTML textarea 元素         | ^[object]`Ref<HTMLTextAreaElement>`                     |
+| textareaStyle  | textarea 的样式            | ^[object]`Ref<StyleValue>`                              |
+| isComposing    | 是否是输入 composing 状态  | ^[object]`Ref<boolean>`                                 |
 
 ## 常见问题
 

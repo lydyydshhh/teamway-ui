@@ -61,8 +61,8 @@ const setupConfig = (configEnv) => {
       editLinks: true,
       editLinkText: 'Edit this page on GitHub',
 
-      logo: '/images/teamway-ui-logo.svg',
-      logoSmall: '/images/teamway-ui-logo-small.svg',
+      logo: '/images/teamway-ui-logo.png',
+      logoSmall: '/images/teamway-ui-logo-small.png',
       sidebars,
       nav,
       agolia: {

@@ -79,7 +79,7 @@ console.log(loadingInstance1 === loadingInstance2) // true
 
 如果完整引入了 TeamwayUI，那么 `app.config.globalProperties` 上会有一个全局方法`$loading`， 它的调用方式为：`this.$loading(options)`，同样会返回一个 Loading 实例。
 
-## 应用程序上下文 ^(2.9.10)
+## 应用程序上下文
 
 现在 Loading 接受一条 `context` 作为消息构造器的第二个参数，允许你将当前应用的上下文注入到 Loading 中，这将允许你继承应用程序的所有属性。
 
@@ -87,7 +87,7 @@ console.log(loadingInstance1 === loadingInstance2) // true
 
 :::tip
 
-如果您全局注册了 ELLoading 组件，它将自动继承应用的上下文环境。
+如果您全局注册了 TyLoading 组件，它将自动继承应用的上下文环境。
 
 :::
 
@@ -104,20 +104,20 @@ TyLoading.service({}, appContext)
 
 ### 配置项
 
-| 名称                 | 说明                                                                                                                                         | 类型                                     | 默认          |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------- |
-| target               | Loading 需要覆盖的 DOM 节点。 可传入一个 DOM 对象或字符串； 若传入字符串，则会将其作为参数传入 `document.querySelector`以获取到对应 DOM 节点 | ^[string] / ^[HTMLElement]               | document.body |
-| body                 | 同 `v-loading` 指令中的 `body` 修饰符                                                                                                        | ^[boolean]                               | false         |
-| fullscreen           | 同 `v-loading` 指令中的 `fullscreen` 修饰符                                                                                                  | ^[boolean]                               | true          |
-| lock                 | 同 `v-loading` 指令中的 `lock` 修饰符                                                                                                        | ^[boolean]                               | false         |
-| text                 | 显示在加载图标下方的加载文案                                                                                                                 | ^[string] / ^[VNode] / ^[array]`VNode[]` | —             |
-| spinner              | 自定义加载图标类名                                                                                                                           | ^[string]                                | —             |
-| background           | 遮罩背景色                                                                                                                                   | ^[string]                                | —             |
-| customClass          | Loading 的自定义类名                                                                                                                         | ^[string]                                | —             |
-| svg                  | 自定义 SVG 元素覆盖默认加载器                                                                                                                | ^[string]                                | —             |
-| svgViewBox           | 设置用于加载 svg 元素的 viewBox 属性                                                                                                         | ^[string]                                | —             |
-| beforeClose ^(2.7.8) | Loading 关闭之前执行的函数。 如果此函数返回 false ，关闭过程将被中止。 反之，loading 将被关闭。                                              | ^[Function]`() => boolean`               | —             |
-| closed ^(2.7.8)      | Loading 完全关闭后触发的函数                                                                                                                 | ^[Function]`() => void`                  | —             |
+| 名称        | 说明                                                                                                                                         | 类型                                     | 默认          |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------- |
+| target      | Loading 需要覆盖的 DOM 节点。 可传入一个 DOM 对象或字符串； 若传入字符串，则会将其作为参数传入 `document.querySelector`以获取到对应 DOM 节点 | ^[string] / ^[HTMLElement]               | document.body |
+| body        | 同 `v-loading` 指令中的 `body` 修饰符                                                                                                        | ^[boolean]                               | false         |
+| fullscreen  | 同 `v-loading` 指令中的 `fullscreen` 修饰符                                                                                                  | ^[boolean]                               | true          |
+| lock        | 同 `v-loading` 指令中的 `lock` 修饰符                                                                                                        | ^[boolean]                               | false         |
+| text        | 显示在加载图标下方的加载文案                                                                                                                 | ^[string] / ^[VNode] / ^[array]`VNode[]` | —             |
+| spinner     | 自定义加载图标类名                                                                                                                           | ^[string]                                | —             |
+| background  | 遮罩背景色                                                                                                                                   | ^[string]                                | —             |
+| customClass | Loading 的自定义类名                                                                                                                         | ^[string]                                | —             |
+| svg         | 自定义 SVG 元素覆盖默认加载器                                                                                                                | ^[string]                                | —             |
+| svgViewBox  | 设置用于加载 svg 元素的 viewBox 属性                                                                                                         | ^[string]                                | —             |
+| beforeClose | Loading 关闭之前执行的函数。 如果此函数返回 false ，关闭过程将被中止。 反之，loading 将被关闭。                                              | ^[Function]`() => boolean`               | —             |
+| closed      | Loading 完全关闭后触发的函数                                                                                                                 | ^[Function]`() => void`                  | —             |
 
 ### 指令
 

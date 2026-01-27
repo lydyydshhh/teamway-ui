@@ -79,19 +79,13 @@ skeleton/rendering-with-data
 
 有的时候，API 的请求回来的特别快，往往骨架占位刚刚被渲染，真实的数据就已经回来了，用户的界面会突然一闪， 此时为了避免这种情况，就需要通过 `throttle` 属性来避免这个问题。
 
-:::tip
-
-^(2.8.8)版本里， `throtle` 属性支持两个值： `number` 和 `object`。 当通过 `number`时，它相当于 `{leading: xxx}`，控制骨架屏幕显示的节奏。 当然，您也可以通过传递 `{trailing: xxx}` 来控制骨架屏消失的节奏。
-
-:::
-
 :::demo
 
 skeleton/avoiding-rendering-bouncing
 
 :::
 
-## 初始渲染加载 ^(2.8.8)
+## 初始渲染加载
 
 当初始值为 loading: true 时，您可以设置 `throttle: {initVal: true, leading: xxx}` 来控制初始骨架屏的即时显示，而无需进行节流。
 
@@ -101,7 +95,7 @@ skeleton/initial-rendering-loading
 
 :::
 
-## 切换显示/隐藏时避免渲染抖动 ^(2.8.8)
+## 切换显示/隐藏时避免渲染抖动
 
 :::tip
 

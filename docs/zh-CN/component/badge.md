@@ -47,7 +47,7 @@ badge/dot
 
 :::
 
-## 偏移量 ^(2.7.0)
+## 偏移量
 
 :::demo 设置徽章点的偏移，格式是[左，顶部]， 代表状态点从左侧和默认位置顶部的偏移。
 
@@ -59,22 +59,22 @@ badge/offset
 
 ### Attributes
 
-| 属性名               | 说明                                                                  | 类型                                                               | 默认值 |
-| -------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ | ------ |
-| value                | 显示值                                                                | ^[string] / ^[number]                                              | ''     |
-| max                  | 最大值，超过最大值会显示 `{max}+`。 只有当 value 是数字类型时起作用。 | ^[number]                                                          | 99     |
-| is-dot               | 是否显示小圆点。                                                      | ^[boolean]                                                         | false  |
-| hidden               | 是否隐藏 Badge。                                                      | ^[boolean]                                                         | false  |
-| type                 | badge 类型。                                                          | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | danger |
-| show-zero ^(2.6.0)   | 值为零时是否显示 Badge                                                | ^[boolean]                                                         | true   |
-| color ^(2.6.3)       | 背景色                                                                | ^[string]                                                          |        |
-| offset ^(2.7.0)      | badge 的偏移量                                                        | ^[array]`[number, number]`                                         | [0, 0] |
-| badge-style ^(2.7.1) | 自定义 badge 样式                                                     | ^[object]`CSSProperties`                                           | —      |
-| badge-class ^(2.7.1) | 自定义 badge 类名                                                     | ^[string]                                                          | —      |
+| 属性名      | 说明                                                                  | 类型                                                               | 默认值 |
+| ----------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ | ------ |
+| value       | 显示值                                                                | ^[string] / ^[number]                                              | ''     |
+| max         | 最大值，超过最大值会显示 `{max}+`。 只有当 value 是数字类型时起作用。 | ^[number]                                                          | 99     |
+| is-dot      | 是否显示小圆点。                                                      | ^[boolean]                                                         | false  |
+| hidden      | 是否隐藏 Badge。                                                      | ^[boolean]                                                         | false  |
+| type        | badge 类型。                                                          | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info'` | danger |
+| show-zero   | 值为零时是否显示 Badge                                                | ^[boolean]                                                         | true   |
+| color       | 背景色                                                                | ^[string]                                                          |        |
+| offset      | badge 的偏移量                                                        | ^[array]`[number, number]`                                         | [0, 0] |
+| badge-style | 自定义 badge 样式                                                     | ^[object]`CSSProperties`                                           | —      |
+| badge-class | 自定义 badge 类名                                                     | ^[string]                                                          | —      |
 
 ### Slots
 
-| 插槽名           | 说明           | 类型                         |
-| ---------------- | -------------- | ---------------------------- |
-| default          | 自定义默认内容 | -                            |
-| content ^(2.9.1) | 自定义显示内容 | ^[object]`{ value: string }` |
+| 插槽名  | 说明           | 类型                         |
+| ------- | -------------- | ---------------------------- |
+| default | 自定义默认内容 | -                            |
+| content | 自定义显示内容 | ^[object]`{ value: string }` |

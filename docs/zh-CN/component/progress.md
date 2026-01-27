@@ -95,8 +95,8 @@ progress/striped-progress
 | show-text              | 是否显示进度条文字内容                                        | ^[boolean]                                                                                                  | true   |
 | stroke-linecap         | circle/dashboard 类型路径两端的形状                           | ^[enum]`'butt' \| 'round' \| 'square'`                                                                      | round  |
 | format                 | 指定进度条文字内容                                            | ^[Function]`(percentage: number) => string`                                                                 | —      |
-| striped ^(2.3.4)       | 在进度条上增加条纹                                            | ^[boolean]                                                                                                  | false  |
-| striped-flow ^(2.3.4)  | 让进度条上的条纹流动起来                                      | ^[boolean]                                                                                                  | false  |
+| striped                | 在进度条上增加条纹                                            | ^[boolean]                                                                                                  | false  |
+| striped-flow           | 让进度条上的条纹流动起来                                      | ^[boolean]                                                                                                  | false  |
 
 ### Slots
 

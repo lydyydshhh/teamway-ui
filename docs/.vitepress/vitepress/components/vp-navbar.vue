@@ -35,7 +35,7 @@ const currentLink = computed(() => {
         <a :href="withBase(currentLink)">
           <img
             class="logo"
-            src="/images/teamway-ui-logo.svg"
+            src="/images/teamway-ui-logo.png"
             alt="TeamwayUI Logo"
           />
           <span>TeamwayUI</span>

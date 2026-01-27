@@ -54,27 +54,6 @@ link/disabled
 
 控制下划线是否出现
 
-:::warning
-
-属性 `boolean` 值 **将在** ^(3.0.0) 版本中被**移除**，请考虑切换至新的 API。
-
-:::
-
-:::tip
-
-从 ^(2.9.9) 开始，你可以使用 `'always' | 'hover' | 'never'` 来控制是否显示下划线。 文档中的示例将都使用这些值。 如果您使用的版本 **低于** ^(2.9.9)，请参考：
-
-:::
-
-```vue
-<template>
-  <!-- works before 2.9.9, use 'hover' after, removed in 3.0.0 -->
-  <ty-link underline>link</ty-link>
-  <!-- works before 2.9.9, use 'never' after, removed in 3.0.0 -->
-  <ty-link :underline="false">link</ty-link>
-</template>
-```
-
 :::demo
 
 link/underline

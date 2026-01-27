@@ -19,7 +19,7 @@ notification/basic
 
 我们提供了四种不同类型的提醒框：success、warning、info 和error。
 
-:::demo TeamwayUI 为 Notification 组件准备了5种通知类型：`primary`,`success`, `warning`, `info`, `error`。 他们可以设置 `type` 字段来修改，除上述的四个值之外的值会被忽略。 同时，我们也为 Notification 的各种 type 注册了单独的方法，可以在不传入 `type` 字段的情况下像 `open3` 和 `open4` 那样直接调用。 `primary` 已被添加到^(2.9.11)。
+:::demo TeamwayUI 为 Notification 组件准备了5种通知类型：`primary`,`success`, `warning`, `info`, `error`。 他们可以设置 `type` 字段来修改，除上述的四个值之外的值会被忽略。 同时，我们也为 Notification 的各种 type 注册了单独的方法，可以在不传入 `type` 字段的情况下像 `open3` 和 `open4` 那样直接调用。
 
 notification/different-types
 
@@ -61,11 +61,11 @@ notification/raw-html
 
 :::
 
-## 函数形式的 message ^(2.9.0)
+## 函数形式的 message
 
 `message` 可以是 VNode。
 
-在^(2.9.0)之后， `message` 支持返回值为 VNode的函数。
+`message` 支持返回值为 VNode的函数。
 
 :::demo
 
@@ -100,7 +100,7 @@ TyNotification({
 })
 ```
 
-你可以在对应的处理函数内调用 `TyNotification(options)` 来呼出通知栏。 我们也提前定义了多个 type 的单独调用方法，如 `TyNotification.success(options)`。 当你需要关闭页面上所有的通知栏的时候，可以调用 `TyNotification.closeAll()` 来关闭所有的实例。 在 ^(2.10.5) 版本中，你可以通过调用 `TyNotification.updateOffsets(position)` 手动更新所有通知实例在特定方向上的偏移量。
+你可以在对应的处理函数内调用 `TyNotification(options)` 来呼出通知栏。 我们也提前定义了多个 type 的单独调用方法，如 `TyNotification.success(options)`。 当你需要关闭页面上所有的通知栏的时候，可以调用 `TyNotification.closeAll()` 来关闭所有的实例。 你可以通过调用 `TyNotification.updateOffsets(position)` 手动更新所有通知实例在特定方向上的偏移量。
 
 ## 应用程序上下文继承 <ty-tag>> 2.0.4</ty-tag>
 
@@ -143,7 +143,7 @@ TyNotification({}, appContext)
 | offset                   | 相对屏幕顶部的偏移量 偏移的距离，在同一时刻，所有的 Notification 实例应当具有一个相同的偏移量 | ^[number]                                                                        | 0         |
 | appendTo                 | 设置 notification 的根元素，默认为 `document.body`                                            | ^[CSSSelector] / ^[HTMLElement]                                                  | —         |
 | zIndex                   | 初始 zIndex                                                                                   | ^[number]                                                                        | 0         |
-| closeIcon ^(2.9.8)       | 自定义关闭图标                                                                                | ^[string] / ^[Component]                                                         | Close     |
+| closeIcon                | 自定义关闭图标                                                                                | ^[string] / ^[Component]                                                         | Close     |
 
 ### 方法
 

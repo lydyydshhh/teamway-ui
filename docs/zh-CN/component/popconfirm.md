@@ -54,7 +54,7 @@ popconfirm/trigger-event
 | 属性名                             | 说明                                                                                       | 类型                                                                         | 默认           |
 | ---------------------------------- | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------- | -------------- |
 | title                              | 标题                                                                                       | ^[string]                                                                    | —              |
-| effect ^(2.11.2)                   | Tooltip 主题，内置了 `dark` / `light` 两种                                                 | ^[enum]`'dark' \| 'light'` / ^[string]                                       | light          |
+| effect                             | Tooltip 主题，内置了 `dark` / `light` 两种                                                 | ^[enum]`'dark' \| 'light'` / ^[string]                                       | light          |
 | confirm-button-text                | 确认按钮文字                                                                               | ^[string]                                                                    | —              |
 | cancel-button-text                 | 取消按钮文字                                                                               | ^[string]                                                                    | —              |
 | confirm-button-type                | 确认按钮类型                                                                               | ^[enum]`'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' \| 'text'` | primary        |
@@ -77,14 +77,14 @@ popconfirm/trigger-event
 
 ### Slots
 
-| 插槽名           | 说明                             | 类型                                                                             |
-| ---------------- | -------------------------------- | -------------------------------------------------------------------------------- |
-| reference        | 触发 Popconfirm 显示的 HTML 元素 | —                                                                                |
-| actions ^(2.8.1) | 页脚的内容                       | ^[object]`{ confirm: (e: MouseEvent) => void, cancel: (e: MouseEvent) => void }` |
+| 插槽名    | 说明                             | 类型                                                                             |
+| --------- | -------------------------------- | -------------------------------------------------------------------------------- |
+| reference | 触发 Popconfirm 显示的 HTML 元素 | —                                                                                |
+| actions   | 页脚的内容                       | ^[object]`{ confirm: (e: MouseEvent) => void, cancel: (e: MouseEvent) => void }` |
 
 ### 暴露
 
-| 方法名              | 详情               | Type                                        |
-| ------------------- | ------------------ | ------------------------------------------- |
-| popperRef ^(2.10.7) | ty-popper 组件实例 | ^[object]`Ref<PopperInstance \| undefined>` |
-| hide ^(2.10.7)      | hide popconfirm    | ^[Function]`() => void`                     |
+| 方法名    | 详情               | Type                                        |
+| --------- | ------------------ | ------------------------------------------- |
+| popperRef | ty-popper 组件实例 | ^[object]`Ref<PopperInstance \| undefined>` |
+| hide      | hide popconfirm    | ^[Function]`() => void`                     |

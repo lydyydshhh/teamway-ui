@@ -19,10 +19,7 @@
     }"
   >
     <ty-tour-step :target="ref1?.$el" title="Upload File">
-      <img
-        src="https://element-plus.org/images/teamway-ui-logo.svg"
-        alt="tour.png"
-      />
+      <img src="/images/teamway-ui-logo.png" alt="tour.png" />
       <div>Put you files here.</div>
     </ty-tour-step>
     <ty-tour-step

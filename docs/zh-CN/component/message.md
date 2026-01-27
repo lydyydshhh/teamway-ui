@@ -21,13 +21,13 @@ message/basic
 
 用来显示「成功、警告、消息、错误」类的操作反馈。
 
-:::demo 当需要自定义更多属性时，Message 也可以接收一个对象为参数。 比如，设置 `type` 字段可以定义不同的状态，默认为`info`。 此时正文内容以 `message` 的值传入。 同时，我们也为 Message 的各种 type 注册了方法，可以在不传入 type 字段的情况下像 `open4` 那样直接调用。 `primary` 已被添加到^(2.9.11)。
+:::demo 当需要自定义更多属性时，Message 也可以接收一个对象为参数。 比如，设置 `type` 字段可以定义不同的状态，默认为`info`。 此时正文内容以 `message` 的值传入。 同时，我们也为 Message 的各种 type 注册了方法，可以在不传入 type 字段的情况下像 `open4` 那样直接调用。
 
 message/different-types
 
 :::
 
-## Plain ^(2.6.3)
+## Plain
 
 设置 `plain` 为 plain 背景。
 
@@ -73,7 +73,7 @@ message/grouping
 
 :::
 
-## Placement ^(2.11.0)
+## Placement
 
 控制消息出现的位置。 消息可以显示在查看端口的顶部(默认) 或其他位置。
 
@@ -95,7 +95,7 @@ import { TyMessage } from 'teamway-ui'
 
 此时调用方法为 `TyMessage(options)`。 我们也为每个 type 定义了各自的方法，如 `TyMessage.success(options)`。 并且可以调用 `TyMessage.closeAll()` 手动关闭所有实例。
 
-## 应用程序上下文继承 ^(2.0.3)
+## 应用程序上下文继承
 
 现在 Message 接受一条 `context` 作为消息构造器的第二个参数，允许你将当前应用的上下文注入到 Message 中，这将允许你继承应用程序的所有属性。
 
@@ -124,7 +124,7 @@ TyMessage({}, appContext)
 | ------------------------ | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------ |
 | message                  | 消息文字                                                                | ^[string] / ^[VNode] / ^[Function]`() => VNode`                                            | ''     |
 | type                     | 消息类型                                                                | ^[enum]`'primary' (2.9.11) \| 'success' \| 'warning' \| 'info' \| 'error'`                 | info   |
-| plain ^(2.6.3)           | 是否纯色                                                                | ^[boolean]                                                                                 | false  |
+| plain                    | 是否纯色                                                                | ^[boolean]                                                                                 | false  |
 | icon                     | 自定义图标，该属性会覆盖 `type` 的图标。                                | ^[string] / ^[Component]                                                                   | —      |
 | dangerouslyUseHTMLString | 是否将 message 属性作为 HTML 片段处理                                   | ^[boolean]                                                                                 | false  |
 | customClass              | 自定义类名                                                              | ^[string]                                                                                  | ''     |
@@ -132,7 +132,7 @@ TyMessage({}, appContext)
 | showClose                | 是否显示关闭按钮                                                        | ^[boolean]                                                                                 | false  |
 | onClose                  | 关闭时的回调函数, 参数为被关闭的 message 实例                           | ^[Function]`() => void`                                                                    | —      |
 | offset                   | 设置到视口边缘的距离（当位置为'top'时为顶部，当位置为'bottom'时为底部） | ^[number]                                                                                  | 16     |
-| placement ^(2.11.0)      | 消息放置位置                                                            | ^[enum]`'top' \| 'top-left' \| 'top-right' \| 'bottom' \| 'bottom-left' \| 'bottom-right'` | top    |
+| placement                | 消息放置位置                                                            | ^[enum]`'top' \| 'top-left' \| 'top-right' \| 'bottom' \| 'bottom-left' \| 'bottom-right'` | top    |
 | appendTo                 | 设置 message 的根元素，默认为 `document.body`                           | ^[CSSSelector] / ^[HTMLElement]                                                            | —      |
 | grouping                 | 合并内容相同的消息，不支持 VNode 类型的消息                             | ^[boolean]                                                                                 | false  |
 | repeatNum                | 重复次数，类似于 Badge 。当和 `grouping` 属性一起使用时作为初始数量使用 | ^[number]                                                                                  | 1      |
