@@ -5,12 +5,6 @@ lang: zh-CN
 
 ## 自定义命名空间
 
-:::tip
-
-我们提供了 [element-plus-vite-starter 模版](https://github.com/element-plus/element-plus-vite-starter)。 查看代码了解使用方法。
-
-:::
-
 TeamwayUI 提供的默认命名空间为 `ty`。 在特殊情况下，我们需要自定义命名空间。
 
 由于我们使用 sass 书写样式，如果您需要自定义所有命名空间， 我们假定用户使用了 sass 书写样式。

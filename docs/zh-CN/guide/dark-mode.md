@@ -5,7 +5,7 @@ lang: zh-CN
 
 # 暗黑模式
 
-现在，TeamwayUI 终于支持了暗黑模式！
+TeamwayUI 支持暗黑模式！
 
 我们提取并整理了所有的设计变量，并通过 CSS Vars 技术实现动态更新主题。
 
@@ -30,8 +30,6 @@ lang: zh-CN
 // if you just want to import css
 import 'teamway-ui/theme-chalk/dark/css-vars.css'
 ```
-
-> 也可以参考我们提供的 [element-plus-vite-starter 模版](https://github.com/element-plus/element-plus-vite-starter) 例子。
 
 ## 自定义变量
 
