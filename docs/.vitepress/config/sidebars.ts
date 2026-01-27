@@ -1,6 +1,7 @@
 import { ensureLang } from '../utils/lang'
 import guideLocale from '../i18n/pages/guide.json'
 import componentLocale from '../i18n/pages/component.json'
+import designLocale from '../i18n/pages/design.json'
 
 function getGuideSidebar() {
   return Object.fromEntries(
@@ -20,12 +21,22 @@ function getComponentsSideBar() {
   )
 }
 
+function getDesignSidebar() {
+  return Object.fromEntries(
+    Object.entries(designLocale).map(([lang, val]) => [
+      lang,
+      Object.values(val).map((item) => mapPrefix(item, lang, '/design')),
+    ])
+  )
+}
+
 // return sidebar with language configs.
 // this might create duplicated data but the overhead is ignorable
 const getSidebars = () => {
   return {
     '/guide/': getGuideSidebar(),
     '/component/': getComponentsSideBar(),
+    '/design/': getDesignSidebar(),
   }
 }
 

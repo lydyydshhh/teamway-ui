@@ -8,5 +8,10 @@
     "text": "组件",
     "link": "/component/overview",
     "activeMatch": "/component/"
+  },
+  {
+    "text": "设计规范",
+    "link": "/design/transitions",
+    "activeMatch": "/design/"
   }
 ]
