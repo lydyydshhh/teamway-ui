@@ -7,10 +7,6 @@
         "link": "/guide/design"
       },
       {
-        "text": "导航",
-        "link": "/guide/nav"
-      },
-      {
         "text": "安装",
         "link": "/guide/installation"
       },
@@ -40,14 +36,6 @@
         "link": "/guide/namespace"
       },
       {
-        "text": "SSR",
-        "link": "/guide/ssr"
-      },
-      {
-        "text": "内置过渡动画",
-        "link": "/guide/transitions"
-      },
-      {
         "text": "更新日志",
         "link": "/guide/changelog"
       }
@@ -63,10 +51,6 @@
       {
         "text": "开发常见问题",
         "link": "/guide/dev-faq"
-      },
-      {
-        "text": "提交示例",
-        "link": "/guide/commit-examples"
       }
     ]
   }
