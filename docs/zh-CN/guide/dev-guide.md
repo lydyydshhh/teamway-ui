@@ -27,8 +27,6 @@ pnpm docs:dev
 
 ## 本地开发
 
-查看 [本地开发指南](https://github.com/element-plus/element-plus/blob/dev/CONTRIBUTING.md)
-
 1. 使用命令
 
 ```shell
@@ -45,7 +43,7 @@ pnpm dev
 </template>
 
 <script setup lang="ts">
-// make sure this component is registered in @element-plus/components
+// make sure this component is registered in @teamway-ui/components
 </script>
 ```
 

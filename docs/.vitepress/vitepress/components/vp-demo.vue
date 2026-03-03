@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import { computed, getCurrentInstance, ref, toRef } from 'vue'
+import { computed, getCurrentInstance, ref } from 'vue'
 import { useClipboard, useToggle } from '@vueuse/core'
 import { EVENT_CODE } from 'teamway-ui'
 import { CaretTop } from '@element-plus/icons-vue'
 import { useLang } from '../composables/lang'
-import { useSourceCode } from '../composables/source-code'
-import { usePlayground } from '../composables/use-playground'
 import demoBlockLocale from '../../i18n/component/demo-block.json'
 import SourceCode from './demo/vp-source-code.vue'
 
@@ -25,8 +23,6 @@ const { copy, isSupported } = useClipboard({
 
 const [sourceVisible, toggleSourceVisible] = useToggle()
 const lang = useLang()
-const demoSourceUrl = useSourceCode(toRef(props, 'path'))
-const { link: playgroundUrl } = usePlayground(props.rawSource)
 
 const sourceCodeRef = ref<HTMLButtonElement>()
 
@@ -71,40 +67,6 @@ const copyCode = async () => {
     <TyDivider class="m-0" />
 
     <div class="op-btns">
-      <TyTooltip
-        :content="locale['edit-in-editor']"
-        :show-arrow="false"
-        :trigger="['hover', 'focus']"
-        :trigger-keys="[]"
-      >
-        <TyIcon :size="16" class="op-btn">
-          <a
-            :href="playgroundUrl"
-            :aria-label="locale['edit-in-editor']"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            <i-ri-flask-line />
-          </a>
-        </TyIcon>
-      </TyTooltip>
-      <TyTooltip
-        :content="locale['edit-on-github']"
-        :show-arrow="false"
-        :trigger="['hover', 'focus']"
-        :trigger-keys="[]"
-      >
-        <TyIcon :size="16" class="op-btn github">
-          <a
-            :href="demoSourceUrl"
-            :aria-label="locale['edit-on-github']"
-            rel="noreferrer noopener"
-            target="_blank"
-          >
-            <i-ri-github-line />
-          </a>
-        </TyIcon>
-      </TyTooltip>
       <TyTooltip
         :content="locale['copy-code']"
         :show-arrow="false"

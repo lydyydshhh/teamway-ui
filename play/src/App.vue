@@ -1,16 +1,25 @@
 <template>
-  <ty-config-provider namespace="ty">
+  <ty-config-provider namespace="ty" :locale="zhCn">
     <div class="play-container">
       <ty-icon color="red">
         <Edit />
       </ty-icon>
       <ty-button>test</ty-button>
+      <ty-date-picker
+        v-model="value1"
+        type="datetime"
+        placeholder="Select date and time"
+      />
     </div>
   </ty-config-provider>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { Edit } from '@element-plus/icons-vue'
+import zhCn from '@teamway-ui/locale/lang/zh-cn'
+
+const value1 = ref('')
 // code here
 </script>
 
