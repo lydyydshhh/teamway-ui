@@ -112,6 +112,7 @@ declare module 'vue' {
     TyMention: typeof import('packages/teamway-ui')['TyMention']
     TySplitter: typeof import('packages/teamway-ui')['TySplitter']
     TySplitterPanel: typeof import('packages/teamway-ui')['TySplitterPanel']
+    TyNumberAnimation: typeof import('teamway-ui')['TyNumberAnimation']
   }
 
   interface ComponentCustomProperties {

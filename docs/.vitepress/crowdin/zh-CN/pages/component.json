@@ -263,6 +263,10 @@
         "text": "Statistic 统计组件"
       },
       {
+        "link": "/number-animation",
+        "text": "Number Animation 数值动画"
+      },
+      {
         "link": "/segmented",
         "text": "Segmented 分段控制器"
       }
