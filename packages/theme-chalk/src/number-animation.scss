@@ -1,0 +1,10 @@
+@use 'mixins/mixins' as *;
+@use 'mixins/var' as *;
+@use 'common/var' as *;
+
+@include b(number-animation) {
+  color: getCssVar('text-color', 'regular');
+  font-size: getCssVar('font-size', 'extra-large');
+  display: inline-block;
+  font-family: getCssVar('font-family');
+}
