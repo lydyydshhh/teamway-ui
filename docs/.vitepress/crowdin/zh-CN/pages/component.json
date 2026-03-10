@@ -33,7 +33,11 @@
       },
       {
         "link": "/layout",
-        "text": "Layout 布局"
+        "text": "Layout 布局(Flex布局)"
+      },
+      {
+        "link": "/grid",
+        "text": "Grid 布局"
       },
       {
         "link": "/link",

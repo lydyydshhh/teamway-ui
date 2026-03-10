@@ -27,6 +27,8 @@ declare module 'vue' {
     TyCheckboxButton: typeof import('packages/teamway-ui')['TyCheckboxButton']
     TyCheckboxGroup: typeof import('packages/teamway-ui')['TyCheckboxGroup']
     TyCol: typeof import('packages/teamway-ui')['TyCol']
+    TyGrid: typeof import('packages/teamway-ui')['TyGrid']
+    TyGridItem: typeof import('packages/teamway-ui')['TyGridItem']
     TyCollapse: typeof import('packages/teamway-ui')['TyCollapse']
     TyCollapseItem: typeof import('packages/teamway-ui')['TyCollapseItem']
     TyCollapseTransition: typeof import('packages/teamway-ui')['TyCollapseTransition']
