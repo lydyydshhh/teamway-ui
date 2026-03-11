@@ -89,6 +89,7 @@ import { TySpace } from '@teamway-ui/components/space'
 import { TyStatistic } from '@teamway-ui/components/statistic'
 import { TyCountdown } from '@teamway-ui/components/countdown'
 import { TyNumberAnimation } from '@teamway-ui/components/number-animation'
+import { TyGrid, TyGridItem } from '@teamway-ui/components/grid'
 import { TyStep, TySteps } from '@teamway-ui/components/steps'
 import { TySwitch } from '@teamway-ui/components/switch'
 import { TyTable, TyTableColumn } from '@teamway-ui/components/table'
@@ -197,6 +198,8 @@ export default [
   TyStatistic,
   TyCountdown,
   TyNumberAnimation,
+  TyGrid,
+  TyGridItem,
   TySteps,
   TyStep,
   TySwitch,
